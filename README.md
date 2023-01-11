@@ -5,6 +5,11 @@ X Tang
 
 思维没有边界 一切皆有可能
 
+https://cdn.xn--sss604efuw.ga/w/
+
+https://xn--z7x900a.love/
+
+
 软件架构
 软件架构说明
 
