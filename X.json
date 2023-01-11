@@ -95,8 +95,7 @@
 {"key":"csp_Bd","name":"📯SP┃哔嘀影视","type":3,"api":"csp_Bdys01","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_DiDuan","name":"📯SP┃低端影视","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_biubiu_影视工厂","name": "📯SP┃工厂","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "http://maoyingshi.cc/tvbox/云星日记/sh/MaooXB/ysgc2.json"},
-
-{"key":"csp_Anfuns","name":"📯SP┃Anfuns动漫","type":3,"api":"csp_Anfuns","searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_XBiu233动漫","name": "📯SP┃Anfuns动漫","type": 3,"api": "csp_XBiu","ext": "https://www.233dm.cc/show/{cateId}--------{catePg}---.html"},
 {"key":"csp_xBPQ_爱看","name":"📯SP┃爱看","type":3,"api":"csp_xBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/%E7%88%B1%E7%9C%8B.json"},
 {"key":"csp_Bttoo","name":"📯SP┃两个BT","type":3,"api":"csp_Bttoo","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Zjdr","name":"📯SP┃追剧","type":3,"api":"csp_Zjdr","searchable":1,"quickSearch":1,"filterable":1},
