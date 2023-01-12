@@ -11,7 +11,13 @@ https://xn--z7x900a.love/
 
 
 软件架构
-软件架构说明
+
+http://ewwe.ml/0000
+
+生成地址为以下格式 
+长老接口 例👉 http://ewwe.ml/tstv
+http://ewwe.ml/你的短址(或随机四位短址)
+
 
 安装教程
 
