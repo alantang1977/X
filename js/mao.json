@@ -13,7 +13,7 @@
     "分类起始页码": "1",
     "分类链接": "http://www.lu1.cc/c/tv/sjtv/{cateId}.htm",
     "分类名称": "央视&卫视&广东&香港&澳门&北京&上海&天津&重庆&黑龙江&吉林&辽宁&内蒙古&宁夏&甘肃&青海&陕西&河北&山西&山东&安徽&河南&湖北&湖南&江西&江苏&浙江&福建&广西&云南&贵州&四川&新疆&西藏&海南&网络",
-    "分类名称替换词": "ys&ws&bj&sh&tj&cq&hlj&jl&ln&nm&nx&gs&qh&sx&hb&sxi&sd&ah&hn&hub&hun&jx&js&zj&fj&gd&gx&yn&gz&sc&xj&xz&hin&hk&om&wl",
+    "分类名称替换词": "ys&ws&gz&hk&om&bj&sh&tj&cq&hlj&jl&ln&nm&nx&gs&qh&sx&hb&sxi&sd&ah&hn&hub&hun&jx&js&zj&fj&gd&gx&yn&sc&xj&xz&hin&wl",
     "筛选数据": {},
     "分类截取模式": "1",
     "分类Json数据二次截取": "",
