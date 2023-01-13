@@ -23,7 +23,7 @@
 {"key":"csp_Bili","name":"🅱┃哔哩合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/bilibili_2.json"},
 
 ##SP系列
-{"key":"csp_XBPQ新视觉","name":"🌟┃新视觉影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/%E6%96%B0%E8%A7%86%E8%A7%89%E5%BD%B1%E9%99%A2.json"},
+{"key":"csp_XBPQ新视觉","name":"🌟┃新视觉影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/%E6%96%B0%E8%A7%86%E8%A7%89%E5%BD%B1%E9%99%A2.json"},
 {"key":"csp_LibVio", "name": "🚁QJ┃LibVio", "type": 3, "api": "csp_Lib", "searchable": 1, "playerType": 2, "quickSearch": 1, "filterable": 0 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 {"key":"drpy_js_ddys","name": "🐞┃低端(drpy)","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E4%BD%8E%E7%AB%AF.js"},
 {"key":"csp_app_阿里","name":"🐜┃阿里影视","type":3,"playerType":2,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://aliys.cn:90/api.php/v1.vod","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/panda.jar"},
