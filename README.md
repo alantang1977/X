@@ -5,11 +5,6 @@ X Tang
 
 思维没有边界 一切皆有可能
 
-https://cdn.xn--sss604efuw.ga/w/
-
-https://xn--z7x900a.love/
-
-
 软件架构
 
 http://ewwe.ml/0000
@@ -48,7 +43,7 @@ http://home.jundie.top:81/top98.json
 
 6.霜辉月明py：
 
-https://ghproxy.com/raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json 
+https://ghproxy.com/raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json
 
 7.小雅js： 
 
