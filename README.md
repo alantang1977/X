@@ -70,6 +70,9 @@ http://肥猫.love
 
 http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63
 
+下载链接：http://ltjm.ml/mao.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.love:63/
+
+
 二：以下为各个大佬直播源：
 
 肥羊IPTV源：
