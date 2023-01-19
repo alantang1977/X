@@ -63,7 +63,7 @@
 //{"key":"csp_fant","name":"✌🍙SP┃饭团","api":"csp_Fantuan","type":3,"filterable":1,"quickSearch":1,"searchable":1},
 {
             "key": "XBPQ_fant",
-            "name": "🍙┃饭团┃影视",
+            "name": "🍙┃饭团影视",
             "type": 3,
             "api": "csp_XBPQ",
             "filterable": 1,
