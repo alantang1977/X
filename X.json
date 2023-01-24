@@ -12,7 +12,7 @@
 {"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
 {"key":"csp_Paper","name":"📜┃纸条云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://我不是.肥猫.love:63/token.php"},
 {"key":"csp_GitCafe","name":"📜┃纸条雲盘","type":3,"api":"csp_Gitcafe","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://我不是.肥猫.love:63/token.php"},
-{"key":"Alist1","name":"🅿┃Alis网盘","type" : 3,"api" : "http://我不是.肥猫.love:63/JS/alist.min.js","ext" : "https://gitee.com/alanchaotang/data/raw/master/js/alist.json"},
+{"key":"Alist1","name":"🅿┃Alis网盘","type" : 3,"api" : "http://我不是.肥猫.love:63/JS/alist.min.js","ext":"http://我不是.肥猫.love:63/alist.json"},
 {"key":"AList","name":"😹┃AList","type": "3","api":"csp_AList","searchable":"1","ext": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/alist.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/fongmi_AList.jar"},
 {"key":"csp_Alist2","name": "🅿┃小丫搜索","type": 3,"api":"http://我不是.肥猫.love:63/JS/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://我不是.肥猫.love:63/json/alist3.json"},
 {"key":"csp_XYQ_lu1","name":"🌈┃电视直播","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/js/mao.json"},
