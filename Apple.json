@@ -2,7 +2,7 @@
 	"sites": [
 		{
 			"key": "小苹果",
-			"name": "🍎主力源",
+			"name": "🍎小苹果",
 			"type": 3,
 			"api": "csp_LiteApple",
 			"searchable": 1,
@@ -12,7 +12,7 @@
 		},
 		{
 			"key": "csp_Kunyu77",
-			"name": "🍎备份源一",
+			"name": "🍎七七",
 			"type": 3,
 			"api": "csp_Kunyu77",
 			"searchable": 1,
@@ -30,7 +30,7 @@
 		},
 		{
 			"key": "csp_Cokemv",
-			"name": "🍎备份源三",
+			"name": "🍎Cokemv",
 			"type": 3,
 			"api": "csp_Cokemv",
 			"searchable": 1,
@@ -48,7 +48,7 @@
 		},
 		{
 			"key": "293视频",
-			"name": "🍎备份源五",
+			"name": "🍎293影视",
 			"type": 3,
 			"api": "csp_SP293",
 			"searchable": 1,
@@ -86,7 +86,7 @@
 		},
 		{
 			"key": "快看",
-			"name": "🍎备份源九",
+			"name": "🍎快看影视",
 			"type": 3,
 			"api": "csp_Kuaikan",
 			"searchable": 1,
