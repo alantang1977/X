@@ -1,7 +1,7 @@
 {
 "sites":[
 ##搜索系列
-{"key":"csp_search_Yisou","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
+{"key":"csp_search_Yisou","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"csp_search_Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
 {"key":"csp_search_Upyunso","name":"🐺┃云搜┃搜索","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
 {"key":"csp_search_Alips","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
