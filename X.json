@@ -128,8 +128,8 @@
 
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
-{"name":"自动并发","type": 2,"url": "Parallel"},
-{"name":"自动轮询","type": 2,"url": "Sequence"},
+//{"name":"自动并发","type": 2,"url": "Parallel"},
+//{"name":"自动轮询","type": 2,"url": "Sequence"},
 //{"name":"Web解析聚合","type":3,"url":"Web"},
 {"name": "布雷解析","url": "https://tv.bulei.cc/bfq/?url="},
 {"name":"懒懒2","type" :1,"url":"http://lanlan.ckflv.cn/?url=","ext" : {"flag" : ["qiyi","qq","letv","sohu","youku","mgtv","bilibili","wasu","xigua","1905"]}},
