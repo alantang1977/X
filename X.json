@@ -94,7 +94,7 @@
 ##QiaoJi系列
 { "key": "YQK_spider", "name": "🚁QJ┃看TV", "api": "csp_YQKAPP", "type": 3, "filterable": 1, "quickSearch": 1, "searchable": 1, "ext": "https://api-tx.shumaxc.xyz" ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 { "key": "百影视频", "name": "🚁QJ┃百影视频", "type": 3, "api": "csp_MianHua", "searchable": 1, "playerType": 2, "quickSearch": 1, "filterable":0,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
-{ "key": "NoSearch_Bdys_spider", "name": "🚁QJ┃哔滴影视", "api": "csp_Bdys01", "type": 3, "filterable": 1, "quickSearch": 1, "searchable":1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
+{ "key": "NoSearch_Bdys_spider", "name": "🚁QJ┃哔滴影视", "api": "csp_Bdys01", "type": 3, "filterable": 1, "quickSearch": 1, "searchable":1},
 { "key": "dm77_spider", "name": "🚁QJ┃齐齐动漫", "api": "csp_DM77", "type": 3, "filterable": 1, "playerType": 2, "quickSearch": 1, "searchable": 1, "ext": "" ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 { "key": "yanetflix_spider", "name": "🚁QJ┃鸭奈飞", "api": "csp_YaNetFlix", "type": 3, "filterable": 1, "playerType": 2, "quickSearch": 1, "searchable": 1, "ext": "" ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 { "key": "niketv_spider", "name": "🚁QJ┃耐客TV", "api": "csp_NikeTV", "type": 3, "filterable": 1, "playerType": 2, "quickSearch": 1, "searchable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
