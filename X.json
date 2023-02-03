@@ -43,6 +43,10 @@
 {"key": "dr_333影视","name": "🌠┃三三三影视","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E4%B8%89%E4%B8%89%E4%B8%89%E5%BD%B1%E8%A7%86.js"},
 {"key": "dr_52gen","name": "🌀┃52gen影视","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/52gen.js"},
 {"key": "dr_IMAX","name": "📺┃IMAX影视","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/IMAX.js"},
+{"key": "dr_lingyun","name": "🍩┃凌云影视","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/lingyun.js"},
+{"key": "dr_home","name": "🌈┃在线之家","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/home.js"},
+
+
 {"key": "dr_追剧达人","name":"🏃┃追剧达人","type":3,"api":"https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/zjdr.js"},
 {"key":"csp_xbb_茶杯狐","name":"🐯SP┃茶杯狐","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E8%8C%B6%E6%9D%AF%E7%8B%90.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"mtv_XBPQ_映迷影视","name":"🐾┃映迷影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://我不是.肥猫.love:63/json/映迷影院.json"},
