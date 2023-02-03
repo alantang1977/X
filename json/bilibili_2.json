@@ -7,6 +7,18 @@
 			"type_id": "美食超清"
 		},
 		{
+			"type_name": "4K",
+			"type_id": "4K"
+		},
+		{
+			"type_name": "电影",
+			"type_id": "电影"
+		},
+		{
+			"type_name": "电视剧",
+			"type_id": "电视剧"
+		},
+		{
 			"type_name": "食谱",
 			"type_id": "食谱"
 		},
@@ -119,18 +131,6 @@
 		{
 			"type_name": "舞曲",
 			"type_id": "舞曲超清"
-		},
-		{
-			"type_name": "4K",
-			"type_id": "4K"
-		},
-		{
-			"type_name": "电影",
-			"type_id": "电影"
-		},
-		{
-			"type_name": "电视剧",
-			"type_id": "电视剧"
 		},
 		{
 			"type_name": "白噪音",
