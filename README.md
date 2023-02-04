@@ -77,34 +77,44 @@ http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63
 下载链接：http://ltjm.ml/mao.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.love:63/
 
 
-电视点播配置接口2023.1.26
+电视点播配置接口2023
 配置:http://肥猫.love
-配置:http://饭太硬.ga/x/o.json
-配置:https://hutool.ml/tang
-配置:http://pandown.pro/tvbox/tvbox.json
-配置:http://home.jundie.top:81/top98.json
-配置:http://drpy.site/js1
-配置:https://tvbox.cainisi.cf
-配置:https://神器每日推送.tk/pz.json
-配置:https://maoyingshi.cc/tvbox/云星日记/1.m3u8
-以下为测试配置
-1: https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json
-2:
-https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/j3zp.json
-3:
-https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/fj.json
-好用接口
-1号:
-https://hutool.ml/tang
 
-2号:
-https://raw.fastgit.org/FongMi/CatVodSpider/main/json/config.json
-3号:
-https://ghproxy.com/https://raw.githubusercontent.com/ShadowDemon1997/CatVodSpiderJS/main/cfg.json
-4号:
-http://drpy.site/slim
-5号:
-https://notabug.org/imbig66/tv-spider-man/raw/master/0731.json
+配置:http://饭太硬.ga/x/o.json
+
+配置:https://hutool.ml/tang
+
+配置:http://pandown.pro/tvbox/tvbox.json
+
+配置:http://home.jundie.top:81/top98.json
+
+配置:http://drpy.site/js1
+
+配置:https://tvbox.cainisi.cf
+
+配置:https://神器每日推送.tk/pz.json
+
+配置:https://maoyingshi.cc/tvbox/云星日记/1.m3u8
+
+以下为测试配置
+
+1: https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json
+
+2:https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/j3zp.json
+
+3:https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/fj.json
+
+好用接口
+
+1号:https://hutool.ml/tang
+
+2号:https://raw.fastgit.org/FongMi/CatVodSpider/main/json/config.json
+
+3号:https://ghproxy.com/https://raw.githubusercontent.com/ShadowDemon1997/CatVodSpiderJS/main/cfg.json
+
+4号:http://drpy.site/slim
+
+5号:https://notabug.org/imbig66/tv-spider-man/raw/master/0731.json
 
 二：以下为各个大佬直播源：
 
