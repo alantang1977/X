@@ -78,13 +78,14 @@ http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63
 
 
 电视点播配置接口2023
+
 配置:http://肥猫.love
 
 配置:http://饭太硬.ga/x/o.json
 
-配置:https://hutool.ml/tang
+唐三配置接口:https://hutool.ml/tang
 
-配置:http://pandown.pro/tvbox/tvbox.json
+巧技配置接口:http://pandown.pro/tvbox/tvbox.json
 
 配置:http://home.jundie.top:81/top98.json
 
