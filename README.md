@@ -89,9 +89,9 @@ http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63
 
 配置:http://home.jundie.top:81/top98.json
 
-配置:http://drpy.site/js1
+小雅配置接口:http://drpy.site/js1
 
-配置:https://tvbox.cainisi.cf
+莱妮丝配置接口:https://tvbox.cainisi.cf
 
 配置:https://神器每日推送.tk/pz.json
 
