@@ -32,6 +32,10 @@ http://饭太硬.ga/x/o.json
 
 http://ltjm.ml/mao.php?url=http://饭太硬.ga/x/o.json
 
+https://神器每日推送.tk/pz.json
+
+http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
+
 2.唐三：
 
 https://hutool.ml/tang
