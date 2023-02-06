@@ -4,6 +4,17 @@ Tang介绍
 
 思维没有边界 一切皆有可能
 
+
+
+1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
+
+2.  TV_q215613905（https://github.com/alantang1977/TVBoxOS）
+
+3.  https://github.com/FongMi/TV 影視TV
+
+4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
+
+
 软件架构
 
 http://www.metools.info/other/o21.html
