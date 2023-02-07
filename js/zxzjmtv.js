@@ -5,7 +5,7 @@ muban.首图.二级.content = '.data&&Text';
 var rule={
     title:'fositv',
     模板:'首图',
-    host:'https://fositv.com',
+    host:'https://dadou.pro',
     // url:'/fyclass-fypage.html',
     url:'/vod_________________________show/fyfilter.html',
     filterable:1,//是否启用分类筛选,
