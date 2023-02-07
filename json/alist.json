@@ -1,0 +1,201 @@
+[
+        {
+        "name" : "丫仙女",
+        "server" : "http://alist.xiaoya.pro/",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true,
+        "params" : {
+            "/abc" : {
+                "password" : "123"
+            },
+            "/abc/abc" : {
+                "password" : "123"
+            }
+        }
+    },
+    {
+        "name": "蓝魔",
+      "server": "https://alistcn.repl.co",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },    
+   {
+        "name" : "杜比",
+        "server" : "https://dubi.tk",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    }, 
+    {
+        "name" : "帥鵬",
+        "server" : "https://hi.shuaipeng.wang",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    }, 
+ {
+        "name" : "小雅",
+        "server" : "http://alistxy.ganggang.live:5678",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+
+        
+        {
+        "name" : "晴园",
+        "server" : "https://alist.52qy.repl.co",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "米奇",
+        "server" : "https://anime.mqmmw.ga",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "小兵",
+        "server" : "https://6vv.app",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "一只鱼",
+        "server" : "https://alist.youte.ml",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "七米蓝",
+        "server" : "https://al.chirmyram.com",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "帅盘",
+        "server" : "https://hi.shuaipeng.wang",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "神族",
+        "server" : "https://alist.shenzjd.com",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "姬路",
+        "server" : "https://pan.jlbx.xyz",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+    {
+        "name" : "浩瀚吧",
+        "server" : "https://8023.haohanba.cn",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+     {
+        "name" : "資源小站",
+        "server" : "https://960303.xyz",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "听闻",
+        "server" : "https://wangpan.sangxuesheng.com",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "DISK",
+        "server" : "http://124.222.140.243:8080",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "云播放",
+        "server" : "https://quanzi.laoxianghuijia.cn",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "星梦",
+        "server" : "https://pan.bashroot.top",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "触光",
+        "server" : "https://pan.ichuguang.com",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "好汉吧",
+        "server" : "https://8023.haohanba.cn",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+    {
+        "name" : "小光组",
+        "server" : "https://6vv.app",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+     {
+        "name" : "SB盘",
+        "server" : "http://sbpan.tk",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+
+        {
+        "name" : "repl",
+        "server" : "https://ali.liucn.repl.co",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "秋雨分享",
+        "server" : "https://share.laowang.me",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+     {
+        "name" : "梓澪",
+        "server" : "https://zi0.cc",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    },
+        {
+        "name" : "讯维",
+        "server" : "https://pan.xwbeta.com",
+        "startPage" : "/",
+        "showAll" : false,
+        "search" : true
+    }]
