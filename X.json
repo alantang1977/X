@@ -153,6 +153,7 @@
 {"name":"自动轮询","type": 2,"url": "Sequence"},
 //{"name":"Web解析聚合","type":3,"url":"Web"},
 {"name": "布雷解析","url": "https://tv.bulei.cc/bfq/?url="},
+{"name": "万能解析","url": "http://jiexi.parses.repl.co/api.php?url="},
 {"name": "布雷","type": 0,"url": "http://home.jundie.top:666/unBom.php?m3u8=", "header": { "User-Agent": "Mozilla/5.0"}},
 {"name": "三三解析","type": 1,"url": "https://jiexi.parses.repl.co/api.php?url="},
 {"name": "星辰云解析","type": 1,"url": "https://json.xn--9kq078cdn3a.cc/api/?key=GMp1H9mKRKVriBulRT&url=","header": {"User-Agent": "Mozilla/5.0"}},
