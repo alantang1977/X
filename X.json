@@ -124,11 +124,11 @@
 
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
-{"name":"自动并发","type": 2,"url": "Parallel"},
-{"name":"自动轮询","type": 2,"url": "Sequence"},
+//{"name":"自动并发","type": 2,"url": "Parallel"},
+//{"name":"自动轮询","type": 2,"url": "Sequence"},
 //{"name":"Web解析聚合","type":3,"url":"Web"},
 //{"name": "瞄影嗅探","type": 0,"url": "http://www.miaoys.cc/vip/?url="},
-{"name": "神器","type": 1,"url": "http://jx.fuqizhishi.com:63/API.php?appkey=feimao&url="},
+{"name": "神器","type": 1,"url": "http://xn--wnup5g.xn--z7x900a.love:63/Art/analysis.php?v="},
 //{"name": "布雷解析","url": "https://tv.bulei.cc/bfq/?url="},
 //{"name": "布雷","type": 0,"url": "http://home.jundie.top:666/unBom.php?m3u8=", "header": { "User-Agent": "Mozilla/5.0"}},
 //{"name": "三三解析","type": 1,"url": "https://jiexi.parses.repl.co/api.php?url="},
