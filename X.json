@@ -146,7 +146,7 @@
 //{"name":"PlayMv","type":1,"url":"proxy://do=jx&name=playmv&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","leshi","LS","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":""}}},
 //{"name":"解析293","type":1,"url":"http://47.98.234.2:7768/api.php?url=","ext":{"flag":["qq","qiyi","mgtv","youku","letv","sohu","xigua","1905"],"header":{"User-Agent":"Dart/2.14 (dart:io)"}}},
 //{"name":"嗅探虾米","type":0,"url":"https://jx.xmflv.com/?url=","ext": {"flag": ["qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","sohu","xigua","fun","风行"],"header": {"User-Agent": "Mozilla/5.0"}}},
-{"name": "8090","url": "https://www.8090g.cn/?url="}],"flags": ["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu"
+{"name": "瞄影嗅探","type": 0,"url": "http://www.miaoys.cc/vip/?url="        
 ],
 "flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili","优酷","芒果","腾讯","爱奇艺","奇艺","duoduozy","longteng","renrenmi","ltnb","rx","xueren","xfyun","ziqie","wuduzy","CL4K","xuanfeng","1905","1920i","mim3u8","laodim3u8","leduo","rongxing","wuduyun","xueren","naifeimi","miaoparty","miaoparty2","miaoparty3","xfy","xfyun","x1play","fuckapp","ftqp2","ftqp3","ftqp4","ftqp5","1920l"],
 "ijk":[
