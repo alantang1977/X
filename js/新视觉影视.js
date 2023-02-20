@@ -1,6 +1,6 @@
 var rule={
 	title:'新视觉影视',
-	host:'https://www.6080dy2.com',
+	host:'https://www.2wyy.com/',
 	// url:'/vodshow/fyclass--------fypage---.html',
 	url:'/vodshow/fyfilter.html',
     filterable:1,//是否启用分类筛选,
