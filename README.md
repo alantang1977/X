@@ -51,6 +51,8 @@ http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
 https://hutool.ml/tang
 
+https://jm.dovxi.repl.co/api?url=https://hutool.ml/tang
+
 3.FongMi：
 
 https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json 
