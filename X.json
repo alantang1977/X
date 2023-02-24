@@ -21,9 +21,7 @@
 //{"key":"csp_XBPQ新视觉","name":"👨‍🚒┃新视觉影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/X/main/json/新视觉影院.json"},
 {"key": "csp_Xinsj","name":"👔┃新视觉影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy2.com"},
 {"key": "csp_sp_龙门影视","name":"🤖┃龙门影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://dy.hm.iqinu.com:88/lm_api.php/v1.vod","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/loamen_spider.jar"},
-//{"key": "csp_panghu","name": "🐯┃胖虎影视","type": 3,"api": "csp_Panghu","searchable": 1,"quickSearch": 1,"filterable":1,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
-{"key": "dr_胖虎影视","name":"🐯┃胖虎影视","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/胖虎.js"},
-
+{"key": "csp_panghu","name": "🐯┃胖虎影视","type": 3,"api": "csp_Panghu","searchable": 1,"quickSearch": 1,"filterable":1,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/LIBVIO.js"},
 {"key":"drpy_js_ddys","name": "🐞┃低端(官源)","type": 3,"api": "https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E4%BD%8E%E7%AB%AF.js"},
 {"key":"dr_布雷蓝光","name":"💥SP┃布雷影视(官源)","type":3,"api":"https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://gitcode.net/qq_32394351/dr_py/-/raw/master/js/LIBVIO.js"},
