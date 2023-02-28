@@ -65,6 +65,9 @@
 {"key": "dr_博看听书","name": "🎨┃博看听书","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/博看听书.js"},
 {"key": "dr_海洋听书","name": "🌊┃海洋听书","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/海洋听书.js"},
 {"key": "dr_海盗听书","name": "🏴‍☠️┃海盗听书","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/海盗听书.js"},
+{"key": "dr_听书网","name": "🏴‍☠️┃听书网","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/听书网.js"},
+{"key": "dr_幻听网听书","name": "🏴‍☠️┃幻听网听书","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/幻听网听书.js"},
+{"key": "dr_有声小说","name": "🏴‍☠️┃有声小说","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/有声小说吧.js"},
 
 {"key":"csp_Anime1","name":"📯SP┃日本动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
