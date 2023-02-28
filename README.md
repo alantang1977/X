@@ -111,6 +111,89 @@ https://dxawi.github.io/0/0.json
 
 配置:https://maoyingshi.cc/tvbox/云星日记/1.m3u8
 
+{
+    "urls": [
+        {
+            "url": "https://yydsys.top/duo/v.json",
+            "name": "🔔以下接口本公众号负责维护"
+        },
+        {
+            "url": "https://yydsys.top/duo/v.json",
+            "name": "🏡应用多多家庭版"
+        },  
+        {
+            "url": "https://yydsys.top/duo/x.json",
+            "name": "🚀阿里专线"
+        }, 
+        {
+            "url": "https://yydsys.top/duo/o.json",
+            "name": "🚀阿里扫码"
+        },               
+        {
+            "url": "https://yydsys.top/duo/v.json",
+            "name": "🔔以下接口本公众号只负责搜集"
+        }, 
+        {
+            "url": "http://我不是.肥猫.love:63/接口禁止贩卖",
+            "name": "🚀肥猫线路"
+        },
+        {
+            "url": "https://agit.ai/VivoMax/ddtv/raw/branch/master/%E9%BE%99%E9%97%A8%E5%BD%B1%E8%A7%86.json",
+            "name": "🚀龙门影视"
+        },          
+        {
+            "url": "http://饭太硬.ga/x/o.json",
+            "name": "🚀饭太硬线路"
+        },              
+        {
+            "url": "https://hutool.ml/tang",
+            "name": "🚀唐三线路"
+        },  
+        {
+            "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json",
+            "name": "🚀蜂蜜线路"
+        },                                                             
+        {
+            "url": "https://pastebin.com/raw/5NHaxyGR",
+            "name": "🚀道长线路"
+        },
+        {
+            "url": "https://tvbox.cainisi.cf",
+            "name": "🚀菜妮丝线路"
+        },
+        {
+            "url": "http://pandown.pro/tvbox/tvbox.json",
+            "name": "🚀巧记线路"
+        },
+        {
+            "url": "http://101.34.67.237/config/1",
+            "name": "🚀小雅线路"
+        },
+        {
+            "url": "http://home.jundie.top:81/top98.json",
+            "name": "🚀俊佬线路"
+        }, 
+        {
+            "url": "https://ghproxy.com/raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json",
+            "name": "🚀霜辉月明"
+        },
+        {
+            "url": "http://dxawi.github.io/0/0.json",
+            "name": "🚀dxawi0线路"
+        },
+        {
+            "url": "https://agit.ai/nbwzlyd/xiaopingguo/raw/branch/master/xiaopingguo/xiaopingguo.json",
+            "name": "🚀小苹果线路"
+        },
+        {
+            "url": "https://raw.liucn.cc/box/m.json",
+            "name": "🚀老刘备线路"
+        },
+        {
+            "url": "https://app.easybox.vip/dy",
+            "name": "🚀easybox线路"
+        }
+
 以下为测试配置
 
 1: https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json
