@@ -111,37 +111,20 @@ https://dxawi.github.io/0/0.json
 
 配置:https://maoyingshi.cc/tvbox/云星日记/1.m3u8
 
-{
-    "urls": [
-        {
-            "url": "https://yydsys.top/duo/v.json",
-            "name": "🔔以下接口本公众号负责维护"
-        },
-        {
-            "url": "https://yydsys.top/duo/v.json",
-            "name": "🏡应用多多家庭版"
-        },  
-        {
-            "url": "https://yydsys.top/duo/x.json",
-            "name": "🚀阿里专线"
-        }, 
-        {
-            "url": "https://yydsys.top/duo/o.json",
-            "name": "🚀阿里扫码"
-        },               
-        {
-            "url": "https://yydsys.top/duo/v.json",
-            "name": "🔔以下接口本公众号只负责搜集"
-        }, 
-        {
-            "url": "http://我不是.肥猫.love:63/接口禁止贩卖",
-            "name": "🚀肥猫线路"
-        },
-        {
-            "url": "https://agit.ai/VivoMax/ddtv/raw/branch/master/%E9%BE%99%E9%97%A8%E5%BD%B1%E8%A7%86.json",
-            "name": "🚀龙门影视"
-        },          
-        {
+https://yydsys.top/duo/v.json
+
+https://yydsys.top/duo/v.json
+
+https://yydsys.top/duo/x.json
+
+https://yydsys.top/duo/o.json
+
+https://yydsys.top/duo/v.json
+
+https://agit.ai/VivoMax/ddtv/raw/branch/master/%E9%BE%99%E9%97%A8%E5%BD%B1%E8%A7%86.json
+
+🚀龙门影视
+
             "url": "http://饭太硬.ga/x/o.json",
             "name": "🚀饭太硬线路"
         },              
