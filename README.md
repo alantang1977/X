@@ -14,6 +14,8 @@ Tang介绍
 
 4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
 
+道长接口 https://pastebin.com/raw/5NHaxyGR
+
 
 软件架构
 
