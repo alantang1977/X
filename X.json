@@ -141,7 +141,7 @@
 //{"name": "布雷解析","url": "https://tv.bulei.cc/bfq/?url="},
 //{"name": "布雷","type": 0,"url": "http://home.jundie.top:666/unBom.php?m3u8=", "header": { "User-Agent": "Mozilla/5.0"}},
 //{"name": "三三解析","type": 1,"url": "https://jiexi.parses.repl.co/api.php?url="},
-{"name":"肥猫解析","type": 1,"url": "https://vip.blbo.cc:2222/api/?key=9f230d947680de53b544be747efa8e54&url=","ext": {"flag": [ "qq","腾讯","企鹅","IQiYi","qiyi","爱奇艺","奇艺","youku", "YouKu","优酷","sohu","SoHu", "搜狐", "letv","LeShi","乐视","imgo","mgtv","MangGuo","芒果","SLYS4k","BYGA","luanzi","AliS","dxzy","bilibili","QEYSS","xigua","西瓜视频", "腾讯视频","奇艺视频","优酷视频","芒果视频","乐视视频"]}},
+//{"name":"肥猫解析","type": 1,"url": "https://vip.blbo.cc:2222/api/?key=9f230d947680de53b544be747efa8e54&url=","ext": {"flag": [ "qq","腾讯","企鹅","IQiYi","qiyi","爱奇艺","奇艺","youku", "YouKu","优酷","sohu","SoHu", "搜狐", "letv","LeShi","乐视","imgo","mgtv","MangGuo","芒果","SLYS4k","BYGA","luanzi","AliS","dxzy","bilibili","QEYSS","xigua","西瓜视频", "腾讯视频","奇艺视频","优酷视频","芒果视频","乐视视频"]}},
 //{"name":"万年魂环解析","type":1,"url":"http://15.165.180.3:57255/api.php?url="},
 {"name":"懒懒2","type" :1,"url":"http://lanlan.ckflv.cn/?url=","ext" : {"flag" : ["qiyi","qq","letv","sohu","youku","mgtv","bilibili","wasu","xigua","1905"]}},
 //{"name": "肥猫Q1解析","type": 1,"url": "https://parse.ikunfk.cc/parse/sign/74e860ee6889f03cae108d6c228aa725?url=","header": {"User-Agent": "Mozilla/5.0"}},
