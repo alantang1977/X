@@ -1,13 +1,13 @@
 {
 "sites":[
 ##搜索系列
-{"key":"csp_search_Yisou","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
-{"key":"csp_search_Alips","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
-{"key":"csp_search_Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php$$$xxooo$$$qq112233"},
-{"key":"csp_search_Upyunso","name":"🐺┃云搜┃搜索","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://我不是.肥猫.love:63/token.php"},
-{"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
-{"key":"csp_Paper","name":"📜┃纸条云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
-{"key":"csp_GitCafe","name":"📜┃纸条雲盘","type":3,"api":"csp_Gitcafe","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
+{"key":"csp_search_Yisou","name":"🔍┃易搜┃搜索","type":3,"api":"csp_YiSo","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
+{"key":"csp_search_Alips","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
+{"key":"csp_search_Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken$$$xxooo$$$qq112233"},
+{"key":"csp_search_Upyunso","name":"🐺┃云搜┃搜索","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
+{"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
+{"key":"csp_Paper","name":"📜┃纸条云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://ali.饭太硬.ml/alitoken"},
+{"key":"csp_GitCafe","name":"📜┃纸条雲盘","type":3,"api":"csp_Gitcafe","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"Alist1","name":"🅿┃Alis网盘","type":3,"api":"https://raw.iqiq.io/alantang1977/X/main/json/alist.min.js","ext":"https://raw.iqiq.io/alantang1977/X/main/json/alist.json"},
 {"key":"csp_Alist2","name": "🅿┃小仙女搜索","type": 3,"api":"https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://101.34.67.237/txt/json/alist.json"},
 {"key":"AList","name":"😹┃AList","type": "3","api":"csp_AList","searchable":"1","ext": "https://gh-proxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/alist.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/fongmi_AList.jar"},
