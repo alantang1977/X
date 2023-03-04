@@ -43,7 +43,7 @@ https://xn--sss604efuw.ga/x/o.json
 
 http://饭太硬.ga/x/o.json
 
-http://ltjm.ml/mao.php?url=http://饭太硬.ga/x/o.json
+http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
 https://神器每日推送.tk/pz.json
 
