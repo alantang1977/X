@@ -22,6 +22,7 @@
 {"key": "csp_Xinsj","name":"👔┃新视觉影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy2.com"},
 {"key": "csp_sp_龙门影视","name":"🐉┃龙门影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://dy.hm.iqinu.com:88/lm_api.php/v1.vod","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/loamen_spider.jar"},
 {"key": "csp_AppMr","name": "👻┃明明影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_Hlsp","name": "👿┃黑料┃影视","type": 3,"api": "csp_Hlsp","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://我不是.肥猫.love:63/json/黑料.json"},
 //{"key": "csp_panghu","name": "🐯┃胖虎影视","type": 3,"api": "csp_Panghu","searchable": 1,"quickSearch": 1,"filterable":1,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/xo.jar"},
 {"key": "csp_panghu","name": "🐯┃胖虎┃影视","type": 3,"api": "csp_Panghu","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/LIBVIO.js"},
