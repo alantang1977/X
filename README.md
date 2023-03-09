@@ -41,7 +41,7 @@ http://xn--sss604efuw.ga/x/o.json
 
 https://xn--sss604efuw.ga/x/o.json
 
-http://饭太硬.ga/x/o.json
+http://饭太硬.ga/tv
 
 http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
