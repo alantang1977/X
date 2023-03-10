@@ -6,8 +6,8 @@
 {"key":"csp_search_Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://hz752.love:63/ali/ken.php$$$yingshi$$$abcd1234"},
 {"key":"csp_search_Upyunso","name":"🐺┃云搜┃搜索","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
-//{"key":"csp_Paper","name":"📜┃纸条云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://hz752.love:63/ali/ken.php","jar":"https://gitee.com/alanchaotang/data/rae/master/jar/0310fan.jar"},
-{
+{"key":"csp_Paper","name":"📜┃纸条云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://hz752.love:63/ali/ken.php","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/0310fan.jar"},
+//{
             "key": "csp_Paper",
             "name": "📜纸条┃8K",
             "type": 3,
