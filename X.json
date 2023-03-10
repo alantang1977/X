@@ -30,6 +30,7 @@
 {"key":"dr_bttwoo","name":"👬┃BTtwoo","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/两个BT.js"},
 {"key":"drpy_js_ddys","name": "🐞┃低端(官源)","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E4%BD%8E%E7%AB%AF.js"},
 {"key":"dr_布雷蓝光","name":"💥SP┃布雷影视(官源)","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/布雷蓝光.js"},
+{"key": "csp_BuLei","name":"🍩┃布雷蓝光","type": 3,"api": "csp_BuLei","searchable": 1,"quickSearch": 1,"filterable": 1,ext:"https://www.bulei.cc"},
 {"key":"dr_百忙无果","name":"🍋SP┃芒果TV(官源)","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":0,"filterable": 1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E7%99%BE%E5%BF%99%E6%97%A0%E6%9E%9C.js"},
 {"key":"dr_360影视","name":"💫SP┃360影视(官源)","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/360影视.js"},
 {"key":"IQIYI","name": "🥝SP┃奇异果TV(解析)","type": 3,"api": "csp_IQIYI","searchable": 1,"quickSearch": 1,"filterable": 1},
