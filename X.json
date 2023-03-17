@@ -63,7 +63,7 @@
 {"key": "Juhuang","name": "✌SP┃剧荒(爬虫)","type": 3,"api": "csp_Juhuang","searchable": 1,"quickSearch": 1,"filterable": 1,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/drpy.jar;md5;a4a90401116d9f1f6a3358c63167ff1f"},
 {"key":"js七七","name":"🌈┃七七┃影视","type":3,"api":"http://id.ganggang.live:63/js/drpy.min.js","ext":"http://id.ganggang.live:63/js/七七.js","searchable": 1,"quickSearch": 1,"filterable": 1},
 //{"key":"csp_77","name":"✌SP┃酷云七七","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
-{"key": "csp_AppTT","name": "✌SP┃图图","type": 3,"api": "csp_AppTT2","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"http://124.248.68.16:6611$$$U1JLI2UlNFVZdFUjS2lFbyp2c1BxcHIwY0M0YnhBUVc=$$$bzZzWW1tKng1aG4jcmNDdA=="},
+{"key": "csp_AppTT","name": "🐰图图┃App","type": 3,"api": "csp_AppTT","m3u8ads": "hd.youyhn.com","searchable": 1,"quickSearch":1,"filterable": 1,"ext": "tv$$$dlJYWXFYbkgqbmlsU1JLIyNkMFZ0OE1JdzRJQW1yY3I=$$$Y2hpbkpaUzdiKnpYbzZzWQ==$$$aHR0cDovL2FwaS50dDU4LnR2L2NvbmZpZy9uZXd0di5qc29uP3NzPQ=="},
 {"key":"360_spider","name":"✌SP┃360影视","api":"csp_SP360","type":3,"filterable":1,"quickSearch":1,"searchable":1},
 {"key":"Lezhu_spider","name":"✌SP┃乐猪影视","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1},
 {"key":"csp_Nmys","name":"✌SP┃农民影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
