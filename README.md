@@ -123,10 +123,12 @@ https://yydsys.top/duo/o.json
 
 https://yydsys.top/duo/v.json
 
-https://agit.ai/VivoMax/ddtv/raw/branch/master/%E9%BE%99%E9%97%A8%E5%BD%B1%E8%A7%86.json
-
-🚀龙门影视
-
+{
+  "urls": [
+       {
+            "url": "https://agit.ai/VivoMax/ddtv/raw/branch/master/龙门影视.json",
+            "name": "🚀龙门影视"
+        },
             "url": "http://饭太硬.ga/x/o.json",
             "name": "🚀饭太硬线路"
         },              
@@ -178,6 +180,8 @@ https://agit.ai/VivoMax/ddtv/raw/branch/master/%E9%BE%99%E9%97%A8%E5%BD%B1%E8%A7
             "url": "https://app.easybox.vip/dy",
             "name": "🚀easybox线路"
         }
+]
+}
 
 以下为测试配置
 
