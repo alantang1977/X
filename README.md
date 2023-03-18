@@ -124,8 +124,6 @@ https://yydsys.top/duo/o.json
 https://yydsys.top/duo/v.json
 
 
-{
-  "urls": [
        {
             "url": "https://agit.ai/VivoMax/ddtv/raw/branch/master/龙门影视.json",
             "name": "🚀龙门影视"
@@ -181,8 +179,6 @@ https://yydsys.top/duo/v.json
             "url": "https://app.easybox.vip/dy",
             "name": "🚀easybox线路"
         }
-]
-}
 
 以下为测试配置
 
