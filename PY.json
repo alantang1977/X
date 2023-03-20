@@ -19,6 +19,7 @@
 
 ##drpy系列
 {"key": "csp_Xinsj","name":"👔┃新视觉影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy2.com"},
+{"key": "csp_Yht","name": "🍀┃荷塘影视","type": 3,"api": "csp_Yht","searchable": 1,"quickSearch": 1,"filterable":1,"ext": "https://yehetang.cc","jar": "http://bt.hm.iqinu.com:32000/box/sub/jar/tvbox.jar;md5;f251aa414214d022de4b1b9a15bbcb9b"},
 {"key": "csp_sp_龙门影视","name":"🐉┃龙门影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://dy.hm.iqinu.com:88/lm_api.php/v1.vod","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/loamen_spider.jar"},
 {"key":"drpy_js_ddys","name": "🐞┃低端(官源)","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E4%BD%8E%E7%AB%AF.js"},
 {"key":"dr_bttwoo","name":"👬┃BTtwoo","type":3,"api":"https://gitee.com/alanchaotang/data/raw/master/js/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/两个BT.js"},
