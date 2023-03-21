@@ -45,7 +45,7 @@ http://饭太硬.ga/tv
 
 http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
-https://神器每日推送.tk/pz.json
+https://jm.dovxi.repl.co/api?url=http://饭太硬.ga/tv
 
 http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
