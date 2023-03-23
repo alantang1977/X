@@ -104,7 +104,7 @@
 
 ##Dora系列
 {"key":"世界杯","name":"🗽Dora┃一起看","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"8e3aefcba838d8dc5102ac786719d837","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
-{"key":"csp_YQKAPP","name":"🎉一起看┃App","type":3,"api":"csp_YQKAPP","playerType":2,"m3u8ads": "hd.youyhn.com","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://api-tx.11ty.top},
+{"key":"csp_YQKAPP","name":"🎉一起看┃App","type":3,"api":"csp_YQKAPP","playerType":2,"m3u8ads": "hd.youyhn.com","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://api-tx.11ty.top"},
 //{"key": "yema","name": "🗽Dora┃野马","type": "3","api": "csp_AppYsV2","searchable": "1","quickSearch": "1","filterable": "1","ext": "http://v.yemays.tk/api.php/app/","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/ts.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Tian","name":"🗽Dora┃天天","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"bdc1c75081e5e477189a463baa47e392","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Yanet","name":"🗽Dora┃鸭奶飞","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"a369b1f623fe86605f1b029f0cf66349","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
