@@ -161,7 +161,7 @@
 //"wallpaper":"https://tool.weetai.cn/api",
 //"spider":"https://gitee.com/alanchaotang/new/raw/master/jar/tangchao.txt;md5;b7c21f167594e0f27da423785c0b8d00", 
 //"spider":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/jar/tang.jar", 
-"spider":"img+https://gitee.com/alanchaotang/data/raw/master/jar/fatcat.jar;md5;99a127edb4ff2fc621b648adf23e5c87", 
+"spider":"https://gitee.com/alanchaotang/data/raw/master/jar/fatcat.jar;md5;99a127edb4ff2fc621b648adf23e5c87", 
 //"spider":"https://raw.iqiq.io/alantang1977/X/main/jar/fatcat.jar", 
 //"lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9zdWFuamluLmdpdGh1Yi5pby9tYWluL3R2L2NiLnR4dA=="]}]}],
 //"lives": [{"group": "redirect","channels": [{"name": "live","urls": ["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naXRlZS5jb20vYWxhbmNoYW90YW5nL1RhbmdUVi9yYXcvbWFzdGVyL2xpdmVzL3R2bGl2ZS50eHQ="]}]}],
