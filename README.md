@@ -1,6 +1,6 @@
 Tang介绍
 
-湯影視TV V1.0.3
+湯影視TV 
 
 思维没有边界 一切皆有可能
 
@@ -318,5 +318,8 @@ https://hfr1107.github.io/CatVodTVJsonEditor/
 https://xn--m7rp06gw5k.ml/
 
 加密解密：https://base64.supfree.net/
+
+图标网址
+https://www.iconfinder.com/search?q=tv
 
 
