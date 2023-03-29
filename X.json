@@ -22,7 +22,7 @@
 {"key": "csp_Xinsj","name":"👔┃新视觉影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy2.com"},
 //{"key": "csp_sp_龙门影视","name":"🐉┃龙门影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://dy.hm.iqinu.com:88/lm_api.php/v1.vod","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/loamen_spider.jar"},
 {"key": "csp_AppMr","name": "👻┃明明影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key":"csp_MeiJu69","name":"🥝┃69美剧","type":3,"api":"csp_MeiJu69","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/"},
+{"key":"csp_MeiJu69","name":"🥝┃六九美剧","type":3,"api":"csp_MeiJu69","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/"},
 {"key": "csp_Hlsp","name": "👿┃黑料影视","type": 3,"api": "csp_Hlsp","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
 {"key": "无名小站","name":"🎫┃湯影視","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E6%97%A0%E5%90%8D%E5%B0%8F%E7%AB%99.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/%E8%8F%9C%E5%A6%AE%E4%B8%9D.jar"},
 {"key":"csp_XYQHiker素白白","name":"🐝┃素白白影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E7%B4%A0%E7%99%BD%E7%99%BD%E5%BD%B1%E8%A7%86.json"},
