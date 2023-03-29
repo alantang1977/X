@@ -61,7 +61,7 @@
 //{"key": "csp_Yht","name": "🍀┃野荷塘影视","type": 3,"api": "csp_Yht","searchable": 1,"quickSearch": 1,"filterable":1,"ext": "https://yehetang.cc","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 {"key": "野荷塘","name": "🍀┃野荷塘影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 {"key": "csp_Vofl","name": "🎈┃Voflix","type": 3,"api": "csp_Voflix","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/Voflix.txt"},
-{"key":"csp_Vofl","name":"🎈Vofl┃直连","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
+//{"key":"csp_Vofl","name":"🎈Vofl┃直连","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "dr_剧荒TV","name": "🥻┃剧荒TV","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/剧荒TV.js"},
 {"key":"js七七","name":"🌈┃七七┃影视","type":3,"api":"http://id.ganggang.live:63/js/drpy.min.js","ext":"http://id.ganggang.live:63/js/七七.js","searchable": 1,"quickSearch": 1,"filterable": 1},
