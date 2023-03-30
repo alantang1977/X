@@ -62,8 +62,8 @@
 {"key": "dr_看韩剧","name": "🎋┃看韩剧","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/看韩剧.js"},
 {"key":"XBPQ_fant","name":"🍙┃饭团影视","type":3,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E9%A5%AD%E5%9B%A2.json"},
 {"key":"csp_xbb_茶杯狐","name":"🐯SP┃茶杯狐","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E8%8C%B6%E6%9D%AF%E7%8B%90.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
-//{"key":"csp_XBPQ_映迷影院","name":"🐾┃映迷影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/yingmiyingyuan.json"},
-{
+{"key":"csp_XBPQ_映迷影院","name":"🐾┃映迷影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/json/yingmiyingyuan.json"},
+//{
             "key": "csp_XBPQ_映迷影院",
             "name": "💢映迷影院",
             "type": 3,
