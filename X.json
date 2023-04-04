@@ -24,8 +24,8 @@
 {"key": "csp_Xinsj","name":"👔┃新视觉影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy3.com"},
 {"key": "csp_AppMr","name": "👻┃明明影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_MeiJu69","name":"🥝┃六九美剧","type":3,"api":"csp_MeiJu69","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/"},
-//{"key": "csp_Hlsp","name": "👿┃黑料影视","type": 3,"api": "csp_Hlsp","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
-{"key":"黑料影视", "name": "💣黑料影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/heiliao.json"},
+//{"key": "csp_Hlsp","name": "👿┃黑料影视","type": 3,"api": "csp_Hlsp","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/heiliao.json"},
+{"key":"黑料影视", "name": "💣黑料影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
 
 {"key": "csp_Nkdy","name": "⏺┃耐看影视","type": 3,"api": "csp_Nkdy","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "真不卡影视","name":"💧┃真不卡影视","type":3,"api":"csp_XYQHiker","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/dianyinghezi.json"},
