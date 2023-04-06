@@ -163,6 +163,8 @@
 { "key": "蓝光电影", "name": "🚁QJ┃蓝光电影", "type": 3, "api": "csp_Lgdyy", "searchable": 1, "quickSearch": 1, "filterable": 1 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
 { "key": "csp_CZSPP", "name": "🚁QJ┃厂长资源", "type": 3, "api": "csp_Czsapp", "searchable": 1, "playerType": 2, "quickSearch": 1, "filterable": 0 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
 { "key": "csp_Auete", "name": "🚁QJ┃Auete", "type": 3, "api": "csp_Auete", "searchable": 1, "playerType": 2,"quickSearch":1, "filterable":1 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
+{"key":"mayiys_spider","name":"🚁QJ┃蚂蚁影视","api":"csp_Mayiys","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"" ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
+
 
 ##jar系列
 {"key":"csp_Bd","name":"📯SP┃哔嘀影视","type":3,"api":"csp_Bdys01","searchable":1,"quickSearch":1,"filterable":1},
