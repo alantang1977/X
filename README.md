@@ -129,7 +129,6 @@ https://yydsys.top/duo/v.json
 
 多线仓：
 
-{"urls": [
 {
 "url": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/X.json",
 "name": "🏀┃帅汤┃X🏀"
