@@ -20,6 +20,7 @@ Tang介绍
 
                 https://github.com/52670576/tvbox
         
+7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
 软件架构
 
