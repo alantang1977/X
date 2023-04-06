@@ -72,7 +72,7 @@
 {"key":"csp_biubiu_创艺影视","name":"🥕SP┃创艺影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E5%88%9B%E8%89%BA%E5%BD%B1%E8%A7%86.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/77.jar;md5;0385198ebd8945c9db645bed01d26a15"},
 //{"key": "csp_Yht","name": "🍀┃野荷塘影视","type": 3,"api": "csp_Yht","searchable": 1,"quickSearch": 1,"filterable":1,"ext": "https://yehetang.cc","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 {"key": "野荷塘","name": "🍀┃野荷塘影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
-{"key": "csp_Vofl","name": "🎈┃Voflix","type": 3,"api": "csp_Voflix","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/Voflix.txt"},
+//{"key": "csp_Vofl","name": "🎈┃Voflix","type": 3,"api": "csp_Voflix","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/Voflix.txt"},
 //{"key":"csp_Vofl","name":"🎈┃Voflix","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "dr_剧荒TV","name": "🥻┃剧荒TV","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/剧荒TV.js"},
@@ -82,7 +82,7 @@
 {"key":"达达龟","name":"🐢┃达达龟","type":3,"api":"csp_XPathFiltevoflixr","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitea.com/52670576/tvbox/raw/branch/master/sub/dadagui.json"},
 
 ##dr_js系列
-{"key": "dr_voflix","name":"🎈┃voflix","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/voflix.js"},
+{"key": "dr_voflix","name":"🎈┃Voflix影视","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/voflix.js"},
 {"key": "dr_69美剧","name":"✨┃69美剧","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/69美剧.js"},
 {"key": "dr_兄弟影视","name":"🫂┃兄弟影视","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/兄弟影视.js"},
 {"key": "dr_皮皮鸭","name": "🎋┃皮皮鸭","type": 3,"api": "https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://raw.iqiq.io/alantang1977/dr_py/master/js/皮皮鸭.js"},
