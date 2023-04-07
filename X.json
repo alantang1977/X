@@ -5,7 +5,7 @@
 {"key":"csp_search_Alips","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"csp_search_Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"csp_search_Upyunso","name":"🐺┃云搜┃搜索","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch" :1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
-{"key":"UP云搜","name": "☁️UP云搜","type": 3,"api": "csp_UpYun","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php","jar":"https://gitee.com/lekanbox/ysc/raw/master/aliyun.jar"},
+{"key":"UP云搜","name": "☁️UP云搜","type": 3,"api": "csp_UpYun","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/aliyun.jar"},
 {"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"csp_Paper","name":"📜┃纸条云盘┃8K","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"Alist1","name":"🅿┃Alis┃网盘","type":3,"api":"https://raw.iqiq.io/alantang1977/X/main/json/alist.min.js","ext":"https://raw.iqiq.io/alantang1977/X/main/json/alist.json"},
