@@ -19,6 +19,8 @@ Tang介绍
 6.  🚓运输车🚓 https://jm.dovxi.repl.co/api?url=https://gitee.com/lekanbox/ysc/raw/master/ysc.json
 
                 https://github.com/52670576/tvbox
+                
+                https://gitee.com/lekanbox/ysc
         
 7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
