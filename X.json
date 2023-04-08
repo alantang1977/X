@@ -29,7 +29,7 @@
 //{"key":"csp_MeiJu69","name":"🥝┃六九美剧","type":3,"api":"csp_MeiJu69","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/"},
 {"key":"csp_MeiJu69","name":"🥝┃六九美剧","api":"csp_AppYsV2","type":3,"m3u8ads": "hd.youyhn.com","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key":"黑料影视", "name": "👿┃黑料影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
-{"key": "csp_Nkdy","name": "⏺┃耐看影视","type": 3,"api": "csp_Nkdy","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_Nkdy","name": "⏺┃耐看影视","type": 3,"api": "csp_Nkdy","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 {"key": "真不卡影视","name":"💧┃真不卡影视","type":3,"api":"csp_XYQHiker","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/dianyinghezi.json"},
 {"key": "无名小站","name":"🎫┃湯氏影視","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E6%97%A0%E5%90%8D%E5%B0%8F%E7%AB%99.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/%E8%8F%9C%E5%A6%AE%E4%B8%9D.jar"},
 {"key":"csp_SP33","name":"📺┃三三影视","type":3,"api":"csp_SP33","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext": "","jar":""},
