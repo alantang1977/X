@@ -78,7 +78,7 @@
 //{"key": "csp_Yht","name": "🍀┃野荷塘影视","type": 3,"api": "csp_Yht","searchable": 1,"quickSearch": 1,"filterable":1,"ext": "https://yehetang.cc","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 {"key": "野荷塘","name": "🍀┃野荷塘影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 //{"key": "csp_Vofl","name": "🎈┃Voflix","type": 3,"api": "csp_Voflix","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/Voflix.txt"},
-//{"key":"csp_Vofl","name":"🎈┃Voflix","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_Vofl","name":"🎈┃Voflix","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"Lezhu_spider","name":"✌SP┃乐猪影视","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1},
 {"key":"csp_77","name":"🌈┃七七┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
