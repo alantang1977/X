@@ -82,7 +82,7 @@
 //{"key": "csp_Vofl","name": "🎈┃Voflix","type": 3,"api": "csp_Voflix","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/Voflix.txt"},
 {"key":"csp_Vofl","name":"🎈┃Voflix","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
-{"key":"Lezhu_spider","name":"✌SP┃乐猪影视","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1},
+{"key":"Lezhu_spider","name":"✌SP┃乐猪影视","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext": "","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 {"key":"csp_77","name":"🌈┃七七┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Nmys","name":"✌SP┃农民影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
 {"key":"达达龟","name":"🐢┃达达龟","type":3,"api":"csp_XPathFiltevoflixr","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitea.com/52670576/tvbox/raw/branch/master/sub/dadagui.json"},
