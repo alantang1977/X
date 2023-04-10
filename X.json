@@ -86,7 +86,7 @@
 {"key":"乐猪","name":"💢┃乐猪影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/lezhu.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 {"key":"csp_77","name":"🌈┃七七┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Nmys","name":"✌SP┃农民影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
-{"key":"达达龟","name":"🐢┃达达龟","type":3,"api":"csp_XPathFiltevoflixr","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/dadagui.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
+{"key":"达达龟","name":"🐢┃达达龟","type":3,"api":"csp_XPathFiltevoflixr","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/dadagui.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 
 ##dr_js系列
 {"key": "dr_voflix","name":"🎈┃Voflix影视","type":3,"api":"https://raw.iqiq.io/alantang1977/dr_py/master/libs/drpy.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://raw.iqiq.io/alantang1977/dr_py/master/js/voflix.js"},
