@@ -26,7 +26,6 @@
 {"key":"黑料影视", "name": "👿┃黑料影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
 {"key": "csp_Nkdy","name": "⏺┃耐看影视","type": 3,"api": "csp_Nkdy","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "","jar":""},
 {"key":"宝仙HD","name":"👨‍🌾┃宝仙影视HD","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/baoxian.json"},
-{"key":"软件教程","name":"📚┃软件教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.com/raw.githubusercontent.com/alantang1977/tvbox/main/sub/jiaocheng.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 {"key": "真不卡影视","name":"💧┃真不卡影视","type":3,"api":"csp_XYQHiker","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/dianyinghezi.json"},
 {"key": "无名小站","name":"🎫┃湯氏影視","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E6%97%A0%E5%90%8D%E5%B0%8F%E7%AB%99.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/%E8%8F%9C%E5%A6%AE%E4%B8%9D.jar"},
 {"key":"csp_SP33","name":"📺┃三三影视","type":3,"api":"csp_SP33","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext": "","jar":""},
@@ -173,6 +172,7 @@
 { "key": "csp_CZSPP", "name": "🚁QJ┃厂长资源", "type": 3, "api": "csp_Czsapp", "searchable": 1, "playerType": 2, "quickSearch": 1, "filterable": 0 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
 { "key": "csp_Auete", "name": "🚁QJ┃Auete", "type": 3, "api": "csp_Auete", "searchable": 1, "playerType": 2,"quickSearch":1, "filterable":1 ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
 {"key":"mayiys_spider","name":"🚁QJ┃蚂蚁影视","api":"csp_Mayiys","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"" ,"jar":"https://gitee.com/alanchaotang/data/raw/master/jar/qj.jar;md5;4cf4efad16e59924758aa97d2a1a7961"},
+{"key":"软件教程","name":"📚┃软件教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.com/raw.githubusercontent.com/alantang1977/tvbox/main/sub/jiaocheng.json"},
 
 
 ##jar系列
