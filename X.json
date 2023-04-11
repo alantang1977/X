@@ -66,7 +66,7 @@
 
 ##网上收集系列
 {"key":"XBPQ_fant","name":"🍙┃饭团影视","type":3,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E9%A5%AD%E5%9B%A2.json"},
-{"key":"csp_xbb_茶杯狐","name":"🐯SP┃茶杯狐","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E8%8C%B6%E6%9D%AF%E7%8B%90.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
+{"key":"csp_xbb_茶杯狐","name":"🐯SP┃茶杯狐","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E8%8C%B6%E6%9D%AF%E7%8B%90.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/%E8%8C%B6%E6%9D%AF%E7%8B%90.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"csp_XBPQ_映迷影院","name":"🐾┃映迷影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/yingmiyingyuan.json"},
 {"key":"嗯哩嗯哩","name": "🍖┃嗯哩影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://enlienli.com/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html"},
 {"key":"csp_XBPQ新大米","name":"🌾┃大米影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":{"分类":"电影$20#连续剧$21#动漫$22#综艺$23#福利$35","分类url":"https://www.lkfrp.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}/pjax/YES.html"}},
