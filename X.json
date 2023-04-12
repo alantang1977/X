@@ -1,11 +1,12 @@
 {
 "sites":[
 ##搜索系列
+{"key":"csp_77","name":"🌈┃七七┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"易搜","name":"🚕┃易搜┃搜索","type": 3,"api": "csp_YiSo","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"盘搜","name": "😹┃盘搜┃搜索","type": 3,"api": "csp_PanSou","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"找资源","name": "🚁┃资源┃搜索","type": 3,"api": "csp_Zhaozy","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"UP云搜","name": "☁️┃UP云搜┃搜索","type": 3,"api": "csp_UpYun","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
-{"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
+//{"key":"push_agent","name":"▶┃推送磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"csp_Paper","name":"📜┃纸条云盘┃8K","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://ali.饭太硬.ml/alitoken"},
 {"key":"Alist1","name":"🅿┃Alis┃网盘","type":3,"api":"https://raw.iqiq.io/alantang1977/X/main/json/alist.min.js","ext":"https://raw.iqiq.io/alantang1977/X/main/json/alist.json"},
 {"key":"csp_Alist2","name": "🅿┃小仙女┃搜索","type": 3,"api":"https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://101.34.67.237/txt/json/alist.json"},
@@ -81,7 +82,6 @@
 {"key":"csp_Dm84","name":"🚌┃动漫巴士","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 //{"key":"Lezhu_spider","name":"✌SP┃乐猪影视","api":"csp_Lezhu","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext": "","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 {"key":"乐猪","name":"💢┃乐猪影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/lezhu.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
-{"key":"csp_77","name":"🌈┃七七┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Nmys","name":"✌SP┃农民影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
 {"key":"达达龟","name":"🐢┃达达龟","type":3,"api":"csp_XPathFilter","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.com/raw.githubusercontent.com/52670576/tvbox/main/sub/dadagui.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/YSC.jar"},
 
