@@ -10,7 +10,7 @@ Tang介绍
 
 2.  TV_q215613905（https://github.com/alantang1977/TVBoxOS）
 
-3.  https://github.com/FongMi/TV 影視TV
+3.  影視TV https://github.com/FongMi/TV 
 
 4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
 
