@@ -1,7 +1,7 @@
 {
 "sites":[
 ##搜索系列
-{"key":"csp_77","name":"🌈┃柒柒影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_77","name":"🌈┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"易搜","name":"🚕┃易搜┃搜索","type": 3,"api": "csp_YiSo","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"盘搜","name": "😹┃盘搜┃搜索","type": 3,"api": "csp_PanSou","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
 {"key":"找资源","name": "🚁┃资源┃搜索","type": 3,"api": "csp_Zhaozy","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/token.php"},
