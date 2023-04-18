@@ -88,11 +88,7 @@ http://ltjm.ml/mao.php?url=https://tvbox.cainisi.cf
 
 9.肥猫接口：
 
- http://xn--ihqu10cn4c.xn--z7x900a.love:63/
-
-http://我不是.肥猫.love:63
-
-http://肥猫.love
+http://xn--ihqu10cn4c.xn--z7x900a.love:63/
 
 http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63/接口禁止贩卖
 
