@@ -203,7 +203,7 @@
 //"spider":"https://gitee.com/alanchaotang/new/raw/master/jar/tangchao.txt;md5;b7c21f167594e0f27da423785c0b8d00", 
 //"spider":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/jar/B.jar", 
 //"spider":"https://gitee.com/alanchaotang/data/raw/master/jar/tang.jar;md5;99a127edb4ff2fc621b648adf23e5c87", 
-"spider":"https://agit.ai/alanchaotang/X/raw/branch/main/jar/X.jar;md5;b7c21f167594e0f27da423785c0b8d00", 
+"spider":"https://agit.ai/alanchaotang/X/raw/branch/main/jar/X.jar", 
 //"lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9zdWFuamluLmdpdGh1Yi5pby9tYWluL3R2L2NiLnR4dA=="]}]}],
 //"lives": [{"group": "redirect","channels": [{"name": "live","urls": ["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naXRlZS5jb20vYWxhbmNoYW90YW5nL1RhbmdUVi9yYXcvbWFzdGVyL2xpdmVzL3R2bGl2ZS50eHQ="]}]}],
 //"lives": [{"name": "live","url": "http://我不是.肥猫.love:63/TV/tvzb.txt","type": 0,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"},    
