@@ -18,7 +18,7 @@ Tang介绍
 
 3.  影視TV https://github.com/FongMi/TV 
 
-4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
+4.  道长源地址：https://gitcode.net/qq_32394351/drpy/
 
                https://gitlink.org.cn/hjdhnx/dr_py
 
@@ -58,8 +58,6 @@ https://xn--sss604efuw.ga/x/o.json
 
 http://饭太硬.ga/tv
 
-http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
-
 https://jm.dovxi.repl.co/api?url=http://饭太硬.ga/tv
 
 http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
@@ -96,11 +94,7 @@ http://ltjm.ml/mao.php?url=https://tvbox.cainisi.cf
 
 9.肥猫接口：
 
-http://xn--ihqu10cn4c.xn--z7x900a.love:63/
-
 http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63/接口禁止贩卖
-
-下载链接：http://ltjm.ml/mao.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.love:63/
 
 https://dxawi.github.io/0/0.json
 
