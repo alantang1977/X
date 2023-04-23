@@ -18,15 +18,7 @@
 {"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
 {"key":"csp_BBB","name":"🅱┃哔哩┃演唱","type":3,"api":"csp_Bili","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/bili.json"},
 {"key":"csp_Bili","name":"🅱┃哔哩┃合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/bilibili_2.json"},
-{
-      "key": "泥巴",
-      "name": "🆎泥巴",
-      "type": 3,
-      "api": "csp_NiNi",
-      "searchable": 1,
-      "filterable": 1,
-      "changeable": 1
-    },
+
 ##csp系列
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/master/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
@@ -62,7 +54,6 @@
 {"key":"csp_sp_龙门影视","name":"🐉┃龙门┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://app.looo.top/lm_api.php/v1.vod"}, 
 {"key": "csp_xBPQ_FreeOK","name": "🐹┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/FreeOK.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/XBPQ0111.jar"},
 {"key":"csp_biubiu_韩剧在线","name":"🍲┃韩剧在线┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/X/raw/branch/main/js/韩剧在线.json","jar":"https://agit.ai/alanchaotang/X/raw/branch/main/jar/XO2023423.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
-
 
 ##官源系列
 {"key":"drpy_js_ddys","name": "🐞┃低端影视┃(官源)","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/master/libs/drpy.min.js","ext": "https://agit.ai/alanchaotang/X/raw/branch/main/js/低端影视.js"},
