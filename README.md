@@ -28,7 +28,7 @@ Tang介绍
 
                 https://github.com/52670576/tvbox
                 
-                https://gitee.com/lekanbox/ysc
+                https://gitee.com/lekanbox/App
         
 7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
