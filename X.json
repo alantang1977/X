@@ -25,8 +25,7 @@
       "api": "csp_NiNi",
       "searchable": 1,
       "filterable": 1,
-      "changeable": 1,
-      "ext":"0；socks5://192.168.101.1:1080┃socks5://127.0.0.1:2080┃https://192.168.1.1:8080"
+      "changeable": 1
     },
 ##csp系列
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/master/libs/drpy.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/master/js/LIBVIO.js"},
