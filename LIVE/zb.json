@@ -1,14 +1,16 @@
 [
-    {
-        "name": "应用边界",
-        "url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/v.txt&&&https://v.api.aa1.cn/api/pc-girl_bz/index.php?wpon=ro38d57y8rhuwur3788y3rd"
-    },
-    {
-        "name": "AlanTang直播",
-        "url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt&&&https://www.yydsys.top/box/picture/cloud.jpg"
-    },
-    {
-        "name": "俊于直播",
-        "url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/live.txt&&&https://www.yydsys.top/box/picture/zb.png"
-    }
+{
+"name": "应用边界",
+"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/v.txt&&&https://v.api.aa1.cn/api/pc-girl_bz/index.php?wpon=ro38d57y8rhuwur3788y3rd"
+},
+{ "name": "肥羊", "type": 0, "url": "https://ghproxy.com/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u&&&https://www.yydsys.top/box/picture/cloud.jpg"
+},
+{
+"name": "AlanTang直播",
+"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt&&&https://www.yydsys.top/box/picture/cloud.jpg"
+},
+{
+"name": "俊于直播",
+"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/live.txt&&&https://www.yydsys.top/box/picture/zb.png"
+}
 ]
