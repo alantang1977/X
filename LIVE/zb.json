@@ -3,7 +3,11 @@
 "name": "应用边界",
 "url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/v.txt&&&https://v.api.aa1.cn/api/pc-girl_bz/index.php?wpon=ro38d57y8rhuwur3788y3rd"
 },
-{ "name": "肥羊", "type": 0, "url": "https://ghproxy.com/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u&&&https://www.yydsys.top/box/picture/cloud.jpg"
+{ "name": "肥羊", "type": 0, "url": "https://ghproxy.com/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
+}, 
+{ "name": "直播", "type": 0, "url": "http://home.jundie.top:81/Cat/tv/live.txt", "epg": "https://epg.112114.xyz/?ch={name}&date={date}", "logo": "https://epg.112114.xyz/logo/{name}.png"
+}, 
+{ "name": "測試", "type": 1, "url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json", "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={epg}&date={date}", "logo": "http://epg.51zmt.top:8000/{logo}"
 },
 {
 "name": "AlanTang直播",
