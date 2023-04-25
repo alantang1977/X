@@ -10,9 +10,15 @@ Tang介绍
 
 湯影視TV 
 
+base64解码：https://tool.oschina.net/encrypt?type=3
+
+AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
+
+16进制解码：http://www.cyeam.com/tool/hexdecode
+
 思维没有边界 一切皆有可能
 
-
+接口解密 http://饭太硬.ga/jm/
 
 1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
 
@@ -20,9 +26,7 @@ Tang介绍
 
 3.  影視TV https://github.com/FongMi/TV 
 
-4.  道长源地址：https://gitcode.net/qq_32394351/drpy/
-
-               https://gitlink.org.cn/hjdhnx/dr_py
+4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
 
 5.  道长接口 https://pastebin.com/raw/5NHaxyGR
 
@@ -30,7 +34,7 @@ Tang介绍
 
                 https://github.com/52670576/tvbox
                 
-                https://gitee.com/lekanbox/App
+                https://gitee.com/lekanbox/ysc
         
 7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
@@ -59,6 +63,8 @@ http://xn--sss604efuw.ga/x/o.json
 https://xn--sss604efuw.ga/x/o.json
 
 http://饭太硬.ga/tv
+
+http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
 https://jm.dovxi.repl.co/api?url=http://饭太硬.ga/tv
 
@@ -96,7 +102,11 @@ http://ltjm.ml/mao.php?url=https://tvbox.cainisi.cf
 
 9.肥猫接口：
 
+http://xn--ihqu10cn4c.xn--z7x900a.love:63/
+
 http://ltjm.ml/mao.php?url=http://我不是.肥猫.love:63/接口禁止贩卖
+
+下载链接：http://ltjm.ml/mao.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.love:63/
 
 https://dxawi.github.io/0/0.json
 
@@ -333,9 +343,7 @@ https://yydsys.top/duo/v.json
 
 使用说明
 
-
 取得阿里云盘token方法如下：先通过浏览器打开阿里云盘官网并登录网页版：https://www.aliyundrive.com/drive/ 登录成功后， 打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 JSON.parse(localStorage.token).refresh_token ③ 复制返回的32位字符串，不要复制双引号
-
 
 
 国内代理方式： 原地址：https://raw.iqiq.io/(https://github.com/alantang1977/T/blob/master/TangTV.json)
