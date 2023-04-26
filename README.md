@@ -38,9 +38,9 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
         
 7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
-8.🏮yydsys🏮 https://jihulab.com/duomv/duo
+8. 🏮yydsys🏮 https://jihulab.com/duomv/duo
          
-              https://yydsys.top/duo
+               https://yydsys.top/duo
  
 
 软件架构
