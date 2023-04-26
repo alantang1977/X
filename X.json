@@ -189,7 +189,6 @@
 {"key":"软件教程","name":"📚┃软件教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.net/raw.githubusercontent.com/alantang1977/tvbox/main/sub/jiaocheng.json"},
 
 ##jar系列
-{"key":"csp_Bd","name":"📯SP┃哔嘀影视","type":3,"api":"csp_Bdys01","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_DiDuan","name":"📯SP┃低端影视","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Ysgc","name":"📯SP┃工厂","type":3,"api":"csp_Ysgc","m3u8ads": "hd.youyhn.com","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.ysgc.vip"},
 {"key":"csp_XBiu233动漫","name": "📯SP┃Anfuns动漫","type": 3,"api": "csp_XBiu","ext": "https://www.233dm.cc/show/{cateId}--------{catePg}---.html"},
