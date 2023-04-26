@@ -59,10 +59,10 @@
 {"key":"csp_biubiu_韩剧在线","name":"🍲┃韩剧在线┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/韩剧在线.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/XO2023423.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 
 ##折腾系列
-{"key": "新片热播","name": "🔷┃新片┃热播","type": 1,"api": "https://api.iku.cool/api.php/provide/vod/?ac=list","searchable": 1,"quickSearch": 1,"filterable": 0,"categories": ["连续剧","动漫"],"ext": "","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/yyds.jar"},
-{"key": "csp_XYQBiu_磁力熊","name": "🎬️┃磁力┃贝尔","type": 3,"api": "csp_XYQBiu","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/磁力熊.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/yyds.jar"},
-{"key": "csp_XYQHiker_‍优狐","name": "⛵️┃优狐┃影视","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/优狐.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/yyds.jar"},
-{"key": "csp_363","name": "☀️┃大明┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://lzrjk.hao363.com/api.php/v1.vod","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/yyds.jar"},
+{"key": "新片热播","name": "🔷┃新片┃热播","type": 1,"api": "https://api.iku.cool/api.php/provide/vod/?ac=list","searchable": 1,"quickSearch": 1,"filterable": 0,"categories": ["连续剧","动漫"],"ext": "","jar":""},
+{"key": "csp_XYQBiu_磁力熊","name": "🎬️┃磁力┃贝尔","type": 3,"api": "csp_XYQBiu","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/磁力熊.json","jar":""},
+{"key": "csp_XYQHiker_‍优狐","name": "⛵️┃优狐┃影视","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/优狐.json","jar":""},
+{"key": "csp_363","name": "☀️┃大明┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://lzrjk.hao363.com/api.php/v1.vod","jar":""},
 
 
 ##官源系列
