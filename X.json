@@ -97,7 +97,7 @@
 {"key": "野荷塘","name": "🍀┃野荷塘┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar": "https://gitee.com/alanchaotang/data/raw/master/jar/%E9%87%8E%E8%8D%B7%E5%A1%98.jar"},
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
-{"key":"乐猪","name":"🐽┃乐猪┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/lezhu.json","jar":""},
+{"key":"乐猪","name":"🐽┃乐猪┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/lezhu.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/Yoursmile.jar"},
 //{"key":"csp_Nmys","name":"✌┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
 {"key":"csp_biubiu_达达龟","name":"🐢┃达达龟┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/乌龟影院.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/XO2023423.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 
