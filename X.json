@@ -162,7 +162,6 @@
 {"key":"Hei","name":"🗽Dora┃石榴","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"3bff500c8b1e06c052a1b0f1f7a62b45","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Lgyy","name":"🗽Dora┃蓝光","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"b2e573ff040fcd54b50475660ee1a7d1","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Smdyy","name":"🗽Dora┃神马","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"16705ee9f4764be8499806f52d4bf1e7","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
-{"key":"Ddys","name":"🗽Dora┃低端","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"1cc92323700909e7d46623bc85b958d6","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Dm84","name":"🗽Dora┃动漫","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"572192a9fe2136041a58e7219a46fb2b","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"IKan","name":"🗽Dora┃爱看","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"a4ce9a4ba7d4f4bced2ff9dfc4ab4e50","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
 {"key":"Kuaikan","name":"🗽Dora┃快看","type":"3","api":"csp_Dora","searchable":"1","quickSearch":"1","filterable":"1","ext":"459b1cb892e317546676a2c9dcec2bff","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/custom_spider.jar;md5;b061493a35694916616fb2903324cfdf"},
@@ -195,7 +194,6 @@
 {"key":"软件教程","name":"📚┃软件教程","type":3,"api":"csp_Bili","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.net/raw.githubusercontent.com/alantang1977/tvbox/main/sub/jiaocheng.json"},
 
 ##jar系列
-{"key":"csp_DiDuan","name":"📯SP┃低端影视","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Ysgc","name":"📯SP┃工厂","type":3,"api":"csp_Ysgc","m3u8ads": "hd.youyhn.com","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.ysgc.vip"},
 {"key":"csp_XBiu233动漫","name": "📯SP┃Anfuns动漫","type": 3,"api": "csp_XBiu","ext": "https://www.233dm.cc/show/{cateId}--------{catePg}---.html"},
 //{"key":"csp_xBPQ_爱看","name":"📯SP┃爱看","type":3,"api":"csp_xBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/json/%E7%88%B1%E7%9C%8B.json"},
