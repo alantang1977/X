@@ -94,6 +94,7 @@
 {"key":"csp_XYQBiu_凌云影视","name":"🍭┃凌云┃影视(Korea)","type":3,"api":"csp_XYQBiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E5%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E9%9F%A9%E5%9B%BD.json","jar":"https://gitee.com/alanchaotang/TangTV/raw/master/jar/XYQBiu_0828.jar"},
 //{"key":"csp_xbb_骚火VIP","name":"🏮┃骚火┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/骚火电影.json","jar":""},
 {"key": "csp_biubiu_骚火电影","name": "🏮┃骚火┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://yydsys.top/duo/json/%E9%AA%9A%E7%81%AB%E7%94%B5%E5%BD%B1.json"},
+{"key":"csp_Cokemv","name":"📕┃可乐Cokemv┃影视","type":3,"api":"csp_Cokemv","playerType":2,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "野荷塘","name": "🍀┃野荷塘┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar":""},
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
