@@ -28,7 +28,7 @@
 {"key": "csp_Xinsj","name":"👔┃新视觉┃影视","type":3,"api": "csp_Xinsj","searchable":1,"quickSearch":1,"filterable":1,"ext": "https://www.6080dy3.com"},
 {"key": "真不卡影视","name":"🚒┃真不卡┃影视","type":3,"api":"csp_XYQHiker","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/dianyinghezi.json"},
 {"key":"csp_XBPQ_ 零零七","name":"🆎┃零零柒┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E9%9B%B6%E9%9B%B6%E6%9F%92.json"},
-{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶姐妹┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt","jar":""},
+{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶姐妹┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php","jar":""},
 {"key":"csp_XYQHiker素白白","name":"🐝┃素白白┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E7%B4%A0%E7%99%BD%E7%99%BD%E5%BD%B1%E8%A7%86.json"},
 {"key": "csp_YQKAPP","name": "👨‍👩‍👧‍👦┃一起看┃影视","type": 3,"api": "csp_YQKAPP","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://hk-api-cf.yqk5659.com"},
 {"key":"csp_Lgyy","name":"💧┃蓝光┃影视","type":3,"api":"csp_Lgyy","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.lgyy.vip"},
