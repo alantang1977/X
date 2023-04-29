@@ -83,6 +83,8 @@
 {"key": "dr_优酷","name": "🍉┃优酷TV┃(官源)","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/优酷.js"},
 {"key": "dr_菜狗","name": "🐶┃菜狗TV┃(官源)","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/菜狗.js"},
 {"key": "奇优影院","name": "🐸┃奇优TV┃(官源)","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E5%A5%87%E4%BC%98%E5%BD%B1%E9%99%A2.json"},
+{"key": "dr_酷云77","name": "💋┃酷云77┃(官源)","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/酷云77.js"},
+
 
 ##网上收集系列
 {"key":"XBPQ_fant","name":"🍙┃饭团┃影视","type":3,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/%E9%A5%AD%E5%9B%A2.json"},
@@ -97,7 +99,7 @@
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"乐猪","name":"🐽┃乐猪┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/lezhu.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/Yoursmile.jar"},
-//{"key":"csp_Nmys","name":"✌┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
+{"key":"csp_Nmys","name":"👨‍🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/json/Nmys.json"},
 {"key":"csp_biubiu_达达龟","name":"🐢┃达达龟┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/乌龟影院.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/XO2023423.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
 
 ##dr_js系列
