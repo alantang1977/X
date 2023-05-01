@@ -42,6 +42,7 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
          
                https://yydsys.top/duo
  
+8. 🐕http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
 
 软件架构
 
