@@ -69,7 +69,7 @@
 {"key": "花猫影视","name": "🐱┃花猫┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/花猫影视.json"},
 {"key":"csp_8K","name":"🐏┃八仟┃电影","type":1,"api":"http://tvappjsonapi.8kvod.com/8kvodapilgxcsssss.php/provide/vod/","playUrl":"json:http://47.119.122.235:5566/json/free.php?url="},	
 {"key": "zy_新浪资源","name": "🏄🏻┃新浪┃影视","type": 1,"api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 0,"categories": ["动漫","综艺","纪录片","动作片","爱情片","科幻片","战争片","剧情片","恐怖片","喜剧片","大陆剧","港澳剧","台湾剧","欧美剧","动漫电影","韩剧","日剧","泰剧","体育"]},
-
+{"key":"py_xigua","name": "🍉┃西瓜┃视频","type": 3,"api": "py_xigua","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://yydsys.top/duo/json/xigua.py"},	
 ##官源系列
 {"key":"drpy_js_ddys","name": "🐓┃低端影视┃(官源)","type": 3,"api": "https://jihulab.com/duomv/duo/-/raw/main/js/drpymin.js","ext": "https://jihulab.com/duomv/duo/-/raw/main/js/ddys.js"},
 {"key":"dr_布雷蓝光","name":"💥┃布雷影视┃(官源)","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光.js"},
