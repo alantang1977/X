@@ -42,7 +42,10 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
          
                https://yydsys.top/duo
  
-8. 🐕http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
+9. 🐕http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
+
+10. 🐄楞牛哥 https://jm.dovxi.repl.co/api?url=http://tv.lengniuge.ga/yingshi
+
 
 软件架构
 
