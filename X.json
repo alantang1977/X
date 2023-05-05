@@ -71,6 +71,9 @@
 {"key":"csp_8K","name":"🐏┃八仟┃电影","type":1,"api":"http://tvappjsonapi.8kvod.com/8kvodapilgxcsssss.php/provide/vod/","playUrl":"json:http://47.119.122.235:5566/json/free.php?url="},	
 {"key": "zy_新浪资源","name": "🏄🏻┃新浪┃影视","type": 1,"api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/","searchable": 1,"quickSearch": 1,"filterable": 0,"categories": ["动漫","综艺","纪录片","动作片","爱情片","科幻片","战争片","剧情片","恐怖片","喜剧片","大陆剧","港澳剧","台湾剧","欧美剧","动漫电影","韩剧","日剧","泰剧","体育"]},
 {"key": "csp_XBPQxg","name": "🍉┃西瓜┃官源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/西瓜影视.json"},
+{"key": "干饭","name": "🍚┃干饭┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/干饭影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/cainisi.jar"},
+{"key": "莫扎兔","name": "🐰┃莫扎兔┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/莫扎兔.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/cainisi.jar"},
+
 
 ##官源系列
 {"key":"drpy_js_ddys","name": "🐓┃低端影视┃官源","type": 3,"api": "https://jihulab.com/duomv/duo/-/raw/main/js/drpymin.js","ext": "https://jihulab.com/duomv/duo/-/raw/main/js/ddys.js"},
