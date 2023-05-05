@@ -188,7 +188,6 @@
 {"name": "🚓运输车","type": 0,"url": "https://jx.xmflv.com/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name":"★星辰云解析★","type": 1,"url":"http://xn--wnup5g.xn--z7x900a.love:63/Art0425/analysis.php?v=","ext": {"flag": [ "qq","腾讯","企鹅","IQiYi","qiyi","爱奇艺","奇艺","youku", "YouKu","优酷","sohu","SoHu", "搜狐", "letv","LeShi","乐视","imgo","mgtv","MangGuo","芒果","SLYS4k","BYGA","luanzi","AliS","dxzy","bilibili","QEYSS","xigua","西瓜视频", "腾讯视频","奇艺视频","优酷视频","芒果视频","乐视视频"]}},
 {"name":"★刚刚走过★","type": 1,"url":"http://jx.fuqizhishi.com:63/API.php?appkey=feimao&url=","ext": {"flag": [ "qq","腾讯","企鹅","IQiYi","qiyi","爱奇艺","奇艺","youku", "YouKu","优酷","sohu","SoHu", "搜狐", "letv","LeShi","乐视","imgo","mgtv","MangGuo","芒果","SLYS4k","BYGA","luanzi","AliS","dxzy","bilibili","QEYSS","xigua","西瓜视频", "腾讯视频","奇艺视频","优酷视频","芒果视频","乐视视频"]}},
-//{"name":"★灰灰yyds★","type":1,"url":"https://api.json.icu/api/?key=bd189faeac82998fc1373abe631b07a0&url="},
 {"name": "瞄影嗅探","type": 0,"url": "https://jx.ccabc.cc/byg/?url="},
 {"name": "多多自建","type": 0,"url": "https://xduo.app/api/?url="},
 {"name": "RRR","type": 0,"url": "https://h5.freejson.xyz/player/?url="},
