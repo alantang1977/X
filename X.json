@@ -5,7 +5,7 @@
 {"key":"易搜","name":"🚕┃易搜┃搜索","type": 3,"api": "csp_YiSo","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"jar": "","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"盘搜","name": "😹┃盘搜┃搜索","type": 3,"api": "csp_PanSou","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"jar": "","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"找资源","name": "🚁┃资源┃搜索","type": 3,"api": "csp_Zhaozy","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
-{"key":"UP云搜","name": "☁️┃云搜┃搜索","type": 3,"api": "csp_UpYun","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"jar": "","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
+{"key":"UP云搜","name": "🥬┃云搜┃搜索","type": 3,"api": "csp_UpYun","playerType":3,"searchable": 1,"filterable": 0,"changeable": 0,"jar": "","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"七夜","name":"🍥┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"push_agent","name":"▶┃推送┃磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"csp_Paper","name":"📜┃纸条┃云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
