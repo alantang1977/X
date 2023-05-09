@@ -17,7 +17,7 @@
 {"key":"直播转点播","name":"📺︎┃电视┃点播","type": 3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/live.js","searchable": 1,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/zb.json"},
 {"key":"js豆瓣","name": "🐼┃豆瓣┃首页","type": 3,"api": "http://v.tvfan.top:88/tvbox/js/drpy.min.js","ext":"http://v.tvfan.top:88/tvbox/js/drpy.js","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key": "t4桉佬","name": "🍥┃豆瓣┃桉佬","type": 4,"api": "https://t4.secan.icu/vod?sites=all&ali_token=0c55c9f1c5cb4327ae2e51423276bb1e","searchable": 0,"quickSearch": 0,"filterable": 1},
-//{"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
+{"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
 //{"key":"csp_BBB","name":"🅱┃哔哩┃演唱","type":3,"api":"csp_Bili","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/bili.json"},
 //{"key":"csp_Bili","name":"🅱┃哔哩┃合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/bilibili_2.json"},
 {"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/CatVodSpider/master/jar/custom_spider.jar"},
