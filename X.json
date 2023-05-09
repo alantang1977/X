@@ -37,7 +37,7 @@
 //{"key":"csp_sp_龙门影视","name":"🐉┃龙门┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://app.looo.top/lm_api.php/v1.vod"}, 
 {"key":"csp_Bd","name":"🐟┃哔嘀┃影视","type":3,"api":"csp_Bdys01","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key":"csp_MeiJu69","name":"🥝┃六九┃美剧","api":"csp_AppYsV2","type":3,"m3u8ads": "hd.youyhn.com","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
+{"key":"csp_MeiJu69","name":"🥝┃六九┃美剧","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key":"黑料影视", "name": "👿┃黑料┃影视","type": 3,"api":"csp_XPathFilter","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%BB%91%E6%96%99.json"},
 //{"key": "csp_Nkdy","name": "💵┃耐看┃影视","type": 3,"api": "csp_Nkdy","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "","jar":""},
 {"key":"csp_kuaikan","name":"👀┃快看┃影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1},
