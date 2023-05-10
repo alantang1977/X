@@ -30,7 +30,7 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 5.  道长接口 https://pastebin.com/raw/5NHaxyGR
 
-6.  🚓运输车🚓 https://jm.dovxi.repl.co/api?url=https://gitee.com/lekanbox/ysc/raw/master/ysc.json
+6.  🚓运输车🚓 https://jm.dovxi.repl.co/api?url=https://ghproxy.net/raw.githubusercontent.com/52670576/tvbox/main/ysc.json
 
                 https://github.com/52670576/tvbox
                 
