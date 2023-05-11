@@ -61,6 +61,7 @@
 {"key": "快播","name": "💫┃快播┃影视","type": 1,"api": "https://www.kuaibozy.com/api.php/provide/vod/","searchable": 1,"filterable": 0,"switchable": 1,"categories":["动漫","国产剧","日韩剧","港台剧","欧美剧","泰剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","综艺"]},
 {"key":"csp_555","name":"5️⃣️┃555┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/555.json"},
 {"key": "csp_xBPQ_FreeOK","name": "🐹┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/FreeOK.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/XBPQ0111.jar"},
+{"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 
 ##折腾系列
 {"key": "新片热播","name": "🔷┃新片┃热播","type": 1,"api": "https://api.iku.cool/api.php/provide/vod/?ac=list","searchable": 1,"quickSearch": 1,"filterable": 0,"categories": ["连续剧","动漫"],"ext": "","jar":""},
