@@ -46,6 +46,37 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 10. 🐄楞牛哥 https://jm.dovxi.repl.co/api?url=http://tv.lengniuge.ga/yingshi
 
+随机轮换壁纸：
+
+（1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
+
+（2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
+
+（3）https://shuping.chuqiuyu.tk 自制竖屏精美壁纸
+
+（4）https://jianbian.chuqiuyu.tk 自制渐变简约壁纸
+
+（5）https://bing.img.run/rand.php
+
+（6）http://www.kf666888.cn/api/tvbox/img
+
+（7）https://picsum.photos/1280/720/?blur=10
+
+（8）http://刚刚.live/图
+
+（9）http://饭太硬.ga/深色壁纸/api.php
+
+（10）https://www.dmoe.cc/random.php
+
+（11）https://api.btstu.cn/sjbz/zsy.php
+
+（12）https://api.btstu.cn/sjbz/?lx=dongman
+
+（13）http://api.btstu.cn/sjbz/?lx=meizi
+
+（14）http://api.btstu.cn/sjbz/?lx=suiji
+
+（15）https://pictures.catvod.eu.org/
 
 软件架构
 
