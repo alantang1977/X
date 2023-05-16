@@ -8,7 +8,7 @@
 {"key":"YiSo","name":"🚕┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"PanSou","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"UpYun","name":"🥬┃云搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
-{"key":"PanSearch","name":"🙀盘Search┃4k","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
+{"key":"PanSearch","name":"🙀┃盘Search┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key": "csp_阿里搜索","name": "🔎┃阿里┃搜索","type": 3,"api": "csp_Dovx","searchable": 1,"quickSearch": 1,"filterable": 0,"jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.jar;md5;B356FCED03711794DEF3BBB848A748B4","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key": "csp_XYQHiker_土狗搜索","name": "🔎┃土狗┃搜索","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/土狗搜索.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/chao.jar;md5;A972EE4717FF745C57F86187946A7FD1"},
 
