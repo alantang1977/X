@@ -2,16 +2,12 @@
 "sites":[
 ##搜索系列
 {"key":"csp_77","name":"🌈┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
-  
 {"key":"七夜","name":"🍥┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php$$$yingshi$$$abcd1234"},
 {"key":"YiSo","name":"🚕┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"PanSou","name":"😹┃盘搜┃搜索","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"UpYun","name":"🥬┃云搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
-{"key":"PanSearch","name":"🙀┃盘Search┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
-{"key": "csp_阿里搜索","name": "🔎┃阿里┃搜索","type": 3,"api": "csp_Dovx","searchable": 1,"quickSearch": 1,"filterable": 0,"jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.jar;md5;B356FCED03711794DEF3BBB848A748B4","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
-{"key": "csp_XYQHiker_土狗搜索","name": "🔎┃土狗┃搜索","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/土狗搜索.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/chao.jar;md5;A972EE4717FF745C57F86187946A7FD1"},
-
+{"key":"PanSearch","name":"🔎┃阿里┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 {"key":"Alist1","name":"🅿┃Alis┃网盘","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/alist.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/alist.json"},
 {"key":"csp_Alist2","name": "🅿┃仙女┃搜索","type": 3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/alist.json"},
 {"key":"AList","name":"😹┃ALis┃小雅","type": "3","api":"csp_AList","searchable":"1","ext": "https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/alist.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/fongmi_AList.jar"},
