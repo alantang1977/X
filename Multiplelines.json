@@ -1,27 +1,35 @@
 {"urls": [
 {
 "url": "https://agit.ai/alanchaotang/if/raw/branch/main/X.json",
-"name": "🚕┃Alan(agit.ai)┃🚕"
+"name": "🚕┃Tang家族(agit.ai)┃🚕"
 },
 {
 "url": "https://alantang1977.github.io/X.json",
-"name": "🅰️┃Alan(github.io)┃🅰️"
+"name": "🅰️┃Tang家族(github.io)┃🅰️"
+},
+{
+"url": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/X.json",
+"name": "🏀┃Tang家族(github)┃🏀"
 },
 {
 "url": "http://饭太硬.ga/tv",
-"name": "🍀饭太硬🍀"
+"name": "🍀┃饭太硬┃🍀"
 },
 {
+"url": "https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json",
+"name": "┃💌香雅情线路┃💌"
+}, 
+{
 "url": "https://ghproxy.net/raw.githubusercontent.com/52670576/tvbox/main/ysc.json",
-"name":"🚓运输车🚓"
+"name":"🚓┃运输车┃🚓"
 },
 {
 "url": "http://我不是.肥猫.love:63/接口禁止贩卖",
-"name": "💐肥猫💐"
+"name": "💐┃肥猫不胖┃💐"
 },
 {
 "url": "https://yydsys.top/duo",
-"name": "🎈大聪明应用多多🎈"
+"name": "🎈┃大聪明应用多多┃🎈"
 },
 {
 "url": "http://tv.lengniuge.ga/yingshi",
@@ -29,15 +37,11 @@
 },
 {
 "url": "https://ghproxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-"name": "🗻高山流云🗻"
+"name": "🗻┃高山流云┃🗻"
 },
 {
 "url": "https://gh.t4tv.hz.cz/newtang.bmp",
-"name": "🍇唐三🍇"
-},
-{
-"url": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/X.json",
-"name": "🏀┃帅汤┃X🏀"
+"name": "🍇┃唐三┃🍇"
 },
 {
 "url": "https://gitee.com/alanchaotang/data/raw/master/X.bmp",
@@ -66,10 +70,6 @@
 "url": "https://yydsys.top/duo/ali",
 "name": "🚀阿里精品专线"
 },
-{
-"url": "https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json",
-"name": "🚀香雅情线路"
-}, 
 {
 "url": "http://s.nxw.so/vip",
 "name": "🍺潇洒☘️🍺"
