@@ -14,7 +14,7 @@
 {"key":"七夜","name":"😾┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"TuGou","name":"😿┃土狗┃搜索","type":3,"api":"csp_TuGou","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"UpYun","name":"😻┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
-{"key":"PanSearch","name":"🙀v盘Se┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
+{"key":"PanSearch","name":"🙀┃盘Search┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"push_agent","name":"🛴┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 //{"key":"Alist1","name":"🅿┃Alis┃网盘","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/alist.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/alist.json"},
 //{"key":"csp_Alist2","name": "🅿┃仙女┃搜索","type": 3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/alist.json"},
