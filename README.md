@@ -46,6 +46,10 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 10. 🐄楞牛哥 https://jm.dovxi.repl.co/api?url=http://tv.lengniuge.ga/yingshi
 
+11. 香雅情接口：https://www.123pan.com/s/alSeVv-lGO0A.html
+
+              https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json
+
 随机轮换壁纸：
 
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
