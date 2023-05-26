@@ -8,7 +8,6 @@
 {"key":"csp_Yisou","name":"📀┃易搜┃(搜索)","type":3,"api":"csp_Yisou","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext": "http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"csp_Upyunso","name":"📀┃UP云搜┃(搜索)","type":3,"api":"csp_Upyunso","playerType":1,"searchable":1,"quickSearch":1,"filterable":0,"ext": "http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key": "csp_XYQHiker_土拨鼠搜索","name":"📀┃土拨鼠┃(搜索)","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/土拨鼠搜索.json"},
-{"key": "csp_XYQHikerAL_玩偶哥哥","name":"📀┃玩偶哥哥┃(优)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/玩偶哥哥.json"},
 {"key": "csp_XYQHikerAL_4KHDR","name":"🧲┃4KHDR┃(盘/磁)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":0,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json"},
 {"key": "csp_XYQHikerAL_云盘资源","name":"📀┃云盘资源┃(搜索)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/云盘资源分享.json"},
 {"key": "csp_XYQHikerAL_我的小站","name":"📀┃我的小站┃(搜索)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/我的小站.json"},
@@ -34,7 +33,7 @@
 
 ##csp系列
 //{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php","jar":""},
-{"key": "csp_XYQHikerAL_玩偶哥哥","name":"💂┃玩偶哥哥┃(优)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./xiangyaqing/玩偶哥哥.json"},
+{"key": "csp_XYQHikerAL_玩偶哥哥","name":"💂┃玩偶哥哥┃(优)","type":3,"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/玩偶哥哥.json"},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
 {"key": "csp_apple","name":"🍎┃小苹果┃影视","type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
