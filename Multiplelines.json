@@ -12,12 +12,20 @@
 "name": "🏀┃Tang家族(github)┃🏀"
 },
 {
+"url": "https://gitee.com/alanchaotang/data/raw/master/X.bmp",
+"name": "🤶┃Tang家族(gitee)┃🤶"
+},
+{
+"url": "https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/PY.json",
+"name": "💆‍♂️┃Tang家族(github.PY)┃💆‍"
+},
+{
 "url": "http://饭太硬.ga/tv",
 "name": "🍀┃饭太硬┃🍀"
 },
 {
 "url": "https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json",
-"name": "┃💌香雅情┃💌"
+"name": "💌┃香雅情┃💌"
 }, 
 {
 "url": "https://ghproxy.net/raw.githubusercontent.com/52670576/tvbox/main/ysc.json",
@@ -42,14 +50,6 @@
 {
 "url": "https://gh.t4tv.hz.cz/newtang.bmp",
 "name": "🍇┃唐三┃🍇"
-},
-{
-"url": "https://gitee.com/alanchaotang/data/raw/master/X.bmp",
-"name": "🤶┃Alan(gitee)┃🤶"
-},
-{
-"url": "https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/PY.json",
-"name": "💆‍♂️┃靓仔┃PY💆‍"
 },
 {
 "url": "http://tvmvip110.club/tv/box/xc.json",
@@ -103,7 +103,7 @@
 "name": "🅰小雅🅰"
 },
 {
-"url": "http://pandown.pro/tvbox/tvbox.json",
+"url": "http://cdn.qiaoji8.com/tvbox.json",
 "name": "🏕️巧技🏕️"
 },
 {
