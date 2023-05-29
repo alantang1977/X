@@ -32,7 +32,34 @@
 
 {"key": "drpy_js_ddys","name": "🐞┃低端┃[JS]","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/apiv15drpymin.js","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ddys.js"},
 {"key": "csp_XBPQ_御龙","name": "🐉┃御龙┃高清","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/json/yulong.json"},
-
+{
+			"key": "csp_appys_酷影TV",
+			"name": "🖼️┃酷影┃蓝光",
+			"type": 3, 
+			"api": "csp_AppYsV2",
+			"searchable": 1,
+			"quickSearch": 1, 
+			"filterable": 1,
+			"ext": "http://kuyun.realku.cn/api.php/app/"
+		},			
+        {
+            "key":"csp_xml影视乐",
+            "name":"🐏┃乐乐┃影视",
+            "type":3,
+            "api":"csp_AppYsV2",                  
+	        "searchable":1,
+            "quickSearch":1,
+            "filterable":1,
+            "ext":"https://tv.ysle.cn/api.php/app/"
+        },	
+        {   "key":"csp_咪酷", 
+		    "name": "🍳┃咪酷┃影视", 
+			"type": 1,  
+			"api": "https://yingke.yibowang.asia/api.php/provide/vod", 
+			"searchable": 1, 
+			"quickSearch": 1,
+			"playerType":2 
+		},			
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt","jar":""},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
