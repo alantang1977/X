@@ -37,7 +37,17 @@
 			"quickSearch": 1, 
 			"filterable": 1,
 			"ext": "http://kuyun.realku.cn/api.php/app/"
-		},			
+		},
+{
+			"key": "drpy_js_ddys",
+			"name": "🐞┃低端┃[JS]",
+			"type": 3,
+			"api": "./duoduo/apiv15drpymin.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ddys.js"
+		},
         {
             "key":"csp_xml影视乐",
             "name":"🐏┃乐乐┃影视",
@@ -64,7 +74,7 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "./duoduo/yulong.json"
+			"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/json/yulong.json"
 		},
 
 ##csp系列
