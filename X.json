@@ -2,6 +2,7 @@
 "sites":[
 ##搜索系列
 {"key":"csp_77","name":"🌈┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
+{"key": "豆瓣","name":"⛲┃豆瓣┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/douban.js"},
 //{"key":"七夜","name":"🍥┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
 //{"key":"Zhaozy","name":"🚁┃资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php$$$yingshi$$$abcd1234"},
 //{"key":"YiSo","name":"🚕┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"filterable":0,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/token.php"},
