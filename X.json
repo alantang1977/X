@@ -34,6 +34,7 @@
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
 {"key": "csp_xBPQ_FreeOK","name": "🐹┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/FreeOK.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
+{"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_apple","name":"🍎┃小苹果┃影视","type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "速度","name": "🥽┃速度追剧|影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {"站名": "子子影视","嗅探词":".mp4#m3u8","主页url": "http://sudu.hdvod.top","分类": "电影$1#电视剧$2#动漫$4#综艺$3", "分类url": "http://sudu.hdvod.top/index.php/vod/show/area/{area}/id/{cateId}/page/{catePg}/year/{year}.html;;m"}},
 {"key": "csp_XYQHiker_一龙高清影视","name":"🐲┃一龙高清┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/一龙高清影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
@@ -79,7 +80,6 @@
 {"key": "csp_xBPQ_HDIK","name": "☘️┃HDIK┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/HDIK.json"},
 {"key": "快播","name": "💫┃快播┃影视","type": 1,"api": "https://www.kuaibozy.com/api.php/provide/vod/","searchable": 1,"filterable": 0,"switchable": 1,"categories":["动漫","国产剧","日韩剧","港台剧","欧美剧","泰剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","综艺"]},
 {"key":"csp_555","name":"5️⃣️┃555┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/555.json"},
-{"key": "csp_xBPQ_FreeOK","name": "🐹┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext":"https://gitee.com/alanchaotang/data/raw/master/js/FreeOK.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/XBPQ0111.jar"},
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 
 ##折腾系列
@@ -126,7 +126,6 @@
 {"key":"csp_Ysgc","name":"🏭┃工厂┃影视","type":3,"api":"csp_Ysgc","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.ysgc.vip"},
 {"key":"csp_Cokemv","name":"📕┃Cokemv┃影视","type":3,"api":"csp_Cokemv","playerType":2,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "野荷塘","name": "🍀┃野荷塘┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar":""},
-{"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Auete","name":"🐼┃Auete┃影视","type": 3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_biubiu_达达龟","name":"🐢┃达达龟┃影视","type":3,"api":"csp_XBiubiu","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/乌龟影院.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/XO2023423.jar;md5;3ed5186af28feff28d4d7b7d75504a2d"},
