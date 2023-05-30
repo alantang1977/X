@@ -230,57 +230,21 @@
 //"lives": [{"group": "redirect","channels": [{"name": "live","urls": ["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naXRlZS5jb20vYWxhbmNoYW90YW5nL1RhbmdUVi9yYXcvbWFzdGVyL2xpdmVzL3R2bGl2ZS50eHQ="]}]}],
 //"lives": [{"name": "live","url": "http://我不是.肥猫.love:63/TV/tvzb.txt","type": 0,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"},    
 //{"group":"redirect","channels":[{"name":"redirect","urls":["proxy://do=live&type=txt&ext=aHR0cDovL3huLS1paHF1MTBjbjRjLnhuLS16N3g5MDBhLmxvdmU6NjMvVFYvdHZ6Yi50eHQ="]}]}],
-"lives": [{"name": "live","type": 0,"url": "http://ftyyy.tk/live.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
-{"name": "Json","type": 1,"url": "https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"}],
-  "doh": [
-    {
-      "name": "Google",
-      "url": "https://dns.google/dns-query",
-      "ips": ["8.8.4.4","8.8.8.8"]
-    },
-    {
-      "name": "Cloudflare",
-      "url": "https://cloudflare-dns.com/dns-query",
-      "ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]
-    },
-    {
-      "name": "AdGuard",
-      "url": "https://dns.adguard.com/dns-query",
-      "ips": ["94.140.14.140","94.140.14.141"]
-    },
-    {
-      "name": "DNSWatch",
-      "url": "https://resolver2.dns.watch/dns-query",
-      "ips": ["84.200.69.80","84.200.70.40"]
-    },
-    {
-      "name": "Quad9",
-      "url": "https://dns.quad9.net/dns-quer",
-      "ips": ["9.9.9.9","149.112.112.112"]
-    }
-  ],
-  "rules": [
-    {
-      "name": "量子廣告",
-      "hosts": ["vip.lz","hd.lz"],
-      "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY"]
-    },
-    {
-      "name": "非凡廣告",
-      "hosts": ["vip.ffzy","hd.ffzy"],
-      "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY"]
-    },
-    {
-      "name": "火山嗅探",
-      "hosts": ["huoshan.com"],
-      "regex": ["item_id="]
-    },
-    {
-      "name": "抖音嗅探",
-      "hosts": ["douyin.com"],
-      "regex": ["is_play_url="]
-    }
-  ],
+//"lives": [{"name": "live","type": 0,"url": "http://ftyyy.tk/live.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
+//{"name": "Json","type": 1,"url": "https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"}],
+ "lives": [{"name": "TXT","type": 0,"url": "http://home.jundie.top:81/Cat/tv/live.txt","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
+{"name": "Json","type": 1,"url": "https://ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={epg}&date={date}","logo": "http://epg.51zmt.top:8000/{logo}"}],
+
+"doh": [{"name": "Google","url": "https://dns.google/dns-query","ips": ["8.8.4.4","8.8.8.8"]},
+{"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},
+{"name": "AdGuard","url": "https://dns.adguard.com/dns-query","ips": ["94.140.14.140","94.140.14.141"]},
+{"name": "DNSWatch","url": "https://resolver2.dns.watch/dns-query","ips": ["84.200.69.80","84.200.70.40"]},
+{"name": "Quad9","url": "https://dns.quad9.net/dns-quer","ips": ["9.9.9.9","149.112.112.112"]}],
+"rules": [{"name": "量子廣告","hosts": ["vip.lz","hd.lz"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
+{"name": "非凡廣告","hosts": ["vip.ffzy","hd.ffzy"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
+{"name": "火山嗅探","hosts": ["huoshan.com"],"regex": ["item_id="]},
+{"name": "抖音嗅探","hosts": ["douyin.com"],"regex": ["is_play_url="]}],
+
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
 //{"name":"自动并发","type": 2,"url": "Parallel"},
