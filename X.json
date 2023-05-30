@@ -1,7 +1,6 @@
 {
+"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d",
 "wallpaper": "https://tian.chuqiuyu.tk/",
-"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-  
 "sites":[
 ##搜索系列
 {"key":"csp_77","name":"🌈┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
