@@ -1,5 +1,9 @@
 {"urls": [
 {
+"url": "clan://localhost/tvboxqy/tang.json",
+"name":"🛩️┃Tang家族(本地源)┃🛩️"
+},
+{
 "url": "https://agit.ai/alanchaotang/if/raw/branch/main/X.json",
 "name": "🚕┃Tang家族(agit.ai)┃🚕"
 },
