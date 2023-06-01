@@ -69,9 +69,9 @@ http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
 2.唐三：
 
-https://hutool.ml/tang
+https://gh.t4tv.hz.cz/newtang.bmp
 
-https://jm.dovxi.repl.co/api?url=https://hutool.ml/tang
+https://jm.dovxi.repl.co/api?url=https://gh.t4tv.hz.cz/newtang.bmp
 
 3.FongMi：
 
