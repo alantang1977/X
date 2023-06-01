@@ -10,6 +10,15 @@ Tang介绍
 
 湯影視TV 
 
+本地接口源教程
+
+1.TVBox clan://localhost/tvboxqy/tang.json
+
+2.影视 file://tvboxqy/tang.json
+
+![image](https://github.com/alantang1977/X/assets/107459091/f65e8c22-c521-4a3c-9ccd-ac5b17d43bcb)
+
+
 base64解码：https://tool.oschina.net/encrypt?type=3
 
 AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
