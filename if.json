@@ -1,31 +1,11 @@
 {"urls": [
 {
-"url": "clan://localhost/tvboxqy/tang.json",
-"name":"🛩️┃Tang家族(本地源)┃🛩️"
-},
-{
-"url": "file://tvboxqy/tang.json",
-"name":"🚑┃Tang家族(本地源)┃🚑"
-},
-{
 "url": "https://agit.ai/alanchaotang/if/raw/branch/main/X.json",
 "name": "🚕┃Tang家族(agit.ai)┃🚕"
 },
 {
-"url": "https://alantang1977.github.io/X.json",
-"name": "🅰️┃Tang家族(github.io)┃🅰️"
-},
-{
 "url": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/master/X.json",
 "name": "🏀┃Tang家族(github)┃🏀"
-},
-{
-"url": "https://gitee.com/alanchaotang/data/raw/master/X.bmp",
-"name": "🤶┃Tang家族(gitee)┃🤶"
-},
-{
-"url": "https://ghproxy.net/https://raw.githubusercontent.com/alantang1977/X/master/PY.json",
-"name": "💆‍♂️┃Tang家族(github.PY)┃💆‍"
 },
 {
 "url": "http://饭太硬.ga/tv",
