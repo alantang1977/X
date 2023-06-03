@@ -25,7 +25,7 @@
 //{"key":"csp_Bili","name":"🅱┃哔哩┃合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/bilibili_2.json"},
 
 ##csp系列
-{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt","jar":""},
+{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt$$$http://wogg.xyz/","jar":""},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
 {"key":"csp_freeok","name":"🎠┃FreeOK┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playUrl":"","ext":"https://www.freeok.vip/api.php/app/"},	
