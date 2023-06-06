@@ -167,7 +167,8 @@ https://yydsys.top/duo/o.json
 
 https://yydsys.top/duo/v.json
 
- ![Uploading 2202_2012102321380600_超人哥哥.jpg…]()
+ ![2202_2012102321380600_超人哥哥](https://github.com/alantang1977/X/assets/107459091/6479c06d-33ce-4824-b272-44feafd5e915)
+
 
 随机轮换壁纸：
 
@@ -201,6 +202,8 @@ https://yydsys.top/duo/v.json
 
 （15）https://pictures.catvod.eu.org/
 
+![2700_2013040313000400_IMG_0164](https://github.com/alantang1977/X/assets/107459091/912df5d9-da50-479f-88f9-92adfc74429b)
+
 软件架构
 
 http://www.metools.info/other/o21.html
@@ -217,10 +220,9 @@ http://ewwe.ml/0000
 长老接口 例👉 http://ewwe.ml/tstv
 http://ewwe.ml/你的短址(或随机四位短址)
 
-安装教程
+![2701_2013040313000500_IMG_0165](https://github.com/alantang1977/X/assets/107459091/61b602c7-9cb6-4f0e-9554-6c71d316438d)
 
-
-使用说明
+安装教程/使用说明
 
 取得阿里云盘token方法如下：先通过浏览器打开阿里云盘官网并登录网页版：https://www.aliyundrive.com/drive/ 登录成功后， 打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 JSON.parse(localStorage.token).refresh_token ③ 复制返回的32位字符串，不要复制双引号
 
@@ -260,4 +262,5 @@ https://xn--m7rp06gw5k.ml/
 图标网址
 https://www.iconfinder.com/search?q=tv
 
+![pexels-pixabay-210186](https://github.com/alantang1977/X/assets/107459091/a3948131-dc5f-4089-805a-272248a98b82)
 
