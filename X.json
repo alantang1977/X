@@ -31,6 +31,7 @@
 {"key":"csp_freeok","name":"🎠┃FreeOK┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playUrl":"","ext":"https://www.freeok.vip/api.php/app/"},	
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_apple","name":"🍎┃小苹果┃影视","type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_Miaobo","name":"🔥┃秒播┃2K","type":3,"api":"csp_Miaobo","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "爱迪V2","name": "💡️┃爱迪┃影视","type":3,"api":"csp_AppYsV2","ext":"https://aidiapp.xyz/xgapp.php/v2/"},
 {"key": "速度","name": "🛩️┃速度追剧|影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {"站名": "子子影视","嗅探词":".mp4#m3u8","主页url": "http://sudu.hdvod.top","分类": "电影$1#电视剧$2#动漫$4#综艺$3", "分类url": "http://sudu.hdvod.top/index.php/vod/show/area/{area}/id/{cateId}/page/{catePg}/year/{year}.html;;m"}},
 {"key": "csp_XYQHiker_御龙高清影视","name":"🐲┃御龙高清┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/一龙高清影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
