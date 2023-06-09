@@ -95,6 +95,8 @@ http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
 https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
 
+https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
+
 http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
 2.唐三：
