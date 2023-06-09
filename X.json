@@ -33,8 +33,8 @@
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
 {"key":"csp_freeok","name":"🎠┃FreeOK┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playUrl":"","ext":"https://www.freeok.vip/api.php/app/"},	
-{"key": "csp_XYQHiker_FreeOK","name":"🍃┃FreeOK┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/FreeOK.json"},
-{"key": "ok","name": "Free┃BPQ","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "http://xhww.fun:63/小米/源/free.json"}, 
+{"key": "csp_XYQHiker_FreeOK","name":"🍃┃FreeOK┃影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/FreeOK.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
+{"key": "ok","name": "🆓┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "http://xhww.fun:63/小米/源/free.json"}, 
 
 {"key": "csp_appys_xc", "name": "🏰┃小城┃影视","type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1,"filterable": 1, "ext": "https://jx.ccabc.cc/fanfan/api.php/app/"},       
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
