@@ -249,65 +249,6 @@
 {"name":"★Tang嗅探★","type": 0,"url": "http://j.grelighting.cn/parser/?url="},
 {"name": "★三个柒★","type": 0,"url": "https://jx.jsonplayer.com/player/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视",  "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header": {"User-Agent": "okhttp/4.1.0"}}},
 {"name": "★777★","type": 0,"url": "https://jx.777jiexi.com/player/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视",  "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header": {"User-Agent": "okhttp/4.1.0"}}},
-{
-			"name": "别偷",
-			"type": 1,
-			"url": "http://xhww.fun:63/偷你大爷.php?url=",
-			"User-Agent": "okhttp/3.12.0",
-			"ext": {
-				"flag": [
-					"qq",
-					"ruyi4K",
-					"腾讯",
-					"hgvip",
-					"hgyx",
-					"qiyi",
-					"爱奇艺",
-					"奇艺",
-					"youku",
-					"优酷",
-					"sohu",
-					"搜狐",
-					"letv",
-					"乐视",
-					"XAl",
-					"yk",
-					"mgtv",
-					"imgo",
-					"芒果",
-					"CL4K",
-					"renrenmi",
-					"hulihuli-",
-					"ltnb",
-					"bilibili",
-					"BAGY",
-					"SLYS4K",
-					"DM-FT1",
-					"DM-FT3",
-					"bilibili",
-					"1905",
-					"xigua"
-				]
-			}
-		},
-		{
-			"name": "我会",
-			"type": 1,
-			"url": "https://vip.mosangkeji.com/api/?key=PLvqEH5S4OsBrVdzv6&url=",
-			"header": {
-				"User-Agent": "Dart/2.14 (dart:io)"
-			},
-			"ext": {
-				"flag": [
-					"qq",
-					"腾讯",
-					"youku",
-					"hulihuli",
-					"hulihuli-",
-					"优酷"
-				]
-			}
-		},
 {"name":"keyu","type":1,"url":"http://newjiexi.gotka.top/keyu3.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}}],
 
 "rules":[{"name":"量子","hosts":["vip.lz","hd.lz"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.433333,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},{"name":"非凡","hosts":["vip.ffzy","hd.ffzy"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},{"name":"火山嗅探","hosts":["huoshan.com"],"regex":["item_id="]},{"name":"抖音嗅探","hosts":["douyin.com"],"regex":["is_play_url="]}],
