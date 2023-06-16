@@ -32,15 +32,15 @@
 {"key":"csp_DuoX","name":"🧸┃玩偶弟弟┃4K","type":3,"api":"csp_DuoX","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃JS","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃影视","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
-{"key":"csp_freeok","name":"🎠┃FreeOK┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playUrl":"","ext":"https://www.freeok.vip/api.php/app/"},	
+//{"key":"csp_freeok","name":"🎠┃FreeOK┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"playUrl":"","ext":"https://www.freeok.vip/api.php/app/"},	
 {"key": "ok","name": "🍃┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "http://xhww.fun:63/小米/源/free.json"}, 
 {"key":"csp_Vofl","name":"🏖┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_apple","name":"🍎┃小苹果┃影视","type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_DiDuan","name": "🐞┃低端┃影视","type": 3,"api": "csp_Ddrk","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "飞速","name": "🚄┃飞速┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://www.lfytyl.com/api.php/app/"},
-{"key":"csp_MeiJu69","name":"🥝┃六九┃美剧","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
+//{"key": "飞速","name": "🚄┃飞速┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://www.lfytyl.com/api.php/app/"},
+//{"key":"csp_MeiJu69","name":"🥝┃六九┃美剧","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
-{"key":"csp_阿班","name":"📐┃啊班┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.banwl.com/api.php/app/"},
+//{"key":"csp_阿班","name":"📐┃啊班┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://a.banwl.com/api.php/app/"},
 {"key": "落叶","name": "🍃┃落叶┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://xn--yeta099v.online:66/api.php/app/"},
 
 ##官源系列
@@ -60,8 +60,8 @@
 {"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/酷云77.js"},
 
 ##超可爱系列
-{"key": "csp_appys_xc", "name": "🏰┃小城┃影视","type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1,"filterable": 1, "ext": "https://jx.ccabc.cc/fanfan/api.php/app/"},       
-{"key":"csp_Miaobo","name":"🔥┃秒播┃2K","type":3,"api":"csp_Miaobo","searchable":1,"quickSearch":1,"filterable":1},
+//{"key": "csp_appys_xc", "name": "🏰┃小城┃影视","type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1,"filterable": 1, "ext": "https://jx.ccabc.cc/fanfan/api.php/app/"},       
+//{"key":"csp_Miaobo","name":"🔥┃秒播┃2K","type":3,"api":"csp_Miaobo","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "爱迪V2","name": "💡️┃爱迪┃影视","type":3,"api":"csp_AppYsV2","ext":"https://aidiapp.xyz/xgapp.php/v2/"},
 {"key":"红红","name":"🅰️┃红红┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://bbq.1006.tk/icciu_api.php/v1.vod"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://yayayaaapp.ynf.icu/api.php/app/"},
