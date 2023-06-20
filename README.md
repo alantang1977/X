@@ -89,7 +89,7 @@ http://xn--sss604efuw.ga/x/o.json
 
 https://xn--sss604efuw.ga/x/o.json
 
-http://饭太硬.ga/tv
+https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431
 
 http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
