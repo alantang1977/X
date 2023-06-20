@@ -99,6 +99,8 @@ https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
 
 http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
+https://api.ys66.repl.co?url=http://饭太硬.top/tv
+
 2.唐三：
 
 https://gh.t4tv.hz.cz/newtang.bmp
