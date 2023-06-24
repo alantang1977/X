@@ -245,7 +245,178 @@
 {"name": "🌟星辰云解析","type": 1,"url": "https://json.key521.cn/api/?key=df27d9ca9ec97e22c47f8565a50aa6f5&url="},
 {"name":"🐻左岸","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2056&my=efjkmvBGHILMSUWXY0&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","imgo","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 {"name": "但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
-{"name": "莫问前程","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="},  
+{"name": "莫问前程","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="},
+{
+			"name": "稻香🌾",
+			"type": 1,
+			"url": "https://vip.mosangkeji.com/api/?key=rRNvXAnOghBBLnC35c&url=",
+			"flag": [
+				"mgtv",
+				"qiyi",
+				"imgo",
+				"爱奇艺",
+				"奇艺",
+				"qq",
+				"腾讯",
+				"youku",
+				"优酷",
+				"pptv",
+				"PPTV",
+				"letv",
+				"乐视",
+				"leshi",
+				"bilibili",
+				"哔哩哔哩",
+				"哔哩",
+				"mgtv",
+				"芒果",
+				"芒果"
+			]
+		},
+		{
+			"name": "窗外🪟",
+			"type": 1,
+			"url": "http://43.143.107.57:417//api//?key=73259318e3d893e5b73fd87f20fbc2f7&url=",
+			"header": {
+				"User-Agent": "Dart/2.14 (dart:io)"
+			},
+			"ext": {
+				"flag": [
+					"qq",
+					"腾讯",
+					"youku",
+					"hulihuli",
+					"hulihuli-",
+					"优酷"
+				]
+			}
+		},
+		{
+			"name": "落叶🍂",
+			"type": 1,
+			"url": "http://110.42.2.247:880//analysis//json//?uid=2373&my=fgimDLMOQTUWYZ0568&url=",
+			"flag": [
+				"mgtv",
+				"qiyi",
+				"imgo",
+				"爱奇艺",
+				"奇艺",
+				"qq",
+				"腾讯",
+				"youku",
+				"优酷",
+				"pptv",
+				"PPTV",
+				"letv",
+				"乐视",
+				"leshi",
+				"bilibili",
+				"哔哩哔哩",
+				"哔哩",
+				"mgtv",
+				"芒果",
+				"芒果"
+			]
+		},
+		{
+			"name": "25芒果🥭",
+			"type": 1,
+			"url": "https://jx.255tv.tk/api/?key=S6kQHaE1gVEY5KAv8L&url=",
+			"flag": [
+				"imgo",
+				"mgtv",
+				"芒果"
+			]
+		},
+		{
+			"name": "虾米🦐",
+			"url": "http://162.14.106.28/API.php?url=",
+			"type": 1,
+			"ext": {
+				"flag": [
+					"qiyi",
+					"imgo",
+					"爱奇艺",
+					"奇艺",
+					"qq",
+					"腾讯",
+					"youku",
+					"优酷",
+					"pptv",
+					"PPTV",
+					"letv",
+					"乐视",
+					"leshi",
+					"bilibili",
+					"哔哩哔哩",
+					"哔哩",
+					"mgtv",
+					"芒果",
+					"sohu",
+					"xigua",
+					"fun",
+					"风行"
+				],
+				"header": {
+					"User-Agent": "Mozilla/5.0"
+				}
+			},
+			"header": {
+				"Referer": "https://jx.baiyu521.xyz/"
+			}
+		},
+		{
+			"name": "黄黄🍌",
+			"type": 1,
+			"url": "https://vip.xiaomaomi.tv//api.php?key=iknrzBCDIMPQRTY279&url=",
+			"User-Agent": "Dart/2.18 (dart:io)",
+			"ext": {
+				"flag": [
+					"qq",
+					"腾讯",
+					"qiyi",
+					"爱奇艺",
+					"奇艺",
+					"youku",
+					"优酷",
+					"sohu",
+					"搜狐",
+					"letv",
+					"乐视",
+					"yk",
+					"CL4K",
+					"renrenmi",
+					"ltnb",
+					"bilibili",
+					"1905",
+					"xigua"
+				]
+			}
+		},
+		{
+			"name": "爱酷👓",
+			"type": 1,
+			"url": "https://api.json.icu//api//?key=aad5c2c72819716157511ef080f8d05f&url=",
+			"ext": {
+				"flag": [
+					"qq",
+					"腾讯",
+					"qiyi",
+					"爱奇艺",
+					"奇艺",
+					"youku",
+					"优酷",
+					"sohu",
+					"搜狐",
+					"letv",
+					"乐视",
+					"yk",
+					"CL4K",
+					"renrenmi",
+					"ltnb",
+					"bilibili",
+					"1905",
+					"xigua"]}},
 {"name":"keyu","type":1,"url":"http://newjiexi.gotka.top/keyu3.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}}],
 
 "doh": [{"name": "Google","url": "https://dns.google/dns-query","ips": ["8.8.4.4","8.8.8.8"]},{"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},{"name": "AdGuard","url":"https://dns.adguard.com/dns-query","ips":["94.140.14.140","94.140.14.141"]},{"name": "DNSWatch","url": "https://resolver2.dns.watch/dns-query","ips":["84.200.69.80","84.200.70.40"]},{"name": "Quad9","url": "https://dns.quad9.net/dns-quer","ips": ["9.9.9.9","149.112.112.112"]}],
