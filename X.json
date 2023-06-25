@@ -250,96 +250,11 @@
 {"name":"🐻左岸","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","imgo","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 {"name": "但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
 {"name": "莫问前程","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="},
-{
-			"name": "稻香🌾",
-			"type": 1,
-			"url": "https://vip.mosangkeji.com/api/?key=rRNvXAnOghBBLnC35c&url=",
-			"flag": [
-				"mgtv",
-				"qiyi",
-				"imgo",
-				"爱奇艺",
-				"奇艺",
-				"qq",
-				"腾讯",
-				"youku",
-				"优酷",
-				"pptv",
-				"PPTV",
-				"letv",
-				"乐视",
-				"leshi",
-				"bilibili",
-				"哔哩哔哩",
-				"哔哩",
-				"mgtv",
-				"芒果",
-				"芒果"
-			]
-		},
-		{
-			"name": "窗外🪟",
-			"type": 1,
-			"url": "http://43.143.107.57:417//api//?key=73259318e3d893e5b73fd87f20fbc2f7&url=",
-			"header": {
-				"User-Agent": "Dart/2.14 (dart:io)"
-			},
-			"ext": {
-				"flag": [
-					"qq",
-					"腾讯",
-					"youku",
-					"hulihuli",
-					"hulihuli-",
-					"优酷"
-				]
-			}
-		},
-		{
-			"name": "落叶🍂",
-			"type": 1,
-			"url": "http://110.42.2.247:880//analysis//json//?uid=2373&my=fgimDLMOQTUWYZ0568&url=",
-			"flag": [
-				"mgtv",
-				"qiyi",
-				"imgo",
-				"爱奇艺",
-				"奇艺",
-				"qq",
-				"腾讯",
-				"youku",
-				"优酷",
-				"pptv",
-				"PPTV",
-				"letv",
-				"乐视",
-				"leshi",
-				"bilibili",
-				"哔哩哔哩",
-				"哔哩",
-				"mgtv",
-				"芒果",
-				"芒果"
-			]
-		},
-		{
-			"name": "25芒果🥭",
-			"type": 1,
-			"url": "https://jx.255tv.tk/api/?key=S6kQHaE1gVEY5KAv8L&url=",
-			"flag": [
-				"imgo",
-				"mgtv",
-				"芒果"
-			]
-		},
-		{
-			"name": "虾米🦐",
-			"url": "http://162.14.106.28/API.php?url=",
-			"type": 1,
-			"ext": {
-				"flag": [
-					"qiyi",
-					"imgo",
+{"name": "稻香🌾","type": 1,"url": "https://vip.mosangkeji.com/api/?key=rRNvXAnOghBBLnC35c&url=","flag": ["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi",	"bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"]},
+{"name": "窗外🪟","type": 1,"url": "http://43.143.107.57:417//api//?key=73259318e3d893e5b73fd87f20fbc2f7&url=","header": {"User-Agent": "Dart/2.14 (dart:io)"},"ext": {"flag": ["qq","腾讯","youku","hulihuli","hulihuli-","优酷"]}},
+{"name": "落叶🍂","type": 1,"url": "http://110.42.2.247:880//analysis//json//?uid=2373&my=fgimDLMOQTUWYZ0568&url=","flag": ["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"]},
+{"name": "25芒果🥭","type": 1,"url": "https://jx.255tv.tk/api/?key=S6kQHaE1gVEY5KAv8L&url=","flag": ["imgo","mgtv","芒果"]},
+{"name": "虾米🦐","url": "http://162.14.106.28/API.php?url=","type": 1,"ext": {"flag": ["qiyi","imgo",
 					"爱奇艺",
 					"奇艺",
 					"qq",
