@@ -239,6 +239,8 @@
 //{"name":"自动轮询","type": 2,"url": "Sequence"},
 {"name":"Web解析聚合","type":3,"url":"Web"},
 {"name":"🛩️刚刚走过","type": 1,"url":"http://27.124.4.42:4567/jhjson/ceshi.php?url="},
+{"name":"多多party1","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2100&my=afimnpqrvBHJKOQS47&mgtv=app&url="}, 	
+{"name":"多多party2","type":1,"url":"https://vip.xuux.icu/home/api?type=ys&uid=1325731&key=adfgilmnpwzBDEJPY3&url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "🚍众里寻他千百度","type": 0,"url": "https://jx.zhanlangbu.com/?url=","ext": {"header": {"User-Agent": "okhttp/4.1.0"},"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 {"name": "🍂小米落叶🍂","type": 1,"url": "http://xhww.fun:63/公众号1神秘的哥哥们.php?url=","User-Agent": "okhttp/3.12.0", "ext": {"flag": ["qq","ruyi4K","腾讯","hgvip","hgyx","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","XAl","yk","mgtv","imgo","芒果","CL4K","Feiyun-","hulihuli-","ltnb","bilibili","BAGY","SLYS4K","DM-FT1","DM-FT3","bilibili","1905","xigua"]}}, 
 {"name": "🌳飞云","type": 0,"url": "https://www.kankanju.cc/f/jxplayer.php?v=","flag": ["Feiyun-","mgtv","芒果"]},
