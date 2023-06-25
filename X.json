@@ -64,10 +64,7 @@
 {"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/酷云77.js"},
 
 ##超可爱系列
-//{"key": "csp_appys_xc", "name": "🏰┃小城┃影视","type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1,"filterable": 1, "ext": "https://jx.ccabc.cc/fanfan/api.php/app/"},       
-//{"key":"csp_Miaobo","name":"🔥┃秒播┃2K","type":3,"api":"csp_Miaobo","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "爱迪V2","name": "💡️┃爱迪┃影视","type":3,"api":"csp_AppYsV2","ext":"https://aidiapp.xyz/xgapp.php/v2/"},
-{"key":"红红","name":"🅰️┃红红┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://bbq.1006.tk/icciu_api.php/v1.vod"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
 {"key": "csp_appys_酷影","name": "🥠️┃酷影┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://kuyun.realku.cn/api.php/app/"},
 {"key": "多米蓝光","name": "🌶┃多米┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://vod.dmdh.top:5680//api.php/app/"},
