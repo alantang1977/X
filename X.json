@@ -12,7 +12,7 @@
 //{"key":"push_agent","name":"🛴┃手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"AList","name": "🅿┃仙女┃搜索","type": "3","api":"csp_AList","changeable":"0","searchable":"1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/livealist.json"},
 //{"key":"csp_Alist2","name": "🅿┃仙女┃搜索","type": 3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/alist.min.js","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/alist.json"},
-//{"key":"AList","name":"😹┃ALis┃小雅","type": "3","api":"csp_AList","searchable":"1","ext": "https://ghproxy.net/https://raw.github.com/FongMi/CatVodSpider/main/json/alist.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/fongmi_AList.jar"},
+//{"key":"AList","name":"😹┃ALis┃小雅","type": "3","api":"csp_AList","searchable":"1","ext": "https://ghproxy.net/http://raw.github.com/FongMi/CatVodSpider/main/json/alist.json","jar":"https://gitee.com/alanchaotang/data/raw/master/jar/fongmi_AList.jar"},
 //{"key":"csp_XYQ_lu1","name":"🌈┃电视┃直播","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/mao.json"},
 //{"key":"直播","name":"📡┃电视┃直播","type":3,"playerType":1,"api":"https://agit.ai/fantaiying/fty/raw/branch/master/JS/js/直播转点播.js","ext":"Box醒人室$https://agit.ai/fantaiying/fty/raw/branch/master/live.txt#影视范精选$https://agit.ai/fantaiying/fmm/raw/branch/main/tv/m3u/global.m3u&&&https://api.caonm.net/api/mc/"},
 //{"key":"直播转点播","name":"📺︎┃电视┃点播","type": 3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/live.js","searchable": 1,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/zb.json"},
@@ -63,7 +63,7 @@
 {"key": "dr_优酷","name": "🍉┃优酷TV┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/优酷.js"},
 {"key": "dr_菜狗","name": "🐶┃菜狗TV┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/菜狗.js"},
 {"key": "奇优影院","name": "🐸┃奇优TV┃官源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E5%A5%87%E4%BC%98%E5%BD%B1%E9%99%A2.json"},
-{"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.github.com/alantang1977/dr_py/main/js/酷云77.js"},
+{"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/http://raw.github.com/alantang1977/dr_py/main/js/酷云77.js"},
 
 ##超可爱系列
 {"key": "多米蓝光","name": "🌶┃多米┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://vod.dmdh.top:5680//api.php/app/"},
@@ -126,7 +126,7 @@
 {"key":"csp_XYQBiu_凌云影视","name":"🍭┃凌云┃影视","type":3,"api":"csp_XYQBiu","searchable":1,"quickSearch":1,"filterable":0,"ext":"https://gitee.com/alanchaotang/TangTV/raw/master/XB/%E5%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E9%9F%A9%E5%9B%BD.json","jar":"https://gitee.com/alanchaotang/TangTV/raw/master/jar/XYQBiu_0828.jar"},
 {"key": "csp_biubiu_骚火电影","name": "🏮┃骚火┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://yydsys.top/duo/json/%E9%AA%9A%E7%81%AB%E7%94%B5%E5%BD%B1.json"},
 {"key":"乐猪","name":"🐽┃乐猪┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/lezhu.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/Yoursmile.jar"},
-{"key":"csp_Nmys","name":"👨‍🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/https://raw.github.com/alantang1977/X/master/json/Nmys.json"},
+{"key":"csp_Nmys","name":"👨‍🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghproxy.net/http://raw.github.com/alantang1977/X/master/json/Nmys.json"},
 {"key":"csp_Ysgc","name":"🏭┃工厂┃影视","type":3,"api":"csp_Ysgc","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.ysgc.vip"},
 {"key":"csp_Cokemv","name":"📕┃Cokemv┃影视","type":3,"api":"csp_Cokemv","playerType":2,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "野荷塘","name": "🍀┃野荷塘┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar":""},
@@ -220,7 +220,7 @@
 {"key":"push_agent","name":"▶┃推送┃磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"csp_Paper","name":"📜┃纸条┃云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt"},
 {"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
-{"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://ghproxy.net/https://raw.github.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://ghproxy.net/https://raw.github.com/alantang1977/CatVodSpider/master/jar/custom_spider.jar"},
+{"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://ghproxy.net/http://raw.github.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://ghproxy.net/http://raw.github.com/alantang1977/CatVodSpider/master/jar/custom_spider.jar"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "wallpaper": "https://tian.chuqiuyu.tk/",
@@ -230,7 +230,7 @@
           "name": "直播",
           "type": 0,
           "playerType": 1,
-          "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt",
+          "url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvb.txt",
           //"url": "clan://XYQTVBox/live.txt",
           "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
           //"epg": "https://epg.112114.xyz/?ch={name}&date={date}",     
@@ -244,7 +244,7 @@
                     "name": "live",
                     "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
                     //"urls": ["proxy://do=live&type=txt&ext=aHR0cDovLzl4aTRvLnRrL09uZUNsaWNrUnVuL2xpdmUudHh0"]
-                    "urls": ["proxy://do=live&type=txt&ext=https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt"]
+                    "urls": ["proxy://do=live&type=txt&ext=https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/atv.txt"]
                     //"urls": ["proxy://do=live&type=txt&ext=http://dlq.gmqd.com/upload/20220921115985878587.txt"]
                     //"urls": ["proxy://do=live&type=txt&ext=http://home.jundie.top:81/ray/tvlive.txt"]
                 }
