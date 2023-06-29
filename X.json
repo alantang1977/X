@@ -57,6 +57,19 @@
 			"filterable": 0,
 			"ext": "http://xhww.fun:63/小米/源/爱肥猫.json"
 		},
+		{
+			"key": "yaya",
+			"name": "️鸭鸭┃BPQ",
+			"type": 3,
+			"api": "csp_XBPQ",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": {
+				"分类url": "https://www.pipiya.cc/vodtype/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html;;lr",
+				"分类": "电影$20#连续剧$26#美剧$21#日韩$28#动漫$25"
+			}
+		},
 ##官源系列
 {"key":"drpy_js_ddys","name": "🐓┃低端影视┃官源","type": 3,"api": "https://jihulab.com/duomv/duo/-/raw/main/js/drpymin.js","ext": "https://jihulab.com/duomv/duo/-/raw/main/js/ddys.js"},
 {"key":"dr_布雷蓝光","name":"💥┃布雷影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光.js"},
