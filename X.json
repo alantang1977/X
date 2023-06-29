@@ -228,7 +228,7 @@
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
-"lives": [{"name": "live","type": 0,"url": "https://tvbox.cainisi.cf/TV","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1}],
+"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1}],
 
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
