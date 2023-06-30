@@ -39,7 +39,6 @@
 {"key":"探探","name":"🛩️┃侦探4K┃影视","type":3,"api":"csp_YT","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"优世界", "name": "🌍┃优世界┃4K", "type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1, "filterable": 1, "playerType": "2", "ext": "https://dpg.laoxie.icu/api.php/app/"},
 {"key":"明帝影视","name":"🔆┃明帝┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ys.md214.cn/api.php/app/"},
-
 {"key":"酷酷","name":"🐵️┃酷酷4K┃影视","type":3,"api":"csp_AppYsV2","ext":"http://ys.realdou.cn/api.php/app/","categories":["4K电影","4K电视剧"]},
 {"key": "爱迪V2","name": "💡️┃爱迪┃影视","type":3,"api":"csp_AppYsV2","ext":"https://aidiapp.xyz/xgapp.php/v2/"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
@@ -60,6 +59,7 @@
 {"key":"dr_百忙无果","name":"🍋┃芒果TV┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable": 1,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/百忙无果.js"},
 {"key":"dr_360影视","name":"💫┃360影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/360影视.js"},
 {"key":"360影视","name":"💘┃360影视┃官源","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/YSC.jar"},
+{"key":"360影视","name":"🏳️‍🌈┃360影视┃官源","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1,"changeable":0},
 {"key":"Itv","name":"🥝┃奇异果┃官源","type":3,"api":"csp_Itv","quickSearch":1,"searchable":1,"filterable":1,"changeable":0,"ext":"","jar":""},
 {"key":"drpy_js_奇珍异兽","name":"🐨┃爱奇艺┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/奇珍异兽.js"},
 {"key": "dr_腾云驾雾","name": "🐧┃腾讯视频┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/腾云驾雾.js"},
