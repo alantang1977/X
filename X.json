@@ -24,7 +24,6 @@
 //{"key": "广播迷", "name": "📺︎┃电视台┃点播", "type": 3, "api": "csp_XBPQ","ext": {"分类": "央视$zy#北京$bj#上海$sh#天津$tj#重庆$cq#广东$gd#四川$sc#山东$sd#江苏$js#浙江$zj#河南$henan#河北$hebei#辽宁$ln#安徽$ah#湖南$hn#湖北$hubei#福建$fj#广西$gx#山西$sxi#云南$yn#贵州$gz#西藏$xz#宁夏$nx#海南$hainan#新疆$xj#甘肃$gs#青海$qh#黑龙江$hlj#内蒙古$nmg#港澳$hk", "编码": "GBK", "播放数组": "ax-grid ax-split-2 ax-space-md&&</ul>", "线路数组": "ax-btn*ax-padding ax-xl\">&&/a>[不包含:介绍]", "分类url": "http://www.guangbomi.com/tv/{cateId}/{catePg}.html[http://www.guangbomi.com/tv/{cateId}/index.html"}}, 
 //{"key": "TV", "name": "📢┃全国电视┃广播", "type": 3, "api": "csp_XBPQ", "ext": {"分类": "央视$1#卫视$2#地方$3#港澳$4#综艺$zhibo/zongyi#体育$zhibo/sports#新闻$zhibo/xinwen#影视$zhibo/yingshi#影视$zhibo/shaoer#财经$zhibo/caijing#科教$zhibo/kejiao", "编码": "GBK", "图片": "http://hz752.love:63/pictu.php?type=302", "分类url": "http://tv.haoqu99.com/{cateId};;z", "数组": "<li class=\"p-item\">&&</li>"}}, 
 {"key": "dr_好趣网","name":"📺┃好趣电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
-{"key":"dr_爱壹帆","name":"⛵┃爱壹帆┃(drpy)","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/爱壹帆.js"},
 
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://192.168.1.4:5244/Alan/Alist/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
@@ -69,6 +68,9 @@
 {"key": "dr_菜狗","name": "🐶┃菜狗TV┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/菜狗.js"},
 {"key": "奇优影院","name": "🐸┃奇优TV┃官源","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E5%A5%87%E4%BC%98%E5%BD%B1%E9%99%A2.json"},
 {"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://raw.iqiq.io/alantang1977/dr_py/main/js/酷云77.js"},
+{"key":"dr_爱壹帆","name":"⛵┃爱壹帆┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/爱壹帆.js"},
+{"key":"csp_Nbys","name":"🛫┃泥巴┃VPN","type":3,"api":"csp_NiNi","searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_trj","name": "🛫┃唐人街┃VPN","type": 3,"api": "csp_Tangrenjie","searchable": 1,"quickSearch": 1,"filterable": 1},
 
 ##超可爱系列
 {"key": "多米蓝光","name": "🌶┃多米┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://vod.dmdh.top:5680//api.php/app/"},
