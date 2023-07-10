@@ -249,6 +249,7 @@
 //{"name":"自动轮询","type": 2,"url": "Sequence"},
 {"name":"Web解析聚合","type":3,"url":"Web"},
 {"name":"🛩️刚刚走过","type": 1,"url":"http://27.124.4.42:4567/jhjson/ceshi.php?url="},
+{"name":"🛩️刚刚又来了","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name":"🎶party1（多多）","type":1,"url":"https://vip.xuux.icu/home/api?type=ys&uid=1325731&key=adfgilmnpwzBDEJPY3&url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "🚍众里寻他千百度","type": 0,"url": "https://jx.zhanlangbu.com/?url=","ext": {"header": {"User-Agent": "okhttp/4.1.0"},"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"]}},
 {"name": "🌳飞云","type": 0,"url": "https://www.kankanju.cc/f/jxplayer.php?v=","flag": ["Feiyun-","mgtv","芒果"]},
