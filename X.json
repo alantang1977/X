@@ -32,7 +32,8 @@
 {"key":"csp_DuoX","name":"🧸┃玩偶多多┃4K","type":3,"api":"csp_DuoX","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"陌陌","name":"🍄┃蘑菇妹妹┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0,"ext":" ","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar"},
 {"key":"陌陌","name":"🍄┃陌陌姐姐┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0
-{"key": "荐片","name": "✒️┃荐片哥哥┃磁力","type": 3,"playerType":"1","api": "http://xhww.fun:63/lib/drpy2.min.js","ext": "http://smallmi.xiaohewanwan.love:63/jp.js"},
+{"key": "荐片","name": "✒️┃荐片哥哥┃4K","type": 3,"playerType":"1","api": "http://xhww.fun:63/lib/drpy2.min.js","ext": "http://smallmi.xiaohewanwan.love:63/jp.js"},
+{"key": "可口可乐","name": "🍷┃可乐弟弟┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key": "csp_mdd","name": "🥚┃蛋蛋妹妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://app.mengdandan.com/xgapp.php/v1/"},
 {"key":"北极狐", "name":"🦊┃北极狐┃4K", "type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1, "filterable": 1, "playerType": "2", "ext": "https://www.kuin.one/api.php/app/"},
 {"key":"探探","name":"🛩️┃侦探影视┃4K","type":3,"api":"csp_YT","searchable":1,"quickSearch":1,"filterable":1},
