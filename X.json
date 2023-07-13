@@ -263,6 +263,11 @@
 {"name": "🌟星辰云解析","type": 1,"url": "https://json.key521.cn/api/?key=df27d9ca9ec97e22c47f8565a50aa6f5&url="},
 {"name":"🐻左岸","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","imgo","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 {"name": "🐈肥猫但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
+{"name":"🦊高清4K","type":0,"url":"https://www.8090g.cn/jiexi/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
+{"name":"🍉高清4K","type":0,"url":"https://www.ckmov.vip/api.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
+{"name":"🐱快嗅","type": 0,"url":"https://jxdp.codermart.net/?url=", "ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","1905","xigua"]}},
+{"name":"🐱夜幕/", "type":0,"url":"https://www.yemu.xyz/?url=", "showType":3},
+{"name": "🏯极速标清", "type": 1, "url": "http://119.181.100.243:48/jiexi/sj.php/?url="}, 
 {"name": "🐠小鱼解析", "type": 1, "url": "http://json.84jia.com/home/api?type=ys&uid=335253&key=fjklpqsyCDGMNQRWX8&url="},
 {"name": "🔆小新解析", "type": 1, "url": "http://xiaoxin.1080p.me/home/api?type=ys&uid=2781037&key=eijkoqxBDFGILRTUWZ&url="},
 {"name": "🏯小城解析", "type": 1, "url": "https://jx.ccabc.cc/xc/?key=5567332json&url="},
@@ -280,7 +285,8 @@
 {"name": "🥭小米红红","type": 1,"url": "https://qq.396pay.cn/home/api?type=ys&uid=3927563&key=ainsuwyBDEFGNQS037&url=","flag": ["JHA","JHB"]}, 
 {"name":"🏳️‍🌈party2（多多）","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2100&my=afimnpqrvBHJKOQS47&mgtv=app&url="}, 	
 {"name":"🐈party3（多多）","type": 1,"url": "http://json.xg688.top/api/?key=Y1etBkWn5hetOHJwF1&url="},
-{"name":"🕢party3（多多）","type": 0,"url": "https://jx.777jiexi.com/player/?url="},	  
+{"name":"🕢party3（多多）","type": 0,"url": "https://jx.777jiexi.com/player/?url="},
+
 {"name":"keyu","type":1,"url":"http://newjiexi.gotka.top/keyu3.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}}],
 
 "doh": [{"name": "Google","url": "https://dns.google/dns-query","ips": ["8.8.4.4","8.8.8.8"]},{"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},{"name": "AdGuard","url":"https://dns.adguard.com/dns-query","ips":["94.140.14.140","94.140.14.141"]},{"name": "DNSWatch","url": "https://resolver2.dns.watch/dns-query","ips":["84.200.69.80","84.200.70.40"]},{"name": "Quad9","url": "https://dns.quad9.net/dns-quer","ips": ["9.9.9.9","149.112.112.112"]}],
