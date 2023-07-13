@@ -272,6 +272,8 @@
 {"name": "🐈肥猫但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
 {"name":"🦊高清4K","type":0,"url":"https://www.8090g.cn/jiexi/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"🍉高清4K","type":0,"url":"https://www.ckmov.vip/api.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
+{"name": "777解析","type": 0,"url": "https://jx.777jiexi.com/player/?url="},
+{"name": "🐱三个柒","type": 0,"url":"https://jx.jsonplayer.com/player/?url=","ext": {"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 {"name":"🐱快嗅","type": 0,"url":"https://jxdp.codermart.net/?url=", "ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","1905","xigua"]}},
 {"name":"🐱夜幕/", "type":0,"url":"https://www.yemu.xyz/?url=", "showType":3},
 {"name": "🏯极速标清", "type": 1, "url": "http://119.181.100.243:48/jiexi/sj.php/?url="}, 
