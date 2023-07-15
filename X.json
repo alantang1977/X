@@ -25,15 +25,7 @@
 //{"key": "广播迷", "name": "📺︎┃电视台┃点播", "type": 3, "api": "csp_XBPQ","ext": {"分类": "央视$zy#北京$bj#上海$sh#天津$tj#重庆$cq#广东$gd#四川$sc#山东$sd#江苏$js#浙江$zj#河南$henan#河北$hebei#辽宁$ln#安徽$ah#湖南$hn#湖北$hubei#福建$fj#广西$gx#山西$sxi#云南$yn#贵州$gz#西藏$xz#宁夏$nx#海南$hainan#新疆$xj#甘肃$gs#青海$qh#黑龙江$hlj#内蒙古$nmg#港澳$hk", "编码": "GBK", "播放数组": "ax-grid ax-split-2 ax-space-md&&</ul>", "线路数组": "ax-btn*ax-padding ax-xl\">&&/a>[不包含:介绍]", "分类url": "http://www.guangbomi.com/tv/{cateId}/{catePg}.html[http://www.guangbomi.com/tv/{cateId}/index.html"}}, 
 //{"key": "TV", "name": "📢┃全国电视┃广播", "type": 3, "api": "csp_XBPQ", "ext": {"分类": "央视$1#卫视$2#地方$3#港澳$4#综艺$zhibo/zongyi#体育$zhibo/sports#新闻$zhibo/xinwen#影视$zhibo/yingshi#影视$zhibo/shaoer#财经$zhibo/caijing#科教$zhibo/kejiao", "编码": "GBK", "图片": "http://hz752.love:63/pictu.php?type=302", "分类url": "http://tv.haoqu99.com/{cateId};;z", "数组": "<li class=\"p-item\">&&</li>"}}, 
 {"key": "dr_好趣网","name":"📺┃好趣电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
-{
-			"key": "鲸落",
-			"name": "🐳┃小米鲸落┃直联",
-			"type": 3,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0,
-			"api": "csp_XBPQ",
-			"ext": {
+{"key": "鲸落","name": "🐳┃小米鲸落┃直联","type": 3,"searchable": 1,"quickSearch": 1,"filterable": 0,"api": "csp_XBPQ","ext": {
 				"主页url": "http://www.tvyb03.com/",
 				"请求头": "手机",
 				"简介": "class=\"sketch content\">&&</span>",
@@ -59,13 +51,7 @@
 				"分类url": "http://www.tvyb03.com/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}.html;;m",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4"}
 },
-{
-			"key": "龟龟",
-			"name": "🐢┃小米龟龟┃直联",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
+{"key": "龟龟","name": "🐢┃小米龟龟┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"主页url": "http://www.dadagui.me/",
 				"副标题": "pic-text text-right\">&&</b>",
 				"搜索模式": "1",
@@ -83,13 +69,7 @@
 				"跳转播放链接": "解析+link_pre*url\":\"&&\"",
 				"分类url": "http://www.dadagui.me/vodshow/{cateId}-{area}-{by}--{lang}----{catePg}---{year}.html"}
 },
-{
-			"key": "一龙",
-			"name": "🐉┃小米一龙┃直联",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
+{"key": "一龙","name": "🐉┃小米一龙┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"站名": "一龙影视",
 				"主页url": "http://www.yilonghd.com/",
 				"嗅探词": ".m3u8#.mp4#video_mp4#feiyunNB.mp4#.mp4#cdn.123pan.cn#huoshanvod.com#v.123pan.cn#auth_key#app-ali-cdn.fqfilm.com",
@@ -121,14 +101,7 @@
 				"分类url": "http://www.yilonghd.com/show/id-{cateId}/area/{area}/by/{by}/class/{class}/lang/{lang}/page/{catePg}/year/{year}.html;;a",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4#纪录片$5"}
 },
-{
-			"key": "看看",
-			"name": "👁️┃小米看看┃直联",
-			"type": 3,
-			"playerType": "1",
-			"changeable": 0,
-			"api": "csp_XBPQ",
-			"ext": {
+{"key": "看看","name": "👁️┃小米看看┃直联","type": 3,"playerType": "1","changeable": 0,"api": "csp_XBPQ","ext": {
 				"主页url": "https://kankanju.cc",
 				"请求头": "Referer$https://kankanju.cc/#Cookie$filter_robot_cs=301#User-Agent$Mozilla/5.0 (iPad; CPU OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
 				"副标题": "pic-text text-right\">&&</b>",
@@ -145,13 +118,7 @@
 				"分类": "电影$dianying#连续剧$dianshiju#综艺$zongyi#动漫$dongman#纪录片$jilupian",
 				"分类url": "https://kankanju.cc/vodshow/area/{area}/id/{cateId}/page/{catePg}/year/{year}.html;;m"}
 },
-{
-			"key": "莱米",
-			"name": "♨️┃小米莱米┃直联",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
+{"key": "莱米","name": "♨️┃小米莱米┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"站名": "来米影视",
 				"主页url": "https://www.laimi.me",
 				"副标题": "class=\"module-item-text\">&&</div",
