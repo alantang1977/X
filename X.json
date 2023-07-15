@@ -58,7 +58,7 @@
 				"播放列表": "<a&&/a>",
 				"分类url": "http://www.tvyb03.com/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}.html;;m",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4"}
-,
+},
 {
 			"key": "龟龟",
 			"name": "🐢┃小米龟龟┃直联",
