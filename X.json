@@ -244,6 +244,7 @@
 {"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://ghproxy.net/http://raw.github.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://ghproxy.net/http://raw.github.com/alantang1977/CatVodSpider/master/jar/custom_spider.jar"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
+//"wallpaper": "http://img.fongmi.eu.org",
 //"wallpaper": "https://tian.chuqiuyu.tk/",
 "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
 //"spider": "http://xhww.fun:63/小米/小暴脾气7.jar;md5;6ad6ecbdd8d8dd440f9824c9b6628cad",
