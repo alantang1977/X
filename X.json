@@ -27,7 +27,7 @@
 {"key": "dr_好趣网","name":"📺┃好趣电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 {
 			"key": "龟龟",
-			"name": "龟龟┃BPQ",
+			"name": "🐢┃小米龟龟┃直联",
 			"type": 3,
 			"api": "csp_XBPQ",
 			"playerType": "1",
@@ -51,7 +51,7 @@
 },
 {
 			"key": "一龙",
-			"name": "一龙┃BPQ",
+			"name": "🐉┃小米一龙┃直联",
 			"type": 3,
 			"api": "csp_XBPQ",
 			"playerType": "1",
@@ -89,7 +89,7 @@
 },
 {
 			"key": "看看",
-			"name": "看看┃BPQ",
+			"name": "👁️┃小米看看┃直联",
 			"type": 3,
 			"playerType": "1",
 			"changeable": 0,
@@ -113,7 +113,7 @@
 },
 {
 			"key": "莱米",
-			"name": "莱米┃BPQ",
+			"name": "♨️┃小米莱米┃直联",
 			"type": 3,
 			"api": "csp_XBPQ",
 			"playerType": "1",
