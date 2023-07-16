@@ -50,8 +50,7 @@
 				"播放列表": "<a&&/a>",
 				"分类url": "http://www.tvyb03.com/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}.html;;m",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4"}
-},
-{"key": "龟龟","name": "🐢┃小米龟龟┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
+},{"key": "龟龟","name": "🐢┃小米龟龟┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"主页url": "http://www.dadagui.me/",
 				"副标题": "pic-text text-right\">&&</b>",
 				"搜索模式": "1",
@@ -68,8 +67,7 @@
 				"跳转解析": "默认$空#高清有4K$https://www.dadagui.me/webcloud/?vid=#1080P无广$https://www.dadagui.me/webcloud/?vid=",
 				"跳转播放链接": "解析+link_pre*url\":\"&&\"",
 				"分类url": "http://www.dadagui.me/vodshow/{cateId}-{area}-{by}--{lang}----{catePg}---{year}.html"}
-},
-{"key": "一龙","name": "🐉┃小米一龙┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
+},{"key": "一龙","name": "🐉┃小米一龙┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"站名": "一龙影视",
 				"主页url": "http://www.yilonghd.com/",
 				"嗅探词": ".m3u8#.mp4#video_mp4#feiyunNB.mp4#.mp4#cdn.123pan.cn#huoshanvod.com#v.123pan.cn#auth_key#app-ali-cdn.fqfilm.com",
@@ -100,8 +98,7 @@
 				"播放列表": "<a&&/a>",
 				"分类url": "http://www.yilonghd.com/show/id-{cateId}/area/{area}/by/{by}/class/{class}/lang/{lang}/page/{catePg}/year/{year}.html;;a",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4#纪录片$5"}
-},
-{"key": "看看","name": "👁️┃小米看看┃直联","type": 3,"playerType": "1","changeable": 0,"api": "csp_XBPQ","ext": {
+},{"key": "看看","name": "👁️┃小米看看┃直联","type": 3,"playerType": "1","changeable": 0,"api": "csp_XBPQ","ext": {
 				"主页url": "https://kankanju.cc",
 				"请求头": "Referer$https://kankanju.cc/#Cookie$filter_robot_cs=301#User-Agent$Mozilla/5.0 (iPad; CPU OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
 				"副标题": "pic-text text-right\">&&</b>",
@@ -117,8 +114,19 @@
 				"线路标题": "\"tab\">&&</a>[不包含:线路1#线路2#线路3#][替换:FY线路>>无广告有4K#KKJ线路>>无告1080P#LZ线路>>广告1#FF线路>>广告2#YZ线路>>广告3]",
 				"分类": "电影$dianying#连续剧$dianshiju#综艺$zongyi#动漫$dongman#纪录片$jilupian",
 				"分类url": "https://kankanju.cc/vodshow/area/{area}/id/{cateId}/page/{catePg}/year/{year}.html;;m"}
-},
-{"key": "莱米","name": "♨️┃小米莱米┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
+},{"key": "csp_XBPQ_JOJO","name": "🅾️┃小米JOJO┃直联","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {
+				"二次截取": "class=\"content-body\"&&class=\"content-lift\"",
+				"数组": "<a&&</a>",
+				"图片": "src=\"&&\"",
+				"标题": "class=\"card-title\">&&</p>",
+				"副标题": "class=\"item-speed\">&&</p>",
+				"链接": "href=\"&&\"",
+				"播放数组": "class=\"plyr-sidebar-list&&</div>",
+				"嗅探词": "aliyundrive.net#cn-beijing-data.aliyundrive.net#alicloudccp.com#srcurity-token",
+				"搜索url": "https://app.syrme.top/video/search?q={wd}",
+				"分类": "电影$电影#美剧$美剧#日剧$日剧#韩剧$韩剧#动漫$动漫#纪录$纪录",
+				"分类url": "https://app.syrme.top/video/type/tag?type={cateId}&tag=&page={catePg}&size=18;;u0"}
+},{"key": "莱米","name": "♨️┃小米莱米┃直联","type": 3,"api": "csp_XBPQ","playerType": "1","ext": {
 				"站名": "来米影视",
 				"主页url": "https://www.laimi.me",
 				"副标题": "class=\"module-item-text\">&&</div",
