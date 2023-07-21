@@ -45,6 +45,7 @@
 {"key": "dr_vidhub","name":"🍬┃VIDHUB┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/vidhub.js"},
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 {"key":"优世界", "name": "🌍┃优世界┃4K", "type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1, "filterable": 1, "playerType": "2", "ext": "https://dpg.laoxie.icu/api.php/app/"},
+{"key": "yyds","name": "🔥┃杳音┃影院","type": 3,"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js","playerType": "2","ext": "http://alist.xn--z7x900a.love:63/yyds.js","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_Czsapp","name":"📔┃厂长┃影视","type":3,"api":"csp_Czsapp","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"明帝影视","name":"🔆┃明帝┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ys.md214.cn/api.php/app/"},
 {"key":"酷酷","name":"🐵️┃酷酷┃影视","type":3,"api":"csp_AppYsV2","ext":"http://ys.realdou.cn/api.php/app/","categories":["4K电影","4K电视剧"]},
