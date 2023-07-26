@@ -34,7 +34,7 @@
 {"key": "cjzy_暴风资源","name": "🎈┃暴风┃影视","type": 1,"api": "https://bfzyapi.com/api.php/provide/vod/?ac=list","playUrl": "","categories": ["国产剧","国产动漫","大陆综艺","港台综艺","香港剧","台湾剧","日本剧","欧美剧","泰国剧","日本动漫","日本综艺","综艺频道","新马泰综艺","纪录片","科幻片","喜剧片","战争片"]},		
 {"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key":"荐片","name":"✒️┃荐片哥哥┃4K","type": 3,"playerType":"1","api":"http://xhww.fun:63/lib/drpy2.min.js","ext": "http://smallmi.xiaohewanwan.love:63/jp.js"},
-{"key": "dr_ikanbot","name": "🌺┃爱看机器人┃影视","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot2.js"},
+{"key": "dr_ikanbot","name": "🌺┃爱看┃影视","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
 {"key": "888解忧愁","name": "🚣┃影探┃官源","type": 4,"api": "https://private--t410.repl.co/888","searchable": 0,"quickSearch": 0,"filterable": 1,"changeable": 0},
 {"key": "落落","name": "🗯️┃乐乐┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://1080dyw.com/icciu_api.php/v1.vod"},
 {"key":"姑姑","name":"🎖️┃姑姑┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
