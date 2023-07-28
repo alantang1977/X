@@ -97,6 +97,8 @@ https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
 
 https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
 
+http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
+
 http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
 
 https://api.ys66.repl.co?url=http://饭太硬.top/tv
