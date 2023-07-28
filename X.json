@@ -35,6 +35,7 @@
 {"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key":"荐片","name":"✒️┃荐片哥哥┃4K","type": 3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/荐片.js"},
 {"key": "dr_ikanbot","name": "🤖┃爱看机器┃影视","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
+{"key": "csp_appys_996","name": "🍻┣玖玖陆┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://dytt996.com/api.php/app/","categories": ["电影", "电视剧", "综艺", "动漫"]},
 {"key": "888解忧愁","name": "🚣┃影探┃官源","type": 4,"api": "https://private--t410.repl.co/888","searchable": 0,"quickSearch": 0,"filterable": 1,"changeable": 0},
 {"key": "落落","name": "🗯️┃乐乐┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://1080dyw.com/icciu_api.php/v1.vod"},
 {"key":"姑姑","name":"🎖️┃姑姑┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
