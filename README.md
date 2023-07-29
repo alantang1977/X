@@ -28,9 +28,7 @@ https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
 取得阿里云盘token方法如下：先通过浏览器打开阿里云盘官网并登录网页版：https://www.aliyundrive.com/drive/ 登录成功后， 打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 JSON.parse(localStorage.token).refresh_token ③ 复制返回的32位字符串，不要复制双引号
 
-![Robot](https://github.com/alantang1977/X/assets/107459091/70e08d27-f2c3-4284-afe7-565bb84c7fef)
-
-
+![photo_2023-06-06_07-15-35](https://github.com/alantang1977/X/assets/107459091/59c22c29-4bbb-4ae9-8bce-f18d41833e13)
 
 4K高清图片/必应壁纸
 
