@@ -1,16 +1,5 @@
 # Tang介绍
 
-Readme.md
-一、标题写法编辑说明
-例如：
-# 一级标题  
-## 二级标题  
-### 三级标题  
-#### 四级标题  
-##### 五级标题  
-###### 六级标题 
-------下划线
-
 1.https://agit.ai/alanchaotang
 
 2.https://gitee.com/alanchaotang
