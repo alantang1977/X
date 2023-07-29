@@ -77,16 +77,7 @@
 {"key":"dr_百忙无果","name":"🍋┃芒果TV┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable": 1,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/百忙无果.js"},
 {"key":"dr_360影视","name":"💫┃360影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/360影视.js"},
 {"key":"360影视","name":"🏳️‍🌈┃360影视┃官源","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/YSC.jar"},
-{"key":"6v磁力","name":"🌶┃新6v┃官源","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/6v磁力.json"},
-{
-      "key": "星星",
-      "name": "星星",
-      "type": 3,
-      "api": "csp_Star",
-      "jar": "https://fongmi.cachefly.net/FongMi/CatVodSpider/main/jar/custom_spider.jar;md5;eea22614c071a32c3624ca99691f491a",
-      "searchable": 1,
-      "changeable": 1
-    },
+{"key":"6v磁力","name":"🌶┃新6v┃官源","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/6v磁力.json"},
 {"key":"Itv","name":"🥝┃奇异果┃官源","type":3,"api":"csp_Itv","quickSearch":1,"searchable":1,"filterable":1,"changeable":0,"ext":"","jar":""},
 {"key":"drpy_js_奇珍异兽","name":"🐨┃爱奇艺┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/奇珍异兽.js"},
 {"key": "dr_腾云驾雾","name": "🐧┃腾讯视频┃官源","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/腾云驾雾.js"},
