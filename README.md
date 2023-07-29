@@ -30,13 +30,13 @@ https://jm.dovxi.repl.co/api?url=https://d.looks.wang/我爱夜猫子
 https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
 ![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
-
+------
 安装教程/使用说明
 
 取得阿里云盘token方法如下：先通过浏览器打开阿里云盘官网并登录网页版：https://www.aliyundrive.com/drive/ 登录成功后， 打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 JSON.parse(localStorage.token).refresh_token ③ 复制返回的32位字符串，不要复制双引号
 
 ![photo_2023-06-06_07-15-35](https://github.com/alantang1977/X/assets/107459091/59c22c29-4bbb-4ae9-8bce-f18d41833e13)
-
+------
 4K高清图片/必应壁纸
 
 https://www.pexels.com/zh-cn/
@@ -52,7 +52,7 @@ https://unsplash.com/
 https://bz.zzzmh.cn/index
 
 ![Robot](https://github.com/alantang1977/X/assets/107459091/84793476-42d4-494f-87e4-19d19b271a64)
-
+------
 本地接口源教程
 
 1.TVBox clan://localhost/tvboxqy/tang.json
@@ -69,12 +69,11 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 16进制解码：http://www.cyeam.com/tool/hexdecode
 
 接口解密 http://饭太硬.ml/jm/
-
+------
 思维没有边界 一切皆有可能
-
+------
 ![W-](https://github.com/alantang1977/X/assets/107459091/78d25b3c-3e94-4c44-b87b-c14472c029f8)
-
-
+------
 1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
 
 2.  TV_q215613905（https://github.com/alantang1977/TVBoxOS）
@@ -107,7 +106,7 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 ![pexels-quang-nguyen-vinh-2131623](https://github.com/alantang1977/X/assets/107459091/63d15301-566f-493f-bd9d-5db74bd5d368)
 
-
+------
 2.唐三：
 
 https://gh.t4tv.hz.cz/newtang.bmp
@@ -147,7 +146,7 @@ https://jm.dovxi.repl.co/api?url=http://我不是.肥猫.love:63/接口禁止贩
 下载链接：http://ltjm.ml/mao.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.love:63/
 
 https://dxawi.github.io/0/0.json
-
+------
 电视点播配置接口2023
 
 配置:http://肥猫.love
@@ -180,7 +179,7 @@ https://yydsys.top/duo/v.json
 
  ![2202_2012102321380600_超人哥哥](https://github.com/alantang1977/X/assets/107459091/6479c06d-33ce-4824-b272-44feafd5e915)
 
-
+------
 随机轮换壁纸：
 
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
