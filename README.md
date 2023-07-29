@@ -85,25 +85,16 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 1.饭太硬：
 
-http://xn--sss604efuw.ga/x/o.json
-
-https://xn--sss604efuw.ga/x/o.json
-
-https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431
-
 http://ltjm.ml/mao.php?url=http://饭太硬.ga/tv
 
 https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
 
 https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
 
-http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
+https://jm.dovxi.repl.co/api?url=https://d.looks.wang/我爱夜猫子
 
-http://ltjm.ml/mao.php?url=https://weixine.net/ysc.json   运输车
+https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
-http://ltjm.ml/mao.php?url=https://神器每日推送.tk/pz.json
-
-https://api.ys66.repl.co?url=http://饭太硬.top/tv
 
 2.唐三：
 
