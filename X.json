@@ -273,7 +273,7 @@
 {"key": "小艺","name": "🥩┃小艺┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://lg.tvcms.top/api.php/app/"},    
 {"key": "鸭鸭","name": "🦆┃鸭鸭┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://yayayaaapp.ynf.icu/api.php/app/"},
 {"key": "速搜","name": "🚄┃速搜┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/速搜.json"}, 
-{"key":"csp_MeiJu69","name":"⛵️┃六九┃美剧","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.69mj.com/xgapp.php/v2/","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/duoduo.jar"},
+{"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
 {"key": "落叶","name": "🍂┃落叶┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://xn--yeta099v.online:66/api.php/app/"},
 {"key": "yunyun","name": "️🌤️芸芸┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "http://xhww.fun:63/小米/源/爱肥猫.json"},
