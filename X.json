@@ -41,6 +41,7 @@
 { "key": "聚合","name": "🎦┃影视聚合┃解析","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.tvkuys.xyz/api.php/app/"},
 {"key": "888解忧愁","name": "🚣┃影探┃官源","type": 4,"api": "https://private--t410.repl.co/888","searchable": 0,"quickSearch": 0,"filterable": 1,"changeable": 0},
 {"key": "落落","name": "🗯️┃乐乐┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://1080dyw.com/icciu_api.php/v1.vod"},
+{"key": "365","name": "♨️┃年年┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://zl.yy365.vip/api.php/app/"},
 {"key":"姑姑","name":"🎖️┃姑姑┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"http://xhww.fun:63/js/drpy1.min.js","ext":"http://smallmi.xiaohewanwan.love:63/jp.js"},
 {"key": "蘑菇","name": "🍄┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
