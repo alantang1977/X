@@ -332,7 +332,10 @@
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 
 ##dr_js系列
-{"key": "dr_6V新版[磁]","name":"💾┃6V新版┃磁力","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/6V新版[磁].js"},
+{"key": "dr_往往","name":"🫖┃往往┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/往往影视.js"},
+{"key": "dr_南柯","name":"⛽┃南柯影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/南柯电影网.jsd"},
+{"key": "dr_南瓜","name":"🍩┃南瓜┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/南瓜影视.js"},
+{"key": "dr_6V新版","name":"🥩┃6V新版┃磁力","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/6V新版[磁].js"},
 {"key": "dr_光棍","name":"🔦┃光棍┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/光棍影院.js"},
 {"key": "dr_4K电影网","name":"👽┃4K电影网┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/4K电影网.js"},
 {"key": "dr_北川","name":"🍨🧊┃北川┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/北川影视.js"},
