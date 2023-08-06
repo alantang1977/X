@@ -32,7 +32,7 @@
 {"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
 {"key":"csp_YGP","name":"👙┃新片速递┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 {"key": "cjzy_暴风资源","name": "🎈┃暴风┃影视","type": 1,"api": "https://bfzyapi.com/api.php/provide/vod/?ac=list","playUrl": "","categories": ["国产剧","国产动漫","大陆综艺","港台综艺","香港剧","台湾剧","日本剧","欧美剧","泰国剧","日本动漫","日本综艺","综艺频道","新马泰综艺","纪录片","科幻片","喜剧片","战争片"]},		
-{"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
+//{"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key":"荐片","name":"✒️┃荐片哥哥┃4K","type": 3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/荐片.js"},
 {"key": "dr_ikanbot","name": "🤖┃爱看机器┃影视","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
 {"key": "csp_appys_996","name": "🍻┃玖玖陆┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://dytt996.com/api.php/app/","categories": ["电影", "电视剧", "综艺", "动漫"]},
@@ -57,8 +57,8 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 
 ##磁力系列
-{"key": "csp_BLSGod","name": "💾┃80S影视┃🤖磁力","jar":"https://qu.ax/lPlj.js","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key": "csp_Xunlei8","name": "💾┃迅雷吧┃🤖磁力","jar":"https://qu.ax/lPlj.js","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_BLSGod","name": "💾┃80S影视┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_Xunlei8","name": "💾┃迅雷吧┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_Mp4Mov","name":"💾┃Mp4电影┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_New6v","name":"💾┃新6V┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
 {"key":"csp_SeedHub","name":"💾┃SeedHub┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api":"csp_SeedHub","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
