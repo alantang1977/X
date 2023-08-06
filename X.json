@@ -25,31 +25,9 @@
 //{"key": "TV", "name": "📢┃全国电视┃广播", "type": 3, "api": "csp_XBPQ", "ext": {"分类": "央视$1#卫视$2#地方$3#港澳$4#综艺$zhibo/zongyi#体育$zhibo/sports#新闻$zhibo/xinwen#影视$zhibo/yingshi#影视$zhibo/shaoer#财经$zhibo/caijing#科教$zhibo/kejiao", "编码": "GBK", "图片": "http://hz752.love:63/pictu.php?type=302", "分类url": "http://tv.haoqu99.com/{cateId};;z", "数组": "<li class=\"p-item\">&&</li>"}}, 
 {"key": "dr_好趣网","name":"📺┃好趣电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 {"key": "小鸭","name": "🦆┃小鸭┃网盘","type": 3,"api": "http://smallmi.xiaohewanwan.love:63/JS/lib/alist.min.js","ext": "http://xhww.fun:63/小米/源/alist.json","searchable": 1,"quickSearch": 1,"filterable": 0},	
-{
-            "key": "csp_BLSGod",
-            "name": "🧲80S影视",
-            "jar":"https://qu.ax/lPlj.js",
-            "type": 3,
-            "api": "csp_BLSGod",
-            "playerType": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
-        },
-        {
-            "key": "csp_Xunlei8",
-            "name": "🧲迅雷吧",
-            "jar":"https://qu.ax/lPlj.js",
-            "type": 3,
-            "api": "csp_Xunlei8",
-            "playerType": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
-        },
 	
 ##csp系列
-{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://192.168.1.4:5244/Alan/Alist/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
+{"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
 {"key":"csp_YGP","name":"👙┃新片速递┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
@@ -79,6 +57,8 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 
 ##磁力系列
+{"key": "csp_BLSGod","name": "💾┃80S影视┃🤖磁力","jar":"https://qu.ax/lPlj.js","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_Xunlei8","name": "💾┃迅雷吧┃🤖磁力","jar":"https://qu.ax/lPlj.js","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_Mp4Mov","name":"💾┃Mp4电影┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_New6v","name":"💾┃新6V┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
 {"key":"csp_SeedHub","name":"💾┃SeedHub┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api":"csp_SeedHub","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
@@ -457,8 +437,8 @@
 "wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider": "http://xhww.fun:63/小米/小暴脾气9.jar;md5;6ad6ecbdd8d8dd440f9824c9b6628cad",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;18b8df1e0f7813098c1e70979a264aad",
-  
+//"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;18b8df1e0f7813098c1e70979a264aad",
+"spider": "http://xhww.fun:63/小米/0802.jar;md5;538304754b268f733245e29504f03254",  
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
