@@ -57,17 +57,7 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 
 ##磁力系列
-{
-            "key": "csp_BLSGod",
-            "name": "🧲80S影视",
-            "type": 3,
-            "api": "csp_BLSGod",
-            "playerType": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
-        },
-//{"key": "csp_BLSGod","name": "💾┃80S影视┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_BLSGod","name": "💾┃80S影视┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_Mp4Mov","name":"💾┃Mp4电影┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_New6v","name":"💾┃新6V┃🤖磁力","jar":"https://qu.ax/qokd.jpg","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
