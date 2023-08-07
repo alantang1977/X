@@ -69,6 +69,7 @@
 {"key": "lf_js_p2p","name":"💾┃磁力P2P┃🤖磁力","type": 3,"searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1, "api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lf_p2p_min.js","ext":""},
 {"key":"drpy_js_磁力熊[磁]","name":"💾┃磁力熊┃🤖磁力","type":3,"api":"https://qu.ax/NtMt.js","ext":"https://qu.ax/zGrL.js"},	
 {"key":"阿里云盘网","name":"💾┃里云盘┃🤖磁力","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/aliyunpan.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
+{"key":"4KHDR","name":"🦹┃4KHDR┃影视","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 	
 	  
 ##官源系列
@@ -280,7 +281,6 @@
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
 {"key": "落叶","name": "🍂┃落叶┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://xn--yeta099v.online:66/api.php/app/"},
 {"key": "yunyun","name": "️🌤️芸芸┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "http://xhww.fun:63/小米/源/爱肥猫.json"},
-{"key":"4KHDR","name":"🦹┃4KHDR┃影视","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
 {"key":"MV_vod","name":"🎸┃明星┃MV","type":1,"api":"https://mv.饭太硬.ml/mv/vod","searchable":1,"quickSearch":0,"changeable":0},
 {"key":"csp_Lgyy","name":"💧┃蓝光┃影视","type":3,"api":"csp_Lgyy","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.lgyy.vip"},
 {"key":"csp_Bd","name":"🐟┃哔嘀┃影视","type":3,"api":"csp_Bdys01","searchable":1,"quickSearch":1,"filterable":1},
