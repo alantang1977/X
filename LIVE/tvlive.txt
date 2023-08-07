@@ -1,9 +1,3 @@
-IPTV,#genre#
-16万MV,https://ghproxy.com/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/MTV.txt
-油管直播,https://ghproxy.com/https://raw.githubusercontent.com/lystv/short/main/影视/tvb/yt.txt
-玩偶,https://ghproxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/main/Adult.m3u
-物业直播,https://qu.ax/Adhq.txt
-
 央视,#genre#
 CCTV-1,http://125.210.152.19:9120/live/hzgq-cctv1gq-h264.m3u8
 CCTV-2,http://125.210.152.19:9120/live/hzgq-cctv2gq-h264.m3u8
