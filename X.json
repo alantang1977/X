@@ -37,6 +37,47 @@
             "changeable": 0,
             "ext": "http://app.zhaifutvapp.com/ruifenglb_api.php/v1.vod"
 },
+{
+      "key":"路飞直播2点播",
+      "name":"❤电视 | 路飞[js]",
+      "type":3,
+      "viewType": 2,
+      "api":"https://qu.ax/bzoe.js",
+      "ext":"https://qu.ax/kPgt.json"
+    },
+    {
+      "key": "MV_vod",
+      "name": "❤电视┃MTV",
+      "type": 1,
+      "viewType": 2,
+      "api": "https://tvbox-mv--leosam2048.repl.co/mv/vod"
+    },
+    {
+      "key": "Youtube",
+      "name": "❤Youtube",
+      "type": 3,
+      "viewType": 2,
+      "api": "https://qu.ax/Mud.js",
+      /*"searchable": 1,
+      "changeable": 1,*/
+      "ext": "https://qu.ax/USvO.txt"
+    },
+    {
+      "key":"网络直播转点播",
+      "name":"❤💻电视 | 直播",
+      "type":3,
+      "viewType": 1,
+      "api":"https://qu.ax/dFpK.js",
+      "ext":"https://qu.ax/uChb.json"
+    },
+    {
+      "key": "MV",
+      "name": "❤十六万MTV",
+      "type": 3,
+      "viewType": 1,
+      "api": "https://qu.ax/bzoe.js",
+      "ext":"https://qu.ax/gxhY.txt"
+    },
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
