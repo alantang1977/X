@@ -72,7 +72,7 @@
 {"key": "lf_js_p2p","name":"💾┃磁力P2P┃🤖磁力","type": 3,"searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1, "api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lf_p2p_min.js","ext":""},
 {"key":"drpy_js_磁力熊[磁]","name":"💾┃磁力熊┃🤖磁力","type":3,"api":"https://qu.ax/NtMt.js","ext":"https://qu.ax/zGrL.js"},	
 {"key":"阿里云盘网","name":"💾┃阿里云盘┃🤖磁力","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/aliyunpan.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
-{"key":"4KHDR","name":"🦹┃4KHDR┃影视","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
+{"key":"4KHDR","name":"💾┃4KHDR┃影视","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key":"bdcili","name":"💾┃哔嘀┃磁力","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 	
 	  
