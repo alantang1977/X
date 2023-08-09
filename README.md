@@ -10,7 +10,7 @@
 
 ## 湯影視TV 
 
-![56329a05d27fbfb928702b60ef9d57a](https://ghproxy.net/http://raw.github.com/alantang1977/X/assets/107459091/8d3ace01-6de2-400c-be2c-4e29e3bd5b93)
+![56329a05d27fbfb928702b60ef9d57a](https://github.com/alantang1977/X/assets/107459091/8d3ace01-6de2-400c-be2c-4e29e3bd5b93)
 ### 一：TVBox配置接口 （不分先后）
 ------
 https://jm.dovxi.repl.co/api?url=http://我不是.肥猫.love:63/接口禁止贩卖
