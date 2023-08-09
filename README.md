@@ -10,7 +10,7 @@
 
 ## 湯影視TV 
 
-![56329a05d27fbfb928702b60ef9d57a](https://github.com/alantang1977/X/assets/107459091/8d3ace01-6de2-400c-be2c-4e29e3bd5b93)
+![56329a05d27fbfb928702b60ef9d57a](https://ghproxy.net/http://raw.github.com/alantang1977/X/assets/107459091/8d3ace01-6de2-400c-be2c-4e29e3bd5b93)
 ### 一：TVBox配置接口 （不分先后）
 ------
 https://jm.dovxi.repl.co/api?url=http://我不是.肥猫.love:63/接口禁止贩卖
@@ -22,6 +22,8 @@ https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
 https://jm.dovxi.repl.co/api?url=https://d.looks.wang/我爱夜猫子
 
 https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
+
+https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情
 
 ![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
 ------
