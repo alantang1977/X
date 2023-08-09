@@ -31,7 +31,6 @@
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
 {"key": "T4_玩偶","name": "🐬┃玩偶哥哥┃8K","type": 4,"api": "http://120.53.102.254/t4/t4ali","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key": "渐渐","name": "🔫┃简简┃影视","type": 3,"api": "csp_AppYsV2","jar": "http://xhww.fun:63/小米/2.jar;md5;6e12873c628020196fe9400d1ef51f1c","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://mdy.ahailove.cn/api.php/app/"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
 {"key":"csp_YGP","name":"👙┃新片速递┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
@@ -99,6 +98,7 @@
 {"key":"drpy_hh","name":"🛫┃吼吼┃墙外","type":3,"api":"https://agit.ai/Yemaozhi123/yemao/raw/branch/master/lib/drpy2.min.js","ext":"https://download.kstore.space/download/3313/js/HoHo影视.js"},
 {"key":"drpy_od","name":"🛫┃欧帝┃墙外","type":3,"api":"https://agit.ai/Yemaozhi123/yemao/raw/branch/master/lib/drpy2.min.js","ext":"https://download.kstore.space/download/3313/js/欧帝影院.js"},
 {"key":"drpy_dbk","name":"🛫┃独播┃墙外","type":3,"api":"https://agit.ai/Yemaozhi123/yemao/raw/branch/master/lib/drpy2.min.js","ext":"https://agit.ai/ixinshang/dr_py/raw/branch/master/js/独播库[飞].js"},
+{"key": "渐渐","name": "🔫┃简简┃影视","type": 3,"api": "csp_AppYsV2","jar": "http://xhww.fun:63/小米/2.jar;md5;6e12873c628020196fe9400d1ef51f1c","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://mdy.ahailove.cn/api.php/app/"},
 {"key": "兔兔","name": "🐰┃小米兔兔┃直联","type": 3,"searchable": 1,"quickSearch": 1,"filterable": 0,"api": "csp_XBPQ","ext": {"分类": "电影$1#电视剧$2#动漫$3#综艺$4","请求头": "User-Agent$Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
 				"分类url": "https://www.zjtu.cc/vodshow-{cateId}/area/{area}/page/{catePg}/year/{year}/",
 				"图片代理": "0",
