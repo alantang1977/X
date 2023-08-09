@@ -9,7 +9,7 @@
 4.https://gitlink.org.cn/alantang
 
 ## 湯影視TV 
-https://agit.ai/alanchaotang/if/raw/branch/main/assets/photo_2023-06-05.jpg
+![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
 
 ### 一：TVBox配置接口 （不分先后）
 ------
