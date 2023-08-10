@@ -78,10 +78,10 @@
 	
 	  
 ##官源系列
-{"key":"drpy_js_ddys","name": "🐓┃低端影视┃官源","type": 3,"api": "https://jihulab.com/duomv/duo/-/raw/main/js/drpymin.js","ext": "https://jihulab.com/duomv/duo/-/raw/main/js/ddys.js"},
-{"key":"dr_布雷蓝光","name":"💥┃布雷影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光.js"},
-{"key": "csp_XYQHiker_布蕾蓝光影城","name": "🐠┃布蕾蓝光┃影城","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/布蕾蓝光影城.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
-{"key":"csp_BuLei","name":"💣┃布雷影视┃饭硬","type":3,"api":"csp_BuLei","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://饭太硬.ml/$$$auto$$$sdlw1111$$$qqaa1122"},
+//{"key":"drpy_js_ddys","name": "🐓┃低端影视┃官源","type": 3,"api": "https://jihulab.com/duomv/duo/-/raw/main/js/drpymin.js","ext": "https://jihulab.com/duomv/duo/-/raw/main/js/ddys.js"},
+{"key":"dr_布雷蓝光","name":"💥┃布雷影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光[V2].jsd"},
+//{"key": "csp_XYQHiker_布蕾蓝光影城","name": "🐠┃布蕾蓝光┃影城","type": 3,"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/布蕾蓝光影城.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/xiangyaqing.jar"},
+//{"key":"csp_BuLei","name":"💣┃布雷影视┃饭硬","type":3,"api":"csp_BuLei","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://饭太硬.ml/$$$auto$$$sdlw1111$$$qqaa1122"},
 {"key":"dr_百忙无果","name":"🍋┃芒果TV┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable": 1,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/百忙无果.js"},
 {"key":"dr_360影视","name":"🍉┃360影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/360影视.js"},
 {"key":"360影视","name":"🏳️‍🌈┃360影视┃官源","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/YSC.jar"},
