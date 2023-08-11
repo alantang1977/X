@@ -29,7 +29,7 @@
 {"key":"csp_AList_Alist","name":"🦆┃小鸭┃网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://xhww.fun:63/小米/源/alist.json"},
 {"key":"360_spider","name":"💌┃小雅360┃影视","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key": "360","name": "🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "http://xhww.fun:63/小米/2.jar;md5;6e12873c628020196fe9400d1ef51f1c","ext": "http://xhww.fun:63/小米/源/360.json"},	
-
+{"key":"csp_Bdys","name":"🫖┃小雅哔嘀┃影视","type":3,"api":"csp_Bdys","searchable":1,"quickSearch":1,"filterable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 	
 	
 ##csp系列
