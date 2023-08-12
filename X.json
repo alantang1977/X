@@ -36,7 +36,17 @@
 //{"key": "T4_玩偶","name": "🐬┃玩偶哥哥┃8K","type": 4,"api": "http://120.53.102.254/t4/t4ali","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_woggcli","name":"☣️┃俊哥玩偶┃🛂","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
+{"key":"姑姑","name":"🎖️┃姑姑┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
+
+	
+	
+	
+	
+	
+	
+	
+	
+	{"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
 {"key": "cjzy_暴风资源","name": "🎈┃暴风┃影视","type": 1,"api": "https://bfzyapi.com/api.php/provide/vod/?ac=list","playUrl": "","categories": ["国产剧","国产动漫","大陆综艺","港台综艺","香港剧","台湾剧","日本剧","欧美剧","泰国剧","日本动漫","日本综艺","综艺频道","新马泰综艺","纪录片","科幻片","喜剧片","战争片"]},		
 //{"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key":"荐片","name":"✒️┃荐片哥哥┃🆚","type": 3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/荐片.js"},
@@ -46,7 +56,6 @@
 { "key": "聚合","name": "🎦┃影视聚合┃解析","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.tvkuys.xyz/api.php/app/"},
 {"key": "落落","name": "🗯️┃乐乐┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://1080dyw.com/icciu_api.php/v1.vod"},
 //{"key": "365","name": "♨️┃年年┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://zl.yy365.vip/api.php/app/"},
-{"key":"姑姑","name":"🎖️┃姑姑┃4K","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"http://xhww.fun:63/js/drpy1.min.js","ext":"http://smallmi.xiaohewanwan.love:63/jp.js"},
 {"key": "蘑菇","name": "🍄┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
 {"key": "蘑菇2","name": "️🍄┃蘑菇姐妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.moguys.xyz/api.php/app/"},
@@ -280,7 +289,7 @@
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider": "http://xhww.fun:63/小米/小暴脾气9.jar;md5;6ad6ecbdd8d8dd440f9824c9b6628cad",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;55894a9f32ba4201a1e2b157bb2e5c91",
+"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;7a1718e3ae8e20b2be8ddc8cc76b9c9a",
 //"spider": "http://xhww.fun:63/小米/0802.jar;md5;538304754b268f733245e29504f03254",  
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
