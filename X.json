@@ -75,6 +75,7 @@
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 
 ##磁力系列
+{"key":"jiyingw","name":"💾┃极影┃♻️磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"http://xhww.fun:63/js/drpy1.min.js","ext":"http://smallmi.xiaohewanwan.love:63/cili/jiyingw.js"},
 {"key": "csp_BLSGod","name": "💾┃80S影视┃♻️磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♻️磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_Mp4Mov","name":"💾┃Mp4电影┃♻️磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
