@@ -140,7 +140,7 @@
 {"key": "爱迪V2","name": "💡️┃爱迪┃影视","type":3,"api":"csp_AppYsV2","ext":"https://aidiapp.xyz/xgapp.php/v2/"},
 {"key": "csp_apple","name":"🍎┃小苹果┃影视","type":3,"api":"csp_LiteApple","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key": "csp_DiDuan","name": "🐞┃低端┃影视","type": 3,"api": "csp_Ddrk","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "小艺","name": "🥩┃小艺┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://lg.tvcms.top/api.php/app/"},    
+{"key": "小艺","name": "🎨┃小艺┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://lg.tvcms.top/api.php/app/"},    
 {"key": "鸭鸭","name": "🦆┃鸭鸭┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://yayayaaapp.ynf.icu/api.php/app/"},
 {"key": "速搜","name": "🚄┃速搜┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/速搜.json"}, 
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
