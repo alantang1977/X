@@ -38,7 +38,7 @@
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "野兔资源","name": "🐰┃夜兔┃切片","type": 1, "playerType":1,"api": "http://xn--yetu07f.xn--yetu07f.icu:66/api.php/provide/vod/?ac=list","categories": ["无敌4K资源","电影","动漫动画","国产剧","日韩剧","泰剧","欧美剧","纪录片"],"searchable": 1,"quickSearch": 1},
-{ "key": "小鹿","name": "🦒┃小鹿┃影视","type": 3,"api": "csp_XBPQ","ext": {"分类":"电影$1#电视剧$31#动漫$4#综艺$3","分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},      
+{ "key": "小鹿","name": "🦌♈┃小鹿┃影视","type": 3,"api": "csp_XBPQ","ext": {"分类":"电影$1#电视剧$31#动漫$4#综艺$3","分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},      
 {"key":"菇菇","name":"🎖️┃菇菇┃影视","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
 {"key": "蘑菇","name": "🍄┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
