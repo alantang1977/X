@@ -68,8 +68,7 @@
 ##磁力系列
 {"key":"jiyingw","name":"💾┃极影吧┃♉磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/极影网.js"},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key":"csp_Mp4Mov","name":"💾┃MP4电影┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key":"csp_New6v","name":"💾┃新6V┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
+{"key":"csp_New6v","name":"💾┃新陆威┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
 {"key":"csp_KubaCL","name":"💾┃酷吧堂┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_KubaCL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_MeijuTT","name":"💾┃美剧堂┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_MeijuTT","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_MeijuMi","name":"💾┃美剧迷┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_MeijuMi","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
@@ -80,6 +79,7 @@
 {"key":"bdcili","name":"💾┃哔嘀堂┃♉磁力","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key": "csp_BLSGod","name": "💾┃80S影视┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_BLSGod","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"4KHDR","name":"💾┃4KHDR┃♉磁力","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
+{"key":"csp_Mp4Mov","name":"💾┃MP4电影┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_SeedHub","name":"💾┃SeedHub┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_SeedHub","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 	
 	  
