@@ -2,7 +2,7 @@
 "sites":[
 ##搜索系列
 {"key":"csp_77","name":"🌈┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"filterable":1},
-{"key": "豆瓣","name":"Ⓜ️┃豆瓣┃荐片","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
+{"key": "豆瓣","name":"Ⓜ️┃豆瓣┃荐片","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"http://smallmi.xiaohewanwan.love:63/drpy.js"},
 {"key":"csp_YGP","name":"👙┃新片速递┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 {"key":"YiSo","name":"😹┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto"},
 {"key":"Zhaozy","name":"🐺┃资源┃搜索","type":3,"api":"csp_Zhaozy","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$fanfan$$$qqq111"},
@@ -37,7 +37,7 @@
 {"key": "csp_woggcli","name": "😈┃俊哥玩偶┃云盘","type": 4,"api": "http://home.jundie.top:9520/spider/csp_Wogg","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0,"ext": "./token.txt"},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"菇菇","name":"🎖️┃菇菇┃影视","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
-//{"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
+{"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"http://smallmi.xiaohewanwan.love:63/jp.js"},
 {"key": "蘑菇","name": "🍄┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
 {"key": "蘑菇2","name": "️🍄┃蘑菇姐妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.moguys.xyz/api.php/app/"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
