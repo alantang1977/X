@@ -19,7 +19,7 @@ https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
 
 https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
 
-https://jm.dovxi.repl.co/api?url=https://d.looks.wang/我爱夜猫子
+https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/mao/ymxx  我爱夜猫子
 
 https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
