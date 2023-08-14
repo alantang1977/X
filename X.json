@@ -45,7 +45,7 @@
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
 {"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_Kuying","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"露露","name":"🏵┃露露┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://154.204.178.161:67/api.php/app/"},
-{"key":"csp_Nmys","name":"🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://饭太硬.top/tv/nmys.json"},
+{"key":"csp_Nmys","name":"🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/农民.json"},
 {"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
 {"key": "cjzy_暴风资源","name": "🎈┃暴风┃影视","type": 1,"api": "https://bfzyapi.com/api.php/provide/vod/?ac=list","playUrl": "","categories": ["国产剧","国产动漫","大陆综艺","港台综艺","香港剧","台湾剧","日本剧","欧美剧","泰国剧","日本动漫","日本综艺","综艺频道","新马泰综艺","纪录片","科幻片","喜剧片","战争片"]},		
 {"key": "可口可乐","name":"🍷┃可乐弟弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
