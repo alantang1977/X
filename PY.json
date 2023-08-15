@@ -19,7 +19,10 @@
 {"key":"csp_bendi","name":"📂本地视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
 {"key":"csp_BBB","name":"🅱┃哔哩演唱会","type":3,"api":"csp_Bili","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/bili.json"},
 {"key":"csp_Bili","name":"🅱┃哔哩合集","type": 3,"api": "csp_Bili","searchable": 1,"quickSearch": 0,"filterable": 1,"ext":"https://ghproxy.com/https://raw.githubusercontent.com/alantang1977/X/main/json/bilibili_2.json"},
-
+{"key":"drpy_js_4KHDR","name":"影视 |♉4KHDR[js] | 磁","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/4khdr.js", "quickSearch":1, "changeable":1},
+{"key":"drpy_js_MP4US","name":"影视 |♉MP4电影[js] | 磁","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/mp4us.js", "quickSearch":1, "changeable":1},
+{"key":"drpy_js_电影港","name":"影视 |♉电影港[js] | 磁","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/dygang.js", "quickSearch":1, "changeable":1},
+{"key":"drpy_js_极影网","name":"影视 |♉极影网[js] | 磁","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/jiyingw.js", "quickSearch":1, "changeable":1},
 ##drpy系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt$$$http://tvfan.xxooo.cf/"},
 {"key":"csp_DuoX","name":"🧸┃玩偶弟弟┃4K","type":3,"api":"csp_DuoX","searchable":1,"quickSearch":1,"filterable":1},
