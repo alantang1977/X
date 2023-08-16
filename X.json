@@ -36,7 +36,8 @@
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
-//{"key": "T4_玩偶","name": "🐬┃玩偶哥哥┃8K","type": 4,"api": "http://120.53.102.254/t4/t4ali","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "ali_cli","name": "🐬┃聚合┃云盘","type": 4,"api": "http://home.jundie.top:9520/ali/cli_Ali?sort=原画,蓝光,超清,高清&token=f420257f7fe74ebcbee3e47ebb5cd465","searchable": 1,"quickSearch": 1,"filterable": 0,"changeable": 0,"ext": "./token0814.txt"},
+//{"key":"csp_woggcli","name":"🐬┃玩偶哥哥┃8K","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=f420257f7fe74ebcbee3e47ebb5cd465","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_woggcli","name":"☣️┃俊哥玩偶┃🛂","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=https://pan.shangui.cc/f/p5RUL/tk.php","searchable":1,"quickSearch":1,"filterable":1}, 
 {"key": "dr_LIBVIO","name":"🎃┃LIBVIO┃8K","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://tv.libvio.cc/"},
