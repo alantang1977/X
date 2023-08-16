@@ -179,7 +179,7 @@
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 
 ##dr_js系列
-{"key":"drpy_js_免费看","name":"🐏┃免费看┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/免费看.js"},
+{"key":"drpy_js_免费看","name":"🐏┃免费看┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/js/免费看.js"},
 {"key":"drpy_js_低端","name":"💫┃低端┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ddys.js"},
 {"key": "dr_69美剧","name":"✨┃69美剧┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/69美剧[V2].js"},
 {"key": "dr_往往","name":"🫖┃往往┃🆚","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/往往影视.js"},
@@ -284,14 +284,14 @@
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider": "http://xhww.fun:63/小米/小暴脾气9.jar;md5;6ad6ecbdd8d8dd440f9824c9b6628cad",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;c548a4b3ea3f603ca651b802c52816a8",
+"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;b3a5a49c793dd82c3fd04e75d3071b20",
 //"spider": "http://xhww.fun:63/小米/0802.jar;md5;538304754b268f733245e29504f03254",  
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
 "lives": [{"name": "電視直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
 {"name": "莱妮丝","type": 0,"url": "http://xn--ihqu10cn4c.xn--z7x900a.love:63/TV/tvzb.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},	
-{"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
+{"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.github.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
 
 
