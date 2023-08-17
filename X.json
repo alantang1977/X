@@ -32,7 +32,10 @@
 {"key":"csp_AList_Alist","name":"🦆┃小鸭┃网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/小鸭.json"},
 {"key":"360_spider","name":"💌┃小雅360┃影视","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key": "360","name":"🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/360.json"},	
-	
+{"key":"nangua","name":"🐈┃libvio┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
+
+
+
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto$$$http://tvfan.xxooo.cf/"},
 {"key":"csp_woggcli","name":"☣️┃俊哥玩偶┃🛂","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=https://pan.shangui.cc/f/p5RUL/tk.php","searchable":1,"quickSearch":1,"filterable":1}, 
