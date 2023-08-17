@@ -41,6 +41,7 @@
 {"key":"nangua","name":"🎃┃南瓜┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/ng_open.js"},
 {"key":"drpy_胖虎","name":"👒┃胖虎┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/js/胖虎.js"},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key":"奇奇","name":"🍓┃奇奇┃影视","type":1,"api":"http://www.csykkj.club/api.php/provide/vod/from/qiqi","playUrl":"json:http://lgg.llwwwll.com:5477/home/api?type=ys&uid=387611&key=ahnrvxyzCDGJKPY137&url=","searchable":1,"quickSearch":1,"categories":["电影","连续剧","综艺","动漫"]},	
 {"key": "野兔资源","name": "🐰┃夜兔┃切片","type": 1, "playerType":1,"api": "http://xn--yetu07f.xn--yetu07f.icu:66/api.php/provide/vod/?ac=list","categories": ["无敌4K资源","电影","动漫动画","国产剧","日韩剧","泰剧","欧美剧","纪录片"],"searchable": 1,"quickSearch": 1},
 {"key": "小鹿","name": "♈┃小鹿┃影视","type": 3,"api": "csp_XBPQ","ext": {"分类":"电影$1#电视剧$31#动漫$4#综艺$3","分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},      
 {"key":"菇菇","name":"🎖️┃菇菇┃影视","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
