@@ -75,7 +75,7 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "虎虎","name": "🐅┃虎虎┃影视","type": 3,"jar": "http://xhww.fun:63/小米/5.jar;md5;c570b052645834a1109b54421c1552f9","api": "csp_XBPQ","ext": "http://xhww.fun:63/小米/源/虎虎.json"},
-{"key": "aikanbot","name": "❤┃爱看机器人┃BOT","type": 3,"api": "https://qu.ax/dmVM.js","searchable": 1,"filterable": 1,"viewType": 1,"quickSearch": 1},
+{"key": "aikanbot","name": "❤┃爱看Robot┃影视","type": 3,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/Robot.js","searchable": 1,"filterable": 1,"viewType": 1,"quickSearch": 1},
 
 
 	
