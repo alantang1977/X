@@ -38,7 +38,7 @@
 {"key":"csp_woggcli","name":"☣️┃俊哥玩偶┃🛂","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=https://pan.shangui.cc/f/p5RUL/tk.php","searchable":1,"quickSearch":1,"filterable":1}, 
 {"key": "dr_LIBVIO","name":"🆔┃LIBVIO┃🆚","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name": "🌽┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.libvio.fun/"},
-{"key":"nangua","name":"🤖┃LIBVIO┃🐈‍⬛","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
+{"key":"nangua","name":"🤖┃LIBVIO┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
 {"key":"nangua","name":"🎃┃南瓜┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/ng_open.js"},
 {"key":"drpy_胖虎","name":"👒┃胖虎┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/js/胖虎.js"},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
@@ -60,7 +60,9 @@
 {"key": "cjzy_暴风资源","name": "♍┃暴风┃影视","type": 1,"api": "https://bfzyapi.com/api.php/provide/vod/?ac=list","playUrl": "","categories": ["国产剧","国产动漫","大陆综艺","港台综艺","香港剧","台湾剧","日本剧","欧美剧","泰国剧","日本动漫","日本综艺","综艺频道","新马泰综艺","纪录片","科幻片","喜剧片","战争片"]},		
 {"key": "可口可乐","name":"♐┃可乐弟┃4K","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://4k.953365.cn:8090/xgapp.php/v3/"},
 {"key":"北极狐","name":"🦊┃北极狐┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.kuin.one/api.php/app/"},
-{"key": "dr_ikanbot","name": "🤖┃爱看机器┃影视","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
+{"key": "dr_ikanbot","name": "🤖┃爱看机器人┃🤖","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
+{"key": "aikanbot","name": "🤖┃爱看机器人┃🤖","type": 3,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/CoHf.js","searchable": 1,"filterable": 1,"style":{ "type":"rect", "ratio":0.8 },"quickSearch": 1},
+  
 {"key": "csp_appys_996","name": "🍻┃玖玖陆┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://dytt996.com/api.php/app/","categories": ["电影", "电视剧", "综艺", "动漫"]},
 {"key": "ity","name": "💓┃爱影视┃4k","type": 3,"api": "csp_XBPQ","playerType":2,"ext": {"数组":"<div class=\"stui-vodlist__box\">&&</div>","副标题":"<span class=\"pic-text text-right\"><b>&&</b></span>","分类":"电影$1#电视剧$2#动漫$4#综艺$3#记录$5#动画片$6","分类url":"https://www.citydy.com/show/id-{cateId}/area/{area}/by/{by}/class/{class}/lang/{lang}/page/{catePg}/year/{year}.html"}},
 { "key": "聚合","name": "🎦┃影视聚合┃解析","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.tvkuys.xyz/api.php/app/"},
@@ -75,8 +77,6 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key": "虎虎","name": "🐅┃虎虎┃影视","type": 3,"jar": "http://xhww.fun:63/小米/5.jar;md5;c570b052645834a1109b54421c1552f9","api": "csp_XBPQ","ext": "http://xhww.fun:63/小米/源/虎虎.json"},
-{"key": "aikanbot","name": "❤┃爱看Robot┃影视","type": 3,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/Robot.js","searchable": 1,"filterable": 1,"viewType": 1,"quickSearch": 1},
-
 
 	
 ##磁力系列
