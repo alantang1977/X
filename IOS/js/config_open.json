@@ -1,7 +1,7 @@
 {
   "video": {
     "sites": [
-      {
+     {
         "key": "kunyu77",
         "name": "🤖超人丨七七",
         "type": 3,
@@ -12,7 +12,7 @@
         "name": "🤖超人丨玩偶",
         "type": 3,
         "api": "assets://js/wogg_open.js",
-        "ext": "dc8f85303c1b444d8666c849082b3c68"
+        "ext": "https://alantang1977.github.io/t.txt"
       },
       {
         "key": "nanguatv",
@@ -20,9 +20,9 @@
         "type": 3,
         "api": "assets://js/ng_open.js"
       },
-       {
+      {
         "key": "libvio",
-        "name": "🤖超人丨libvio",
+        "name": "🤖超人丨libvio_4K",
         "type": 3,
         "api": "assets://js/libvio_open.js"
       },
@@ -62,11 +62,41 @@
           "type": 3,
           "api": "assets://js/subaibai_open.js"
       },
-      {
-        "key": "kuqimv",
-        "name": "🤖超人丨酷奇",
+       {
+        "key": "zxzj",
+        "name": "🤖超人丨 在线之家",
         "type": 3,
-        "api": "assets://js/kuqimv_open.js"
+        "api": "assets://js/zxzj_open.js"
+      },
+      {
+        "key": "0809",
+        "name": "🤖超人丨听歌",
+        "type": 3,
+        "api": "assets://js/dj0898_open.js"
+      },
+     {
+        "key": "tuxiaobei",
+        "name": "🤖超人丨小贝",
+        "type": 3,
+        "api": "assets://js/tuxiaobei_open.js"
+      },
+     {
+        "key": "cntv",
+        "name": "🤖超人丨电视",
+        "type": 3,
+        "api": "assets://js/cntv_open.js"
+      },
+     {
+        "key": "ubestkid",
+        "name": "🤖超人丨乐虎",
+        "type": 3,
+        "api": "assets://js/ubestkid_open.js"
+      },
+       {
+        "key": "boosj",
+        "name": "🤖超人丨童趣",
+        "type": 3,
+        "api": "assets://js/boosj_open.js"
       },
       {
         "key": "mybl",
@@ -75,6 +105,12 @@
         "api": "assets://js/mybili_open.js"
       },
       {
+        "key": "sharenice",
+        "name": "🤖超人丨短视频",
+        "type": 3,
+        "api": "assets://js/sharenice_open.js"
+      },
+       {
         "key": "mtsp_open.",
         "name": "🤖超人丨蜜桃",
         "type": 3,
