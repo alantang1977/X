@@ -301,7 +301,7 @@
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider": "http://xhww.fun:63/小米/小暴脾气9.jar;md5;6ad6ecbdd8d8dd440f9824c9b6628cad",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;de0d7d8b7ef5c0d56aa0051e63aec89f",
+"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;7ea5b0a85d95c5e6220a8cfd126af23d",
 //"spider": "http://xhww.fun:63/小米/0802.jar;md5;538304754b268f733245e29504f03254",  
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
@@ -309,10 +309,6 @@
 "lives": [{"name": "電視直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
 {"name": "莱妮丝","type": 0,"url": "http://xn--ihqu10cn4c.xn--z7x900a.love:63/TV/tvzb.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},	
 {"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.github.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
-
-
-
-
 
 	
 "parses": [
