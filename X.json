@@ -45,7 +45,7 @@
 {"key": "csp_XYQHiker4klg","name":"💅🏻┃玩偶妹妹┃4k","type": 3,"style":{ "type":"rect", "ratio":0.8 },"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/TyM.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},	
 {"key": "dr_LIBVIO","name":"🆔┃LIBVIO┃🆚","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/LIBVIO.js"},
 {"key":"csp_Lib","name":"🙀┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.libvio.fun/"},
-{"key":"nangua","name":"🤖┃LIBVIO┃😽","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
+{"key":"LIBVIO_cat","name":"🤖┃LIBVIO┃😽","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
 {"key":"nangua","name":"🎃┃南瓜┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/ng_open.js"},
 {"key":"drpy_胖虎","name":"👒┃胖虎┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/js/胖虎.js"},
 {"key": "csp_AppMr","name": "👻┃明明┃影视","type": 3,"api": "csp_AppMr","searchable": 1,"quickSearch": 1,"filterable": 1},
