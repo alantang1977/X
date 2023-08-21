@@ -37,19 +37,39 @@ var rule = {
 		tabs:`js:
 pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 TABS=[]
-let d = pdfa(html, 'table.t_table');
-let aliIndex=1;
+let d = pdfa(html, 'table.t_table a');
+let tabsa = [];
+let tabsq = [];
+let tabsm = false;
+let tabse = false;
 d.forEach(function(it) {
 	let burl = pdfh(it, 'a&&href');
-	log("burl >>>>>>" + burl);
 	if (burl.startsWith("https://www.aliyundrive.com/s/")){
-		TABS.push("aliyun"+aliIndex);
-		aliIndex = aliIndex + 1;
+		tabsa.push("阿里云盤");
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		tabsq.push("夸克云盤");
+	}else if (burl.startsWith("magnet")){
+		tabsm = true;
+	}else if (burl.startsWith("ed2k")){
+		tabse = true;
 	}
 });
-d = pdfa(html, 'table.t_table a[href^="magnet"]');
-if (d.length>0){
+let tmpIndex;
+tmpIndex=1;
+tabsa.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+tmpIndex=1;
+tabsq.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+if (tabsm === true){
 	TABS.push("磁力");
+}
+if (tabse === true){
+	TABS.push("電驢");
 }
 log('4khdr TABS >>>>>>>>>>>>>>>>>>' + TABS);
 `,
@@ -57,31 +77,42 @@ log('4khdr TABS >>>>>>>>>>>>>>>>>>' + TABS);
 log(TABS);
 pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 LISTS = [];
-let d = pdfa(html, 'table.t_table');
+let d = pdfa(html, 'table.t_table a');
+let lista = [];
+let listq = [];
+let listm = [];
+let liste = [];
 d.forEach(function(it){
 	let burl = pdfh(it, 'a&&href');
+	let title = pdfh(it, 'a&&Text');
+	log('dygang title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
+	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
+	let loopresult = title + '$' + burl;
 	if (burl.startsWith("https://www.aliyundrive.com/s/")){
-		let title = pdfh(it, 'a&&Text');
-		log('title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
 		burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
-		log('burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
-		let loopresult = title + '$' + burl;
-		LISTS.push([loopresult]);
+		loopresult = title + '$' + burl;
+		lista.push(loopresult);
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		loopresult = title + '$' + burl;
+		listq.push(loopresult);
+	}else if (burl.startsWith("magnet")){
+		listm.push(loopresult);
+	}else if (burl.startsWith("ed2k")){
+		liste.push(loopresult);
 	}
 });
-let listm = [];
-d.forEach(function(it){
-	let burl = pdfh(it, 'a&&href');
-	if (burl.startsWith("magnet")){
-		let title = pdfh(it, 'a&&Text');
-		log('title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
-		log('burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
-		let loopresult = title + '$' + burl;
-		listm.push(loopresult);
-	}
+lista.forEach(function(it){
+	LISTS.push([it]);
+});
+listq.forEach(function(it){
+	LISTS.push([it]);
 });
 if (listm.length>0){
 	LISTS.push(listm);
+}
+if (liste.length>0){
+	LISTS.push(liste);
 }
 `,
 

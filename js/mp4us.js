@@ -37,12 +37,38 @@ var rule = {
 		tabs:`js:
 pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 TABS=[]
-let d = pdfa(html, 'ul.down-list&&li a[href^="magnet"]');
-if (d.length > 0){
+let d = pdfa(html, 'ul.down-list&&li a');
+let tabsa = [];
+let tabsq = [];
+let tabsm = false;
+let tabse = false;
+d.forEach(function(it) {
+	let burl = pdfh(it, 'a&&href');
+	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+		tabsa.push("阿里云盤");
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		tabsq.push("夸克云盤");
+	}else if (burl.startsWith("magnet")){
+		tabsm = true;
+	}else if (burl.startsWith("ed2k")){
+		tabse = true;
+	}
+});
+let tmpIndex;
+tmpIndex=1;
+tabsa.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+tmpIndex=1;
+tabsq.forEach(function(it){
+	TABS.push(it + tmpIndex);
+	tmpIndex = tmpIndex + 1;
+});
+if (tabsm === true){
 	TABS.push("磁力");
 }
-d = pdfa(html, 'ul.down-list&&li a[href^="ed2k"]');
-if (d.length > 0){
+if (tabse === true){
 	TABS.push("電驢");
 }
 log('mp4us TABS >>>>>>>>>>>>>>>>>>' + TABS);
@@ -51,20 +77,36 @@ log('mp4us TABS >>>>>>>>>>>>>>>>>>' + TABS);
 log(TABS);
 pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
 LISTS = [];
-let d = pdfa(html, 'ul.down-list&&li');
+let d = pdfa(html, 'ul.down-list&&li a');
+let lista = [];
+let listq = [];
 let listm = [];
 let liste = [];
 d.forEach(function(it){
 	let burl = pdfh(it, 'a&&href');
 	let title = pdfh(it, 'a&&Text');
-	log('mp4us title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
-	log('mp4us burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
+	log('dygang title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
+	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
-	if (burl.startsWith("magnet")){
+	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+		burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
+		loopresult = title + '$' + burl;
+		lista.push(loopresult);
+	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		loopresult = title + '$' + burl;
+		listq.push(loopresult);
+	}else if (burl.startsWith("magnet")){
 		listm.push(loopresult);
 	}else if (burl.startsWith("ed2k")){
 		liste.push(loopresult);
 	}
+});
+lista.forEach(function(it){
+	LISTS.push([it]);
+});
+listq.forEach(function(it){
+	LISTS.push([it]);
 });
 if (listm.length>0){
 	LISTS.push(listm.reverse());
