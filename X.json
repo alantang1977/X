@@ -33,7 +33,18 @@
 {"key": "360","name":"🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/360.json"},	
 {"key": "lf_js_ikanbot","name": "🦌┃路飞点播┃🛩️","type": 3,"searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/lf_ikanbot5_min.js"},
 {"key":"专线","name":"🚅┃多线┃影视","type": 3,"api": "csp_ZhuanX","searchable": 1,"quickSearch": 1,"changeable":1,"ext": "http://cms.maoyingshi.cc/api.php/app/"},
-
+{
+      "key": "bbcli",
+      "name": " b站〔cli〕",
+      "type": 4,
+      "api": "http://home.jundie.top:9520/spider/cli_Bili?sort=dash,mp4",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1,
+      "playerType": 2,
+      "viewType": 1,
+      "ext": 可随便填其他任意b站的ext配置内容都可兼容
+    },
 
 
 
