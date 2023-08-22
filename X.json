@@ -43,7 +43,7 @@
       "filterable": 1,
       "playerType": 2,
       "viewType": 1,
-      "ext": 可随便填其他任意b站的ext配置内容都可兼容
+      "ext": {"分类": "电影$1#电视剧$2#综艺$3#国创$4","
     },
 
 
