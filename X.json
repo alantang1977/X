@@ -76,6 +76,7 @@
 {"key": "BQ","name": "️♨️┃八千┃影视","type": 3,"api": "csp_AppYsV2","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://154.31.2.112:8869/mogai_api.php/v1.vod"},
 {"key": "csp_mdd","name": "🥚┃蛋蛋妹妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://app.mengdandan.com/xgapp.php/v1/"},
 //{"key":"探探","name":"🛩️┃侦探影视┃4K","type":3,"api":"csp_YT","searchable":1,"quickSearch":1,"filterable":1},
+{"key": "探探","name": "🛩️┃侦探影视┃4K","type": 3,"playerType": "1","api": "csp_YTVIP","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "vvvwvwvvwwvwvvvwvvwwvvvwwwwvvvvwvvvwwvvvwwwvvwvwvvwvvvvw.lyyytv.cn"},
 {"key":"csp_fantuan","name":"🍙┃饭团┃影视","type":3,"api":"csp_Fantuan","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.fantuan3.com"},
 {"key": "ok","name": "🍃┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/free.json"}, 
 {"key":"csp_Vofl","name":"♒┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
