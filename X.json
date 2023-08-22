@@ -124,6 +124,7 @@
 //{"key":"dr_爱壹帆","name":"⛵┃爱壹帆┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/爱壹帆[飞].js"},
 {"key":"csp_Nbys","name":"🛫┃泥巴┃墙外","type":3,"api":"csp_NiNi","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "Nbys","name": "🛫┃蜂蜜新泥巴┃墙外","type":3,"api":"csp_NiNi","searchable": 1,"viewType": 1,"changeable": 1,"jar": "https://qu.ax/XTuU.jpg"},
+{"key": "星星","name": "🛫┃星星┃墙外","type": 3,"api": "csp_Star","searchable": 1,"changeable": 1},	
 {"key":"csp_trj","name": "🛫┃唐人街┃墙外","type": 3,"api": "csp_Tangrenjie","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "csp_If101","name": "🛫┃If10 ┃墙外","type": 3,"api": "csp_If101","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "csp_Xiaoh","name": "🛫┃小宝┃墙外","type": 3,"api": "csp_Xiaoh","searchable": 1,"quickSearch": 1,"filterable": 1},
