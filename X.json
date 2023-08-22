@@ -311,10 +311,13 @@
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
 "lives": [{"name": "電視直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
+{"group": "redirect","channels": [{"name": "live","epg": "https://epg.112114.xyz/?ch={name}&date={date}","urls": ["proxy://do=live&type=txt&ext=http://home.jundie.top:81/ray/tvlive.txt"]}]},	
 {"name": "莱妮丝","type": 0,"url": "http://xn--ihqu10cn4c.xn--z7x900a.love:63/TV/tvzb.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},	
-{"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.github.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
-{"name": "live","epg": "https://epg.112114.xyz/?ch={name}&date={date}",//"urls": ["proxy://do=live&type=txt&ext=aHR0cDovLzl4aTRvLnRrL09uZUNsaWNrUnVuL2xpdmUudHh0"]//"urls": ["proxy://do=live&type=txt&ext=https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt"]//"urls": ["proxy://do=live&type=txt&ext=http://dlq.gmqd.com/upload/20220921115985878587.txt"]"urls": ["proxy://do=live&type=txt&ext=http://home.jundie.top:81/ray/tvlive.txt"]}]}],
-	
+{"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.github.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
+
+
+
+
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
 //{"name":"自动并发","type": 2,"url": "Parallel"},
