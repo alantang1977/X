@@ -107,7 +107,7 @@
 {"key":"4KHDR","name":"💾┃4KHDR┃♉磁力","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key":"csp_Mp4Mov","name":"💾┃MP4电影┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_SeedHub","name":"💾┃SeedHub┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_SeedHub","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
-{"key":"轻简","name":"轻简","api":"csp_AppYsV2","type":3,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://mdy.ahailove.cn/api.php/app/","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},	
+{"key":"轻简","name":"🐸┃轻简┃影视","api":"csp_AppYsV2","type":3,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://mdy.ahailove.cn/api.php/app/","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},	
 	  
 ##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布雷影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光[V2].jsd"},
