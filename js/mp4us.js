@@ -54,6 +54,12 @@ d.forEach(function(it) {
 		tabse = true;
 	}
 });
+if (tabsm === true){
+	TABS.push("磁力");
+}
+if (tabse === true){
+	TABS.push("電驢");
+}
 let tmpIndex;
 tmpIndex=1;
 tabsa.forEach(function(it){
@@ -65,12 +71,6 @@ tabsq.forEach(function(it){
 	TABS.push(it + tmpIndex);
 	tmpIndex = tmpIndex + 1;
 });
-if (tabsm === true){
-	TABS.push("磁力");
-}
-if (tabse === true){
-	TABS.push("電驢");
-}
 log('mp4us TABS >>>>>>>>>>>>>>>>>>' + TABS);
 `,
 		lists:`js:
@@ -89,11 +89,19 @@ d.forEach(function(it){
 	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
 	if (burl.startsWith("https://www.aliyundrive.com/s/")){
-		burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
+		if (TABS.length==1){
+			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
+		}else{
+			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
+		}
 		loopresult = title + '$' + burl;
 		lista.push(loopresult);
 	}else if (burl.startsWith("https://pan.quark.cn/s/")){
-		burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		if (TABS.length==1){
+			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&confirm=0&url=" + encodeURIComponent(burl);
+		}else{
+			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		}
 		loopresult = title + '$' + burl;
 		listq.push(loopresult);
 	}else if (burl.startsWith("magnet")){
@@ -102,18 +110,18 @@ d.forEach(function(it){
 		liste.push(loopresult);
 	}
 });
-lista.forEach(function(it){
-	LISTS.push([it]);
-});
-listq.forEach(function(it){
-	LISTS.push([it]);
-});
 if (listm.length>0){
 	LISTS.push(listm.reverse());
 }
 if (liste.length>0){
 	LISTS.push(liste.reverse());
 }
+lista.forEach(function(it){
+	LISTS.push([it]);
+});
+listq.forEach(function(it){
+	LISTS.push([it]);
+});
 `,
 
 	},
