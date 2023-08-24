@@ -3,28 +3,52 @@
     "sites": [
      {
         "key": "kunyu77",
-        "name": "🤖超人丨七七",
+        "name": "🤖超人丨七七姐姐",
         "type": 3,
         "api": "assets://js/kunyu77_open.js"
       },
        {
         "key": "wogg",
-        "name": "🤖超人丨玩偶",
+        "name": "🤖超人丨玩偶哥哥",
         "type": 3,
         "api": "assets://js/wogg_open.js",
         "ext": "https://alantang1977.github.io/t.txt"
       },
       {
         "key": "nanguatv",
-        "name": "🤖超人丨南瓜影视",
+        "name": "🤖超人丨南瓜妹妹",
         "type": 3,
         "api": "assets://js/ng_open.js"
       },
       {
         "key": "libvio",
-        "name": "🤖超人丨libvio_4K",
+        "name": "🤖超人丨libvio弟弟",
         "type": 3,
         "api": "assets://js/libvio_open.js"
+      },
+       {
+        "key": "ikanbot",
+        "name": "🤖超人丨爱看大叔",
+        "type": 3,
+        "api": "assets://js/ikanbot_open.js"
+      },
+      {
+        "key": "kkys",
+        "name": "🤖超人丨快看帅哥",
+        "type": 3,
+        "api": "assets://js/kkys_open.js"
+      },
+      {
+          "key": "subaibai",
+          "name": "🤖超人丨素白白姐姐",
+          "type": 3,
+          "api": "assets://js/subaibai_open.js"
+      },
+       {
+        "key": "zxzj",
+        "name": "🤖超人丨 在线之家",
+        "type": 3,
+        "api": "assets://js/zxzj_open.js"
       },
        {
         "key": "czzy",
@@ -43,36 +67,6 @@
         "name": "🤖超人丨🔢厂长",
         "type": 3,
         "api": "assets://js/czzy3_open.js"
-      },
-       {
-        "key": "ikanbot",
-        "name": "🤖超人丨爱看",
-        "type": 3,
-        "api": "assets://js/ikanbot_open.js"
-      },
-      {
-        "key": "kkys",
-        "name": "🤖超人丨快看",
-        "type": 3,
-        "api": "assets://js/kkys_open.js"
-      },
-      {
-          "key": "subaibai",
-          "name": "🤖超人丨素白白",
-          "type": 3,
-          "api": "assets://js/subaibai_open.js"
-      },
-       {
-        "key": "zxzj",
-        "name": "🤖超人丨 在线之家",
-        "type": 3,
-        "api": "assets://js/zxzj_open.js"
-      },
-      {
-        "key": "0809",
-        "name": "🤖超人丨听歌",
-        "type": 3,
-        "api": "assets://js/dj0898_open.js"
       },
      {
         "key": "tuxiaobei",
@@ -110,12 +104,6 @@
         "type": 3,
         "api": "assets://js/sharenice_open.js"
       },
-       {
-        "key": "mtsp_open.",
-        "name": "🤖超人丨蜜桃",
-        "type": 3,
-        "api": "assets://js/mtsp_open.js"
-       },
        { 
         "key": "nivod", 
         "name": "🤖超人丨泥巴✈", 
@@ -136,11 +124,23 @@
         "api": "assets://js/230ts_open.js"
       },
       {
-        "key": "18av",
-        "name": "🤖超人丨仙女",
+        "key": "0809",
+        "name": "🤖超人丨听歌",
         "type": 3,
-        "api": "assets://js/18a_open.js"
+        "api": "assets://js/dj0898_open.js"
       },
+      {
+        "key": "18av",
+        "name": "🤖超人丨小仙女",
+        "type": 3,
+        "api": "assets://js/18av_open.js"
+      },
+      {
+        "key": "mtsp_open.",
+        "name": "🤖超人丨蜜桃",
+        "type": 3,
+        "api": "assets://js/mtsp_open.js"
+       },
       {
         "key": "xiaoya-tv",
         "name": "🤖超人丨小雅",
