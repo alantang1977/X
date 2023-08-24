@@ -57,7 +57,7 @@
 //{"key": "蘑菇","name": "♋┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
 //{"key": "蘑菇2","name": "️🍄┃蘑菇姐妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.moguys.xyz/api.php/app/"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
-//{"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_Kuying","searchable":1,"quickSearch":1,"changeable":1},
+{"key":"酷酷","name":"💡酷酷┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://ys.realdou.cn:2683/api.php/app/"},
 //{"key":"露露","name":"♌┃露露┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://154.204.178.161:67/api.php/app/"},
 {"key":"csp_Nmys","name":"🌾┃农民┃影视","type":3,"api":"csp_Nmys","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/农民.json"},
 //{"key": "csp_TT","name": "🕵️‍♀️┃影探┃4K","type": 3,"api": "csp_YT","searchable": 1,"quickSearch": 1,"changeable": 1},
