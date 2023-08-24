@@ -51,7 +51,7 @@
 {"key": "小鹿","name": "♈┃小鹿┃影视","type": 3,"api": "csp_XBPQ","ext": {"分类":"电影$1#电视剧$31#动漫$4#综艺$3","分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},      
 //{"key":"菇菇","name":"🌽┃菇菇┃影视","type":3,"api":"csp_MmYs","searchable":1,"quickSearch":1,"changeable":0},
 //{"key":"米米","name":"🍓┃莓莓┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://22222.yiyingys.asia/api.php/app/"},
-{"key":"哈喽","name":"✌┃哈喽┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://guan.yy365.vip/api.php/app/"},
+{"key":"蘑菇","name":"🍄┃蘑菇┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://guan.yy365.vip/api.php/app/"},
 {"key":"彩虹","name":"🌈┃彩虹┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://jh.dytt996.com:996/api.php/app/"},
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
 //{"key": "蘑菇","name": "♋┃陌陌姐姐┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gvideo.me/api.php/app/"},
