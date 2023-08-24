@@ -348,6 +348,7 @@
 {"name":"🐈party3（多多）","type": 1,"url": "http://json.xg688.top/api/?key=Y1etBkWn5hetOHJwF1&url="},
 {"name":"🕢party3（多多）","type": 0,"url": "https://jx.777jiexi.com/player/?url="},
 {"name": "✌️夜曲","type": 1,"url": "http://xhww.fun:63/小米特别爱肥猫.php?url=","ext": {"flag": ["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header": {"User-Agent": "okhttp/3.12.0"}}},
+{"name": "玉米","type": 1,"url": "http://42.157.128.109:2323/CH/zy/Yumi.php?url=","ext": {"flag": ["YuMi-vip"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "鱼厂1","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2384&my=bcijquvxAFKMUY0579&format=json&url="},
 {"name": "鱼厂2","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2255&my=eknpqvADFHOPR02458&format=json&url="},
 {"name": "鱼厂3","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2100&my=ehilmnqyCDGHILNUXZ&mgtv=app&url="},
