@@ -48,7 +48,7 @@
 {"key":"彩虹","name":"🌈┃彩虹┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://jh.dytt996.com:996/api.php/app/"},
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"playerType":"1","api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
-{"key":"酷酷","name":"💡酷酷┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://ys.realdou.cn:2683/api.php/app/"},
+{"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://ys.realdou.cn:2683/api.php/app/"},
 {"key":"csp_AList_Alist","name":"🦆┃小鸭┃网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/小鸭.json"},
 {"key":"360_spider","name":"💌┃小雅360┃影视","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key": "360","name":"🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/360.json"},	
