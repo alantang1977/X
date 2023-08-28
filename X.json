@@ -88,7 +88,6 @@
 {"key":"drpy_js_kkpans","name":"🧲┃酷酷盘┃🧲","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/kkpans.js", "quickSearch":1, "changeable":1,"timeout":60000},
 {"key":"drpy_js_爱盘搜","name":"🧲┃爱盘搜┃🧲","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_趣盘搜","name":"🧲┃趣盘搜┃🧲","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/funletu.js", "quickSearch":1, "changeable":1, "timeout":30},
-
 {"key":"jiyingw","name":"💾┃极影吧┃♉磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/极影网.js"},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_New6v","name":"💾┃NEW6V┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
@@ -123,7 +122,7 @@
 {"key": "csp_If101","name": "🛫┃If10 ┃墙外","type": 3,"api": "csp_If101","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"drpy_KUBO","name":"🛫┃KUBO┃墙外┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/ixinshang/dr_py/raw/branch/master/js/KUBO影视[飞].js"},
 {"key":"drpy_555","name":"🛫┃555┃墙外┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/ixinshang/dr_py/raw/branch/master/js/555影视[飞].js"},
-{"key": "csp_Xiaoh","name": "🛫┃小宝┃墙外","type": 3,"api": "csp_Xiaoh","searchable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "csp_Xiaoh","name": "🛫┃小宝墙外┃🆚","type": 3,"api": "csp_Xiaoh","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"drpy_hh","name":"🛫┃吼吼┃墙外┃🆚","type":3,"api":"https://agit.ai/Yemaozhi123/yemao/raw/branch/master/lib/drpy2.min.js","ext":"https://download.kstore.space/download/3313/js/HoHo影视.js"},
 {"key":"drpy_od","name":"🛫┃欧帝┃墙外┃🆚","type":3,"api":"https://agit.ai/Yemaozhi123/yemao/raw/branch/master/lib/drpy2.min.js","ext":"https://download.kstore.space/download/3313/js/欧帝影院.js"},
 {"key":"drpy_欧乐","name":"🛫┃欧乐┃墙外┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/ixinshang/dr_py/raw/branch/master/js/欧乐影院[飞].js"},
