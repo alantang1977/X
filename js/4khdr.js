@@ -60,6 +60,9 @@ if (tabsm === true){
 if (tabse === true){
 	TABS.push("電驢");
 }
+if (tabsa.length + tabsq.length > 1){
+	TABS.push("選擇右側綫路");
+}
 let tmpIndex;
 tmpIndex=1;
 tabsa.forEach(function(it){
@@ -89,18 +92,26 @@ d.forEach(function(it){
 	log('4khdr burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
 	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+		if (false){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
 		}else{
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
 		}
+		}else{
+			burl = 'push://' + burl;
+		}
 		loopresult = title + '$' + burl;
 		lista.push(loopresult);
 	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		if (false){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&confirm=0&url=" + encodeURIComponent(burl);
 		}else{
 			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
+		}
+		}else{
+			burl = 'push://' + burl;
 		}
 		loopresult = title + '$' + burl;
 		listq.push(loopresult);
@@ -115,6 +126,9 @@ if (listm.length>0){
 }
 if (liste.length>0){
 	LISTS.push(liste);
+}
+if (lista.length + listq.length > 1){
+	LISTS.push(["選擇右側綫路，或3秒後自動跳過$http://127.0.0.1:10079/delay/"]);
 }
 lista.forEach(function(it){
 	LISTS.push([it]);
@@ -137,7 +151,7 @@ let new_host= HOST + '/search.php';
 let new_html=request(new_host);
 let formhash = pdfh(new_html, 'input[name="formhash"]&&value');
 log("4khdr formhash>>>>>>>>>>>>>>>" + formhash);
-let params = 'formhash=' + formhash + '&searchsubmit=yes&srchtxt=' + KEY;
+let params = 'formhash=' + formhash + '&searchsubmit=yes&srchtxt=' + encodeURIComponent(KEY);
 let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
 let postData = {
     body: params
