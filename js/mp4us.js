@@ -60,6 +60,9 @@ if (tabsm === true){
 if (tabse === true){
 	TABS.push("電驢");
 }
+if (tabsa.length + tabsq.length > 1){
+	TABS.push("選擇右側綫路");
+}
 let tmpIndex;
 tmpIndex=1;
 tabsa.forEach(function(it){
@@ -89,19 +92,27 @@ d.forEach(function(it){
 	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
 	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+		if (false){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
 		}else{
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&url=" + encodeURIComponent(burl);
 		}
+		}else{
+			burl = "push://" + burl;
+		}
 		loopresult = title + '$' + burl;
 		lista.push(loopresult);
 	}else if (burl.startsWith("https://pan.quark.cn/s/")){
+		if (false){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&confirm=0&url=" + encodeURIComponent(burl);
 		}else{
 			burl = "http://127.0.0.1:9978/proxy?do=quark&type=push&url=" + encodeURIComponent(burl);
 		}
+		}else{
+                        burl = "push://" + burl;
+                }
 		loopresult = title + '$' + burl;
 		listq.push(loopresult);
 	}else if (burl.startsWith("magnet")){
@@ -115,6 +126,9 @@ if (listm.length>0){
 }
 if (liste.length>0){
 	LISTS.push(liste.reverse());
+}
+if (lista.length + listq.length > 1){
+	LISTS.push(["選擇右側綫路，或3秒後自動跳過$http://127.0.0.1:10079/delay/"]);
 }
 lista.forEach(function(it){
 	LISTS.push([it]);
@@ -135,7 +149,7 @@ if (rule_fetch_params.headers.Cookie.startsWith("http")){
 log('mp4us seach cookie>>>>>>>>>>>>>' + rule_fetch_params.headers.Cookie);
 let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
 //log("mp4us search params>>>>>>>>>>>>>>>" + JSON.stringify(_fetch_params));
-let search_html = request( HOST + '/search/' + KEY + '-1.html', _fetch_params)
+let search_html = request( HOST + '/search/' + encodeURIComponent(KEY) + '-1.html', _fetch_params)
 //log("mp4us search result>>>>>>>>>>>>>>>" + search_html);
 let d=[];
 //'div#list_all li;img.lazy&&alt;img.lazy&&src;div.text_info h2&&Text;a&&href;p.info&&Text',
