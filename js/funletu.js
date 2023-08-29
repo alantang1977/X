@@ -64,19 +64,21 @@ let _fetch_params = JSON.parse(JSON.stringify(rule_fetch_params));
 Object.assign(_fetch_params, postData);
 log("funletu search postData>>>>>>>>>>>>>>>" + JSON.stringify(_fetch_params));
 let new_html=post(rule.homeUrl + 'search', _fetch_params);
-log("funletu search result>>>>>>>>>>>>>>>" + new_html);
+//log("funletu search result>>>>>>>>>>>>>>>" + new_html);
 let json=JSON.parse(new_html);
 let d=[]
 for(const it in json["data"]){
 	if (json.data.hasOwnProperty(it)){
 		log("funletu search it>>>>>>>>>>>>>>>" + JSON.stringify(json.data[it]));
-		d.push({
-			title:json.data[it].title,
-			img:'',
-			content:json.data[it].updatetime,
-			desc:json.data[it].updatetime,
-			url:'push://'+json.data[it].url.split("?")[0]
-			});
+		if (json.data[it].valid === 0){		
+			d.push({
+				title:json.data[it].title,
+				img:'',
+				content:json.data[it].updatetime,
+				desc:json.data[it].updatetime,
+				url:'push://'+json.data[it].url.split("?")[0]
+				});
+		}
 	}
 }
 setResult(d);
