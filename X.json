@@ -194,6 +194,7 @@
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 
 ##dr_js系列
+{"key":"drpy_js_海兔影院","name":"🐰┃海兔影院┃🆚","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/海兔影院.js"},
 {"key":"drpy_js_免费看","name":"🐏┃免费看┃🆚","type":3,"viewType": 1,"api":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.com/https://raw.github.com/hjdhnx/dr_py/main/js/免费看.js"},
 {"key":"drpy_js_低端","name":"💫┃低端┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ddys.js"},
 {"key": "dr_69美剧","name":"✨┃69美剧┃🆚","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/69美剧[V2].js"},
