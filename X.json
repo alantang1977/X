@@ -30,7 +30,14 @@
 //{"key": "dr_好趣网","name":"📺┃电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 {"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "骑骑","name": "🚵┃骐骐┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
-
+{
+       "key":"星影1080cms",
+       "name":"星影1080 | APP",
+       "type":1,
+       "api":"https://www.xy1080.net/api.php/provide/vod",
+       "searchable":1,
+       "quickSearch":1
+    },
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://tvfan.xxooo.cf/"},
