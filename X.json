@@ -30,6 +30,7 @@
 {"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "骑骑影院","name": "🚵┃骑骑┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
 {"key":"新6V","name":"🔫┃新陆威┃磁力","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"changeable":0,"ext": "http://www.xb6v.com/"},
+{"key":"csp_Hdhive","name":"Hdhive","type":3,"api":"csp_Hdhive","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.json" , "timeout":30},
 
 	
 ##csp系列
@@ -84,10 +85,10 @@
 {"key": "dr_vidhub","name":"🍬┃VIDHUB┃🆚","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/vidhub.js"},
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
-{"key":"drpy_js_校长影视","name":"🦣┃校长影视┃🎏","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/xzys.js", "quickSearch":1, "changeable":1, "timeout":30}, 
 	
 ##磁力系列
 {"key":"drpy_js_团长资源","name":"🧲┃团长资源┃🧲","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/tzfile.js", "quickSearch":1, "changeable":1, "timeout":30},
+{"key":"drpy_js_校长影视","name":"🧲┃校长资源┃🧲","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/xzys.js", "quickSearch":1, "changeable":1, "timeout":30}, 
 {"key":"drpy_js_dydhhy","name":"🧲┃DYDHHY┃🧲","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_yyets","name":"🧲┃人人影视┃🧲","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_NEW6V","name":"🧲┃NEW6V┃🧲","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/xb6v.js","playerType":"1", "searchable":1, "quickSearch":1, "changeable":1},
