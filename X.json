@@ -54,8 +54,6 @@
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
 {"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://ys.realdou.cn:2683/api.php/app/"},
 {"key": "js_悠米","name": "🎉‍┃悠米多多┃搜视","type": 3,"api": "https://jihulab.com/duomv/duox/-/raw/main/js/drpymin2.js","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/duomv/duox/-/raw/main/js/youmi.js"},
-//{"key":"4KHDR","name":"🌍┃世界磁力┃慎用","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/fantaiying/fty/raw/branch/master/JS/drpy1.min.js","ext":"https://agit.ai/fantaiying/fty/raw/branch/master/JS/js/4khdr.js"},
-//{"key":"新6V","name":"🆙┃新6V磁力┃慎用","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"changeable":0,"ext": "http://www.xb6v.com/"},
 
 
 ##官源系列
@@ -86,13 +84,13 @@
 {"key": "dr_ikanbot","name": "🤖┃爱看机器人┃🤖","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/ikanbot3.js"},
 {"key": "csp_appys_996","name": "🍻┃玖玖陆┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://dytt996.com/api.php/app/","categories": ["电影", "电视剧", "综艺", "动漫"]},
 { "key": "聚合","name": "🎦┃影视聚合┃解析","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.tvkuys.xyz/api.php/app/"},
-{"key": "BQ","name": "️♨️┃八千┃影视","type": 3,"api": "csp_AppYsV2","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://154.31.2.112:8869/mogai_api.php/v1.vod"},
+//{"key": "BQ","name": "️♨️┃八千┃影视","type": 3,"api": "csp_AppYsV2","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;6e12873c628020196fe9400d1ef51f1c","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://154.31.2.112:8869/mogai_api.php/v1.vod"},
 {"key": "csp_mdd","name": "🥚┃蛋蛋妹妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://app.mengdandan.com/xgapp.php/v1/"},
 {"key":"探探","name":"🛩️┃侦探影视┃4K","type":3,"playerType":"1","api":"csp_YTVIP","searchable":1,"quickSearch":1,"changeable":1,"ext":"vip.lyyytv.cn"},
 {"key":"csp_fantuan","name":"🍙┃饭团┃影视","type":3,"api":"csp_Fantuan","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.fantuan3.com"},
 {"key": "ok","name": "🍃┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/free.json"}, 
 {"key":"csp_Vofl","name":"♒┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
-{"key": "dr_vidhub","name":"🍬┃VIDHUB┃🆚","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/vidhub.js"},
+{"key": "dr_vidhub","name":"🍬┃VIDHUB┃🆚","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/vidhub.jsd"},
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/Vidhub.json"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key":"csp_XYQHikerAL","name":"🧸┃玩偶弟弟┃4k","type":3,"style":{ "type":"rect", "ratio":0.8 },"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/VdgO.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
