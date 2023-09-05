@@ -117,6 +117,8 @@
 {"key":"drpy_js_校长影视","name":"🦌┃校长影视┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/xzys.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_愛盤搜","name":"🦌┃爱盘搜┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_趣盤搜","name":"🦌┃趣盘搜┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/funletu.js", "quickSearch":1, "changeable":1, "timeout":30},{"key":"jiyingw","name":"💾┃极影吧┃♉磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/极影网.js"},
+{"token":"32bytestoken","open_token":"280bytestoken","thread_limit":32,"vod_flags":"4k|4kz|auto","aliproxy":"http://192.168.101.1:10078","proxy":"","open_api_url":"https://api.xhofe.top/alist/ali_open/","quark_cookie":"quark cookie from quark webpage"},
+
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_New6v","name":"💾┃NEW6V┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://www.66ss.org"},
 {"key":"csp_KubaCL","name":"💾┃酷吧堂┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_KubaCL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
@@ -308,10 +310,10 @@
 
 //"wallpaper": "http://img.fongmi.eu.org",
 "wallpaper": "https://jianbian.chuqiuyu.tk/",
-//"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431",
+"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431",
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;4d1c769684cc9b85f8adf54f8b43abb6",
+//"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;4d1c769684cc9b85f8adf54f8b43abb6",
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
