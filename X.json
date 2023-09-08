@@ -30,24 +30,6 @@
 //{"key": "dr_好趣网","name":"📺┃电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 {"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "骑骑","name": "🚵┃骐骐┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
-{
-      "key": "野兔资源",
-      "name": "🐰野兔4K",
-      "type": 1,
-      "api": "http://xn--yetu07f.xn--yetu07f.icu:66/api.php/provide/vod/?ac=list",
-      "categories": [
-        "无敌4K资源",
-        "电影",
-        "动漫动画",
-        "国产剧",
-        "日韩剧",
-        "泰剧",
-        "欧美剧",
-        "纪录片"
-      ],
-      "searchable": 1,
-      "quickSearch": 1
-    },
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://tvfan.xxooo.cf/"},
@@ -56,8 +38,6 @@
 {"key": "csp_365影视","name": "🦛┃365┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1, "quickSearch": 1,"filterable": 1,"ext": "http://guan.yy365.vip/api.php/app/"},
 //{"key": "大鹏","name": "🦅┃大鹏┃4K","type": 3, "playerType": 1,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://s.ether-mine.com/api.php/app/"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
-
-	
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
 {"key":"率率","name":"🦢┃帅帅┃影视","type":3,"api":"csp_AppYsV2","playerType":1,"searchable": 1, "quickSearch": 1, "changeable":1, "ext": "http://s.ether-mine.com/api.php/app/"},
 {"key":"星影1080cms","name":"👽┃星影┃影视","type":1,"api":"https://www.xy1080.net/api.php/provide/vod","searchable":1,"quickSearch":1},
