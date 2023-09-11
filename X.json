@@ -119,6 +119,7 @@
 {"key":"drpy_js_愛盤搜","name":"🌹┃爱盘搜┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_趣盤搜","name":"🌹┃趣盘搜┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/funletu.js", "quickSearch":1, "changeable":1, "timeout":30},
 {"key":"drpy_js_奇妙搜","name":"🌹┃奇妙搜┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
+{"key":"drpy_js_rrdyw","name":"🌹┃Rrdyw┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":30}, 
 
 {"key":"jiyingw","name":"💾┃极影吧┃♉磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/极影网.js"},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
