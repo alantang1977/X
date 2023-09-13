@@ -57,7 +57,7 @@
 {"key": "js_悠米","name": "🎉‍┃悠米多多┃搜视","type": 3,"api": "https://jihulab.com/duomv/duox/-/raw/main/js/drpymin2.js","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/duomv/duox/-/raw/main/js/youmi.js"},
 {"key":"哈喽","name":"✌┃哈喽┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://www.miniku.cc/xgapp.php/v1/"},
 {"key":"陌陌","name":"🍄┃陌陌┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.kuin.one/api.php/app/"},
-{"key":"奇奇","name":"🍓┃奇奇┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://mp4.ghlyys.com/api.php/app/"},
+
 {"key":"DiDuan","name":"⏮️┃低端┃直连","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"changeable":1},
 
 
