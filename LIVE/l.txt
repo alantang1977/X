@@ -132,7 +132,10 @@ CGTN阿语,http://news.cgtn.com/resource/live/arabic/cgtn-a.m3u8
 
 
 🐼丨卫视频道,#genre#
-
+浙江卫视,http://cyz32.livehbindex.hbcatv.cn/live/5000002045414da0bcca7fb08fd34c8a.m3u8?bitrate=2300&pt=5
+湖南卫视,http://cyz32.livehbindex.hbcatv.cn/live/50000020c9ea4ce4bf3cfbbb7f8b8bb7.m3u8?bitrate=2300&pt=5
+江苏卫视,http://cyz32.livehbindex.hbcatv.cn/live/500000201708473e9f4e1dbb0361de6b.m3u8?bitrate=2300&pt=5
+东方卫视,http://cyz32.livehbindex.hbcatv.cn/live/500000203860417eb7f08f9270fc1155.m3u8?bitrate=2300&pt=5
 江苏卫视,https://live.goodiptv.club/api/bestv.php?id=jswshd8m/8000000
 广西卫视,https://live.goodiptv.club/api/bestv.php?id=gxwshd8m/8000000
 四川卫视,https://live.goodiptv.club/api/bestv.php?id=scwshd/8000000
