@@ -554,7 +554,23 @@ CGTN阿语,http://news.cgtn.com/resource/live/arabic/cgtn-a.m3u8
 
 
 🐼丨港澳台　,#genre#
-
+翡翠台,http://r.jdshipin.com/qClQf
+明珠台,http://r.jdshipin.com/ZQ4kN
+凤凰中文台,http://pi.0472.org/tv/cbn.php?id=xfjcHD
+凤凰中文台,http://r.jdshipin.com/cCCzW
+凤凰资讯台,http://r.jdshipin.com/0Rp07
+凤凰资讯台,http://kkwk1122.top/fh.php?id=fhzx
+凤凰中文台,http://kkwk1122.top/fh.php?id=fhzw
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
+RTHK32,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream2/streamPlaylist.m3u8
+翡翠台,http://r.jdshipin.com/n90gt
+翡翠台,http://r.jdshipin.com/62WM7
+翡翠台,http://r.jdshipin.com/qrfbg
+翡翠台,http://113.117.74.20:8081/hls/25/index.m3u8
+澳门莲花,https://cntv.sbs/tv/lhws.php
+澳门莲花,https://p.ggiptv.com/v/macaulotustv.php
+澳门莲花,http://anren.live/HK/BiIOU11uLA.m3u8
+澳门莲花,http://nettvpro.live/hls/lotustv.php?zgangd
 凤凰中文,http://115.231.143.224/playtv-live.ifeng.com/live/06OLEGEGM4G.flv
 凤凰中文,http://r.jdshipin.com/cCCzW
 凤凰中文,http://playtimeshift-live.ifeng.com/timeshift/live/06OLEGEGM4G/timeshift.m3u8?txKbps=702&delay=1
