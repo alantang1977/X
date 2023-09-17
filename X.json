@@ -32,7 +32,7 @@
 {"key": "骑骑","name": "🚵┃骐骐┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
 
 
-{"key": "jszy","name": "极速资源 ","type": 1,"api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "jszy","name": "🌍┃极速┃资源 ","type": 1,"api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://www.wogg.xyz:2052/"},
 {"key":"csp_woggcli","name":"☣️┃俊哥玩偶┃🛂","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=94fd5ab297e24a769bb762375118ec47","searchable":1,"quickSearch":1,"filterable":1}, 
