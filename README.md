@@ -17,6 +17,8 @@ https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/j
 
 https://jm.dovxi.repl.co/api?url=http://我不是.肥猫.love:63/接口禁止贩卖
 
+https://xn--sss604efuw.top/jm/
+
 https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
 
 https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
