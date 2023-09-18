@@ -890,6 +890,10 @@ NOW新闻台,http://sc2022.stream-link.org/tv2306.php?id=c04
 天才冲冲冲,http://sc2022.stream-link.org/tv2306.php?id=t25
 
 🐼丨广州专区,#genre#
+静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
+静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
+静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
 广州综合HD,http://yzfvip.top:8000/rtp/239.253.43.71:5146
 广州新闻HD,http://yzfvip.top:8000/rtp/239.253.43.72:5146
 广州新闻,http://live.cooltv.top/tv/guangzhou.php?id=gzxw
@@ -898,10 +902,7 @@ NOW新闻台,http://sc2022.stream-link.org/tv2306.php?id=c04
 广州综合,http://live.cooltv.top/tv/guangzhou.php?id=gzzh
 广州综合,http://ct.whosayssowhat.top:4022/udp/239.253.43.71:5146
 广州综合,http://player.521fanli.cn/1691/gd/gztvm3u8.php?id=gzzh
-静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
-静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
-静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
-静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
+
 
 
 🐼丨IPV6专区,#genre#
