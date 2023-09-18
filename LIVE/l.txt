@@ -1058,6 +1058,7 @@ CCTV14,http://hz752.live:63/vvs/astv.php?id=cctv14hd
 倒霉熊,http://lvbaiducdncmn.inter.iqiyi.com/tslive/c54_lb_140_600_t10/c54_lb_140_600_t10.m3u8?key=0f2a06793124310bccc587b5da61b57da
 亲子启蒙,http://lvbaiducdncmn.inter.iqiyi.com/tslive/c57_lb_213_600_t10/c57_lb_213_600_t10.m3u8?key=0f2a06793124310bc21adebc9f02a9735
 熊大过年,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/7ae265653fe149069c3b53e31caaf060/1200.m3u8
+
 🐼丨广东频道,#genre#
 广东珠江,http://121.51.249.6/4403-txt.otvstream.otvcloud.com/otv/skcc/live/channel65/index.m3u8
 广东公共,http://121.51.249.53/4403-txt.otvstream.otvcloud.com/otv/skcc/live/channel45/index.m3u8
