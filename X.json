@@ -44,7 +44,7 @@
 //{"key": "大鹏","name": "🦅┃大鹏┃4K","type": 3, "playerType": 1,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://s.ether-mine.com/api.php/app/"},
 {"key":"黄黄","name":"😎┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
 {"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
-{"key":"率率","name":"🦢┃帅帅┃影视","type":3,"api":"csp_AppYsV2","playerType":1,"searchable": 1, "quickSearch": 1, "changeable":1, "ext": "http://caiji.ghlyys.com/yumi/api.php/app/"},
+{"key":"率率","name":"💡┃帅帅┃影视","type":1,"api":"https://suoniapi.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"changeable":1},
 {"key": "dapeng","name": "🏆┃嘉良┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"jar": "http://shuyuan.miaogongzi.net/shuyuan/1694553637.txt;md5;fa797d3f25f35eb3fea9a369bc55620f","ext": "http://cms.jialiangos.com/api.php/app/"},
 {"key":"星影1080cms","name":"👽┃星影┃影视","type":1,"api":"https://www.xy1080.net/api.php/provide/vod","searchable":1,"quickSearch":1},
 {"key":"csp_kuaikan","name":"👀┃快看┃影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1},
@@ -61,10 +61,10 @@
 {"key":"蘑菇","name":"🍄┃蘑菇┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://guan.yy365.vip/api.php/app/"},
 {"key":"彩虹","name":"🌈┃彩虹┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://jh.dytt996.com:996/api.php/app/"},
 {"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://ys.realdou.cn:2683/api.php/app/"},
-{"key": "js_悠米","name": "🎉‍┃悠米多多┃搜视","type": 3,"api": "https://jihulab.com/duomv/duox/-/raw/main/js/drpymin2.js","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/duomv/duox/-/raw/main/js/youmi.js"},
 {"key":"哈喽","name":"✌┃哈喽┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://www.miniku.cc/xgapp.php/v1/"},
 {"key":"陌陌","name":"🍄┃陌陌┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.kuin.one/api.php/app/"},
 {"key":"DiDuan","name":"⏮️┃低端┃影视","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"changeable":1},
+{"key": "js_悠米","name": "🎉‍┃悠米多多┃搜视","type": 3,"api": "https://jihulab.com/duomv/duox/-/raw/main/js/drpymin2.js","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/duomv/duox/-/raw/main/js/youmi.js"},
 
 
 ##官源系列
