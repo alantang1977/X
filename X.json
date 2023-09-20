@@ -35,8 +35,8 @@
 {"key": "jszy","name": "🌍┃极速┃资源 ","type": 1,"api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
 //{"key":"yrzj","name":"🎭┃伊人┃追剧","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/yrzj_open.js"},
 {"key": "csp_lianyu","name": "🌧┃恋雨┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "http://mp4.ghlyys.com/api.php/app/"},
-	
-	
+{"key": "SNzy","name": "🚠┃索尼资源 ","type": 1,"api": "https://suoniapi.com/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},	
+{"key":"csp_Aid","name":"🚑┃急救指南","type":3,"api":"csp_FirstAid","searchable":1,"quickSearch":1,"changeable":0,"style": { "type": "rect", "ratio": 3.8},"jar":"https://qu.ax/dDSz.jpg;md5;510FA1663F7067BD4D40DE06097202BF"},	
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃玩偶哥哥┃8K","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$http://www.wogg.xyz:2052/"},
