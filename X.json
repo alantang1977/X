@@ -36,8 +36,6 @@
 //{"key":"yrzj","name":"🎭┃伊人┃追剧","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/yrzj_open.js"},
 {"key": "csp_lianyu","name": "🌧┃恋雨┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "http://mp4.ghlyys.com/api.php/app/"},
 {"key": "Mayiys", "name": "🐜┃蚂蚁┃影视", "type": 3, "api": "csp_Mayiys", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
-{"key": "DDMJ", "name": "🍚┃米酷┃视频", "type": 3, "api": "csp_DDMJ", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1, "ext":"http://103.222.188.33:6688" },
-{"key": "Maolv", "name": "🧸┃毛驴┃影视", "type": 3, "api": "csp_Maolv", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 
 
 
