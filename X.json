@@ -221,7 +221,8 @@
 //{"key": "野荷塘","name": "🍀┃野荷塘┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://gitee.com/alanchaotang/data/raw/master/js/%E9%87%8E%E8%8D%B7%E5%A1%98.json","jar":""},
 {"key":"csp_Auete","name":"🐼┃Auete┃影视","type": 3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
-{"key": "SNzy","name": "🚠┃索尼资源 ","type": 1,"api": "https://suoniapi.com/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},	
+//{"key": "SNzy","name": "🚠┃索尼资源 ","type": 1,"api": "https://suoniapi.com/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1},
+{"key": "suoni","name": "🤖超人丨索尼","type": 3,"api": "caiji.js","ext": {"url": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/","categories": ["动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","国产剧","欧美剧","韩剧","日剧","港剧","台剧","海外剧","大陆综艺","国产动漫"]}},
 {"key":"csp_Aid","name":"🚑┃急救指南","type":3,"api":"csp_FirstAid","searchable":1,"quickSearch":1,"changeable":0,"style": { "type": "rect", "ratio": 3.8},"jar":"https://qu.ax/dDSz.jpg;md5;510FA1663F7067BD4D40DE06097202BF"},	
 
 ##dr_js系列
