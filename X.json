@@ -328,14 +328,15 @@
 
 //"wallpaper": "http://img.fongmi.eu.org",
 "wallpaper": "https://jianbian.chuqiuyu.tk/",
+"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;d65c6f3f30d78e020e48588d511f2bfe",
 //"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431",
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
 //"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/tang.jar;md5;bace77c91270566ca6a959b935efbd0d", 
-"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;2648825eee03cb548b2c411002a7aad9",
+//"spider":"https://files.zohopublic.com.cn/public/workdrive-public/download/uyv0t678c488189af47bb91dc108484d17431;md5;2648825eee03cb548b2c411002a7aad9",
 //"lives": [{"name": "live","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/TV.txt","playerType": 1,"epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
-"lives": [{"name": "電視直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
+"lives": [{"name": "电视直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/l.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
 {"name": "HK直播","type": 0,"playerType": 1,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt","epg": "https://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"group": "redirect","channels": [{"name": "live","epg": "https://epg.112114.xyz/?ch={name}&date={date}","urls": ["proxy://do=live&type=txt&ext=http://home.jundie.top:81/ray/tvlive.txt"]}]},	
 {"name": "莱妮丝","type": 0,"url": "http://xn--ihqu10cn4c.xn--z7x900a.love:63/TV/tvzb.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},	
