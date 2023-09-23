@@ -10,7 +10,7 @@
 {"key":"UpYun","name":"😻┃Up搜┃搜索","type":3,"api":"csp_UpYun","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 {"key":"PanSearch","name":"🙀┃盘搜┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 {"key":"七夜","name":"😾七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
-{"key":"push_agent","name":"🛴手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+//{"key":"push_agent","name":"🛴手机┃推送","type":3,"api":"csp_Push","searchable":0,"quickSearch":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 {"key": "push_agent","name": "📵┃夸克┃推送","type": 3,"api": "csp_Push","searchable": 0,"quickSearch": 0,"filterable": 0,"changeable": 0,"ext": "https://agit.ai/alanchaotang/X/raw/main/open_token.json"},
 {"key":"小纸条_cli","name":"🎏┃小纸条┃资源","type":4,"api":"http://home.jundie.top:9520/spider/cli_gitCafe","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt", "timeout":30},
 //{"key": "push_agent","name": "📱┃推送┃夸克","type": 3,"searchable": 0,"changeable": 1,"quickSearch": 0,"filterable": 0,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/lf_pushagent_min.js"},
