@@ -38,7 +38,7 @@
 //{"key": "csp_lianyu","name": "🌧┃恋雨┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "http://mp4.ghlyys.com/api.php/app/"},
 {"key":"蚂蚁","name":"🐜┃蚂蚁┃追剧","type":3,"api":"csp_Mayiys","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://rzys.xyz"},
 {"key":"毛驴","name":"🍓┃毛驴┃影视","type":3,"api":"csp_Maolv","searchable":1,"quickSearch":1,"changeable":1},
-
+{"key": "csp_Hdhive_影巢","name":"🔎影巢☆阿里","type":3,"api":"csp_Hdhive","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvbox/token.txt","jar":"https://cloud.lxweb.cn/f/kPohp/ky.jar"},
 
 
 	
