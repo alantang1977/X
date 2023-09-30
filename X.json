@@ -92,7 +92,7 @@
 	
 ##csp系列
 {"key": "lf_js_ikanbot","name": "🌹┃路飞点播┃🛩️","type": 3,"searchable": 1,"changeable": 1,"quickSearch": 1,"filterable": 1,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/lf_ikanbot5_1_min.js"},
-{"key":"专线","name":"🚅┃多线┃影视","type": 3,"api": "csp_ZhuanX","searchable": 1,"quickSearch": 1,"changeable":1,"ext": "http://cms.maoyingshi.cc/api.php/app/"},
+//{"key":"专线","name":"🚅┃多线┃影视","type": 3,"api": "csp_ZhuanX","searchable": 1,"quickSearch": 1,"changeable":1,"ext": "http://cms.maoyingshi.cc/api.php/app/"},
 {"key": "app_轻简","name": "🚈┃轻简┃影视","type": 1,"api": "http://1.ahailove.cn:23456/cj/api.php/provide/vod/","categories": ["电影","电视剧","综艺","动漫"]},
 {"key":"酷酷","name":"💡┃酷酷┃影视","type":3,"api":"csp_AppYsV2","searchable": 1, "quickSearch": 1, "changeable":1, "ext": "http://cms.realdou.cn:35264/api.php/app/"},
 {"key": "腐宅","name": "📚┃腐宅┃影视","type":3,"api":"csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"style":{ "type":"rect", "ratio":0.8 },"changeable": 0,"ext": "http://app.zhaifutvapp.com/ruifenglb_api.php/v1.vod"},
@@ -105,7 +105,7 @@
 { "key": "聚合","name": "🎦┃影视聚合┃解析","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.tvkuys.xyz/api.php/app/"},
 //{"key": "BQ","name": "️♨️┃八千┃影视","type": 3,"api": "csp_AppYsV2","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;fa797d3f25f35eb3fea9a369bc55620f","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://154.31.2.112:8869/mogai_api.php/v1.vod"},
 {"key": "csp_mdd","name": "🥚┃蛋蛋妹妹┃4K","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://app.mengdandan.com/xgapp.php/v1/"},
-{"key":"csp_fantuan","name":"🍙┃饭团┃影视","type":3,"api":"csp_Fantuan","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.fantuan3.com"},
+//{"key":"csp_fantuan","name":"🍙┃饭团┃影视","type":3,"api":"csp_Fantuan","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.fantuan3.com"},
 {"key": "ok","name": "🍃┃FreeOK┃影视","type": 3,"api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/free.json"}, 
 {"key":"csp_Vofl","name":"♒┃Voflix┃影视","type":3,"api":"csp_Voflix","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "dr_vidhub","name":"🍬┃VIDHUB┃🆚","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/vidhub.jsd"},
