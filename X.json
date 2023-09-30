@@ -140,7 +140,7 @@
 
 {"key":"jiyingw","name":"💾┃极影吧┃♉磁力","type":3,"searchable":1,"quickSearch":1,"changeable":0,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/极影网.js"},
 {"key": "csp_Xunlei8","name": "💾┃迅雷吧┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api": "csp_Xunlei8","playerType": 1,"searchable": 1,"quickSearch": 1,"filterable": 1},
-{"key":"csp_New6v","name":"💾┃NEW6V┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"http://www.xb6v.com"},
+{"key":"csp_New6v","name":"💾┃新6V┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_New6v","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"http://www.xb6v.com"},
 {"key":"csp_KubaCL","name":"💾┃酷吧堂┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_KubaCL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
 {"key":"mtv_pc_yinfans","name":"💾┃范丝┃♉磁力","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/音范丝.json"},	
 {"key":"csp_MeijuTT","name":"💾┃美剧堂┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_MeijuTT","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
@@ -154,7 +154,8 @@
 {"key":"4KHDR","name":"💾┃4KHDR┃♉磁力","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/4KHDR.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key":"csp_Mp4Mov","name":"💾┃MP4电影┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type": 3,"api": "csp_Mp4Mov","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key":"csp_SeedHub","name":"💾┃SeedHub┃♉磁力","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar","type":3,"api":"csp_SeedHub","playerType":1,"searchable":1,"quickSearch":1,"filterable":1},
-
+{"key":"csp_Ikanbot","name": "👾Ikanbot","type": 3,"api": "csp_Ikanbot","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
+        
 
 ##小米系列	
 {"key": "素白","name": "🦊┃小米素白┃BPQ","type": 3,"jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;fa797d3f25f35eb3fea9a369bc55620f","api": "csp_XBPQ","playerType": "1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/素白.json"},
