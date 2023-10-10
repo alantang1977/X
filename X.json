@@ -36,7 +36,29 @@
 {"key": "yp","name": "🦞┃霸王┃追剧","type": 1,"playerType": 1,"api": "http://zy.xzam.cn/api.php/provide/vod/"},
 {"key":"夸克资源","name":"🧬┃夸克┃资源","type":1,"api":"http://kuakezy1.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片","国产剧","香港剧","台湾剧","韩国剧","美国剧","日本剧","海外剧","泰剧","大陆综艺","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","热门短剧"]},
 
-
+{
+            "key": "csp_XBPQ_JOJO",
+            "name": "JOJO",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "二次截取": "class=\"content-body\"&&class=\"content-lift\"",
+                "数组": "<a&&</a>",
+                "图片": "src=\"&&\"",
+                "标题": "class=\"card-title\">&&</p>",
+                "副标题": "class=\"item-speed\">&&</p>",
+                "链接": "href=\"&&\"",
+                "播放数组": "class=\"tabs-plyr-list\">&&</div>",
+                "嗅探词": "/ts/#/file/#.data.#.bin",
+                "过滤词": "m3u8",
+                "搜索url": "https://jiohub.top/video/search?q={wd}&pid=-qlDbwwDcZ8t1hJN7H0sGh36bnsUqsuyQ2drIL4zs0s=",
+                "分类": "电影$电影#国产$国产#美剧$美剧#日剧$日剧#韩剧$韩剧#动漫$动漫#纪录$纪录",
+                "分类url": "https://jiohub.top/video/{cateId}?page={catePg}&size=18"
+            }
+        },
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
