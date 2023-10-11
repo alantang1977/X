@@ -36,7 +36,7 @@
 {"key": "yp","name": "🦞┃霸王┃追剧","type": 1,"playerType": 1,"api": "http://zy.xzam.cn/api.php/provide/vod/"},
 {"key":"夸克资源","name":"🧬┃夸克┃资源","type":1,"api":"http://kuakezy1.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片","国产剧","香港剧","台湾剧","韩国剧","美国剧","日本剧","海外剧","泰剧","大陆综艺","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","热门短剧"]},
 {"key": "csp_XYQHiker_JOJO","name":"🅾️┃JOJO┃🅾️","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/JOJO.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
-{"key":"348影视","name":"🐰┃348┃秒播","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/348.json"},
+{"key":"348影视","name":"🐰┃348┃秒播","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/348.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
@@ -386,8 +386,7 @@
 {"name": "🐈肥猫但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
 {"name":"🦊高清4K","type":0,"url":"https://www.8090g.cn/jiexi/?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
 {"name":"🍉高清4K","type":0,"url":"https://www.ckmov.vip/api.php?url=","ext":{"header":{"User-Agent":"Mozilla/5.0"}}},
-{"name": "777解析","type": 0,"url": "https://jx.777jiexi.com/player/?url="},
-{"name": "🐱三个柒","type": 0,"url":"https://jx.jsonplayer.com/player/?url=","ext": {"flag": ["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
+{"name": "777解析","type": 0,"url": "https://jx.jsonplayer.com/player/?url="},
 {"name":"🐱快嗅","type": 0,"url":"https://jxdp.codermart.net/?url=", "ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","1905","xigua"]}},
 {"name": "🏯极速标清", "type": 1, "url": "http://119.181.100.243:48/jiexi/sj.php/?url="}, 
 {"name": "🐠小鱼解析", "type": 1, "url": "http://42.157.128.109:2323/CH/app/tv.php?url="},
