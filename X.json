@@ -384,8 +384,9 @@
 {"name": "🌟星辰云解析","type": 1,"url": "https://json.key521.cn/api/?key=df27d9ca9ec97e22c47f8565a50aa6f5&url="},
 {"name":"努力中...","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2449&my=acfgikquvzFGJRW459&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","imgo","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 {"name": "🐈肥猫但行好事","type": 1,"url": "http://jx.fuqizhishi.com:63/接口地址www.肥猫.love/肥猫专用.php?url="},
-{"name": "🚛运输车","type": 1,"url": "http://api.huohua.vip/api/?key=6qwYWYpe4mSaPhFvSw&url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}}],
-	
+{"name": "🚛运输车","type": 1,"url": "http://api.huohua.vip/api/?key=6qwYWYpe4mSaPhFvSw&url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+{"name":"keyu","type":1,"url":"http://newjiexi.gotka.top/keyu3.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}}],
+
 "doh": [{"name": "Google","url": "https://dns.google/dns-query","ips": ["8.8.4.4","8.8.8.8"]},{"name": "Cloudflare","url": "https://cloudflare-dns.com/dns-query","ips": ["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},{"name": "AdGuard","url":"https://dns.adguard.com/dns-query","ips":["94.140.14.140","94.140.14.141"]},{"name": "DNSWatch","url": "https://resolver2.dns.watch/dns-query","ips":["84.200.69.80","84.200.70.40"]},{"name": "Quad9","url": "https://dns.quad9.net/dns-quer","ips": ["9.9.9.9","149.112.112.112"]}],
 "rules":[{"host":"www.iesdouyin.com","rule":["playwm/?video_id="]},
 	{"host":"www.ysgc.vip","rule":["getm3u8?url=http"]},
