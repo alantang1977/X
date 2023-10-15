@@ -558,6 +558,21 @@ CGTN阿语,http://news.cgtn.com/resource/live/arabic/cgtn-a.m3u8
 
 
 🐼丨港澳台　,#genre#
+翡翠台,http://113.117.74.20:8081/hls/25/index.m3u8
+翡翠台,http://r.jdshipin.com/qClQf
+翡翠台,http://r.jdshipin.com/n90gt
+翡翠台,http://r.jdshipin.com/qrfbg
+明珠台,http://r.jdshipin.com/ZQ4kN
+凤凰资讯,http://php.17186.eu.org/phtv/fhzx.m3u8
+凤凰中文,http://php.17186.eu.org/phtv/fhzw.m3u8
+凤凰香港,http://php.17186.eu.org/phtv/fhxg.m3u8
+凤凰中文,http://r.jdshipin.com/cCCzW
+凤凰资讯,http://r.jdshipin.com/0Rp07
+凤凰资讯,http://kkwk1122.top/fh.php?id=fhzx
+凤凰中文,http://kkwk1122.top/fh.php?id=fhzw
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
+香港J2频道,http://r.jdshipin.com/Nr5jq
+RTHK32,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream2/streamPlaylist.m3u8
 翡翠台,http://r.jdshipin.com/qClQf
 明珠台,http://r.jdshipin.com/ZQ4kN
 凤凰中文台,http://pi.0472.org/tv/cbn.php?id=xfjcHD
