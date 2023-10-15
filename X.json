@@ -124,7 +124,7 @@
 {"key":"csp_XYQHikerAL","name":"🧸┃玩偶弟弟┃4k","type":3,"style":{ "type":"rect", "ratio":0.8 },"api":"csp_XYQHikerAL","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/VdgO.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},
 {"key": "csp_XYQHiker4klg","name":"💅🏻┃玩偶妹妹┃4k","type": 3,"style":{ "type":"rect", "ratio":0.8 },"api": "csp_XYQHiker","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/TyM.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar"},	
 {"key":"csp_AList_Alist","name":"🦆┃小鸭┃网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/小鸭.json"},
-
+{"key": "贝贝","name": "🐌┃贝贝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"playerType":1,"ext": "http://cms.cttv.vip/api.php/app/"},
 	
 ##磁力系列
 {"key":"drpy_js_磁力熊搜索","name":"🌹┃磁力熊┃🦢","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/cilixiong.js","searchable":0,"quickSearch":0,"changeable":1},
