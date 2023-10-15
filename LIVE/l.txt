@@ -1,4 +1,20 @@
 
+🐼丨广州专区,#genre#
+静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
+静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
+静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
+广州综合HD,http://yzfvip.top:8000/rtp/239.253.43.71:5146
+广州新闻HD,http://yzfvip.top:8000/rtp/239.253.43.72:5146
+广州新闻,http://live.cooltv.top/tv/guangzhou.php?id=gzxw
+广州新闻,http://ct.whosayssowhat.top:4022/udp/239.253.43.72:5146
+广州影视,http://live.cooltv.top/tv/guangzhou.php?id=gzys
+广州综合,http://live.cooltv.top/tv/guangzhou.php?id=gzzh
+广州综合,http://ct.whosayssowhat.top:4022/udp/239.253.43.71:5146
+广州综合,http://player.521fanli.cn/1691/gd/gztvm3u8.php?id=gzzh
+广东珠江,http://121.51.249.6/4403-txt.otvstream.otvcloud.com/otv/skcc/live/channel65/index.m3u8
+
+
 🐼丨央视频道,#genre#
 CCTV1,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226231/index.m3u8
 CCTV2,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226195/index.m3u8
@@ -903,22 +919,6 @@ NOW新闻台,http://sc2022.stream-link.org/tv2306.php?id=c04
 中天新闻,http://sc2022.stream-link.org/tv2306.php?id=t03
 民视HD,http://sc2022.stream-link.org/tv2306.php?id=t17
 天才冲冲冲,http://sc2022.stream-link.org/tv2306.php?id=t25
-
-🐼丨广州专区,#genre#
-静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
-静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
-静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
-静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
-广州综合HD,http://yzfvip.top:8000/rtp/239.253.43.71:5146
-广州新闻HD,http://yzfvip.top:8000/rtp/239.253.43.72:5146
-广州新闻,http://live.cooltv.top/tv/guangzhou.php?id=gzxw
-广州新闻,http://ct.whosayssowhat.top:4022/udp/239.253.43.72:5146
-广州影视,http://live.cooltv.top/tv/guangzhou.php?id=gzys
-广州综合,http://live.cooltv.top/tv/guangzhou.php?id=gzzh
-广州综合,http://ct.whosayssowhat.top:4022/udp/239.253.43.71:5146
-广州综合,http://player.521fanli.cn/1691/gd/gztvm3u8.php?id=gzzh
-
-
 
 🐼丨IPV6专区,#genre#
 CCTV-1,http://[2409:8087:2001:20:2800:0:df6e:eb07]/wh7f454c46tw3252572940_-481357165/ott.mobaibox.com/PLTV/3/224/3221227467/index.m3u8?icpid=3&RTS=1668593752&from=40&ocs=2_2409:8087:2001:20:2800:0:df6e:eb0a_80&popid=40&hms_devid=2036&prioritypopid=40&vqe=3
