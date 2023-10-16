@@ -40,7 +40,7 @@
 {"key": "鑫鑫影视","name": "🐼┃鑫鑫┃影视", "type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://yingszj.xn--654a.cc/api.php/app/"},
 {"key":"drpy_js_热剧猫","name":"😼┃剧猫┃影视","type":3,"searchable": 1,"quickSearch": 1,"filterable": 1,"api":"http://alist.xn--z7x900a.love:63/ddrpy2.m.js","ext":"http://alist.xn--z7x900a.love:63/热剧猫[V2].js"},
 {"key": "宝宝影视","name": "👯┃宝宝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://mp4.ghlyys.com:916/api.php/app/"},
-{"key": "賤賤","name": "賤賤","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/FongMi.jar"},
+{"key": "賤賤","name": "🍈┃荐片┃蜜蜂","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/FongMi.jar"},
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
