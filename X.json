@@ -384,7 +384,8 @@
 {"name":"🏹射手座","type":0,"url":"https://vip.lianfaka.com/vip/?url=","ext": {"flag": ["qq","腾讯","企鹅","IQiYi","qiyi","爱奇艺","奇艺","youku","YouKu","优酷","sohu","SoHu","搜狐","letv","LeShi","乐视","imgo","mgtv","MangGuo","芒果","SLYS4k","BYGA","luanzi","AliS","dxzy","bilibili","QEYSS","xigua","西瓜视频","腾讯视频","奇艺视频","优酷视频","芒果视频","乐视视频"],"header":{"User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1","Referer":"https://www.dy6g.com/"}}},
 {"name":"♍处女座","type": 0,"url": "https://jx.777jiexi.com/player/?url="},
 {"name": "🐐摩羯座","type": 1,"url": "https://api.tyun77.cn/api.php/provide/parseDicturl?url=","ext": {"flag": ["爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header": {"User-Agent": "okhttp/3.12.0"}}},	
-
+{"name": "♒水瓶座","type": 1,"url": "http://xhww.fun:63/小米特别爱肥猫.php?url=","ext":{"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "CL4K", "renrenmi", "ltnb", "bilibili", "1905", "xigua", "nongmin", "CL4K", "xfyun", "ffm3u8", "lzm3u8", "netease", "pgyer","TD", "qzone", "FY", "ppayun", "Feiyun", "zhibo"],"header": {"User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; PDHM00 Build/QKQ1.191222.002)"}}}，
+{"name": "精选","type": 0,"url": "https://www.yemu.xyz/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 	
 {"name":"神秘的哥哥们","type":1,"url": "http://jx.wogg.link:63/jiexi/饭特析.php?url="},
 {"name":"追忆","type":1,"url":"http://115.231.220.36:9999/jx/tvbox/1314.php?url="},
@@ -403,7 +404,6 @@
 {"name": "🏯小城解析", "type": 1, "url": "https://jx.ccabc.cc/xc/?key=5567332json&url="},
 {"name": "🚛运输车","type": 1,"url": "http://api.huohua.vip/api/?key=6qwYWYpe4mSaPhFvSw&url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "🍂小米落叶🍂","type": 1,"url": "http:/xhww.fun:63/爱小米.php?url=","User-Agent": "okhttp/3.12.0", "ext": {"flag": ["qq","ruyi4K","腾讯","hgvip","hgyx","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","XAl","yk","mgtv","imgo","芒果","CL4K","Feiyun-","hulihuli-","ltnb","bilibili","BAGY","SLYS4K","DM-FT1","DM-FT3","bilibili","1905","xigua"]}}, 
-{"name": "精选","type": 0,"url": "https://www.yemu.xyz/?url=","ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name":"稻香","type":1,"url":"http://27.124.4.42:4567//jhjson//ceshi.php?url=","ext":{"flag":["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header":{"User-Agent":"okhttp/3.12.0"}}},
 {"name": "🪟小米窗外🪟","type": 1,"url": "http://43.143.107.57:417//api//?key=73259318e3d893e5b73fd87f20fbc2f7&url=","header": {"User-Agent": "Dart/2.14 (dart:io)"},"ext": {"flag": ["qq","腾讯","youku","hulihuli","hulihuli-","优酷"]}},
 {"name": "🍂小米落叶🍂","type": 1,"url": "https://110.42.2.98:33333//api//?key=6JsNUcM5473RcARVLg&url=","flag": ["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"]},
@@ -415,7 +415,6 @@
 {"name": "🥭小米红红","type": 1,"url": "https://qq.396pay.cn/home/api?type=ys&uid=3927563&key=ainsuwyBDEFGNQS037&url=","flag": ["JHA","JHB"]}, 
 {"name":"🏳️‍🌈party2（多多）","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2100&my=afimnpqrvBHJKOQS47&mgtv=app&url="}, 	
 {"name":"🐈party3（多多）","type": 1,"url": "http://json.xg688.top/api/?key=Y1etBkWn5hetOHJwF1&url="},
-{"name": "✌️夜曲","type": 1,"url": "http://xhww.fun:63/小米特别爱肥猫.php?url=","ext": {"flag": ["mgtv","qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header": {"User-Agent": "okhttp/3.12.0"}}},
 {"name": "玉米","type": 1,"url": "http://42.157.128.109:2323/CH/zy/Yumi.php?url=","ext": {"flag": ["YuMi-vip"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "鱼厂1","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2384&my=bcijquvxAFKMUY0579&format=json&url="},
 {"name": "鱼厂2","type": 1,"url": "http://110.42.2.247:880/analysis/json/?uid=2255&my=eknpqvADFHOPR02458&format=json&url="},
