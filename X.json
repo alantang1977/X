@@ -39,7 +39,8 @@
 //{"key": "js_v2-yj","name":"🌽┃玉米┃影视","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/玉米.js"},
 {"key": "鑫鑫影视","name": "🐼┃鑫鑫┃影视", "type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://yingszj.xn--654a.cc/api.php/app/"},
 {"key":"drpy_js_热剧猫","name":"😼┃剧猫┃影视","type":3,"searchable": 1,"quickSearch": 1,"filterable": 1,"api":"http://alist.xn--z7x900a.love:63/ddrpy2.m.js","ext":"http://alist.xn--z7x900a.love:63/热剧猫[V2].js"},
-{"key": "宝宝影视","name": "👯┃宝宝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://mp4.ghlyys.com:916/api.php/app/"},
+//{"key": "宝宝影视","name": "👯┃宝宝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://mp4.ghlyys.com:916/api.php/app/"},
+{"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key": "賤賤","name": "🍈┃荐片┃蜜蜂","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/FongMi.jar"},
 	
 ##csp系列
@@ -65,7 +66,6 @@
 {"key":"Lib","name": "🙀┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.pro/"},
 {"key":"LIBVIO_cat","name":"🤖┃LIBVIO┃😽","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio_open.js"},
 {"key":"nangua","name":"🎃┃南瓜┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/js/ng_open.js"},
-{"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key":"奇奇","name":"🍓┃奇奇┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://ttsp.live/api.php/app/"},
 //{"key": "野兔资源","name": "🐰┃夜兔┃切片","type": 1, "playerType":1,"api": "http://xn--yetu07f.xn--yetu07f.icu:66/api.php/provide/vod/?ac=list","categories": ["无敌4K资源","电影","动漫动画","国产剧","日韩剧","泰剧","欧美剧","纪录片"],"searchable": 1,"quickSearch": 1},
 //{"key": "小鹿","name": "♈┃小鹿┃影视","type": 3,"api": "csp_XBPQ","ext": {"分类":"电影$1#电视剧$31#动漫$4#综艺$3","分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},      
