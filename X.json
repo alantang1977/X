@@ -45,8 +45,7 @@
 {"key": "賤賤","name": "🍈┃荐片┃蜜蜂","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/FongMi.jar"},
 {"key":"Hdhive","name":"🎭┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"4KHDR","name":"🎭┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":60},
-//{"key":"校长影视","name":"🎭┃校长影视┃网盘","type":3,"api":"csp_XiaoZhang","ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":30},
-{"key": "校长影视","name":"📀校长网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
+{"key": "校长影视","name":"🎭┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
 
 
 	
