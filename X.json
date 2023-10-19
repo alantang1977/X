@@ -43,6 +43,10 @@
 //{"key": "宝宝影视","name": "👯┃宝宝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "http://mp4.ghlyys.com:916/api.php/app/"},
 {"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key": "賤賤","name": "🍈┃荐片┃蜜蜂","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/FongMi.jar"},
+{"key":"Wobg","name":"阿里|玩偶表哥","type":3,"api":"csp_Wobg","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar"},
+{"key":"Hdhive","name":"阿里|影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$socks5://192.168.101.1:1080","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar"},
+{"key":"4KHDR","name":"4KHDR|网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt", "quickSearch":1, "changeable":1, "timeout":60},
+{"key":"校长影视","name":"校长影视|网盘","type":3,"api":"csp_XiaoZhang","ext":"./lib/token.txt", "quickSearch":1, "changeable":1, "timeout":30},
 	
 ##csp系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
