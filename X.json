@@ -103,7 +103,7 @@
 {"key":"360_spider","name":"💌┃小雅360┃影视","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar;md5;b9f4cf725ad5dac617c7028b3f6a938c"},
 {"key": "360","name":"🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;fa797d3f25f35eb3fea9a369bc55620f","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/360.json"},	
 {"key": "新6V","name":"🔰┃新6V磁力┃慎用","type": 3,"api": "csp_SixV","searchable": 1,"quickSearch": 1,"changeable": 0,"ext": "http://www.xb6v.com/"},
-{"key": "dr_搜狐","name":"🏥┃搜狐TV┃┃官源","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/搜狐.js"},
+{"key": "dr_搜狐","name":"🦊┃搜狐TV┃┃官源","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/搜狐.js"},
 
 
 	
