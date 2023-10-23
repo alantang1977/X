@@ -47,7 +47,19 @@
 {"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"4KHDR","name":"🥈┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":60},
 {"key": "校长影视","name":"🥉┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
-
+{
+            "key": "往往",
+            "name": " 往往|影视",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "分类url": "https://oftens.top/oftensshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
+                "分类": "电影$dianying#电视剧$dianshiju#综艺$zongyi"
+            }
+        },
 
 	
 ##csp系列
