@@ -45,9 +45,9 @@
 {"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key": "賤賤","name": "🐝┃荐片┃蜜蜂","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://agit.ai/alanchaotang/FongMi/raw/branch/main/jar/custom_spider.jar"},
 {"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
-{"key":"4KHDR","name":"🥈┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":60},
-{"key": "校长影视","name":"🥉┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
-{"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"./lib/token.json$$$https://ppxzy.net/$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+//{"key":"4KHDR","name":"🥈┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":60},
+//{"key": "校长影视","name":"🥉┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
+//{"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"./lib/token.json$$$https://ppxzy.net/$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 
 	
 ##csp系列
@@ -105,7 +105,7 @@
 {"key":"360_spider","name":"💌┃小雅360┃影视","type":3,"api":"csp_SP360","filterable":1,"quickSearch":1,"searchable":1,"ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar;md5;b9f4cf725ad5dac617c7028b3f6a938c"},
 {"key": "360","name":"🆎┃小米360┃影视","type": 3,"api": "csp_XBPQ","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/mi.jar;md5;fa797d3f25f35eb3fea9a369bc55620f","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/360.json"},	
 {"key": "新6V","name":"🔰┃新6V磁力┃慎用","type": 3,"api": "csp_SixV","searchable": 1,"quickSearch": 1,"changeable": 0,"ext": "http://www.xb6v.com/"},
-{"key": "dr_搜狐","name":"🦊┃搜狐TV┃官源","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/搜狐.js"},
+//{"key": "dr_搜狐","name":"🦊┃搜狐TV┃官源","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/搜狐.js"},
 
 
 	
