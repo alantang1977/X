@@ -49,6 +49,8 @@
 //{"key": "校长影视","name":"🥉┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
 //{"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"./lib/token.json$$$https://ppxzy.net/$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"csp_老蟹","name":"🦀┃老蟹┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/老蟹影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
+{"key":"csp_笑笑","name":"❤️‍🩹┃笑笑┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/笑笑影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
+{"key":"csp_午夜","name":"🌉┃午夜┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/午夜影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
 
 	
 ##csp系列
