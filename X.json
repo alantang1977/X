@@ -47,7 +47,7 @@
 {"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"4KHDR","name":"🥈┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca", "quickSearch":1, "changeable":1, "timeout":60},
 {"key": "校长影视","name":"🥉┃校长┃网盘","type":3,"api": "csp_XiaoZhang","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/token.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca","timeout":30},
-{"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"./lib/token.json$$$https://ppxzy.net/$$$socks5://192.168.101.1:1080$$$1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+{"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"./lib/token.json$$$https://ppxzy.net/$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 
 	
 ##csp系列
