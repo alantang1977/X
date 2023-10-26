@@ -88,6 +88,8 @@
 {"key": "蜗牛","name": "🐌┃蜗牛┃影视","type": 3,"api": "csp_XBPQ","ext": {"简介":"class=\"video-info-item video-info-content vod_content\">&&</span>","数组":"class=\"module-item-text\"&&class=\"loading\"","线路数组":"data-dropdown-value=&&</div>","线路标题":"<span>&&</small>[替换:</span><small>>>共]+集","副标题":" class=\"module-item-text\">&&</div>","分类":"电影$1#日韩剧$21#海外剧$2#动漫$20","分类url":"https://v.wuxivlog.cn/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}.html"}},
 {"key": "csp_七月影视","name": "🎋┃柒月影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"站名": "七月影视","主页url": "http://www.9day.cc/","简介": "剧情：&&aaa","导演": "导演：&&</a>","主演": "主演：&&</a>","影片状态": "集数：&&</div>","影片类型": "video-tag-icon\">&&立即播放","数组": "<a&&</div></div></a>","副标题": "module-item-note\">&&</div>","搜索url": "/index.php/vod/search.html?wd={wd}","搜索数组": "module-card-item-class\">&&</a>","搜索标题": "alt=\"&&\"","搜索副标题": "module-item-note\">&&</div>","线路标题": "<span>&&</small>[替换:本地>>专线#（快）>>(推荐)#</span><small>>>共]+集","线路数组": "data-dropdown-value=&&</div>","分类url": "http://www.9day.cc/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html;;ak","分类": "电影$1#电视剧$2#综艺$3#动漫$4"}},
 {"key": "應用商店","name": "🐸┃影视应用商店","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"ext": "http://111.67.195.139/yydf/lib/market.json","jar": "http://111.67.195.139/yydf/lib/fm商店.jar"},
+{"key":"csp_XBPQ_极速","name":"👹┃极速☆┃影院","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":{"分类url":"https://www.shangbole.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html","分类":"电影$1#电视剧$2#综艺$3#动漫$4#体育赛事$5"}},
+
 	
 ##官源系列
 //{"key":"dr_布雷蓝光","name":"💥┃布雷影视┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光[V2].jsd"},
@@ -444,7 +446,11 @@
         {"name":"非凡广告","hosts":["vip.ffzy","hd.ffzy"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
         {"name":"暴风广告","hosts":["bfzy"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
 	{"name": "海外看","hosts": ["haiwaikan"],"regex": ["8.1748","10.0099","10.3333"]},
+	{"name":"视觉","hosts":["Xinsj"],"regex":["#EXTINF.*?\\s+.*?muguacdn*?\\.ts\\s+","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
+	{"name": "视觉广告","hosts": ["Xinsj"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
 	{"name":"极速","hosts":["jszy"],"regex":["#EXTINF.*?\\s+.*?muguacdn*?\\.ts\\s+","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
+	{"name": "极速广告","hosts": ["jszy"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
+	{"name":"农民","hosts":["toutiaovod.com"],"regex":["video/tos/cn"]},
 	{"name":"索尼","hosts":["suonizy"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:7.680000,[\\s\\S]*?#EXT-X-DISCONTINUITY","#EXTINF.*?\\s+.*?1o.*?\\.ts\\s+"]},
 	{"name":"蚂蚁","hosts":["v.cdnlz1.com"],"regex":["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
 	{"name": "海外看广告","hosts": ["haiwaikan"],"regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:2.93,[\\s\\S]*?#EXT-X-DISCONTINUITY"]},
