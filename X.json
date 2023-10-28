@@ -49,7 +49,7 @@
 
 	
 ##csp系列
-{"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
+{"key":"csp_WoGG","name":"💂🏿‍♀️┃弹幕┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$弹"},
 {"key":"Wogg","name":"🧸┃阿里┃玩偶哥哥","type":3,"api":"csp_Wogg","ext":"http://127.0.0.1:9978/file/tvbox/token.txt$$$https://wogg.xyz/","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"Wobg","name":"👹┃阿里┃玩偶表哥","type":3,"api":"csp_Wobg","ext":"http://127.0.0.1:9978/file/tvbox/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"csp_woggcli","name":"☣️┃阿里┃玩偶俊哥","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=8e14121f900f4bdfb861306f7a67b17c","searchable":1,"quickSearch":1,"filterable":1}, 
