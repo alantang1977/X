@@ -13,6 +13,14 @@
 ## 湯影視TV 
 ![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
 
+## GitHub Proxy 代理加速 
+
+https://ghproxy.com/
+
+https://ghproxy.net/
+
+https://gh-proxy.com
+
 ### 一：TVBox配置接口 （不分先后）
 ------
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
