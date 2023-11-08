@@ -203,17 +203,11 @@ https://yydsys.top/duo/v.json
 随机轮换壁纸：
 
 ## http://我不是.肥猫.love:63/ppic/feimao.php
-
 ## http://饭太硬.top/深色壁纸/api.php
-
 ## http://www.kf666888.cn/api/tvbox/img
-
 ## https://xhdwc.tk/api/img.php
-
 ## http://img.fongmi.eu.org
-
 ## https://tuapi.eees.cc/api.php?category=fengjing&type=302
-
 ## https://bing.img.run/rand.php
 ## https://tuapi.eees.cc/api.php?category=fengjing&type=302
 ## 
