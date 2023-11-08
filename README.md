@@ -215,7 +215,7 @@ https://yydsys.top/duo/v.json
 ## https://tuapi.eees.cc/api.php?category=fengjing&type=302
 
 ## https://bing.img.run/rand.php
-## 
+## https://tuapi.eees.cc/api.php?category=fengjing&type=302
 ## 
 ## 
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
