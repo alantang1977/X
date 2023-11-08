@@ -73,7 +73,7 @@ https://bz.zzzmh.cn/index
 
 ![Robot](https://github.com/alantang1977/X/assets/107459091/84793476-42d4-494f-87e4-19d19b271a64)
 ------
-本地接口源教程
+## 🥼本地接口源教程
 
 1.TVBox clan://localhost/tvboxqy/tang.json
 
@@ -90,7 +90,7 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 接口解密 http://饭太硬.ml/jm/
 ------
-思维没有边界 一切皆有可能
+# 思维没有边界 一切皆有可能
 ------
 ![W-](https://github.com/alantang1977/X/assets/107459091/78d25b3c-3e94-4c44-b87b-c14472c029f8)
 ------
@@ -122,7 +122,7 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
 11. 香雅情接口：https://www.123pan.com/s/alSeVv-lGO0A.html
 
-              https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json
+https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json
 
 ![pexels-quang-nguyen-vinh-2131623](https://github.com/alantang1977/X/assets/107459091/63d15301-566f-493f-bd9d-5db74bd5d368)
 
