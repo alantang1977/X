@@ -202,6 +202,10 @@ https://yydsys.top/duo/v.json
 ------
 随机轮换壁纸：
 
+## http://我不是.肥猫.love:63/ppic/feimao.php
+
+## http://饭太硬.top/深色壁纸/api.php
+
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
 
 （2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
