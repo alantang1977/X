@@ -212,6 +212,12 @@ https://yydsys.top/duo/v.json
 
 ## http://img.fongmi.eu.org
 
+## https://tuapi.eees.cc/api.php?category=fengjing&type=302
+
+## https://bing.img.run/rand.php
+## 
+## 
+## 
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
 
 （2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
@@ -220,27 +226,7 @@ https://yydsys.top/duo/v.json
 
 （4）https://jianbian.chuqiuyu.tk 自制渐变简约壁纸
 
-（5）https://bing.img.run/rand.php
 
-（6）http://www.kf666888.cn/api/tvbox/img
-
-（7）https://picsum.photos/1280/720/?blur=10
-
-（8）http://刚刚.live/图
-
-（9）http://饭太硬.ga/深色壁纸/api.php
-
-（10）https://www.dmoe.cc/random.php
-
-（11）https://api.btstu.cn/sjbz/zsy.php
-
-（12）https://api.btstu.cn/sjbz/?lx=dongman
-
-（13）http://api.btstu.cn/sjbz/?lx=meizi
-
-（14）http://api.btstu.cn/sjbz/?lx=suiji
-
-（15）https://pictures.catvod.eu.org/
 
 ![2700_2013040313000400_IMG_0164](https://github.com/alantang1977/X/assets/107459091/912df5d9-da50-479f-88f9-92adfc74429b)
 
