@@ -4,6 +4,7 @@
 静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
 静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
 静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
+广州电视台,http://gxdl-lhs.8866.org:85/tsfile/live/1086_1.m3u8?key=txiptv&playlive=1&authid=0
 广州综合HD,http://yzfvip.top:8000/rtp/239.253.43.71:5146
 广州新闻HD,http://yzfvip.top:8000/rtp/239.253.43.72:5146
 广州新闻,http://live.cooltv.top/tv/guangzhou.php?id=gzxw
