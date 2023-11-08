@@ -208,6 +208,8 @@ https://yydsys.top/duo/v.json
 
 ## http://www.kf666888.cn/api/tvbox/img
 
+## https://xhdwc.tk/api/img.php
+
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
 
 （2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
