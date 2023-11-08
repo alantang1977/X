@@ -206,6 +206,8 @@ https://yydsys.top/duo/v.json
 
 ## http://饭太硬.top/深色壁纸/api.php
 
+## http://www.kf666888.cn/api/tvbox/img
+
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
 
 （2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
@@ -216,7 +218,7 @@ https://yydsys.top/duo/v.json
 
 （5）https://bing.img.run/rand.php
 
-（6）## http://www.kf666888.cn/api/tvbox/img
+（6）http://www.kf666888.cn/api/tvbox/img
 
 （7）https://picsum.photos/1280/720/?blur=10
 
