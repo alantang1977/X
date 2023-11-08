@@ -210,6 +210,8 @@ https://yydsys.top/duo/v.json
 
 ## https://xhdwc.tk/api/img.php
 
+## http://img.fongmi.eu.org
+
 （1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
 
 （2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
