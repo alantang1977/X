@@ -96,7 +96,30 @@
 {"key": "csp_好戏","name":"🎭┃好戏┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": {"站名": "好戏影视","主页url": "https://haoxi.vip/","简介": "简介：&&</li>","导演": "导演：&&</li>","主演": "主演：&&</li>","影片状态": "状态：&&</li>","影片类型": "类型：&&</li>","影片地区": "地区：&&</li>","影片年代": "年份：&&</li>","数组": "_self\" class=\"public-list-exp\"&&</div>","标题": "title=\"&&\"","副标题": "public-list-prb hide ft2\">&&</span>","图片": "data-src=\"&&\"","搜索url": "/vodsearch/-------------/?wd={wd}","搜索数组": "a target=\"_self\" class=\"public-list-exp\"&&thumb-else cor5 hide\">","搜索标题": "<a target=\"_self\" href=*>&&</a>","搜索副标题": "public-list-prb hide ft2\">&&</span>","搜索图片": "data-src=\"&&\"","线路数组": "<i class=\"fa ds-dianying\">&&/a>","线路标题": "</i>&&[替换:&nbsp;>>业余接口-#<span class=\"badge\">>>共#</span>>>集]","播放数组": "<ul class=\"anthology-list-play size\"&&</ul>","播放标题": ">&&</a>","播放列表": "<li&&</li>","线路二次截取": "<div class=\"swiper-wrapper\"&&</div>","分类url": "https://haoxi.vip/vodshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}/;;ak","分类": "电影$1#电视剧$2#综艺$3#动漫$4#B站$5#电影解说$43"}},
 {"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar","ext":"http://127.0.0.1:9978/file/tvfan/token.json$$$https://ppxzy.net/$$$null$$$1", "timeout":30}, 
+{
+            "key": "Cokemv",
+            "name": "Cokemv┃App",
+            "type": 3,
+            "api": "csp_Appto",
+            "searchable": 1,
+            "quickSearch": 1,
+            "playerType": 2,
+            "filterable": 1,
+            "ext": "xtqU2bFNHAfAAA8+C3zQKnBrTNXVWfkPhrQ4OL1GgTOVIY74skH3/FP+h+pMd828FlUX2t5rALF24n/zh6gZBdNalgXzw8k2REzCglPUdTRCy72DyCncdVp3Eghr87XRnpItzVjUJOSFIbgdBSRbEoHkpmDMIEGc+0s6OvuU6TjMurR8SmFEHf1jmDMa56TchDrp/cjk8Rn07J0UoBhJS1Z4BcDr0gWpQz/0+upcHcgQaK4jYzsQptuDvF7BwuTVKKGrpTykhr7+ZA9X9iA9qEFJAY15WTH+sCDPnmg95/0tjoC3Yl2WivD7JlHuirTylgE/kLme5Io0DroC0lFpvbl0ZxnHUfSY7z/OrIJZ9eo/G/BaRGcZfEutbJRRMP1iUDFBm2WYeLZf2/Mrzqm2SoxtIKVPyCacqmnXWNgSmIU3dJO1KyPLooCTkbqmPHi6jDC9dw3d0eS7VyHc0Hk+sSabIX8zLwP3+uXLPXoYR7ZkiJ3SXHLxdauX9TYuzrgHMV0LSg7iwuDTWokjt0s8JwezEd11kk0BkNODAGrgWnGeWaZsCcs5cxLdajbEGjD/uHXhy9QtPNVTULq7i79dvaWy9BsrqR8vq4NiQJ40SXsDP0KkYP8FhjRNPzWOypYVLQwUfQwfHtYS9qizTlYEO/1h/Lrm4fXgxtzISxFay0VY="
+        },
+        {
+            "key": "瓜皮",
+            "name": "瓜皮┃App",
+            "type": 3,
+            "api": "csp_Appto",
+            "searchable": 1,
+            "quickSearch": 1,
+            "playerType": 2,
+            "filterable": 1,
+            "ext": "gn05j8iKjg86mksFSYP8NgErW/rjmGemO9QbhduYl4In+mH8H907v7WkOeHnzjx9Lqjjy6bvcA/vSWkn9oqHXaOyWASgx9gYsc2e8UsVE5Jf+K+cGLlBn2eXB+PaNI1dZq57lDA9es0Qv+L1wRWJNWuUef2NBJEB2ihsbc7N1SVJr+aJQ9zmYJfDdj5D3uERBgHkP2KVR/CDNiEsX93rhxjrUW3DpekTp/kbNAWFPtomo2qaEm+zzA6UehAlXTuGCyyK5pV44+JpX/0ekzZsrJn39ZmF7U/t5DvgD4u+wbCDvIM/MEa3RBEJ28SlH1qpiAEvUCvejFWfs+7GBmDP0oxt7cIRtWaHl2CSiwygqeknPVYJKzjM4vSwyWTfabhQNKhZEZCvRNcubm+tiyDYj+bdmthBq/tE8EVqp7Ml6ju4cLuxBFSRwVZpHmik5VdWcHfyGRz6+2y8LKj2no5SIkQ6Y8aTAMBFqfCQ/N+ULTJNBftlcLiZ3vWRMEKRMqvJ7FQ+tPb10aUhSZ6qUm0yKJeyWlPTu4+GyB4SrjcCwpY/QyN0013xXPlNvn3i6Eg6bQLBj7jlnsb3e82m94RiYL+VhC8yjq4qqjeZJZVMfLpCmNFU9UR1fj3f+ogsgnDsLRaLw/7SbKspAIdGnMZbpE9hXW1vg9m4ocCyVh5o6awQ="
+        },
 
+	
 ##荷城茶秀
 {"key":"csp_老蟹","name":"🦀┃老蟹┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/老蟹影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
 {"key":"csp_笑笑","name":"❤️‍🩹┃笑笑┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/笑笑影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
