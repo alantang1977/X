@@ -118,7 +118,17 @@
             "filterable": 1,
             "ext": "gn05j8iKjg86mksFSYP8NgErW/rjmGemO9QbhduYl4In+mH8H907v7WkOeHnzjx9Lqjjy6bvcA/vSWkn9oqHXaOyWASgx9gYsc2e8UsVE5Jf+K+cGLlBn2eXB+PaNI1dZq57lDA9es0Qv+L1wRWJNWuUef2NBJEB2ihsbc7N1SVJr+aJQ9zmYJfDdj5D3uERBgHkP2KVR/CDNiEsX93rhxjrUW3DpekTp/kbNAWFPtomo2qaEm+zzA6UehAlXTuGCyyK5pV44+JpX/0ekzZsrJn39ZmF7U/t5DvgD4u+wbCDvIM/MEa3RBEJ28SlH1qpiAEvUCvejFWfs+7GBmDP0oxt7cIRtWaHl2CSiwygqeknPVYJKzjM4vSwyWTfabhQNKhZEZCvRNcubm+tiyDYj+bdmthBq/tE8EVqp7Ml6ju4cLuxBFSRwVZpHmik5VdWcHfyGRz6+2y8LKj2no5SIkQ6Y8aTAMBFqfCQ/N+ULTJNBftlcLiZ3vWRMEKRMqvJ7FQ+tPb10aUhSZ6qUm0yKJeyWlPTu4+GyB4SrjcCwpY/QyN0013xXPlNvn3i6Eg6bQLBj7jlnsb3e82m94RiYL+VhC8yjq4qqjeZJZVMfLpCmNFU9UR1fj3f+ogsgnDsLRaLw/7SbKspAIdGnMZbpE9hXW1vg9m4ocCyVh5o6awQ="
         },
-
+	{
+            "key": "闪电",
+            "name": "闪电┃App",
+            "type": 3,
+            "api": "csp_Appto",
+            "searchable": 1,
+            "quickSearch": 1,
+            "playerType": 2,
+            "filterable": 1,
+            "ext": "CLtudXE7ZxI/TCPiQMQmMshGSUocT6UcxqWxVG55EmgNtsC77N0yoGmgAB4dRXcuk3wFhrQE2va6VMz+bX7Bzs49hozj8DUds+GasTAft5FjoA7q1iAYlroFk/a9jJi5fXqSkhgg/ABPUW69+xLddSennVB8dptQmxW2aW/qCVRo0ZBt4MFrB/Et8lyUz2q6v5ZYMYf50RIrLw1zlrp2IFRpIbLyOCneZch0SEcSbRZXhl6BI1t8toRlhNE5rJ30MJ53N5JT3uJVSkQcwAiQpqR9zf7F5CXormERc3eScixBj9cV6KKSOsGXN3U+Q+T0MyLyhVZJlJxxegD4DRu08M5FZ9eu6l8s1kDDfZ9/dXECXvT47u9b/k8PB3PhbwJrnFvEIh4liSEpXXOAjbKbMIqQ2aby7YdyQG+KoTmyujKYa+zOVeR4UjjqjHRmODTDjEepspEtFsDzcoTRIyLCUCeCILIvTSJyKyIIHNOMe1G833xzZnAPYLdeu+x8Yb48whqMLmrWQTZhsJKe9O7Mb92u1raxpZLvaaqTjH+xAweKFtEQ9bjj2oUdxZ5R2BJFTzCTHv5RaS7xlqiBAmb6DMDgZfIOmHNymT74lfSN0kP0BGNB5CDpnQhaqW76Sz3G+kVwciqqPnUs8SXOYk/yY2Z2MQ5O11jFYhWLSorVcJxQ9oaYoYHHlDPsI9RrmFq6LS2Cy879ZSVi/IKNEKg0D1AKeOInGTITUas9cUTKooLf/Ji17OM1XLDQwqTAubBa0ExqU0Djjeikb6xkwRxRFf70ROiqZvUugZXNr2bGVX9eYb34moQ/K658mqeNADhxrY/W9NarFeaxET7h1GxQVbs0H2ak0PRH9WeArDda84HhAl3AIybJfNBaai8w943AO4+0wYQVijELtJht5kI4tvRg+MZayjSyE4Fn/K/vDLsAwDB02bg7c1dEo5Q6ERaY3W1zqMt7s4t9tKvwLCIiGicwoBTwgLIyqW5kXvAnnL74UYmgJuwsPwOW3GLUkg/L9RdWuNnFM+fEeM8U1XllZ7+FNIf8dB8PX5EDZ7q1I0uifcOhdNKxEQbQ8OUY7ufsyerzN/MjJTUZKuOFNwvlAI+pryxUbUKSh9Hwjh7MkVCCvUbM38+mzpqIHdcXFOoaBd/NLNPKFq2J5Ao4+Deu46v+9TVFg2xjkI51jEuezDCPjGKBuGXgmX1LzcoF3yW84HV4qDWWr7a42FTVDdhZqkmnK/SlCDroHNz/SO2DjyuZgnIXaS8P+078cZ8AbqgIiz+ZVeJVVPsl5NI9De2h1r3RgSfxvClrjjKiaeoOGj3luPfQj0GxsRhASoccUEl2MShvPpxE88i1cQuwmW10IrA=="
+        },
 	
 ##荷城茶秀
 {"key":"csp_老蟹","name":"🦀┃老蟹┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/老蟹影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
