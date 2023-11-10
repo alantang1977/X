@@ -11,8 +11,8 @@
 {"key": "push_agent","name": "📵┃夸克┃推送","type": 3,"api": "csp_Push","searchable": 0,"quickSearch": 0,"filterable": 0,"changeable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/pg.json"},
 {"key":"小纸条_cli","name":"🦁┃纸条┃资源","type":4,"api":"http://home.jundie.top:9520/spider/cli_gitCafe","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt", "timeout":30},
 
-{"key":"csp_Sp360","name":"🦁┃360┃APP","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true}, "timeout":30},
-{"key":"荐片弹幕版","name":"🦁┃荐片┃APP","type":3,"api":"csp_Jianpian","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/jianpian.json$$$1", "timeout":60},
+//{"key":"csp_Sp360","name":"🦁┃360┃APP","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true}, "timeout":30},
+//{"key":"荐片弹幕版","name":"🦁┃荐片┃APP","type":3,"api":"csp_Jianpian","searchable":1,"quickSearch":1,"filterable":1,"ext":"./json/jianpian.json$$$1", "timeout":60},
 {"key":"csp_WoGG","name":"🦁┃哥哥┃APP","type":3,"api":"csp_Wogg","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.json$$$https://wogg.xyz/$$$1", "timeout":30},
 {"key":"csp_Wobg","name":"🦁┃表哥┃APP","type":3,"api":"csp_Wobg","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.json$$$https://wobge.run.goorm.io$$$1", "timeout":30},
 
