@@ -2,6 +2,7 @@
 🐼丨广州专区,#genre#
 广东|广州综合,http://live.qiyuevod.com/wantv/guangzhou.php?id=zhonghe
 广东|广州新闻,http://live.qiyuevod.com/wantv/guangzhou.php?id=xinwen
+广东|广东珠江,https://php.17186.eu.org/gdtv/web/gdzj.m3u8
 广东|广州法治,http://live.qiyuevod.com/wantv/guangzhou.php?id=fazhi
 广东|广州影视,http://live.qiyuevod.com/wantv/guangzhou.php?id=yingshi
 广东|广州竞赛,http://live.qiyuevod.com/wantv/guangzhou.php?id=jingsai
