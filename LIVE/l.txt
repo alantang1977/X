@@ -1,5 +1,13 @@
 
 🐼丨广州专区,#genre#
+广东|广州综合,http://live.qiyuevod.com/wantv/guangzhou.php?id=zhonghe
+广东|广州新闻,http://live.qiyuevod.com/wantv/guangzhou.php?id=xinwen
+广东|广州法治,http://live.qiyuevod.com/wantv/guangzhou.php?id=fazhi
+广东|广州影视,http://live.qiyuevod.com/wantv/guangzhou.php?id=yingshi
+广东|广州竞赛,http://live.qiyuevod.com/wantv/guangzhou.php?id=jingsai
+广东|广东体育,http://218.15.229.90:9901/tsfile/live/1001_1.m3u8
+广东|广州南国都市,http://live.qiyuevod.com/wantv/guangzhou.php?id=shenghuo
+广东|广州南国都市,https://justsometime.gztv.com/sec/shenghuos.m3u8
 静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
 静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
 静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
