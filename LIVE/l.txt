@@ -1,5 +1,8 @@
 
 🐼丨广州专区,#genre#
+广州综合,http://ct.whosayssowhat.top:4022/udp/239.253.43.71:5146
+广州新闻,http://ct.whosayssowhat.top:4022/udp/239.253.43.72:5146
+广州影视,http://ct.whosayssowhat.top:4022/udp/239.253.43.73:5146
 广东|广州综合,http://live.qiyuevod.com/wantv/guangzhou.php?id=zhonghe
 广东|广州新闻,http://live.qiyuevod.com/wantv/guangzhou.php?id=xinwen
 广东|广东珠江,https://php.17186.eu.org/gdtv/web/gdzj.m3u8
