@@ -20,14 +20,6 @@
 "name": "🍚┃小米┃🍚"
 },
 {
-"url": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
-"name": "🐰┃猫爪┃🐰"
-},
-{
-"url": "https://download.kstore.space/download/3313/app/ymzn",
-"name": "🦀┃新夜猫子┃🦀"
-},
-{
 "url": "http://cdn.qiaoji8.com/tvbox.json",
 "name": "🏂┃巧技┃🏂"
 },
@@ -66,6 +58,14 @@
 {
 "url": "http://rihou.cc:88/荷城茶秀",
 "name":"🍵┃荷城茶秀┃🍵"
+},
+{
+"url": "https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json",
+"name": "🐰┃猫爪┃🐰"
+},
+{
+"url": "https://download.kstore.space/download/3313/app/ymzn",
+"name": "🦀┃新夜猫子┃🦀"
 },
 {
 "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0828.json",
