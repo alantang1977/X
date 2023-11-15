@@ -67,7 +67,7 @@
 			"api": "csp_Jianpian",
 			"searchable": 1,
 			"changeable": 1,
-			"ext": "./lib/jianpian.json$$$1",
+			"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json$$$1",
 			"timeout":60
 		},
 		{
