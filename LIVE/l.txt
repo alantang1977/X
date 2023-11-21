@@ -1,5 +1,7 @@
 
 🦁丨广州专区,#genre#
+广东珠江,https://php.17186.eu.org/gdtv/gdzj.m3u8
+广东体育,https://php.17186.eu.org/gdtv/gdty.m3u8
 广州影视,https://aplays.gztv.com/sec/yingshi.m3u8?auth_key=1671092292-0-0-5d0d85e4e662627ea07ca2d93bcf6b6c
 广州新闻,https://aplays.gztv.com/sec/xinwen.m3u8?auth_key=1671092314-0-0-7f1025f01baf7a389629b246d0fea8c1
 广州综合,https://aplays.gztv.com/sec/zhonghes.m3u8?auth_key=1671092335-0-0-218671d0fb8aede2dc7afeb847be4423
