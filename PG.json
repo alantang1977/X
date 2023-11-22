@@ -15,8 +15,8 @@
 			"name": "🐼️┃电视┃直播",
 			"type": 3,
 			"searchable": 0,
-			"api": "./lib/live2vod.js",
-			"ext": "./lib/feimaolive.json"
+			"api": "https://gh-proxy.com/https://raw.githubusercontent.com/alantang1977/X/main/js/live2vod.js",
+			"ext": "https://gh-proxy.com/https://raw.githubusercontent.com/alantang1977/X/main/js/feimaolive.json"
 		},
 		{
 			"key": "豆瓣",
