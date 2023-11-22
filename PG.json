@@ -1,5 +1,5 @@
 {
-  "spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca",
+"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fm.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca",
 "lives":[
 {
                         "name": "live.fmm",
@@ -35,9 +35,9 @@
 			"api": "csp_Douban",
 			"searchable": 0,
 			"changeable": 1,
-			"ext": "./lib/douban.json"
+			"ext": "https://gh-proxy.com/https://raw.githubusercontent.com/alantang1977/gao/master/js/douban.json"
 		},
-		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"./lib/drpy2.min.js","ext":"./js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
+		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://gh-proxy.com/https://raw.githubusercontent.com/alantang1977/gao/master/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
 		{
 			"key":"bili",
 			"name":"B站 | Bili[jar]",
