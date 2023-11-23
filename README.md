@@ -21,6 +21,10 @@ https://ghproxy.net/
 
 https://gh-proxy.com
 
+https://githubfd.deno.dev/
+
+https://mirror.ghproxy.com/
+
 # 🍑TVBox配置接口 （不分先后）
 ------
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
