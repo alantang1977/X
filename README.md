@@ -15,15 +15,15 @@
 
 # 🍓GitHub Proxy 代理加速 
 
-https://ghproxy.com/
+https://ghproxy.com/https://raw.githubusercontent.com/
 
-https://ghproxy.net/
+https://ghproxy.net/https://raw.githubusercontent.com/
 
-https://gh-proxy.com/
+https://gh-proxy.com/https://raw.githubusercontent.com/
 
 https://githubfd.deno.dev/
 
-https://mirror.ghproxy.com/
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/
 
 # 🍑TVBox配置接口 （不分先后）
 ------
