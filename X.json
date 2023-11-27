@@ -417,7 +417,7 @@
 {"name":"肥羊•虎牙","type":0,"url":"https://githubfd.deno.dev/Ftindy/IPTV-URL/main/huyayqk.m3u","playerType":1},
 {"name":"肥羊•YY","type":0,"url":"https://githubfd.deno.dev/Ftindy/IPTV-URL/main/yylunbo.m3u","playerType":1},
 {"name":"初秋语•哔哩","type":0,"url":"./bili.m3u","playerType":1},
-{"name":"IPTV广州直播","type":0,"url":"https://githubfd.deno.dev/alantang1977/X/main/LIVE/IPTV.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name":"IPTV广州直播","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/IPTV.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"YuanHsing•油管","type":0,"url":"https://githubfd.deno.dev/YuanHsing/YouTube_to_m3u/main/youtube.m3u"},
 {"name": "BESTV","type": 0,"url": "https://hub.gitmirror.com/https://raw.github.com/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
