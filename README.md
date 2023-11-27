@@ -25,6 +25,8 @@ https://githubfd.deno.dev/
 
 https://mirror.ghproxy.com/https://raw.githubusercontent.com/
 
+https://already.free.hr/
+
 # 🍑TVBox配置接口 （不分先后）
 ------
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
