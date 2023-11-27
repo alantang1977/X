@@ -19,7 +19,7 @@ https://ghproxy.com/
 
 https://ghproxy.net/
 
-https://gh-proxy.com
+https://gh-proxy.com/
 
 https://githubfd.deno.dev/
 
