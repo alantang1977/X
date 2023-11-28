@@ -93,7 +93,7 @@
 {"key": "左岸","name": "🌊┃左岸┃追剧","type": 3,"api": "https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext": "https://agit.ai/xiaohewanwan/TVBox/raw/branch/master/js/zuoan.js","searchable": 1,"quickSearch": 1,"changeable": 0},
 {"key": "蜂鸟","name": "🕊┃蜂鸟┃追剧","type": 3,"api": "csp_AppSK","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "FbjPcVZY48PN/RIZ5QqOrspmMoZYCIIND24O/vn7yUhWQcuI8HjexlGPt+etACSwf3iKwX4rh3ktWiMrCNspYRZYUM6f0R/eKT9M0yoRk6EyAfugfSU="},
 {"key": "君离","name": "🪖┃君离┃追剧","type": 3,"api": "csp_AppSK","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "FbjPcVZY48PN/RIZ5UWFrpN0csJPCJkIEy9R9qCt0RcDCdqQ/iHaxETP6Km4GjurcnqByH5g2zI+TmNzCM85PltMUd6f0BnULz5M1CsK3w=="},
-
+{"key": "赞赞","name": "➕┃赞赞┃切片","type": 3,"api": "https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext": "https://agit.ai/xiaohewanwan/TVBox/raw/branch/master/js/zanzan.js","searchable": 1,"quickSearch": 1,"changeable": 0},
 	
 ##网络收集系列
 {"key": "骑骑","name": "🍁┃骐骐┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
