@@ -38,7 +38,7 @@
     "token": "",
     "url": "https://www.nfapp.fun",
     "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+    "api": "/appto/v1","ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {
   "key": "夜猫",
   "name": "🐱夜猫┃影视",
@@ -50,7 +50,7 @@
     "token": "",
     "url": "http://43.248.97.249:5564",
     "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+    "api": "/appto/v1","ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 
 	
 ##高清4K系列
