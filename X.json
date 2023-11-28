@@ -38,9 +38,21 @@
     "token": "",
     "url": "https://www.nfapp.fun",
     "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1"
-  }
-},	
+    "api": "/appto/v1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+{
+  "key": "夜猫",
+  "name": "🐱夜猫┃影视",
+  "type": 3,
+  "api": "csp_DDMJ",
+  "playerType": 2,
+  "ext": {
+    "ic": "lqGGz9NM4aHVoD8jSoFFcmfeQ0zcjkG0a6dOiCPe4lHMGzMEigPzyXuhccQRZf6D75pAyu5qXZa8Woq50p8Xvf11kZq38Yk6UAkKR0nWIPWyUN%2BrL68%2FTxsj%2Fs%2F%2Bdvz3d9mhjzeyYUyI71OEzzkEnw%3D%3D",
+    "token": "",
+    "url": "http://43.248.97.249:5564",
+    "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
+    "api": "/appto/v1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+
+	
 ##高清4K系列
 {"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "賤賤","name": "🐝┃蜜蜂┃荐片","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;f4fa24d313b7290001db8ef49bd8ae0b"},
