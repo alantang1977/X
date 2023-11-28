@@ -27,30 +27,7 @@
 //{"key": "TV", "name": "📢┃全国电视┃广播", "type": 3, "api": "csp_XBPQ", "ext": {"分类": "央视$1#卫视$2#地方$3#港澳$4#综艺$zhibo/zongyi#体育$zhibo/sports#新闻$zhibo/xinwen#影视$zhibo/yingshi#影视$zhibo/shaoer#财经$zhibo/caijing#科教$zhibo/kejiao", "编码": "GBK", "图片": "http://hz752.love:63/pictu.php?type=302", "分类url": "http://tv.haoqu99.com/{cateId};;z", "数组": "<li class=\"p-item\">&&</li>"}}, 
 //{"key": "dr_好趣网","name":"📺┃电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 {"key": "直播转点播","name": "🐼┃电视┃直播","type": 3,"searchable": 0,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/live2vod.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/feimaolive.json"},
-{
-  "key": "南坊",
-  "name": "🌬南坊┃影视",
-  "type": 3,
-  "api": "csp_DDMJ",
-  "playerType": 2,
-  "ext": {
-    "ic": "mssY6U737YHaGX4OjrBG8dnK8QrSnWRVo24nsmBF3LCxbm6oI23agJvbenxkbUneTU7oe4X%2F0N2hN%2BPw%2FxQiIVH%2BG7P4Yx0pESg0pQuc6PET1TqEiszTGAj%2Bay0GAXU1FlfHtuzo8zyrK1KkerSdLQ%3D%3D",
-    "token": "",
-    "url": "https://www.nfapp.fun",
-    "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1","ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
-{
-  "key": "夜猫",
-  "name": "🐱夜猫┃影视",
-  "type": 3,
-  "api": "csp_DDMJ",
-  "playerType": 2,
-  "ext": {
-    "ic": "lqGGz9NM4aHVoD8jSoFFcmfeQ0zcjkG0a6dOiCPe4lHMGzMEigPzyXuhccQRZf6D75pAyu5qXZa8Woq50p8Xvf11kZq38Yk6UAkKR0nWIPWyUN%2BrL68%2FTxsj%2Fs%2F%2Bdvz3d9mhjzeyYUyI71OEzzkEnw%3D%3D",
-    "token": "",
-    "url": "http://43.248.97.249:5564",
-    "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1","ext":"","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
+
 
 	
 ##高清4K系列
