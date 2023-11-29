@@ -2,14 +2,6 @@
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca",
 	"sites":[
 		{
-			"key": "🐧┃酷狗",
-			"name": "酷狗",
-			"type": 3,
-			"api": "csp_Kugou",
-			"searchable": 0,
-			"changeable": 0
-		},
-		{
       "key": "萌米",
       "name": "🐧┃萌米┃App",
       "type": 3,
@@ -751,6 +743,14 @@
 		{"key":"drpy_js_虎牙直播","name":"🐧┃直播|虎牙[js]","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/huya.js"},
 		{"key": "push_quark","name": "🐧┃夸克|推送","type": 3,"api": "csp_Quark","changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/quark.txt"},
 		{"key": "push_agent","name": "🐧┃推送","type": 3,"api": "csp_Push","changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
+		{
+			"key": "🐧┃酷狗",
+			"name": "酷狗",
+			"type": 3,
+			"api": "csp_Kugou",
+			"searchable": 0,
+			"changeable": 0
+		},
 		{
 			"key": "應用商店",
 			"name": "🐧┃應用商店",
