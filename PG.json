@@ -321,9 +321,9 @@
 			"searchable": 1,
 			"ext": "https://www.bdys03.com/$$$null$$$1"
 		},
-		{ "key": "Mayiys", "name": "蚂蚁影视", "type": 3, "api": "csp_Mayiys", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
-		{ "key": "Maolv", "name": "毛驴", "type": 3, "api": "csp_Maolv", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
-		{ "key": "YQKan", "name": "一起看", "type": 3, "api": "csp_YQKan", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
+		{ "key": "Mayiys", "name": "🐧┃蚂蚁影视", "type": 3, "api": "csp_Mayiys", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
+		{ "key": "Maolv", "name": "🐧┃毛驴", "type": 3, "api": "csp_Maolv", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
+		{ "key": "YQKan", "name": "🐧┃一起看", "type": 3, "api": "csp_YQKan", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 		{
 			"key": "索尼资源",
 			"name": "🐧┃索尼┃资源",
@@ -382,8 +382,8 @@
 		{"key":"drpy_js_rrdyw","name":"🐧┃人人電影網[js]|磁","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"drpy_js_hotcat","name":"🐧┃热剧猫[js]","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/hotcat.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"csp_Sp360","name":"🐧┃360影视┃弹幕","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
-		 {"key":"csp_Jiohub","name":"🐧┃JOJO影视┃弹幕","type":3,"api":"csp_Jiohub","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
-		 {"key":"csp_Jojo","name":"🐧┃JOJO┃弹幕","type":3,"api":"csp_Jojo","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
+		{"key":"csp_Jiohub","name":"🐧┃JOJO影视┃弹幕","type":3,"api":"csp_Jiohub","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
+		{"key":"csp_Jojo","name":"🐧┃JOJO┃弹幕","type":3,"api":"csp_Jojo","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
 		{"key":"drpy_js_MP4US","name":"🐧┃MP4电影[js]|磁","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/mp4us.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"drpy_js_电影港","name":"🐧┃电影港[js]|磁","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/dygang.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"drpy_js_极影网","name":"🐧┃极影网[js]|磁","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/jiyingwp.js", "quickSearch":1, "changeable":1, "timeout":60},
@@ -447,7 +447,7 @@
 		},
 		{
 			"key": "黄黄",
-			"name": "😎迪迪┃App",
+			"name": "🐧┃迪迪┃App",
 			"api": "csp_AppYsV2",
 			"type": 3,
 			"filterable": 1,
@@ -744,8 +744,8 @@
 		{"key": "push_quark","name": "🐧┃夸克|推送","type": 3,"api": "csp_Quark","changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/quark.txt"},
 		{"key": "push_agent","name": "🐧┃推送","type": 3,"api": "csp_Push","changeable":0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
 		{
-			"key": "🐧┃酷狗",
-			"name": "酷狗",
+			"key": "酷狗",
+			"name": "🐧┃酷狗",
 			"type": 3,
 			"api": "csp_Kugou",
 			"searchable": 0,
