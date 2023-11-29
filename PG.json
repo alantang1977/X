@@ -46,22 +46,7 @@
     "api": "/appto/v1"
   }
 },
-		//{
-      "key": "小柚",
-      "name": "🐧┃小柚┃APP",
-      "type": 3,
-      "api": "csp_Skapp",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "key": "ygcnbcwqzaekvzed",
-        "iv": "4004296093143708",
-        "token": "",
-        "url": "http://yz9.yzys.top"
-      }
-    },
-		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
+ 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
 		{
 			"key": "直播转点播",
 			"name": "🐧┃电视┃直播",
@@ -724,13 +709,6 @@
 			"changeable": 0
 		},
 		{"key":"drpy_js_Alist","name":"🐧┃网盘 | Alist[js]","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alist.min.js","searchable":1,"filterable":1,"changeable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/alist.json"},
-		{
-			"key": "ext_live_protocol",
-			"name": "🐧┃“肥猫不肥”",
-			"type": 3,
-			"api": "http://alist.xn--z7x900a.love:63/协议.js",
-			"ext": "clan://proxy?sourcekey=ext_live_protocol"
-		},
 		{
 			"key":"MV_vod",
 			"name":"🐧┃电视┃MTV",
