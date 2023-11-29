@@ -64,7 +64,7 @@
 			"changeable": 1,
 			"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"
 		},
-		{"key":"drpy_js_磁力熊","name":"🐧┃App力熊┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
+		{"key":"drpy_js_磁力熊","name":"🐧┃力熊┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
 		{
 			"key":"bili",
 			"name":"🐧┃B站┃App",
@@ -306,7 +306,7 @@
 			"searchable": 1,
 			"ext": "https://www.bdys03.com/$$$null$$$1"
 		},
-		{ "key": "Mayiys", "name": "🐧┃蚂蚁影视┃App", "type": 3, "api": "csp_Mayiys", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
+		{ "key": "Mayiys", "name": "🐧┃蚂蚁┃App", "type": 3, "api": "csp_Mayiys", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 		{ "key": "Maolv", "name": "🐧┃毛驴┃App", "type": 3, "api": "csp_Maolv", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 		{ "key": "YQKan", "name": "🐧┃一起看┃App", "type": 3, "api": "csp_YQKan", "searchable": 1, "quickSearch": 1, "filterable": 1, "changeable": 1 },
 		{
@@ -359,7 +359,7 @@
 		{"key":"drpy_js_趣盤搜","name":"🐧┃趣盘搜┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/funletu.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"drpy_js_愛盤搜","name":"🐧┃爱盘搜┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"drpy_js_奇妙搜","name":"🐧┃奇妙搜┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_dydhhy","name":"🐧┃dydhhy┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_dydhhy","name":"🐧┃Dydhhy┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"drpy_js_人人影视","name":"🐧┃人人影视┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"drpy_js_低端影视", "name":"🐧┃低端影视┃App", "type":3, "api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js", "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/ddys.js", "changeable": 1 },
 		{"key":"drpy_js_新版6V","name":"🐧┃新版6V┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/xb6v.js", "quickSearch":1, "changeable":1, "timeout":60},
@@ -532,7 +532,7 @@
 			"changeable": 0,
 			"filterable": 1
 		},
-		{ "key":"csp_YingShi","name":"影视┃App","type":3,"api":"csp_YingShi","ext":""},
+		{ "key":"csp_YingShi","name":"🐧┃影视┃App","type":3,"api":"csp_YingShi","ext":""},
 		{ 
 			"key": "泥巴", 
 			"name": "🐧┃泥巴┃App", 
