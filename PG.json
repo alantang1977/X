@@ -9,6 +9,23 @@
 			"searchable": 0,
 			"changeable": 0
 		},
+		{
+      "key": "萌米",
+      "name": "😻萌米┃App",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "api": "csp_Appto",
+      "playerType": 2,
+      "ext": {
+        "key": "QBccRNTdEscBYykPWRbKD7YREjN6AJYJ",
+        "ic": "",
+        "token": "",
+        "url": "http://app.mervod.com:9527",
+        "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
+        "api": "/addons/apptov4/app.php/v1/"
+      }
+    },
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
 		{
 			"key": "直播转点播",
