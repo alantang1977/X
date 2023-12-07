@@ -2,50 +2,15 @@
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca",
 	"sites":[
 		{
-      "key": "萌米",
-      "name": "🐧┃萌米┃App",
-      "type": 3,
-      "searchable": 1,
-      "quickSearch": 1,
-      "api": "csp_Appto",
-      "playerType": 2,
-      "ext": {
-        "key": "QBccRNTdEscBYykPWRbKD7YREjN6AJYJ",
-        "ic": "",
-        "token": "",
-        "url": "http://app.mervod.com:9527",
-        "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-        "api": "/addons/apptov4/app.php/v1/"
-      }
-    },
-		{
-  "key": "南坊",
-  "name": "🐧┃南坊┃App",
-  "type": 3,
-  "api": "csp_DDMJ",
-  "playerType": 2,
-  "ext": {
-    "ic": "mssY6U737YHaGX4OjrBG8dnK8QrSnWRVo24nsmBF3LCxbm6oI23agJvbenxkbUneTU7oe4X%2F0N2hN%2BPw%2FxQiIVH%2BG7P4Yx0pESg0pQuc6PET1TqEiszTGAj%2Bay0GAXU1FlfHtuzo8zyrK1KkerSdLQ%3D%3D",
-    "token": "",
-    "url": "https://www.nfapp.fun",
-    "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1"
-  }
-},
-		{
-  "key": "夜猫",
-  "name": "🐧┃夜猫┃App",
-  "type": 3,
-  "api": "csp_DDMJ",
-  "playerType": 2,
-  "ext": {
-    "ic": "lqGGz9NM4aHVoD8jSoFFcmfeQ0zcjkG0a6dOiCPe4lHMGzMEigPzyXuhccQRZf6D75pAyu5qXZa8Woq50p8Xvf11kZq38Yk6UAkKR0nWIPWyUN%2BrL68%2FTxsj%2Fs%2F%2Bdvz3d9mhjzeyYUyI71OEzzkEnw%3D%3D",
-    "token": "",
-    "url": "http://43.248.97.249:5564",
-    "configurl": "/addons/apptov4/app.php/v1/config/get?p=android",
-    "api": "/appto/v1"
-  }
-},
+			"key": "阿里夸克配置",
+			"name": "🐧┃阿里夸克配置",
+			"type": 3,
+			"api": "csp_Config",
+			"searchable": 0,
+			"changeable": 0,
+			"style": {"type": "rect","ratio": 1},
+			"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"
+		},
  		{"key":"Local","name":"🐧┃本地┃App","type":3,"api":"csp_Local"},
 		{
 			"key": "直播转点播",
