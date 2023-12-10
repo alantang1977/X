@@ -2,6 +2,14 @@
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca",
 	"sites":[
 		{
+			"key": "河马",
+			"name": "🐧┃河马┃App",
+			"type": 3,
+			"api": "csp_Hmys",
+			"playerType": 1,
+			"ext": "https://m.jmzp.net.cn$$$null$$$1"
+		},
+		{
 			"key": "阿里夸克配置",
 			"name": "🐧┃阿里夸克配置",
 			"type": 3,
