@@ -334,6 +334,7 @@
 {"key": "csp_XYQHiker_酷奇MV","name":"Ⓜ️┃酷奇MV┃娱乐","type":3,"api":"csp_XYQHiker","searchable":0,"quickSearch":0,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/酷奇MV.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/custom_spider.jar;md5;b9f4cf725ad5dac617c7028b3f6a938c"},
 //{"key":"push_agent","name":"▶┃推送┃磁力","type":3,"api":"csp_Push","playerType":1,"searchable":0,"quickSearch":0,"filterable":0,"ext":"http://192.168.1.4:5244/Alan/Alist/token.txt"},
 {"key":"csp_Paper","name":"📜┃纸条┃云盘","type":3,"api":"csp_Paper","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"http://192.168.1.4:5244/Alan/Alist/token.txt"},
+{"key": "MV_vod","name": "🎶┃明星┃MV","type": 1,"api": "https://mv.wogg.link/mv/vod","style": {"type": "oval"},"searchable": 1,"quickSearch": 0,"changeable": 0},
 {"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
 {"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://gh-proxy.com/http://raw.github.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://gh-proxy.com/http://raw.github.com/alantang1977/CatVodSpider/master/jar/custom_spider.jar"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
