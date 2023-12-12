@@ -232,7 +232,7 @@
 ##dr_js系列
 {"key":"饭团","name":"🍚┃饭团影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/饭团影视.jsd"},
 {"key":"阿布","name":"🪖┃阿布影院┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/阿布影院.js"},
-{"key":"刺桐","name":"🦔┃刺桐影院┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/刺桐[V2].js"},
+{"key":"刺桐","name":"🦔┃刺桐影院┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/刺桐[V2].jsd"},
 {"key": "dr_EMO蓝光","name":"🧊┃EMO蓝光┃🦁","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/EMO蓝光[V2].js"},
 {"key": "dr_4K视界","name":"🐡┃4K视界┃🦁","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/4K视界[V2].js"},
 {"key": "dr_影探","name":"🦋┃影探┃🦁","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/影探[V2].js"},
