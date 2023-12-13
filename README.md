@@ -45,6 +45,8 @@ https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
 https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情
 
+http://pandown.pro/tvbox/tvbox.json  巧技
+
 https://jm.dovxi.repl.co/api?url=https://pan.shangui.cc/f/v2Lsk/yyfx.json  业余
 
 ![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
