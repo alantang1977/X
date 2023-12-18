@@ -5,6 +5,7 @@
 {"key": "豆瓣","name":"Ⓜ️┃豆瓣┃荐片","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/豆瓣.js"},
 {"key":"小纸条_cli","name":"🎏┃纸条┃资源","type":4,"api":"http://home.jundie.top:9520/spider/cli_gitCafe","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt", "timeout":30},
 //{"key":"csp_YGP","name":"👙┃新片┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
+{"key": "超神","name": "⛩️┃超神┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/chaoshen","jar":"http://cdn.qiaoji8.com/fix1209.jar;md5;3021d0a39a4959c487437ccd2bdba75b"},
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Voflix","name":"🦁┃Voflix┃影视","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/voflix.js"},
 {"key":"YiSo","name":"😹┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
@@ -41,7 +42,6 @@
 //{"key":"csp_woggcli","name":"☣️┃阿里┃玩偶俊哥","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=8e14121f900f4bdfb861306f7a67b17c","searchable":1,"quickSearch":1,"filterable":1}, 
 
 {"key": "侠客","name": "🛳️┃侠客┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/heihei","jar":"http://cdn.qiaoji8.com/fix1209.jar;md5;3021d0a39a4959c487437ccd2bdba75b"},
-{"key": "超神","name": "⛩️┃超神┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/chaoshen","jar":"http://cdn.qiaoji8.com/fix1209.jar;md5;3021d0a39a4959c487437ccd2bdba75b"},
 {"key": "君离","name": "🐶┃君离┃巧技","type": 3,"api": "csp_Skapp","playerType": 2,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/junli","jar":"http://cdn.qiaoji8.com/fix1209.jar;md5;3021d0a39a4959c487437ccd2bdba75b"},
 {"key":"贱贱","name":"🐭┃玩偶┃荐片","type":3,"searchable":1,"quickSearch":1,"changeable":1,"playerType":"1","api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/jp.js"},
 //{"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
