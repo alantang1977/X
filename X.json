@@ -49,7 +49,7 @@
 //{"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
 {"key":"csp_kuaikan","name":"🍈┃快看┃影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1,"ext":"","jar":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/Yoursmile.jar;md5;04180CE2616B3C901C95931E45F7FB73"},
 //{"key":"kkys","name":"👁️┃快看┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/cat/kkys_open.js"},	
-	
+{"key":"电影","name":"🗽┃电影┃App","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,"ext": "FbjPcVZY48PN/RIZ5QqOrspkJ4ZHF98MCHVX87i5y01XUNSIsT3IgxCP9qyzByO7aWmK03MmmHYwQmNlCJx9KFpYWNSc3hbeLTlD3SAclaw3AOnn"},	
 {"key": "加速","name": "🐰┃加速┃影视","type": 3,"jar": "http://luoye.shop/b.jar;md5;bb155c3f0133bbce4756ad52003f5968","api": "csp_AppYs","searchable": 1,"quickSearch": 1,"ext": "http://m.hhssyyss.icu/ruifenglb_api.php/v1.vod"},
 {"key":"csp_Auete","name":"🐼┃Auete┃影视","type": 3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "迪迪","name": "🌈┃迪迪┃追剧","api": "csp_AppYsV2","type": 3,"playerType": 2,"searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "https://api123.adys.app/xgapp.php/v3/"},
