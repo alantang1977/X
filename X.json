@@ -33,27 +33,8 @@
 //{"key": "dr_好趣网","name":"📺┃电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 //{"key": "直播转点播","name": "🐼┃电视┃直播","type": 3,"searchable": 0,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/live2vod.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/feimaolive.json"},
 {"key": "阿里夸克配置","name": "🐧┃阿里夸克配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"style": {"type": "rect","ratio": 1},"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.nogo.jar;md5;98a126d121484c6bf04ca32e5304efca"},
-{
-            "key": "ppp",
-            "name": "ppp┃BPQ",
-            "type": 3,
-            "searchable": 1,
-            "quickSearch": 1,
-            "api": "csp_XBPQ",
-            "ext": {
-                "直接播放":"1",
-                "嗅探词": "m3u8#.m3u8",
-                "数组": "<figure class=\"aspect-ratio\">&&</a",
-                "图片": "data-src=\"&&\"",
-                "标题": "alt=\"&&\"",
-                "链接": "href=\"&&\"",
-                "搜索url":"https://ppp.porn/search/{wd}/",
-                "搜索图片": "data-src=\"&&\"",
-                "搜索数组": "<figure class=\"aspect-ratio\">&&</a",
-                "分类url": "https://ppp.porn/categories/{cateId}/{catePg}/;;a",
-                "分类": "china-av$china-av"
-            }
-        },	
+
+	
 ##高清4K系列
 //{"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
 //{"key": "賤賤","name": "🐝┃蜜蜂┃荐片","type": 3,"api": "csp_Jianpian","searchable": 1,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/jianpian.json","jar":"https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;f4fa24d313b7290001db8ef49bd8ae0b"},
