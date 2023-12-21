@@ -31,7 +31,7 @@ https://already.free.hr/
 ------
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
 
-https://jm.dovxi.repl.co/api?url=http://我不是.肥猫.love:63/接口禁止贩卖
+https://jm.dovxi.repl.co/api?url=http://肥猫.live
 
 https://xn--sss604efuw.top/jm/ 解密
 
