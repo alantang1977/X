@@ -43,74 +43,6 @@ CCTV17农业农村,http://120.196.232.43:8088/rrs03.hw.gmcc.net/PLTV/651/224/322
 4K,http://live.aishang.ctlcdn.com/00000110240282_1/playlist.m3u8?CONTENTID=00000110240282_1&AUTHINFO=FABqh274XDn8fkurD5614t%2B1RvYajgx%2Ba3PxUJe1SMO4OjrtFitM6ZQbSJEFffaD35hOAhZdTXOrK0W8QvBRom%2BXaXZYzB%2FQfYjeYzGgKhP%2Fdo%2BXpr4quVxlkA%2BubKvbU1XwJFRgrbX%2BnTs60JauQUrav8kLj%2FPH8LxkDFpzvkq75UfeY%2FVNDZygRZLw4j%2BXtwhj%2FIuXf1hJAU0X%2BheT7g%3D%3D&USERTOKEN=eHKuwve%2F35NVIR5qsO5XsuB0O2BhR0KR
 4K,http://live.aishang.ctlcdn.com/00000110240282_1/encoder/0/playlist.m3u8?CONTENTID=00000110240282_1&AUTHINFO=FABqh274XDn8fkurD5614t%2B1RvYajgx%2Ba3PxUJe1SMO4OjrtFitM6ZQbSJEFffaD35hOAhZdTXOrK0W8QvBRom%2BXaXZYzB%2FQfYjeYzGgKhP%2Fdo%2BXpr4quVxlkA%2BubKvbU1XwJFRgrbX%2BnTs60JauQUrav8kLj%2FPH8LxkDFpzvkq75UfeY%2FVNDZygRZLw4j%2BXtwhj%2FIuXf1hJAU0X%2BheT7g%3D%3D&USERTOKEN=eHKuwve%2F35NVIR5qsO5XsuB0O2BhR0KR
 
-
-🏀体育🏀,#genre#
-CCTV5体育,http://120.196.232.31:8088/rrs03.hw.gmcc.net/PLTV/651/224/3221226731/1.m3u8
-CCTV5+,http://120.196.232.51:8088/rrs03.hw.gmcc.net/PLTV/651/224/3221226711/1.m3u8
-緯來體育台,http://cloud.yumixiu768.com/tmp/123.m3u8
-高尔夫网球,http://hls.live.cqccn.com/__cl/cg:live/__c/golfHD/__op/default/__f/index.m3u8
-风云足球,http://hls.live.cqccn.com/__cl/cg:live/__c/fyzqHD/__op/default/__f/index.m3u8
-央视台球,http://hls.live.cqccn.com/__cl/cg:live/__c/ystqHD/__op/default/__f/index.m3u8
-魅力足球,mitv://generationnexxxt.com:19806/61bcf24fc6eb4fd482d3519687e2aaf4
-广东体育,mitv://generationnexxxt.com:19806/99a6d27c4aff4490aaf7cdeb53af3382
-SkySportsGolf,mitv://generationnexxxt.com:19806/502e2c431333474a9bda98a37b5152f0
-SkySportsPremierLeague,mitv://generationnexxxt.com:19806/89decf25269a434db9dd2d273ec8ce20
-AstroArena,mitv://generationnexxxt.com:19806/c046c74b43184a9bac5b0e402944aca5
-AstroSuperSport,mitv://generationnexxxt.com:19806/8f8ad3ee6aa54ccbac64314553dfa1fa
-AstroSuperSport2,mitv://generationnexxxt.com:19806/650d4fca00064e791dd4dbcd16fd08c0
-AstroSuperSport3,mitv://generationnexxxt.com:19806/5b9b9986c20244908be60c3f18a3e435
-AstroSuperSport4,mitv://generationnexxxt.com:19806/c7f1be20958243f68c943016c446501e
-beINSports3,mitv://generationnexxxt.com:19806/83bd4463c62048dea6aafba5e1a81b23
-WWE,mitv://generationnexxxt.com:19806/32e0838eeab84b3a96297dcceca27f5a
-纬来育乐台,mitv://generationnexxxt.com:19806/1c01d19bb92648ffb41ab523049ad9b3
-纬来体育台,mitv://generationnexxxt.com:19806/7162c44a105a42d98d12598c8125ce3e
-ELEVEN体育1台,mitv://generationnexxxt.com:19806/e4cdf815d5aa423788c2ade14e105e17
-Z频道,mitv://generationnexxxt.com:19806/b103d1fd81b241f1a4912ef70319de24
-JSports1,mitv://generationnexxxt.com:19806/3bf47ad3b3514230bd24efe7178aee5e
-JSports2,mitv://generationnexxxt.com:19806/1dec0300cce54ba5853fd5aadc349595
-JSports3,mitv://generationnexxxt.com:19806/1a9fd30d67f8480490d1fe07440658b5
-JSports4,mitv://generationnexxxt.com:19806/f7915841f9c04692b3c336849b8ed00c
-SkynetSportsHD,mitv://generationnexxxt.com:19806/64f03b7d000cf732ac3d879228791c70
-SkynetSports2,mitv://generationnexxxt.com:19806/64f03b7e0004ca5cac3d89676c3c51df
-SkynetSports5,mitv://generationnexxxt.com:19806/64f03b7f0003688dac3d8cf1521c6e9f
-SkynetSports6,mitv://generationnexxxt.com:19806/64f03b7e000b23c7ac3d8b0d775b55a1
-FightSports,mitv://generationnexxxt.com:19806/7375a5f151c047b294a8e8c6ddad178d
-ESPN,mitv://generationnexxxt.com:19806/2436baa9e481444fa785298d5931bdba
-HKC18,mitv://generationnexxxt.com:19806/140377dc9e0848678d614d451d69af9e
-爱尔达体育1台(备),mitv://generationnexxxt.com:19806/9f401efc1d8a45329329cb3457ea5375
-爱尔达体育2台,mitv://generationnexxxt.com:19806/575fe3524d304461adb595eacc5c903a
-TRACESportStars,mitv://generationnexxxt.com:19806/16657eb5cc2d44b69cb7f5b06e9ff71b
-博斯高球,mitv://generationnexxxt.com:19806/9c6d033a8ff5410bba74ce0a5a0a0652
-博斯高球二台,mitv://generationnexxxt.com:19806/7c7d00473cc44f4f8436601f5720a0df
-博斯网球台,mitv://generationnexxxt.com:19806/aa54c9e62b154fcfb0c568fb74d9b4b9
-博斯魅力网,mitv://generationnexxxt.com:19806/f2e1e55184564bee92956a7ae5324417
-博斯无限台,mitv://generationnexxxt.com:19806/b500fc5e9f5e43b39a4877127df0779d
-博斯无限二台,mitv://generationnexxxt.com:19806/6256822d07d8419c8380c0f9e0cde599
-SPOTV,mitv://generationnexxxt.com:19806/60ad67b765414b32882a24ce6c63808a
-博斯运动,mitv://generationnexxxt.com:19806/4e2a73090aa041628d3bc582d69cfb03
-ELEVEN体育2台,mitv://generationnexxxt.com:19806/87eb5c020cad40bfb74af3bf4777fcba
-智林体育台,mitv://generationnexxxt.com:19806/26f4cd19aef641dc9809dc663eddcafd
-博斯运动二台,mitv://generationnexxxt.com:19806/1825c70473b84585acec262b8915991b
-beINSports,mitv://generationnexxxt.com:19806/eefa5931a750470d8a3267932e36c644
-TechStorm,mitv://generationnexxxt.com:19806/170abdd7bed443e09d7ef99f9512582c
-EurosportHD,mitv://generationnexxxt.com:19806/65159769000b9a153e2ca23c14c042d2
-AstroSuperSport5,mitv://generationnexxxt.com:19806/d41f257d25e54a0aa09227bde87eccf5
-NBA,mitv://generationnexxxt.com:19806/65159b8e000aa81c3e3cd2861b6b31f1
-beINSports2,mitv://generationnexxxt.com:19806/0d857c6ac77d4cd58f0153c47a6804d5
-爱尔达体育1台,mitv://generationnexxxt.com:19806/e59ca679d4a44907ad66df6679d972d6
-爱尔达体育3台,mitv://generationnexxxt.com:19806/d94310f2cae94917b57a10a47635a8b9
-爱尔达体育4台,mitv://generationnexxxt.com:19806/35206e8840124245be0e95b04cae102a
-SkySportsF1,mitv://generationnexxxt.com:19806/5c3a147369fb49bdb0a97859aef87b78
-SkySportsArena,mitv://generationnexxxt.com:19806/8519ae1db7da40149a83069cbfd48d23
-SkySportsMainEvent,mitv://generationnexxxt.com:19806/d80cfc5272f14b4bb675b1c8644ad4c7
-SkySportsCricket,mitv://generationnexxxt.com:19806/d342ec6589c24499b5f806408bea4ae8
-SkySportsAction,mitv://generationnexxxt.com:19806/d627b2c21c264a13afa935d214060989
-GolfChannel,mitv://generationnexxxt.com:19806/64c9fed20006029d16e0744a41d351cd
-
-
-
-
-
 ⭐岗岗⭐,#genre#
 香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
 香港凤凰卫视资讯台,http://223.109.210.41/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52002/2300.m3u8
@@ -140,7 +72,7 @@ TVB星河,http://113.117.74.18:8081/hls/135/index.m3u8
 环球电视,http://zb.xzxwhcb.com:9999/hls/world.m3u8
 
 
-
+⭐港港⭐,#genre#
 明珠台,http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxEzv3SLBhKEUmYG73triGDY/ts
 明珠台,http://ainm.cc/a/play/php/gudou.php?id=mzt
 明珠台,https://pi.0472.org/tv/mzt.php?auth=2310201855
@@ -214,8 +146,6 @@ hks,https://epg.pw/stream/0eab6241cf13ac3d52485869be7750cdf3d4366792dd4ac805449d
 寰宇新聞,http://81.69.20.196/mqlive.m3u8?ip=61.220.72.26:1888&id=live1222
 壹新聞,http://81.69.20.196/mqlive.m3u8?ip=61.220.72.26:1888&id=live1242
 年代新聞,http://81.69.20.196/mqlive.m3u8?ip=61.220.72.26:1888&id=live1192
-
-
 
 民视,mitv://generationnexxxt.com:19806/097f5c26e07342108fdbc51ad4a716a3
 中视,mitv://generationnexxxt.com:19806/fe733e3cf7ec46abbdfdeeca8db72038
@@ -1132,27 +1062,6 @@ sheep张艺兴,https://vdse.bdstatic.com/971347deaddd6fdb5ada6e87e4722ece.mp4?au
 鳄鱼出海,https://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/7bdf23a599b44a7c8308684cbb789da0/1200.m3u8
 
 
-
-
-⭕公共⭕,#genre#
-浙江公共 (1080p) [Not 24/7][1920*1080][1920*1080][1920*1080],http://hw-m-l.cztv.com/channels/lantian/channel07/1080p.m3u8
-三明公共 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://stream.smntv.cn/smtv2/playlist.m3u8
-韶关公共台 (720p) [Not 24/7][1920*1080][1920*1080][1920*1080],https://www.sgmsw.cn/videos/tv/201805/1308/9P424TC5M000AFO13CXK6GN6BOA889D2/hls/live.m3u8
-济宁公共 (450p)[800*450][800*450][800*450],http://lives.jnnews.tv/video/s10001-JTV3/index.m3u8
-孟州公共 (1080p) [Not 24/7][1920*1080][1920*1080][1920*1080],http://live.dxhmt.cn:9081/tv/10883-1.m3u8
-南宁公共 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://hls.nntv.cn/nnlive/NNTV_PUB_A.m3u8
-红牛REDBULL TV (720p)[1280*720][1280*720][1280*720],https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8
-武汉文体 (480p)[640*484][640*484][640*484],http://stream.appwuhan.com/5tzb/sd/live.m3u8
-浙江休闲 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://hw-m-l.cztv.com/channels/lantian/channel06/720p.m3u8
-浙江少儿 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://hw-m-l.cztv.com/channels/lantian/channel08/720p.m3u8
-浙江留学 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://hw-m-l.cztv.com/channels/lantian/channel09/720p.m3u8
-浙江国际 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://hw-m-l.cztv.com/channels/lantian/channel10/720p.m3u8
-蕭山生活頻道 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://l.cztvcloud.com/channels/lantian/SXxiaoshan2/720p.m3u8
-南京少儿 (720p) [Not 24/7][1280*720][1280*720][1280*720],http://live.nbs.cn/channels/njtv/sepd/m3u8:500k/live.m3u8
-南京信息 (720p)[1280*720][1280*720][1280*720],http://live.nbs.cn/channels/njtv/xxpd/m3u8:500k/live.m3u8
-浙江 Ⅰ 绍兴影视 (720p)[1280*720][1280*720][1280*720],http://live.shaoxing.com.cn/video/s10001-sxtv3/index.m3u8
-延边卫视 (720p)[1280*720][1280*720][1280*720],http://live.ybtvyun.com/video/s10016-7e5f23de35df/index.m3u8
-
 🌓风景🌓,#genre#
 直播中国,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
 直播中国精编直播,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8
@@ -1458,73 +1367,6 @@ sheep张艺兴,https://vdse.bdstatic.com/971347deaddd6fdb5ada6e87e4722ece.mp4?au
 恩菲尔德灵异事件04,https://v.cdnlz12.com/20231027/10730_29b033d2/2000k/hls/mixed.m3u8
 
 
-
-⛲堆堆⛲,#genre#
-埋堆堆1,http://43.128.40.42:198/虎牙直播/huya.php?id=23749096
-埋堆堆2,http://43.128.40.42:198/虎牙直播/huya.php?id=23735126
-埋堆堆3,http://43.128.40.42:198/虎牙直播/huya.php?id=23865152
-埋堆堆4,http://43.128.40.42:198/虎牙直播/huya.php?id=23903196
-埋堆堆5,http://43.128.40.42:198/虎牙直播/huya.php?id=23740156
-埋堆堆6,http://43.128.40.42:198/虎牙直播/huya.php?id=23728660
-埋堆堆7,http://43.128.40.42:198/虎牙直播/huya.php?id=23865058
-埋堆堆8,http://43.128.40.42:198/虎牙直播/huya.php?id=23734183
-埋堆堆9,http://43.128.40.42:198/虎牙直播/huya.php?id=23865036
-埋堆堆10,http://43.128.40.42:198/虎牙直播/huya.php?id=23734246
-埋堆堆11,http://43.128.40.42:198/虎牙直播/huya.php?id=23863796
-埋堆堆12,http://43.128.40.42:198/虎牙直播/huya.php?id=23749083
-埋堆堆13,http://43.128.40.42:198/虎牙直播/huya.php?id=23824164
-埋堆堆14,http://43.128.40.42:198/虎牙直播/huya.php?id=23863804
-埋堆堆15,http://43.128.40.42:198/虎牙直播/huya.php?id=23865142
-埋堆堆16,http://43.128.40.42:198/虎牙直播/huya.php?id=23903183
-埋堆堆17,http://43.128.40.42:198/虎牙直播/huya.php?id=23903130
-埋堆堆18,http://43.128.40.42:198/虎牙直播/huya.php?id=23734169
-埋堆堆19,http://43.128.40.42:198/虎牙直播/huya.php?id=23728674
-埋堆堆20,http://43.128.40.42:198/虎牙直播/huya.php?id=23735153
-埋堆堆21,http://43.128.40.42:198/虎牙直播/huya.php?id=23749068
-埋堆堆22,http://43.128.40.42:198/虎牙直播/huya.php?id=23740162
-埋堆堆23,http://43.128.40.42:198/虎牙直播/huya.php?id=23829474
-埋堆堆24,http://43.128.40.42:198/虎牙直播/huya.php?id=23863833
-埋堆堆25,http://43.128.40.42:198/虎牙直播/huya.php?id=23903106
-埋堆堆26,http://43.128.40.42:198/虎牙直播/huya.php?id=23865025
-埋堆堆27,http://43.128.40.42:198/虎牙直播/huya.php?id=23728689
-埋堆堆28,http://43.128.40.42:198/虎牙直播/huya.php?id=23824171
-埋堆堆29,http://43.128.40.42:198/虎牙直播/huya.php?id=23860057
-埋堆堆30,http://43.128.40.42:198/虎牙直播/huya.php?id=23865072
-埋堆堆31,http://43.128.40.42:198/虎牙直播/huya.php?id=23734176
-埋堆堆32,http://43.128.40.42:198/虎牙直播/huya.php?id=23728651
-埋堆堆33,http://43.128.40.42:198/虎牙直播/huya.php?id=23865179
-埋堆堆34,http://43.128.40.42:198/虎牙直播/huya.php?id=23734196
-埋堆堆35,http://43.128.40.42:198/虎牙直播/huya.php?id=23734211
-埋堆堆36,http://43.128.40.42:198/虎牙直播/huya.php?id=23865086
-埋堆堆37,http://43.128.40.42:198/虎牙直播/huya.php?id=23863822
-埋堆堆38,http://43.128.40.42:198/虎牙直播/huya.php?id=23734243
-埋堆堆39,http://43.128.40.42:198/虎牙直播/huya.php?id=23864480
-埋堆堆40,http://43.128.40.42:198/虎牙直播/huya.php?id=23746486
-埋堆堆41,http://43.128.40.42:198/虎牙直播/huya.php?id=23860049
-埋堆堆42,http://43.128.40.42:198/虎牙直播/huya.php?id=23749074
-埋堆堆43,http://43.128.40.42:198/虎牙直播/huya.php?id=23863882
-埋堆堆44,http://43.128.40.42:198/虎牙直播/huya.php?id=23863778
-埋堆堆45,http://43.128.40.42:198/虎牙直播/huya.php?id=23829537
-埋堆堆46,http://43.128.40.42:198/虎牙直播/huya.php?id=23863809
-埋堆堆47,http://43.128.40.42:198/虎牙直播/huya.php?id=23865096
-埋堆堆48,http://43.128.40.42:198/虎牙直播/huya.php?id=23728630
-埋堆堆49,http://43.128.40.42:198/虎牙直播/huya.php?id=23863895
-埋堆堆50,http://43.128.40.42:198/虎牙直播/huya.php?id=23863787
-埋堆堆51,http://43.128.40.42:198/虎牙直播/huya.php?id=23728637
-埋堆堆52,http://43.128.40.42:198/虎牙直播/huya.php?id=23903085
-埋堆堆53,http://43.128.40.42:198/虎牙直播/huya.php?id=23728647
-埋堆堆54,http://43.128.40.42:198/虎牙直播/huya.php?id=23746691
-埋堆堆55,http://43.128.40.42:198/虎牙直播/huya.php?id=23829447
-埋堆堆56,http://43.128.40.42:198/虎牙直播/huya.php?id=23728693
-埋堆堆57,http://43.128.40.42:198/虎牙直播/huya.php?id=23734223
-埋堆堆58,http://43.128.40.42:198/虎牙直播/huya.php?id=23865124
-埋堆堆59,http://43.128.40.42:198/虎牙直播/huya.php?id=23865186
-埋堆堆60,http://43.128.40.42:198/虎牙直播/huya.php?id=23902225
-埋堆堆61,http://43.128.40.42:198/虎牙直播/huya.php?id=23903164
-埋堆堆62,http://43.128.40.42:198/虎牙直播/huya.php?id=23863818
-
-
-
 🎈少儿🎈,#genre#
 哈哈炫动,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226213/index.m3u8
 南京少兒,http://live.nbs.cn/channels/njtv/sepd/m3u8:500k/live.m3u8
@@ -1540,9 +1382,6 @@ sheep张艺兴,https://vdse.bdstatic.com/971347deaddd6fdb5ada6e87e4722ece.mp4?au
 熊大熊二,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/1733da751de64e6e910abda889d87a26/1200.m3u8
 狮子王國,https://newcntv.qcloudcdn.com/asp/hls/850/0303000a/3/default/c2e7e767f3144bed959ef20b8b961fe5/850.m3u8
 key=0b292c335e5837e947f9409c59228f3e6
-
-
-
 
 
 🌎国际🌎,#genre#
