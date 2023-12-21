@@ -369,6 +369,19 @@
 		{"key":"SeedHub","name":"🐧┃SeedHub┃App","type":3,"api":"csp_SeedHub","changeable":1, "timeout":60},
 		{"key":"AList","name":"🐧┃网盘┃Alist┃App","type":3,"api":"csp_AList","searchable":1,"filterable":1,"changeable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/alistjar.json"},
 		{
+			"key": "JustLive",
+			"name": "🐧┃JustLive",
+			"type": 3,
+			"api": "csp_JustLive",
+			"searchable": 1,
+			"changeable": 0
+		},
+		{"key":"drpy_js_酷吧","name":"🐧┃酷吧[js]|磁","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/kuba.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"BLSGod","name":"🐧┃BLSGod|磁","type":3,"api":"csp_BLSGod","changeable":1, "timeout":60},
+		{"key":"Xunlei8","name":"🐧┃Xunlei8|磁","type":3,"api":"csp_Xunlei8","changeable":1, "timeout":60},
+		{"key":"SeedHub","name":"🐧┃SeedHub|磁","type":3,"api":"csp_SeedHub","changeable":1, "timeout":60},
+		{"key":"AList","name":"🐧┃网盘|Alist[jar]","type":3,"api":"csp_AList","searchable":1,"filterable":1,"changeable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/alistjar.json"},
+		{
 			"key": "888解忧愁",
 			"name": "🐧┃888解忧愁┃App",
 			"type": 4,
