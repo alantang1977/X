@@ -1,4 +1,15 @@
-［港澳台］,#genre#
+🦁丨广州专区,#genre#
+广州综合,http://nas.jdshipin.com:8801/gztv.php?id=zhonghe
+广州新闻,http://nas.jdshipin.com:8801/gztv.php?id=xinwen
+广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
+广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
+广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
+静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
+静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
+
+🦁丨［港澳台］,#genre#
 凤凰中文,http://180.97.247.27/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52003/index.m3u8
 凤凰资讯,http://180.97.247.27/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52002/index.m3u8
 凤凰中文,http://php.17186.eu.org/phtv/fhzw.m3u8
