@@ -81,6 +81,8 @@
 		{"key":"Panta","name":"🐧┃盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1"},
 		{"key":"YunSo","name":"🐧┃小云|搜索","type":3,"api":"csp_YunSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
 		{"key": "新6V","name": "🐧┃新6V┃App","type": 3,"api": "csp_Xb6v","searchable": 1,"changeable": 1,"timeout": 60,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"},
+		{"key":"DaPanSo","name":"🐧┃大盘搜|网盘","type":3,"api":"csp_DaPanSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://dapanso.com$$$null"},
+		{"key":"Qianfan","name":"🐧┃千帆|网盘","type":3,"api":"csp_Qianfan","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://pan.qianfan.app$$$null$$$QianFanID="},
 		{
 			"key": "NanGua",
 			"name": "🐧┃南瓜┃App",
