@@ -44,7 +44,7 @@
 //{"key":"csp_woggcli","name":"☣️┃阿里┃玩偶俊哥","type":4,"api":"http://home.jundie.top:9520/spider/csp_Wogg?sort=原画,蓝光,超清,高清&token=8e14121f900f4bdfb861306f7a67b17c","searchable":1,"quickSearch":1,"filterable":1}, 
 
 ##小米系列	
-{"key": "亮亮","name": "🔅┃亮亮┃APP","type": 3,"jar": "http://luoye.shop/c.jar;md5;bb155c3f0133bbce4756ad52003f5968","api": "csp_AppYsV2","ext": "http://api.jialiangos.com:65533/api.php/app/","searchable": 1,"quickSearch": 1,"changeable": 0},
+{"key": "亮亮","name": "🔅┃亮亮┃影视","type": 3,"jar": "http://luoye.shop/c.jar;md5;bb155c3f0133bbce4756ad52003f5968","api": "csp_AppYsV2","ext": "http://api.jialiangos.com:65533/api.php/app/","searchable": 1,"quickSearch": 1,"changeable": 0},
 {"key": "加速","name": "🐰┃加速┃影视","type": 3,"jar": "http://luoye.shop/b.jar;md5;bb155c3f0133bbce4756ad52003f5968","api": "csp_AppYs","searchable": 1,"quickSearch": 1,"ext": "http://m.hhssyyss.icu/ruifenglb_api.php/v1.vod"},
 {"key": "赞赞","name": "➕┃赞赞┃切片","type": 3,"api": "https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext": "https://agit.ai/xiaohewanwan/TVBox/raw/branch/master/js/zanzan.js","searchable": 1,"quickSearch": 1,"changeable": 0},
 
@@ -56,7 +56,7 @@
 //{"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
 {"key":"csp_kuaikan","name":"🍈┃快看┃影视","type":3,"api":"csp_Kuaikan","searchable":1,"quickSearch":1,"filterable":1,"ext":"","jar":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/Yoursmile.jar;md5;04180CE2616B3C901C95931E45F7FB73"},
 //{"key":"kkys","name":"👁️┃快看┃影视","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/cat/kkys_open.js"},	
-{"key":"电影","name":"🗽┃电影┃App","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,"ext": "FbjPcVZY48PN/RIZ5QqOrspkJ4ZHF98MCHVX87i5y01XUNSIsT3IgxCP9qyzByO7aWmK03MmmHYwQmNlCJx9KFpYWNSc3hbeLTlD3SAclaw3AOnn"},	
+{"key":"电影","name":"🗽┃电影┃影视","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,"ext": "FbjPcVZY48PN/RIZ5QqOrspkJ4ZHF98MCHVX87i5y01XUNSIsT3IgxCP9qyzByO7aWmK03MmmHYwQmNlCJx9KFpYWNSc3hbeLTlD3SAclaw3AOnn"},	
 {"key":"csp_Auete","name":"🐼┃Auete┃影视","type": 3,"api":"csp_Auete","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "迪迪","name": "🌈┃迪迪┃追剧","api": "csp_AppYsV2","type": 3,"playerType": 2,"searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "https://api123.adys.app/xgapp.php/v3/"},
 //{"key":"4KHDR","name":"🥈┃4KHDR┃网盘","type":3,"api":"csp_FourKHDR","ext":"./lib/token.txt$$$./lib/4khdr.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03", "quickSearch":1, "changeable":1, "timeout":60},
@@ -87,7 +87,7 @@
 //{"key": "dr_搜狐","name":"🦊┃狐狐TV┃官源","type":3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/搜狐.js"},
 
 ##饭太硬
-{"key":"忍者","name":"🤖┃忍者┃App","type":3,"api":"csp_MYYS","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://rzys.xyz"},
+{"key":"忍者","name":"🤖┃忍者┃影视","type":3,"api":"csp_MYYS","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://rzys.xyz"},
 {"key": "河马","name":"🏇┃河马┃影视","type": 3,"api": "csp_Hmys","playerType": 1,"ext": "https://m.jmzp.net.cn"},
 {"key":"觅视频","name":"🗽┃觅视频┃影视","type":3,"api":"csp_AppSK","searchable":1,"quickSearch":1,"changeable":1,"ext": "FbjPcVZY48PN/RIZ5QqOrsp7KctTA8JSVjVJ8fb33R8KUNSIsT3IgxCP9qyzByO7Z2qR3Ggpjn8kS2NlCJx9KFpYWtqe0x/XKTtG3SAclaw3AOm0fS9oLx2taGFszsP3uHWHa4dyHdIm90tKvADyREgKNL3k7R5QNMNVLiUM"},
 {"key": "快影","name": "👻┃快影吧┃影视","type": 3,"api": "csp_AppYsV2","playerType": 2,"searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "http://iosa.xn--654a.cc/api.php/app/"},
