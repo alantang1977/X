@@ -85,9 +85,7 @@
 		{"key":"Qianfan","name":"🐧┃千帆|网盘","type":3,"api":"csp_Qianfan","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://pan.qianfan.app$$$null$$$QianFanID="},
 		{"key":"Libvio","name":"LIBVIO|网盘","type":3,"api":"csp_Libvio","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.libvio.vip$$$null"},
 		{"key":"PanSearch","name":"PanSearch|网盘","type":3,"api":"csp_PanSearch","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
-	        {"key":"QuarkPanso","name":"夸克盘搜|夸克","type":3,"api":"csp_QuarkPanso","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
-	
-		
+	      
 		{
 			"key": "NanGua",
 			"name": "🐧┃南瓜┃App",
