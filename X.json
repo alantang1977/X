@@ -50,8 +50,8 @@
 {"key": "赞赞","name": "➕┃赞赞┃切片","type": 3,"api": "https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext": "https://agit.ai/xiaohewanwan/TVBox/raw/branch/master/js/zanzan.js","searchable": 1,"quickSearch": 1,"changeable": 0},
 
 	
-{"key": "侠客","name": "🛳️┃侠客┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/heihei","jar":"http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"},
-{"key": "君离","name": "🐶┃君离┃巧技","type": 3,"api": "csp_Skapp","playerType": 2,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/junli","jar":"http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"},
+//{"key": "侠客","name": "🛳️┃侠客┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/heihei","jar":"http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"},
+//{"key": "君离","name": "🐶┃君离┃巧技","type": 3,"api": "csp_Skapp","playerType": 2,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/junli","jar":"http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"},
 {"key":"贱贱","name":"🐭┃玩偶┃荐片","type":3,"searchable":1,"quickSearch":1,"changeable":1,"playerType":"1","api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/jp.js"},
 {"key":"校长影视","name":"🎏┃校长┃影视","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$null$$$1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
 //{"key":"Hdhive","name":"🥇┃阿里┃影巢","type":3,"api":"csp_Hdhive","ext":"./lib/token.txt$$$","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
