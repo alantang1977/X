@@ -33,7 +33,7 @@
 //{"key": "dr_好趣网","name":"📺┃电视┃直播","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/好趣网.js"},
 //{"key": "直播转点播","name": "🐼┃电视┃直播","type": 3,"searchable": 0,"api": "https://agit.ai/alanchaotang/if/raw/branch/main/js/live2vod.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/feimaolive.json"},
 {"key": "阿里夸克配置","name": "🐧┃阿里夸克配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"style": {"type": "rect","ratio": 1},"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
-
+{"key": "AList","name": "🅱┃网盘小雅","type": 3,"api": "csp_AListBox","searchable": 1,"changeable": 0,"jar":"./xy.jar","ext":"https://api.zalman2022.repl.co/xiaoya.json#原画","style": {"type": "list"}},
 	
 ##高清4K系列
 //{"key":"[T4]荐片","name":"🚧┃俊俊┃荐片","type":4,"api":"http://home.jundie.top:9520/spider/csp_JP","searchable":1,"quickSearch":1,"filterable":1},
