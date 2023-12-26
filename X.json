@@ -145,6 +145,29 @@
 				"线路二次截取": "<div class=\"swiper-wrapper\"&&</div>",
 				"分类url": "https://haoxi.vip/vodshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}/;;a",
 				"分类": "电影$1#电视剧$2#综艺$3#动漫$4#B站$5#电影解说$43"}},
+{
+            "key": "csp_XBPQ_爱妃",
+            "name": "🌹爱妃",
+            "click":"document.getElementsByClassName('fp-play')[0].click()",
+            "type": 3,
+            "style": {
+                "type": "rect",
+                "ratio": 1.755
+            },
+            "api": "csp_XBPQ",
+            "ext":{"分类url":"https://tktube.com/categories/{cateId}/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=0{catePg}",
+            "直接播放":"1",
+            "搜索模式":"1",
+            "搜索url":"https://tktube.com/search/{wd}/",
+            "搜索链接":"href=\"&&\"",
+            "搜索数组":"class=\"item&&</strong>",
+            "搜索标题":"alt=\"&&\"",
+            "标题":"alt=\"&&\"",
+            "过滤词":"b-hls-19.doppiocdn.org#edge-hls.doppiocdn.org#edge-hls.doppiocdn.com#doppiocdn#aucdn.net#b-hls-11.doppiocdn.org#pv.tkcns.com#mp4.jpg#static.javhdhello.com#s3t3d2y8.afcdn.net",
+            "嗅探词":"m3u8#.mp4",
+            "分类": "日本步兵$7c26fad3901898582e98669f503d20de#fc2$fc2#破解版本$454545388bfe05b5b43cdc4fb9496ac6#国产精品$dcfdf51a95d382c8d30e69a5c11a8d91#中文字幕$8a0059a17039887e9a354fe90e91c1c8#korean-bj-dance$korean-bj-dance",
+            "数组":"class=\"item&&</a"}
+},
 	
 ##网络收集系列
 {"key": "骑骑","name": "🍁┃骐骐┃影院","type": 3,"playerType": 2,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://www.gsjtlxy.top/xgapp.php/v3/"},
