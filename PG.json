@@ -67,8 +67,8 @@
 			"playerType": 1,
 			"ext": "http://op.ysdqjs.cn$$$null$$$1"
 		},
-		{"key":"Wogg1","name":"🦁┃玩偶哥哥┃阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$https://api.wogg.xyz/$$$null$$$1$$$https://fm.t4tv.hz.cz/json/wogg.json"}, 
-		{"key":"Wogg","name":"🦁┃玩偶哥哥┃App","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$https://api.wogg.xyz/$$$null$$$1"},
+		//{"key":"Wogg1","name":"🦁┃玩偶哥哥┃阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$https://api.wogg.xyz/$$$null$$$1$$$https://fm.t4tv.hz.cz/json/wogg.json"}, 
+		//{"key":"Wogg","name":"🦁┃玩偶哥哥┃App","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$https://api.wogg.xyz/$$$null$$$1"},
 		
 		{"key":"Wogg","name":"玩偶哥哥|阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://api.wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/js/wogg.json"},
 		{"key":"影视车","name":"影视车|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/js/wogg.json"},
