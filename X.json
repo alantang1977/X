@@ -40,9 +40,8 @@
 ##高清4K系列
 {"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$弹"},
 
-{"key":"Wogg","name":"🏂┃阿里┃玩偶PG","type":3,"api":"csp_Wogg","searchable":1,"filterable":1,"changeable":0, "ext": {"token": "http://127.0.0.1:9978/file/TV/ali_token.txt","filter":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/wogg.json","cookie": "http://127.0.0.1:9978/file/TV/quark_cookie.txt","site": "https://www.weixine.net","danmu" : true}, "timeout": 25,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
-			
-//{"key": "玩偶","name": "🐝┃阿里┃玩偶蜜蜂","type": 3,"api": "csp_Wogg","searchable": 1,"changeable": 0,"ext": {"token": "影視天下第一","filter": "https://fm.t4tv.hz.cz/json/wogg.json"},"jar":"https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;9060b67dfec8782aca6e79ba17c0979b"},
+{"key":"Wogg","name":"🏂┃阿里┃玩偶PG","type":3,"api":"csp_Wogg","ext":"http://127.0.0.1:9978/file/tvbox/token.txt$$$https://wogg.xyz/","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03","filter":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/wogg.json"},
+				
 {"key":"运输车弹幕版","name":"☣️┃玩偶┃运输车","type":3,"api":"csp_Wogg","searchable":1,"filterable":1,"changeable":0, "ext": {"token": "http://127.0.0.1:9978/file/TV/ali_token.txt","filter": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/rm/wogg.json","cookie": "http://127.0.0.1:9978/file/TV/quark_cookie.txt","site": "https://www.weixine.net","danmu" : true}, "timeout": 25,"jar":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/okcaptain/okjar/main/ok.png;md5;EC8D466EACE49E09C82D3F60F60174AC"},
 	
 ##小米系列	
