@@ -70,6 +70,7 @@
 		{"key":"Wogg","name":"🦁┃玩偶哥哥┃阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://api.wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/js/wogg.json"},
 		{"key":"影视车","name":"🦁┃影视车┃网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$./lib/wogg.json"},
 		{"key":"Wobg","name":"🦁┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$./lib/wogg.json"},
+		{"key": "盘99","name": "📢┃盘玖玖","type": 3,"api": "csp_Pan99","searchable": 1,"changeable": 0,"ext": "/lib/tokenm.json"},		
 		{"key":"Hdhive","name":"🐧┃影巢┃App","type":3,"api":"csp_Hdhive","quickSearch":1, "changeable":1, "filterable":1, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$null$$$1"},
 		{"key":"Ppxzy","name":"🐧┃皮皮虾┃App","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$https://ppxzy.net/$$$null$$$1"},
 		{"key":"校长影视","name":"🐧┃校长影视┃App","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json$$$null$$$1"},
