@@ -1,3 +1,14 @@
+🦁广州专区🦁,#genre#
+广州综合,http://nas.jdshipin.com:8801/gztv.php?id=zhonghe
+广州新闻,http://nas.jdshipin.com:8801/gztv.php?id=xinwen
+广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
+广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
+广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+静态_广州新闻,https://justsometime.gztv.com/sec/xinwen.m3u8
+静态_广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+静态_广州影视,https://justsometime.gztv.com/sec/yingshi.m3u8
+静态_广州竞赛,https://justsometime.gztv.com/sec/jingsai.m3u8
+
 🌜央视🌛,#genre#
 CCTV1综合,http://120.196.232.19:8088/rrs03.hw.gmcc.net/PLTV/651/224/3221226737/1.m3u8
 CCTV2财经,http://120.196.232.54:8088/rrs03.hw.gmcc.net/PLTV/651/224/3221226739/1.m3u8
