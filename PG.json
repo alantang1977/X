@@ -28,6 +28,7 @@
 			"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokentemplate.json"
 		},
  		{"key":"Local","name":"🐧┃本地┃App","type":3,"api":"csp_Local"},
+		{"key":"PikPakShare","name":"🐧┃PikPak┃分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json.txt.gz"},
 		{
 			"key": "直播转点播",
 			"name": "🐧┃电视┃直播",
