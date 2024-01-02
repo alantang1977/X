@@ -25,25 +25,26 @@ def getlist(shareid, fileid):
     lines = content.split("\n")
     if "folder" not in content and len(lines)<=4:
         return
+    isfirst=True
     for line in lines:
+        if isfirst:
+            isfirst=False
+            print(f"first line:{line}",file=sys.stderr)
         linearr = line.split('\t')
         if len(linearr)>2:
-            if linearr[2] == "folder":
-                m = p.match(linearr[0])
-                if m:
-                    arr = m.group(1).split("/")
-                else:
-                    arr = linearr[0].split("/")
-                shareid=arr[0]
-                fileid=arr[1] if len(arr)>1 else ""
-                if shareid+"/"+fileid in sharedict:
-                    continue
-                print(line)
-                sys.stdout.flush()
-                getlist(shareid,fileid)
+            m = p.match(linearr[0])
+            if m:
+                arr = m.group(1).split("/")
             else:
-                print(line)
-                sys.stdout.flush()
+                arr = linearr[0].split("/")
+            shareid=arr[0]
+            fileid=arr[1] if len(arr)>1 else ""
+            if shareid+"/"+fileid in sharedict:
+                print(f"skip shareid{shareid} fileid:{fileid}", file=sys.stderr)
+                continue
+            print(line)
+            if linearr[2] == "folder":
+                getlist(shareid,fileid)
 
     
 def main():
