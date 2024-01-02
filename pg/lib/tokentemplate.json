@@ -18,11 +18,12 @@
 "thunder_vip_thread_limit":2,
 "thunder_flags":"4k|4kz|auto",
 "aliproxy":"",
+"aliproxy_url":"",
 "proxy":"",
 "open_api_url":"https://api.xhofe.top/alist/ali_open/",
 "danmu":true,
 "quark_danmu":true,
-"quark_cookie":"_UP_A4A_11_=wb8ff1cbd5be4d06b867bc1b903ec9c6; __ptu=f52e18ac937b855543aecb377337fb01AAT7fDP605MiY1diAfuZOVNOBRb4GPqWPBXNZP2Muhwhqi4RqM/jU4X2aW0mTAuhMeE=; __ptu_fix=fixed; _UP_D_=pc; __pus=9ff90d3b6d93bb6d199f382ba4446c1dAASw+fJK2hkSpu/XO45ZjLAR0Rxwoj08WnJABUpz9C1hxagTYocNkelr7katX2n+aVshz/uhAAVPS8uH1g9ltKdn; __kp=7831db20-a3b7-11ee-b86b-cd92dde41a03; __kps=AATpW7JHUWU6T2bvnJJk3xKF; __ktd=yV2PfIYsmkKTOi2B2KO5tA==; __uid=AATpW7JHUWU6T2bvnJJk3xKF; __puus=49fd0957a6c85512696cdca19161db66AAT4CPRxoXJP/bt1Kb7h7jxkaghKlfe3wavdoRlrxiC/GQWeGCfxa1+9MSfoPx2gLf03Le0S7OuINhGnz0lVORww1tLYwUpgkKJWLGnQJZzgbzmNAzeAThO5NwNSWp2h9xHF+gInbiHY6Ah8MXiG99GBaFwRLbhcRQURTI5yxrHIOVRpoRNTkb0oHphh4GkbTadTTobKgaNwCIdZrKgP+BdX",
+"quark_cookie":"",
 "uc_cookie":"",
 "thunder_username":"",
 "thunder_password":"",
@@ -36,5 +37,6 @@
 "pikpak_flags":"4k|auto",
 "pikpak_thread_limit":2,
 "pikpak_vip_thread_limit":2,
-"pikpak_proxy":""
+"pikpak_proxy":"",
+"pikpak_danmu":true
 }
