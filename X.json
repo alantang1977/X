@@ -44,7 +44,20 @@
 {"key": "盘99","name": "🍽️┃盘玖玖┃4K","type": 3,"api": "csp_Pan99","searchable": 1,"changeable": 0,"ext": "./pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},		
 {"key":"影视车","name":"🐸┃玩偶┃运输车","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$./lib/wogg.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;74657742aa46c4e4464281a5e652af03"},
 {"key": "439","name": "🌈┃肆叁玖┃🎏","type": 1,"api": "https://49zyw.com/api.php/provide/vod/","categories": ["国产剧","短剧","欧美剧","香港剧","动作片","爱情片","科幻片","恐怖片","剧情片","战争片","喜剧片","动画片","犯罪片","奇幻片","灾难片","悬疑片","其他片","韩国剧","台湾剧","泰国剧","日剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","日本动漫","欧美动漫","海外动漫","电影解说","体育赛事","海外剧","纪录片"]},
-	
+{
+            "key": "乐播",
+            "name": "乐播",
+            "type": 0,
+            "playUrl": "https://lbjx9.com/?url=",
+            "api": "https://lbapi9.com/api.php/provide/vod/at/xml/",
+            "header": {
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+                "Referer": "https://lbjx9.com/",
+                "Accept-Encoding": "identity;q=1, *;q=0",
+                "Range": "bytes=0-"
+            }
+        },	
 	
 ##小米系列	
 {"key": "亮亮","name": "🔅┃亮亮┃影视","type": 3,"jar": "http://luoye.shop/c.jar;md5;bb155c3f0133bbce4756ad52003f5968","api": "csp_AppYsV2","ext": "http://api.jialiangos.com:65533/api.php/app/","searchable": 1,"quickSearch": 1,"changeable": 0},
