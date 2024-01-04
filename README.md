@@ -203,17 +203,7 @@ https://dxawi.github.io/0/0.json
 
 配置:https://maoyingshi.cc/tvbox/云星日记/1.m3u8
 
-https://yydsys.top/duo/v.json
-
-https://yydsys.top/duo/v.json
-
-https://yydsys.top/duo/x.json
-
-https://yydsys.top/duo/o.json
-
-https://yydsys.top/duo/v.json
-
- ![2202_2012102321380600_超人哥哥](https://github.com/alantang1977/X/assets/107459091/6479c06d-33ce-4824-b272-44feafd5e915)
+![2202_2012102321380600_超人哥哥](https://github.com/alantang1977/X/assets/107459091/6479c06d-33ce-4824-b272-44feafd5e915)
 
 ------
 随机轮换壁纸：
