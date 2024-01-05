@@ -39,6 +39,8 @@ https://already.free.hr/
 
 # 🍑TVBox配置接口 （不分先后）
 ------
+解析大法：https://jm.n13.club/
+
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
 
 https://jm.dovxi.repl.co/api?url=http://肥猫.live
