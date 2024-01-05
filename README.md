@@ -37,7 +37,7 @@ https://mirror.ghproxy.com/https://raw.githubusercontent.com/
 
 https://already.free.hr/
 
-# 🍑TVBox配置接口 （不分先后）
+# 🍑TVBox配置接口
 ------
 # 🚁TVBox配置接口解密：https://jm.n13.club/
 
