@@ -39,7 +39,7 @@ https://already.free.hr/
 
 # 🍑TVBox配置接口
 ------
-# 🚁TVBox配置接口解密：https://jm.n13.club/
+## 🚁TVBox配置接口解密：https://jm.n13.club/
 
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
 
