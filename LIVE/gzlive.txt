@@ -1,4 +1,12 @@
-🚛央视频道,#genre#
+
+🦁丨广州专区,#genre#
+广州综合,http://nas.jdshipin.com:8801/gztv.php?id=zhonghe
+广州新闻,http://nas.jdshipin.com:8801/gztv.php?id=xinwen
+广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
+广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
+广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+
+🚒央视频道,#genre#
 CCTV1,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226231/index.m3u8
 CCTV2,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226195/index.m3u8
 CCTV3,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226397/index.m3u8
@@ -89,7 +97,7 @@ CCTV13,http://api2.52tb.xyz/info?id=15&token=20230326xflvzc
 CCTV14,http://api2.52tb.xyz/info?id=16&token=20230326xflvzc
 CCTV16,http://api2.52tb.xyz/info?id=18&token=20230326xflvzc
 CCTV17,http://api2.52tb.xyz/info?id=19&token=20230326xflvzc
-🚛卫视频道,#genre#
+🚒卫视频道,#genre#
 延边卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226220/index.m3u8
 兵团卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226214/index.m3u8
 农林卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226229/index.m3u8?
@@ -190,7 +198,7 @@ CCTV17,http://api2.52tb.xyz/info?id=19&token=20230326xflvzc
 辽宁卫视,http://api2.52tb.xyz/info?id=43&token=20230326xflvzc
 黑龙江卫视,http://api2.52tb.xyz/info?id=41&token=20230326xflvzc
 
-🚛港  澳  台,#genre#
+🚒港  澳  台,#genre#
 民视,mitv://generationnexxxt.com:19806/412a0c47c1014e7d85da7d2d38631eb7
 台视,mitv://generationnexxxt.com:19806/d12a80dfeb36488db100bbca6c6378e1
 大爱,mitv://generationnexxxt.com:19806/371fa10b16a84b5ca01f5bcd18ac7726
@@ -535,7 +543,7 @@ YCTV,http://tvpull.dxhmt.cn/tv/11481-3.m3u8
 大爱2台,https://pulltv2.wanfudaluye.com/live/tv2.m3u8
 人间卫视,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
 
-🚛国际频道,#genre#
+🚒国际频道,#genre#
 亚洲,http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8?zshijd
 亚洲新闻,http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8?zshijd
 CGTN法语,https://livefr.cgtn.com/1000f/prog_index.m3u8?zshijd
@@ -907,7 +915,7 @@ CNBC(農),mitv://generationnexxxt.com:19806/8603e70bd41c4e4a9368407a8a4debdd
 Bloomberg TV(農),mitv://generationnexxxt.com:19806/fbf63c9e85084cf98b7e39d2cd178608
 CNA(農),mitv://generationnexxxt.com:19806/7d55ade47df54e3497f9e0fce031943b
 
-🚛体育赛事,#genre#
+🚒体育赛事,#genre#
 曼联官方 MUTV,https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c1a535c8/eu-west-1/6058004203001/playlist.m3u8
 BRTV体育休闲,http://111.20.35.103:6610/yinhe/2/ch00000090990000001329/index.m3u8?virtualDomain=yinhe.live_hls.zte.com&IASHttpSessionId=
 广东体育,http://iptv.eatuo.com:9901/tsfile/live/1004_1.m3u8
@@ -974,7 +982,7 @@ Trace Sports Stars,https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8?che
 红牛RedBull,http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8
 红牛RedBull,http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8
 
-🚛少儿频道,#genre#
+🚒少儿频道,#genre#
 「电影」棉花糖和云朵妈妈,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/d8ad434c6b08421a927557a4d98da65c/1200.m3u8
 「电影」熊出没•变形记,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/1733da751de64e6e910abda889d87a26/1200.m3u8
 「电影」熊出没•过年,https://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/7ae265653fe149069c3b53e31caaf060/1200.m3u8
@@ -1052,7 +1060,7 @@ Trace Sports Stars,https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8?che
 青春动漫,https://live.v1.mk/api/bestv.php?id=qcdm8m/8000000
 卡酷少儿,https://live.v1.mk/api/bestv.php?id=kkse8m/8000000
 动漫秀场,https://live.v1.mk/api/bestv.php?id=dmxc8m/8000000
-🚛最新电影,#genre#
+🚒最新电影,#genre#
 电影:消失的她,https://hot.qoqkkhy.com/20230626/GTnlQoCn/index.m3u8
 电影:人生路不熟,https://m3u8.wolongcdnm3u8.com:65/20230630/7ecfd899/index.m3u8
 电影:秦岭镇天棺,https://top.qoqkkhy.com/202306/24/Mu2K2bjfaf3/video/index.m3u8
@@ -1078,7 +1086,7 @@ Trace Sports Stars,https://trace-sportstars-samsungnz.amagi.tv/playlist.m3u8?che
 电影:两万种蜜蜂,https://s8.fsvod1.com/20230701/pQobQIY4/index.m3u8
 
 
-🚛春晚小品,#genre#
+🚒春晚小品,#genre#
 吃面,https://vd3.bdstatic.com/mda-kihjn2cq7103ivig/v1-cae/hd/mda-kihjn2cq7103ivig.mp4
 非诚来扰,https://vd3.bdstatic.com/mda-jk4sx2ggq7u355d6/hd/mda-jk4sx2ggq7u355d6.mp4
 幸福密码,https://vd3.bdstatic.com/mda-kj9ispnax8gpirkf/hd/mda-kj9ispnax8gpirkf.mp4
@@ -1179,7 +1187,7 @@ yy小品3,http://jxiptv.xn--9kqp7k2rd.com/svip/yy.php?t=1354936198
 春晚2014,https://txmov2.a.kwimgs.com/bs3/video-hls/5245286283437869627_hlshd15.m3u8	
 春晚2019,https://txmov2.a.kwimgs.com/bs3/video-hls/5222205336887088723_hlshd15.m3u8	
 春晚2020,http://txmov2.a.kwimgs.com/upic/2022/01/30/17/BMjAyMjAxMzAxNzA5NDdfNDAzMDAxOTlfNjYxNzQ2MDAyMTFfMF8z_b_B5d51d9564c5670dc66faeba20aa7af3f.mp4	
-🚛D J 歌 曲,#genre#
+🚒D J 歌 曲,#genre#
 今夜为你醉,https://vdse.bdstatic.com//b68123a666cce39e7413da912e3675a3.mp4
 新歌来了《点燃一根烟》《雪花寄相思》优美歌声值得珍藏,https://vd4.bdstatic.com/mda-ndh6iph1cjnpbx5v/1080p/cae_h264_delogo/1650258726083919516/mda-ndh6iph1cjnpbx5v.mp4
 新歌推荐《今生的唯一》《今夜的雨是谁的眼泪》相当好听,https://vd2.bdstatic.com/mda-ndg6psg9zd12ihzs/1080p/cae_h264_delogo/1650236539803095703/mda-ndg6psg9zd12ihzs.mp4
@@ -1743,7 +1751,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 歌MV53,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAghMCv5wUoqteI8gM.mp4
 歌MV54,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAg-JfV4gUol9ea6QM.mp4
 歌MV55,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAg0f2a4gUonvrdrgI.mp4
-🚛狂       飙 ,#genre#
+🚒狂       飙 ,#genre#
 狂飙01,https://p3-sign.douyinpic.com/obj/tos-cn-v-f17943/1004104b1cb44ebb86d41d36cded7134?filename=1.mp4&x-expires=1990965600&x-signature=rkNwnTHL%2FWG5t5y0NHV4u0MbsJI%3D
 狂飙02,https://p3-sign.douyinpic.com/obj/tos-cn-v-f17943/02c923a1b4534059a381b95639bfd677?filename=1.mp4&x-expires=1990965600&x-signature=EhDaC8GRTOmYxp5USNaur2Ma%2FXA%3D
 狂飙03,https://p3-sign.douyinpic.com/obj/tos-cn-v-f17943/8413c6146a4b43bb9aa60dbcf280e84f?filename=1.mp4&x-expires=1990965600&x-signature=jSpzp9WR%2FJdS6sFvQNyrqp8M42c%3D
@@ -1779,7 +1787,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 狂飙37,https://p3-sign.douyinpic.com/obj/tos-cn-v-0000c2367/3c804642d9f544be8af92f23a040491b?filename=1.mp4&x-expires=1990620000&x-signature=s%2BTDc3vkVitXkI0D7LYQy9ldzZE%3D
 狂飙38,https://p26-sign.douyinpic.com/obj/tos-cn-v-f17943/85718b20b3d34a15b69dbb5356c2ca21?filename=1.mp4&x-expires=1990965600&x-signature=jeAIVBYGAkTZPfNP%2FYk2xVlQDkU%3D
 狂飙39,https://p26-sign.douyinpic.com/obj/tos-cn-v-f17943/2da43f56b533486c91d4b2883658469a?filename=1.mp4&x-expires=1990965600&x-signature=GXY8EzvwEzm4LiLTXcz%2BKSeI0aw%3D
-🚛雪中悍刀行,#genre#
+🚒雪中悍刀行,#genre#
 雪中悍刀行01,https://vip.ffzy-play.com/20221020/2351_1c211ba7/2000k/hls/mixed.m3u8
 雪中悍刀行02,https://vip.ffzy-play.com/20221020/2352_9bacc7dc/2000k/hls/mixed.m3u8
 雪中悍刀行03,https://vip.ffzy-play.com/20221020/2353_f4506552/2000k/hls/mixed.m3u8
@@ -1817,7 +1825,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 雪中悍刀行36,https://vip.ffzy-play.com/20221020/2401_dfb0103e/2000k/hls/mixed.m3u8
 雪中悍刀行37,https://vip.ffzy-play.com/20221020/2402_a7082890/2000k/hls/mixed.m3u8
 雪中悍刀行38,https://vip.ffzy-play.com/20221020/2403_855bc85f/2000k/hls/mixed.m3u8
-🚛产科医生,#genre#
+🚒产科医生,#genre#
 产科医生 第一集,https://cdn8.yzzy-tv-cdn.com/20220909/18886_55df9e25/1000k/hls/index.m3u8              
 产科医生 第二集,https://cdn8.yzzy-tv-cdn.com/20220909/18885_0140e11f/1000k/hls/index.m3u8
 产科医生 第三集,https://cdn8.yzzy-tv-cdn.com/20220909/18884_9bdcb6bf/1000k/hls/index.m3u8
@@ -1860,7 +1868,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 产科医生 第四十集,https://cdn8.yzzy-tv-cdn.com/20220909/18924_42a34176/1000k/hls/index.m3u8
 产科医生 第四十一集,https://cdn8.yzzy-tv-cdn.com/20220909/18923_d757f02b/1000k/hls/index.m3u8
 产科医生 第四十二集,https://cdn8.yzzy-tv-cdn.com/20220909/18925_8a33d636/1000k/hls/index.m3u8
-🚛神雕英雄传,#genre#
+🚒神雕英雄传,#genre#
 射雕英雄传第一集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4093_967f7ed8/index.m3u8
 射雕英雄传第二集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4095_1d4ff5e2/index.m3u8
 射雕英雄传第三集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4091_9d559868/index.m3u8
@@ -1913,7 +1921,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 射雕英雄传第五十集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4140_8f80371c/index.m3u8
 射雕英雄传第五十一集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4142_5865b72b/index.m3u8
 射雕英雄传第五十二集,https://data.cache.m3u8.lscsfw.com:3395/cache/20230122/4143_4390d32e/index.m3u8
-🚛铁齿铜牙纪晓岚,#genre#
+🚒铁齿铜牙纪晓岚,#genre#
 铁齿铜牙纪晓岚I 第一集,https://txmov2.a.kwimgs.com/bs3/video-hls/5189835685412341493_hlshd15.m3u8
 铁齿铜牙纪晓岚I 第二集,https://txmov2.a.kwimgs.com/bs3/video-hls/5201376159691089640_hlshd15.m3u8
 铁齿铜牙纪晓岚I 第三集,https://txmov2.a.kwimgs.com/bs3/video-hls/5239375284210688597_hlshd15.m3u8
@@ -1954,7 +1962,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 铁齿铜牙纪晓岚I 第三十八集,https://txmov2.a.kwimgs.com/bs3/video-hls/5244160358049310930_hlshd15.m3u8
 铁齿铜牙纪晓岚I 第三十九集,https://txmov2.a.kwimgs.com/bs3/video-hls/5224457108637573625_hlshd15.m3u8
 铁齿铜牙纪晓岚I 第四十集,https://txmov2.a.kwimgs.com/bs3/video-hls/5257671154675984197_hlshd15.m3u8
-🚛尘封十三载,#genre#
+🚒尘封十三载,#genre#
 尘封十三载 第01集,https://hd.lz-cdn18.com/20230406/1701_0ba78cf7/index.m3u8
 尘封十三载 第02集,https://hd.lz-cdn18.com/20230406/1700_691f2e08/index.m3u8
 尘封十三载 第03集,https://hd.lz-cdn18.com/20230406/1699_2f8cac84/index.m3u8
@@ -1979,7 +1987,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 尘封十三载 第22集,https://vip.lzcdn2.com/20230415/25243_a2e60486/index.m3u8
 尘封十三载 第23集,https://hd.lz-cdn18.com/20230416/1926_6c185945/index.m3u8
 尘封十三载 第24集,https://hd.lz-cdn18.com/20230416/1925_64688cb0/index.m3u8
-🚛赤焰锦衣卫,#genre#
+🚒赤焰锦衣卫,#genre#
 
 ﻿赤焰锦衣卫 第01集,https://vip.lz-cdn9.com/20221231/16778_e7666586/index.m3u8
 赤焰锦衣卫 第02集,https://vip.lz-cdn9.com/20221231/16779_38ed83a0/index.m3u8
@@ -2001,7 +2009,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 赤焰锦衣卫 第19集,https://vip.lz-cdn14.com/20230419/22006_68ec6a1e/index.m3u8
 赤焰锦衣卫 第20集,https://vip.lz-cdn14.com/20230426/22408_e50e0fc7/index.m3u8
 
-🚛浙江综合,#genre#
+🚒浙江综合,#genre#
 浙江钱江都市,http://hw-m-l.cztv.com/channels/lantian/channel002/1080p.m3u8?zzhed
 浙江钱江都市,http://hw-m-l.cztv.com/channels/lantian/channel02/720p.m3u8?zzhed
 浙江钱江都市,http://hw-m-l.cztv.com/channels/lantian/channel02/360p.m3u8?zzhed
@@ -2052,7 +2060,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 兰溪新闻综合,http://l.cztvcloud.com/channels/lantian/SXlanxi1/720p.m3u8?zzhed
 
 
-🚛江苏综合,#genre#
+🚒江苏综合,#genre#
 苏州4k,http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8?zjiangsd
 淮安新闻综合,http://live1.habctv.com/zhpdsl/sd/live.m3u8?zjiangsd
 淮安公共频道,http://live1.habctv.com/ggpdsl/sd/live.m3u8?zjiangsd
@@ -2089,7 +2097,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 泗阳资讯频道,http://siyang-tv-hls.cm.jstv.com/siyang-tv/siyangzx.m3u8?zjiangsd
 
 
-🚛山东综合,#genre#
+🚒山东综合,#genre#
 青岛城阳,http://pili-live-rtmp.56.i2863.com/i2863-56/live_56_307317.m3u8?shandd
 日照新闻综合,http://live.rzw.com.cn/xwzh/sd/live.m3u8?shandd
 日照公共,http://live.rzw.com.cn/kzpd/sd/live.m3u8?shandd
@@ -2111,13 +2119,13 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 青州文化旅游,http://sdqz.chinashadt.com:2036/live/stream:3.stream/playlist.m3u8?shandd
 
 
-🚛湖南综合,#genre#
+🚒湖南综合,#genre#
 湘潭新闻综合,http://live.hnxttv.com:9601/live/xwzh/800K/tzwj_video.m3u8?zhund
 湘潭公共频道,http://live.hnxttv.com:9601/live/dspd/800K/tzwj_video.m3u8?zhund
 衡阳新闻综合,http://hnhs.chinashadt.com:1936/hnhs/tv5.stream/playlist.m3u8?zhund
 
 
-🚛四川综合,#genre#
+🚒四川综合,#genre#
 南充新闻,http://tv.drs.ncntv.com.cn:8100/channellive/nczhpd.flv?zsicd
 南充公共,http://tv.drs.ncntv.com.cn:8100/channellive/ncggpd.flv?zsicd
 南充科教,http://tv.drs.ncntv.com.cn:8100/channellive/nckjpd.flv
@@ -2158,7 +2166,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 武胜综合,http://live2.gatv.com.cn:86/live/WS.m3u8?zsicd
 
 
-🚛安徽综合,#genre#
+🚒安徽综合,#genre#
 宿州公共,http://live.ahsz.tv/video/s10001-ggpd/index.m3u8?zanhd
 芜湖新闻综合,http://live1.wuhubtv.com/channel1/sd/live.m3u8?zanhd
 芜湖公共,http://live1.wuhubtv.com/channel3/sd/live.m3u8?zanhd
@@ -2171,7 +2179,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 金寨综合,http://112.26.80.214:1935/live/xinwen/playlist.m3u8?zanhd
 
 
-🚛河南综合,#genre#
+🚒河南综合,#genre#
 河南都市,http://123.6.9.146/live/jz-henandushi/live.m3u8?zhend
 河南民生,http://123.6.9.146/live/jz-henanminsheng/live.m3u8?zhend
 焦作综合频道,http://zhpull.dxhmt.cn/jiaozuo/b75a92c9503e47cf9e89f7ff247b65f2/playlist.m3u8?zhend
@@ -2182,7 +2190,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 沁阳文化旅游,http://live.qinyangtv.com:82/channel2/sd/live.m3u8?zhend
 
 
-🚛福建综合,#genre#
+🚒福建综合,#genre#
 龙岩新闻综合,http://live.lytv.net.cn/zhpwd/hd/live.m3u8?zfud
 龙岩新闻综合,http://stream.lytv.net.cn/2/sd/live.m3u8?zfud
 龙岩公共频道,http://live.lytv.net.cn/ggpd/sd/live.m3u8?zfud
@@ -2197,7 +2205,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 漳浦综合,http://220.161.87.62:8090/hls/0/index.m3u8?zfud
 
 
-🚛河北综合,#genre#
+🚒河北综合,#genre#
 河北农民,https://jwplay.hebyun.com.cn/live/hbnmtv/1500k/tzwj_video.m3u8?zhebd
 石家庄新闻综合,http://pluslive1.sjzntv.cn/xmzh/playlist.m3u8?zhebd
 石家庄娱乐,http://pluslive1.sjzntv.cn/yule/playlist.m3u8?zhebd
@@ -2206,13 +2214,13 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 鹿泉一套,https://jwcdnqx.hebyun.com.cn/live/luquanyi/1500k/tzwj_video.m3u8?zhebd
 
 
-🚛湖北综合,#genre#
+🚒湖北综合,#genre#
 荆门新闻综合,http://stream.jmtv.com.cn/xwzh/sd/live.m3u8?zhubd
 江夏新闻综合,http://59.175.226.142:280/gb28181/xwzh.m3u8?zhubd
 郧阳新闻综合,http://58.19.198.159:2021/hls1.m3u8?zhubd
 
 
-🚛广西综合,#genre#
+🚒广西综合,#genre#
 南宁新闻综合,http://hls.nntv.cn/nnlive/NNTV_NEWS_A.m3u8?zguangxd
 南宁影娱乐,http://hls.nntv.cn/nnlive/NNTV_VOD_A.m3u8?zguangxd
 北海新闻综合,http://njgdmm-wshls.homecdn.com/live/4e8a2.m3u8?zguangxd
@@ -2223,7 +2231,7 @@ DJ爆红情歌,https://vd3.bdstatic.com/mda-ndv4c2sjkixp16nw/hd/cae_h264_delogo/
 罗城综合,http://111.12.75.177:9100/lctvlive/lch.m3u8?zguangxd
 
 
-🚛数字剧场,#genre#
+🚒数字剧场,#genre#
 IPTV淘剧场,http://222.128.98.255:4000/rtp/239.3.1.95:8001
 IPTV淘剧场,http://router.tonyliangli.cn:4022/udp/239.3.1.95:8001
 IPTV淘电影,http://222.128.98.255:4000/rtp/239.3.1.250:8001
@@ -2348,7 +2356,7 @@ Soda东南亚之旅,https://vdse.bdstatic.com//b6295e9776c2cd347716fc2447e27fac.
 意大利V2,http://de1se01.v2beat.live/playlist.m3u8
 
 
-🚛纪录片频道,#genre#
+🚒纪录片频道,#genre#
 人与自然,http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/1425e1d505654cb48ba82b807b221193/1200.m3u8
 自然传奇,http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/81a1ad3a661748bfb8560c92d38204ca/1200.m3u8
 探索发现,http://hls.cntv.kcdnvip.com/asp/hls/1200/0303000a/3/default/25137bd7c4494128bf0cba271974928f/1200.m3u8
@@ -2822,7 +2830,7 @@ Soda东南亚之旅,https://vdse.bdstatic.com//b6295e9776c2cd347716fc2447e27fac.
 滨海影院,http://traffic.jbh.tjbh.com/live/bhtv3/playlist.m3u8?ztianjd
 
 
-🚛直播中国,#genre#
+🚒直播中国,#genre#
 直播中国,https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
 直播中国精编直播,http://gcksc.v.kcdnvip.com/gc/wgw05_1/index.m3u8
 直播中国精编直播,http://gcbsc.v.live.baishancdnx.cn/gc/wgw05_1/index.m3u8
@@ -3208,7 +3216,7 @@ Soda东南亚之旅,https://vdse.bdstatic.com//b6295e9776c2cd347716fc2447e27fac.
 福建武夷山玉女峰,http://gcbsc.v.live.baishancdnx.cn/gc/wysynf_1/index.m3u8
 
 
-🚛歌星金曲,#genre#
+🚒歌星金曲,#genre#
 歌MV1,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAgypLV4gUo-ZmUhwc.mp4
 歌MV2,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAglZTV4gUo1tiHrgM.mp4
 歌MV3,http://15799848.s21v.faiusr.com/58/ABUIABA6GAAgmJbV4gUogpLGkgM.mp4
@@ -3422,7 +3430,7 @@ sheep张艺兴,https://vdse.bdstatic.com/971347deaddd6fdb5ada6e87e4722ece.mp4?au
 张碧晨/赵丽颖 Ⅰ 望,https://vdse.bdstatic.com/25f5ae931f851bf09c48abaebe5d6f8d.mp4?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2017-05-11T09%3A02%3A31Z%2F-1%2F%2Fbeb15438a125af0e53bc38c98b3f304da2e2c0f1f61103ce81a9df486dc138a3
 
 
-🚛D J 音乐,#genre#
+🚒D J 音乐,#genre#
 热火斯卡拉,https://vd4.bdstatic.com/mda-nk3qfbxhf5dqpywt/sc/cae_h264/1667582665910576925/mda-nk3qfbxhf5dqpywt.mp4
 怒击摇,https://vd2.bdstatic.com/mda-mkibx9zvknj8d2fu/sc/cae_h264_nowatermark/1637355659217322910/mda-mkibx9zvknj8d2fu.mp4
 新送情郎,https://vd4.bdstatic.com/mda-meq936zru7niwvd2/sc/cae_h264/1621924823247730000/mda-meq936zru7niwvd2.mp4
@@ -3654,7 +3662,7 @@ dj,https://txmov2.a.kwimgs.com/upic/2022/03/21/19/BMjAyMjAzMjExOTA2MjRfMjYyNzI4M
 2022几首DJ串烧,https://vd3.bdstatic.com/mda-nck3tqzgjvj076vc/sc/cae_h264_delogo/1647833645083560959/mda-nck3tqzgjvj076vc.mp4
 
 
-🚛宝岛台湾,#genre#
+🚒宝岛台湾,#genre#
 民视,P2p://generationnexxxt.com:19806/412a0c47c1014e7d85da7d2d38631eb7
 台视,P2p://generationnexxxt.com:19806/d12a80dfeb36488db100bbca6c6378e1
 大爱1台,P2p://generationnexxxt.com:19806/371fa10b16a84b5ca01f5bcd18ac7726
@@ -3826,7 +3834,7 @@ EYETV戏剧台,P2p://generationnexxxt.com:19806/adc2a4ea6a77409cb91369152f0baced
 东森新闻台(备),P2p://generationnexxxt.com:19806/6696ee8482ca482aa501f886efbadad0
 镜新闻,P2p://generationnexxxt.com:19806/6ef8600b028640f49ad6cd73fee386ae
 
-🚛内地中国,#genre#
+🚒内地中国,#genre#
 CCTV1,P2p://generationnexxxt.com:19806/f774c5f8f72d4e209390429188acd251
 CCTV2,P2p://generationnexxxt.com:19806/0ac8d786a0014639925eb3fd8aba2e4a
 CCTV3,P2p://generationnexxxt.com:19806/93e75aa9188847d48506d838ef24d3f5
@@ -3873,7 +3881,7 @@ CHC动作电影,P2p://generationnexxxt.com:19806/855bc155c26d489698a02a890f1684a
 CHC高清电影,P2p://generationnexxxt.com:19806/78626ad4571f474fa6b5044c0d003d4e
 CHC家庭影院,P2p://generationnexxxt.com:19806/b08b5054487b4685b7ceb7d237154047
 
-🚛晴天港澳,#genre#
+🚒晴天港澳,#genre#
 港台電視31,P2p://generationnexxxt.com:19806/bb366f445cec4722b21fdd69fb052834
 港台电视32,P2p://generationnexxxt.com:19806/cf1a2072c9d94514ba98c4b37895daf4
 HOYTV,P2p://generationnexxxt.com:19806/793006c6727f44169d4e77a35ab8f880
@@ -3909,7 +3917,7 @@ HandsUp,P2p://generationnexxxt.com:19806/e78b4e2900154414a93f2ccd57a18d04
 HOY资讯台,P2p://generationnexxxt.com:19806/277e07151c874174b35d4d3ce7d772a2
 黄金翡翠台,P2p://generationnexxxt.com:19806/aa014240bbec4e91990ca9a7f57875fd
 
-🚛马来西亚,#genre#
+🚒马来西亚,#genre#
 TV1,P2p://generationnexxxt.com:19806/6ed0226aee704cb6ba7b0faf1088407f
 TV2,P2p://generationnexxxt.com:19806/69d668a50a2c4d55bc1adfbdf2f29bf7
 TV3,P2p://generationnexxxt.com:19806/fa74ead583154a9692291aeb75eb5bb2
@@ -3979,7 +3987,7 @@ HITSMovies,P2p://generationnexxxt.com:19806/873a153ee838437fa797e4b3c401d958
 beINSports2,P2p://generationnexxxt.com:19806/0d857c6ac77d4cd58f0153c47a6804d5
 GolfChannel,P2p://generationnexxxt.com:19806/f91a855bf6ce47e2b2911917a4b3d5ef
 
-🚛 新 加 坡,#genre#
+🚒 新 加 坡,#genre#
 天映频道,P2p://generationnexxxt.com:19806/4b5e8ec28cf24208baa663599d6cc1f5
 中天亚洲台,P2p://generationnexxxt.com:19806/0ca9f16b087d4fe8bd97852c47a222b7
 TVB星河(粤),P2p://generationnexxxt.com:19806/8c81917b79d247f3a60857411973d9a5
@@ -4011,7 +4019,7 @@ TVBS亚洲,P2p://generationnexxxt.com:19806/3ee34cdd82744fb39ef758059e7d2704
 NBA,P2p://generationnexxxt.com:19806/6fcac440f84e4d6b8a6ebeed5d393dba
 beINSports2,P2p://generationnexxxt.com:19806/0d857c6ac77d4cd58f0153c47a6804d5
 
-🚛日本综合,#genre#
+🚒日本综合,#genre#
 NHK-G综合,P2p://generationnexxxt.com:19806/810050ee3b224cffbff84c07e53c499a
 NHK-E教育,P2p://generationnexxxt.com:19806/797e091247a14ad2a918c9cb2e95cca3
 日本テレビ,P2p://generationnexxxt.com:19806/e83c93ef5c914ed3826fe7856b81acf0
@@ -4051,7 +4059,7 @@ MusicJapanTV,P2p://generationnexxxt.com:19806/7bbfd7a0233d4861943f8488dc21e075
 日テレNEWS24,P2p://generationnexxxt.com:19806/c7154b60dd934b43a1e42a0fc1b38734
 旅チャンネル,P2p://generationnexxxt.com:19806/bab71e3fb519479ea64543d006b8089f
 
-🚛韩国早知,#genre#
+🚒韩国早知,#genre#
 Arirang,P2p://generationnexxxt.com:19806/853704c2f9a442e7a1532038f14d8d00
 KBS1,P2p://generationnexxxt.com:19806/28676e413f2a477ababeae97e87ef855
 KBS2,P2p://generationnexxxt.com:19806/fa378d3829f643d2a87c4c754bbae507
@@ -4073,7 +4081,7 @@ Tooniverse,P2p://generationnexxxt.com:19806/3c1da427c435451fa526abe4d1c5d446
 SPOTV,P2p://generationnexxxt.com:19806/d270398d5c9d4358a1fab94773d6b8d1
 JTBCGOLF,P2p://generationnexxxt.com:19806/7c397fb18c154c5f91e41a48fd3ab95c
 
-🚛泰国直播,#genre#
+🚒泰国直播,#genre#
 Channel5,P2p://generationnexxxt.com:19806/68798aed16c6475180d6239acdecd888
 NBT,P2p://generationnexxxt.com:19806/4977f52edbae4d41b28fa28fb4bb8eb7
 TNN16,P2p://generationnexxxt.com:19806/5fa63eddc30543879c96b0a0a08ea60d
@@ -4101,7 +4109,7 @@ TVBThai,P2p://generationnexxxt.com:19806/7cf6f4e9806f4b6389d3a89af43cc256
 Bluesky,P2p://generationnexxxt.com:19806/c6490fe262bd4cf9a6bb3a3b82870495
 TopNews,P2p://generationnexxxt.com:19806/8a46eec67bfa42f6abd4032f91d304bf
 
-🚛北美频道,#genre#
+🚒北美频道,#genre#
 CNBC,P2p://generationnexxxt.com:19806/b24b9d83ab9d4ddb9cbd80a2b42ca461
 BloombergTV,P2p://generationnexxxt.com:19806/885bb543b9cb4bbeb5bcfe518fb90780
 ESPN,P2p://generationnexxxt.com:19806/2436baa9e481444fa785298d5931bdba
@@ -4125,7 +4133,7 @@ TheWeatherNetwork,P2p://generationnexxxt.com:19806/c556ed82dcc2453dabd398273651d
 TheWeatherChannel,P2p://generationnexxxt.com:19806/499917ffa94444328d65744d929c1eb3
 KOMO4TV,P2p://generationnexxxt.com:19806/d09839dc0ae84712bb24938c634626fe
 
-🚛新闻报道,#genre#
+🚒新闻报道,#genre#
 无线新闻台(备),P2p://generationnexxxt.com:19806/7f1fcd854c8042b69ca1d2917a50ae8f
 无线新闻台,P2p://generationnexxxt.com:19806/ae343d41c7764bc6aac0e0d66a7b7733
 无线财经体育资讯台,P2p://generationnexxxt.com:19806/7a492b815c2a43fe97a9f6275006ae50
@@ -4178,12 +4186,12 @@ CP24,P2p://generationnexxxt.com:19806/6186394bd1ff4b8b9757d542a9ca2e4b
 TheWeatherNetwork,P2p://generationnexxxt.com:19806/c556ed82dcc2453dabd398273651d952
 TheWeatherChannel,P2p://generationnexxxt.com:19806/499917ffa94444328d65744d929c1eb3
 
-🚛音乐试听,#genre#
+🚒音乐试听,#genre#
 MusicJapanTV,P2p://generationnexxxt.com:19806/7bbfd7a0233d4861943f8488dc21e075
 MezzoLive,P2p://generationnexxxt.com:19806/80375e2d54ef488f830a5e10b31fe47c
 CLASSICA古典乐,P2p://generationnexxxt.com:19806/8376bac949044fc4a7f7c30b8b9f6c35
 
-🚛体育赛事,#genre#
+🚒体育赛事,#genre#
 CCTV5,P2p://generationnexxxt.com:19806/98957b0750c14f18abda694462ab9904
 CCTV5 ,P2p://generationnexxxt.com:19806/7b1fada6a2d74be0a549cc767b1f6d90
 魅力足球,P2p://generationnexxxt.com:19806/ecd44a5fe8c94d12abd14d0762d6b838
@@ -4241,7 +4249,7 @@ SkySportsCricket,P2p://generationnexxxt.com:19806/d342ec6589c24499b5f806408bea4a
 SkySportsAction,P2p://generationnexxxt.com:19806/d627b2c21c264a13afa935d214060989
 GolfChannel,P2p://generationnexxxt.com:19806/f91a855bf6ce47e2b2911917a4b3d5ef
 
-🚛知识生活,#genre#
+🚒知识生活,#genre#
 CCTV9,P2p://generationnexxxt.com:19806/285ffc4f61df4970a30856868692a805
 国家地理频道,P2p://generationnexxxt.com:19806/229d40efa0c54fdc98f5ba46141ef079
 探索频道,P2p://generationnexxxt.com:19806/e7de8eb7942e4d72a52cd4467c7f7e68
@@ -4285,7 +4293,7 @@ Animax,P2p://generationnexxxt.com:19806/05538d774bba44088da468c0bf02318f
 NickJr.,P2p://generationnexxxt.com:19806/0c5a3d3568e84a6ba24c50fdf29e8b4f
 HandsUp,P2p://generationnexxxt.com:19806/e78b4e2900154414a93f2ccd57a18d04
 
-🚛电影频道,#genre#
+🚒电影频道,#genre#
 CCTV6,P2p://generationnexxxt.com:19806/6ba86ebf6131449da50828be35158d55
 天映频道,P2p://generationnexxxt.com:19806/4b5e8ec28cf24208baa663599d6cc1f5
 天映经典,P2p://generationnexxxt.com:19806/c7cf6992ae514b7e9a92164e4cac30e2
@@ -4325,7 +4333,7 @@ CHC动作电影,P2p://generationnexxxt.com:19806/855bc155c26d489698a02a890f1684a
 CHC高清电影,P2p://generationnexxxt.com:19806/78626ad4571f474fa6b5044c0d003d4e
 CHC家庭影院,P2p://generationnexxxt.com:19806/b08b5054487b4685b7ceb7d237154047
 
-🚛戏剧精选,#genre#
+🚒戏剧精选,#genre#
 东森戏剧台,P2p://generationnexxxt.com:19806/b7e0047d39834145a0dd13a4dccb971d
 八大戏剧台,P2p://generationnexxxt.com:19806/098f02d6d36d4ac88e89e0be6d838a94
 纬来戏剧台,P2p://generationnexxxt.com:19806/bd1f0033caeb4acc8a8bb9590b2057d7
@@ -4337,7 +4345,7 @@ EYETV戏剧台,P2p://generationnexxxt.com:19806/adc2a4ea6a77409cb91369152f0baced
 爱尔达影剧台,P2p://generationnexxxt.com:19806/ac2f700992734a578b38655b30fb5166
 亚洲剧台,P2p://generationnexxxt.com:19806/ddd1f7ef6ccc486eb861a1215115d7d2
 
-🚛轮播埋堆,#genre#
+🚒轮播埋堆,#genre#
 埋堆堆1,http://43.128.40.42:198/虎牙直播/huya.php?id=23749096
 埋堆堆2,http://43.128.40.42:198/虎牙直播/huya.php?id=23735126
 埋堆堆3,http://43.128.40.42:198/虎牙直播/huya.php?id=23865152
@@ -4400,7 +4408,7 @@ EYETV戏剧台,P2p://generationnexxxt.com:19806/adc2a4ea6a77409cb91369152f0baced
 
 
 
-🚛轮播斗鱼,#genre#
+🚒轮播斗鱼,#genre#
 
 余庆年,http://43.224.33.165:35455/douyu/5908256
 邵氏影院,http://43.138.170.29:35455/douyu/4246519
@@ -4683,7 +4691,7 @@ EYETV戏剧台,P2p://generationnexxxt.com:19806/adc2a4ea6a77409cb91369152f0baced
 
 
 
-🚛轮播虎牙,#genre#
+🚒轮播虎牙,#genre#
 虎牙-周星星,http://43.138.170.29:35455/huya/24470631
 虎牙-林正英,http://43.138.170.29:35455/huya/11342421
 虎牙-沈腾,http://43.138.170.29:35455/huya/11601968
@@ -4931,7 +4939,7 @@ EYETV戏剧台,P2p://generationnexxxt.com:19806/adc2a4ea6a77409cb91369152f0baced
 
 
 
-🚛YY·轮播,#genre#
+🚒YY·轮播,#genre#
 
 加勒比海盗系列,http://mmitv.top/pltv/yy.php?id=1382749914
 叶问全集,http://mmitv.top/pltv/yy.php?id=1382828771
@@ -5660,7 +5668,7 @@ JDB的直播间,http://mmitv.top/pltv/yy.php?id=1354537850
 别再偷看啦,http://mmitv.top/pltv/yy.php?id=1356159925
 相声相声搜38528频道,http://mmitv.top/pltv/yy.php?id=34025318
 
-🚛哔哩轮播,#genre#
+🚒哔哩轮播,#genre#
 看看电影,http://hpull.kktv8.com/livekktv/99350550/playlist.m3u8
 经典功夫台,http://zzy789.xyz/bili.php?id=21715386
 经典功夫台,https://cn-hbyc2-dx-live-01.bilivideo.com/live-bvc/545768/live_179302204_68184269.m3u8
