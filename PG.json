@@ -29,7 +29,7 @@
 		},
  		{"key":"Local","name":"🐧┃本地┃App","type":3,"api":"csp_Local"},
 		{"key":"PikPakShare","name":"🐧┃PikPak┃分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/pikpakclass.json$$$./lib/pikpakclass.json.txt.gz"},
-		{
+		//{
 			"key": "直播转点播",
 			"name": "🐧┃电视┃直播",
 			"type": 3,
@@ -47,7 +47,7 @@
 			"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"
 		},
 		{"key":"drpy_js_磁力熊","name":"🐧┃力熊┃App","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
-		{
+		//{
 			"key":"bili",
 			"name":"🐧┃B站┃App",
 			"type":3,
@@ -57,8 +57,7 @@
 			"changeable": 0,
 			"ext":{
 				"type":"演唱会#电影#电视剧#帕梅拉#广场舞#纪录片#综艺#鬼畜#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
-				"cookie":""
-			}
+				"cookie":""}
 		},
 		{
 			"key": "天天",
