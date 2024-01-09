@@ -10,15 +10,6 @@ FongMi影视、TVBox、猫影视配置文件。所有资源均来自于各路大
 
 所有直接或间接使用本仓库内容的个人和组织，应 24 小时内完成学习和研究，并及时删除本仓库内容。如对本仓库内容的功能有需求，应自行开发相关功能。所有基于本仓库内容的源代码，进行的任何修改，为其他个人或组织的自发行为，与本仓库内容没有任何直接或间接的关系，所造成的一切后果亦与本仓库内容和本仓库管理者无关。
 
-1.https://agit.ai/alanchaotang
-
-2.https://gitee.com/alanchaotang
-
-3.https://gitcode.net/alantang77
-
-4.https://gitlink.org.cn/alantang
-
-5.https://github.com/alantang1977
 
 # 🏂湯影視TV🏄🏻 
 ![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
@@ -37,7 +28,12 @@ https://mirror.ghproxy.com/https://raw.githubusercontent.com/
 
 https://already.free.hr/
 
-# 🍑TVBox配置接口
+# 🍑电视直播搜索引擎
+
+https://www.foodieguide.com/iptvsearch/
+
+http://tonkiang.us
+
 ------
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
