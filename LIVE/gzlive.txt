@@ -115,17 +115,17 @@ CCTV16,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226921/index.m3u8
 CCTV17,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226198/index.m3u8
 
 🏄🏻丨全国卫视,#genre#
-东方卫视：http://39.134.61.218/PLTV/88888888/224/3221227088/index.m3u8
-东方卫视 标清：http://103.130.141.67:81/live/6/playlist.m3u8
-东方卫视：http://media.hndyjyfw.gov.cn/live/jz-shanghaiweishi-gq/live.m3u8
-北京卫视：http://222.71.90.218:8888/newlive/live/hls/18/live.m3u8
-天津卫视：http://222.71.90.218:8888/newlive/live/hls/32/live.m3u8
-吉林卫视：http://222.71.90.218:8888/newlive/live/hls/41/live.m3u8
+东方卫视,http://39.134.61.218/PLTV/88888888/224/3221227088/index.m3u8
+东方卫视标清,http://103.130.141.67:81/live/6/playlist.m3u8
+东方卫视,http://media.hndyjyfw.gov.cn/live/jz-shanghaiweishi-gq/live.m3u8
+北京卫视,http://222.71.90.218:8888/newlive/live/hls/18/live.m3u8
+天津卫视,http://222.71.90.218:8888/newlive/live/hls/32/live.m3u8
+吉林卫视,http://222.71.90.218:8888/newlive/live/hls/41/live.m3u8
 吉林卫视：http://stream4.jlntv.cn:80/jlwshd/playlist.m3u8
 吉林卫视：http://stream1.jlntv.cn/jlws/sd/live.m3u8
-浙江卫视：http://hw-m-l.cztv.com/channels/lantian/channel001/720p.m3u8
-浙江卫视：http://221.2.36.34:8888/newlive/live/hls/24/live.m3u8
-浙江卫视：http://222.71.90.218:8888/newlive/live/hls/20/live.m3u8
+浙江卫视,http://hw-m-l.cztv.com/channels/lantian/channel001/720p.m3u8
+浙江卫视,http://221.2.36.34:8888/newlive/live/hls/24/live.m3u8
+浙江卫视,http://222.71.90.218:8888/newlive/live/hls/20/live.m3u8
 湖南卫视：http://221.2.36.34:8888/newlive/live/hls/23/live.m3u8
 湖南卫视：http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001026/index.m3u8?
 湖南卫视：http://222.71.90.218:8888/newlive/live/hls/22/live.m3u8
