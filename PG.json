@@ -563,7 +563,7 @@
 			"changeable": 0,
 			"ext": "https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/duboku.json$$$"
 		},
-		{"key":"Cable","name":"🔞┃CableAV","type":3,"api":"csp_Cable","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"socks5://192.168.101.1:1080"},
+		//{"key":"Cable","name":"🔞┃CableAV","type":3,"api":"csp_Cable","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"socks5://192.168.101.1:1080"},
 		{
 			"key": "haiwaikan",
 			"name": "🐧┃海外看┃App",
