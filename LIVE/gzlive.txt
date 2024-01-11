@@ -114,7 +114,7 @@ CCTV15,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221225785/index.m3u8
 CCTV16,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226921/index.m3u8
 CCTV17,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226198/index.m3u8
 
-🏄🏻全国卫视,#genre#
+🏄🏻丨全国卫视,#genre#
 东方卫视：http://39.134.61.218/PLTV/88888888/224/3221227088/index.m3u8
 东方卫视 标清：http://103.130.141.67:81/live/6/playlist.m3u8
 东方卫视：http://media.hndyjyfw.gov.cn/live/jz-shanghaiweishi-gq/live.m3u8
