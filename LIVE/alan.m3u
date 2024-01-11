@@ -55,6 +55,26 @@ http://111.20.40.160/PLTV/88888893/224/3221226921/index.m3u8
 
 #EXTINF:-1 tvg-name="翡翠台" group-title="•港澳台",「HK」翡翠台
 http://r.jdshipin.com/n90gt
+#EXTINF:-1 tvg-name="翡翠台" group-title="•港澳台",「HK」翡翠台
+http://r.jdshipin.com/qClQf
+#EXTINF:-1 tvg-name="翡翠台" group-title="•港澳台",「HK」翡翠台
+http://r.jdshipin.com/62WM7
+#EXTINF:-1 tvg-name="明珠台" group-title="•港澳台",「HK」明珠台
+http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxEzv3SLBhKEUmYG73triGDY/ts
+#EXTINF:-1 tvg-name="J2" group-title="•港澳台",「HK」J2
+http://r.jdshipin.com/ndGgS
+#EXTINF:-1 tvg-name="J2" group-title="•港澳台",「HK」J2
+http://r.jdshipin.com/Nr5jq
+#EXTINF:-1 tvg-name="无线新闻" group-title="•港澳台",「HK」无线新闻
+https://tv.iill.top/tvb/4
+#EXTINF:-1 tvg-name="无线财经体育资讯台" group-title="•港澳台",「HK」无线财经体育资讯台
+https://tv.iill.top/tvb/6
+#EXTINF:-1 tvg-name="事件直播頻道1" group-title="•港澳台",「HK」事件直播頻道1
+https://tv.iill.top/tvb/8
+#EXTINF:-1 tvg-name="事件直播頻道2" group-title="•港澳台",「HK」事件直播頻道2
+https://tv.iill.top/tvb/10
+#EXTINF:-1 tvg-name="VIUTV" group-title="•港澳台",「HK」VIU TV
+http://r.jdshipin.com/vSJvl
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视中文台.png" group-title="卫视频道",凤凰中文
 http://[2409:8087:2001:20:2800:0:df6e:eb24]:80/ott.mobaibox.com/PLTV/3/224/3221228527/index.m3u8
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视资讯台.png" group-title="卫视频道",凤凰资讯
