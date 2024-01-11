@@ -217,6 +217,35 @@ CCTV17,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226198/index.m3u8
 黑龙江卫视,http://api2.52tb.xyz/info?id=41&token=20230326xflvzc
 
 🚒港  澳  台,#genre#
+翡翠台,http://r.jdshipin.com/qClQf
+翡翠台,http://r.jdshipin.com/n90gt
+翡翠台,http://r.jdshipin.com/qrfbg
+翡翠台,http://36.36.200.212:9901/tsfile/live/1008_1.m3u8?key=txiptv&url=tvzb.com
+翡翠台,http://107.167.12.58:27347/livehttpplay?channel_id=30025
+翡翠台,http://107.167.12.58:27347/livehttpplay?channel_id=20127
+翡翠台,http://107.167.12.58:27347/livehttpplay?channel_id=30025
+翡翠台,http://107.167.12.58:27347/livehttpplay?channel_id=20124J2
+翡翠台,http://r.jdshipin.com/n90gt
+翡翠台,http://198.16.100.90:8278/jade_twn/playlist.m3u8?tid=MA3A7166615971666159&ct=19226&tsum=abeff4c5d0d1ad10147a21ebc6cc5182
+翡翠台,http://r.jdshipin.com/62WM7
+翡翠台,http://r.jdshipin.com/qClQf
+翡翠台,http://113.117.74.12:8081/hls/25/index.m3u8
+翡翠台,http://66.181.39.224/ml.php?id=jade_twn
+翡翠台,http://198.16.100.90:8278/jade_twn/playlist.m3u8?tid=MDAD1890217018902170&ct=19249&tsum=36346362d72a1e85802fa5d3eee3861c
+明珠台,http://r.jdshipin.com/ZQ4kN
+明珠台,http://36.36.200.212:9901/tsfile/live/1009_1.m3u8?key=txiptv&url=tvzb.com
+明珠台,http://107.167.12.58:27347/livehttpplay?channel_id=30026
+明珠台,http://107.167.12.58:27347/livehttpplay?channel_id=20125
+明珠台,http://107.167.12.58:27347/livehttpplay?channel_id=30026
+明珠台,http://107.167.12.58:27347/livehttpplay?channel_id=20125
+明珠台,http://113.117.74.12:8081/hls/26/index.m3u8
+明珠台,http://198.16.100.90:8278/pearl_twn/playlist.m3u8?tid=MC6C7041327570413275&ct=19226&tsum=681972baf66d69caf7cccc92a90e5aad
+Channel [V],http://36.36.200.212:9901/tsfile/live/1010_1.m3u8?key=txiptv&url=tvzb.com
+TVB星河,http://113.117.74.12:8081/hls/135/index.m3u8
+J2,http://r.jdshipin.com/Nr5jq
+J2,http://107.167.12.58:27347/livehttpplay?channel_id=30030
+J2,http://107.167.12.58:27347/livehttpplay?channel_id=20122
+星空卫视,http://113.117.74.12:8081/hls/87/index.m3u8
 民视,mitv://generationnexxxt.com:19806/412a0c47c1014e7d85da7d2d38631eb7
 台视,mitv://generationnexxxt.com:19806/d12a80dfeb36488db100bbca6c6378e1
 大爱,mitv://generationnexxxt.com:19806/371fa10b16a84b5ca01f5bcd18ac7726
