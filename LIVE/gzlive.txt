@@ -12,6 +12,19 @@
 明珠台,https://pi.0472.org/tv/mzt.php?auth=2309081833
 明珠台,http://198.16.100.90:8278/pearl_twn/playlist.m3u8?tid=MC6C7041327570413275&ct=19226&tsum=681972baf66d69caf7cccc92a90e5aad
 明珠台,http://120.236.57.77:9901/tsfile/live/1009_1.m3u8
+明珠台,http://r.jdshipin.com/ZQ4kN
+明珠台,http://103.45.68.47/gy/gy563/xsj.php?id=pearl
+明珠台,http://suixiaobin.dsmynas.net:5666/gudou.php?phone=18998910474&ptoken=SZESNUL4i2PcZZKV1JA9jw%3D%3D&pserialnumber=63eee104cf9602bf&cid=860&id=1351_4500
+明珠台,http://113.117.74.12:8081/hls/26/index.m3u8
+明珠台,http://107.167.12.62:44881/index.m3u8
+TVB J2,http://r.jdshipin.com/ndGgS
+TVB J2,http://r.jdshipin.com/Nr5jq
+TVB J2,http://sc2022.stream-link.org/tv2306.php?id=h03
+TVB J2,https://pull-l3-cny.douyincdn.com/live/stream-19825832023042700451.m3u8
+TVB J2,https://cdn.hklive.tv/xxxx/82/index.m3u8
+TVB J2,https://live.astradamy.com/tvbj2/index.m3u8
+TVB J2,https://p2.weizan.cn/1646497941/269664979080385265/live.m3u8
+
 
 
 🦁丨央视,#genre#
