@@ -1,5 +1,5 @@
 {
-	"spider":"./pg.jar",
+	"spider":"https://already.free.hr/alantang1977/X/master/jar/pg.jar",
 	"sites":[
 		{
 			"key": "酷狗",
@@ -70,7 +70,7 @@
 			"searchable": 0,
 			"changeable": 1
 		},
-		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"./lib/drpy2.min.js","ext":"./js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
+		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
 		{
 			"key":"bili",
 			"name":"B站 | Bili[jar]",
@@ -240,24 +240,24 @@
 			"searchable": 1,
 			"quickSearch": 1
 		},
-		{"key":"drpy_js_美剧迷","name":"美剧迷[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/meijumi.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_KKPANS","name":"KK盘[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"./js/kkpans.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_meow","name":"MEOW[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"./js/meow.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_愛盤搜","name":"爱盘搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"./js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_奇妙搜","name":"奇妙搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"./js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_dydhhy","name":"dydhhy[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"./js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_人人影视","name":"人人影视[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"./js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_低端影视", "name":"低端影视[js]|夸", "type":3, "api":"./lib/drpy2.min.js", "ext":"./js/ddys.js", "changeable": 1 },
-		{"key":"drpy_js_新版6V","name":"新版6V[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/xb6v.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_97tvs","name":"高清MP4吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/97tvs.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_rrdyw","name":"人人電影網[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_hotcat","name":"热剧猫[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/hotcat.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_美剧迷","name":"美剧迷[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meijumi.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_KKPANS","name":"KK盘[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kkpans.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_meow","name":"MEOW[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meow.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_愛盤搜","name":"爱盘搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_奇妙搜","name":"奇妙搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_dydhhy","name":"dydhhy[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_人人影视","name":"人人影视[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_低端影视", "name":"低端影视[js]|夸", "type":3, "api":"./lib/drpy2.min.js", "ext":"https://already.free.hr/alantang1977/X/main/pg/js/ddys.js", "changeable": 1 },
+		{"key":"drpy_js_新版6V","name":"新版6V[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/xb6v.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_97tvs","name":"高清MP4吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/97tvs.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_rrdyw","name":"人人電影網[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_hotcat","name":"热剧猫[js]","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/hotcat.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"csp_Sp360","name":"360影视┃弹幕","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
 		 {"key":"csp_Jiohub","name":"JOJO影视┃弹幕","type":3,"api":"csp_Jiohub","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
 		 {"key":"csp_Jojo","name":"JOJO┃弹幕","type":3,"api":"csp_Jojo","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
-		{"key":"drpy_js_MP4US","name":"MP4电影[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/mp4us.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_电影港","name":"电影港[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/dygang.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_极影网","name":"极影网[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/jiyingwp.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_MP4US","name":"MP4电影[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/mp4us.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_电影港","name":"电影港[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dygang.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_极影网","name":"极影网[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/jiyingwp.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"4KHDR","name":"4KHDR|网盘","type":3,"api":"csp_FourKHDR","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/4khdr.txt$$$1"},
 		{"key":"UP云搜","name":"阿里|UP云搜","type":3,"api":"csp_UpYun","timeout":30, "ext":"./lib/tokenm.json"}, 
 		{
@@ -268,11 +268,11 @@
 			"searchable": 1,
 			"changeable": 0
 		},
-		{"key":"drpy_js_酷吧","name":"酷吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"./js/kuba.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_酷吧","name":"酷吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kuba.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"BLSGod","name":"BLSGod|磁","type":3,"api":"csp_BLSGod","changeable":1, "timeout":60},
 		{"key":"Xunlei8","name":"Xunlei8|磁","type":3,"api":"csp_Xunlei8","changeable":1, "timeout":60},
 		{"key":"SeedHub","name":"SeedHub|磁","type":3,"api":"csp_SeedHub","changeable":1, "timeout":60},
-		{"key":"AList","name":"网盘|Alist[jar]","type":3,"api":"csp_AList","searchable":1,"filterable":1,"changeable":1,"ext":"./js/alistjar.json"},
+		{"key":"AList","name":"网盘|Alist[jar]","type":3,"api":"csp_AList","searchable":1,"filterable":1,"changeable":1,"ext":"https://already.free.hr/alantang1977/X/main/pg/js/alistjar.json"},
 		{
 			"key": "快看",
 			"name": "快看",
@@ -455,11 +455,11 @@
 			"key": "愛看",
 			"name": "愛看",
 			"type": 3,
-			"api": "./js/ikanbot_open.js",
+			"api": "https://already.free.hr/alantang1977/X/main/pg/js/ikanbot_open.js",
 			"searchable": 1,
 			"changeable": 0
 		},
-		{"key":"drpy_js_Alist","name":"网盘 | Alist[js]","type":3,"api":"./lib/alist.min.js","searchable":1,"filterable":1,"changeable":1,"ext":"./js/alist.json"},
+		{"key":"drpy_js_Alist","name":"网盘 | Alist[js]","type":3,"api":"./lib/alist.min.js","searchable":1,"filterable":1,"changeable":1,"ext":"https://already.free.hr/alantang1977/X/main/pg/js/alist.json"},
 		{
 			"key": "ext_live_protocol",
 			"name": "关注公众号“肥猫宝贝”",
