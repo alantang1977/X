@@ -30,7 +30,7 @@ https://already.free.hr/
 
 # 🍑电视直播搜索引擎
 
-https://api.pearktrue.cn/api/tv/search.php?name=明珠台
+https://api.pearktrue.cn/api/tv/search.php?name=明珠台    (搜索电视直播源）
 
 https://www.foodieguide.com/iptvsearch/
 
