@@ -5,6 +5,14 @@
 广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
 广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
 广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+翡翠台,https://edge6a.v2h-cdn.com/jade/jade.stream/chunklist.m3u8
+翡翠台,http://r.jdshipin.com/62WM7
+翡翠台,http://198.16.100.90:8278/Wlt/playlist.m3u8?tid=MC9C7523788875237888&ct=19225&tsum=fc74aa160d3ca61369c2e5f3ae79ee8e
+翡翠台,http://198.16.100.90:8278/jade_twn/playlist.m3u8?tid=MDAD1890217018902170&ct=19249&tsum=36346362d72a1e85802fa5d3eee3861c
+明珠台,https://pi.0472.org/tv/mzt.php?auth=2309081833
+明珠台,http://198.16.100.90:8278/pearl_twn/playlist.m3u8?tid=MC6C7041327570413275&ct=19226&tsum=681972baf66d69caf7cccc92a90e5aad
+明珠台,http://120.236.57.77:9901/tsfile/live/1009_1.m3u8
+
 
 🦁丨央视,#genre#
 CCTV1,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221225804/1.m3u8
