@@ -10,7 +10,7 @@
 			"changeable": 0
 		},
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
-		{"key":"PikPakShare","name":"PikPak分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/pikpakclass.json$$$./lib/pikpakclass.json.txt.gz"},
+		{"key":"PikPakShare","name":"PikPak分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://already.free.hr/alantang1977/X/main/pg/lib/pikpakclass.json$$$https://already.free.hr/alantang1977/X/main/pg/lib/pikpakclass.json.txt.gz"},
 		{
 			"key": "网盘配置",
 			"name": "网盘及彈幕配置",
@@ -22,15 +22,15 @@
 				"type": "rect",
 				"ratio": 1
 			},
-			"ext":"./lib/tokenm.json"
+			"ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"
 		},
 		{
 			"key": "直播转点播",
 			"name": "🐼️┃电视┃直播",
 			"type": 3,
 			"searchable": 0,
-			"api": "./lib/live2vod.js",
-			"ext": "./lib/feimaolive.json"
+			"api": "https://already.free.hr/alantang1977/X/main/pg/lib/live2vod.js",
+			"ext": "https://already.free.hr/alantang1977/X/main/pg/lib/feimaolive.json"
 		},
 		{
 			"key": "豆瓣",
@@ -39,7 +39,7 @@
 			"api": "csp_Douban",
 			"searchable": 0,
 			"changeable": 1,
-			"ext": "./lib/douban.json"
+			"ext": "https://already.free.hr/alantang1977/X/main/pg/lib/douban.json"
 		},
 		{
 			"key": "996影院",
@@ -70,7 +70,7 @@
 			"searchable": 0,
 			"changeable": 1
 		},
-		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
+		{"key":"drpy_js_磁力熊","name":"磁力熊[js]|索引","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
 		{
 			"key":"bili",
 			"name":"B站 | Bili[jar]",
@@ -84,28 +84,28 @@
 				"cookie":""
 			}
 		},
-		{"key":"Wogg","name":"玩偶哥哥|阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://wogg.xyz/|104.16.245.50$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"影视车","name":"影视车|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"Wobg","name":"玩偶表哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"Pan99","name":"盘99|网盘","type":3,"api":"csp_Pan99","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://pan99.xyz$$$null$$$1"},
-		{"key":"Hdhive","name":"影巢|网盘","type":3,"api":"csp_Hdhive","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$null$$$1"},
-		{"key":"Ppxzy","name":"皮皮虾|网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://ppxzy.net/$$$null$$$1"},
-		{"key":"校长影视","name":"校长影视|网盘","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"./lib/tokenm.json$$$null$$$1"},
-		{"key":"团长资源","name":"团长资源|网盘","type":3,"api":"csp_TZFile", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"./lib/tokenm.json$$$null$$$1"},
-		{"key":"Libvio","name":"LIBVIO|网盘","type":3,"api":"csp_Libvio","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.libvio.pro$$$null"},
-		{"key":"PanSearch","name":"PanSearch|网盘","type":3,"api":"csp_PanSearch","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"盘搜","name":"盘搜|网盘","type":3,"api":"csp_PanSou","timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"易搜","name":"易搜|网盘","type":3,"api":"csp_YiSo","timeout":30, "ext":"./lib/tokenm.json$$$./lib/yiso.txt"},
-		{"key":"混合盘","name":"混合盘|网盘","type":3,"api":"csp_HunHePan","timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"秒搜","name":"秒搜|网盘","type":3,"api":"csp_MiaoSou","timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"Funletu","name":"趣盘搜|夸克","type":3,"api":"csp_Funletu","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"QuarkPanso","name":"夸克盘搜|夸克","type":3,"api":"csp_QuarkPanso","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"Panta","name":"盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1"},
-		{"key":"DaPanSo","name":"大盘搜|网盘","type":3,"api":"csp_DaPanSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://dapanso.com$$$null"},
-		{"key":"PikaSo","name":"皮卡搜|网盘","type":3,"api":"csp_PikaSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://www.pikaso.top/$$$null"},
-		{"key":"Qianfan","name":"千帆|网盘","type":3,"api":"csp_Qianfan","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://pan.qianfan.app$$$null$$$./lib/qianfan.txt"},
-		{"key":"YunSo","name":"小云搜索|网盘","type":3,"api":"csp_YunSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json"},
-		{"key":"YunPanOne","name":"云盘资源|网盘","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json"},
+		{"key":"Wogg","name":"玩偶哥哥|阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://wogg.xyz/|104.16.245.50$$$null$$$1$$$https://already.free.hr/alantang1977/X/main/pg/lib/wogg.json"},
+		{"key":"影视车","name":"影视车|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$https://already.free.hr/alantang1977/X/main/pg/lib/wogg.json"},
+		{"key":"Wobg","name":"玩偶表哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://already.free.hr/alantang1977/X/main/pg/lib/wogg.json"},
+		{"key":"Pan99","name":"盘99|网盘","type":3,"api":"csp_Pan99","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://pan99.xyz$$$null$$$1"},
+		{"key":"Hdhive","name":"影巢|网盘","type":3,"api":"csp_Hdhive","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$null$$$1"},
+		{"key":"Ppxzy","name":"皮皮虾|网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://ppxzy.net/$$$null$$$1"},
+		{"key":"校长影视","name":"校长影视|网盘","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$null$$$1"},
+		{"key":"团长资源","name":"团长资源|网盘","type":3,"api":"csp_TZFile", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$null$$$1"},
+		{"key":"Libvio","name":"LIBVIO|网盘","type":3,"api":"csp_Libvio","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.libvio.pro$$$null"},
+		{"key":"PanSearch","name":"PanSearch|网盘","type":3,"api":"csp_PanSearch","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"盘搜","name":"盘搜|网盘","type":3,"api":"csp_PanSou","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"易搜","name":"易搜|网盘","type":3,"api":"csp_YiSo","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://already.free.hr/alantang1977/X/main/pg/lib/yiso.txt"},
+		{"key":"混合盘","name":"混合盘|网盘","type":3,"api":"csp_HunHePan","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"秒搜","name":"秒搜|网盘","type":3,"api":"csp_MiaoSou","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"Funletu","name":"趣盘搜|夸克","type":3,"api":"csp_Funletu","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"QuarkPanso","name":"夸克盘搜|夸克","type":3,"api":"csp_QuarkPanso","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"Panta","name":"盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1"},
+		{"key":"DaPanSo","name":"大盘搜|网盘","type":3,"api":"csp_DaPanSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://dapanso.com$$$null"},
+		{"key":"PikaSo","name":"皮卡搜|网盘","type":3,"api":"csp_PikaSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.pikaso.top/$$$null"},
+		{"key":"Qianfan","name":"千帆|网盘","type":3,"api":"csp_Qianfan","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://pan.qianfan.app$$$null$$$https://already.free.hr/alantang1977/X/main/pg/lib/qianfan.txt"},
+		{"key":"YunSo","name":"小云搜索|网盘","type":3,"api":"csp_YunSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
+		{"key":"YunPanOne","name":"云盘资源|网盘","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
 		{
 			"key": "NanGua",
 			"name": "南瓜|弹幕",
@@ -115,9 +115,9 @@
 			"changeable": 1,
 			"ext": "null$$$1"
 		},
-		{"key":"Dovx", "name": "阿里|Dovx", "type": 3, "api": "csp_Dovx", "searchable": 1, "quickSearch": 1, "filterable": 0, "timeout":30, "ext":"./lib/tokenm.json" },
-		{"key":"Gitcafe", "name": "阿里|小纸条", "type": 3, "api": "csp_Gitcafe", "searchable": 1, "quickSearch": 1, "filterable": 0, "timeout":30, "ext":"./lib/tokenm.json" },
-		{"key":"找資源", "name":"阿里|找資源", "type":3, "api":"csp_Zhaozy", "searchable":1, "quickSearch":1, "filterable": 0, "timeout":30, "ext":"./lib/tokenm.json$$$user$$$pass" },
+		{"key":"Dovx", "name": "阿里|Dovx", "type": 3, "api": "csp_Dovx", "searchable": 1, "quickSearch": 1, "filterable": 0, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json" },
+		{"key":"Gitcafe", "name": "阿里|小纸条", "type": 3, "api": "csp_Gitcafe", "searchable": 1, "quickSearch": 1, "filterable": 0, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json" },
+		{"key":"找資源", "name":"阿里|找資源", "type":3, "api":"csp_Zhaozy", "searchable":1, "quickSearch":1, "filterable": 0, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$user$$$pass" },
 		{
 			"key": "新6V",
 			"name": "新6V|网盘",
@@ -126,7 +126,7 @@
 			"searchable": 1,
 			"changeable": 1,
 			"timeout": 60,
-			"ext": "./lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
+			"ext": "https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
 		},
 		{
 			"key": "河马",
@@ -159,7 +159,7 @@
 			"api": "csp_Jianpian",
 			"searchable": 1,
 			"changeable": 1,
-			"ext": "./lib/jianpian.json$$$1",
+			"ext": "https://already.free.hr/alantang1977/X/main/pg/lib/jianpian.json$$$1",
 			"timeout":60
 		},
 		{
@@ -240,26 +240,26 @@
 			"searchable": 1,
 			"quickSearch": 1
 		},
-		{"key":"drpy_js_美剧迷","name":"美剧迷[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meijumi.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_KKPANS","name":"KK盘[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kkpans.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_meow","name":"MEOW[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meow.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_愛盤搜","name":"爱盘搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_奇妙搜","name":"奇妙搜[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_dydhhy","name":"dydhhy[js]|夸","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_人人影视","name":"人人影视[js]|搜","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
-		{"key":"drpy_js_低端影视", "name":"低端影视[js]|夸", "type":3, "api":"./lib/drpy2.min.js", "ext":"https://already.free.hr/alantang1977/X/main/pg/js/ddys.js", "changeable": 1 },
-		{"key":"drpy_js_新版6V","name":"新版6V[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/xb6v.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_97tvs","name":"高清MP4吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/97tvs.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_rrdyw","name":"人人電影網[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_hotcat","name":"热剧猫[js]","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/hotcat.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_美剧迷","name":"美剧迷[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meijumi.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_KKPANS","name":"KK盘[js]|夸","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kkpans.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_meow","name":"MEOW[js]|搜","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/meow.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_愛盤搜","name":"爱盘搜[js]|夸","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/aipanso.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_奇妙搜","name":"奇妙搜[js]|夸","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/qimiao.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_dydhhy","name":"dydhhy[js]|夸","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dydhhy.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_人人影视","name":"人人影视[js]|搜","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/yyets.js", "quickSearch":1, "changeable":1, "timeout":30},
+		{"key":"drpy_js_低端影视", "name":"低端影视[js]|夸", "type":3, "api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js", "ext":"https://already.free.hr/alantang1977/X/main/pg/js/ddys.js", "changeable": 1 },
+		{"key":"drpy_js_新版6V","name":"新版6V[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/xb6v.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_97tvs","name":"高清MP4吧[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/97tvs.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_rrdyw","name":"人人電影網[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/rrdyw.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_hotcat","name":"热剧猫[js]","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/hotcat.js", "quickSearch":1, "changeable":1, "timeout":30},
 		{"key":"csp_Sp360","name":"360影视┃弹幕","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
 		 {"key":"csp_Jiohub","name":"JOJO影视┃弹幕","type":3,"api":"csp_Jiohub","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
 		 {"key":"csp_Jojo","name":"JOJO┃弹幕","type":3,"api":"csp_Jojo","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"danmu":true},"timeout":30}, 
-		{"key":"drpy_js_MP4US","name":"MP4电影[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/mp4us.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_电影港","name":"电影港[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dygang.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"drpy_js_极影网","name":"极影网[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/jiyingwp.js", "quickSearch":1, "changeable":1, "timeout":60},
-		{"key":"4KHDR","name":"4KHDR|网盘","type":3,"api":"csp_FourKHDR","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/4khdr.txt$$$1"},
-		{"key":"UP云搜","name":"阿里|UP云搜","type":3,"api":"csp_UpYun","timeout":30, "ext":"./lib/tokenm.json"}, 
+		{"key":"drpy_js_MP4US","name":"MP4电影[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/mp4us.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_电影港","name":"电影港[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/dygang.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_极影网","name":"极影网[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/jiyingwp.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"4KHDR","name":"4KHDR|网盘","type":3,"api":"csp_FourKHDR","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://already.free.hr/alantang1977/X/main/pg/lib/4khdr.txt$$$1"},
+		{"key":"UP云搜","name":"阿里|UP云搜","type":3,"api":"csp_UpYun","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"}, 
 		{
 			"key": "JustLive",
 			"name": "JustLive",
@@ -268,7 +268,7 @@
 			"searchable": 1,
 			"changeable": 0
 		},
-		{"key":"drpy_js_酷吧","name":"酷吧[js]|磁","type":3,"api":"./lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kuba.js", "quickSearch":1, "changeable":1, "timeout":60},
+		{"key":"drpy_js_酷吧","name":"酷吧[js]|磁","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/drpy2.min.js","ext":"https://already.free.hr/alantang1977/X/main/pg/js/kuba.js", "quickSearch":1, "changeable":1, "timeout":60},
 		{"key":"BLSGod","name":"BLSGod|磁","type":3,"api":"csp_BLSGod","changeable":1, "timeout":60},
 		{"key":"Xunlei8","name":"Xunlei8|磁","type":3,"api":"csp_Xunlei8","changeable":1, "timeout":60},
 		{"key":"SeedHub","name":"SeedHub|磁","type":3,"api":"csp_SeedHub","changeable":1, "timeout":60},
@@ -459,7 +459,7 @@
 			"searchable": 1,
 			"changeable": 0
 		},
-		{"key":"drpy_js_Alist","name":"网盘 | Alist[js]","type":3,"api":"./lib/alist.min.js","searchable":1,"filterable":1,"changeable":1,"ext":"https://already.free.hr/alantang1977/X/main/pg/js/alist.json"},
+		{"key":"drpy_js_Alist","name":"网盘 | Alist[js]","type":3,"api":"https://already.free.hr/alantang1977/X/main/pg/lib/alist.min.js","searchable":1,"filterable":1,"changeable":1,"ext":"https://already.free.hr/alantang1977/X/main/pg/js/alist.json"},
 		{
 			"key": "ext_live_protocol",
 			"name": "关注公众号“肥猫宝贝”",
@@ -476,7 +476,7 @@
 			"quickSearch": 0,
 			"changeable": 0
 		},
-		{"key": "push_agent","name": "推送","type": 3,"api": "csp_Push","changeable":0, "timeout":30, "ext":"./lib/tokenm.json"},
+		{"key": "push_agent","name": "推送","type": 3,"api": "csp_Push","changeable":0, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
 		{
 			"key": "應用商店",
 			"name": "應用商店",
@@ -508,7 +508,7 @@
 			{
 				"name": "live.ipv6.local",
 				"type": 0,
-				"url": "./lib/live.ipv6.txt",
+				"url": "https://already.free.hr/alantang1977/X/main/pg/lib/live.ipv6.txt",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
