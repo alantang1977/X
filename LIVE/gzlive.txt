@@ -5,6 +5,15 @@
 广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
 广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
 广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+珠江台,http://222.217.246.54:8282/tsfile/live/1060_1.m3u8
+珠江台,http://222.217.246.54:8282/tsfile/live/1000_1.m3u8
+珠江台,http://gxdl-lhs.8866.org:85/tsfile/live/1060_1.m3u8?key=txiptv&playlive=1&authid=0
+珠江台,http://gxdl-lhs.8866.org:85/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+珠江台,http://183.237.231.139:9901/tsfile/live/1056_1.m3u8
+珠江台,http://116.11.158.91:8181/tsfile/live/1138_1.m3u8
+珠江台,http://171.110.42.48:8181/tsfile/live/1003_1.m3u8
+珠江台,http://116.11.158.91:8181/tsfile/live/1003_1.m3u8
+珠江台,http://116.11.158.91:8181/tsfile/live/1121_1.m3u8
 
 翡翠台,https://edge6a.v2h-cdn.com/jade/jade.stream/chunklist.m3u8
 翡翠台,http://r.jdshipin.com/62WM7
