@@ -9,6 +9,7 @@
 翡翠台,http://r.jdshipin.com/62WM7
 翡翠台,http://198.16.100.90:8278/Wlt/playlist.m3u8?tid=MC9C7523788875237888&ct=19225&tsum=fc74aa160d3ca61369c2e5f3ae79ee8e
 翡翠台,http://198.16.100.90:8278/jade_twn/playlist.m3u8?tid=MDAD1890217018902170&ct=19249&tsum=36346362d72a1e85802fa5d3eee3861c
+翡翠台,http://r.jdshipin.com/GeWKr?id=fct720
 
 明珠台,http://xjayrf.eatuo.com:9901/tsfile/live/1005_1.m3u8
 明珠台,http://47.113.189.55/iptv/iptv.php?key=ced93979274d74470b525fc6372adbc9&amp;id=9
@@ -18,6 +19,8 @@
 明珠台,http://198.16.100.90:8278/pearl_twn/playlist.m3u8?tid=MC6C7041327570413275&ct=19226&tsum=681972baf66d69caf7cccc92a90e5aad
 明珠台,http://113.117.74.12:8081/hls/26/index.m3u8
 明珠台,http://107.167.12.62:44881/index.m3u8
+明珠台,http://r.jdshipin.com/GeWKr?id=mzt720
+
 
 TVB J2,http://r.jdshipin.com/ndGgS
 TVB J2,http://r.jdshipin.com/Nr5jq
