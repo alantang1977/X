@@ -21,14 +21,33 @@
 明珠台,http://107.167.12.62:44881/index.m3u8
 明珠台,http://r.jdshipin.com/GeWKr?id=mzt720
 
+J2,http://r.jdshipin.com/ndGgS
+J2,http://r.jdshipin.com/Nr5jq
+J2,http://sc2022.stream-link.org/tv2306.php?id=h03
+J2,https://fake-stream.livednow.com/mdvb/j2?token=16ca037a4f5d03eaebee24d129d7d3fb&user_id=1254950701&user_token=9f7ce824f2caceacca70a2fc1cd96236
+J2,https://cdn.hklive.tv/xxxx/82/index.m3u8
+J2,https://live.astradamy.com/tvbj2/index.m3u8
+J2,https://p2.weizan.cn/1646497941/269664979080385265/live.m3u8
 
-TVB J2,http://r.jdshipin.com/ndGgS
-TVB J2,http://r.jdshipin.com/Nr5jq
-TVB J2,http://sc2022.stream-link.org/tv2306.php?id=h03
-TVB J2,https://pull-l3-cny.douyincdn.com/live/stream-19825832023042700451.m3u8
-TVB J2,https://cdn.hklive.tv/xxxx/82/index.m3u8
-TVB J2,https://live.astradamy.com/tvbj2/index.m3u8
-TVB J2,https://p2.weizan.cn/1646497941/269664979080385265/live.m3u8
+凤凰中文,http://210.210.155.37/uq2663/h/h157/index2.m3u8
+凤凰中文,http://198.16.100.90:8278/phoenixtv_hd/playlist.m3u8?tid=MFBF2713938527139385&ct=19225&tsum=1c8ca0899277714ab83db57245220068
+凤凰中文,http://pi.0472.org/tv/cbn.php?id=xfjcHD
+凤凰中文,https://fake-stream.livednow.com/mdvb/phx-chinese?token=666e67d952f67d62d3cf407e49892124&user_id=1254950701&user_token=9f7ce824f2caceacca70a2fc1cd96236
+凤凰中文,http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226547/1.m3u8
+凤凰中文,http://222.217.246.54:8282/tsfile/live/1083_1.m3u8
+
+凤凰资讯,https://fake-stream.livednow.com/mdvb/phx-news?token=d28d104a6c176af9d59823e8dccbd619&user_id=1254950701&user_token=9f7ce824f2caceacca70a2fc1cd96236
+凤凰资讯,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226546/index.m3u8
+凤凰资讯,http://php.17186.eu.org/phtv/fhzx.m3u8
+凤凰资讯,http://r.jdshipin.com/0Rp07
+凤凰资讯,http://113.117.74.28:8081/hls/36/index.m3u8
+
+凤凰香港,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=153402
+凤凰香港,https://fake-stream.livednow.com/mdvb/phx-hk?token=8c49b0a6f0c36e6990d3ff661695b413&user_id=1254950701&user_token=9f7ce824f2caceacca70a2fc1cd96236
+凤凰香港,http://222.217.246.54:8282/tsfile/live/1084_1.m3u8
+凤凰香港,http://113.117.74.18:8081/hls/38/index.m3u8
+凤凰香港,http://198.16.100.90:8278/hkphoenix_twn/playlist.m3u8?tid=MACA2858291128582911&ct=19225&tsum=0f01288bbaa6c0403d07e96b0a5db4ed
+凤凰香港,https://epg.pw/stream/af200edb390eccb6bd2710d91f2d129e2fa16a7ec32f42733606bbd126b434c0.m3u8
 
 
 
