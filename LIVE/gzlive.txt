@@ -5,6 +5,7 @@
 广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
 广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
 广州法治,http://nas.jdshipin.com:8801/gztv.php?id=fazhi
+
 翡翠台,https://edge6a.v2h-cdn.com/jade/jade.stream/chunklist.m3u8
 翡翠台,http://r.jdshipin.com/62WM7
 翡翠台,http://198.16.100.90:8278/Wlt/playlist.m3u8?tid=MC9C7523788875237888&ct=19225&tsum=fc74aa160d3ca61369c2e5f3ae79ee8e
@@ -28,6 +29,7 @@ J2,https://fake-stream.livednow.com/mdvb/j2?token=16ca037a4f5d03eaebee24d129d7d3
 J2,https://cdn.hklive.tv/xxxx/82/index.m3u8
 J2,https://live.astradamy.com/tvbj2/index.m3u8
 J2,https://p2.weizan.cn/1646497941/269664979080385265/live.m3u8
+J2,http://162.19.247.76:22222/live/tvbj2/index.m3u8
 
 凤凰中文,http://210.210.155.37/uq2663/h/h157/index2.m3u8
 凤凰中文,http://198.16.100.90:8278/phoenixtv_hd/playlist.m3u8?tid=MFBF2713938527139385&ct=19225&tsum=1c8ca0899277714ab83db57245220068
