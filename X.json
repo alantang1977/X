@@ -2,10 +2,9 @@
 "sites":[
 ##搜索系列
 {"key": "豆瓣","name":"Ⓜ️┃豆瓣┃荐片","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/豆瓣.js"},
-//{"key":"小纸条_cli","name":"🎏┃纸条┃资源","type":4,"api":"http://home.jundie.top:9520/spider/cli_gitCafe","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt", "timeout":30},
+//{"key":"小纸条_cli","name":"🦋┃纸条┃资源","type":4,"api":"http://home.jundie.top:9520/spider/cli_gitCafe","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt", "timeout":30},
 {"key":"77","name":"🌹┃柒柒┃影视","type":3,"api":"csp_Kunyu77","searchable":1,"quickSearch":1,"changeable":1},
 {"key": "天天","name": "⛩️┃天天┃巧技","type": 3,"api": "csp_TTian","playerType": 1,"ext": "http://op.ysdqjs.cn","jar":"http://cdn.qiaoji8.com/fix12210.jar;md5;a5c29d1840207b137a855e23526d6e32"},
-//{"key": "超神","name": "⛩️┃超神┃巧技","type": 3,"api": "csp_qiao","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/chaoshen","jar":"http://cdn.qiaoji8.com/fix1209.jar;md5;3021d0a39a4959c487437ccd2bdba75b"},
 {"key": "996影院","name": "🐩┃狗狗遛┃影视","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d"},
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Voflix","name":"🦁┃Voflix┃影视","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/voflix.js"},
@@ -37,11 +36,9 @@
 //{"key": "AList","name": "🅱┃网盘小雅","type": 3,"api": "csp_AListBox","searchable": 1,"changeable": 0,"jar":"./xy.jar","ext":"https://api.zalman2022.repl.co/xiaoya.json#原画","style": {"type": "list"}},
 	
 ##高清4K系列
-//{"key":"csp_WoGG","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://api.wogg.xyz/$$$弹"},
-{"key":"玩偶哥哥","name":"👽┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://www.wogg.xyz/$$$弹"},
+{"key":"玩偶哥哥","name":"💂🏿‍♀️┃阿里┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd$$$https://www.wogg.xyz/$$$弹"},
 {"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$./lib/wogg.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d"},
 //{"key":"PikPakShare","name":"🛳️┃PikPak┃分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/pikpak.json$$$./lib/pikpakclass.json$$$./lib/pikpakclass.json.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d"},
-//{"key": "盘99","name": "🍽️┃盘玖玖┃4K","type": 3,"api": "csp_Pan99","searchable": 1,"changeable": 0,"ext": "./pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d"},		
 {"key":"影视车","name":"🐸┃玩偶┃运输车","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$./lib/wogg.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d"},
 {"key": "439","name": "🌈┃肆叁玖┃🎏","type": 1,"api": "https://49zyw.com/api.php/provide/vod/","categories": ["国产剧","短剧","欧美剧","香港剧","动作片","爱情片","科幻片","恐怖片","剧情片","战争片","喜剧片","动画片","犯罪片","奇幻片","灾难片","悬疑片","其他片","韩国剧","台湾剧","泰国剧","日剧","大陆综艺","港台综艺","日韩综艺","欧美综艺","国产动漫","日本动漫","欧美动漫","海外动漫","电影解说","体育赛事","海外剧","纪录片"]},
 {"key":"贱贱","name":"🐭┃玩偶┃荐片","type":3,"searchable":1,"quickSearch":1,"changeable":1,"playerType":"1","api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/jp.js"},
