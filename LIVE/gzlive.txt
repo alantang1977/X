@@ -60,7 +60,9 @@ J2,http://162.19.247.76:22222/live/tvbj2/index.m3u8
 凤凰香港,http://198.16.100.90:8278/hkphoenix_twn/playlist.m3u8?tid=MACA2858291128582911&ct=19225&tsum=0f01288bbaa6c0403d07e96b0a5db4ed
 凤凰香港,https://epg.pw/stream/af200edb390eccb6bd2710d91f2d129e2fa16a7ec32f42733606bbd126b434c0.m3u8
 
-
+星空卫视,http://183.237.246.14:9003/hls/40/index.m3u8
+星空卫视,http://113.117.74.203:8081/hls/36/index.m3u8
+星空卫视,http://113.117.74.160:8081/hls/37/index.m3u8
 
 🦁丨央视,#genre#
 CCTV1,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221225804/1.m3u8
