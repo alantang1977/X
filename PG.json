@@ -85,7 +85,8 @@
 				"cookie":""
 			}
 		},
-		{"key":"Wogg","name": "🏄🏻┃玩偶哥哥┃阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"../pg/lib/tokenm.json$$$https://wogg.xyz/┃104.16.245.50$$$null$$$1$$$./pg/lib/wogg.json"},
+		//{"key":"Wogg","name": "🏄🏻┃玩偶哥哥┃阿里","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"../pg/lib/tokenm.json$$$https://wogg.xyz/┃104.16.245.50$$$null$$$1$$$./pg/lib/wogg.json"},
+		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"./lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$./lib/wogg.json"},
 		{"key":"影视车","name": "🏄🏻┃影视车┃网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$https://already.free.hr/alantang1977/X/main/pg/lib/wogg.json"},
 		{"key":"Wobg","name": "🏄🏻┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://already.free.hr/alantang1977/X/main/pg/lib/wogg.json"},
 		{"key":"Pan99","name": "🏄🏻┃盘99┃网盘","type":3,"api":"csp_Pan99","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://pan99.xyz$$$null$$$1"},
