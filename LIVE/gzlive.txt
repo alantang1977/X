@@ -63,6 +63,10 @@ J2,http://162.19.247.76:22222/live/tvbj2/index.m3u8
 星空卫视,http://183.237.246.14:9003/hls/40/index.m3u8
 星空卫视,http://113.117.74.203:8081/hls/36/index.m3u8
 星空卫视,http://113.117.74.160:8081/hls/37/index.m3u8
+星空卫视,http://hodos.ddns.net:8181/tsfile/live/1004_1.m3u8
+星空卫视,http://222.217.246.54:8282/tsfile/live/1085_1.m3u8
+星空卫视,http://120.236.57.77:9901/tsfile/live/1106_1.m3u8
+星空卫视,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=683118
 
 🦁丨央视,#genre#
 CCTV1,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221225804/1.m3u8
