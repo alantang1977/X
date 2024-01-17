@@ -63,6 +63,8 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 取得阿里云盘token方法如下：
 
+https://alist.nn.ci/zh/guide/drivers/aliyundrive.html
+
 先通过浏览器打开阿里云盘官网并登录网页版：https://www.aliyundrive.com/drive/ 登录成功后，
 
 打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 
