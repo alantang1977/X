@@ -140,16 +140,6 @@
 {"key":"畅梦","name":"💤┃畅梦┃影视","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/changmeng.js"},
 {"key":"Ppxzy","name":"🦑┃皮皮虾┃网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9acd9ebf0a5b997e2c8f73cc32b78e6d","ext":"http://127.0.0.1:9978/file/tvfan/token.json$$$https://ppxzy.net/$$$null$$$1", "timeout":30}, 
 {"key":"csp_笑笑","name":"❤️‍🩹┃笑笑┃影视","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/json/笑笑影视.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/HeChengChaXiu.jar"},
-	
-##csp系列	
-{"key":"黄黄","name":"🛎️┃黄黄┃影视","api":"csp_AppYsV2","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
-{"key": "apv2_瑞丰","name": "⛄┃瑞丰┃影视","type": 3,"api": "csp_AppYsV2","ext": "http://www.miniku.cc/xgapp.php/v2/"},	
-{"key":"率率","name":"🎀┃帅帅┃影视","type":1,"api":"https://suoniapi.com/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"changeable":1,"categories":["国产剧","韩剧","日剧","港剧","台剧","动作片","喜剧片","爱情片","科幻片","战争片","恐怖片","剧情片","国产动漫","日韩动漫","欧美动漫","大陆综艺","日韩综艺"]},
-{"key":"星影1080cms","name":"👽┃星影┃影视","type":1,"api":"https://www.xy1080.net/api.php/provide/vod","searchable":1,"quickSearch":1},
-{"key":"奇奇","name":"🍓┃奇奇┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://ttsp.live/api.php/app/"},
-{"key": "追忆","name": "🐿┃追忆┃影视","type": 3,"api": "csp_AppSK","searchable": 1,"quickSearch": 1,"changeable": 1,"ext": "FbjPcVZY48PN/RIZ5UWFrphwLIZAH4tPWnVF46Ct0RcDCdqQ/iHaxETP6KexDCalbnKb235g2zI+TmNzCM49OFRCWdee3hnULz5M1CsK3w=="},
-{"key":"哈喽","name":"🦁┃哈喽┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://www.miniku.cc/xgapp.php/v1/"},
-{"key":"陌陌","name":"🍄┃陌陌┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.kuin.one/api.php/app/"},
 {"key":"DiDuan","name":"⏮️┃低端┃影视","type":3,"api":"csp_Ddrk","searchable":1,"quickSearch":1,"changeable":1},
 {"key": "商店","name": "🐸┃影视应用商店","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"ext": "https://fm.t4tv.hz.cz/json/market.json","jar":"https://fm.t4tv.hz.cz/jar/custom_spider.jar;md5;f4fa24d313b7290001db8ef49bd8ae0b"},
 
