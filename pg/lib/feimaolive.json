@@ -1,5 +1,10 @@
 [
-{"name":"范明明OfficalSite","url":"https://live.fanmingming.com/tv/m3u/global.m3u"},
-{"name":"范明明GitHub","url":"https://mirror.ghproxy.com/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u"},
-{"name":"范明明IPV6","url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u"}
+{"name":"广东直播","url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/gzlive.txt"},
+{"name":"全国直播","url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/Gather.m3u"},
+{"name":"全球直播","url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/全国直播源.m3u"},
+{"name":"Moexin直播","url":"https://already.free.hr/Moexin/IPTV/blob/Files/IPTV.m3u"},
+{"name":"iptv-org直播","url":"https://iptv-org.github.io/iptv/languages/zho.m3u"},
+{"name":"Meroser直播","url":"https://already.free.hr/Meroser/IPTV/blob/main/IPTV.m3u"},
+{"name":"YanG-1989直播","url":"https://already.free.hr/YanG-1989/m3u/main/Gather.m3u"},
+{"name":"OwenTV直播","url":"https://jihulab.com/owen2000wy/owentv/-/raw/main/HP20230319.txt"},  
 ]
