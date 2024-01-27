@@ -112,6 +112,8 @@
 		{"key":"YunPanOne","name": "🏄🏻┃云盘资源┃网盘","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json"},
 		{"key":"YydsVip","name":"🏄🏻┃YYDSVIP┃网盘","type":3,"api":"csp_YydsVip_Disable", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$http://yydsvip.cn$$$null$$$1"},
 		{"key":"Ys23","name":"🏄🏻┃影视23┃网盘","type":3,"api":"csp_Ys23","quickSearch":1, "changeable":1, "filterable":1, "timeout":30},
+		{"key":"88Pan","name":"🏄🏻┃88网盘┃网盘","type":3,"api":"csp_EightEight","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json$$$https://662688.xyz"},
+		
 		{
 			"key": "NanGua",
 			"name": "🏄🏻┃南瓜┃弹幕",
