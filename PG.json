@@ -11,9 +11,8 @@
 		},
 		{"key":"Local","name": "🏄🏻┃本地","type":3,"api":"csp_Local"},
 		{"key":"PikPakShare","name": "🏄🏻┃PikPak分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json.txt.gz"},
-		//{"key":"AliShare","name":"🏄🏻┃阿里云盘分享","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/token.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.db.txt.gz"},
 		{"key":"AliShare","name":"🏄🏻┃阿里云盘分享","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt"},
-				{
+		{
 			"key": "网盘配置",
 			"name": "🏄🏻┃网盘及彈幕配置",
 			"type": 3,
