@@ -44,11 +44,11 @@ http://tonkiang.us
 ------
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
+https://xn--sss604efuw.top/jm/ 解密
+
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
 
 https://jm.dovxi.repl.co/api?url=
-
-https://xn--sss604efuw.top/jm/ 解密
 
 http://饭太硬.top/tv
 
