@@ -1,6 +1,12 @@
 
 🦁丨广州专区,#genre#
 广州综合,http://nas.jdshipin.com:8801/gztv.php?id=zhonghe
+广州综合,http://player.200877926.top/169l/gd/gztvm3u8.php?id=gzys
+广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+广州综合,http://suixiaobin.dsmynas.net:5666/gudou.php?phone=18998910474&ptoken=SZESNUL4i2PcZZKV1JA9jw%3D%3D&pserialnumber=63eee104cf9602bf&cid=860&id=guangzhou_1500
+广州综合,http://xiaozeng.aweitv.top/tv/gdtv.php?id=guangzhou_1500
+广州综合,http://60.208.16.27:1505/gudou.php?id=gzhounewsHD
+广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
 广州新闻,http://nas.jdshipin.com:8801/gztv.php?id=xinwen
 广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
 广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
