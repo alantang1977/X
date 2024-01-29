@@ -405,6 +405,7 @@
 {"name":"汤","type":1,"url": "http://175.178.183.192:86/api/?key=b832096861839f56066bf4ae7a0d7be0&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","imgo","YuMi-vip"]}},
 {"name":"tang","type":0,"url":"https://jx.xmflv.com/?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","imgo","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 {"name": "🌽玉米","type": 1,"url": "https://jxjson.cf/json.php?url=","ext": {"flag": ["YuMi","YuMi-vip"]}},
+{"name":"亮亮","type":1,"url":"http://xiutan.shiyifacai.com/json/qingfeng.php?url=","ext":{"flag":["seven"],"header":{"User-Agent":"Lavf/58.12.100"}}},
 {"name": "🥭菠萝","type": 1,"url": "https://jxjson.cf/json.php?url=","ext": {"flag": ["qq","mgtv","YuMi-vip"]}},
 {"name":"🍵白茶","url":"https://jx.bozrc.com:4433/player/?url=","showType":1},
 {"name":"ok","type":1,"url":"http://127.0.0.1:9978/proxy?do=appmaoparse&app=juzi&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
