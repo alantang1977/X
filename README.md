@@ -46,17 +46,19 @@ http://tonkiang.us
 
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
 
-https://jm.dovxi.repl.co/api?url=http://肥猫.live
+https://jm.dovxi.repl.co/api?url=
 
 https://xn--sss604efuw.top/jm/ 解密
 
-https://jm.dovxi.repl.co/api?url=http://饭太硬.top/tv
+http://饭太硬.top/tv
 
-https://jm.dovxi.repl.co/api?url=http://xhww.fun:63/小米/DEMO.json
+http://肥猫.live
+
+http://xhww.fun:63/小米/DEMO.json
+
+https://weixine.net/ysc.json   运输车
 
 https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/app/ymzn  我爱夜猫子
-
-https://jm.dovxi.repl.co/api?url=https://weixine.net/ysc.json   运输车
 
 https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情
 
