@@ -248,6 +248,7 @@
 {"key":"csp_Aid","name":"🚑┃急救指南","type":3,"api":"csp_FirstAid","searchable":1,"quickSearch":1,"changeable":0,"style": { "type": "rect", "ratio": 3.8},"jar":"https://qu.ax/dDSz.jpg;md5;510FA1663F7067BD4D40DE06097202BF"},	
 
 ##dr_js系列
+{"key":"喵物次元","name":"🐈‍⬛┃喵物次元┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/喵物次元.js"},
 {"key":"996影视","name":"👁️┃996影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/996影视.js"},
 {"key":"高光影视","name":"🔅┃高光影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/高光影视.js"},
 {"key":"饭团","name":"🍚┃饭团影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/饭团影视.jsd"},
@@ -363,7 +364,7 @@
 //"wallpaper":"https://tuapi.eees.cc/api.php?category=fengjing&type=302",
 //"wallpaper": "http://我不是.肥猫.live/ppic/feimao.php",
 //"spider":"https://fs-im-kefu.7moor-fs1.com/29397395/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1705477777977/fan.txt;md5;eea132982ffc884d7a39295f06a5141c",
-"spider":"https://fs-im-kefu.7moor-fs1.com/29397395/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1706541296276/fan.txt;md5;c909e1c1f4523de628060118021ce9ba",
+"spider":"https://fs-im-kefu.7moor-fs1.com/29397395/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1706645996429/fan.txt;md5;1ff3df38a66ee5378031e4fac1799596",
 "wallpaper":"https://agit.ai/alanchaotang/X/raw/branch/main/Pictures/W-.png",
 //"spider": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/fan.jar;md5;eea132982ffc884d7a39295f06a5141c",
 //"wallpaper":"http://饭.eu.org/深色壁纸/api.php",
