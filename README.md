@@ -60,7 +60,7 @@ https://weixine.net/ysc.json   运输车
 
 https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/app/ymzn  我爱夜猫子
 
-https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情
+https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情 (https://already.free.hr/Vivo-Max/XYQTVBox/main/XYQTVBox.json)
 
 http://pandown.pro/tvbox/tvbox.json  巧技
 
