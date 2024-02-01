@@ -18,41 +18,6 @@
 			"searchable": 1,
 			"changeable": 1
 		},
-		{
-			"key": "FirstAid",
-			"name": "🏄🏻┃急救知识 ",
-			"type": 3,
-			"api": "csp_FirstAid",
-			"searchable": 0,
-			"quickSearch": 0,
-			"changeable": 0,
-			"style": {
-				"type": "rect",
-				"ratio": 3.8
-			}
-		},
-		{
-			"key": "短剧",
-			"name": "🏄🏻┃短剧",
-			"type": 3,
-			"api": "csp_Duanju",
-			"searchable": 0,
-			"changeable": 1
-		},
-		{"key":"drpy_js_磁力熊","name": "🏄🏻┃磁力熊[js]┃索引","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
-		{
-			"key":"bili",
-			"name": "🏄🏻┃B站 ┃ Bili[jar]",
-			"type":3,
-			"api": "csp_Bili",
-			"searchable": 1,
-			"quickSearch": 0,
-			"changeable": 0,
-			"ext":{
-				"type":"演唱会#电影#电视剧#帕梅拉#广场舞#纪录片#综艺#鬼畜#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
-				"cookie":""
-			}
-		},
 		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
 		{"key":"影视车","name": "🏄🏻┃影视车┃网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
 		{"key":"Wobg","name": "🏄🏻┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
@@ -182,6 +147,41 @@
 		{"key":"Local","name": "🏄🏻┃本地","type":3,"api":"csp_Local"},
 		{"key":"PikPakShare","name": "🏄🏻┃PikPak分享","type":3,"api":"csp_PikPakShare","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/pikpakclass.json.txt.gz"},
 		{"key":"AliShare","name":"🏄🏻┃阿里云盘分享","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt"},
+		{
+			"key": "FirstAid",
+			"name": "🏄🏻┃急救知识 ",
+			"type": 3,
+			"api": "csp_FirstAid",
+			"searchable": 0,
+			"quickSearch": 0,
+			"changeable": 0,
+			"style": {
+				"type": "rect",
+				"ratio": 3.8
+			}
+		},
+		{
+			"key": "短剧",
+			"name": "🏄🏻┃短剧",
+			"type": 3,
+			"api": "csp_Duanju",
+			"searchable": 0,
+			"changeable": 1
+		},
+		{"key":"drpy_js_磁力熊","name": "🏄🏻┃磁力熊[js]┃索引","type":3,"api":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/js/cilixiongp.js","playerType":"1", "searchable":0, "quickSearch":0, "changeable":1},
+		{
+			"key":"bili",
+			"name": "🏄🏻┃B站 ┃ Bili[jar]",
+			"type":3,
+			"api": "csp_Bili",
+			"searchable": 1,
+			"quickSearch": 0,
+			"changeable": 0,
+			"ext":{
+				"type":"演唱会#电影#电视剧#帕梅拉#广场舞#纪录片#综艺#鬼畜#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
+				"cookie":""
+			}
+		},
 		{
 			"key": "网盘配置",
 			"name": "🏄🏻┃网盘及彈幕配置",
