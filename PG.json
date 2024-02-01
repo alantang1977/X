@@ -494,18 +494,18 @@
 		}],
 		"lives":[
 			{
-				"name": "🏄🏻┃live.ipv6",
+				"name": "🏄🏻┃live.直播",
 				"type": 0,
-				"url": "https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+				"url": "https://m3u.ibert.me/txt/ycl_iptv.txt",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "https://epg.112114.xyz/logo/{name}.png"
 			},
 			{
-				"name": "🏄🏻┃live.ipv6.m3u",
+				"name": "🏄🏻┃live.电视",
 				"type": 0,
-				"url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+				"url": "https://m3u.ibert.me/m_iptv.m3u",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
