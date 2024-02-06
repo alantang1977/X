@@ -349,6 +349,7 @@
 {"key":"喵物次元","name":"💂🏿‍♀️┃喵物次元┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/喵物次元.js"},
 {"key": "drpy_js_喜马拉雅","name": "🎧 喜马拉雅","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/喜马拉雅.js"},
 {"key": "drpy_js_蜻蜓FM","name": "🎧 蜻蜓FM","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/蜻蜓FM.js"},
+{"key": "drpy_js_六月听书","name": "🎧 六月听书","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/六月听书.js"},
 	
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
