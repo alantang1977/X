@@ -345,6 +345,10 @@
 {"key": "MV_vod","name": "🎶┃明星┃MV","type": 1,"api": "https://mv.wogg.link/mv/vod","style": {"type": "oval"},"searchable": 1,"quickSearch": 0,"changeable": 0},
 {"key":"csp_bendi","name":"📂┃本地┃视频","type":3,"api":"csp_LocalFile","searchable":0,"quickSearch":0,"filterable":0,"type_flag":1},
 {"key": "WebDAV","name": "🎥┃WebDAV┃影视仓库","type": 3,"api": "csp_WebDAV","searchable": 1,"filterable": 1,"changeable": 0,"ext": "https://gh-proxy.com/http://raw.github.com/alantang1977/CatVodSpider/master/json/webdav.json","jar":"https://gh-proxy.com/http://raw.github.com/alantang1977/CatVodSpider/master/jar/fm.jar"},
+{"key":"喵物次元","name":"💂🏿‍♀️┃喵物次元┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/喵物次元.js"},
+{"key": "drpy_js_喜马拉雅","name": "🎧 喜马拉雅","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/喜马拉雅.js"},
+{"key": "drpy_js_蜻蜓FM","name": "🎧 蜻蜓FM","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/蜻蜓FM.js"},
+	
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 //"wallpaper": "http://img.fongmi.eu.org",
