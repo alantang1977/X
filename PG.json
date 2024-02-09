@@ -492,7 +492,7 @@
 			{
 				"name": "🏄🏻┃live.电视",
 				"type": 0,
-				"url": "https://m3u.ibert.me/m_iptv.m3u",
+				"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/野火.txt",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
