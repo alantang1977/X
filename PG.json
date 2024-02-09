@@ -483,7 +483,7 @@
 			{
 				"name": "🏄🏻┃live.直播",
 				"type": 0,
-				"url": "https://m3u.ibert.me/txt/ycl_iptv.txt",
+				"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
