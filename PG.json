@@ -3,6 +3,7 @@
 	"sites":[
 		{"key": "豆瓣","name": "㊗️┃🏮祝大家财源亨通龙年大吉🏮","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key": "996影院","name": "🏄🏻┃996影院","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1},
+		{"key":"Yingtantv","name":"🏄🏻┃影探|直连","type":3,"api":"csp_Yingtantv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/yt.json"},
 		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
 		{"key":"影视车","name": "🏄🏻┃影视车┃网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
 		{"key":"Wobg","name": "🏄🏻┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
