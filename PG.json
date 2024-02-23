@@ -2,6 +2,9 @@
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe",
 	"sites":[
 		{"key": "豆瓣","name": "㊗️┃🏮祝大家财源亨通龙年大吉🏮","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
+		{"key": "Buleitv","name": "💯布蕾┃TV","type": 3,"api": "csp_Buleitv","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
+		{"key": "Yingtantv","name": "💯影探┃TV","type": 3,"api":"csp_Yingtantv2","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
+  		{"key": "Zhuiyitv","name": "💯追忆┃TV","type": 3,"api": "csp_Zhuiyitv","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
 		{"key": "996影院","name": "🏄🏻┃996影院","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1},
 		{"key":"Yingtantv","name":"🏄🏻┃影探┃直连","type":3,"api":"csp_Yingtantv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/yt.json"},
 		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
