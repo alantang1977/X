@@ -9,8 +9,9 @@
 {"key":"影视车","name":"🐸┃玩偶┃运输车","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.weixine.net/$$$null$$$1$$$./lib/wogg.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 {"key": "dr_LIBVIO","name":"🍑┃LIBVIO┃🦁","type": 3,"api": "https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/libvio.js"},
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.pw/"},
-{"key":"追忆","name":"🐼┃追忆影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/追忆.js"},
-//{"key":"tantv","name":"👁️┃影探┃直连","type":3,"api":"csp_Yingtantv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/yt.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
+//{"key":"追忆","name":"🐼┃追忆影视┃🦁","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/追忆.js"},
+{"key": "Yingtantv","name": "💯┃影探┃TV","type": 3,"api":"csp_Yingtantv2","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
+{"key": "Zhuiyitv","name": "💯┃追忆┃TV","type": 3,"api": "csp_Zhuiyitv","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
 {"key": "996影院","name": "🐩┃狗狗遛┃影视","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 {"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
 {"key":"csp_YGP","name":"👙┃新片┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
@@ -23,7 +24,7 @@
 {"key": "巧技五","name": "🥈┃星星┃巧技","type": 3,"api": "csp_qiao2","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/qiaoji5","jar":"http://cdn.qiaoji8.com/fix24117.jar;md5;2e85feb2888d9efb5b396258f22841ac"},
 {"key":"AliShare","name":"🏄🏻┃阿里云盘影视","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 {"key":"AliShareEBook","name":"🏄🏻┃阿里云盘书籍","type":3,"api":"csp_AliShare","searchable":0,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.ebook.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
-{"key":"Yingtantv","name": "💯┃影探┃4K","type":3,"api":"csp_Yingtantv","searchable":1,"changeable":0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/影探你大爷.jar"},	
+//{"key":"Yingtantv","name": "💯┃影探┃4K","type":3,"api":"csp_Yingtantv","searchable":1,"changeable":0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/影探你大爷.jar"},	
 
 	
 	
