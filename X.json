@@ -27,15 +27,13 @@
 {"key":"AliShare","name":"🏄🏻┃阿里云盘影视","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 {"key":"AliShareEBook","name":"🏄🏻┃阿里云盘书籍","type":3,"api":"csp_AliShare","searchable":0,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.ebook.txt","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 {
-      "key": "宇宙影视",
+      "key": "二懒影视",
       "name": "4K HDR",
       "type": 3,
-      "api": "csp_AppYsV2",
+      "api": "csp_Yingtantv2",
       "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "http://ds.yuzhoukeji.top/api.php/app/"
-    },   	
+      "jar": "https://jihulab.com/xiaohutx/meisha/-/raw/main/zdzj.jar"
+    },
 	
 ##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布布┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光.jsd"},
