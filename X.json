@@ -104,7 +104,7 @@
 {"key":"PanSearch","name":"🙀┃盘搜┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 {"key":"七夜","name":"😾┃七夜┃搜索","type":3,"api":"csp_Dovx","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
 {"key":"YunSo","name":"☁️┃小云搜索┃网盘","type":3,"api":"csp_YunSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
-
+{"key":"秒搜","name": "🏄🏻┃秒搜┃网盘","type":3,"api":"csp_MiaoSou","timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe"},
 	
 //{"key": "push_agent","name": "📵┃夸克┃推送","type": 3,"api": "csp_Push","searchable": 0,"quickSearch": 0,"filterable": 0,"changeable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/js/pg.json"},
 //{"key":"AList","name": "🅿┃仙女┃搜索","type": "3","api":"csp_AList","changeable":"0","searchable":"1","ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/livealist.json"},
