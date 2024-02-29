@@ -1,7 +1,7 @@
 {
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe",
 	"sites":[
-		{"key": "豆瓣","name": "㊗️┃🏮祝大家财源亨通龙年大吉🏮","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
+		{"key": "豆瓣","name": " 📧┃豆瓣","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key":"Yscapp","name":"💯┃影视车┃App","type":3,"api":"csp_Yscapp","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "playerType":1, "playerType":1, "ext":"1"},
 		{"key":"Zhuiyitv","name":"💯┃追忆┃App","type":3,"api":"csp_Zhuiyitv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"$$$./lib/yt.json$$$1"},
 		//{"key": "Buleitv","name": "💯布蕾┃TV","type": 3,"api": "csp_Buleitv","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
