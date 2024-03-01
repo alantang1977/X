@@ -24,20 +24,8 @@
 //{"key": "巧技二","name": "🥇┃喵播┃巧技","type": 3,"api": "csp_qiao2","playerType": 2,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/qiaoji2","jar":"http://cdn.qiaoji8.com/fix24225.jar;md5;fe4c16637b991d41b2ff6b6e4df3c246"},
 {"key": "柠檬","name": "🍋┃柠檬┃巧技","type": 3,"api": "csp_Nmvod","playerType": 2,"ext": "https://api.cnmcom.com/webcloud/nmsvip.php?url=","jar":"http://cdn.qiaoji8.com/fix24225.jar;md5;fe4c16637b991d41b2ff6b6e4df3c246"},
 {"key": "巧技五","name": "🥈┃星星┃巧技","type": 3,"api": "csp_qiao2","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "https://jihulab.com/qiaoji/open/-/raw/main/qiaoji5","jar":"http://cdn.qiaoji8.com/fix24225.jar;md5;fe4c16637b991d41b2ff6b6e4df3c246"},
-{
-      "key": "Yinyuetai",
-      "name": "🛰音悦台┃音乐┃MV",
-      "type": 3,
-      "api": "csp_Yinyuetai",
-      "searchable": 1,
-      "changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
-{
-      "key": "Fangniu4k",
-      "name": "🇨🇳放牛┃TV┃App",
-      "type": 3,
-      "api": "csp_Fangniu4k",
-      "searchable": 1,
-      "changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
+{"key": "Yinyuetai","name": "🛰┃音悦台┃音乐┃MV","type": 3,"api": "csp_Yinyuetai","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
+{"key": "Fangniu4k","name": "🇨🇳┃放牛┃TV┃App","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
 	
 	
 ##官源系列
