@@ -1,5 +1,5 @@
 {
-	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;9b30d1d8a5b0656c674590c3c6d2aafe",
+	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3",
 	"sites":[
 		{"key": "豆瓣","name": " 📧┃豆瓣","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key":"Yscapp","name":"💯┃影视车┃App","type":3,"api":"csp_Yscapp","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "playerType":1, "playerType":1, "ext":"1"},
