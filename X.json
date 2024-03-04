@@ -26,31 +26,7 @@
 {"key": "Fangniu4k","name": "🇨🇳┃放牛┃TV","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
 {"key": "天天","name": "🧸┃天天┃TV","type": 3,"api": "csp_TTian","playerType": 1,"ext": "http://op.ysdqjs.cn$$$null$$$1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3"},	
 {"key": "星星","name": "📖┃星视界┃影视","type": 3,"api": "csp_Appto","searchable":0,"playerType": 2,"ext": "DRKzxyMKvtSwY8KlZf2E0UaodOFwpc55fZ8i/57cIgQJHQLy6PnKLAAj9UrkpoexlNCAomzVttbI6D6TEnlHNVDqRhIQqGlHt8m6PjVxP7PSlmraDar52uqEU7UXaaV+UGqz0bc9q95VVRMK4uX5l674wT+p5Cp2QGr1D24Uz7QNkA6GgkDGW/ezLoYsXUCc7xsDK5ev51cJxn0cIJClFysrOGsTvyLYjYIF2ktu+F36QVcAsAvA6Jpyz2hSTlWadidOt2m81TA5yrfAKjBILuQ63gcnyXh6SH9VjER5dL2KD8iTVBAN3L9TlQqDHPr64N0D6mAldXLMYJM/RrTUznCbIno7V/eTT+YqnLWNekVigNB8Q7Fp3WgMYfk73VYcOqPKO2qwQWyJqaQDW4Uo7nFrQWttqYAwWEDhjM/ABuYLkLX9V83/QFOPkhBJZ+eQoqsiVP3ZugFGB5/XuVZkoYWaG00BRQ3j55vTflJ2ne0WQcFAj6GcYNLodkII4Ji53kVoL+w55Cc9PmtSR1tynlWDylYBfkJbtDOJSuEUKDnKiD/ZFqMAejQFV9EcZr1g6QbLIf/FRldeLYRxsYsWPFc2STqEdgGA+osyO/zzyaeZLH5AJ02l7kKyMxKMPaRF2MGX1DPnZHrbXA4u0A5Vy3M3IMFNZaR0f08C4KDDi1xY=$$$null$$$1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3"},
-{
-            "key": "baipiaoys",
-            "name": "🏡┃白嫖┃BPQ",
-            "type": 3,
-            "changeable": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/xbpq.jar",
-            "api": "csp_XBPQ",
-            //"playerType": "2",
-            "ext": {
-                "主页url": "http://www.baipiaoys.cc/",
-                "副标题": "pic-text text-right\">&&</b>",
-                "搜索模式": "1",
-                "搜索url": "https://www.baipiaoys.cc/search.html?wd={wd}",
-                "图片": "data-original=\"&&\"",
-                "嗅探词": ".mp4#m3u8#.m3u8#/tos/#.flv#video/tos",
-                "影片类型": "<div class=\"module-info-tag\">&&立即播放",
-                "导演": "导演：&&</div>",
-                "主演": "主演：&&</div>",
-                "分类": "短剧$4#电影$1#电视剧$2#动漫$3#综艺$5",
-                "分类url": "http://www.baipiaoys.cc/show/area/{area}/class/{class}/id/{cateId}/page/{catePg}/lang/{lang}/letter/{letter}/year/{year}.html"
-            }
-        },
+
 	
 ##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布布┃官源","type":3,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/js/布雷蓝光.jsd"},
