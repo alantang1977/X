@@ -6,6 +6,12 @@
 广州综合,http://xiaozeng.aweitv.top/tv/gdtv.php?id=guangzhou_1500
 广州综合,http://60.208.16.27:1505/gudou.php?id=gzhounewsHD
 广州综合,https://justsometime.gztv.com/sec/zhonghe.m3u8
+广州综合,http://tencentplaygzrb.gztv.com/sec/zonghes.m3u8
+广州新闻,http://tencentplaygzrb.gztv.com/sec/xinwen.m3u8
+广州竞赛,http://tencentplaygzrb.gztv.com/sec/jingsai.m3u8
+广州影视,http://tencentplaygzrb.gztv.com/sec/yingshi.m3u8
+广州法治,http://tencentplaygzrb.gztv.com/sec/fazhi.m3u8
+广州南国都市,http://tencentplaygzrb.gztv.com/sec/nanguodushi.m3u8
 广州新闻,http://nas.jdshipin.com:8801/gztv.php?id=xinwen
 广州竞赛,http://nas.jdshipin.com:8801/gztv.php?id=jingsai
 广州影视,http://nas.jdshipin.com:8801/gztv.php?id=yingshi
