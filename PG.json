@@ -492,9 +492,9 @@
 		}],
 		"lives":[
 			{
-				"name": "🏄🏻┃live.直播",
+				"name": "▶️┃广东直播",
 				"type": 0,
-				"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt",
+				"url": "https://already.free.hr/Tzwcard/ChinaTelecom-GuangdongIPTV-RTP-List/master/GuangdongIPTV_rtp_hd.m3u",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
@@ -503,7 +503,7 @@
 			{
 				"name": "🏄🏻┃live.电视",
 				"type": 0,
-				"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/野火.txt",
+				"url": "https://agit.ai/alanchaotang/IPTV/raw/branch/master/IPTV.txt",
 				"playerType": 1,
 				"ua": "okhttp/3.15",
 				"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
