@@ -2,17 +2,7 @@
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3",
 	"sites":[
 		
-		{
-      "key": "T4-duanju5",
-      "name": "⛑️┃短剧屋",
-      "type": 4,
-      "api": "https://catbox.n13.club/duanju5.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 0,
-      "ext": true
-    },
+		
 		{"key": "豆瓣","name": " 📧┃豆瓣","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key": "AList","name": "🧸Alist小雅","type": 3,"api": "csp_AList","searchable": 1,"filterable": 1,"changeable": 1,"ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "小雅","server": "http://xiaoya.xlog.cc/","startPage": "/","showAll": false,"search": true,"headers": {"Authorization": ""}}]}},
 		{"key":"Yscapp","name":"💯┃影视车┃App","type":3,"api":"csp_Yscapp","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "playerType":1, "playerType":1, "ext":"1"},
