@@ -41,6 +41,22 @@ https://www.foodieguide.com/iptvsearch/
 
 http://tonkiang.us
 
+# 🍑猫影视TV - 接口源
+
+gitee://ceff4bacf0469fd5ebaffa7f337b4b6c@gitee.com/Acatvod/CatVod/master/js/config_open.json
+
+http://yydf:abcd@my.540734621.xyz/yyef/%E7%8C%AB%E6%BA%90.json
+
+绿色源：
+http://yydf:abcd@my.540734621.xyz/yydf/猫源.json
+http://yydf:abcd@my.540734621.xyz/yyef/猫源.json
+http://yydf:abcd@my.540734621.xyz/yyff/猫源.json
+
+绿茶源：
+http://yydf:abcd@my.540734621.xyz/a/猫源.json
+http://yydf:abcd@my.540734621.xyz/b/猫源.json
+http://yydf:abcd@my.540734621.xyz/c/猫源.json
+
 ------
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
