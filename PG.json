@@ -6,11 +6,10 @@
 		{"key": "豆瓣","name": " 📧┃豆瓣","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key": "Fangniu4k","name": "🐄┃放牛┃TV","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/0229.jar"},
 		{"key": "AList","name": "🧸Alist小雅","type": 3,"api": "csp_AList","searchable": 1,"filterable": 1,"changeable": 1,"ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "小雅","server": "http://xiaoya.xlog.cc/","startPage": "/","showAll": false,"search": true,"headers": {"Authorization": ""}}]}},
-		{"key":"Yscapp","name":"💯┃影视车┃App","type":3,"api":"csp_Yscapp","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "playerType":1, "playerType":1, "ext":"1"},
+		{"key":"Yscapp","name":"💖┃影视车┃App","type":3,"api":"csp_Yscapp","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "playerType":1, "playerType":1, "ext":"1"},
 		{"key":"Zhuiyitv","name":"💯┃追忆┃App","type":3,"api":"csp_Zhuiyitv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"$$$./lib/yt.json$$$1"},
 		//{"key": "Buleitv","name": "💯布蕾┃TV","type": 3,"api": "csp_Buleitv","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
 		{"key": "Yingtantv","name": "💯影探┃TV","type": 3,"api":"csp_Yingtantv2","searchable": 1,"changeable": 0,"jar":"https://already.free.hr/alantang1977/X/master/jar/total.jar"},
-		{"key":"Moli","name":"🏄🏻┃HDmoli┃网盘","type":3,"api":"csp_Moli","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.hdmoli.pro/$$$null$$$1$$$./lib/moli.json"},
 		{"key": "996影院","name": "🏄🏻┃996影院","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1},
 		{"key":"Yingtantv","name":"💯┃影探┃App","type":3,"api":"csp_Yingtantv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"$$$./lib/yt.json$$$1"},
 		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
@@ -43,6 +42,7 @@
 		{"key":"YydsVip","name":"🏄🏻┃YYDSVIP┃网盘","type":3,"api":"csp_YydsVip_Disable", "quickSearch":1, "changeable":1, "filterable":1, "timeout":30,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$http://yydsvip.cn$$$null$$$1"},
 		{"key":"Ys23","name":"🏄🏻┃影视23┃网盘","type":3,"api":"csp_Ys23","quickSearch":1, "changeable":1, "filterable":1, "timeout":30},
 		{"key":"88Pan","name":"🏄🏻┃88网盘┃网盘","type":3,"api":"csp_EightEight","timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://662688.xyz"},
+		{"key":"Moli","name":"🏄🏻┃HDmoli┃网盘","type":3,"api":"csp_Moli","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.hdmoli.pro/$$$null$$$1$$$./lib/moli.json"},
 		
 		{
 			"key": "NanGua",
