@@ -63,6 +63,7 @@ http://yydf:abcd@my.540734621.xyz/b/猫源.json
 
 http://yydf:abcd@my.540734621.xyz/c/猫源.json
 
+github://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@github.com/ZTHA000/catvod/main/js/config_open69.json
 ------
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
