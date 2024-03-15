@@ -13,7 +13,7 @@ FongMi影视、TVBox、猫影视配置文件。所有资源均来自于各路大
 
 # Release
 ## 猫影视（CatVod）IOS：https://github.com/catvod/CatVodOpen/releases
-                        https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
+ https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 ## iBox影视(IOS)：https://www.123pan.com/s/6ITiVv-nIbU3
 
