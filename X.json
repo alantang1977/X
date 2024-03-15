@@ -47,6 +47,7 @@
 {"key": "阿里夸克配置","name": "🐧┃阿里夸克┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"style": {"type": "rect","ratio": 1},"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3"},
 
 ##饭太硬
+{"key":"白嫖","name":"👻白飘┃无广","type":3,"api":"csp_BaiPiao","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},	
 {"key":"短剧","name":"🌈上头┃短剧","type":3,"api":"csp_Duanju","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"原创","name":"☀原创┃无广","type":3,"api":"csp_YCyz","timeout":15,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"酷看","name":"💡酷看┃App","type":3,"api":"csp_Kkys","searchable":1,"quickSearch":1,"changeable":1},
