@@ -51,6 +51,8 @@ https://iptv-org.github.io
 
 # 🍑猫影视TV - 接口源
 
+gitee://2ed36b33bbc3d7b52cc201bc89f5ea59@gitee.com/a530115463/110/master/js/config_open.json
+
 gitee://ceff4bacf0469fd5ebaffa7f337b4b6c@gitee.com/Acatvod/CatVod/master/js/config_open.json
 
 http://yydf:abcd@my.540734621.xyz/yyef/%E7%8C%AB%E6%BA%90.json
