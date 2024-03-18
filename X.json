@@ -400,7 +400,7 @@
 //{"name":"肥羊•虎牙","type":0,"url":"https://already.free.hr/Ftindy/IPTV-URL/main/huyayqk.m3u","playerType":1},
 {"name":"肥羊•YY","type":0,"url":"https://already.free.hr/Ftindy/IPTV-URL/main/yylunbo.m3u","playerType":1},
 //{"name":"初秋语•哔哩","type":0,"url":"./bili.m3u","playerType":1},
-{"name":"IPTV广州直播","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/guangzhou.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name":"IPTV广州直播","type":0,"url":"https://tang.serv00.net/zb/99","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"YuanHsing•油管","type":0,"url":"https://already.free.hr/YuanHsing/YouTube_to_m3u/main/youtube.m3u"},
 {"name": "BESTV","type": 0,"url": "https://already.free.hr/Ftindy/IPTV-URL/main/bestv.m3u","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
