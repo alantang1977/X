@@ -257,7 +257,7 @@ https://www.metools.info/other/o21.html
 
 ------
 随机轮换壁纸：
-
+## https://放牛.王二小放牛娃.xyz/img.php
 ## http://我不是.肥猫.love:63/ppic/feimao.php
 ## http://饭太硬.top/深色壁纸/api.php
 ## http://www.kf666888.cn/api/tvbox/img
