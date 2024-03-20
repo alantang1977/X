@@ -16,7 +16,7 @@ FongMi影视、TVBox、猫影视配置文件。所有资源均来自于各路大
  https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 ## iBox影视(IOS)：https://www.123pan.com/s/jYI7Vv-ip9od.html
-## https://omii.top/
+## 奥秘博客  https://omii.top/
 
 # 🏂影視TV🏄🏻 
 ![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
