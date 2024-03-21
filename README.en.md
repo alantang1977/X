@@ -1,5 +1,4 @@
-# 
-All resources are selflessly shared by various experts. If there is any infringement, please contact us for deletion.
+# All resources are selflessly shared by various experts. If there is any infringement, please contact us for deletion.
 
 All individuals who view the content of this warehouse in any way, or users who directly or indirectly use the content of this warehouse, should carefully read this statement. The warehouse manager reserves the right to modify or supplement this disclaimer at any time. Once you use, copy, or modify the contents of this warehouse, it is deemed that you have accepted this disclaimer.
 
