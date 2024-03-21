@@ -1,3 +1,6 @@
+# 
+All resources are selflessly shared by various experts. If there is any infringement, please contact us for deletion.
+
 All individuals who view the content of this warehouse in any way, or users who directly or indirectly use the content of this warehouse, should carefully read this statement. The warehouse manager reserves the right to modify or supplement this disclaimer at any time. Once you use, copy, or modify the contents of this warehouse, it is deemed that you have accepted this disclaimer.
 
 The warehouse manager cannot guarantee the legality, accuracy, completeness, and validity of the contents of this warehouse. Please make your own judgment based on the situation. The content of this warehouse is only used for testing, learning and research. It is prohibited to use it for commercial purposes. It is not allowed to use it for other purposes that violate national, regional, organizational and other laws and regulations or relevant provisions. It is prohibited to reprint and release the content of this warehouse in any form on any official account or we media. Please do not use the content of this warehouse within the territory of the People's Republic of China, or you will bear the consequences.
@@ -6,7 +9,7 @@ The third-party hardware, software, etc. involved in the content of this warehou
 
 All individuals and organizations who directly or indirectly use the content of this warehouse should complete learning and research within 24 hours and promptly delete the content of this warehouse. If there is a demand for the functionality of the content in this warehouse, relevant functions should be developed independently. All modifications made to the source code based on the content of this warehouse are spontaneous actions of other individuals or organizations, and have no direct or indirect relationship with the content of this warehouse. All consequences resulting from this modification are also unrelated to the content of this warehouse and its managers.
 
-  ## 【新版本接口】接口来着于互联网，任何犷郜请勿相信，后果自负不会用的，填写教程在文末
+### 【新版本接口】接口来着于互联网，任何犷郜请勿相信，后果自负不会用的，填写教程在文末
 【春盈天下】https://盒子迷.top/春盈天下
 【盒子迷】https://盒子迷.top/禁止贩卖
 【安卓哥】https://安卓哥.com/
