@@ -8,6 +8,7 @@ The third-party hardware, software, etc. involved in the content of this warehou
 
 All individuals and organizations who directly or indirectly use the content of this warehouse should complete learning and research within 24 hours and promptly delete the content of this warehouse. If there is a demand for the functionality of the content in this warehouse, relevant functions should be developed independently. All modifications made to the source code based on the content of this warehouse are spontaneous actions of other individuals or organizations, and have no direct or indirect relationship with the content of this warehouse. All consequences resulting from this modification are also unrelated to the content of this warehouse and its managers.
 
+
 ### 【新版本接口】接口来着于互联网，任何犷郜请勿相信，后果自负不会用的，填写教程在文末
 【春盈天下】https://盒子迷.top/春盈天下
 
