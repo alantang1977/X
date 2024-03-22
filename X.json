@@ -393,6 +393,7 @@
 //{"name":"TV","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/global.m3u","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
 
 "lives": [{"name": "广东电视直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/gzlive.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
+{"name":"广州直播","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/guangzhou.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"晴天","type":0,"url":"https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/晴天.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "IPTV全国直播","type": 0,"url": "https://agit.ai/alanchaotang/IPTV/raw/branch/master/IPTV.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
 {"name": "全国直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
