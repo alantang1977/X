@@ -26,7 +26,7 @@
 {"key":"美剧迷","name":"🦄️┃美剧迷┃网盘","type":3,"api":"csp_Meijumi", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60,"ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://www.meijumi.xyz/$$$null$$$1","jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3"},
 //{"key":"csp_lwdy","name":"🚁┃老王电影┃影视","type":3,"api":"csp_XBPQ","ext":{"分类url":"https://www.laowang.co/vodshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}.html","分类":"电影$movie#电视剧$tv#综艺$tvshow#动漫$animation#短剧$duanju","jar": "https://gh.xxooo.cf/github.com/gaotianliuyun/gao/blob/master/jar/XBPQ.jar"},
 //{"key": "白嫖","name": "🍁┃白嫖┃精选","type": 3,"api": "csp_BaiPiao","jar":"https://d.kstore.space/download/6396/json/feimao.jar","playerType": 2,"searchable": 1,"quickSearch": 1,"changeable": 1},
-
+{"key": "csp_xBPQ_秒","name": "👿┃秒播┃文才","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/json/文才.json","jar": "https://agit.ai/alanchaotang/if/raw/branch/main/jar/XBPQ.jar"},
 	
 ##王二小放牛娃	
 {"key": "Yinyuetai","name": "🛰┃音悦台┃MV","type": 3,"api": "csp_Yinyuetai","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
