@@ -43,7 +43,8 @@
 		{"key":"Ys23","name":"🏄🏻┃影视23┃网盘","type":3,"api":"csp_Ys23","quickSearch":1, "changeable":1, "filterable":1, "timeout":30},
 		{"key":"88Pan","name":"🏄🏻┃88网盘┃网盘","type":3,"api":"csp_EightEight","timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://662688.xyz"},
 		{"key":"Moli","name":"🏄🏻┃HDmoli┃网盘","type":3,"api":"csp_Moli","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.hdmoli.pro/$$$null$$$1$$$./lib/moli.json"},
-		
+		{"key":"Bt0","name":"🏄🏻┃不太灵┃磁力","type":3,"api":"csp_Bt0","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"null$$$null$$$1"},
+		{"key":"Clg","name":"🏄🏻┃磁力狗┃磁力","type":3,"api":"csp_Clg","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$https://clg.clgvip1.xyz/$$$proxy$$$1","style": {"type": "rect","ratio": 1.5}},
 		{
 			"key": "NanGua",
 			"name": "🏄🏻┃南瓜┃弹幕",
