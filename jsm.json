@@ -27,6 +27,7 @@
 		{"key":"PanSearch","name":"🦄️┃PanSearch┃网盘","type":3,"api":"csp_PanSearch","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
 		{"key":"88Pan","name":"🦄️┃88网盘┃网盘","type":3,"api":"csp_EightEight","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://662688.xyz"},
 		{"key":"盘友圈","name":"🦄️┃盘友圈┃网盘","type":3,"api":"csp_Panyq","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
+		{"key":"YingSo","name":"🦄️┃影搜┃网盘","type":3,"api":"csp_YingSo","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
 		{"key":"易搜","name":"🦄️┃易搜┃网盘","type":3,"api":"csp_YiSo","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/yiso.txt"},
 		{"key":"混合盘","name":"🦄️┃混合盘┃网盘","type":3,"api":"csp_HunHePan","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
 		{"key":"秒搜","name":"🦄️┃秒搜┃网盘","type":3,"api":"csp_MiaoSou","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
