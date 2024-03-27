@@ -1,7 +1,18 @@
 {
 	"spider":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/pg.jar;md5;478f0b7ca876be57030b708d6dcd99c3",
 	"sites":[
-		
+		{"key":"Wogg","name":"🏂┃玩偶哥哥┃网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
+		{"key":"Wobg","name": "🏄🏻┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
+		{"key":"yydsys","name":"🏂┃玩你老哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://tv.yydsys.top/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
+		{"key":"️玩偶哥哥","name":"玩偶🎞哥哥","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wog.json"},
+{"key":"️玩偶嫂子","name":"玩偶🎞嫂子","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wos.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶姐姐","name":"玩偶🎞姐姐","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/woj.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶姐夫","name":"玩偶🎞姐夫","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wof.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶弟弟","name":"玩偶🎞弟弟","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wod.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶弟媳","name":"玩偶🎞弟媳","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wodf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶妹妹","name":"玩偶🎞妹妹","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wom.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶妹夫","name":"玩偶🎞妹夫","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/womf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+
 		{"key": "豆瓣","name": " 📧┃豆瓣","type": 3,"api": "csp_Douban","searchable": 0,"changeable": 1,"ext": "https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/douban.json"},
 		{"key": "Fangniu4k","name": "🐄┃放牛┃TV","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
 		{"key": "AList","name": "🧸Alist小雅","type": 3,"api": "csp_AList","searchable": 1,"filterable": 1,"changeable": 1,"ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "小雅","server": "http://xiaoya.xlog.cc/","startPage": "/","showAll": false,"search": true,"headers": {"Authorization": ""}}]}},
@@ -12,8 +23,6 @@
 		{"key": "T4-安博","name": "🔐┃安博┃(T4)","type": 4,"api": "https://tang.serv00.net/power/ub1818","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0,"ext": true},
 		{"key": "996影院","name": "🏄🏻┃996影院","type": 3,"api": "csp_Cs1369","searchable": 1,"changeable": 1},
 		{"key":"Yingtantv","name":"💯┃影探┃App","type":3,"api":"csp_Yingtantv","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"$$$./lib/yt.json$$$1"},
-		{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
-		{"key":"Wobg","name": "🏄🏻┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":30, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
 		{"key":"AliShare","name":"🏄🏻┃阿里云盘影视","type":3,"api":"csp_AliShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.txt"},
 		{"key":"AliShareEBook","name":"🏄🏻┃阿里云盘书籍","type":3,"api":"csp_AliShare","searchable":0,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/alishare.ebook.txt"},
 		{"key":"盘友圈","name":"🏄🏻┃盘友圈┃网盘","type":3,"api":"csp_Panyq","timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json"},
