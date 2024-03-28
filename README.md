@@ -155,7 +155,8 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 ------
 # 思维没有边界 一切皆有可能
 ------
-![W-](https://github.com/alantang1977/X/assets/107459091/78d25b3c-3e94-4c44-b87b-c14472c029f8)
+![photo_2024-03-13_08-34-23](https://github.com/alantang1977/X/assets/107459091/b27d54cc-659a-403d-acd9-b56b3f831d64)
+
 ------
 1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
 
