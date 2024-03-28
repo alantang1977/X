@@ -30,9 +30,10 @@
 
 	
 ##王二小放牛娃	
-{"key": "Yinyuetai","name": "🛰┃音悦台┃MV","type": 3,"api": "csp_Yinyuetai","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
-{"key": "Iktv","name": "🛰┃KTV┃MV","type": 3,"api": "csp_Iktv","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
-{"key": "Fangniu4k","name":"🐄┃放牛┃TV","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
+//{"key": "Yinyuetai","name": "🛰┃音悦台┃MV","type": 3,"api": "csp_Yinyuetai","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
+//{"key": "Iktv","name": "🛰┃KTV┃MV","type": 3,"api": "csp_Iktv","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
+//{"key": "Fangniu4k","name":"🐄┃放牛┃TV","type": 3,"api": "csp_Fangniu4k","searchable": 1,"changeable": 0,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
+{"key": "Fangniu4k","name": "🐄┃放牛┃TV","type": 3,"api": "csp_WexFangniu4k","searchable": 1,"changeable": 1,"jar":"https://cc-im-kefu-cos.7moor-fs2.com/im/2768a390-5474-11ea-afc9-7b323e3e16c0/d4fe44c5-107c-4511-af02-aa08fb10dff7/2024-03-26/2024-03-26_15:19:15/1711437555116/69560144/wex.txt;md5;1a93958bfdeb969dbdfd3478e7f8b61e"},
 {"key": "Wexxpgtv","name": "🍎┃红富士┃TV","type": 3,"api": "csp_Wexxpgtv","searchable": 1,"changeable": 1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
 {"key": "Diduanys","name": "🙈┃深渊┃影视","type": 3,"api": "csp_WexDiduanys","searchable": 1,"changeable": 1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
 {"key": "F4kvm","name": "🦑┃纯享┃影视","type": 3,"api": "csp_WexF4kvm","searchable": 1,"changeable": 1,"jar":"https://agit.ai/alanchaotang/if/raw/branch/main/jar/fangniu.jar"},
