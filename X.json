@@ -265,7 +265,9 @@
 {"key":"csp_Cokemv","name":"📕┃Cokemv┃影视","type":3,"api":"csp_Cokemv","playerType":2,"searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Aid","name":"🚑┃急救指南","type":3,"api":"csp_FirstAid","searchable":1,"quickSearch":1,"changeable":0,"style": { "type": "rect", "ratio": 3.8},"jar":"https://qu.ax/dDSz.jpg;md5;510FA1663F7067BD4D40DE06097202BF"},	
+{"key": "csp_91黑料","name": "💃┃91黑料","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://githubfd.deno.dev/alantang1977/X/master/json/黑料.json","jar":"https://githubfd.deno.dev/alantang1977/X/master/jar/xbpq.jar"},
 
+	
 ##dr_js系列
 {"key":"荐片","name":"🌟┃荐片┃JS","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/荐片.js"},
 {"key":"喵物次元","name":"💂🏿‍♀️┃喵物次元┃JS","type":3,"viewType": 1,"api":"https://agit.ai/alanchaotang/dr_py/raw/branch/main/libs/drpy2.min.js","ext":"https://agit.ai/alanchaotang/if/raw/branch/main/js/喵物次元.js"},
