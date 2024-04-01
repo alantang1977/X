@@ -75,7 +75,7 @@ let tabse = false;
 let tabm3u8 = [];
 d.forEach(function(it) {
 	let burl = pdfh(it, 'a&&href');
-	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/")){
 		tabsa.push("阿里雲盤");
 	}else if (burl.startsWith("https://pan.quark.cn/s/")){
 		tabsq.push("夸克網盤");
@@ -123,7 +123,7 @@ d.forEach(function(it){
 	log('97tvs title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
 	log('97tvs burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
-	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/")){
 		if (true){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
@@ -181,22 +181,22 @@ let d=[];
 let dlist = pdfa(search_html, 'div.mainleft ul#post_container li');
 dlist.forEach(function(it){
 	let title = pdfh(it, 'div.thumbnail img&&alt').replace( /(<([^>]+)>)/ig, '');
-	if (searchObj.quick === true){
-		if (false && title.includes(KEY)){
+	if (title.includes(KEY)){
+		if (searchObj.quick === true){
 			title = KEY;
 		}
+		let img = pd(it, 'div.thumbnail img&&src', HOST);
+		let content = pdfh(it, 'div.article div.entry_post&&Text');
+		let desc = pdfh(it, 'div.info&&span.info_date&&Text');
+		let url = pd(it, 'div.thumbnail&&a&&href', HOST);
+		d.push({
+			title:title,
+			img:img,
+			content:content,
+			desc:desc,
+			url:url
+			});
 	}
-	let img = pd(it, 'div.thumbnail img&&src', HOST);
-	let content = pdfh(it, 'div.article div.entry_post&&Text');
-	let desc = pdfh(it, 'div.info&&span.info_date&&Text');
-	let url = pd(it, 'div.thumbnail&&a&&href', HOST);
-	d.push({
-		title:title,
-		img:img,
-		content:content,
-		desc:desc,
-		url:url
-		});
 });
 setResult(d);
 `,

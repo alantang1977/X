@@ -44,7 +44,7 @@ let tabsm = false;
 let tabse = false;
 d.forEach(function(it) {
 	let burl = pdfh(it, 'a&&href');
-	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/")){
 		tabsa.push("阿里雲盤");
 	}else if (burl.startsWith("https://pan.quark.cn/s/")){
 		tabsq.push("夸克網盤");
@@ -91,7 +91,7 @@ d.forEach(function(it){
 	log('dygang title >>>>>>>>>>>>>>>>>>>>>>>>>>' + title);
 	log('dygang burl >>>>>>>>>>>>>>>>>>>>>>>>>>' + burl);
 	let loopresult = title + '$' + burl;
-	if (burl.startsWith("https://www.aliyundrive.com/s/")){
+	if (burl.startsWith("https://www.aliyundrive.com/s/") || burl.startsWith("https://www.alipan.com/s/")){
 		if (true){
 		if (TABS.length==1){
 			burl = "http://127.0.0.1:9978/proxy?do=ali&type=push&confirm=0&url=" + encodeURIComponent(burl);
@@ -156,22 +156,22 @@ let d=[];
 let dlist = pdfa(search_html, 'div#list_all li');
 dlist.forEach(function(it){
 	let title = pdfh(it, 'img.lazy&&alt');
-	if (searchObj.quick === true){
-		if (false && title.includes(KEY)){
+	if (title.includes(KEY)){
+		if (searchObj.quick === true){
 			title = KEY;
 		}
+		let img = pd(it, 'img.lazy&&src', HOST);
+		let content = pdfh(it, 'div.text_info h2&&Text');
+		let desc = pdfh(it, 'p.info&&Text');
+		let url = pd(it, 'a&&href', HOST);
+		d.push({
+			title:title,
+			img:img,
+			content:content,
+			desc:desc,
+			url:url
+			})
 	}
-	let img = pd(it, 'img.lazy&&src', HOST);
-	let content = pdfh(it, 'div.text_info h2&&Text');
-	let desc = pdfh(it, 'p.info&&Text');
-	let url = pd(it, 'a&&href', HOST);
-	d.push({
-		title:title,
-		img:img,
-		content:content,
-		desc:desc,
-		url:url
-		})
 });
 setResult(d);
 `,
