@@ -11,6 +11,16 @@
 			"indexs":1,
 			"ext": "./lib/douban.json"
 		},
+		{"key":"Wogg","name":"玩偶哥哥|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.link/$$$null$$$1$$$./lib/wogg.json"},
+		{"key":"Wobg","name":"玩偶表哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$./lib/wogg.json"},
+		{"key":"yydsys","name":"玩你老哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$null$$$1$$$./lib/wogg.json"},
+		{"key":"Xinshijue","name":"新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.80yy3.com/$$$proxy$$$1$$$./lib/wogg.json"},
+		{"key":"影视车","name":"影视车|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.weixine.link/$$$null$$$1$$$./lib/wogg.json"},
+		{"key":"团长资源","name":"团长资源|网盘","type":3,"api":"csp_TZFile", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60,"ext":"./lib/tokenm.json$$$null$$$1"},
+		{"key":"Moli","name":"HDmoli|网盘","type":3,"api":"csp_Moli","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.hdmoli.pro/$$$null$$$1$$$./lib/moli.json"},
+		{"key":"Hdhive","name":"影巢|网盘","type":3,"api":"csp_Hdhive","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$null$$$1"},
+		{"key":"Ppxzy","name":"皮皮虾|网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://ppxzy.net$$$null$$$1"},
+		{"key":"校长影视","name":"校长影视|网盘","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60,"ext":"./lib/tokenm.json$$$https://xzyshd.com$$$null$$$1"},
 		{
 			"key": "网盘配置",
 			"name": "网盘及彈幕配置",
@@ -28,6 +38,12 @@
 {"key":"️玩偶弟媳","name":" 🦖┃玩偶🧸弟媳","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wodf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
 {"key":"️玩偶妹妹","name":" 🦖┃玩偶🧸妹妹","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wom.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
 {"key":"️玩偶妹夫","name":" 🦖┃玩偶🧸妹夫","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/womf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"火狐","name":"🐝┃火狐|采集","type":1,"api":"https://hhzyapi.com/api.php/provide/vod/from/hhm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
+{"key":"新浪","name":"🐝┃新浪|采集","type":1,"api":"https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
+{"key":"爱坤","name":"🐝┃爱坤|采集","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
+{"key":"飞速","name":"🐝┃飞速|采集","type":1,"api":"https://www.feisuzyapi.com/api.php/provide/vod/from/fsm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
+{"key":"金鹰","name":"🐝┃金鹰|采集","type":1,"api":"https://jyzyapi.com/provide/vod/from/jinyingm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
+{"key":"天空","name":"🐝┃天空|采集","type":1,"api":"https://api.tiankongapi.com/api.php/provide/vod/from/tkm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
 
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
 		{"key":"PushShare","name":"我的资源分享","type":3, "api":"csp_PushShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/pushshare.txt$$$db$$$1",
@@ -111,19 +127,8 @@
 			"style": {
 				"type": "list",
 				"ratio": 1.1
-			}
-		},
-		{"key":"Wogg","name":"玩偶哥哥|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.link/$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"Wobg","name":"玩偶表哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"yydsys","name":"玩你老哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"Xinshijue","name":"新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.80yy3.com/$$$proxy$$$1$$$./lib/wogg.json"},
-		{"key":"影视车","name":"影视车|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.weixine.link/$$$null$$$1$$$./lib/wogg.json"},
-		{"key":"团长资源","name":"团长资源|网盘","type":3,"api":"csp_TZFile", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60,"ext":"./lib/tokenm.json$$$null$$$1"},
-		{"key":"Moli","name":"HDmoli|网盘","type":3,"api":"csp_Moli","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.hdmoli.pro/$$$null$$$1$$$./lib/moli.json"},
-		{"key":"Hdhive","name":"影巢|网盘","type":3,"api":"csp_Hdhive","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$null$$$1"},
-		{"key":"Ppxzy","name":"皮皮虾|网盘","type":3,"api":"csp_Ppxzy", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://ppxzy.net$$$null$$$1"},
-		{"key":"校长影视","name":"校长影视|网盘","type":3,"api":"csp_XiaoZhang", "quickSearch":1, "changeable":1, "filterable":1, "timeout":60,"ext":"./lib/tokenm.json$$$https://xzyshd.com$$$null$$$1"},
-		{
+			}},
+			{
 			"key": "Bdys_spider",
 			"name": "哔滴┃磁力",
 			"api": "csp_Bdys01",
