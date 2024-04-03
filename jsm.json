@@ -20,6 +20,15 @@
 			"changeable": 0,
 			"ext":"./lib/tokenm.json"
 		},
+{"key":"yydsys","name":" 🦖┃玩你🧸老哥","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/tokenm.json$$$https://tv.yydsys.top/$$$null$$$1$$$https://agit.ai/alanchaotang/if/raw/branch/main/pg/lib/wogg.json"},
+{"key":"️玩偶嫂子","name":" 🦖┃玩偶🧸嫂子","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wos.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶姐姐","name":" 🦖┃玩偶🧸姐姐","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/woj.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶姐夫","name":" 🦖┃玩偶🧸姐夫","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wof.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶弟弟","name":" 🦖┃玩偶🧸弟弟","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wod.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶弟媳","name":" 🦖┃玩偶🧸弟媳","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wodf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶妹妹","name":" 🦖┃玩偶🧸妹妹","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/wom.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+{"key":"️玩偶妹夫","name":" 🦖┃玩偶🧸妹夫","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://d.kstore.space/download/6396/json/womf.json","jar":"https://already.free.hr/alantang1977/X/master/jar/doll.jar"},
+
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
 		{"key":"PushShare","name":"我的资源分享","type":3, "api":"csp_PushShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/pushshare.txt$$$db$$$1",
 			"style": {
