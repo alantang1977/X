@@ -104,7 +104,7 @@
 				"ratio": 1.1
 			}
 		},
-		{"key":"Wogg","name":"玩偶哥哥|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.xyz/$$$null$$$1$$$./lib/wogg.json"},
+		{"key":"Wogg","name":"玩偶哥哥|网盘","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.link/$$$null$$$1$$$./lib/wogg.json"},
 		{"key":"Wobg","name":"玩偶表哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$null$$$1$$$./lib/wogg.json"},
 		{"key":"yydsys","name":"玩你老哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$null$$$1$$$./lib/wogg.json"},
 		{"key":"Xinshijue","name":"新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.80yy3.com/$$$proxy$$$1$$$./lib/wogg.json"},
@@ -186,13 +186,6 @@
 			}
 		},
 		{"key":"YunPanOne","name":"云盘One|网盘搜索","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$null$$$proxy$$$1"},
-		{"key":"Pan99","name":"盘99|网盘","type":3,"api":"csp_Pan99","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://pan99.xyz$$$null$$$1"},
-		{"key":"火狐","name":"🔴火狐|采集","type":1,"api":"https://hhzyapi.com/api.php/provide/vod/from/hhm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
-    		{"key":"新浪","name":"🔴新浪|采集","type":1,"api":"https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
-    		{"key":"爱坤","name":"🔴爱坤|采集","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
-   		{"key":"飞速","name":"🔴飞速|采集","type":1,"api":"https://www.feisuzyapi.com/api.php/provide/vod/from/fsm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
-    		{"key":"金鹰","name":"🔴金鹰|采集","type":1,"api":"https://jyzyapi.com/provide/vod/from/jinyingm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
-    		{"key":"天空","name":"🔴天空|采集","type":1,"api":"https://api.tiankongapi.com/api.php/provide/vod/from/tkm3u8","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=&url="},
 		{"key":"XBPQ_文才","name":"文才|XBPQ","type":3,"api":"csp_XBPQ", "jar":"./lib/XBPQ.jar",
 			"ext":{"分类": "国产剧&短剧&喜剧片&爱情片&恐怖片&战争片&科幻片&动作片&综艺&欧美剧&港台剧&日韩剧",
 				"分类值": "14&42&22&26&36&25&30&23&69&15&16&62",
