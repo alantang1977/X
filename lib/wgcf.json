@@ -1,0 +1,91 @@
+{
+	"log": {
+		"loglevel": "warn"
+	},
+	"dns": {
+		"disableFallbackIfMatch": true,
+		"hosts": {},
+		"queryStrategy": "UseIPv4",
+		"servers": [
+			{
+				"address": "tcp://1.1.1.1",
+				"concurrency": true
+			}
+		]
+	},
+	"outbounds": [
+		{
+			"settings": {
+				"secretKey": "KEY",
+				"mtu": 1400,
+				"peers": [
+					{
+						"publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+						"endpoint" : "engage.cloudflareclient.com:2408"
+					}
+				],
+				"address": [
+					"172.16.0.2/32",
+					"2606:4700:110:893c:845c:536b:5565:8106/128"
+				],
+				"kernelMode": false
+			},
+			"protocol": "wireguard",
+			"streamSettings": {
+				"network": "tcp"
+			},
+			"tag":"directwarp"
+		}
+	]
+	,
+	"inbounds":[ 
+		{
+			"port": 10071,
+			"protocol": "socks",
+			"settings": {
+				"udp": true,
+				"auth": "noauth"
+			},
+			"tag":"socks5",
+			"sniffing": {
+				"destOverride": [
+					"http",
+					"tls",
+					"quic"
+				],
+				"enabled": true,
+				"routeOnly": true
+			}
+		},
+		{
+			"listen": "0.0.0.0",
+			"port": 10070,
+			"protocol": "http",
+			"settings": {
+				"allowTransparent": true
+			},
+			"sniffing": {
+				"destOverride": [
+					"http",
+					"tls",
+					"quic"
+				],
+				"enabled": true,
+				"routeOnly": true
+			},
+			"tag": "http"
+		}
+	],
+	"routing": {
+		"domainStrategy": "AsIs",
+		"rules": [
+			{
+				"type": "field",
+				"inboundTag": [
+					"socks5"
+				],
+				"outboundTag": "directwarp"
+			}
+		]
+	}
+}

@@ -44,5 +44,9 @@
 "pikpak_vip_thread_limit":2,
 "pikpak_proxy":"",
 "pikpak_proxy_onlyapi":false,
-"pikpak_danmu":true
+"pikpak_danmu":true,
+"wgcf_key":"",
+"wgcf_ipport":"",
+"wgcf_xray_url":"./xray.gz",
+"wgcf_json_url":"./wgcf.json"
 }
