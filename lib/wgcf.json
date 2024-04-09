@@ -139,6 +139,10 @@
 				"tag": "directwarp",
 				"transportLayer": true
 			}
+		},
+		{
+			"protocol": "freedom",
+			"tag": "direct"
 		}
 	]
 	,
@@ -237,6 +241,13 @@
 	"routing": {
 		"domainStrategy": "AsIs",
 		"rules": [
+			{
+				"type": "field",
+				"ip": [
+					"127.0.0.1"
+				],
+				"outboundTag": "direct"
+			},
 			{
 				"type": "field",
 				"inboundTag": [
