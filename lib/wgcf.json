@@ -12,7 +12,7 @@
 				"concurrency": true
 			},
 			{
-				"address": "http+local://223.5.5.5/dns-query",
+				"address": "tcp+local://223.5.5.5:53",
 				"concurrency": true,
 				"domains": [
 					"full:cdn-all.xn--b6gac.eu.org"
@@ -29,14 +29,16 @@
 				"peers": [
 					{
 						"publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-						"endpoint" : "engage.cloudflareclient.com:2408"
+						"endpoint" : "engage.cloudflareclient.com:2408",
+						"keepAlive": 30
 					}
 				],
 				"address": [
 					"172.16.0.2/32",
 					"2606:4700:110:893c:845c:536b:5565:8106/128"
 				],
-				"kernelMode": false
+				"kernelMode": false,
+				"worker":16
 			},
 			"protocol": "wireguard",
 			"streamSettings": {
@@ -51,14 +53,16 @@
 				"peers": [
 					{
 						"publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-						"endpoint" : "engage.cloudflareclient.com:2408"
+						"endpoint" : "engage.cloudflareclient.com:2408",
+						"keepAlive": 30
 					}
 				],
 				"address": [
 					"172.16.0.2/32",
 					"2606:4700:110:893c:845c:536b:5565:8106/128"
 				],
-				"kernelMode": false
+				"kernelMode": false,
+				"worker":30
 			},
 			"protocol": "wireguard",
 			"streamSettings": {
@@ -239,7 +243,7 @@
 		}
 	],
 	"routing": {
-		"domainStrategy": "AsIs",
+		"domainStrategy": "IPOnDemand",
 		"rules": [
 			{
 				"type": "field",
