@@ -415,6 +415,9 @@
 {"name": "IPTV全国直播","type": 0,"url": "https://agit.ai/alanchaotang/IPTV/raw/branch/master/IPTV.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png","ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","playerType": 1},
 {"name": "全国直播","type": 0,"url": "https://agit.ai/alanchaotang/if/raw/branch/main/LIVE/tvlive.txt","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"YanG•综合","type":0,"url":"https://already.free.hr/YanG-1989/m3u/main/Gather.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name":"ITV","type":0,"url":"https://mirror.ghproxy.com/raw.githubusercontent.com/ssili126/tv/main/itvlist.txt","playerType":1},{"name":"IPV6","type":0,"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","playerType":1 },
+{ "name": "XIUTAN", "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0", "type": 0, "url": "https://xhdwc.tk/xiutan.m3u"},
+	
 //{"name":"范明明•综合","type":0,"url":"https://already.free.hr/fanmingming/live/main/tv/m3u/global.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 //{"name":"YueChan•综合","type":0,"url":"https://already.free.hr/YueChan/Live/main/IPTV.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"Yoursmile•综合","type":0,"url":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
