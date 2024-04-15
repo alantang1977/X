@@ -30,8 +30,22 @@
 {"key":"XBPQ_黑狐影院","name":"🦊┃黑狐影院|XBPQ","type":3,"api":"csp_XBPQ", "jar":"./lib/XBPQ.jar","ext": {"站名": "黑狐影院","主页url": "http://fagmn.com","数组": "class=\"stui-vodlist__box\"&&</a","图片": "data-original=\"&&\"","标题": "title=\"&&\"","链接": "href=\"&&\"","嗅探词": ".m3u8?#v3.huoshanvod.com#.m3u8#v3-dy-o.zjcdn#sf16-sg.larksuitecdn.com#v.kd1.qq.com#.mp4","过滤词": "/hls/#php","副标题": "<span class=\"pic-text text-right\">&&</span>","搜索url": "http://fagmn.com/search.php;post;searchword={wd}","搜索模式": "1","搜索数组": "<a class=\"v-thumb stui-vodlist__thumb&&</a>","搜索图片": "data-original=\"&&\"","搜索标题": "title=\"&&\"","搜索链接": "href=\"&&\"","搜索副标题": "<span class=\"pic-text text-right\">&&</span>","搜索后缀": "/view/","线路数组": "href=\"#down&&/a>[替换:奇异视频>>黑狐一线#优酷视频>>黑狐二线#搜狐视频>>黑狐三线#咪咕视频>>黑狐四线]","线路标题": ">&&<","播放数组": "class=\"stui-content__playlist clearfix&&</ul>","状态": "地区：&&</p>","导演": "导演：&&</p>","主演": "主演：&&</p>","简介": "简介：&&</div>","播放列表": "<a&&/a>","播放标题": ">&&<","播放链接": "href=\"&&\"","免嗅": "0","分类": "电影$1#电视剧$2#动漫$3#综艺$4","分类url": "http://fagmn.com/list/{cateId}_{catePg}.html?order=time"}},
 {"key": "csp_xBPQ_秒","name": "🍼┃秒播┃文才","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "./json/文才.json","jar": "./jar/XBPQ.jar"},
 {"key": "csp_xBPQ_91","name":"🐍┃秒播┃91毒舌","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 0,"ext": "./json/毒蛇影视.json","jar": "./jar/XBPQ.jar"},
-{
-    "key": "厂长",
+{"key": "MP4",
+    "name": "🧲1080P┃磁力",
+    "type": 3,
+    "api": "csp_XBPQ", "jar":"./lib/XBPQ.jar",
+    "playerType": "2",
+    "ext": {
+      "站名": "磁力追剧",
+      "分类": "电视剧$13#动作片$6#科幻片$7#爱情片$8#喜剧片$9#恐怖片$10#战争片$11#剧情片$12",
+      "搜索url":"https://www.zmp4.com/vodsearch.html?wd={wd}",
+      "播放数组":"class=\"panel down-list thunder1&&</ul",
+        "线路数组":"class=\"stui-pannel__head active&&</div",
+        "线路标题":"class=\"title titlego\">&&</h3",
+      "分类url": "https://www.zmp4.com/show/{cateId}/page/{catePg}/year/{year}.html;;a"
+    }
+  },
+{"key": "厂长",
     "name": "🌟1080P┃厂长",
     "type": 3,
     "api": "csp_XBPQ", "jar":"./lib/XBPQ.jar","playerType": "2",
