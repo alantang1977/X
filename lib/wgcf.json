@@ -62,7 +62,7 @@
 					"2606:4700:110:893c:845c:536b:5565:8106/128"
 				],
 				"kernelMode": false,
-				"worker":30
+				"worker":16
 			},
 			"protocol": "wireguard",
 			"streamSettings": {
