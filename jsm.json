@@ -311,7 +311,6 @@
 			"name": "天天┃App",
 			"type": 3,
 			"api": "csp_TTian",
-			"playerType": 1,
 			"ext": "http://op.ysdqjs.cn$$$null$$$1"
 		},
 		{
@@ -319,7 +318,6 @@
 			"name": "追剧┃App",
 			"type": 3,
 			"api": "csp_TTian",
-			"playerType": 1,
 			"ext": "http://app.kzjtv.com$$$null$$$1"
 		},
 		{
