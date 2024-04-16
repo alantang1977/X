@@ -1,11 +1,11 @@
 {
 	"log": {
-		"loglevel": "warn"
+		"loglevel": "debug"
 	},
 	"dns": {
 		"disableFallbackIfMatch": true,
 		"hosts": {},
-		"queryStrategy": "UseIPv4",
+		"queryStrategy": "UseIP",
 		"servers": [
 			{
 				"address": "tcp://1.1.1.1",
@@ -105,7 +105,11 @@
 					"path": "/?ed=2048"
 				}
 			},
-			"tag":"vlesscf"
+			"tag":"vlesscf",
+			"proxySettings": {
+				"tag": "directfragment",
+				"transportLayer": true
+			}
 		},
 		{
 			"protocol": "vless",
@@ -147,6 +151,17 @@
 		{
 			"protocol": "freedom",
 			"tag": "direct"
+		},
+		{
+			"protocol": "freedom",
+			"settings":{
+				"fragment": {
+					"packets": "tlshello",
+					"length": "40-60",
+					"interval": "30-50"
+				}
+			},
+			"tag": "directfragment"
 		}
 	]
 	,
