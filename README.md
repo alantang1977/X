@@ -23,17 +23,14 @@
 
 # 🍓GitHub Proxy 代理加速 
 
-https://ghproxy.com/https://raw.githubusercontent.com/
-
-https://ghproxy.net/https://raw.githubusercontent.com/
-
-https://gh-proxy.com/https://raw.githubusercontent.com/
-
-https://githubfd.deno.dev/
-
-https://mirror.ghproxy.com/https://raw.githubusercontent.com/
-
-https://already.free.hr/
+    https://gh.con.sh/https://raw.githubusercontent.com/
+    https://a.ouhuang.onflashdrive.app/https://raw.githubusercontent.com/
+    https://ghproxy.com/https://raw.githubusercontent.com/
+    https://ghproxy.net/https://raw.githubusercontent.com/
+    https://gh-proxy.com/https://raw.githubusercontent.com/
+    https://githubfd.deno.dev/
+    https://mirror.ghproxy.com/https://raw.githubusercontent.com/
+    https://already.free.hr/
 
 # 🍑电视直播搜索引擎
 
