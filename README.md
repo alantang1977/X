@@ -71,6 +71,8 @@
 
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
+http://000.hfr1107.top/jm.php?jm=
+
 https://xn--sss604efuw.top/jm/ 解密
 
 https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
