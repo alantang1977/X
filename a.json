@@ -177,6 +177,7 @@
 {"key":"Voflix","name":"🦁┃Voflix┃影视","type":3,"viewType": 1,"api":"https://already.free.hr/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://already.free.hr/alantang1977/dr_py/main/js/voflix.js"},
 
 {"key":"Bt0","name":"🧚┃不太灵┃磁力","type":3,"api":"csp_Bt0","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"null$$$null$$$1","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
+{"key":"Xpanpan","name":"🍽️┃小盘盘┃网盘","type":3,"api":"csp_Xpanpan","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://xpanpan.site$$$proxy$$$1","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
 {"key":"盘友圈","name":"🏄🏻┃盘友圈┃网盘","type":3,"api":"csp_Panyq","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
 {"key":"混合盘","name": "🏄🏻┃混合盘┃网盘","type":3,"api":"csp_HunHePan","timeout":30, "ext":"https://already.free.hr/alantang1977/X/main/pg/lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
 {"key":"YiSo","name":"😹┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":"http://127.0.0.1:9978/file/tvfan/token.txt+4k|auto|fhd"},
