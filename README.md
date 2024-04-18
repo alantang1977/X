@@ -71,7 +71,7 @@
 
 ## 🚁TVBox配置接口解密：https://jm.n13.club/
 
-http://000.hfr1107.top/jm.php?jm=
+http://000.hfr1107.top/jm.php?jm=http://饭太硬.top/tv
 
 https://xn--sss604efuw.top/jm/ 解密
 
