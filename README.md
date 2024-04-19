@@ -21,6 +21,39 @@
 
 ----
 
+## 🚁TVBox配置接口解密：https://jm.n13.club/
+
+http://000.hfr1107.top/jm.php?jm=http://饭太硬.top/tv
+
+https://xn--sss604efuw.top/jm/ 解密
+
+https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
+
+https://jm.dovxi.repl.co/api?url=
+
+http://饭太硬.top/tv
+
+http://肥猫.live
+
+http://xhww.fun:63/小米/DEMO.json
+
+http://tvbox.王二小放牛娃.xyz
+
+https://weixine.net/ysc.json   运输车
+
+https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/app/ymzn  我爱夜猫子
+
+https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情 (https://already.free.hr/Vivo-Max/XYQTVBox/main/XYQTVBox.json)
+
+http://pandown.pro/tvbox/tvbox.json  巧技
+
+[回到顶部](#readme)
+
+![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
+------
+
+----
+
 # 🍓GitHub Proxy 代理加速 
 
     https://gh.con.sh/https://raw.githubusercontent.com/
@@ -67,38 +100,6 @@
 
 ![photo_2024-02-09_16-28-42](https://github.com/alantang1977/X/assets/107459091/630ad497-6028-4dc0-981d-c083c462e051)
 
-----
-
-## 🚁TVBox配置接口解密：https://jm.n13.club/
-
-http://000.hfr1107.top/jm.php?jm=http://饭太硬.top/tv
-
-https://xn--sss604efuw.top/jm/ 解密
-
-https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json 路飛大佬
-
-https://jm.dovxi.repl.co/api?url=
-
-http://饭太硬.top/tv
-
-http://肥猫.live
-
-http://xhww.fun:63/小米/DEMO.json
-
-http://tvbox.王二小放牛娃.xyz
-
-https://weixine.net/ysc.json   运输车
-
-https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/app/ymzn  我爱夜猫子
-
-https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情 (https://already.free.hr/Vivo-Max/XYQTVBox/main/XYQTVBox.json)
-
-http://pandown.pro/tvbox/tvbox.json  巧技
-
-[回到顶部](#readme)
-
-![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
-------
 # 👹安装教程/使用说明
 
     取得阿里云盘token方法如下：
