@@ -62,6 +62,7 @@
 				"播放数组": "<div class=\"scroll-content\">&&</div>",
 				"播放标题": "<span>&&</span>",
 				"分类": "电影$dianying#电视剧$dianshiju#动漫$dongman#综艺$zongyi"}},
+{"key":"csp_Juqq","name":"⭕┃剧圈┃影视","type":3,"playerType":"2","api":"csp_Juqq", "jar":"https://cloud.lxweb.cn/f/ePJWIa/PandaQ240416.jar;md5;9f15ade02721f30f65880bef1271be69"},
 {"key":"Bt0","name":"🧚┃不太灵┃磁力","type":3,"api":"csp_Bt0","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"null$$$null$$$1","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
 {"key":"Xpanpan","name":"🍽️┃小盘盘┃网盘","type":3,"api":"csp_Xpanpan","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://xpanpan.site$$$proxy$$$1","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
 {"key":"盘友圈","name":"🏄🏻┃盘友圈┃网盘","type":3,"api":"csp_Panyq","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
