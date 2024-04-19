@@ -136,13 +136,13 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 ----
 
-base64解码：https://tool.oschina.net/encrypt?type=3
+    base64解码：https://tool.oschina.net/encrypt?type=3
 
-AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
+    AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 
-16进制解码：http://www.cyeam.com/tool/hexdecode
+    16进制解码：http://www.cyeam.com/tool/hexdecode
 
-接口解密 http://饭太硬.ml/jm/
+    接口解密 http://饭太硬.ml/jm/
 ------
 # 思维没有边界 一切皆有可能
 ------
@@ -151,33 +151,33 @@ AES cbc解密:https://the-x.cn/zh-cn/cryptography/Aes.aspx
 ----
 
 ------
-1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
+    1.  TVBox_takagen99（https://github.com/alantang1977/takagen99-Box）
 
-2.  TV_q215613905（https://github.com/alantang1977/TVBoxOS）
+    2.  TV_q215613905（https://github.com/alantang1977/TVBoxOS）
 
-3.  影視TV https://github.com/FongMi/TV 
+    3.  影視TV https://github.com/FongMi/TV 
 
-4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
+    4.  道长源地址：https://gitcode.net/qq_32394351/dr_py/
 
-5.  道长接口 https://pastebin.com/raw/5NHaxyGR
+    5.  道长接口 https://pastebin.com/raw/5NHaxyGR
 
-6.  🚓运输车🚓 https://jm.dovxi.repl.co/api?url=https://ghproxy.net/raw.githubusercontent.com/52670576/box/main/ysc.json
+    6.  🚓运输车🚓 https://jm.dovxi.repl.co/api?url=https://ghproxy.net/raw.githubusercontent.com/52670576/box/main/ysc.json
 
                 https://github.com/52670576/tvbox
                 
                 https://gitee.com/lekanbox/ysc
         
-7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
+    7. 🍎小苹果影视盒子🍎  http://app.pingcaca.com/share/?invite_id=WDM3MDJQ
 
-8. 🏮大聪明多多🏮 https://jihulab.com/duomv/duo
+    8. 🏮大聪明多多🏮 https://jihulab.com/duomv/duo
          
                https://yydsys.top/duo
  
-9. 🐕http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
+    9. 🐕http://ltjm.ml/mao.php?url=https://d.looks.wang/我爱夜猫子
 
-10. 🐄楞牛哥 https://jm.dovxi.repl.co/api?url=http://tv.lengniuge.ga/yingshi
+    10. 🐄楞牛哥 https://jm.dovxi.repl.co/api?url=http://tv.lengniuge.ga/yingshi
 
-11. 香雅情接口：https://www.123pan.com/s/alSeVv-lGO0A.html
+    11. 香雅情接口：https://www.123pan.com/s/alSeVv-lGO0A.html
 
 https://ghproxy.com/https://raw.githubusercontent.com/Vivo-Max/XYQTVBox/main/XYQTVBox.json
 
