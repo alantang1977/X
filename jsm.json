@@ -220,7 +220,8 @@
 				"播放链接": "链&&链",
 				"嗅探词": ".m3u8",
 				"播放请求头":"User-Agent$Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36#Origin$www.whbax.cn#Referer$www.whbax.cn#Cookie$PHPSESSID=7da46a353cf8bac46b4f8226f06042ad",
-				"免嗅": "0"
+				"免嗅": "0",
+				"页面代理":"proxy"
 			}
 		},
 		{"key":"XBPQ_BaiPiao","name":"白嫖影视|XBPQ","type":3,"api":"csp_XBPQ", "jar":"./lib/XBPQ.jar",
