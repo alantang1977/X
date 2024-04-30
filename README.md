@@ -21,7 +21,9 @@
 
 ----
 
-## 🚁TVBox配置接口解密：https://xn--sss604efuw.top/jm/
+## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.top/jm/  
+
+https://xn--sss604efuw.top/jm/
 
 http://000.hfr1107.top/jm.php?jm=http://饭太硬.top/tv
 
