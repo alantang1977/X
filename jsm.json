@@ -125,7 +125,7 @@
 			"searchable":0,
 			"quickSearch": 1,
 			"searchable": 1,
-			"ext": "https://www.bdys10.com/$$$null$$$1"
+			"ext": "https://www.yjys.me/$$$null$$$1"
 		},
 		{"key":"YunPan","name":"云盘资源|网盘","type":3,"api":"csp_YunPan","timeout":60, "ext":"./lib/tokenm.json$$$null$$$proxy$$$1"},
 		{"key":"YingSo","name":"影搜|网盘搜索","type":3,"api":"csp_YingSo","timeout":60, "ext":"./lib/tokenm.json"},
