@@ -65,6 +65,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
     https://gh-proxy.com/https://raw.githubusercontent.com/
     https://githubfd.deno.dev/
     https://mirror.ghproxy.com/https://raw.githubusercontent.com/
+    https://mirror.ghproxy.com/raw.githubusercontent.com/
     https://already.free.hr/
 
 # 🍑电视直播搜索引擎
