@@ -1,0 +1,562 @@
+港澳台,#genre#
+TVB 翡翠台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=feicui
+TVB 无线新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-news
+TVB PLUS,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-plus
+TVB 黄金翡翠台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=golden-jade
+TVB 黄金华剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=golden-chinese-drama
+TVB 千禧经典台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-classic
+TVB 粤语片台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-yueyu
+TVB 星河台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-xinghe
+TVB 亚洲剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-asia-drama
+TVB 娱乐新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=TVB ylxw
+J2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=j2
+TVB 明珠台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=pearl
+TVB 华语剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-drama
+凤凰卫视 资讯台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=phtv-info
+凤凰卫视 中文台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=phtv-cn
+凤凰卫视 香港台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=phtv-hk
+HOY 资讯台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hoy-info
+HOY TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hoytv
+HOY国际财经,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hoy-ibc
+ViuTV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=viutv
+ViuTV6,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=viutv6
+天映频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=celestial
+天映经典,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cccm
+Thrill,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=thrill
+星空卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=star-xing-kong
+香港卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hks
+澳亚卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mastv
+澳门卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mstv
+澳门莲花卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lotustv
+澳门资讯,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tdm-information
+澳视澳门,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tdm
+HKC 18台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hkc18
+港台电视 31,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=rthk31
+港台电视 32,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=rthk32
+Now 财经台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-finance
+Now 爆谷台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=baogu-movies
+Now 星影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-baogu-superstars
+Now 新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-news
+Now 直播台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-direct
+Now报价台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-data
+Now jelli紫金国际台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-jelli
+Now华剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-chinese-drama
+HBO Now115,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=Now-HBO
+Now HBO Hits,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-hbo-hits
+Now HBO Family,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-hbof-amily
+Now HBO Signature,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-hbo-signature
+MovieMovie,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=moviemovie
+NowViu剧集台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-viu-drama
+Now Sports 641,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports641
+Now NBA,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-nba
+Now Sports精选,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-prime
+Now Sports 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-1
+Now Sports 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-2
+Now Sports 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-3
+Now Sports 4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-4
+Now Sports 5,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-5
+Now Sports 6,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-6
+Now Sports 7,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-7
+Now Sports Plus,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-plus
+Now Sports 英超1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league1
+Now Sports 英超2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league2
+Now Sports 英超3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league3
+Now Sports 英超4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league4
+Now Sports 英超5,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league5
+Now Sports 英超6,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-sports-premier-league6
+Now beIN SPORTS 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-bein-sports1
+Now beIN SPORTS 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-bein-sports2
+Now beIN SPORTS 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-bein-sports3
+Now 668,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-668
+Now Golf 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-golf2
+Now Golf 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=now-golf3
+民视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv
+民视台湾台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-tw
+民视第一台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-one
+纬来日本,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=videoland-japan
+纬来综合,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=videoland
+八大综合,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gtv28
+八大第一,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gtv27
+TVBS 精采台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-jc
+TVBS 欢乐台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-huanle
+TVBS Asia,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-asia
+三立台湾台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-taiwan
+三立综合台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-zonghe
+台视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ttv
+东森超视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-super
+东森综合台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-ettv
+中视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ctv
+中视菁采台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=bravo
+中天亚洲,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cti-asia
+中天综合,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ctitv36
+华视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cts
+LiveABC 互动英语频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=liveabc
+好消息,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=goodtv
+KLT-靖天国际台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtgj
+ELTA综合台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-zonghe
+公视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=pts
+公视3台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=pts-3
+公视台语台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=pts-ty
+靖天综合台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtzh
+靖天日本台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtrb
+客家电视台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hakkatv
+大爱一台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=daai1
+大爱二台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=daai2
+ARIRANG 阿里郎频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=arirang
+中天新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cti-news
+TVBS 新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-news
+TVBS HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-hd
+东森新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-news
+东森财经新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-finance
+寰宇新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=global-news
+寰宇财经台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=global-finance
+寰宇新闻台湾台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=global-news-tw
+壹新闻 HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nexttv
+三立新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-news
+三立iNews,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-inews
+中视新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ctv-news
+非凡新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=unique-business-news
+年代新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=era-news
+民视新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-news
+台视新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ttv-news
+镜电视新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mnews
+华视新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cts-news
+半岛国际新闻台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=aljazeera
+SBN 全球财经台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sbn
+靖天资讯台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtzx
+纬来电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=videoland-movie
+纬来戏剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=videoland-drama
+TVBS综艺台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-zongyi
+TVBS台剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvbs-taiju
+龙祥电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lstime
+龙华电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ltv-movies
+龙华戏剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ltv-xiju
+龙华日韩台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ltv-rihan
+东森电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-movie
+东森戏剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-drama
+东森洋片,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-emovie
+八大精彩台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gtv-jct
+八大戏剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gtv-41
+八大娱乐,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gtv-86
+八大综艺,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=grt
+采昌影剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=caichang
+美亚电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=meiah-movies
+猪哥亮歌厅秀,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=zglgtx
+民视综艺,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-reality
+民视影剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-drama
+三立都会台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-city
+三立戏剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=settv-drama
+中视经典台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ctv-classic
+中天娱乐,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cti-yule
+靖洋戏剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jyxj
+靖天映画,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtyh
+靖天电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtdy
+靖天戏剧台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtxjt
+韩国娱乐台 KMTV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kmtv
+公视戏剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gsxj
+影迷数位纪实台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ymswjst
+影迷数字电影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=fans-cinema
+视纳华仁纪实频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cnex
+MTV Live HD 频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mtv
+ELTA 娱乐台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-ylt
+
+央视频道,#genre#
+CCTV-1 综合,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv1
+CCTV-2 财经,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv2
+CCTV-3 综艺,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv3
+CCTV-4 中文国际,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv4
+CCTV-5 体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv5
+CCTV-5+ 体育赛事,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv5plus
+CCTV-6 电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv6
+CCTV-7 国防军事,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv7
+CCTV-8 电视剧,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv8
+CCTV-9 纪录,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv9
+CCTV-10 科教,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv10
+CCTV-11 戏曲,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv11
+CCTV-12 社会与法,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv12
+CCTV-13 新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv13
+CCTV-14 少儿,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv14
+CCTV-15 音乐,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv15
+CCTV-16 奥林匹克,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv16
+CCTV-17 农业农村,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cctv17
+CHC家庭影院,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=chc-jtyy
+CHC动作电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=chc-dzdy
+CHC高清电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=chc-gqdy
+重温经典,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cwjd
+CCTV1测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testcctv1
+CCTV2测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testcctv2
+CCTV3测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testcctv3
+CCTV4测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testcctv4
+CCTV5测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testcctv5
+Astro AEC测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testaec
+Astro QJ测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testqj
+Channel 5 测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testchannel5
+Channel 8 测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testchannel8
+SPOTV 测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testsportv
+SPOTV 2 测试,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testspotv2
+
+国内卫视,#genre#
+大湾区卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histarcs.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=testdwqws
+湖南卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hunan
+浙江卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=zhejiang
+东方卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dongfang
+江苏卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jiangsu
+北京卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=beijing
+深圳卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shenzhen
+广东卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=guangdong
+大湾区卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdwqws
+重庆卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=chongqing
+东南卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dongnan
+广西卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=guangxi
+贵州卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=guizhou
+海南卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hainan
+河北卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hebei
+黑龙江卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=heilongjiang
+湖北卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubei
+江西卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jiangxi
+吉林卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jilin
+辽宁卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=liaoning
+内蒙古卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=neimenggu
+宁夏卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ningxia
+陕西卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shaanxi
+山东卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shandong
+山西卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shanxi
+四川卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sichuan
+天津卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tianjin
+厦门卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=xiamen
+新疆卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=xinjiang
+西藏卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=xizang
+云南卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=yunnan
+安徽卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=anhui
+河南卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=henan
+青海卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=qinghai
+甘肃卫视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gansu
+
+国外频道,#genre#
+Channel 5,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=channel-5
+Channel 8,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=channel8
+Channel U,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=channel-u
+8TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=8tv
+TV9,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv9
+CM+,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cm-plus
+E乐,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=singtel-tv
+TV1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv1-my
+TV2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv2-my
+TV3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv3-my
+ChannelNewsAsia,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=channelnewsasia
+OKEY,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=okey
+TVB Magic,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvb-magic
+tvN Movies,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvn-movies
+AXN,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=axn
+TV Alhijrah,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv-alhijrah
+ColorsHindi,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=colorshindi
+TVS,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvs
+tvN,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvn
+BeritaRTM,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=beritartm
+SukanRTM,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sukanrtm
+HITSMovies,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hitsmovies
+ShowCase,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=showcase
+BBCEarth,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=bbcearth
+Mediacorp Suria,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mediacorp-suria
+Mediacorp Vasantham,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mediacorp-vasantham
+Gem,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gem
+GlobalTrekker,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=globaltrekker
+DramaSangat,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dramasangat
+SunTV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=suntv
+SunMusic,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sunmusic
+SunNews,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sunnews
+AwesomeTV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=awesometv
+DidikTV7,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=didiktv7
+Adithya,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=adithya
+KTVHD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ktvhd
+SunLife,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sunlife
+StarVijay,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=starvijay
+ColorsTamil,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=colorstamil
+ZeeTamil,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=zeetamil
+ZeeCinemaHD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=zeecinemahd
+Boo,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=boo
+MTVLive,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mtvlive
+Bernama,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=bernama
+Moonbug,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=moonbug
+Hub都会,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=HubECity
+Hub娱家,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=HubVVDrama
+HubSports 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubsports1
+HubSports2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubsports2
+HubSports3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubsports3
+HubSport4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubsports4
+HubSports Plus,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubsports-plus
+Hub Premier 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubpremier1
+HubPremier2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubpremier2
+HubPremier3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubpremier3
+HubPremier 4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubpremier4
+HubPremier 5,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hubpremier5
+Hub Sensasi,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hub-sensasi
+tvn HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tvnhd
+AstroWarna Hub版,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-warna-hub
+ONEMalay,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=one-malay
+Astro AEC,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-aec
+Astro 欢喜台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-huaheedai
+Astro SuperSport,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=super-sports1
+Astro SuperSport 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=super-sports2
+Astro SuperSport 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=super-sports3
+Astro SuperSport 4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=super-sports4
+Arena Bola,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=arena-bola
+Arena Bola2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=arena-bola2
+Astro 爱奇艺,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-iqiyi
+Astro AOD 311 国语,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-aod
+Astro AOD 311 粤语,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-aod-311-hk
+Astro QJ,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-quanjia
+Astro Awani,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-awani
+Astro Arena HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-arena-hd
+Astro Arena 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-arena2
+Astro Citra,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-citra
+Astro Prima,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-prima
+Astro Aura,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-aura
+Astro RIA,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-ria
+Astro ONE,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-one
+AstroPremier,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astropremier
+Astro Ceria,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-ceria
+Astro Vaanavil,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-vaanavil
+Astro Vinmeen,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-vinmeen
+Astro Warna,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-warna
+Astro Vellithirai,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-vellithirai
+Astro Rania,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-rania
+Astro Oasis,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-oasis
+Astro TUTOR TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-tutor-tv
+Astro GolfChannel,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=astro-golfchannel
+beIN Sports,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=beinsports
+beIN Sports 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=beinsports2
+beIN Sports 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=beinsports3
+ELTA 体育-1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-sport1
+ELTA 体育-2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-sport2
+ELTA 体育-3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-sport3
+ELTA体育4台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-sport4
+博斯网球,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast-tennis
+博斯运动-1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast1
+博斯运动-2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast2
+博斯无限,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast-wx
+博斯高球-1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast-golf1
+博斯高球-2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast-golf2
+博斯魅力,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sportcast-meili
+ESPN,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=espn
+ESPN 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=espn2
+ESPN 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=espn3
+ESPN 4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=espn4
+myTV SUPER直播足球1台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mytv-super-soccer1
+myTV SUPER直播足球2台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mytv-super-soccer2
+myTV SUPER直播足球3台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mytv-super-soccer3
+myTV SUPER直播足球4台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mytv-super-soccer4
+myTV SUPER 18,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mytvsuper-18
+纬来体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=videoland-sport
+NBA,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nba
+WWE,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=wwe
+DAZN 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=eleven-sport1
+DAZN 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=eleven-sport2
+Eurosports-1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=eurosports-1
+SPOTV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=spotv
+SPOTV-2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=spotv2
+时尚运动 X,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ssydx
+GINX Esports TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ginx-esports
+Tech Storm,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tech-storm
+TRACE Sport Stars,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=trace-sport-stars
+W-Sport,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=w-sport
+PremierSports,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=premiersports
+智林体育台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=zl-sports
+新时代电视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=fairchildtv
+新时代电视二台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=fairchildtv2
+城市电视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=talentvisiontv
+HBO HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hbo-hd
+HBO Hits HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hbo-hits-hd
+HBO Family HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hbo-family
+HBO Signature HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hbo-signature
+Cinemax,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cinemax
+CNN International,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cnn-international
+好莱坞电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hollywood-movie
+ROCK Action,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=rock-action
+ROCK Entertainment,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=rock-entertaiment
+Bloomberg,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=bloomberg
+amc 最爱电影,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=amc-movie
+美国中文电视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sinovision
+Lifetime 娱乐频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lifetime
+HLN,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cnn-hln
+fun 探索娱乐台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=festival4k
+Euronews,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=euronews
+MyCinema Europe HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=mycinema-europe
+VOA 美国之音,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=voa
+DW 德国之声,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dw
+CNN,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cnn
+ABC News,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=abc-news
+BBC World News,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=bbc-world-news
+CNBC,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cnbc
+
+地区频道,#genre#
+上海都市,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shds
+上海新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=shxw
+五星体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=wxty
+劲爆体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jbty
+广东体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdty
+第一财经,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=yicai
+辽宁体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lnty
+天津体育,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tjty
+广东珠江,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdzj
+河南梨园,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hnly
+辽宁都市,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lnds
+辽宁影视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=lnys
+黑龙江都市,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=hljds
+广州综合,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gzzh
+广州影视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gzys
+广州竞赛,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gzjs
+广东影视,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdys
+广东新闻,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdxw
+广东民生,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdms
+广东少儿,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=gdse
+
+娱乐频道,#genre#
+迪士尼频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=disney
+Animax 卡通,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=animax-cartoon
+DreamWorks 梦工厂动画,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dreamworks
+小尼克频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nick-jr
+尼克儿童频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nickelodeon
+MOMO 亲子台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=momo-kids
+东森幼幼台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ebc-yoyo
+CN卡通,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=cn-cartoon
+靖天卡通台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtkt
+靖天育乐台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jtyl
+i-Fun 动漫台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=i-fun
+ELTV生活英語台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=eltv
+Boomerang HD,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=boomerang-hd
+靖洋卡通 NiceBingo,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nice-bingo
+达文西频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=da-vinci
+探索频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=discovery
+探索科学频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=discovery-sci
+探索亚洲频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=discovery-asia
+DMAX,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=dmax
+History 频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=history
+History-2 频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=history-2
+Love Nature,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=love-nature
+国家地理 野生频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=natgeo-wild
+民视旅游,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ftv-travel
+美食星球频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=food-planet
+EYE 旅游台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=eye-travel
+ELTA 生活旅游台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=elta-lifetravel
+车迷TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=motorvision
+动物星球频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=animal-planet
+TLC 旅游生活頻道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tlc
+亚洲旅游台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=asia-travel
+Asian Food Network,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=asian-food-network
+CI 罪案侦查频道,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=ci
+滚动力 rollor,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=rollor
+LUXE TV Channel,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=luxe-tv
+NHK General,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nhk-g
+NHK Education,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nhk-e
+日本电视台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=nippon-tv
+TBS TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tbs-tv
+富士电视台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=fujitv
+朝日电视台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv-asahi
+东京电视台,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=tv-tokyo
+JSPORTS 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jsports1
+JSPORTS 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jsports2
+JSPORTS 3,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jsports3
+JSPORTS 4,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=jsports4
+KBS 1,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-1
+KBS 2,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-2
+KBS Drama,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-drama
+KBS Story,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-story
+KBS Life,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-life
+KBS Joy,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-joy
+KBS Kids,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-kids
+KBSWorld,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbsworld
+KBS NEWS,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=kbs-news
+SBS,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sbs
+SBS Plus,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sbs-plus
+SBS funE,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sbs-fune
+SBS M,https://douyincdn-6mirror-aliyuncs.52520.xyz/histar.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=sbs-m 
+
+4GTV,#genre#
+民視,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv155
+中視,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv040
+華視,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv041
+台視,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv066
+民視台灣台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv001
+民視第一台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv003
+民視綜藝台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv004
+豬哥亮歌廳秀,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv006
+中天新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv009
+非凡新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv010
+影迷數位電影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv011
+視納華仁紀實頻道,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv013
+時尚運動X,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv014
+達文西頻道,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv018
+八大精彩台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv034
+八大綜藝台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv039
+公視戲劇,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv042
+客家電視台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv043
+靖天卡通台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv044
+靖洋戲劇台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv045
+靖天綜合台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv046
+靖天日本台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv047
+非凡商業台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv048
+采昌影劇台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv049
+台視新聞,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv051
+華視新聞,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv052
+GINX Esports TV,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv053
+靖天歡樂台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv054
+靖天映畫,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv055
+台視財經,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv056
+靖洋卡通台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv057
+靖天戲劇台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv058
+CLASSICA古典樂,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv059
+靖天電影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv061
+靖天育樂台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv062
+靖天國際台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv063
+中視菁采台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv064
+靖天資訊台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv065
+TVBS精采台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv067
+TVBS歡樂台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv068
+愛爾達娛樂台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv070
+TVBS新聞,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv072
+TVBS,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv073
+中視新聞,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv074
+CATCHPLAY電影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv076
+TRACE Sport Stars,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv077
+ARIRANG阿里郎頻道,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv079
+中視經典台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv080
+TRACE Urban,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv082
+Mezzo Live,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv083
+國會頻道1台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv084
+國會頻道2台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv085
+智林體育台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv101
+東森購物1台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv102
+東森購物2台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv103
+第1商業台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv104
+中天亞洲台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv109
+東森新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv152
+東森財經新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=4gtv-4gtv153
+VOA美國之音,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv03
+民視旅遊台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv07
+民視影劇台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv09
+半島國際新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv10
+民視新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv13
+i-Fun動漫台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv15
+好消息,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv16
+好消息2台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-ftv17
+龍華卡通台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn01
+龍華電影台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn03
+博斯魅力台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn04
+博斯高球台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn05
+博斯高球二台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn06
+博斯運動一台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn07
+博斯運動二台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn08
+博斯網球台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn09
+博斯無限台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn10
+龍華日韓台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn11
+龍華偶像台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn12
+博斯無限二台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn13
+寰宇新聞台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn14
+寰宇新聞台灣台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn15
+亞洲旅遊台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn17
+龍華戲劇台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn18
+Smart知識台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn19
+ELTV生活英語台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn20
+龍華經典台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn21
+寰宇財經台,https://douyincdn-6mirror-aliyuncs.52520.xyz/4gtv.php?key=fce50d20c5069eb773c70dc18d3b49e3&id=litv-longturn23
