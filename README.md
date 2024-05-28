@@ -33,7 +33,7 @@ https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/j
 
 https://jm.dovxi.repl.co/api?url=
 
-http://饭太硬.top/tv
+http://饭太硬.com/tv
 
 http://肥猫.live
 
