@@ -32,7 +32,7 @@
                 "跳转播放链接": "value=\"&&\"",
                 "嗅探词": "index.m3u8#.mp4",
                 "分类url": "https://www.hanjutu.com/show/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html[https://www.hanjutu.com/htm/{cateId}.html]",
-                "分类": "韩剧$hanju#剧情$hanju/juqingju#动作$hanju/dongzuoju#古装$hanju/guzhuangju#喜剧$hanju/xiju#奇幻$hanju/qihuanju#悬疑$hanju/xuanyiju#爱情$hanju/aiqingju#惊悚$hanju/jingsongju#犯罪$hanju/fanzuiju#韩综$zongyi#韩影$dianying"}},
+                "分类": "泰剧$taiju#日剧$riju#韩剧$hanju#剧情$hanju/juqingju#动作$hanju/dongzuoju#古装$hanju/guzhuangju#喜剧$hanju/xiju#奇幻$hanju/qihuanju#悬疑$hanju/xuanyiju#爱情$hanju/aiqingju#惊悚$hanju/jingsongju#犯罪$hanju/fanzuiju#韩综$zongyi#韩影$dianying"}},
 {"key":"米搜","name":"🦋┃米搜┃搜索","type":3,"api":"csp_MIPanSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"pan":"quark","quarkCookie":"tvfan/cookie.txt","from":"4k|auto|fhd"}},
 {"key":"夸搜","name":"🐌┃夸搜┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":{"pan":"quark","quarkCookie":"tvfan/cookie.txt","from":"4k|auto|fhd"}},
 {"key":"YiSo","name":"😹┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"aliToken":"tvfan/token.txt","from":"4k|auto|fhd"}},
