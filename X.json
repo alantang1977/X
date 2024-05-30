@@ -29,7 +29,26 @@
 {"key":"Xpanpan","name":"🍽️┃小盘盘┃网盘","type":3,"api":"csp_Xpanpan","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://xpanpan.site$$$proxy$$$1","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
 {"key":"盘友圈","name":"🏄🏻┃盘友圈┃网盘","type":3,"api":"csp_Panyq","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
 {"key":"混合盘","name": "🏄🏻┃混合盘┃网盘","type":3,"api":"csp_HunHePan","timeout":30, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
-	
+
+{"key":"Gaoqing","name":"中国高清网|网盘","type":3,"api":"csp_Gaoqing","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://gaoqing.la/$$$proxy$$$1"},
+{"key":"YunPan","name":"云盘资源|网盘","type":3,"api":"csp_YunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$null$$$proxy$$$1"},
+{"key":"YingSo","name":"影搜|网盘搜索","type":3,"api":"csp_YingSo","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
+{"key":"混合盘","name":"混合盘|网盘搜索","type":3,"api":"csp_HunHePan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
+{"key":"88Pan","name":"88网盘|网盘搜索","type":3,"api":"csp_EightEight","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://662688.xyz$$$","style": {	"type": "list","ratio": 1.1}},
+{"key":"PanSearch","name":"PanSearch|网盘搜索","type":3,"api":"csp_PanSearch","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271"},
+{"key":"盘友圈","name":"盘友圈|网盘搜索","type":3,"api":"csp_Panyq","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$site$$$proxy"},
+{"key":"易搜","name":"易搜|网盘搜索","type":3,"api":"csp_YiSo","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$./lib/yiso.txt","style": {"type": "list","ratio": 1.1}},
+{"key":"秒搜","name":"秒搜|网盘搜索","type":3,"api":"csp_MiaoSou","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
+{"key":"Funletu","name":"趣盘搜|夸克搜索","type":3,"api":"csp_Funletu","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
+{"key":"QuarkPanso","name":"夸克盘搜|夸克搜索","type":3,"api":"csp_QuarkPanso","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","style": {"type": "list","ratio": 1.1}},
+{"key":"Panta","name":"盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://www.91panta.cn/$$$null$$$1","style": {"type": "list","ratio": 1.1}},
+{"key":"DaPanSo","name":"大盘搜|网盘搜索","type":3,"api":"csp_DaPanSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://dapanso.com$$$proxy$$$1"},
+{"key":"PikaSo","name":"皮卡搜|网盘搜索","type":3,"api":"csp_PikaSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://www.pikaso.top/$$$null","style": {"type": "list","ratio": 1.1	}},
+{"key":"Qianfan","name":"千帆|网盘搜索","type":3,"api":"csp_Qianfan","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://pan.qianfan.app$$$null$$$./lib/qianfan.txt$$$1"},
+{"key":"YunSo","name":"小云搜索|网盘搜索","type":3,"api":"csp_YunSo","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$https://www.yunso.net$$$null$$$1","style": {"type": "list","ratio": 1.1}},
+{"key":"YunPanOne","name":"云盘One|网盘搜索","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;7f25a34386674cfef092610c454cd271$$$null$$$proxy$$$1"},
+
+			
 		
 ##王二小放牛娃
 {"key":"Wexhanxiaoquan","name":"🇰🇷韩圈┃TV┃App","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1715609406645/wex.txt;md5;1d8a6792c4de97620de236430e8fee31"},
