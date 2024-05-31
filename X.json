@@ -33,7 +33,7 @@
                 "嗅探词": "index.m3u8#.mp4",
                 "分类url": "https://www.hanjutu.com/show/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html[https://www.hanjutu.com/htm/{cateId}.html]",
                 "分类": "泰剧$taiju#日剧$riju#韩剧$hanju#剧情$hanju/juqingju#动作$hanju/dongzuoju#古装$hanju/guzhuangju#喜剧$hanju/xiju#奇幻$hanju/qihuanju#悬疑$hanju/xuanyiju#爱情$hanju/aiqingju#惊悚$hanju/jingsongju#犯罪$hanju/fanzuiju#韩综$zongyi#韩影$dianying"}},
-{"key": "皮皮影视吧","name": "🦐┃皮皮4K┃影视","type": 3,"api": "csp_XBPQ","playerType": "2,ext:","jar":"./lib/XBPQ.jar"{
+{"key": "皮皮影视吧","name": "🦐┃皮皮4K┃影视","type": 3,"api": "csp_XBPQ","playerType": "2","ext": {
                 "请求头": "",
                 "主页url": "https://www.pipiysb.com/",
                 "数组": "<article id=\"post-*\"&&</article>",
