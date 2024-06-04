@@ -21,7 +21,7 @@
 
 ----
 
-## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.top/jm/  
+## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.com/jm/ 
 
 https://xn--sss604efuw.top/jm/
 
