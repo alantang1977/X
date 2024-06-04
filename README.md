@@ -119,6 +119,15 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 ③ 复制返回的32位字符串，不要复制双引号
 
+> Token如果失效,需要重新获取阿里Token 
+>
+> [阿里Token获取](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)
+>
+
+> [32位token](https://alist.nn.ci/zh/guide/drivers/aliyundrive.html)  
+> [280位token](https://messense-aliyundrive-webdav-backendrefresh-token-ucs0wn.streamlit.app/)
+
+
 ![photo_2023-06-06_07-15-35](https://github.com/alantang1977/X/assets/107459091/59c22c29-4bbb-4ae9-8bce-f18d41833e13)
 
 ----
