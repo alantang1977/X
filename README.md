@@ -117,7 +117,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
     打开开发者工具 ① 点击 Console进入控制台 ② 在控制台输入 
     JSON.parse(localStorage.token).refresh_token
 
-③ 复制返回的32位字符串，不要复制双引号
+复制返回的32位字符串，不要复制双引号
 
 > Token如果失效,需要重新获取阿里Token 
 >
