@@ -27,7 +27,7 @@ TVBOX/影视接口解密  https://tools.v1.mk/
 
 https://xn--sss604efuw.com/jm/
 
-http://000.hfr1107.top/jm.php?jm=http://饭太硬.com/tv
+http://000.hfr1107.com/jm.php?jm=http://饭太硬.com/tv
 
 https://jm.n13.club/ 解密
 
