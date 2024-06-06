@@ -59,14 +59,7 @@
                 "分类url": "https://www.pipiysb.com/{cateId}/page/{catePg}/[https://www.pipiysb.com/{cateId}/];;r",
                 "分类": "电影&电视剧&美剧&国产剧&韩剧&番剧&热门播放&评风榜",
                 "分类值": "films&tv&classify/meiju&classify/guochan&classify/hanju&classify/fanju&trending&ratings"}},
-{"key": "csp_尘落影视","name": "🐮┃尘落┃影视","type": 3,
-      "api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {
-        "线路数组": "aria-controls=&&<li&&</li>",
-        "线路标题": ">&&</a>",
-        "播放数组": "class=\"row tv-js-list&&</div>",
-        "播放列表": "<a&&</a>",
-        "分类url": "https://v.wetv.wang/whole/{cateId}_{area}_{class}__{year}___0_{by}_{catePg}.html;;rc",
-        "分类": "电影$1#剧集$2#综艺$4#动漫$3#全网资源$5"}},	
+
 {"key":"米搜","name":"🦋┃米搜┃搜索","type":3,"api":"csp_MIPanSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"pan":"quark","quarkCookie":"tvfan/cookie.txt","from":"4k|auto|fhd"}},
 {"key":"夸搜","name":"🐌┃夸搜┃搜索","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":{"pan":"quark","quarkCookie":"tvfan/cookie.txt","from":"4k|auto|fhd"}},
 {"key":"YiSo","name":"😹┃易搜┃搜索","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"aliToken":"tvfan/token.txt","from":"4k|auto|fhd"}},
