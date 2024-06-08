@@ -83,6 +83,24 @@
 			"indexs":1
 		},
 		{
+			"key":"Youtube",
+			"name":"Youtube",
+			"type":3,
+			"api": "csp_Youtube",
+			"searchable": 1,
+			"quickSearch": 0,
+			"changeable": 0,
+			"ext":{
+				"type":"直播#新闻#剧集#电影#综艺#纪录片#音乐#体育#动物#风光#放松#4K#HDR#movie#music#documentary",
+				"proxy":"proxy",
+				"codecs":""
+			},
+			"style": {
+				"type": "rect",
+				"ratio": 1.5
+			}
+		},
+		{
 			"key":"bili",
 			"name":"B站 | Bili[jar]",
 			"type":3,
@@ -132,7 +150,7 @@
 			"quickSearch": 1,
 			"searchable": 1,
 			"timeout":60,
-			"ext": "./lib/tokenm.json$$$https://www.yjys.me/$$$proxy$$$1"
+			"ext": "./lib/tokenm.json$$$https://www.yjys01.com/$$$proxy$$$1"
 		},
 		{"key":"YunPan","name":"云盘资源|网盘","type":3,"api":"csp_YunPan","timeout":60, "ext":"./lib/tokenm.json$$$null$$$proxy$$$1"},
 		{"key":"YingSo","name":"影搜|网盘搜索","type":3,"api":"csp_YingSo","timeout":60, "ext":"./lib/tokenm.json"},
