@@ -1,0 +1,334 @@
+{
+	"class":[
+		{
+			"type_id":"直播",
+			"type_name":"直播"
+		},
+		{
+			"type_id":"新闻",
+			"type_name":"新闻"
+		},
+		{
+			"type_id":"剧集",
+			"type_name":"剧集"
+		},
+		{
+			"type_id":"电影",
+			"type_name":"电影"
+		},
+		{
+			"type_id":"综艺",
+			"type_name":"综艺"
+		},
+		{
+			"type_id":"纪录片",
+			"type_name":"纪录片"
+		},
+		{
+			"type_id":"音乐",
+			"type_name":"音乐"
+		},
+		{
+			"type_id":"体育",
+			"type_name":"体育"
+		},
+		{
+			"type_id":"科技",
+			"type_name":"科技"
+		},
+		{
+			"type_id":"神秘",
+			"type_name":"神秘"
+		},
+		{
+			"type_id":"老高",
+			"type_name":"老高"
+		},
+		{
+			"type_id":"解说",
+			"type_name":"解说"
+		},
+		{
+			"type_id":"野性",
+			"type_name":"野性"
+		},
+		{
+			"type_id":"风景",
+			"type_name":"风景"
+		},
+		{
+			"type_id":"放松",
+			"type_name":"放松"
+		},
+		{
+			"type_id":"HDR",
+			"type_name":"HDR"
+		},
+		{
+			"type_id":"4K",
+			"type_name":"4K"
+		},
+		{
+			"type_id":"经济",
+			"type_name":"经济"
+		},
+		{
+			"type_id":"课程",
+			"type_name":"课程"
+		}
+	],
+	"filters":{
+		"直播":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"Live","v":"live"},
+					{"n":"赛事","v":"直播 赛事"},
+					{"n":"CCTV","v":"直播 CCTV"},
+					{"n":"港台","v":"直播 港台"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"Live","v":"live"},
+					{"n":"Games","v":"live games"},
+					{"n":"CNN","v":"live CNN"},
+					{"n":"BBC","v":"live BBC"}
+				]
+			}
+		],
+		"新闻":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"时政","v":"时政 新闻"},
+					{"n":"体育","v":"体育 新闻"},
+					{"n":"娱乐","v":"娱乐 新闻"},
+					{"n":"大陆","v":"大陆 新闻"},
+					{"n":"港台","v":"港台 新闻"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"News","v":"news"},
+					{"n":"CNN","v":"CNN news"},
+					{"n":"BBC","v":"BBC news"}
+				]
+			}
+		],
+		"剧集":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"大陆","v":"大陆 剧集"},
+					{"n":"腾讯","v":"腾讯 剧集"},
+					{"n":"爱奇艺","v":"爱奇艺 剧集"},
+					{"n":"优酷","v":"优酷 剧集"},
+					{"n":"港台","v":"港台 剧集"},
+					{"n":"美国","v":"美国 剧集"},
+					{"n":"Netflix","v":"Netflix 剧集"},
+					{"n":"Disney","v":"disney 剧集"},
+					{"n":"Apple","v":"apple 剧集"},
+					{"n":"Amazon","v":"amazon 剧集"},
+					{"n":"HBO","v":"hbo 剧集"},
+					{"n":"TVB","v":"TVB"},
+					{"n":"韩国","v":"韩国 剧集"},
+					{"n":"日本","v":"日本 剧集"},
+					{"n":"英国","v":"英国 剧集"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"Drama","v":"drama"},
+					{"n":"US","v":"drama US"},
+					{"n":"Netflix","v":"netflix drama"},
+					{"n":"Disney","v":"disney drama"},
+					{"n":"Apple","v":"apple drama"},
+					{"n":"Amazon","v":"amazon drama"},
+					{"n":"HBO","v":"hbo drama"},
+					{"n":"Korea","v":"korea drama"},
+					{"n":"Japan","v":"japan drama"},
+					{"n":"UK","v":"uk drama"}
+				]
+			}
+		],
+		"电影":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"大陆","v":"大陆 电影"},
+					{"n":"腾讯","v":"腾讯 电影"},
+					{"n":"爱奇艺","v":"爱奇艺 电影"},
+					{"n":"优酷","v":"优酷 电影"},
+					{"n":"港台","v":"港台 电影"},
+					{"n":"美国","v":"美国 电影"},
+					{"n":"Netflix","v":"netflix 电影"},
+					{"n":"Disney","v":"disney 电影"},
+					{"n":"Apple","v":"apple 电影"},
+					{"n":"Amazon","v":"amazon 电影"},
+					{"n":"HBO","v":"hbo 电影"},
+					{"n":"韩国","v":"韩国 电影"},
+					{"n":"日本","v":"日本 电影"},
+					{"n":"英国","v":"英国 电影"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"movie","v":"movie"},
+					{"n":"US","v":"us movie"},
+					{"n":"Netflix movie","v":"netflix movie"},
+					{"n":"Disney","v":"disney movie"},
+					{"n":"Apple","v":"apple movie"},
+					{"n":"Amazon","v":"amazon movie"},
+					{"n":"HBO","v":"hbo movie"},
+					{"n":"Koera","v":"korea movie"},
+					{"n":"Japan","v":"japan movie"},
+					{"n":"UK","v":"uk movie"}
+				]
+			}
+		],
+		"综艺":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"大陆","v":"大陆 综艺"},
+					{"n":"芒果","v":"芒果 综艺"},
+					{"n":"腾讯","v":"腾讯 综艺"},
+					{"n":"爱奇艺","v":"爱奇艺 综艺"},
+					{"n":"优酷","v":"优酷 综艺"},
+					{"n":"港台","v":"港台 综艺"},
+					{"n":"美国","v":"美国 综艺"},
+					{"n":"Netflix","v":"Netflix 综艺"},
+					{"n":"韩国","v":"韩国 综艺"},
+					{"n":"日本","v":"日本 综艺"},
+					{"n":"英国","v":"英国 综艺"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"Variety","v":"variety"},
+					{"n":"Netflix variety","v":"netflix variety"},
+					{"n":"Korea","v":"korea variety"},
+					{"n":"Japan","v":"japan variety"},
+					{"n":"UK","v":"uk variety"}
+				]
+			}
+		],
+		"纪录片":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"BBC纪录片","v":"BBC 纪录片"},
+					{"n":"国家地理","v":"国家地理 纪录片"},
+					{"n":"Netflix纪录片","v":"netflix 纪录片"},
+					{"n":"历史","v":"历史 纪录片"},
+					{"n":"野性","v":"野性 纪录片"},
+					{"n":"地球","v":"地球 纪录片"},
+					{"n":"宇宙","v":"宇宙 纪录片"},
+					{"n":"海洋","v":"海洋 纪录片"},
+					{"n":"人文","v":"人文 纪录片"},
+					{"n":"战争","v":"战争 纪录片"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"BBC","v":"BBC documentary"},
+					{"n":"National Geographic","v":"National Geographic documentary"},
+					{"n":"Netflix","v":"netflix documentary"},
+					{"n":"History","v":"history documentary"},
+					{"n":"WILD","v":"wild documentary"},
+					{"n":"Earch","v":"earth documentary"},
+					{"n":"Universe","v":"universe documentary"},
+					{"n":"Oceans","v":"oceans documentary"},
+					{"n":"Humanism","v":"humanism documentary"},
+					{"n":"Wars","v":"war documentary"}
+				]
+			}
+		],
+		"音乐":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"大陆","v":"大陆 音乐"},
+					{"n":"抖音","v":"抖音"},
+					{"n":"香港","v":"香港 音乐"},
+					{"n":"台湾","v":"台湾 音乐"},
+					{"n":"韩国","v":"韩国 音乐"},
+					{"n":"日本","v":"日本 音乐"},
+					{"n":"欧美","v":"欧美 音乐"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"子分类",
+				"value":[
+					{"n":"Music","v":"music"},
+					{"n":"TikTok","v":"TikTok"},
+					{"n":"BillBoard","v":"BillBoard"},
+					{"n":"Koera","v":"korea music"},
+					{"n":"Japan","v":"japan music"},
+					{"n":"US","v":"US music"}
+				]
+			}
+		],
+		"体育":[
+			{
+				"key":"tid",
+				"name":"中文",
+				"value":[
+					{"n":"默认","v":""},
+					{"n":"直播","v":"体育 直播"},
+					{"n":"赛事","v":"体育 赛事"},
+					{"n":"足球","v":"足球"},
+					{"n":"篮球","v":"篮球"},
+					{"n":"极限","v":"极限"},
+					{"n":"室内","v":"室内 运动"},
+					{"n":"户外","v":"户外 运动"},
+					{"n":"健身","v":"健身"}
+				]
+			},
+			{
+				"key":"tid",
+				"name":"English",
+				"value":[
+					{"n":"Live","v":"live sports"},
+					{"n":"Games","v":"live games"},
+					{"n":"Soccer","v":"live soccer"},
+					{"n":"NBA","v":"NBA"},
+					{"n":"Extreme","v":"extreme sports"},
+					{"n":"InDoor","v":"indoor sports"},
+					{"n":"OutDoor","v":"outdoor sports"},
+					{"n":"Workout","v":"workout"}
+				]
+			}
+		]
+	},
+	"jx":0,
+	"parse":0
+}
