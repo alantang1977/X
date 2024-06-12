@@ -91,7 +91,7 @@
 			"quickSearch": 0,
 			"changeable": 0,
 			"ext":{
-				"json":"./lib/youtube.json",
+				"json":"./lib/youtube1.json",
 				"type":"直播#新闻#剧集#电影#综艺#纪录片#音乐#体育#动物#风光#放松#4K#HDR#movie#music#documentary#bbc documentary#national geographic documentary",
 				"proxy":"proxy",
 				"keywords":"排行榜,HOT,TRENDS,热门话题,热门趋势,热门综艺,热门电影,热门电视剧,小姐姐",
