@@ -12,7 +12,7 @@
 			"ext": "./lib/douban.json"
 		},
 		{
-			"key":"Youtube",
+			"key":"Youtube0",
 			"name":"🧚┃Youtube┃🧚",
 			"type":3,
 			"api": "csp_Youtube",
