@@ -54,8 +54,8 @@
 			"type_name":"4K"
 		},
 		{
-			"type_id":"16K HDR",
-			"type_name":"16K HDR"
+			"type_id":"HDR",
+			"type_name":"HDR"
 		},
 		{
 			"type_id":"宇宙",
@@ -1153,7 +1153,7 @@
 				]
 			}
 		],
-		"16K HDR":[
+		"HDR":[
 			{
 				"key":"tid",
 				"name":"風景",
