@@ -59,9 +59,7 @@
                 "分类url": "https://www.pipiysb.com/{cateId}/page/{catePg}/[https://www.pipiysb.com/{cateId}/];;r",
                 "分类": "电影&电视剧&美剧&国产剧&韩剧&番剧&热门播放&评风榜",
                 "分类值": "films&tv&classify/meiju&classify/guochan&classify/hanju&classify/fanju&trending&ratings"}},
-{
-            "key": "NO视频",
-            "name": "NO视频",
+{"key": "NO视频","name": "🐠┃NO视频┃",
             "type": 3,
             "api": "csp_XBPQ",
             "playerType": "2","jar": "./jar/XBPQ.jar",
