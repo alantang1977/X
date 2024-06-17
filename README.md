@@ -37,7 +37,7 @@ https://jm.dovxi.repl.co/api?url=
 
 http://饭太硬.com/tv
 
-http://肥猫.live
+http://肥猫.com
 
 http://xhww.fun:63/小米/DEMO.json
 
