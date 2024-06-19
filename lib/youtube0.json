@@ -1,9 +1,13 @@
 {
-    "recommend":"LIST:最新|推薦,官方頻道",
+    "recommend":"LIST:最新|推薦,官方頻道,GETTRENDS",
 	"class":[
 		{
-			"type_id":"LIST:Full YouTube,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z,家电维修@",
+			"type_id":"LIST:/频道/,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z,家电维修@",
 			"type_name":"YouTube(頻道)"
+		},
+		{
+			"type_id":"GETTRENDS",
+			"type_name":"时下流行"
 		},
 		{
 			"type_id":"Full YouTube 動畫片",
@@ -30,7 +34,7 @@
 			"type_name":"紀錄片"
 		},
 		{
-			"type_id":"Full YouTube 音樂🎶",
+			"type_id":"音樂",
 			"type_name":"音樂"
 		},
 		{
@@ -499,6 +503,9 @@
 				"value":[
 					{"n":"默認YouTube影視","v":"Complete tertiary film Láimheán na tíorthaime leatbhaile Full YouTube Movie"},
 					{"n":"英叔","v":"Full 林正英,英叔"},
+					{"n":"金庸武俠","v":"Full 金庸武俠 電影 劇集"},
+					{"n":"前线影院","v":"Full 前线影院 ASIA MOVIE"},
+					{"n":"尖峰影院","v":"Full 尖峰影院 Gun Battle ASIA MOVIE"},
 					{"n":"電影大劇院","v":"电影大剧院 1905 Movie Theater"},
 					{"n":"港台三級片","v":"hdr 香港 澳门 台湾 新加坡 马来西亚 泰国 三級片"},
 					{"n":"邵氏经典","v":"hdr 邵氏经典武侠电影"},
@@ -514,7 +521,7 @@
 					{"n":"Chinese Movie Theater","v":"Chinese Movie Theater"},
 					{"n":"腾讯","v":"腾讯 电影"},
 					{"n":"爱奇艺","v":"爱奇艺 电影"},
-					{"n":"优酷","v":"优酷 电影"},
+					{"n":"优酷","v":"Full YOUKU MOVIE-Get APP now 优酷 电影"},
 					{"n":"芒果","v":"芒果TV 电影"},
 					{"n":"搜狐","v":"搜狐 电影"},
 					{"n":"Netflix","v":"netflix Full movie 电影"},
@@ -932,7 +939,7 @@
 				]
 			}
 		],
-		"Full YouTube 音樂🎶":[
+		"音樂":[
 		    {
 				"key":"time",
 				"name":"時間",
@@ -1051,6 +1058,7 @@
 				"key":"tid",
 				"name":"歌手",
 				"value":[
+				    {"n":"華星唱片","v":"華星唱片 Capital Artists Official Channel"},
 				    {"n":"邁克爾傑克遜","v":"邁克爾傑克遜 演唱會，巡演 音樂"},
 					{"n":"張瑋伽","v":"張瑋伽 演唱會 巡演 音樂"},
 					{"n":"孫露","v":"孫露 演唱會 巡演 音樂"},
@@ -1188,7 +1196,7 @@
 				]
 			}
 		],
-		"LIST:Full YouTube 時尚潮流":[
+		"Full YouTube 時尚潮流":[
 		    {
 				"key":"tid",
 				"name":"時裝秀",
@@ -1472,26 +1480,26 @@
 				"name":"CCTV直播",
 				"value":[
 				    {"n":"CCTV中文国际","v":"Full CCTV中文国际"},
-				    {"n":"CCTV1综合","v":"Full CCTV1"},
-				    {"n":"CCTV2财经","v":"Full CCTV2"},
-				    {"n":"CCTV3综艺","v":"Full CCTV3"},
+				    {"n":"CCTV1综合","v":"Full CCTV1综合"},
+				    {"n":"CCTV2财经","v":"Full CCTV2财经"},
+				    {"n":"CCTV3综艺","v":"Full CCTV3综艺"},
 				    {"n":"CCTV4亚洲","v":"Full CCTV–4中文国际亚洲"},
 				    {"n":"CCTV4欧洲","v":"Full CCTV-4中文国际欧洲"},
 				    {"n":"CCTV4美州","v":"Full CCTV–4中文国际美州"},
-				    {"n":"CCTV5体育","v":"Full CCTV5"},
-				    {"n":"CCTV5+体育赛事","v":"Full CCTV5+"},
-				    {"n":"CCTV6电影","v":"Full CCTV6"},
-				    {"n":"CCTV7国防军事","v":"Full CCTV7"},
-				    {"n":"CCTV8电视剧","v":"Full CCTV8"},
-				    {"n":"CCTV9纪录","v":"Full CCTV9"},
-				    {"n":"CCTV10科教","v":"Full CCTV10"},
-				    {"n":"CCTV11戏曲","v":"Full CCTV11"},
-				    {"n":"CCTV12社会与法","v":"Full CCTV12"},
-				    {"n":"CCTV13新闻","v":"Full CCTV13"},
-				    {"n":"CCTV14少儿","v":"Full CCTV14"},
-				    {"n":"CCTV15音乐","v":"Full CCTV15"},
-				    {"n":"CCTV16奥林匹克","v":"Full CCTV16"},
-				    {"n":"CCTV17农业农村","v":"Full CCTV17"}
+				    {"n":"CCTV5体育","v":"Full CCTV5体育"},
+				    {"n":"CCTV5+体育赛事","v":"Full CCTV5+体育赛事"},
+				    {"n":"CCTV6电影","v":"Full CCTV6电影"},
+				    {"n":"CCTV7国防军事","v":"Full CCTV7国防军事"},
+				    {"n":"CCTV8电视剧","v":"Full CCTV8电视剧"},
+				    {"n":"CCTV9纪录","v":"Full CCTV9纪录"},
+				    {"n":"CCTV10科教","v":"Full CCTV10科教"},
+				    {"n":"CCTV11戏曲","v":"Full CCTV11戏曲"},
+				    {"n":"CCTV12社会与法","v":"Full CCTV12社会与法"},
+				    {"n":"CCTV13新闻","v":"Full CCTV13新闻"},
+				    {"n":"CCTV14少儿","v":"Full CCTV14少儿"},
+				    {"n":"CCTV15音乐","v":"Full CCTV15音乐"},
+				    {"n":"CCTV16奥林匹克","v":"Full CCTV16奥林匹克"},
+				    {"n":"CCTV17农业农村","v":"Full CCTV17农业农村"}
 				]
 			},
 		    {
