@@ -2,7 +2,7 @@
     "recommend":"LIST:最新|推薦,官方頻道,GETTRENDS",
 	"class":[
 		{
-			"type_id":"LIST:/频道/,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z,家电维修@",
+			"type_id":"LIST:Full YouTube,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z,家电维修@",
 			"type_name":"YouTube(頻道)"
 		},
 		{
@@ -58,16 +58,16 @@
 			"type_name":"科普知識"
 		},
 		{
-			"type_id":"Full YouTube 解說",
+			"type_id":"Full 從古至今 解說",
 			"type_name":"解說"
 		},
 		{
 		    "type_id":"CCTV中国中央电视台",
-		    "type_name":"🇨🇳CCTV"
+		    "type_name":"CCTV中国中央电视台"
 		}
 	],
 	"filters":{
-	    "LIST:Full YouTube,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z":[
+	    "LIST:Full YouTube,李子柒 Liziqi @cnliziqi,老高與小茉 @laogao,李永樂老師 @TchLiyongle,滇西小哥 @dianxixiaoge,脑洞乌托邦 @NDWTB,自说自话的总裁 @STBoss,老肉雜談 @老肉雜談,老饭骨 @LaoFanGu,小高姐的 Magic Ingredients @MagicIngredients,小穎美食 @XiaoYingFood,野外求生 primitivetechnology9550 @primitivetechnology9550,科普 Mr Beast@MrBeast,航天大學 Airforceproud95 @Airforceproud95,世界大戰 TheGreatWar @TheGreatWar,Mark Rober @MarkRober,不良林,涌哥侃侃 @ygkkk,悟空的日常,健康1+1 @user-mr5bh4bk8z,家电维修@":[
 	        {
 				"key":"time",
 				"name":"時間",
@@ -660,6 +660,7 @@
 				    {"n":"默認YouTube劇集","v":"fully YouTube 劇集"},
 				    {"n":"全部Drama","v":"Full Episode drama"},
 				    {"n":"華語熱播電視劇官方頻道","v":"華語熱播電視劇官方頻道"},
+				    {"n":"追劇少女小七","v":"追劇少女小七"},
 				    {"n":"粵劇","v":"粵劇 劇集"},
 				    {"n":"TVB","v":"@TVB"},
 					{"n":"国剧放映社","v":"国剧放映社"},
@@ -699,6 +700,8 @@
 					{"n":"斗罗短剧","v":"@DouluoDrama123 full 斗羅短劇"},
 					{"n":"嘟嘟剧场","v":"@DUDUJUCHANG full "},
 					{"n":"牛牛短剧","v":"@niuniuduanju full"},
+					{"n":"懶羊羊追劇","v":"懶羊羊追劇"},
+					{"n":"高糖甜劇社","v":"高糖甜劇社"},
 					{"n":"港澳台","v":"完整 香港短劇 澳門短劇 台灣短剧"},
 					{"n":"新馬泰","v":"完整 新加坡短劇 馬來西亞短劇 泰國短剧"},
 					{"n":"日韩","v":"完整 韩国短劇 日本短劇"},
@@ -1334,17 +1337,22 @@
 				"key":"tid",
 				"name":"医学",
 				"value":[
+				    {"n":"中國醫學百科全書","v":"中國醫學百科全書·蒙醫學"},
+				    {"n":"百享生活頻道","v":"@BesTV_Life"},
 				    {"n":"医科大学","v":"流產視頻,分娩視頻,子宮切除,手術,麻醉,解刨,護士,醫生,教學,護理,衛生,視廳,教材,婦科,x光,b超,錄像,anesthesia Medical university"}
 				]
 			}
 		],
-		"LIST:Full YouTube 解說":[
+		"Full 從古至今 解說":[
 			{
 				"key":"tid",
 				"name":"頻道主",
 				"value":[
 				    {"n":"宇哥侃故事","v":"@yuge"},
-				    {"n":"零度解说","v":"@lingdujieshuo"}
+				    {"n":"零度解说","v":"@lingdujieshuo"},
+				    {"n":"柚子同學","v":"柚子同學來啦"},
+				    {"n":"羊羊追劇","v":"羊羊追剧 @4-sb5hz"},
+				    {"n":"抓馬劇好看","v":"抓馬劇好看"}
 				]
 			}
 		],
@@ -1364,7 +1372,7 @@
 				]
 			}
 		],
-		"LIST:Full YouTube 宇宙":[
+		"Full YouTube 宇宙":[
 			{
 				"key":"tid",
 				"name":"科普知識",
