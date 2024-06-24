@@ -441,7 +441,7 @@
 {"name": "全国直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/tvlive.txt","playerType":1},
 {"name": "🐝直播","type": 0,"url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/wwb521/live/main/tv.txt","playerType":1},
 {"name":"live","type":0,"url":"https://www.huichunniao.cn/xh/lib/live.txt","playerType":1},
-{"name": "BESTV","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u","playerType":1}],
+{"name": "BESTV","type": 0,"url": "http://192.168.1.4:5050","playerType":1}],
 
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
