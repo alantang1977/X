@@ -4,9 +4,9 @@
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"视觉","name":"🤓┃视觉┃影视","type":3,"api":"csp_Xinsj","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://www.80yy3.com/"},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
-//{"key": "直播转点播","name": "📺┃电视┃直播","type": 3,"searchable": 0,"api": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/live2vod.js","ext": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/feimaolive.json"},
 {"key":"玩偶","name":"🎩┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0,"ext":{"aliToken":"tvfan/token.txt","quarkCookie":"tvfan/cookie.txt","from":"4k|auto|fhd","siteUrl":"https://www.wogg.link/","danMu":"弹"}},
-{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.link/$$$proxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;6e1d87747bd75b4084892cb5330e6c1d"},
+{"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.link/$$$noproxy$$$1$$$./lib/wogg.jso","jar":"./pg.jar;md5;6e1d87747bd75b4084892cb5330e6c1d"},
+{"key":"Wo4k","name":"🧸┃玩偶4K┃磁力","type":3,"api":"csp_Wo4k","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.wo4k.net/$$$proxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;6e1d87747bd75b4084892cb5330e6c1d"},
 {"key":"Wobg","name":"⚕️┃玩偶表哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wobge.run.goorm.io$$$proxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;6e1d87747bd75b4084892cb5330e6c1d"},
 {"key":"yydsys","name":"📛┃玩偶老哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;6e1d87747bd75b4084892cb5330e6c1d"},
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.cc/"},
@@ -310,6 +310,7 @@
 {"key":"csp_Dm84","name":"🚌┃动漫巴士┃影视","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"filterable":1},
 {"key":"csp_Aid","name":"🚑┃急救指南","type":3,"api":"csp_FirstAid","searchable":1,"quickSearch":1,"changeable":0,"style": { "type": "rect", "ratio": 3.8},"jar":"https://qu.ax/dDSz.jpg;md5;510FA1663F7067BD4D40DE06097202BF"},	
 //{"key": "csp_91黑料","name": "💃┃91黑料","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/master/json/黑料.json","jar":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/master/jar/xbpq.jar"},
+//{"key": "直播转点播","name": "📺┃电视┃直播","type": 3,"searchable": 0,"api": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/live2vod.js","ext": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/feimaolive.json"},
 
 	
 ##dr_js系列
