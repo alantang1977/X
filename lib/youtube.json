@@ -10,23 +10,23 @@
 			"type_name":"自媒體"
 		},
 		{
-			"type_id":"HDR",
+			"type_id":"LIST:HDR,Girls HDR,Landscape HDR,Walk HDR",
 			"type_name":"HDR"
 		},
 		{
-			"type_id":"神级现场",
+			"type_id":"LIST:华语音乐,华语MV,点击率最高",
 			"type_name":"音樂"
 		},
 		{
-			"type_id":"綜藝",
+			"type_id":"LIST:综艺,芒果综艺,腾讯综艺,爱奇艺综艺,优酷综艺,卫视综艺",
 			"type_name":"綜藝"
 		},
 		{
-			"type_id":"紀錄片",
+			"type_id":"LIST:紀錄片,历史纪录片,自然纪录片,宇宙纪录片",
 			"type_name":"紀錄片"
 		},
 		{
-			"type_id":"YouTube 新聞 Live",
+			"type_id":"LIST:新闻 Live,体育直播,赛事直播",
 			"type_name":"新聞直播"
 		},
 		{
@@ -34,7 +34,7 @@
 			"type_name":"短劇"
 		},
 		{
-			"type_id":"劇集",
+			"type_id":"LIST:剧集,腾讯剧集,爱奇艺剧集,优酷剧集,芒果剧集,TVB",
 			"type_name":"劇集"
 		},
 		{
@@ -308,7 +308,7 @@
 				]
 			}
 		],
-		"YouTube 新聞 Live":[
+		"LIST:新闻 Live,体育直播,赛事直播":[
 			{
 				"key":"tid",
 				"name":"中文",
@@ -354,7 +354,7 @@
 				]
 			}
 		],
-		"劇集":[
+		"LIST:剧集,腾讯剧集,爱奇艺剧集,优酷剧集,芒果剧集,TVB":[
 			{
 				"key":"time",
 				"name":"時間",
@@ -589,7 +589,7 @@
 				]
 			}
 		],
-		"綜藝":[
+		"LIST:综艺,芒果综艺,腾讯综艺,爱奇艺综艺,优酷综艺,卫视综艺":[
 			{
 				"key":"time",
 				"name":"時間",
@@ -722,7 +722,7 @@
 				]
 			}
 		],
-		"紀錄片":[
+		"LIST:紀錄片,历史纪录片,自然纪录片,宇宙纪录片":[
 			{
 				"key":"time",
 				"name":"時間",
@@ -803,6 +803,7 @@
 				"value":[
 					{"n":"地區🎶排序","v":"歷史記錄片 地球記錄片 宇宙記錄片 海洋記錄片 戰爭記錄片 大自然生存記錄片"},
 					{"n":"默认","v":"documentary"},
+					{"n":"CCTV纪录片","v":"CCTV 纪录片"},
 					{"n":"BBC纪录片","v":"BBC 纪录片"},
 					{"n":"国家地理","v":"国家地理 纪录片"},
 					{"n":"Netflix纪录片","v":"netflix 纪录片"},
@@ -832,7 +833,7 @@
 				]
 			}
 		],
-		"神级现场":[
+		"LIST:华语音乐,华语MV,点击率最高":[
 			{
 				"key":"time",
 				"name":"時間",
@@ -1157,7 +1158,7 @@
 				]
 			}
 		],
-		"HDR":[
+		"LIST:HDR,Girls HDR,Landscape HDR,Walk HDR":[
 			{
 				"key":"tid",
 				"name":"風景",
