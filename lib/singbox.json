@@ -30,11 +30,6 @@
         "server": "local"
       },
       {
-        "geosite": "category-ads-all",
-        "server": "block",
-        "disable_cache": true
-      },
-      {
         "query_type": [
           "A",
           "AAAA"
@@ -87,7 +82,8 @@
       "tag": "socks-in",
       "listen": "0.0.0.0",
       "listen_port": 10173,
-      "sniff": true,
+      "tcp_fast_open":true,
+      "sniff": false,
       "sniff_override_destination": false,
       "domain_strategy": "prefer_ipv4"
     },
@@ -96,7 +92,8 @@
       "tag": "mixed-in",
       "listen": "0.0.0.0",
       "listen_port": 10172,
-      "sniff": true,
+      "tcp_fast_open":true,
+      "sniff": false,
       "sniff_override_destination": false,
       "domain_strategy": "prefer_ipv4",
       "set_system_proxy": false
@@ -132,10 +129,6 @@
   ],
   "route": {
     "rules": [
-      {
-        "geosite": "category-ads-all",
-        "outbound": "block"
-      },
       {
         "type": "logical",
         "mode": "or",
@@ -191,19 +184,22 @@
         "type": "remote",
         "tag": "geoip-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+	"download_detour": "select"
       },
       {
         "type": "remote",
         "tag": "geosite-geolocation-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs",
+	"download_detour": "select"
       },
       {
         "type": "remote",
         "tag": "geosite-geolocation-!cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs"
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+	"download_detour": "select"
       }
     ],
     "auto_detect_interface": false
@@ -214,8 +210,11 @@
       "store_rdrc": true
     },
     "clash_api": {
-      "external_controller": "127.0.0.1:19090",
-      "default_mode": "Enhanced"
+      "external_controller": "0.0.0.0:19090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "select",
+      "default_mode": "rule"
     }
   }
 }
