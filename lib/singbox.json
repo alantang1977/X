@@ -111,7 +111,9 @@
     {
       "type": "urltest",
       "tag": "urltest",
-      "interval": "15m",
+      "interval": "30m",
+      "idle_timeout": "60m",
+      "interrupt_exist_connections": false,
       "outbounds": null
     },
     {
