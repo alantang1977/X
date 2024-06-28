@@ -433,11 +433,10 @@
 "spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1719316733539/fan.txt;md5;39536019b1427f62b535f028d161d43a",
 "wallpaper":"http://我不是.肥猫.live/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/yellow.gif",
 
-"lives": [{"name":"docker直播","type":0,"url":"http://192.168.1.4:5050/yep.m3u","playerType":1},
-{"name":"移动iTV ","type":0,"url":"http://192.168.1.4:5050/itv.m3u","playerType":1},
+"lives": [{"name":"晴天直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/晴天.txt","playerType":1},
+{"name":"中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.txt","playerType":1},
 {"name":"global播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/global.txt","playerType":1},
 {"name":"广州直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},
-{"name":"中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.txt","playerType":1},
 {"name":"电视点播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/migu.m3u","playerType":1},
 {"name": "全国直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/tvlive.txt","playerType":1},
 {"name": "🐝直播","type": 0,"url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/wwb521/live/main/tv.txt","playerType":1},
