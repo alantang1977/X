@@ -430,7 +430,7 @@
 {"key": "drpy_js_六月听书","name": "🎧 六月听书","type": 3,"api": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/六月听书.js"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
-"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1719316733539/fan.txt;md5;39536019b1427f62b535f028d161d43a",
+"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1719686854241/fan.txt;md5;5640a8ad5bd5face5679bd8d6d73d44a",
 "wallpaper":"http://我不是.肥猫.live/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/yellow.gif",
 
 "lives": [{"name":"中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.txt","playerType":1},
