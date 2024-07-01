@@ -78,6 +78,17 @@
   },
   "inbounds": [
     {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "0.0.0.0",
+      "listen_port": 10172,
+      "tcp_fast_open":true,
+      "sniff": false,
+      "sniff_override_destination": false,
+      "domain_strategy": "prefer_ipv4",
+      "set_system_proxy": false
+    },
+    {
       "type": "socks",
       "tag": "socks-in",
       "listen": "0.0.0.0",
@@ -89,9 +100,20 @@
     },
     {
       "type": "mixed",
-      "tag": "mixed-in",
+      "tag": "mixed-in2",
       "listen": "0.0.0.0",
-      "listen_port": 10172,
+      "listen_port": 10174,
+      "tcp_fast_open":true,
+      "sniff": false,
+      "sniff_override_destination": false,
+      "domain_strategy": "prefer_ipv4",
+      "set_system_proxy": false
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in3",
+      "listen": "0.0.0.0",
+      "listen_port": 10175,
       "tcp_fast_open":true,
       "sniff": false,
       "sniff_override_destination": false,
@@ -147,6 +169,18 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+	      "inbound":[
+		      "mixed-in2"
+	      ],
+	      "outbound":"select2"
+      },
+      {
+	      "inbound":[
+		      "mixed-in3"
+	      ],
+	      "outbound":"select3"
       },
       {
         "clash_mode": "Direct",
