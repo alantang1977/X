@@ -437,7 +437,7 @@
 {"name":"晴天直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/晴天.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"global播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/global.txt","playerType":1},
 {"name":"广州直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},
-{"name":"电视点播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
+{"name":"✍️电视点播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.m3u","playerType":1},
 {"name": "全国直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/tvlive.txt","playerType":1},
 {"name": "🐝直播","type": 0,"url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/wwb521/live/main/tv.txt","playerType":1},
 {"name":"live","type":0,"url":"https://www.huichunniao.cn/xh/lib/live.txt","playerType":1},
