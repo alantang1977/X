@@ -434,7 +434,7 @@
 "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/10s.gif",
 
 "lives": [{"name":"中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.txt","playerType":1},
-{"name":"晴天直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/晴天.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+//{"name":"晴天直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/晴天.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"global播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u","playerType":1},
 {"name":"广州直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},
 {"name":"✍️电视点播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
