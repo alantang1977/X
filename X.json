@@ -12,16 +12,6 @@
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.cc/"},
 {"key": "网盘配置","name": "🐧┃网盘及彈幕配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2"},
 //{"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
-{
-            "key": "php_hmezy",
-            "name": "黑木耳克隆",
-            "type": 4,
-            "api": "https://alantang.serv00.net/heimuer.php",
-            "searchable": 1,
-            "quickSearch":0,
-            "filterable":0
-        },
-	
 {"key": "韩剧兔","name": "🐰┃韩剧兔┃影视","type": 3,"api": "csp_XBPQ","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./jar/XBPQ.jar","ext": {
                 "请求头": "手机",
                 "图片代理": "",
