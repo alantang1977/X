@@ -69,8 +69,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
     https://already.free.hr/
     https://raw.gitmirror.com/
     https://gh-proxy.com/https://raw.githubusercontent.com/
-    https://github.moeyy.xyz/https://raw.githubusercontent.com/
-    
+     
     https://a.ouhuang.onflashdrive.app/https://raw.githubusercontent.com/
     https://ghproxy.com/https://raw.githubusercontent.com/
     https://ghproxy.net/https://raw.githubusercontent.com/
