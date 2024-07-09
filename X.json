@@ -11,7 +11,15 @@
 {"key":"yydsys","name":"📛┃玩偶老哥┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2"},
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.cc/"},
 {"key": "网盘配置","name": "🐧┃网盘及彈幕配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2"},
-
+{
+            "key": "php_hmezy",
+            "name": "🌞黑木耳克隆",
+            "type": 4,
+            "api": "https://demobe.serv00.net/heimuer.php",
+            "searchable": 1,
+            "quickSearch":0,
+            "filterable":0
+        },
 {"key":"黑木","name":"🌞黑木|采集","type":1,"api":"https://www.heimuer.tv/api.php/provide/vod","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=","categories":["国产剧","港剧","台剧","韩剧","日剧","泰剧","欧美剧","短剧","国产综艺","港台综艺","韩国综艺","日本综艺","欧美综艺","新马泰综艺","其他综艺","电影","电视剧","动漫","综艺","剧情","动作","冒险","同性","喜剧","奇幻","恐怖","悬疑","惊悚","灾难","爱情","犯罪","科幻","动画电影","新马剧","其他剧","歌舞","战争","经典","网络电影","其它","古装","虐恋","逆袭","悬疑","神豪","重生","复仇","穿越","甜宠","强者","萌宝","其它","欧美","日本","韩国","国产","港台","新马泰","其它"]},	
 ##饭太硬系列
 {"key":"短剧","name":"🌈上头┃短剧","type":3,"api":"csp_Djtt","searchable":1,"quickSearch":1,"changeable":1},
