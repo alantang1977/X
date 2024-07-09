@@ -44,7 +44,7 @@ http://肥猫.com
 
 http://xhww.fun:63/小米/DEMO.json
 
-http://tvbox.王二小放牛娃.xyz/
+王二小放牛娃  http://tv.999888987.xyz/
 
 https://weixine.net/ysc.json   运输车
 
