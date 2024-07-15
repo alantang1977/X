@@ -110,7 +110,7 @@
             "name": "hbo",
             "type": 3,
             "api": "csp_XBPQ",
-            "jar": "./XBPQ.jar",
+            "jar": "./jar/XBPQ.jar",
             "ext": {
                 "分类": "电影$https://www.hbotv1.com/movie/#电视剧$https://www.hbotv1.com/tv/#动漫$https://www.hbotv1.com/cartoon/#综艺$https://www.hbotv1.com/variety/#",
                 "分类url": "https://www.hbotv1.com/type/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html"
