@@ -433,7 +433,7 @@
 {"key": "drpy_js_六月听书","name": "🎧 六月听书","type": 3,"api": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/六月听书.js"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
-"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720443281334/fan.txt;md5;1f219c086d40a58a296fbc3b262e7b7d",
+"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720763657384/fan.txt;md5;026629a5c54494dc8ae9bd38d0a1a1f6",
 "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/10s.gif",
 
 "lives": [{"name":"✍️电视点播","type":0,"url":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
