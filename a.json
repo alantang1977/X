@@ -171,6 +171,7 @@
 
 "lives": [{"name":"✍️┃电视点播","type":0,"url":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name":"📺┃中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/AutoIPTV-Hotel/main/lives.txt","playerType":1},
+{"name":"📺┃国内直播","type":0,"url":"https://ghproxy.net/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt","playerType":1},
 {"name":"global播","type":0,"url":"https://ghproxy.net/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt","playerType":1},
 {"name":"广州直播","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},
 {"name": "全国直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/tvlive.txt","playerType":1},
