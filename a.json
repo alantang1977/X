@@ -106,7 +106,7 @@
             "jar": "./jar/XBPQ.jar",
             "ext": {
                 "分类": "电影$https://www.hbotv1.com/movie/#电视剧$https://www.hbotv1.com/tv/#动漫$https://www.hbotv1.com/cartoon/#综艺$https://www.hbotv1.com/variety/#",
-                "分类url": "https://www.hbotv1.com/type/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html"}},"分类url": "https://www.dgjiawu.com/mo-1zxgt/{cateId}/1/0/0/0/0/{catePg}[https://www.dgjiawu.com/mo-1zxgt/{cateId}/1];;RC"}},
+                "分类url": "https://www.hbotv1.com/type/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html"}},
 {"key": "热播之家","name": "🦊┃热播之家",
       "type": 3,
       "api": "csp_XBPQ",
