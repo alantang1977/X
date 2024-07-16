@@ -33,8 +33,9 @@
 {"key":"比特","name":"🍄比特┃秒播","type":3,"api":"csp_Bttwoo","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Auete","name":"🏝奥特┃无广","type": 3,"api":"csp_Auete","timeout":15,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://auete.pro/"}, 
 {"key":"新6V","name":"🧲新6V┃磁力","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"changeable":0,"ext": "https://www.xb6v.com/"},
-{"key":"Dm84","name":"🚌巴士┃动漫","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"changeable":1},
-{"key":"Ysj","name":"🎀异界┃动漫","type":3,"api":"csp_Ysj","searchable":1,"quickSearch":1,"changeable":1},	
+
+
+##XBPQ系列	
 {"key": "韩剧兔","name": "🐰┃韩剧兔┃影视","type": 3,"api": "csp_XBPQ","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./jar/XBPQ.jar","ext": {
                 "请求头": "手机",
                 "图片代理": "",
