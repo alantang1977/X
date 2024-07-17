@@ -35,7 +35,7 @@
 {"key":"新6V","name":"🧲新6V┃磁力","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"changeable":0,"ext": "https://www.xb6v.com/"},
 
 
-##XBPQ系列	
+##XBPQ系列
 {"key": "落攻阁","name": "💕┃落攻阁┃影视","type": 3,"api": "csp_XBPQ","jar":"./jar/XBPQ.jar","ext": {
                 "主页url": "https://www.lggys.com/",
                 "图片": "data-original=\"&&\"",
