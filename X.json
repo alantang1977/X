@@ -36,7 +36,19 @@
 {"key":"Dm84","name":"🚌巴士┃动漫","type":3,"api":"csp_Dm84","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Ysj","name":"🎀异界┃动漫","type":3,"api":"csp_Ysj","searchable":1,"quickSearch":1,"changeable":1},	
 	
-//{"key":"csp_AppYsV2","name":"⛵️┃六九┃美剧","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.69mj.com/xgapp.php/v2/"},
+##XBPQ系列
+{"key": "落攻阁","name": "💕┃落攻阁┃影视","type": 3,"api": "csp_XBPQ","jar":"./jar/XBPQ.jar","ext": {
+                "主页url": "https://www.lggys.com/",
+                "图片": "data-original=\"&&\"",
+                "标题": "title=\"&&\"",
+                "播放链接": "href=\"&&\"",
+                "导演": "导演：&&</div>",
+                "主演": "主演：&&</div>",
+                "线路数组": "<div class=\"module-tab-item&&</div>",
+                "线路标题": "<span>&&</span>",
+                "分类url": "https://www.lggys.com/show/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+                "分类": "电影$dianying#电视剧$dianshiju#综艺$zongyi#动漫$dongman#短剧$shuangwenduanju"}},
+{"key": "实验华为吧","name": "🦺┃华为吧┃实验","type": 4,"api": "http://zhangqun66.serv00.net/hwb.php","searchable": 1,"quickSearch":1,"filterable":0},
 {"key": "韩剧兔","name": "🐰┃韩剧兔┃影视","type": 3,"api": "csp_XBPQ","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./jar/XBPQ.jar","ext": {
                 "请求头": "手机",
                 "图片代理": "",
@@ -103,22 +115,14 @@
                 "播放标题": ">&&</a",
                 "倒序": "0",
                 "分类": "电影$5738#电视剧$5749#动漫$5767#综艺$5758#你懂的$5748",
-                "分类url": "https://www.dgjiawu.com/mo-1zxgt/{cateId}/1/0/0/0/0/{catePg}[https://www.dgjiawu.com/mo-1zxgt/{cateId}/1];;RC"
-            }
-        },
-{
-            "key": "hbo",
-            "name": "hbo",
-            "type": 3,
+                "分类url": "https://www.dgjiawu.com/mo-1zxgt/{cateId}/1/0/0/0/0/{catePg}[https://www.dgjiawu.com/mo-1zxgt/{cateId}/1];;RC"}},
+{"key": "hbo","name": "✍️┃HBO┃影视","type": 3,
             "api": "csp_XBPQ",
             "jar": "./jar/XBPQ.jar",
             "ext": {
                 "分类": "电影$https://www.hbotv1.com/movie/#电视剧$https://www.hbotv1.com/tv/#动漫$https://www.hbotv1.com/cartoon/#综艺$https://www.hbotv1.com/variety/#",
-                "分类url": "https://www.hbotv1.com/type/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html"
-            }
-        },
-	
-{"key": "热播之家","name": "热播之家",
+                "分类url": "https://www.hbotv1.com/type/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html"}},
+{"key": "热播之家","name": "🦊┃热播┃之家",
       "type": 3,
       "api": "csp_XBPQ",
       "jar": "./jar/XBPQ.jar",
