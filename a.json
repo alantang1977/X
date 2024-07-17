@@ -47,6 +47,7 @@
                 "线路标题": "<span>&&</span>",
                 "分类url": "https://www.lggys.com/show/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
                 "分类": "电影$dianying#电视剧$dianshiju#综艺$zongyi#动漫$dongman#短剧$shuangwenduanju"}},
+{"key": "实验华为吧","name": "🦺┃华为吧┃实验","type": 4,"api": "http://zhangqun66.serv00.net/hwb.php","searchable": 1,"quickSearch":1,"filterable":0},
 {"key": "韩剧兔","name": "🐰┃韩剧兔┃影视","type": 3,"api": "csp_XBPQ","playerType": 2,"searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./jar/XBPQ.jar","ext": {
                 "请求头": "手机",
                 "图片代理": "",
