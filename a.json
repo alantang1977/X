@@ -154,13 +154,13 @@
 {"key":"YunPanOne","name":"⭕┃云盘One┃网盘搜索","type":3,"api":"csp_YunPanOne","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$null$$$proxy$$$1"},
 		
 ##王二小放牛娃
-{"key":"Wexhanxiaoquan","name":"🇰🇷韩圈┃TV┃App","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
-{"key":"Wexhanjutv","name":"🇰🇷韩剧┃TV┃App","type":3,"api":"csp_Wexhanjutv","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},	
-{"key": "Fangniu4k","name": "🐄┃放牛┃TV","type": 3,"api": "csp_WexFangniu4k","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
-{"key": "Wexxpgtv","name": "🍎┃红富士┃TV","type": 3,"api": "csp_Wexxpgtv","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
-{"key": "Diduanys","name": "🙈┃深渊┃影视","type": 3,"api": "csp_WexDiduanys","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
-{"key": "F4kvm","name": "🦑┃纯享┃影视","type": 3,"api": "csp_WexF4kvm","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
-{"key": "mingriyingshi","name": "☀️┃明日┃影视","type": 3,"api": "csp_WexMingriys","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720752213419/wex.txt;md5;47b6df5c84e5ed4eff811288252c2310"},
+{"key":"Wexhanxiaoquan","name":"🇰🇷韩圈┃TV┃App","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
+{"key":"Wexhanjutv","name":"🇰🇷韩剧┃TV┃App","type":3,"api":"csp_Wexhanjutv","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},	
+{"key": "Fangniu4k","name": "🐄┃放牛┃TV","type": 3,"api": "csp_WexFangniu4k","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
+{"key": "Wexxpgtv","name": "🍎┃红富士┃TV","type": 3,"api": "csp_Wexxpgtv","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
+{"key": "Diduanys","name": "🙈┃深渊┃影视","type": 3,"api": "csp_WexDiduanys","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
+{"key": "F4kvm","name": "🦑┃纯享┃影视","type": 3,"api": "csp_WexF4kvm","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
+{"key": "mingriyingshi","name": "☀️┃明日┃影视","type": 3,"api": "csp_WexMingriys","searchable": 1,"changeable": 1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721401423173/wex.txt;md5;295a6a4e4688c8da7cece2faa143f484"},
 
 
 ##官源系列
@@ -178,7 +178,7 @@
 {"key": "drpy_js_六月听书","name": "🎧 六月听书","type": 3,"api": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext": "https://gh.con.sh/https://raw.githubusercontent.com/alantang1977/X/main/js/六月听书.js"},
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
-"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1720763657384/fan.txt;md5;026629a5c54494dc8ae9bd38d0a1a1f6",
+"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1721554716065/fan.txt;md5;71d846866f2ceb9666ba114e5963983f",
 "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/yellow.gif",
 
 "lives": [{"name":"✍️┃电视点播","type":0,"url":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
