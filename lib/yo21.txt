@@ -1,4 +1,3 @@
-testvod,http://127.0.0.1:9978/proxy?do=yt&proxy=proxy&url=https://www.youtube.com/watch?v=xOfwfZhw_oo
 鳳凰資訊,http://127.0.0.1:9978/proxy?do=yt&proxy=proxy&url=http://www.youtube.com/watch?v=if6yQq_JJyY
 凤凰卫视,http://127.0.0.1:9978/proxy?do=yt&proxy=proxy&url=http://www.youtube.com/watch?v=dmDg7NfUoSw
 寰宇新聞, http://127.0.0.1:9978/proxy?do=yt&proxy=proxy&url=https://www.youtube.com/watch?v=B7Zp3d6xXWw
