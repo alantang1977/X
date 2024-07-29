@@ -69,5 +69,6 @@
 "pan115_is_vip":false,
 "pan115_flags":"4kz",
 "pan115_auto_delete":true,
-"pan115_delete_code":""
+"pan115_delete_code":"",
+"pan_order":"ali|quark|uc|115|yd|thunder|pikpak"
 }
