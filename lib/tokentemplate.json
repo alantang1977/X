@@ -1,7 +1,7 @@
 {
 "token":"",
 "open_token":"",
-"open_api_url":"get|https://adrive.xdow.net/oauth/access_token",
+"open_api_url":"postparam|http://api.extscreen.com/aliyundrive/token",
 "oauth_client_id":"",
 "oauth_client_secret":"",
 "oauth_auth_url":"",
@@ -62,5 +62,12 @@
 "singbox_url":"./sing-box.gz",
 "singbox_subscribe_url":"",
 "singbox_clash2singbox_url":"./clash2singbox.gz",
-"singbox_template_url":"./singbox.json"
+"singbox_template_url":"./singbox.json",
+"pan115_cookie":"",
+"pan115_thread_limit":0,
+"pan115_vip_thread_limit":0,
+"pan115_is_vip":false,
+"pan115_flags":"4kz",
+"pan115_auto_delete":true,
+"pan115_delete_code":""
 }
