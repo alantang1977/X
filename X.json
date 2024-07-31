@@ -15,9 +15,10 @@
 {"key": "网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "rect","ratio": 1.5}},
 {"key": "T4-heimuer","name": "🐠┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "T4-安博","name": "🐠┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
-{"key": "采集拼接","name": "🐠┃采集┃之王","type": 1,"api": "http://zhangqun66.serv00.net/1581.php","searchable": 1,"changeable": 1},
+{"key": "采集拼接","name": "📽┃采集┃之王","type": 1,"api": "http://zhangqun66.serv00.net/1581.php","searchable": 1,"changeable": 1},
+{"key": "采集集合","name": "🎥┃采集┃集合","type": 1,"api": "http://zhangqun66.serv00.net/cjjh.php","searchable": 1,"changeable": 1},
 {"key":"115Share","name":"🐠┃115┃云盘","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/115share.txt$$$db$$$1","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "list","ratio": 1.1}},
-{"key":"UCShare","name":"🐠┃UC┃云盘","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/ucshare.txt$$$db$$$1","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "list","ratio": 1.1}},
+//{"key":"UCShare","name":"🐠┃UC┃云盘","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/ucshare.txt$$$db$$$1","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "list","ratio": 1.1}},
 	
 ##饭太硬系列
 {"key":"短剧","name":"🌈上头┃短剧","type":3,"api":"csp_Djtt","searchable":1,"quickSearch":1,"changeable":1},
