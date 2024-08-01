@@ -14,7 +14,7 @@
 //{"key": "网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api":"csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2"},
 {"key": "网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "rect","ratio": 1.5}},
 {"key": "T4-heimuer","name": "🐠┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
-{"key": "黑木耳","name": "🐝┃黑木耳┃影视","type": 1,"api": "http://127.0.0.1:10079/p/0/proxy/https://json.heimuer.xyz/api.php/provide/vod","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=","categories": ["国产动漫","国产剧","欧美剧","新马剧","台剧","国产综艺",
+{"key": "黑木耳","name": "🐝┃黑木耳┃影视","type": 1,"api": "http://127.0.0.1:10079/p/0/proxy/https://json.heimuer.xyz/api.php/provide/vod","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","playUrl":"json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=","categories": ["国产动漫","国产剧","欧美剧","新马剧","台剧","国产综艺",
                 "港台综艺",
                 "韩国综艺",
                 "日本综艺",
