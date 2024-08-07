@@ -13,6 +13,8 @@
 {"key": "T4-heimuer","name": "🐠┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "黑木耳","name": "👀┃黑木耳┃PG","type": 1,"api": "http://127.0.0.1:10079/p/0/null/https://json.heimuer.xyz/api.php/provide/vod/","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","searchable": 1,"quickSearch": 1},
 {"key": "T4-安博","name": "🐠┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+{"key": "策驰影院","name": "🏇┃策驰┃影院","type": 3,"api": "csp_XBPQ","jar":"./jar/XBPQ.jar","ext": {"主页url": "https://www.cecidy.cc/","数组": "class=\"myui-vodlist__thumb lazyload\"&&</div>","图片": "data-original=\"&&\"","标题": "title=\"&&\"","链接": "href=\"&&\"","简介": "class=\"video-des\"&&</div>","线路标题": "data-toggle=\"tab\">&&</a>","分类url": "https://www.cecidy.cc/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}/","分类": "电影$1#剧集$2#综艺$3#动漫$4#短剧$60#动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#奇幻片$21#悬疑片$22#犯罪片$23#惊悚片$24#纪录片$25#国产剧$13#港台剧$14"}},	
+
 	
 ##饭太硬系列
 {"key":"YGP","name":"🚀叨观荐影┃新片","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
