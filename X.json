@@ -17,6 +17,26 @@
 {"key": "ys1","name": "🎏┃沐辰┃影视","type": 4,"api": "https://demobe.serv00.net/heimuer.php","playUrl": "json:https://4tvbox.ggff.net/hme.php?url=","searchable": 1,"quickSearch":0,"filterable":0},
 {"key": "wujin","name": "🌶┃无尽┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./lib/XBPQ.jar","timeout": 60,"ext": "./lib/无尽资源.json"},
 
+##csp_AppYsVII系列
+{"key": "龙门","name": "龙门影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://movie.iqinu.com/api.php/v1.vod"},
+{"key": "奈飞","name": "鸭飞影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://yanetflix.me/api.php/app/"},
+{"key": "剧兔","name": "追剧兔子┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.zjtu.one/api.php/app/"},
+{"key": "河狸","name": "河狸影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.heli888.cc/api.php/app/"},
+{"key": "皮虾","name": "皮皮虾仁┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://aikun.tv/api.php/app/"},
+{"key": "神马","name": "神马影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.shenmaysk.com/api.php/app/"},
+{"key": "小马","name": "小马影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://mas.szyyds.cn/api.php/app/"},
+{"key": "影狗","name": "影狗剧院┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://app.88dyg.com/icciu_api.php/v1.vod"},
+{"key": "老蟹","name": "老蟹影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://www.ajj001.top/api.php/app/"},
+{"key": "柠檬","name": "柠檬影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://mf.songshu.cyou/api.php/app/"},
+{"key": "星易","name": "星影剧场┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.xingyiying.com/api.php/v1.vod"},
+{"key": "迪影","name": "爱迪影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://adys.tv/xgapp.php/v1/"},
+{"key": "视站","name": "影库剧场┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://xn--p3t583cbin.top/api.php/app/"},
+{"key": "影馆","name": "影馆剧场┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://4kdyg.top/api.php/v1.vod"},
+{"key": "银河","name": "银河影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://134.175.219.46/mogai_api.php/v1.vod"},
+{"key": "美剧","name": "六九美剧┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.69mj.com/xgapp.php/v2/"},
+{"key": "大米","name": "大米星球┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://damifi.com/api.php/app/"},
+{"key": "思古","name": "思古影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://siguyy.cn/api.php/app/"},
+
 	
 ##饭太硬系列
 {"key":"YGP","name":"🚀叨观荐影┃新片","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
