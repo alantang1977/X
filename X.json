@@ -17,7 +17,7 @@
 {"key": "ys1","name": "🎏┃沐辰┃影视","type": 4,"api": "https://demobe.serv00.net/heimuer.php","playUrl": "json:https://4tvbox.ggff.net/hme.php?url=","searchable": 1,"quickSearch":0,"filterable":0},
 {"key": "wujin","name": "🌶┃无尽┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./lib/XBPQ.jar","timeout": 60,"ext": "./lib/无尽资源.json"},
 
-##csp_AppYsVII系列
+##csp_AppYs系列
 {"key": "龙门","name": "龙门影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "http://movie.iqinu.com/api.php/v1.vod"},
 {"key": "奈飞","name": "鸭飞影视┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://yanetflix.me/api.php/app/"},
 {"key": "剧兔","name": "追剧兔子┃┃💠V2","type": 3,"api": "csp_AppYsV2","ext": "https://www.zjtu.one/api.php/app/"},
