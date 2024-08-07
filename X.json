@@ -17,8 +17,6 @@
 {"key": "T4-heimuer","name": "🐠┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "黑木耳","name": "👀┃黑木耳┃PG","type": 1,"api": "http://127.0.0.1:10079/p/0/null/https://json.heimuer.xyz/api.php/provide/vod/","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","searchable": 1,"quickSearch": 1},
 {"key": "T4-安博","name": "🐠┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
-{"key":"115Share","name":"🐠┃115┃云盘","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/115share.txt$$$db$$$1","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "list","ratio": 1.1}},
-//{"key":"UCShare","name":"🐠┃UC┃云盘","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/ucshare.txt$$$db$$$1","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "list","ratio": 1.1}},
 	
 ##饭太硬系列
 {"key":"YGP","name":"🚀叨观荐影┃新片","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
@@ -151,6 +149,8 @@
 {"key":"115Share","name":"⭕┃115┃云盘分享","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$./lib/115share.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
 {"key":"UCShare","name":"⭕┃UC┃云盘分享","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$./lib/ucshare.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
 {"key":"ThunderShare","name":"⭕┃迅雷┃云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$./lib/thundershare.txt","style": {"type": "list","ratio": 1.1}},
+{"key":"TGYunPan","name":"⭕┃TG搜索┃网盘搜索","type":3,"api":"csp_TGYunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$http://144.126.217.226:8000/$$$hao115,Aliyundrive_Share_Channel,kuakeyun$$$noproxy$$$1"},
+
 			
 		
 ##王二小放牛娃
