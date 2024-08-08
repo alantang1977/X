@@ -480,6 +480,7 @@
 "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://gitee.com/alantanjun/fatcat/raw/master/10s.gif",
 
 "lives": [
+{"name": "⚕️┃Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
 {"name":"📺┃中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u","playerType":1},
 {"name": "🐰┃央卫港澳","type": 0,"url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1},
 {"name":"🐸┃Channel","type":0,"url":"https://anbox118.serv00.net/m3u.php","playerType":1},
