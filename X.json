@@ -5,7 +5,7 @@
 "sites":[
 ##搜索系列
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key":"文采","name":"💮🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
+{"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key":"玩偶","name":"👽┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2$$$WOGG"},
@@ -13,9 +13,9 @@
 {"key":"Xinshijue","name":"🤓┃新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://6080z.com/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2"},
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.cc/"},
 {"key": "网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","style": {"type": "rect","ratio": 1.5}},
-{"key": "T4-heimuer","name": "🐠┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+{"key": "T4-heimuer","name": "🪵🪣┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "黑木耳","name": "👀┃黑木耳┃PG","type": 1,"api": "http://127.0.0.1:10079/p/0/null/https://json.heimuer.xyz/api.php/provide/vod/","jar":"./pg.jar;md5;3a96a92c925e612936c4f8f6033b6fa2","searchable": 1,"quickSearch": 1},
-{"key": "T4-安博","name": "🐠┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+{"key": "T4-安博","name": "📺┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "策驰影院","name": "🏇┃策驰┃影院","type": 3,"api": "csp_XBPQ","jar":"./jar/XBPQ.jar","ext": {"主页url": "https://www.cecidy.cc/","数组": "class=\"myui-vodlist__thumb lazyload\"&&</div>","图片": "data-original=\"&&\"","标题": "title=\"&&\"","链接": "href=\"&&\"","简介": "class=\"video-des\"&&</div>","线路标题": "data-toggle=\"tab\">&&</a>","分类url": "https://www.cecidy.cc/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}/","分类": "电影$1#剧集$2#综艺$3#动漫$4#短剧$60#动作片$6#喜剧片$7#爱情片$8#科幻片$9#恐怖片$10#剧情片$11#战争片$12#奇幻片$21#悬疑片$22#犯罪片$23#惊悚片$24#纪录片$25#国产剧$13#港台剧$14"}},	
 {"key": "ys1","name": "🎏┃沐辰┃影视","type": 4,"api": "https://demobe.serv00.net/heimuer.php","playUrl": "json:https://4tvbox.ggff.net/hme.php?url=","searchable": 1,"quickSearch":0,"filterable":0},
 {"key": "wujin","name": "🌶┃无尽┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"jar": "./lib/XBPQ.jar","timeout": 60,"ext": "./lib/无尽资源.json"},
