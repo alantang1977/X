@@ -577,14 +577,6 @@
 			"changeable": 0
 		},
 		{
-			"key": "愛看",
-			"name": "愛看",
-			"type": 3,
-			"api": "./js/ikanbot_open.js",
-			"searchable": 1,
-			"changeable": 0
-		},
-		{
 			"key": "短剧",
 			"name": "短剧",
 			"type": 3,
