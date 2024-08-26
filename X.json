@@ -17,6 +17,89 @@
 {"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 
+	
+##servoo系列
+{
+            "key": "黑木耳克隆",
+            "name": "🐌┃黑木耳┃克隆",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/225.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "金鹰克隆",
+            "name": "🐌┃金鹰┃克隆",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/jy.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "华为吧克隆",
+            "name": "🐌┃华为吧┃克隆",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/hwb.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "索尼克隆",
+            "name": "🐌┃索尼┃克隆",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/sn.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "实验油管",
+            "name": "🐌┃实验┃油管",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/yt/yt001.php",
+            "searchable": 1,
+            "changeable": 1,
+            "ext": "动作片#谍战剧playlist#沙雕穿越#中国动漫#有声穿越小说#影视解说#百家讲坛playlist#动物#风光#放松#4K#HDR#movie#喜来乐#documentary#bbc documentary"
+        },
+        {
+            "key": "实验播放列表",
+            "name": "🐌┃实验┃播放列表",
+            "type": 1,
+            "api": "http://zhangqun1818.serv00.net/ytlb.php",
+            "searchable": 1,
+            "changeable": 1
+        },
+                {
+            "key": "实验直播1",
+            "name": "🐌┃实验┃直播1",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/zh/224.php",
+            "searchable": 0,
+            "changeable": 0,
+            "ext": "1"
+        },
+                        {
+            "key": "实验直播2",
+            "name": "🐌┃实验┃直播2",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/zh/224.php",
+            "searchable": 0,
+            "changeable": 0,
+            "ext": "2"
+        },
+{
+            "key": "实验直播3",
+            "name": "🐌┃实验┃直播3",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/zh/2241.php",
+            "searchable": 0,
+            "changeable": 0,
+            "ext": "1,2,3"
+        },
+	
 ##饭太硬系列
 {"key":"米搜","name":"🦋小米┃盘搜","type":3,"api":"csp_MIPanSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"抠搜","name":"🍄抠抠┃搜搜","type":3,"api":"csp_KkSs","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
