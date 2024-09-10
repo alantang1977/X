@@ -6,7 +6,6 @@
 ##常用系列
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key": "采集集合","name": "🦊┃采集┃集合","type": 1,"api": "http://zhangqun1818.serv00.net/cjjh.php","searchable": 0,"changeable": 1},
 {"key":"玩偶","name":"🐻┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🏂┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937$$$WOGG"},
 {"key":"蜡笔网盘","name":"🖍️┃蜡笔┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937"},
@@ -30,15 +29,6 @@
     },
 	
 ##servoo系列
-{"key": "黑木耳克隆","name": "🐌┃黑木耳┃克隆","type": 4,"api": "http://zhangqun1818.serv00.net/225.php","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "金鹰克隆","name": "🐌┃金鹰┃克隆","type": 4,"api": "http://zhangqun1818.serv00.net/jy.php","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "华为吧克隆","name": "🐌┃华为吧┃克隆","type": 4,"api": "http://zhangqun1818.serv00.net/hwb.php","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "索尼克隆","name": "🐌┃索尼┃克隆","type": 4,"api": "http://zhangqun1818.serv00.net/sn.php","searchable": 1,"quickSearch": 1,"filterable": 0},
-{"key": "实验油管","name": "🐌┃实验┃油管","type": 4,"api": "http://zhangqun1818.serv00.net/yt/yt001.php","searchable": 1,"changeable": 1,"ext": "动作片#谍战剧playlist#沙雕穿越#中国动漫#有声穿越小说#影视解说#百家讲坛playlist#动物#风光#放松#4K#HDR#movie#喜来乐#documentary#bbc documentary"},
-{"key": "实验播放列表","name": "🐌┃实验┃播放列表","type": 1,"api": "http://zhangqun1818.serv00.net/ytlb.php","searchable": 1,"changeable": 1},
-{"key": "实验直播1","name": "🐌┃实验┃直播1","type": 4,"api": "http://zhangqun1818.serv00.net/zh/224.php","searchable": 0,"changeable": 0,"ext": "1"},
-{"key": "实验直播2","name": "🐌┃实验┃直播2","type": 4,"api": "http://zhangqun1818.serv00.net/zh/224.php","searchable": 0,"changeable": 0,"ext": "2"},
-{"key": "实验直播3","name": "🐌┃实验┃直播3","type": 4,"api": "http://zhangqun1818.serv00.net/zh/2241.php","searchable": 0,"changeable": 0,"ext": "1,2,3"},
 {"key": "超级","name": "🐌┃超级┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://cjvip.free.hr/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "http://cjvip.free.hr/api.php/provide/vod/?ac=list" }},
 {"key": "nu","name": "🐌┃Nuu┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://nuu.su/x/id/{cateId}/page/{catePg}.html","分类": "https://json.heimuer.xyz/api.php/provide/vod?ac=list"}},
 	
