@@ -15,18 +15,7 @@
 {"key": "T4-heimuer","name": "🌈┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/power/hme?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/power/ub18?token=b1dbee0e","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
-{
-      "key": "永乐影视",
-      "name": "永乐影视|XBPQ",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "jar": "/jar/XBPQ.jar",
-      "ext": {
-      "页面代理":"127.0.0.1:10172",
-      "分类url":"https://ylsp.tv/vodshow/{cateId}--------{catePg}---/",
-        "分类": "电影$1#电视剧$2#综艺$3#动漫$4"
-      }
-    },
+
 	
 ##servoo系列
 {"key": "超级","name": "🐌┃超级┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://cjvip.free.hr/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "http://cjvip.free.hr/api.php/provide/vod/?ac=list" }},
