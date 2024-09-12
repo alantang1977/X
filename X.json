@@ -264,7 +264,7 @@
 {"name":"🦐┃龙伊直播","type":0,"url":"https://龙伊.top/直播","playerType":1,"epg":"https://api.龙伊.top/epg/epg.php?ch={name}&date={date}","logo":"https://api.龙伊.top/epg/images/{name}.png"},
 {"name":"🐸┃Channel","type":0,"url":"https://anbox118.serv00.net/p3p.m3u.txt","playerType":1},
 {"name":"🍌┃mytv港港","type":0,"url":"https://anbox118.serv00.net/mytvbplus.php","playerType":1},	
-{"name":"📛┃Hotel","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u","playerType":1},
+//{"name":"📛┃Hotel","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u","playerType":1},
 {"name":"✍️┃全国直播","type":0,"url":"https://mirror.ghproxy.com/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name":"🐼┃肥羊live","type":0,"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"🐄┃IPv6","type":0,"url":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1718114949789/tv.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
