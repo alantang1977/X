@@ -260,7 +260,7 @@
 
 "lives": [
 {"name": "⚕️┃Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
-{"name":"📺┃中央卫视","type":0,"url":"https://gh.con.sh/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u","playerType":1},
+{"name":"📺┃中央卫视","type":0,"url":"http://gg.gg/tv-live-m3u","playerType":1},
 {"name": "🐰┃央卫港澳","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1},
 {"name": "🖍️┃央卫地直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8","playerType":1},
 {"name": "🪣┃直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt","playerType":1},
