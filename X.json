@@ -260,6 +260,7 @@
 {"name": "🖍️┃央卫地直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8","playerType":1},
 {"name": "⚕️┃粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
 {"name": "🐰┃粤港澳","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1},
+{"name": "🪂┃中央卫视","type": 0,"url": "https://json.doube.eu.org/live/migu/Sub.php","playerType":1},
 {"name": "🪣┃直播","type": 0,"url": "https://gh.con.sh/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt","playerType":1},
 {"name": "✨┃直播","type": 0,"url": "https://www.now61.com/s/0l6FA/text?name=iptv.txt","playerType":1},	
 {"name":"🦐┃龙伊直播","type":0,"url":"https://龙伊.top/直播","playerType":1,"epg":"https://api.龙伊.top/epg/epg.php?ch={name}&date={date}","logo":"https://api.龙伊.top/epg/images/{name}.png"},
