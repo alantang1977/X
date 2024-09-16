@@ -63,6 +63,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 # 🍓GitHub Proxy 代理加速 
 
+    https://ghp.ci/https://raw.githubusercontent.com/
     https://gh.con.sh/https://raw.githubusercontent.com/
     https://github.moeyy.xyz/https://raw.githubusercontent.com/
     https://mirror.ghproxy.com/raw.githubusercontent.com/
