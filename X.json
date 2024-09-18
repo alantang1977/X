@@ -17,6 +17,10 @@
 {"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 
+##王二小放牛娃
+{"key":"Wexhanjutv","name":"🌺韩剧┃秒播🌺","type":3,"api":"csp_Wexhanjutv","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
+{"key":"Wexhanxiaoquan","name":"🌺韩圈┃秒播🌺","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
+{"key":"Wexshandian","name":"🌺闪电┃秒播🌺","type":3,"api":"csp_Wexshandian","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
 	
 ##servoo系列
 {"key": "超级","name": "🐌┃超级┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://cjvip.free.hr/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "http://cjvip.free.hr/api.php/provide/vod/?ac=list" }},
@@ -79,13 +83,7 @@
 {"key":"UCShare","name":"⭕┃UC┃云盘分享","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937$$$./lib/ucshare.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
 {"key":"ThunderShare","name":"⭕┃迅雷┃云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937$$$./lib/thundershare.txt","style": {"type": "list","ratio": 1.1}},
 {"key":"TGYunPan","name":"⭕┃TG搜索┃网盘搜索","type":3,"api":"csp_TGYunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937$$$http://144.126.217.226:8000/$$$hao115,Aliyundrive_Share_Channel,kuakeyun$$$noproxy$$$1"},
-	
-		
-##王二小放牛娃
-{"key":"Wexhanjutv","name":"🌺韩剧┃秒播🌺","type":3,"api":"csp_Wexhanjutv","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
-{"key":"Wexhanxiaoquan","name":"🌺韩圈┃秒播🌺","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
-{"key":"Wexshandian","name":"🌺闪电┃秒播🌺","type":3,"api":"csp_Wexshandian","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726501597789/wex.txt;md5;97d121ad9248ee46dca98767c875289d"},	
-	
+
 ##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布布┃官源","type":3,"api":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/布雷蓝光.jsd"},
 {"key":"dr_百忙无果","name":"🥭┃果果TV┃官源","type":3,"api":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/百忙无果.js"},
