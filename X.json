@@ -120,7 +120,50 @@
 {"key":"Vidhub视频","name": "🥗┃VIDHUB┃影视","type": 3,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/json/Vidhub.json"},
 {"key":"csp_AList_Alist","name":"🦆┃小鸭┃网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/js/小鸭.json"},
 {"key": "贝贝","name": "🐌┃贝贝┃影视","type": 3,"api": "csp_AppYsV2","searchable": 1,"quickSearch": 1,"filterable": 1,"playerType":1,"ext": "http://cms.cttv.vip/api.php/app/"},
-	
+
+           {"key": "t4cctv",
+            "name": "央视",
+            "type": 4,
+            "api": "https://azure.leuse.top/vod/cntv",
+            "searchable": 0,
+            "filterable": 0
+        },
+        {
+            "key": "黑木耳克隆",
+            "name": "黑木耳克隆",
+            "type": 4,
+            "api": "http://zhangqun66.xyz/225.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "金鹰克隆",
+            "name": "金鹰克隆",
+            "type": 4,
+            "api": "http://zhangqun66.xyz/jy.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "华为吧克隆",
+            "name": "华为吧克隆",
+            "type": 4,
+            "api": "http://zhangqun66.xyz/hwb.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
+        {
+            "key": "索尼克隆",
+            "name": "索尼克隆",
+            "type": 4,
+            "api": "http://zhangqun66.xyz/sn.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },	
 
 ##墙外系列
 {"key":"csp_Nbys","name":"🛫┃泥巴┃墙外","type":3,"api":"csp_NiNi","searchable":1,"quickSearch":1,"filterable":1},
