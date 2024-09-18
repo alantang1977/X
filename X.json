@@ -13,10 +13,18 @@
 {"key":"Xinshijue","name":"✨┃新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://6080z.com/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937"},
 {"key":"Lib","name": "👒┃LIBVIO┃8K","type": 3,"api": "csp_Libvio","searchable": 1,"quickSearch": 1,"changeable":1,"ext":"https://www.libvio.cc/"},
 {"key": "网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;8e7a193fbbe451735305c887d107a937","style": {"type": "rect","ratio": 1.5}},
-{"key": "T4-heimuer","name": "🌈┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
-{"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+//{"key": "T4-heimuer","name": "🌈┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+//{"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
-
+{
+            "key": "克隆合集",
+            "name": "🌈┃克隆合集",
+            "type": 4,
+            "api": "http://zhangqun1818.serv00.net/klhj.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0
+        },
 ##servoo系列
 {"key": "超级","name": "🐌┃超级┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://cjvip.free.hr/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "http://cjvip.free.hr/api.php/provide/vod/?ac=list" }},
 {"key": "nu","name": "🐌┃Nuu┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://nuu.su/x/id/{cateId}/page/{catePg}.html","分类": "https://json.heimuer.xyz/api.php/provide/vod?ac=list"}},
