@@ -70,6 +70,8 @@
 "pan115_vip_thread_limit":0,
 "pan115_is_vip":false,
 "pan115_flags":"4kz",
+"pan115_speed_limit":0,
+"pan115_speed_limit_mobile":10485760,
 "pan115_auto_delete":true,
 "pan115_delete_code":"",
 "pan_order":"ali|quark|uc|115|yd|thunder|pikpak"
