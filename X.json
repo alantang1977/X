@@ -252,8 +252,8 @@
 {"name": "🥎┃直播","type": 0,"url": "https://json.doube.eu.org/live/migu/Sub.php","playerType":1},
 {"name": "🐸┃直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u","playerType":1},
 
-{"name": "🐤┃全国直播","type": 0,"url": "https://live.zbds.top/tv/iptv6.m3u","playerType":1},
-{"name": "🐤┃全国直播","type": 0,"url": "https://live.zbds.top/tv/iptv4.m3u","playerType":1},
+{"name": "🐤┃全国直播","type": 0,"url": "https://live.zbds.top/tv/iptv6.txt","playerType":1},
+{"name": "🐤┃全国直播","type": 0,"url": "https://live.zbds.top/tv/iptv4.txt","playerType":1},
 	
 {"name":"🦐┃龙伊直播","type":0,"url":"https://龙伊.top/直播","playerType":1,"epg":"https://api.龙伊.top/epg/epg.php?ch={name}&date={date}","logo":"https://api.龙伊.top/epg/images/{name}.png"},
 {"name":"🐸┃亚洲直播","type":0,"url":"https://anbox118.serv00.net/p3p.m3u.txt","playerType":1},
