@@ -253,6 +253,7 @@
 {"name": "🥎┃直播","type": 0,"url": "https://json.doube.eu.org/live/migu/Sub.php","playerType":1},
 {"name": "🐸┃直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u","playerType":1},
 
+{"name": "🤡┃全球直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8","playerType":1},	
 {"name": "📺┃全国直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.m3u","playerType":1},
 {"name": "🐤┃全国直播","type": 0,"url": "https://live.zbds.top/tv/iptv4.txt","playerType":1},
 	
