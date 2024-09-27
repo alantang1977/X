@@ -4,7 +4,7 @@
 
 "sites":[
 ##常用系列
-{"key": "黑木耳","name": "🌈┃黑木耳┃影视","type": 1,"api": "https://json02.heimuer.xyz/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1},
+{"key":"木耳","name":"🪴┃猫木耳┃秒播","type":1,"api":"https://json02.heimuer.xyz/api.php/provide/vod","searchable":1,"filterable":1,"changeable":1,"timeout":10,"categories":["剧情片","动作片","冒险片","同性片","喜剧片","奇幻片","恐怖片","悬疑片","惊悚片","灾难片","爱情片","犯罪片","科幻片","歌舞片","战争片","经典片","动画电影","网络电影","其他片","国产剧","港剧","韩剧","日剧","泰剧","台剧","欧美剧","新马剧","其他剧","国产综艺","港台综艺","韩国综艺","日本综艺","欧美综艺","新马泰综艺","其他综艺","古装短剧","虐恋短剧","逆袭短剧","神豪短剧","重生短剧","复仇短剧","穿越短剧","甜宠短剧","强者短剧","欧美动漫","日本动漫","韩国动漫","国产动漫","港台动漫"],"header":{"user-agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/125.0.0.0Safari/537.36"}},
 {"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"苹果","name":"🍎┃苹果┃秒播","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"changeable":1},	
@@ -21,8 +21,7 @@
 //{"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key": "黑木耳","name": "🌈┃黑木耳┃(T4)","type": 1,"api": "https://json02.heimuer.xyz/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1},
-{"key":"木耳","name":"🪴┃猫木耳┃秒播","type":1,"api":"https://json02.heimuer.xyz/api.php/provide/vod","searchable":1,"filterable":1,"changeable":1,"timeout":10,"categories":["剧情片","动作片","冒险片","同性片","喜剧片","奇幻片","恐怖片","悬疑片","惊悚片","灾难片","爱情片","犯罪片","科幻片","歌舞片","战争片","经典片","动画电影","网络电影","其他片","国产剧","港剧","韩剧","日剧","泰剧","台剧","欧美剧","新马剧","其他剧","国产综艺","港台综艺","韩国综艺","日本综艺","欧美综艺","新马泰综艺","其他综艺","古装短剧","虐恋短剧","逆袭短剧","神豪短剧","重生短剧","复仇短剧","穿越短剧","甜宠短剧","强者短剧","欧美动漫","日本动漫","韩国动漫","国产动漫","港台动漫"],"header":{"user-agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/125.0.0.0Safari/537.36"}},
-{"key":"天天弹幕版","name":"⛅️┃天天┃采集","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"timeout":10},
+{"key":"天天弹幕版","name":"⛅️┃天天┃采集","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726990784819/okpng.txt;md5;827ebe516168a6fee6028812d171bbbc"},
 	
 ##饭太硬系列
 {"key":"alllive","name":"📽️一直播┃LIVE","type":3,"api":"csp_Alllive","playerType":2,"searchable":0,"quickSearch":0,"changeable":0},
