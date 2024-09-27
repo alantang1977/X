@@ -56,6 +56,55 @@
 {"key":"Bili","name":"🅱┃哔哩┃合集","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":"https://gitlab.com/fantaiying/ext/-/raw/main/bilibili.json"},
 {"key": "超级","name": "🐌┃超级┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://cjvip.free.hr/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html","分类": "http://cjvip.free.hr/api.php/provide/vod/?ac=list" }},
 {"key": "nu","name": "🐌┃Nuu┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"分类url":"https://nuu.su/x/id/{cateId}/page/{catePg}.html","分类": "https://json.heimuer.xyz/api.php/provide/vod?ac=list"}},
+##克隆系列
+{
+            "key": "克隆合集",
+            "name": "克隆合集",
+            "type": 4,
+            "api": "https://api.paoyun.eu.org/klhj.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+        {
+            "key": "黑木耳克隆",
+            "name": "黑木耳克隆",
+            "type": 4,
+            "api": "https://api.paoyun.eu.org/225.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+        {
+            "key": "金鹰克隆",
+            "name": "金鹰克隆",
+            "type": 4,
+            "api": "https://api.paoyun.eu.org/jy.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+        {
+            "key": "华为吧克隆",
+            "name": "华为吧克隆",
+            "type": 4,
+            "api": "https://api.paoyun.eu.org/hwb.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+        {
+            "key": "索尼克隆",
+            "name": "索尼克隆",
+            "type": 4,
+            "api": "https://api.paoyun.eu.org/sn.php",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 0,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+	{
+            "key": "采集集合",
+            "name": "采集集合",
+            "type": 1,
+            "api": "https://api.paoyun.eu.org/cjjh.php",
+            "searchable": 1,
+            "changeable": 1,"jar":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/kelong.jar"},
+
 	
 ##csp_AppYs系列
 {"key": "龙门","name": "🐠┃龙门影视┃🌈","type": 3,"api": "csp_AppYsV2","ext": "http://movie.iqinu.com/api.php/v1.vod"},
