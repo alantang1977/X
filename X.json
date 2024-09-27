@@ -22,6 +22,8 @@
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key": "黑木耳","name": "🌈┃黑木耳┃(T4)","type": 1,"api": "https://json02.heimuer.xyz/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1},
 {"key":"天天弹幕版","name":"⛅️┃天天┃采集","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726990784819/okpng.txt;md5;827ebe516168a6fee6028812d171bbbc"},
+{"key":"华为","name":"🍇┃华为┃秒播","type":1,"api":"https://cjhwba.com/api.php/provide/vod","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726990784819/okpng.txt;md5;827ebe516168a6fee6028812d171bbbc"},
+
 	
 ##饭太硬系列
 {"key":"alllive","name":"📽️一直播┃LIVE","type":3,"api":"csp_Alllive","playerType":2,"searchable":0,"quickSearch":0,"changeable":0},
