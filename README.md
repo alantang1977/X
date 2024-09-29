@@ -40,6 +40,8 @@ https://jm.dovxi.repl.co/api?url=
 
 http://饭太硬.com/tv
 
+http://ok321.top/tv
+
 http://肥猫.com
 
 http://xhww.fun:63/小米/DEMO.json
