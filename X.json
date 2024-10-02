@@ -20,6 +20,7 @@
 //{"key": "T4-heimuer","name": "🌈┃黑木耳┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 //{"key": "T4-安博","name": "🐄┃安博┃(T4)","type": 4,"api": "https://tang.hz.cz/api/user?token=2fdc44ab","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
+{"key":"YGP","name":"🚀┃电影┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 {"key": "黑木耳","name": "🌈┃黑木耳┃(T4)","type": 1,"api": "https://json02.heimuer.xyz/api.php/provide/vod/?ac=list","searchable": 1,"changeable": 1},
 
 ##OK大佬系列	
