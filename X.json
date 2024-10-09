@@ -26,7 +26,7 @@
 ##OK大佬系列	
 {"key":"天天弹幕版","name":"⛅️┃天天┃采集","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1727933149981/okpng.txt;md5;28e85e15705298913e807a84bbbfab37"},
 {"key":"华为","name":"🍇┃华为┃秒播","type":1,"api":"https://cjhwba.com/api.php/provide/vod","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1727933149981/okpng.txt;md5;28e85e15705298913e807a84bbbfab37"},
-{"key":"韩圈","name":"🦄┃韩圈┃App","type":3,"api":"csp_HanXiaoQuan","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1727933149981/okpng.txt;md5;28e85e15705298913e807a84bbbfab37"},
+{"key":"韩圈","name":"🦄┃韩圈┃秒播","type":3,"api":"csp_HanXiaoQuan","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1727933149981/okpng.txt;md5;28e85e15705298913e807a84bbbfab37"},
 
 
 ##爆米花系列
