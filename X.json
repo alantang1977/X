@@ -35,10 +35,10 @@
 {"key":"junjun","name":"🚗君君┃1080","type":3,"searchable":1,"quickSearch":1,"api":"http://www.mpanso.com/appys.js","ext":{"host":"http://122.228.85.203:1000/api.php/app/","*":["https://xcoo.vip/xiaojun/xiaojunjiexi.php?url="]}},
 {"key":"huohuo","name":"💥火火┃1080P","type":3,"changeable":0,"api":"csp_SaoHuo","ext":"","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728350715516/1008.jar;md5;386c26d857fcbd8e369eac0abf7a904c"},
 {"key":"csp_yunbo","name":"☁️️云播┃1080","type":3,"api":"csp_Tvyb","playerType":2,"ext":"","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728350715516/1008.jar;md5;386c26d857fcbd8e369eac0abf7a904c"},
-{"key":"hipy_闪电","name":"⚡️闪电┃1080P","type":3,"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js","searchable":1,"quickSearch":1,"filterable":1,"order_num":0,"changeable":0,"ext":"http://www.mpanso.com/小米/闪电.js"},
+{"key":"hipy_闪电","name":"⚡️闪电┃1080P","type":3,"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js","searchable":1,"quickSearch":1,"filterable":1,"order_num":0,"changeable":0,"ext":"http://www.mpanso.com/%E5%B0%8F%E7%B1%B3/闪电.js"},
 {"key":"csp_yigeg","name":"🥬菠菜┃1080P","type":3,"changeable":0,"api":"csp_Pptv","ext":"https://yigeg.pro/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728350715516/1008.jar;md5;386c26d857fcbd8e369eac0abf7a904c"},
 {"key":"csp_全网","name":"🥣全网┃1080P","type":3,"changeable":0,"api":"csp_Quanwk","ext":"https://888.qkw2.cc/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728350715516/1008.jar;md5;386c26d857fcbd8e369eac0abf7a904c"},
-{"key":"摘星","name":"✨星星┃1080P","type":3,"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js","searchable":1,"quickSearch":1,"filterable":1,"order_num":0,"changeable":0,"ext":"http://www.mpanso.com/小米/摘星.js"},
+{"key":"摘星","name":"✨星星┃1080P","type":3,"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js","searchable":1,"quickSearch":1,"filterable":1,"order_num":0,"changeable":0,"ext":"http://www.mpanso.com/%E5%B0%8F%E7%B1%B3/摘星.js"},
 	
 ##饭太硬系列
 {"key":"alllive","name":"📽️一直播┃LIVE","type":3,"api":"csp_Alllive","playerType":2,"searchable":0,"quickSearch":0,"changeable":0},
