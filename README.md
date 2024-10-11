@@ -44,7 +44,7 @@ http://ok321.top/tv
 
 http://肥猫.com
 
-http://xhww.fun:63/小米/DEMO.json
+http://www.mpanso.com/%E5%B0%8F%E7%B1%B3/DEMO.json
 
 http://tvbox.王二小放牛娃.xyz/
 
