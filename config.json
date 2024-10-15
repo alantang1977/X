@@ -14,7 +14,7 @@
 {"key":"QIYIU","name":"🦌奇优┃1080P","type":3,"changeable":0,"api":"csp_Qiyou","playerType":"1","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728955680305/xm1015.jar;md5;d8e00443d23d2701d9a1236608961a7c"},
         {
             "key": "sgabys",
-            "name": "三哥安博影视",
+            "name": "🐔┃三哥安博影视",
             "type": 4,
             "api": "https://tang.hz.cz/power/ub18?token=48da13fc",
             "searchable": 1,
@@ -24,7 +24,7 @@
         },
         {
             "key": "sghmys",
-            "name": "三哥黑木影视",
+            "name": "🐔┃三哥黑木影视",
             "type": 4,
             "api": "https://tang.hz.cz/power/hme?token=48da13fc",
             "searchable": 1,
@@ -34,7 +34,7 @@
         },
         {
             "key": "sgolys",
-            "name": "三哥欧乐影视",
+            "name": "🐔┃三哥欧乐影视",
             "type": 4,
             "api": "https://tang.hz.cz/power/olelive?token=48da13fc",
             "searchable": 1,
@@ -44,7 +44,7 @@
         },
         {
             "key": "mchmys",
-            "name": "沐辰黑木影视",
+            "name": "🐔┃沐辰黑木影视",
             "type": 4,
             "api": "https://json.doube.eu.org/app/index.php?site=webheimuer&filter=true",
             "searchable": 1,
@@ -54,7 +54,7 @@
         },
         {
             "key": "hm",
-            "name": "黑木资源专线",
+            "name": "🐔┃黑木资源专线",
             "type": 1,
             "api": "https://json.heimuer.xyz/api.php/provide/vod",
             "playUrl": "json:https://4tvbox.ggff.net/hme.php?url=",
@@ -100,7 +100,7 @@
         },
         {
             "key": "hmbk",
-            "name": "黑木资源备用",
+            "name": "🐔┃黑木资源备用",
             "type": 1,
             "api": "https://json.heimuer.xyz/api.php/provide/vod",
             "playUrl": "json:https://tvbox.linkpc.net/api/kill_ads?url=",
@@ -146,7 +146,7 @@
         },
         {
             "key": "hw",
-            "name": "华为资源站",
+            "name": "🐔┃华为资源站",
             "type": 1,
             "api": "https://cjhwba.com/api.php/provide/vod",
             "searchable": 1,
@@ -183,7 +183,7 @@
         },
         {
             "key": "360",
-            "name": "360资源站",
+            "name": "🐔┃360资源站",
             "type": 1,
             "api": "https://360zy.com/api.php/provide/vod",
             "searchable": 1,
