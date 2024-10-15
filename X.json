@@ -30,6 +30,7 @@
 
 
 ##爆米花系列
+{"key":"非凡┃无广","name":"📺非凡┃测试","type":0,"api":"http://yonghu.ffzyapi8.com/api.php/provide/vod/from/ffm3u8/at/xml/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728955680305/xm1015.jar;md5;d8e00443d23d2701d9a1236608961a7c","playUrl":"json:https://jx.ke-mi.vip:2087/123456/json.php?url=","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"categories":["欧美剧","香港剧","韩国剧","日本剧","台湾剧","泰国剧","海外剧","动作片","喜剧片","科幻片","恐怖片","爱情片","剧情片","战争片","纪录片","大陆综艺","欧美综艺","日韩综艺","港台综艺","国产动漫","欧美动漫","日韩动漫","港台动漫","海外动漫"]},
 {"key":"FERRR","name":"👀FREE┃1080P","type":3,"api":"https://gitee.com/liuqu01/liuqutvbox/raw/master/drpy_libs/drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"order_num":0,"changeable":0,"ext":"http://www.mpanso.com/小米/FREE.js"},
 {"key":"csp_subaobai","name":"✍️白白┃1080P","type":3,"searchable":1,"changeable":1,"api":"csp_SuBaiBai","playerType":1,"filterable":1,"ext":"","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728955680305/xm1015.jar;md5;d8e00443d23d2701d9a1236608961a7c"},
 {"key":"junjun","name":"🚗君君┃1080","type":3,"searchable":1,"quickSearch":1,"api":"http://www.mpanso.com/appys.js","ext":{"host":"http://122.228.85.203:1000/api.php/app/","*":["https://xcoo.vip/xiaojun/xiaojunjiexi.php?url="]}},
