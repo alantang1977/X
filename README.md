@@ -11,7 +11,12 @@
 
 # Release
 ## 猫影视（CatVod）IOS：https://github.com/catvod/CatVodOpen/releases
- https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
+## OK版影视APP
+UC盘：https://drive.uc.cn/s/de96fa4eed364
+夸克：https://pan.quark.cn/s/3334d8f93c64
+      https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
+迅雷：https://pan.xunlei.com/s/VNpD7k6FLpuz5kIVU1E4Sd9AA1?pwd=mzsc
+ 
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 ## iBox影视(IOS)：https://www.123pan.com/s/jYI7Vv-ip9od.html
 ## 奥秘博客  https://omii.top/
