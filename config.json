@@ -1,5 +1,5 @@
 {
-    "spider": "https://4tvbox.ggff.net/custom_spider.jar;md5;3f392906996ac13aaeb8c91956f95f7f",
+    "spider": "./jar/4tvbox.jar.jar;md5;3f392906996ac13aaeb8c91956f95f7f",
     "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/yellow.gif",
     "sites": [
 {"key":"非凡┃无广","name":"📺非凡┃测试","type":0,"api":"http://yonghu.ffzyapi8.com/api.php/provide/vod/from/ffm3u8/at/xml/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1728955680305/xm1015.jar;md5;d8e00443d23d2701d9a1236608961a7c","playUrl":"json:https://jx.ke-mi.vip:2087/123456/json.php?url=","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"categories":["欧美剧","香港剧","韩国剧","日本剧","台湾剧","泰国剧","海外剧","动作片","喜剧片","科幻片","恐怖片","爱情片","剧情片","战争片","纪录片","大陆综艺","欧美综艺","日韩综艺","港台综艺","国产动漫","欧美动漫","日韩动漫","港台动漫","海外动漫"]},
