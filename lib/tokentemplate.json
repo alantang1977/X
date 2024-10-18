@@ -43,7 +43,7 @@
 "pikpak_flags":"4kz",
 "pikpak_thread_limit":2,
 "pikpak_vip_thread_limit":2,
-"pikpak_proxy":"",
+"pikpak_proxy":"proxy",
 "pikpak_proxy_onlyapi":false,
 "pikpak_danmu":true,
 "wgcf_key":"",
@@ -81,5 +81,7 @@
 "tgsearch_api_session":"",
 "tgsearch_api_session_v1":"",
 "tgsearch_api_proxy":"proxy",
-"tgsearch_api_url":"http://127.0.0.1:10199/"
+"tgsearch_api_url":"http://127.0.0.1:10199/",
+"tgsearch_media_url":"http://127.0.0.1:10199/",
+"allinone_url":"./allinone.gz"
 }
