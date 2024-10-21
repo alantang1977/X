@@ -25,7 +25,7 @@
 "thunder_vip_thread_limit":2,
 "thunder_flags":"4kz",
 "aliproxy":"",
-"aliproxy_url":"",
+"aliproxy_url":"./aliproxy.tar.xz",
 "proxy":"",
 "danmu":true,
 "quark_danmu":true,
@@ -61,10 +61,11 @@
 "wgcf_vless_tls":false,
 "libxl_url":"./libxl_thunder_sdk.so",
 "youtube_proxy":"proxy",
-"singbox_url":"./sing-box.gz",
+"singbox_url":"./sing-box.tar.xz",
 "singbox_subscribe_url":"",
-"singbox_clash2singbox_url":"./clash2singbox.gz",
+"singbox_clash2singbox_url":"./clash2singbox.tar.xz",
 "singbox_template_url":"./singbox.json",
+"singbox_wgcf_json_url":"./wgcf2singbox.json",
 "pan115_cookie":"",
 "pan115_thread_limit":0,
 "pan115_vip_thread_limit":0,
@@ -75,7 +76,7 @@
 "pan115_auto_delete":true,
 "pan115_delete_code":"",
 "pan_order":"ali|quark|uc|115|yd|thunder|pikpak",
-"tgsearch_url":"./tgsearch",
+"tgsearch_url":"./tgsearch.tar.xz",
 "tgsearch_api_id":"",
 "tgsearch_api_hash":"",
 "tgsearch_api_session":"",
@@ -83,5 +84,5 @@
 "tgsearch_api_proxy":"proxy",
 "tgsearch_api_url":"http://127.0.0.1:10199/",
 "tgsearch_media_url":"http://127.0.0.1:10199/",
-"allinone_url":"./allinone.gz"
+"allinone_url":"./allinone.tar.xz"
 }
