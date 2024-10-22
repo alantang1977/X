@@ -12,8 +12,8 @@
 	{"name":"gongdian","url":"https://gongdian.top/tv/gongdian-ipv6.txt"},
 	{"name":"gongdian-ipv4","url":"https://gongdian.top/tv/gongdian.txt"},
 	
-	{"name":"范明明OfficalSite","url":"http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/global.m3u"},
-	{"name":"范明明GitHub","url":"http://127.0.0.1:10079/c/3600/proxy/https://mirror.ghproxy.com/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/global.m3u"},
+	{"name":"范明明OfficalSite","url":"http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/index.m3u"},
+	{"name":"范明明GitHub","url":"http://127.0.0.1:10079/c/3600/proxy/https://ghp.ci/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u"},
 	{"name":"范明明IPV6","url":"http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/ipv6.m3u"},
 	{"name":"PixMan.4GTV","url":"http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/4gtv.m3u"},
 	{"name":"PixMan.ITV","url":"http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/itv.m3u"},
