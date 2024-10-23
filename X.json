@@ -287,6 +287,7 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
+{"name": "🍬┃Guovin直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u","playerType":1},
 {"name": "🖍️┃央卫地直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8","playerType":1},
 {"name": "🐸┃天天开心直播","type": 0,"url": "http://ttkx.live:55/lib/kx2024.txt","playerType":1},
 {"name": "⚕️┃粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
