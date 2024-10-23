@@ -4,9 +4,13 @@
 	{"name":"wwb521直播","url":"https://ghp.ci/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u"},
 	{"name":"joevess直播","url":"https://ghp.ci/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8"},
 	{"name":"kimwang直播","url":"https://ghp.ci/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt"},
+
+	{"name":"pizazzgy直播","url":"https://ghp.ci/https://raw.githubusercontent.com/pizazzgy/tvbox/main/live.txt"},
+	{"name":"ibert-v6直播","url":"https://m3u.ibert.me/txt/fmml_dv6.txt"},
+	{"name":"ibert-iptv直播","url":"https://m3u.ibert.me/txt/j_iptv.txt"},
+	{"name":"ibert-cn直播","url":"https://m3u.ibert.me/txt/o_cn.txt"},
 	
 	{"name":"肥羊国内直播","url":"http://192.168.1.4:35455/tv.m3u"},
-	{"name":"肥羊国内直播","url":"http://127.0.0.1:10079/c/3600/null/http://192.168.1.4:35455/tv.m3u"},
 	{"name":"肥羊自用直播","url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/youshandefeiyang.m3u"},
 	{"name":"肥羊TPTV","url":"http://127.0.0.1:10079/c/3600/null/http://192.168.1.4:35455/tptv.m3u"},
 	{"name":"肥羊广东联通","url":"http://127.0.0.1:10079/c/3600/null/http://192.168.1.4:35455/gdcucc.m3u"},
