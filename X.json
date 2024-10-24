@@ -4,7 +4,8 @@
 
 "sites":[
 ##常用系列
-{"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
+//{"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
+{"key": "南瓜","name": "🎃┃南瓜┃4K","type": 3,"api": "csp_NanGua","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "","jar":"http://tv.laohu.cool/laohujar.jar"},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"欢视","name":"👓┃欢视┃多线","type":3,"api":"csp_AppTT","playerType":2,"searchable":1,"quickSearch":1,"changeable":1,"ext":"AO7TcBkd8IPB+BwH4Qma+opv"},
 {"key":"玩偶","name":"🐻┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
@@ -12,7 +13,7 @@
 {"key":"Wogg","name":"🤖┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$WOGG"},
 {"key": "直播转点播","name": "🐼️┃电视┃直播","type": 3,"searchable": 0,"api": "./lib/live2vod.js","ext": "./LIVE/feimaolive.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$WOGG"},
 {"key":"苹果","name":"🍎┃苹果┃秒播","type":3,"api":"csp_LiteApple","searchable":1,"quickSearch":1,"changeable":1},
-
+{"key": "界界影视","name": "🐌┃界界┃影视","type": 3,"api": "csp_XBPQ","jar": "./jar/XBPQ.jar","ext": {"主页url": "https://www.hkybqufgh.com/","简介": "</label>&&</div>","影片类型": "tags\">&&director\">","影片状态": "bottom\">&&</div>","二次截取": "videoList\":\\[&&\\]","数组": "{&&}[不包含:伦理剧]","图片": "https+://ywxohs.com+obs.gduamoe.com&&\",","标题": "vodName\":\"&&\"","副标题": "vodRemarks\":\"&&\"","链接": "https://www.hkybqufgh.com/detail/+vodId\":&&,","导演": "导演:</div>&&主演","主演": "主演:</div>&&别名","线路标题": "寶寳","播放数组": "listitem\">&&info\">","播放列表": "<a&&</a>","倒序": "否","搜索url": "https://www.hkybqufgh.com/vod/search/{wd}","分类": "电影$1#电视剧$2#综艺$3#动漫$4","分类url": "https://www.hkybqufgh.com/vod/show/id/{cateId}/class/{class}/year/{year}/area/{area}/page/{catePg}"}},
 {"key": "sghmys","name": "🍬┃唐三┃黑木耳","type": 4,"api": "https://tang.hz.cz/power/hme?token=48da13fc","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key": "sgabys","name": "🍡┃唐三┃安博","type": 4,"api": "https://tang.hz.cz/power/ub18?token=48da13fc","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 {"key":"糯米","name":"🍓┃糯米┃秒播","type":3,"api":"csp_Nmyswv","searchable":1,"quickSearch":1,"changeable":1},
@@ -312,7 +313,8 @@
 {"name":"🐸┃亚洲直播","type":0,"url":"https://anbox118.serv00.net/p3p.m3u.txt","playerType":1},
 {"name":"🕯️┃my亚洲直播","type":0,"url":"https://anbox118.serv00.net/mytvbplus.php","playerType":1},
 {"name":"🐤┃ATV直播","type":0,"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","playerType":1},	
-//{"name":"🐠┃stream直播","type":0,"url":"https://www.stream-link.org/stream-link.m3u","playerType":1},	
+{"name":"🐠┃stream直播","type":0,"url":"https://www.stream-link.org/stream-link.m3u","playerType":1},	
+	
 {"name":"✍️┃全国直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name":"🤖┃广州直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},	
 {"name":"🐼┃范明明","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
