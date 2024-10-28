@@ -4,7 +4,6 @@
 
 "sites":[
 ##常用系列
-//{"key":"南瓜","name":"🎃┃南瓜┃影视","type":3,"api":"csp_NanGua","timeout":15,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key": "南瓜","name": "🎃┃南瓜┃4K","type": 3,"api": "csp_NanGua","searchable": 1,"quickSearch": 1,"playerType": 2,"filterable": 1,"ext": "","jar":"http://tv.laohu.cool/laohujar.jar"},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"欢视","name":"👓┃欢视┃多线","type":3,"api":"csp_AppTT","playerType":2,"searchable":1,"quickSearch":1,"changeable":1,"ext":"AO7TcBkd8IPB+BwH4Qma+opv"},
