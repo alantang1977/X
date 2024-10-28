@@ -11,6 +11,23 @@
 			"indexs":1,
 			"ext": "./lib/tokenm.json$$$./lib/douban.json"
 		},
+		{"key":"TGDouban","name":"TG豆瓣","type":3,"api":"csp_TGDouban","timeout":120, 
+			"ext":{
+				"token":"./lib/tokenm.json",
+				"json":"./lib/tgsearch.json",
+				"keywords":"名称,片名,推荐",
+				"tgsearch_url":"http://127.0.0.1:10199",
+				"tgsearch_media_url":"http://127.0.0.1:10199",
+				"channellist":"alypzyhzq|1000,Mbox115|1000,shares_115|1000,Quark_Share_Channel|1000,Aliyundrive_Share_Channel|1000,wanwansubchat|1000",
+				"proxy":"noproxy",
+				"douban":"./lib/douban.json",
+				"danmu":true
+			},
+			"style": {
+				"type": "rect",
+				"ratio": 0.7
+			}
+		},
 		{
 			"key":"Youtube",
 			"name":"Youtube",
@@ -664,6 +681,7 @@
 			{
 				"name": "肥羊国内直播",
 				"type": 0,
+				"playerType": 1,
 				"url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tv.m3u",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
@@ -718,6 +736,70 @@
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
 			},
 			{
+				"name": "PixMan.4GTV",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/4gtv.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.BeeSport",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/beesport.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.TheTV",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/thetv.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.DLHD",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/dlhd.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.ITV",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/itv_proxy.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.TPTV",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/tptv.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.MyTVSuper",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/mytvsuper.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
+				"name": "PixMan.Hami",
+				"type": 0,
+				"url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/hami.m3u",
+				"ua": "okhttp/3.15",
+				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+			},
+			{
 				"name": "zouming.ipv6",
 				"type": 0,
 				"url": "http://127.0.0.1:10079/c/3600/proxy/http://ww.zouming.com/ipv6.txt",
@@ -748,70 +830,6 @@
 				"type": 0,
 				"url": "./lib/live.ipv6.txt",
 				
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.4GTV",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/4gtv.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.ITV",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/itv.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.TPTV",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/tptv.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.MyTVSuper",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/mytvsuper.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.BeeSport",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/beesport.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.TheTV",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/thetv.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.Hami",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/hami.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "PixMan.DLHD",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/dlhd.m3u",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
