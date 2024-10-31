@@ -45,7 +45,7 @@ https://ghproxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/j
 
 https://jm.dovxi.repl.co/api?url=
 
-http://饭太硬.com/tv
+http://www.饭太硬.com/tv
 
 http://ok321.top/tv
 
