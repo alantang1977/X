@@ -681,7 +681,6 @@
 			{
 				"name": "肥羊国内直播",
 				"type": 0,
-				"playerType": 1,
 				"url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tv.m3u",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
