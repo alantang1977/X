@@ -289,7 +289,7 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🍬┃Alan直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/Guovin-TV/master/output/user_result.m3u","playerType":1},
+{"name": "🍬┃Alan直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/Guovin-TV/master/output/user_result.txt","playerType":1},
 {"name": "🐔┃pizazzgy秒播","type": 0,"url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/pizazzgy/tvbox/main/live.txt","playerType":1},
 {"name": "🧸┃央卫地直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8","playerType":1},
 {"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
