@@ -1,5 +1,5 @@
 {
-"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730501203549/fan.txt;md5;a889982d5efe39d65ff9f81559fa2f87",
+"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1730839416167/fan.txt;md5;0f1d73221352f4e6b049b3291f96d75d",
 "wallpaper":"http://like.xn--z7x900a.com/ppic/feimao.php","logo":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/yellow.gif",
 
 "sites":[
@@ -293,6 +293,7 @@
 {"name": "🐔┃pizazzgy秒播","type": 0,"url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/pizazzgy/tvbox/main/live.txt","playerType":1},
 {"name": "🧸┃央卫地直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},
+{"name": "🎂┃港·澳·台·韩m3u","type": 0,"url": "http://aktv.top/live.m3u","playerType":1},
 {"name": "🤡┃港·澳·台·韩","type": 0,"url": "https://4gtv.pendy.us.kg/myiptv.m3u","playerType":1},	
 {"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
 {"name": "🐸┃国外直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
