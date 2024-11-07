@@ -322,7 +322,7 @@
 {"name":"🐠┃stream直播","type":0,"url":"https://www.stream-link.org/stream-link.m3u","playerType":1},	
 	
 {"name":"✍️┃全国直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
-{"name":"🤖┃广州直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/LIVE/guangzhou.txt","playerType":1},	
+{"name":"🤖┃肥羊直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/tv.m3u","playerType":1},	
 {"name":"🐼┃范明明","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"🐲王二小放牛娃","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name":"🐄┃XIUTAN","ua":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/120.0.0.0Safari/537.36Edg/120.0.0.0","type":0,"url":"https://xhdwc.tk/xiutan.m3u"}],
