@@ -735,7 +735,7 @@
 			{
 				"name": "Gather.电视直播",
 				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/Gather",
+				"url": "https://tv.iill.top/m3u/Gather",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
@@ -743,7 +743,7 @@
 			{
 				"name": "Gather.网络直播",
 				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/Live",
+				"url": "https://tv.iill.top/m3u/Live",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
@@ -751,7 +751,7 @@
 			{
 				"name": "Gather.MyTV",
 				"type": 0,
-				"url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/MyTV",
+				"url": "https://tv.iill.top/m3u/MyTV",
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
