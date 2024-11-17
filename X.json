@@ -314,7 +314,7 @@
 {"name": "🐸┃全面直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/Collect.m3u","playerType":1},
 {"name": "❤️┃春盈直播","type": 0,"url": "http://home.jundie.top:81/Cat/tv/live.txt","playerType":1},
 {"name": "🥎┃Guovin","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt","playerType":1},
-{"name": "🍜┃LIVE_tang","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
+{"name": "🍜┃LIVE_tang","type": 0,"url": "https://www.mytvsuper.xyz/m3u/Live","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
 {"name": "🐸┃猫TV直播","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType":1},
 {"name": "🤡┃全球直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8","playerType":1},	
 {"name": "📺┃全国直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.m3u","playerType":1},
