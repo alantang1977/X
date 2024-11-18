@@ -293,6 +293,7 @@
 "lives": [
 {"name": "🍬┃tang直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/Guovin-TV/main/output/user_result.txt","playerType":1},
 //{"name": "🐔┃pizazzgy秒播","type": 0,"url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/pizazzgy/tvbox/main/live.txt","playerType":1},
+{"name": "🐔┃alan秒播","type": 0,"url": "https://git.gra.phite.ro/alantang/X/raw/branch/main/LIVE/gztv.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt","playerType":1},
 {"name": "🧸┃joevess直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/IPTV-GZ/main/iptv.m3u8","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},
