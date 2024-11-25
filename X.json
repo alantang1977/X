@@ -301,7 +301,6 @@
 {"name": "🐌┃chao直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},
 {"name": "🎂┃港·澳·台·韩m3u","type": 0,"url": "http://aktv.top/live.m3u","playerType":1},
-{"name": "🤡┃港·澳·台·韩","type": 0,"url": "https://4gtv.pendy.us.kg/myiptv.m3u","playerType":1},
 {"name": "🍜┃LIVE_tang","type": 0,"url": "https://www.mytvsuper.xyz/m3u/Live.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
 {"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
 {"name": "🐸┃国外直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
