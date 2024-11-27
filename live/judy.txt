@@ -1,0 +1,93 @@
+📺台湾全频道,#genre#
+三立iNEWS,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV01.m3u8
+寰宇新聞台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV02.m3u8
+東森財經新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV03.m3u8
+momo購物一台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV04.m3u8
+momo購物二台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV05.m3u8
+運通財經台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV06.m3u8
+信大電視台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV07.m3u8
+DW News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV08.m3u8
+中視新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV09.m3u8
+Malaimurasu Tv 24X7,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV10.m3u8
+Asianet News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV11.m3u8
+華視戲劇頻道,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV12.m3u8
+中天亞洲台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV13.m3u8
+Al Jazeera Arabic,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV14.m3u8
+JapaNews24,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV15.m3u8
+THE K-POP,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV16.m3u8
+民視新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV17.m3u8
+東森購物台CH60,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV18.m3u8
+東森購物台CH46,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV19.m3u8
+LIVE NOW,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV20.m3u8
+Haberturk TV,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV21.m3u8
+鳳凰衛視資訊台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV22.m3u8
+新唐人LIVE,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV23.m3u8
+ABC News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV24.m3u8
+台視新聞台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV25.m3u8
+華視綜藝頻道,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV26.m3u8
+Astro AWANI,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV27.m3u8
+中天電視,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV28.m3u8
+Tokyo Walk,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV29.m3u8
+大愛一臺HD,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV30.m3u8
+TVBS NEWS,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV31.m3u8
+三立新聞台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV32.m3u8
+GB News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV33.m3u8
+中視經典綜藝,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV34.m3u8
+Sky News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV35.m3u8
+India Today,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV36.m3u8
+Euronews English,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV37.m3u8
+FRANCE 24 English,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV38.m3u8
+NBC News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV39.m3u8
+News18 India,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV40.m3u8
+寰宇新聞台灣台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV41.m3u8
+MIT台灣誌,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV42.m3u8
+鳳凰衛視資訊台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV43.m3u8
+MediaoneTV Live,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV44.m3u8
+TBS NEWS,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV45.m3u8
+NewsTamil24x7,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV46.m3u8
+大愛二臺HD,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV47.m3u8
+東森購物台CH47,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV48.m3u8
+中天2台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV49.m3u8
+Malayalam News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV50.m3u8
+Arirang TV,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV51.m3u8
+CNA LIVE,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV52.m3u8
+HTB北海道ニュース,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV53.m3u8
+美好購物1台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV54.m3u8
+美好購物2台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV55.m3u8
+國會頻道１,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV56.m3u8
+立法院會議,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV57.m3u8
+123 GO! Live,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV58.m3u8
+Al Jazeera English,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV59.m3u8
+Muse木棉花-闔家歡,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV60.m3u8
+KBS News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV61.m3u8
+ABCテレビニュース,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV62.m3u8
+YOYO TV,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV63.m3u8
+小猪佩奇,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV64.m3u8
+Talking Tom,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV65.m3u8
+TalkingFriendsTVMini,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV66.m3u8
+Dave and Ava,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV67.m3u8
+Tayo the Little Bus,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV68.m3u8
+Disney Junio,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV69.m3u8
+鏡新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV70.m3u8
+大陸尋奇,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV71.m3u8
+CRUX,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV72.m3u8
+豬哥會社,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV73.m3u8
+TIMES NOW,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV74.m3u8
+GTV DRAMA 八大劇樂部,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV75.m3u8
+民視戲劇館,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV76.m3u8
+Lofi Girl,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV77.m3u8
+TaiwanPlus,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV78.m3u8
+earthTV,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV79.m3u8
+SBS Running Man,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV80.m3u8
+飢餓遊戲,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV81.m3u8
+TVBS NEWS,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV82.m3u8
+TVBS選新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV83.m3u8
+Entertainment - Mediacorp,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV84.m3u8
+寰宇新聞財經台,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV85.m3u8
+LiveNOW from FOX,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV86.m3u8
+東森購物台CH34,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV87.m3u8
+InquizeX,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV88.m3u8
+8world,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV89.m3u8
+倪珍24小時播新聞,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV90.m3u8
+TV91,TV5 News,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV91.m3u8
+TV92,公視新聞網,https://ghp.ci/https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV92.m3u8
