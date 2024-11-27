@@ -1,0 +1,52 @@
+FinalShell
+
+sudo -i
+
+
+方式运行，不过是allinone的指令了：
+
+docker run -d --restart unless-stopped --net=host --privileged=true -p 35455:35455 --name allinone youshandefeiyang/allinone
+
+配置watchtower每天凌晨两点自动监听allinone镜像更新：
+
+docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower allinone -c --schedule "0 0 2 * * *"
+
+
+IPTV直播 
+http://192.168.0.2:35455/tv.m3u
+
+
+
+
+◆ 订阅地址：
+■ 央视频 YSP :  http://192.168.0.2:52055/ysp.m3u
+■ 江苏移动魔百盒 TPTV : http://192.168.0.2:52055/tptv.m3u 或 http://192.168.0.2:52055/tptv_proxy.m3u
+■ 中国移动 iTV : http://192.168.0.2:52055/itv.m3u 或 http://192.168.0.2:52055/itv_proxy.m3u
+■ Beesport : http://192.168.0.2:52055/beesport.m3u
+■ TheTV : http://192.168.0.2:52055/thetv.m3u
+■ DLHD : http://192.168.0.2:52055/dlhd.m3u
+---------------------------------------------------------
+---  Pixman 详细使用说明: https://pixman.io/topics/17  ---
+---  Pixman.sh 脚本日志: https://pixman.io/topics/142  ---
+---------------------------------------------------------
+
+
+◆ 订阅地址：
+■ TV 集合 : http://192.168.0.2:35455/tv.m3u
+■ TPTV : http://192.168.0.2:35455/tptv.m3u
+■ YY轮播 : http://192.168.0.2:35455/yylunbo.m3u
+■ BiliBili生活 : http://192.168.0.2:35455/bililive.m3u
+■ 虎牙一起看 : http://192.168.0.2:35455/huyayqk.m3u
+■ 斗鱼一起看 : http://192.168.0.2:35455/douyuyqk.m3u
+---------------------------------------------------------
+■ 代理地址：
+■ BiliBili 代理 : http://192.168.0.2:35455/bilibili/{VIDEO_ID}
+■ 虎牙 代理 : http://192.168.0.2:35455/huya/{VIDEO_ID}
+■ 斗鱼 代理 : http://192.168.0.2:35455/douyu/{VIDEO_ID}
+■ YY 代理 : http://192.168.0.2:35455/yy/{VIDEO_ID}
+■ 抖音 代理 : http://192.168.0.2:35455/douyin/{VIDEO_ID}
+■ YouTube 代理 : http://192.168.0.2:35455/youtube/{VIDEO_ID}
+---------------------------------------------------------
+---    allinone 详细使用说明: https://yycx.eu.org      ---
+---  Pixman.sh 脚本日志: https://pixman.io/topics/142  ---
+---------------------------------------------------------
