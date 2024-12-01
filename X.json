@@ -302,6 +302,7 @@
 {"name": "🧸┃joevess直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/IPTV-GZ/main/iptv.m3u8","playerType":1},
 {"name": "🐌┃chao直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🎂┃台湾全频道(VPN)","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/judy.txt","playerType":1},
+{"name": "🐶┃国内外直播频道","type": 0,"url": "https://4708.kstore.space/zhibo/tv.txt","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},	
 {"name": "🎂┃全国IPTV直播","type": 0,"url": "https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
 {"name": "🍜┃LIVE_tang","type": 0,"url": "https://www.mytvsuper.xyz/m3u/Live.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
@@ -326,8 +327,8 @@
 {"name": "🍉┃ATV直播","type":0,"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","playerType":1},	
 {"name": "✍️┃全国直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🐼┃范明明","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
-{"name": "🐲王二小放牛娃","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
-{"name": "🐄┃XIUTAN","ua":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/120.0.0.0Safari/537.36Edg/120.0.0.0","type":0,"url":"https://xhdwc.tk/xiutan.m3u"}],
+{"name": "🐲王二小放牛娃","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}],
+
 
 "parses": [
 {"name":"自动解析","type":3,"url":"Demo"},
