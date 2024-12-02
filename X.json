@@ -23,13 +23,6 @@
 {"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key":"YGP","name":"🚀┃电影┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 {"key":"IK","name":"🍎iKun┃秒播","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/","categories":["动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","灾难片","犯罪片","悬疑片","惊悚片","奇幻片","冒险片","武侠片","其它片","国产剧","港台剧","日韩剧","欧美剧","香港剧","台湾剧","美国剧","韩国剧","日本剧","泰国剧","港澳剧","日剧","韩剧","泰剧","海外剧","马泰剧","中漫","日漫","动漫","纪录片","动画片","动漫片","国产动漫","港台动漫","日本动漫","海外动漫","日韩动漫","欧美动漫","动漫电影","国内综艺","港台综艺","大陆综艺","日韩综艺","欧美综艺","海外综艺","电影解说"],"searchable":1,"quickSearch":1},
-	
-##OK大佬系列	
-{"key":"天天弹幕版","name":"⛅️┃天天┃采集","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732763753181/okpng.txt;md5;f84a811869dc180c1b2812538d26c7b2"},
-{"key":"华为","name":"🍇┃华为┃秒播","type":1,"api":"https://cjhwba.com/api.php/provide/vod","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732763753181/okpng.txt;md5;f84a811869dc180c1b2812538d26c7b2"},
-{"key":"韩圈","name":"🦄┃韩圈┃秒播","type":3,"api":"csp_HanXiaoQuan","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"timeout":10,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732763753181/okpng.txt;md5;f84a811869dc180c1b2812538d26c7b2"},
-//{"key":"Wexhanjutv","name":"🌺韩剧┃秒播🌺","type":3,"api":"csp_Wexhanjutv","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732460733293/wex.txt;md5;eecfb80a60deb3fc48e1cfc20c2cfb4c"},
-//{"key":"Wexhanxiaoquan","name":"🌺韩圈┃秒播🌺","type":3,"api":"csp_Wexhanxiaoquan","searchable":1,"changeable":1,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732460733293/wex.txt;md5;eecfb80a60deb3fc48e1cfc20c2cfb4c"},
 
 ##爆米花系列
 {"key":"csp_XSX","name":"👀视讯┃1080P","type":3,"searchable":1,"changeable":1,"quickSearch":1,"api":"csp_Xsx","playerType":2,"filterable":1,"ext":"","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732868600931/tounima.jar;md5;859ac4d2f96f5168819e8da09af1207d"},
@@ -298,12 +291,12 @@
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
 {"name": "🧸┃joevess直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/IPTV-GZ/main/iptv.m3u8","playerType":1},
 {"name": "🐌┃chao直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
-{"name": "🍃┃清风直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/清风.m3u8","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name": "🍃┃清风直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/清风.m3u8","playerTyp":1},
 {"name": "🎂┃台湾全频道(VPN)","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/judy.txt","playerType":1},
 {"name": "🐶┃国内外直播频道","type": 0,"url": "https://4708.kstore.space/zhibo/tv.txt","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},	
 {"name": "🎂┃全国IPTV直播","type": 0,"url": "https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
-{"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.xyz/m3u/Live.m3u":1},
+{"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.xyz/m3u/Live.m3u","playerType":1},	
 {"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
 {"name": "🥭┃aktv直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
 {"name": "⚕️┃粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
