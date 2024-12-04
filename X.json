@@ -285,7 +285,7 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🍬┃tang直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/user_result.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🍬┃tang直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/JunTV/master/output/user_result.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐔┃alan秒播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/liveGZ.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🌿┃全港·澳·台·秒播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/hkTVb.txt","playerType":1},
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
