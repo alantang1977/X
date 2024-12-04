@@ -290,6 +290,7 @@
 {"name": "🌿┃全港·澳·台·秒播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/hkTVb.txt","playerType":1},
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
 {"name": "🧸┃joevess直播","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/IPTV-GZ/main/iptv.m3u8","playerType":1},
+{"name": "🍚┃饭太硬","type":0,"url":"http://127.0.0.1:9978/proxy?do=饭太硬&type=liveList","playerType":1,"epg":"http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo":"https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐌┃chao直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🍃┃清风直播","type":0,"url":"https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/清风.m3u8","playerTyp":1},
 {"name": "🎂┃台湾全频道(VPN)","type": 0,"url": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/live/judy.txt","playerType":1},
