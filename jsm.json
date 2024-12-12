@@ -685,6 +685,63 @@
 		}],
 		"lives":[
 			{
+      "name": "肥羊国内直播",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/tv.m3u",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊咪咕电视直播",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/migu.m3u",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊咪咕赛事直播",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/miguevent.m3u",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊TPTV",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/tptv.m3u",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊虎牙一起看",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/huyayqk.m3u?url=http://127.0.0.1:35345",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊B站直播",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/bililive.m3u?url=http://127.0.0.1:35345",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊斗鱼一起看",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/douyuyqk.m3u?url=http://127.0.0.1:35345",
+      "jar": "./fm.jar"
+    },
+    {
+      "name": "肥羊YY轮播",
+      "type": 3,
+      "api": "csp_Feiyang",
+      "ext": "http://127.0.0.1:35345/yylunbo.m3u?url=http://127.0.0.1:35345",
+      "jar": "./fm.jar"
+    },
+
+			{
 				"name": "肥羊国内直播",
 				"type": 0,
 				"url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/tv.m3u",
