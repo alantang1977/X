@@ -9,7 +9,9 @@
 
 所有直接或间接使用本仓库内容的个人和组织，应 24 小时内完成学习和研究，并及时删除本仓库内容。如对本仓库内容的功能有需求，应自行开发相关功能。所有基于本仓库内容的源代码，进行的任何修改，为其他个人或组织的自发行为，与本仓库内容没有任何直接或间接的关系，所造成的一切后果亦与本仓库内容和本仓库管理者无关 :point_left:
 
-# Release
+# Release 应用商店 https://ghp.ci/https://raw.githubusercontent.com/lystv/fmapp/app/yysd.json
+
+
 ## 猫影视（CatVod）IOS：https://github.com/catvod/CatVodOpen/releases
 ## OK版影视APP
 UC盘：https://drive.uc.cn/s/de96fa4eed364
