@@ -689,7 +689,7 @@
       "type": 3,
       "api": "csp_Feiyang",
       "ext": "http://192.168.0.2:35345/tv.m3u",
-      "jar": "./fm.jar"
+      "jar": "https://ghp.ci/https://raw.githubusercontent.com/alantang1977/X/main/jar/fm.jar"
     },
     {
       "name": "肥羊咪咕电视直播",
