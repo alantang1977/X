@@ -2,8 +2,6 @@
 	{"name":"范明明IPV6","url":"http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/ipv6.m3u"},
 	{"name":"肥羊国内直播","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/tv.m3u"},
 	{"name":"肥羊咪咕电视直播","url":"http://127.0.0.1:10079/c/1800/null/http://127.0.0.1:35456/migu.m3u"},
-	{"name":"肥羊咪咕赛事直播","url":"http://127.0.0.1:10079/c/1800/null/http://127.0.0.1:35456/miguevent.m3u"},
-	{"name":"肥羊TX赛事直播","url":"http://127.0.0.1:10079/c/10/null/http://127.0.0.1:35456/txevent.m3u"},
 	{"name":"肥羊TPTV","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/tptv.m3u"},
 	{"name":"肥羊B站直播","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/bililive.m3u"},
 	{"name":"肥羊虎牙一起看","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/huyayqk.m3u"},
