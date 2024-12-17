@@ -285,7 +285,7 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🥭┃IPTV研究所","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/IPTV研究所.m3u","playerType":1},
+{"name": "🥭┃测试IPTV研究所","type": 0,"url": "https://cdn.jsdelivr.net/gh/alantang1977/alantang1977/X@main/live/IPTV研究所.m3u","playerType":1},
 {"name": "🍬┃tang直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/user_result.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.com.mp/m3u/Live.m3u","playerType":1},	
 {"name": "🥎┃jun直播","type": 0,"url": "https://anbox118.us.kg/live","playerType":1},
