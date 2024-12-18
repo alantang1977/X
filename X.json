@@ -286,7 +286,7 @@
 
 "lives": [
 {"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.com.mp/m3u/Live.m3u","playerType":1},	
-//{"name": "🥭┃IPTV研究所","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/IPTV研究所.m3u","playerType":1},
+{"name": "🥭┃IPTV研究所","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/live/live/myiptv.txt","playerType":1},
 {"name": "🍬┃tang直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/user_result.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 //{"name": "🥎┃jun直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/result.m3u","playerType":1},
 {"name": "🍭┃Live肥羊直播","type": 3,"api": "csp_Feiyang","url": "tv.m3u","ext": "https://gh.llkk.cc/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://gh.llkk.cc/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5","jar": "https://gh.llkk.cc/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"},
