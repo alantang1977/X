@@ -16,86 +16,6 @@ Astro iQIYI,http://aktv.top/AKTV/live/aktv3/astroiqiyi/AKTV.m3u8
 Astro千禧经典台,https://www.mytvsuper.us.kg/astro/qianxi/qianxi.m3u8
 Astro天映频道,https://www.mytvsuper.us.kg/astro/tianying/tianying.m3u8
 
-沐辰「源」,#genre#
-
-TNT SPORTS 1,https://tv.doube.eu.org/beesport?pid=1
-TNT SPORTS 2,https://tv.doube.eu.org/beesport?pid=2
-TNT SPORTS 3,https://tv.doube.eu.org/beesport?pid=3
-TNT SPORTS 4,https://tv.doube.eu.org/beesport?pid=4
-SKY SPORTS FOOTBALL,https://tv.doube.eu.org/beesport?pid=5
-SKY SPORTS MAIN EVENT,https://tv.doube.eu.org/beesport?pid=6
-SKY SPORTS PREMIER LEAGUE,https://tv.doube.eu.org/beesport?pid=7
-SKY SPORTS ACTION,https://tv.doube.eu.org/beesport?pid=8
-SKY SPORTS MIX,https://tv.doube.eu.org/beesport?pid=9
-SKY SPORTS ARENA,https://tv.doube.eu.org/beesport?pid=10
-SKY SPORTS NEWS,https://tv.doube.eu.org/beesport?pid=11
-SKY SPORTS CRICKET,https://tv.doube.eu.org/beesport?pid=12
-Sky Sports Tennis,https://tv.doube.eu.org/beesport?pid=13
-SKY SPORTS F1,https://tv.doube.eu.org/beesport?pid=14
-SKY SPORTS GOLF,https://tv.doube.eu.org/beesport?pid=15
-SKY SPORTS RACING,https://tv.doube.eu.org/beesport?pid=16
-BEIN SPORTS USA,https://tv.doube.eu.org/beesport?pid=17
-TENNIS CHANNEL,https://tv.doube.eu.org/beesport?pid=18
-LALIGA TV HD,https://tv.doube.eu.org/beesport?pid=19
-HBO 1,https://tv.doube.eu.org/beesport?pid=20
-HBO 2,https://tv.doube.eu.org/beesport?pid=21
-Discovery Channel,https://tv.doube.eu.org/beesport?pid=22
-Discovery Life,https://tv.doube.eu.org/beesport?pid=23
-Cinemax West,https://tv.doube.eu.org/beesport?pid=24
-Great Movies,https://tv.doube.eu.org/beesport?pid=25
-Sky Cinema Comedy,https://tv.doube.eu.org/beesport?pid=26
-Sky Cinema Family,https://tv.doube.eu.org/beesport?pid=27
-Cartoon Network,https://tv.doube.eu.org/beesport?pid=28
-Virgin 2,https://tv.doube.eu.org/beesport?pid=29
-Virgin 3,https://tv.doube.eu.org/beesport?pid=30
-Virgin 1,https://tv.doube.eu.org/beesport?pid=31
-DAZN,https://tv.doube.eu.org/beesport?pid=32
-Bein Sports English 2,https://tv.doube.eu.org/beesport?pid=33
-SuperSport Premier League,https://tv.doube.eu.org/beesport?pid=34
-SuperSport LaLiga,https://tv.doube.eu.org/beesport?pid=35
-SuperSport Action,https://tv.doube.eu.org/beesport?pid=36
-SuperSport Blitz,https://tv.doube.eu.org/beesport?pid=37
-SuperSport Cricket,https://tv.doube.eu.org/beesport?pid=38
-SuperSport Football,https://tv.doube.eu.org/beesport?pid=39
-SuperSport Golf,https://tv.doube.eu.org/beesport?pid=40
-SuperSport Rugby,https://tv.doube.eu.org/beesport?pid=41
-SuperSport Tennis,https://tv.doube.eu.org/beesport?pid=42
-Variety 1,https://tv.doube.eu.org/beesport?pid=43
-Variety 2,https://tv.doube.eu.org/beesport?pid=44
-Variety 3,https://tv.doube.eu.org/beesport?pid=45
-Variety 4,https://tv.doube.eu.org/beesport?pid=46
-Eurosport 1,https://tv.doube.eu.org/beesport?pid=47
-Eurosport 2,https://tv.doube.eu.org/beesport?pid=48
-Premier Sports 1,https://tv.doube.eu.org/beesport?pid=49
-Premier Sports 2,https://tv.doube.eu.org/beesport?pid=50
-Golf Channel,https://tv.doube.eu.org/beesport?pid=51
-MLB Network,https://tv.doube.eu.org/beesport?pid=52
-NBA TV,https://tv.doube.eu.org/beesport?pid=53
-NFL Network,https://tv.doube.eu.org/beesport?pid=54
-NFL REDZONE,https://tv.doube.eu.org/beesport?pid=55
-NHL Network,https://tv.doube.eu.org/beesport?pid=56
-WWE,https://tv.doube.eu.org/beesport?pid=57
-Willow Cricket,https://tv.doube.eu.org/beesport?pid=58
-Willow Extra,https://tv.doube.eu.org/beesport?pid=59
-World Fishing Network,https://tv.doube.eu.org/beesport?pid=60
-ESPN,https://tv.doube.eu.org/beesport?pid=61
-ESPN 2,https://tv.doube.eu.org/beesport?pid=62
-ESPN News,https://tv.doube.eu.org/beesport?pid=63
-ESPN U,https://tv.doube.eu.org/beesport?pid=64
-ITV 1,https://tv.doube.eu.org/beesport?pid=65
-ITV 2,https://tv.doube.eu.org/beesport?pid=66
-ITV 3,https://tv.doube.eu.org/beesport?pid=67
-ITV 4,https://tv.doube.eu.org/beesport?pid=68
-MUTV,https://tv.doube.eu.org/beesport?pid=69
-LFC TV,https://tv.doube.eu.org/beesport?pid=70
-FOX NEWS,https://tv.doube.eu.org/beesport?pid=71
-ACC Network,https://tv.doube.eu.org/beesport?pid=72
-Fight Network,https://tv.doube.eu.org/beesport?pid=73
-CBS Sports Network,https://tv.doube.eu.org/beesport?pid=74
-CNBC,https://tv.doube.eu.org/beesport?pid=75
-Fox Sports 1,https://tv.doube.eu.org/beesport?pid=76
-Fox Sports 2,https://tv.doube.eu.org/beesport?pid=77
-
 AKTV「免梯」,#genre#
 
 翡翠台,http://aktv.top/AKTV/live/aktv/null/AKTV.m3u8
@@ -871,6 +791,83 @@ iHOT-爱院线,http://45.125.12.19:35455/itv/6000000006000030630.m3u8?cdn=wasusy
 咪咕视频_8M1080_易视腾-4,http://45.125.12.19:35455/itv/1000000006000270004.m3u8?cdn=ystenlive
 咪咕视频_8M1080_易视腾-5,http://45.125.12.19:35455/itv/1000000006000270005.m3u8?cdn=ystenlive
 咪咕视频_8M1080_易视腾-6,http://45.125.12.19:35455/itv/1000000006000270006.m3u8?cdn=ystenlive
+
+台湾频道「🅒」,#genre#
+
+AMC 電影台,http://114.33.60.49:8585/http/61.219.99.20:8092/upload/115/AMC_TS-1111_1.m3u8
+寵物頻道,http://114.33.60.49:8561/http/61.219.99.20:8078/hls/40/80/pettv.m3u8
+緯來育樂HD,http://114.33.60.49:8562/http/61.219.99.20:8081/hls/68/810/ch30.m3u8
+緯來體育HD,http://114.33.60.49:8563/http/61.219.99.20:8081/hls/67/809/ch28.m3u8
+博斯運動一,http://114.33.60.49:8564/http/61.219.99.20:8068/hls/15/80/cstv15.m3u8
+momo綜合台,http://114.33.60.49:8502/http/61.219.99.20:8081/hls/76/818/momo_max.m3u8
+DAZN 1 HD,http://114.33.60.49:8566/http/61.219.99.20:8078/hls/25/80/esport.m3u8
+DAZN 2 HD,http://114.33.60.49:8567/http/61.219.99.20:8078/hls/26/80/esport2.m3u8
+廈門衛視,http://114.33.60.49:8568/http/61.219.99.20:8078/hls/42/80/xmtv.m3u8
+CCTV4-中央衛視,http://114.33.60.49:8569/http/61.219.99.20:8078/hls/42/80/cctv4.m3u8
+海峽衛視,http://114.33.60.49:8580/http/61.219.99.20:8078/hls/42/80/fjttv.m3u8
+浙江衛視,http://114.33.60.49:8571/http/61.219.99.20:8078/hls/41/80/zhejiang.m3u8
+東方衛視,http://114.33.60.49:8572/http/61.219.99.20:8078/hls/41/80/east.m3u8
+湖南衛視,http://114.33.60.49:8573/http/61.219.99.20:8078/hls/41/80/huana.m3u8
+鳯凰衛視資訊,http://114.33.60.49:8576/http/61.219.99.20:8078/hls/20/80/phoenixif.m3u8
+鳯凰衛視中文,http://114.33.60.49:8577/http/61.219.99.20:8078/hls/21/80/phoenixch.m3u8
+台視HD,http://114.33.60.49:8501/http/61.219.99.20:8081/hls/72/814/ch46.m3u8
+中視HD,http://114.33.60.49:8512/http/61.219.99.20:8081/hls/72/814/ch47.m3u8
+華視HD,http://114.33.60.49:8508/http/61.219.99.20:8081/hls/72/814/ch48.m3u8
+民視HD,http://114.33.60.49:8584/http/61.219.99.20:8081/hls/73/815/ch49.m3u8
+公視,http://114.33.60.49:8505/http/61.219.99.20:8081/hls/73/815/ch50.m3u8
+人間衛視,http://114.33.60.49:8517/http/61.219.99.20:8081/hls/69/811/ch36.m3u8
+大愛電視,http://114.33.60.49:8579/http/61.219.99.20:8081/hls/73/815/ch52.m3u8
+好消息GOOD TV,http://114.33.60.49:8586/http/61.219.99.20:8081/hls/74/816/ch53.m3u8
+Trace Sport Stars,http://114.33.60.49:8509/http/61.219.99.20:8078/hls/112/80/tracesport.m3u8
+DISCOVERY,http://114.33.60.49:8510/http/61.219.99.20:8081/hls/71/813/ch44.m3u8
+旅遊生活,http://114.33.60.49:8503/http/61.219.99.20:8081/hls/70/812/ch38.m3u8
+動物星球,http://114.33.60.49:8574/http/61.219.99.20:8081/hls/70/812/ch37.m3u8
+亞洲旅遊,http://114.33.60.49:8511/http/61.219.99.20:8081/hls/76/818/ch61.m3u8
+MOMO親子台,http://114.33.60.49:8514/http/61.219.99.20:8081/hls/90/80/momo5max.m3u8
+東森幼幼HD,http://114.33.60.49:8515/http/61.219.99.20:8081/hls/63/805/ch09.m3u8
+龍華卡通台,http://114.33.60.49:8506/http/61.219.99.20:8068/hls/14/80/cstv14.m3u8
+緯來綜合HD,http://114.33.60.49:8518/http/61.219.99.20:8081/hls/68/810/ch32.m3u8
+八大第一HD,http://114.33.60.49:8519/http/61.219.99.20:8081/hls/66/808/ch22.m3u8
+八大綜合HD,http://114.33.60.49:8520/http/61.219.99.20:8081/hls/66/808/ch21.m3u8
+三立台灣HD,http://114.33.60.49:8521/http/61.219.99.20:8081/hls/65/807/ch20.m3u8
+三立都會HD,http://114.33.60.49:8522/http/61.219.99.20:8081/hls/65/807/ch19.m3u8
+韓國娛樂台,http://114.33.60.49:8523/http/61.219.99.20:8067/hls/105/kmtv.m3u8
+東森綜合HD,http://114.33.60.49:8524/http/61.219.99.20:8081/hls/63/805/ch12.m3u8
+超視HD,http://114.33.60.49:8525/http/61.219.99.20:8081/hls/64/806/ch14.m3u8
+中天綜合HD,http://114.33.60.49:8526/http/61.219.99.20:8081/hls/67/809/ch25.m3u8
+中天娛樂HD,http://114.33.60.49:8527/http/61.219.99.20:8081/hls/67/809/ch26.m3u8
+東風衛視,http://114.33.60.49:8583/http/61.219.99.20:8081/hls/68/810/ch31.m3u8
+MUCH TV,http://114.33.60.49:8529/http/61.219.99.20:8081/hls/72/814/ch45.m3u8
+東森戲劇HD,http://114.33.60.49:8530/http/61.219.99.20:8081/hls/64/806/ch13.m3u8
+八大戲劇HD,http://114.33.60.49:8531/http/61.219.99.20:8081/hls/66/808/ch23.m3u8
+TVBS歡樂HD,http://114.33.60.49:8532/http/61.219.99.20:8081/hls/65/807/ch17.m3u8
+緯來戲劇,http://114.33.60.49:8533/http/61.219.99.20:8081/hls/69/811/ch33.m3u8
+龍華戲劇台,http://114.33.60.49:8528/http/61.219.99.20:8068/hls/13/80/cstv13.m3u8
+龍華日韓劇,http://114.33.60.49:8536/http/61.219.99.20:8068/hls/12/80/cstv12.m3u8
+龍華偶像劇,http://114.33.60.49:8556/http/61.219.99.20:8068/hls/11/80/cstv11.m3u8
+緯來日本HD,http://114.33.60.49:8537/http/61.219.99.20:8081/hls/69/811/ch34.m3u8
+Taiwan Plus,http://114.33.60.49:8538/http/61.219.99.20:8081/hls/61/803/ch03.m3u8
+年代新聞,http://114.33.60.49:8539/http/61.219.99.20:8081/hls/67/809/ch27.m3u8
+東森新聞HD,http://114.33.60.49:8540/http/61.219.99.20:8081/hls/63/805/ch10.m3u8
+中天新聞,http://114.33.60.49:8541/http/61.219.99.20:8081/hls/78/80/ch63max.m3u8
+民視新聞,http://114.33.60.49:8542/http/61.219.99.20:8081/hls/73/815/ch51.m3u8
+三立新聞HD,http://114.33.60.49:8543/http/61.219.99.20:8081/hls/65/807/ch18.m3u8
+TVBS新聞HD,http://114.33.60.49:8587/http/61.219.99.20:8081/hls/75/817/ch59.m3u8
+TVBS HD,http://114.33.60.49:8575/http/61.219.99.20:8081/hls/75/817/ch58.m3u8
+非凡新聞HD,http://114.33.60.49:8544/http/61.219.99.20:8081/hls/75/817/ch57.m3u8
+非凡商業HD,http://114.33.60.49:8545/http/61.219.99.20:8081/hls/74/816/ch56.m3u8
+東森財經HD,http://114.33.60.49:8546/http/61.219.99.20:8081/hls/63/805/ch11.m3u8
+寰宇新聞,http://114.33.60.49:8513/http/61.219.99.20:8081/hls/76/818/ch62.m3u8
+壹新聞,http://114.33.60.49:8548/http/61.219.99.20:8081/hls/66/808/ch24.m3u8
+Bloomberg News,http://114.33.60.49:8551/http/61.219.99.20:8078/hls/43/80/bloomber.m3u8
+NHK世界HD,http://114.33.60.49:8552/http/61.219.99.20:8081/hls/62/804/ch06.m3u8
+鏡電視新聞台,http://114.33.60.49:8553/http/61.219.99.20:8092/upload/114/MNEWS_TS-1111_1.m3u8
+好萊塢電影HD,http://114.33.60.49:8554/http/61.219.99.20:8081/hls/74/816/ch55.m3u8
+緯來電影HD,http://114.33.60.49:8555/http/61.219.99.20:8081/hls/69/811/ch35.m3u8
+龍華電影台,http://114.33.60.49:8560/http/61.219.99.20:8068/hls/10/80/cstv10.m3u8
+HBO,http://114.33.60.49:8557/http/61.219.99.20:8081/hls/71/813/ch41.m3u8
+AXN,http://114.33.60.49:8558/http/61.219.99.20:8081/hls/71/813/ch43.m3u8
+CINEMAX HD,http://114.33.60.49:8559/http/61.219.99.20:8081/hls/71/813/ch42.m3u8
 
 •甘肃「IPV6」,#genre#
 
