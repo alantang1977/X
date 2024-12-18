@@ -299,6 +299,7 @@
 {"name": "🍚┃饭太硬IPV6","type":0,"url":"https://gh.llkk.cc/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "🐌┃chao直播","type":0,"url":"https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🍃┃清风直播","type":0,"url":"https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/main/live/清风.m3u8","playerTyp":1},
+{"name": "🍡┃qinvision直播","type":0,"url":"https://gh.llkk.cc/https://raw.githubusercontent.com/qinvision/Film-Television/main/dujuejiami.txt","playerTyp":1},
 {"name": "🎂┃台湾全频道(VPN)","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/main/live/judy.txt","playerType":1},
 {"name": "🐶┃国内外直播频道","type": 0,"url": "https://4708.kstore.space/zhibo/tv.txt","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},	
