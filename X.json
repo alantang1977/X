@@ -285,9 +285,10 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🥭┃IPTV研究所","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/IPTV研究所.m3u","playerType":1},
+{"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.com.mp/m3u/Live.m3u","playerType":1},	
+//{"name": "🥭┃IPTV研究所","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/IPTV研究所.m3u","playerType":1},
 {"name": "🍬┃tang直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/user_result.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
-{"name": "🥎┃jun直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/result.m3u","playerType":1},
+//{"name": "🥎┃jun直播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/result.m3u","playerType":1},
 {"name": "🍭┃Live肥羊直播","type": 3,"api": "csp_Feiyang","url": "tv.m3u","ext": "https://gh.llkk.cc/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://gh.llkk.cc/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5","jar": "https://gh.llkk.cc/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"},
 {"name": "🐔┃alan秒播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/liveGZ.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🌿┃全港·澳·台·秒播","type": 0,"url": "https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/main/live/hkTVb.txt","playerType":1},
@@ -304,7 +305,6 @@
 {"name": "🐶┃国内外直播频道","type": 0,"url": "https://4708.kstore.space/zhibo/tv.txt","playerType":1},
 {"name": "🎂┃港·澳·台·韩","type": 0,"url": "http://aktv.top/live.txt","playerType":1},	
 {"name": "🎂┃全国IPTV直播","type": 0,"url": "https://ghp.ci/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
-{"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.com.mp/m3u/Live.m3u","playerType":1},	
 {"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
 {"name": "🥭┃aktv直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
 {"name": "⚕️┃粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
