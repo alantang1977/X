@@ -74,7 +74,6 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 # 🍓GitHub Proxy 代理加速 
 
-    https://gitcdn.top/https://github.com/
     https://ghgo.xyz/https://raw.githubusercontent.com/
     https://ghp.ci/https://raw.githubusercontent.com/
     https://gh.llkk.cc/https://raw.githubusercontent.com/
@@ -91,7 +90,30 @@ http://pandown.pro/tvbox/tvbox.json  巧技
     https://ghproxy.net/https://raw.githubusercontent.com/
     https://githubfd.deno.dev/
     https://mirror.ghproxy.com/https://raw.githubusercontent.com/
+    Github RAW 加速服务
+
+    源码 https://gitcdn.top/https://github.com/alantang1977/X/raw/main/X.json
+    香港 https://raw.iqiq.io/alantang1977/X/main/X.json
+    新加坡 https://raw.kgithub.com/
+    日本
+    https://fastly.jsdelivr.net/gh/用户名/项目名@main/源文件.json
+    https://cdn.staticaly.com/gh/
+    https://raw.fastgit.org/
+    韩国
+    https://ghproxy.com/https://raw.githubusercontent.com/
+    https://ghproxy.net/https://raw.githubusercontent.com/
+
+    https://gcore.jsdelivr.net/gh/
+    https://raw.githubusercontents.com/
+
+    Github 静态加速
+    https://cdn.staticaly.com/gh/alantang1977/X/main/X.json
+
+    https://cdn.jsdelivr.net/gh/alantang1977/X/main/X.json
     
+    https://purge.jsdelivr.net/gh/alantang1977/X/main/X.json
+
+
 
 # 🍑电视直播搜索引擎
 
