@@ -109,7 +109,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
     Github 静态加速
     https://cdn.staticaly.com/gh/alantang1977/X/main/X.json
 
-    https://cdn.jsdelivr.net/gh/alantang1977/X/main/X.json
+    https://cdn.jsdelivr.net/gh/alantang1977/X@main/X.json
     
     https://purge.jsdelivr.net/gh/alantang1977/X/main/X.json
 
