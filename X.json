@@ -248,6 +248,7 @@
 {"name": "🦸┃tang直播","type": 0,"url": "https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🍜┃mytvsuper","type": 0,"url": "https://www.mytvsuper.com.mp/m3u/Live.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name": "🌞┃日后港·澳·台","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🥭┃kx2024研究所","type": 0,"url": "http://kxrj.site:55/lib/kx2024.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐏┃Live肥羊直播","type": 3,"api": "csp_Feiyang","url": "tv.m3u","ext": "https://ghproxy.1888866.xyz/raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://ghproxy.1888866.xyz/raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5","jar": "https://ghproxy.1888866.xyz/raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"},
 {"name": "🐔┃alan秒播","type": 0,"url": "https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/liveGZ.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -256,12 +257,9 @@
 {"name": "🧸┃joevess直播","type": 0,"url": "https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/IPTV-GZ/main/iptv.m3u8","playerType":1},
 {"name": "🤡┃NAS肥羊","type":0,"url":"https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/NAS肥羊.m3u","playerType":1,"epg":"http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo":"https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐏┃ssili126直播","type":0,"url":"https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/live/main/itvlist.txt","playerType":1},
-{"name": "🐹┃4GTV","type": 0,"url": "https://tvv.wqwqwq.sbs/iptv.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-
+//{"name": "🐹┃4GTV","type": 0,"url": "https://tvv.wqwqwq.sbs/iptv.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "〽️┃欧歌电视","type": 0,"url": "https://xn--pggp-rp5imh.v.nxog.top/m//tv/","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-{"name": "🌞┃日后电视","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🎥┃YanG直播","type": 0,"url": "https://tv.iill.top/m3u/Live","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-
 {"name": "🍚┃饭太硬IPV4","type":0,"url":"https://ghproxy.1888866.xyz/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/itvlist.txt","playerType":1,"logo":"https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🍚┃饭太硬IPV6","type":0,"url":"https://ghproxy.1888866.xyz/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "🐌┃chao直播","type":0,"url":"https://ghproxy.1888866.xyz/raw.githubusercontent.com/alantang1977/pg/main/live.txt","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
