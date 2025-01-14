@@ -19,7 +19,7 @@ docker镜像拉取: docker pull doubebly/doube-ofiii:latest
 
 docker镜像运行: docker run -d --name=doube-ofiii -p 50002:5000 --restart=always doubebly/doube-ofiii:latest
 
-
+## 构建完成后查看项目详细数据，使用 http://群晖ip:5050/tptv_proxy.m3u?server=群晖ip:8000 即可订阅 TPTV 直播源，其他同理。
 
 访问 http://ip:port/help (示例：http://127.0.0.1:50002/help)，可以看到txt和m3u的订阅链接
 
