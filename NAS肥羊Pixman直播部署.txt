@@ -12,6 +12,18 @@ docker run -d --restart unless-stopped --net=host --privileged=true -p 35455:354
 docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower allinone -c --schedule "0 0 2 * * *"
 
 
+
+IPTV ofiii直播镜像，小白专属 沐晨大佬提供
+
+docker镜像拉取: docker pull doubebly/doube-ofiii:latest
+
+docker镜像运行: docker run -d --name=doube-ofiii -p 50002:5000 --restart=always doubebly/doube-ofiii:latest
+
+
+
+访问 http://ip:port/help (示例：http://127.0.0.1:50002/help)，可以看到txt和m3u的订阅链接
+
+
 IPTV直播 
 http://192.168.0.2:35455/tv.m3u
 http://192.168.0.2:35455/mytvsuper.m3u
