@@ -2,6 +2,7 @@ FinalShell
 
 sudo -i
 
+http://192.168.0.2:5050/tptv_proxy.m3u?server=192.168.0.2:8000
 
 方式运行，不过是allinone的指令了：
 
