@@ -4,9 +4,9 @@
 
 "sites":[
 ##常用系列
+{"key":"瓜子","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":0,"filterable":1,"order_num":0,"changeable":0,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737293598878/0119.jar;md5;bcbb8e59d3125612721142763fb8f8d7"},
 {"key":"csp_SuBaiBai","name":"☁️┃素白白┃秒播","type":3,"api":"csp_SuBaiBai","playerType":2,"ext":"https://subaibai.com/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737293598878/0119.jar;md5;bcbb8e59d3125612721142763fb8f8d7"},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key":"csp_Wwys","name":"👨┃农民┃秒播","type":3,"playerType":2,"changeable":0,"api":"csp_Wwys","ext":"https://www.wwgz.cn/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737293598878/0119.jar;md5;bcbb8e59d3125612721142763fb8f8d7"},
 {"key":"玩偶","name":"🐻┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGG","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🤖┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;c351c4037789aaa72530398dbd255529"},
 {"key":"Mogg","name":"🛒┃UC盘┃木偶哥哥","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://www.muoupan.top/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG","jar":"./pg.jar;md5;c351c4037789aaa72530398dbd255529"},
@@ -25,6 +25,7 @@
 {"key":"YGP","name":"🚀┃电影┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 //{"key":"sghmys","name":"🍬┃唐三┃黑木耳","type":4,"api":"https://tang.hz.cz/power/hme?token=48da13fc","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
 //{"key":"sgabys","name":"🍡┃唐三┃安博","type":4,"api":"https://tang.hz.cz/power/ub18?token=48da13fc","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 0},
+{"key":"csp_Wwys","name":"👨┃农民┃秒播","type":3,"playerType":2,"changeable":0,"api":"csp_Wwys","ext":"https://www.wwgz.cn/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737293598878/0119.jar;md5;bcbb8e59d3125612721142763fb8f8d7"},
 
 ##爆米花系列
 {"key":"csp_Fantuan","name":"🍙饭团┃1080P","type":3,"api":"csp_Fantuan","ext":"","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737293598878/0119.jar;md5;bcbb8e59d3125612721142763fb8f8d7"},
