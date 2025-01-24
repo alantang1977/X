@@ -250,6 +250,7 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
+{"name": "🔢┃测试直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {"name": "🦸┃tang直播","type": 0,"url": "https://ghproxy.cc/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🔢┃Lcuk港·澳·韩·台直播","type":0,"url":"https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/user_result.txt","playerType":1},
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
