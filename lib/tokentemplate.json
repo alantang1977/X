@@ -59,7 +59,7 @@
 "wgcf_vless_protocol":"vless",
 "wgcf_vless_network":"ws",
 "wgcf_vless_tls":false,
-"libxl_url":"./libxl_thunder_sdk.so",
+"libxl_url":"./libxlsdk.tar.xz",
 "youtube_proxy":"proxy",
 "singbox_url":"./sing-box.tar.xz",
 "singbox_subscribe_url":"",
