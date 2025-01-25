@@ -196,6 +196,7 @@
 		{"key":"yydsys","name":"玩你老哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json$$$WNLG"},
 		{"key":"蜡笔网盘","name":"蜡笔|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json$$$LABI"},
 		{"key":"Mogg","name":"木偶哥哥|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://www.mogg.top/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG"},
+		{"key":"Xiaomi","name":"小米|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://www.mucpan.cc/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI"},
 		{"key":"Huban","name":"虎斑|网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60,
 			"ext": "./lib/token.json$$$https://wp.huban.xyz$$$noproxy$$$1$$$./lib/wogg.json$$$U_HUBAN"
 		},
@@ -215,15 +216,15 @@
 		},
 		{"key": "土豆","name": "土豆|网盘","type": 3,"api": "csp_Wobg","searchable": 1,"filterable": 0,"changeable": 1, "timeout":60, "ext":"./lib/tokenm.json$$$https://tudou.lvdoui.top/$$$proxy$$$1$$$./lib/wogg.json$$$TUDOU"},
 		{
-			"key": "小米网盘",
-			"name": "小米|网盘",
+			"key": "至臻|网盘",
+			"name": "至臻|网盘",
 			"type": 3,
 			"api": "csp_Wobg",
 			"quickSearch": 1,
 			"changeable": 1,
 			"filterable": 1,
 			"timeout": 60,
-			"ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI"
+			"ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN"
 		},
 		{"key":"Gaoqing","name":"中国高清网|网盘","type":3,"api":"csp_Gaoqing","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://gaoqing.la/$$$proxy$$$1"},
 		{"key":"Yinfans","name":"音范丝|磁力","type":3,"api":"csp_Gaoqing","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.yinfans.me/$$$proxy$$$1"},
