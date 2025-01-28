@@ -4,6 +4,8 @@
 
 "sites":[
 ##常用系列
+{"key":"豆瓣","name":"🏮┃春节快乐，祝您身体健康，万事如意，财源广进┃🏮","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
+
 {"key":"瓜子","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Gz360","searchable":1,"quickSearch":0,"filterable":1,"order_num":0,"changeable":0,"jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737710777074/012403.jar;md5;11e7f4b3a83620a0b1c31eb7f609aa10"},
 {"key":"csp_SuBaiBai","name":"☁️┃素白白┃秒播","type":3,"api":"csp_SuBaiBai","playerType":2,"ext":"https://subaibai.com/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737710777074/012403.jar;md5;11e7f4b3a83620a0b1c31eb7f609aa10"},
 {"key":"文采","name":"🐠┃文采┃秒播","type":3,"api":"csp_Jpys","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
@@ -23,9 +25,9 @@
 {"key":"贱贱","name":"🐭┃贱贱┃P2P","type":3,"searchable":1,"quickSearch":1,"changeable":1,"playerType":"1","api":"https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js","ext":"https://gitlab.com/fantaiying/ext/-/raw/main/jp.js"},
 {"key":"Xinshijue","name":"✨┃新视觉|网盘","type":3,"api":"csp_Xinshijue","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://6080z.com/$$$noproxy$$$1$$$./lib/wogg.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3"},
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3","style": {"type": "rect","ratio": 1.5}},
-{"key":"豆豆","name":"📱┃豆瓣┃预告","type": 3, "api": "csp_DouDou","searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key":"YGP","name":"🚀┃电影┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 {"key":"csp_Wwys","name":"👨┃农民┃秒播","type":3,"playerType":2,"changeable":0,"api":"csp_Wwys","ext":"https://www.wwgz.cn/","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737710777074/012403.jar;md5;11e7f4b3a83620a0b1c31eb7f609aa10"},
+{"key":"YGP","name":"🚀┃电影┃预告","type":3,"api":"csp_YGP","searchable":0,"quickSearch":0,"changeable":0},
 
 ##爆米花系列
 {"key":"csp_良人","name":"🐼良人┃秒播","type":3,"searchable":1,"quickSearch":1,"api":"csp_MiTuApp","ext":"sHR2rlsfjI4L3t4RXQMkn+pzOh0GsJJgcwHHxDs8FcBDGD81qAZtun78VAJxzshCbStdXIlQiksUvc2b5fXyuxJO9KBNp5LzL/pYLLOs1V3R3WOh90eVpJGxxXWEZtoq+F7Cq4CbQ3J1TTXahpYpeXXeevwPopQutGBNaxYkdBgBL6rCgov0BCUWOXriRXNndZJYNJohfwIzBP+iTuz6C8FWXazDuKfwSS4BfeyQuGM=","jar":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1737710777074/012403.jar;md5;11e7f4b3a83620a0b1c31eb7f609aa10"},
