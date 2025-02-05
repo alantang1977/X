@@ -254,6 +254,7 @@
 "lives": [
 {"name": "🦸┃tang直播","type": 0,"url": "https://ghproxy.cc/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🔢┃Lcuk港·澳·韩·台直播","type":0,"url":"https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/user_result.txt","playerType":1},
+{"name": "🍃┃天天开心","type":0,"url":"http://rihou.cc:55/lib/kx2024.txt","playerType":1},	
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "💘┃Gather港·澳·韩·台直播","type":0,"url":"https://gh.llkk.cc/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/Gather.m3u","playerType":1},
 {"name": "🌞┃日后港·澳·台","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
