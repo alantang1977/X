@@ -72,6 +72,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 # 🍓Github在线加速镜像 
 
+    https://ghfast.top/  
     https://ghproxy.cc/https://raw.githubusercontent.com/
     https://ghfast.top/raw.githubusercontent.com/
     https://ghgo.xyz/https://raw.githubusercontent.com/
