@@ -81,6 +81,7 @@
 {"key":"UCShare","name":"⭕┃UC┃云盘分享","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$./lib/ucshare.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
 {"key":"ThunderShare","name":"⭕┃迅雷┃云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$./lib/thundershare.txt","style": {"type": "list","ratio": 1.1}},
 {"key":"TGYunPan","name":"⭕┃TG搜索┃网盘搜索","type":3,"api":"csp_TGYunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$http://144.126.217.226:8000/$$$hao115,Aliyundrive_Share_Channel,kuakeyun$$$noproxy$$$1"},
+{"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
 {"name": "🦸┃tang直播","type": 0,"url": "https://gh-proxy.com/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
