@@ -49,7 +49,7 @@ http://www.饭太硬.com/tv
 
 http://ok321.top/tv
 
-http://肥猫.com
+http://ceshi.肥猫.com/PandaQ
 
 http://www.mpanso.com/小米/DEMO.json
 
