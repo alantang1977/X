@@ -57,17 +57,6 @@
 			"timeout": 60
 		},
 		{
-			"key": "黑料",
-			"name": "🍱py_黑料",
-			"type": 3,
-			"api": "./py/py_黑料.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},	
-		{
 			"key": "cntv央视",
 			"name": "🦆py_cntv央视",
 			"type": 3,
@@ -111,17 +100,6 @@
 			"filterable": 1,
 			"timeout": 60
 		},
-		{
-			"key": "小红书",
-			"name": "🔥py_小红书",
-			"type": 3,
-			"api": "./py/py_小红书.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},		
 		{
 			"key": "视觉",
 			"name": "🍅py_视觉",
