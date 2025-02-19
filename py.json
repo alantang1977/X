@@ -35,6 +35,72 @@
 			"timeout": 60
 		},
 		{
+			"key": "py_光速",
+			"name": "💡py_光速",
+			"type": 3,
+			"api": "./py/py_光速.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},
+		{
+			"key": "mp",
+			"name": "🐠py_mp",
+			"type": 3,
+			"api": "./py/py_mp.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},	
+		{
+			"key": "hitv",
+			"name": "🎸py_hitv",
+			"type": 3,
+			"api": "./py/py_hitv.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},
+		{
+			"key": "xpg",
+			"name": "🐽py_xpg",
+			"type": 3,
+			"api": "./py/py_xpg.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},	
+		{
+			"key": "剧多短剧",
+			"name": "🎥py_剧多短剧",
+			"type": 3,
+			"api": "./py/py_剧多短剧.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},
+		{
+			"key": "小红书",
+			"name": "🔥py_小红书",
+			"type": 3,
+			"api": "./py/py_小红书.py",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"timeout": 60
+		},		
+		{
 			"key": "视觉",
 			"name": "🍅py_视觉",
 			"type": 3,
@@ -67,128 +133,7 @@
 			"filterable": 1,
 			"timeout": 60
 		},
-		{
-			"key": "浴火社",
-			"name": "🔥py_浴火社",
-			"type": 3,
-			"api": "./py/py_浴火社.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},
-		{
-			"key": "py_光速",
-			"name": "💡py_光速",
-			"type": 3,
-			"api": "./py/py_光速.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},
-		{
-			"key": "小红薯",
-			"name": "🍟py_小红薯",
-			"type": 3,
-			"api": "./py/py_小红薯.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},		
-		{
-			"key": "剧多短剧",
-			"name": "🎥py_剧多短剧",
-			"type": 3,
-			"api": "./py/py_剧多短剧.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},		
-		{
-			"key": "hitv",
-			"name": "🎸py_hitv",
-			"type": 3,
-			"api": "./py/py_hitv.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},		
-		{
-			"key": "lav",
-			"name": "🥁py_lav",
-			"type": 3,
-			"api": "./py/py_lav.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},		
-		{
-			"key": "Xhm",
-			"name": "🐸py_Xhm",
-			"type": 3,
-			"api": "./py/py_Xhm.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},
-		{
-			"key": "mp",
-			"name": "🐠py_mp",
-			"type": 3,
-			"api": "./py/py_mp.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},	
-		{
-			"key": "phu",
-			"name": "🐰py_phu",
-			"type": 3,
-			"api": "./py/py_phu.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},	
-		{
-			"key": "xpg",
-			"name": "🐽py_xpg",
-			"type": 3,
-			"api": "./py/py_xpg.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},	
-		{
-			"key": "emby",
-			"name": "🐼py_emby",
-			"type": 3,
-			"api": "./py/py_emby_proxy.py",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"filterable": 1,
-			"timeout": 60
-		},	
-        {
+                {	
 			"key": "豆瓣",
 			"name": "豆瓣",
 			"type": 3,
