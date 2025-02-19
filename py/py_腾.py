@@ -261,8 +261,9 @@ class Spider(Spider):
     def playerContent(self, flag, id, vipFlags):
         ids = id.split('@')
         url = f"{self.host}/x/cover/{ids[0]}/{ids[1]}.html"
-        return {'parse': 1, 'url': url, 'header': ''}
-
+        parse_url = f"https://jx.xmflv.com/?url={url}"
+        return {'parse': 1, 'url': parse_url, 'header': ''}
+        
     def localProxy(self, param):
         pass
 
