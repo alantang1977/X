@@ -58,7 +58,7 @@
 		},
 		{
 			"key": "cntv央视",
-			"name": "🦆py_cntv央视",
+			"name": "🦆┃CNTV央视┃TV",
 			"type": 3,
 			"api": "./py/py_cntv央视.py",
 			"searchable": 1,
