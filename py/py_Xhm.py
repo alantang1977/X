@@ -213,11 +213,11 @@ class Spider(Spider):
 
     def gethost(self):
         try:
-            response = self.fetch('https://xhamster.com', headers=self.headers, allow_redirects=False)
+            response = self.fetch('http://127.0.0.1:10079/p/0/127.0.0.1:10172/https://xhamster.com', headers=self.headers, allow_redirects=False)
             return response.headers['Location']
         except Exception as e:
             print(f"获取主页失败: {str(e)}")
-            return "https://zn.xhamster.com"
+            return "http://127.0.0.1:10079/p/0/127.0.0.1:10172/https://zn.xhamster.com"
 
     def e64(self, text):
         try:
@@ -263,4 +263,3 @@ class Spider(Spider):
         vhtml = data("script[id='initials-script']").text()
         jst = json.loads(vhtml.split('initials=')[-1][:-1])
         return jst
-
