@@ -1,5 +1,6 @@
 {
 	"spider":"./pg.jar",
+	"wallpaper":"https://深色壁纸.xxooo.cf/","logo":"https://gh.xxooo.cf/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/yellow.gif",
 	"sites":[
 		{
 			"key": "芒",
@@ -1146,7 +1147,4 @@
 		],
 		"parses": [
 		],
-		"flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu"],
-		"wallpaper": "http://饭太硬.top/深色壁纸/api.php",
-		"disabled_wallpaper":"http://www.kf666888.cn/api/tvbox/img"
-}
+		"flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu"]}
