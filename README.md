@@ -14,7 +14,7 @@
 # Github国内代理：https://ghproxy.link/
 
 
-## 猫影视（CatVod）IOS：https://github.com/catvod/CatVodOpen/releases
+## 猫影视（CatPawApp）：https://github.com/CatPawApp/CatPawOpen/releases
 ## OK版影视APP
 UC盘：https://drive.uc.cn/s/de96fa4eed364
 
