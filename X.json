@@ -267,7 +267,6 @@
 {"name": "🐸┃港·澳·韩·台直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
 {"name": "🍃┃天天开心","type":0,"url":"http://rihou.cc:55/lib/kx2024.txt","playerType":1},
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
-{"name": "💘┃Gather港·澳·韩·台直播","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/Gather.m3u","playerType":1},
 {"name": "🌞┃日后港·澳·台","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🔥┃野火港·澳·韩·台直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🍜┃mytv港·澳·韩·台直播","type": 0,"url": "https://7337.kstore.space/twkj/tvzb.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
