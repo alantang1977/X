@@ -11,9 +11,6 @@
 
 # 以上为互联网流传资源，不保证内容的真实性和可靠性。本页面只是收集自用请勿宣传。
 
-# Github国内代理：https://ghproxy.link/
-
-
 ## 猫影视（CatPawApp）：https://github.com/CatPawApp/CatPawOpen/releases
 ## OK版影视APP
 UC盘：https://drive.uc.cn/s/de96fa4eed364
@@ -24,15 +21,11 @@ UC盘：https://drive.uc.cn/s/de96fa4eed364
 迅雷：https://pan.xunlei.com/s/VNpD7k6FLpuz5kIVU1E4Sd9AA1?pwd=mzsc
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
-## iBox影视(IOS)：https://www.123pan.com/s/jYI7Vv-ip9od.html
+
 ## 奥秘博客  https://omii.top/
 
 # 🏂影視TV🏄🏻 
 ![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
-
-免费在线gif制作
-
-https://www.tutieshi.com/
 ----
 
 ## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.com/jm/ 
@@ -67,10 +60,13 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 ![photo_2023-06-05_12-52-28](https://github.com/alantang1977/X/assets/107459091/a5062706-a6e9-4041-a9bf-5800f64efcad)
 ------
+免费在线gif制作
 
+https://www.tutieshi.com/
 ----
 
 # 🍓Github在线加速镜像 
+# Github国内代理：https://ghproxy.link
 
     https://gh.xxooo.cf/https://raw.githubusercontent.com/
     https://ghfast.top/  
