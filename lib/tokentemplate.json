@@ -75,7 +75,7 @@
 "pan115_speed_limit_mobile":10485760,
 "pan115_auto_delete":true,
 "pan115_delete_code":"",
-"pan_order":"ali|quark|uc|115|yd|thunder|pikpak",
+"pan_order":"ali|quark|115|yd|thunder|pikpak",
 "tgsearch_url":"./tgsearch.tar.xz",
 "tgsearch_api_id":"",
 "tgsearch_api_hash":"",
