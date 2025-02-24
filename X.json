@@ -315,7 +315,18 @@
 {"name": "🔢┃测试直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {"name": "🔢┃直播测试","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/gshtwy/MyTv/refs/heads/main/MyTv.m3u","playerType":1}],
 
-"hosts": ["cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com","cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn"
+"hosts": [
+	"cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+	"cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+	"cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+	"cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+	"cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+	"cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
 ],
 
 "parses": [
