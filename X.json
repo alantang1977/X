@@ -268,7 +268,6 @@
 {"name": "🦸┃tang直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐸┃港·澳·韩·台直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
 {"name": "🏮┃Biptv直播","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/biptv.txt","playerType":1},
-{"name": "🐚┃mytvsuper港·澳·韩·台直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/mytvsuper.m3u","playerType":1},
 {"name": "Ⓜ️┃ITV直播","url": "https://ghfast.top/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/itv.txt","playerType":1},
 {"name": "🍃┃天天开心","type":0,"url":"http://rihou.cc:55/lib/kx2024.txt","playerType":1},
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
