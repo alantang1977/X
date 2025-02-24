@@ -268,7 +268,7 @@
 {"name": "🦸┃tang直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🐸┃港·澳·韩·台直播","type": 0,"url": "https://ghfast.top/raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
 {"name": "🏮┃Biptv直播","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/biptv.txt","playerType":1},
-{"name": "Ⓜ️🧧┃ITV直播","url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/itv.json","playerType":1},	
+//{"name": "Ⓜ️🧧┃ITV直播","url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/itv.json","playerType":1},	
 {"name": "🍃┃天天开心","type":0,"url":"http://rihou.cc:55/lib/kx2024.txt","playerType":1},
 {"name": "🐲┃Gather","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🌞┃日后港·澳·台","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -314,16 +314,10 @@
 {"name": "✍️┃全国直播","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🔢┃测试直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {"name": "🔢┃直播测试","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/gshtwy/MyTv/refs/heads/main/MyTv.m3u","playerType":1},	
-{"name": "🐼┃范明明","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "ITV","url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/itv.txt","epg": "http://epg.51zmt.top:8000/e.xml","ua": "okhttp/3.15","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}}],
- "hosts": [
-    "cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-    "cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-    "cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-    "cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-    "cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-    "cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn"
-],
+ "hosts": ["cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn","cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com","cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn"]},
+{"name": "🐼┃范明明","type":0,"url":"https://ghfast.top/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u","playerType":1,"ua":"okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"}
+]
 
 
 "parses": [
