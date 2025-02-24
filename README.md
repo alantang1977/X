@@ -22,7 +22,7 @@ UC盘：https://drive.uc.cn/s/de96fa4eed364
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
-## Ibox https://www.123684.com/s/6ITiVv-zOtU3
+## iBox_2.2.5 https://www.123684.com/s/6ITiVv-zOtU3
 
 ## 奥秘博客  https://omii.top/
 
