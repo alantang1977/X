@@ -748,6 +748,7 @@
 		}
 	],
 		"lives":[
+			{"name": "🧧┃ITV直播","url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/itv.txt","epg": "http://epg.51zmt.top:8000/e.xml","ua": "okhttp/3.15","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
 			{
 				"name": "最强国内直播(合并版)",
 				"type": 0,
