@@ -53,13 +53,6 @@
 {"key":"YiSo","name":"😹┃易搜┃阿狸","type":3,"api":"csp_YiSo","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"PanSou","name":"🦊┃盘搜┃阿狸","type":3,"api":"csp_PanSou","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"PanSearch","name":"🙀┃盘Se┃阿狸","type":3,"api":"csp_PanSearch","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"Gaoqing","name":"⭕┃中国高清网┃网盘","type":3,"api":"csp_Gaoqing","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$https://gaoqing.la/$$$proxy$$$1"},
-{"key":"YunPan","name":"⭕┃云盘资源┃网盘","type":3,"api":"csp_YunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$null$$$proxy$$$1"},
-{"key":"YingSo","name":"⭕┃影搜┃网盘搜索","type":3,"api":"csp_YingSo","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3"},
-{"key":"115Share","name":"⭕┃115┃云盘分享","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$./lib/115share.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
-{"key":"UCShare","name":"⭕┃UC┃云盘分享","type":3,"api":"csp_UCShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$./lib/ucshare.txt$$$db$$$1","style": {"type": "list","ratio": 1.1}},
-{"key":"ThunderShare","name":"⭕┃迅雷┃云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$./lib/thundershare.txt","style": {"type": "list","ratio": 1.1}},
-{"key":"TGYunPan","name":"⭕┃TG搜索┃网盘搜索","type":3,"api":"csp_TGYunPan","timeout":60, "ext":"./lib/tokenm.json","jar":"./pg.jar;md5;c960b63a2b6b7bc177560479d59581f3$$$http://144.126.217.226:8000/$$$hao115,Aliyundrive_Share_Channel,kuakeyun$$$noproxy$$$1"},
 
 ##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布布┃官源","type":3,"api":"https://git.gra.phite.ro/alantang/dr_py/raw/branch/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://git.gra.phite.ro/alantang/dr_py/raw/branch/main/js/布雷蓝光.jsd"},
