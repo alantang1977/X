@@ -13,9 +13,9 @@
 
 ## 猫影视（CatPawApp）：https://github.com/CatPawApp/CatPawOpen/releases
 ## OK版影视APP
-UC盘：https://drive.uc.cn/s/de96fa4eed364
+UC盘：https://drive.uc.cn/s/01bc89c897034
 
-夸克：https://pan.quark.cn/s/3334d8f93c64
+夸克：https://pan.quark.cn/s/6fead79bddaf
 
       https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
 迅雷：https://pan.xunlei.com/s/VNpD7k6FLpuz5kIVU1E4Sd9AA1?pwd=mzsc
