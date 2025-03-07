@@ -6,11 +6,9 @@
 
 "sites":[
 {"key":"豆","name":"🦆豆瓣┃预告片","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
-{"key":"玩偶","name":"👽玩偶哥哥┃4K弹幕","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
+{"key":"玩偶","name":"👽玩偶哥哥┃网盘","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 //{"key":"YGP","name":"🚀叨观荐影┃预告片","type":3,"api":"csp_YGPGuard","searchable":0,"quickSearch":0,"changeable":0},
-{"key":"alllive","name":"📽️一直播┃直播","type":3,"api":"csp_AllliveGuard","playerType":2,"searchable":0,"quickSearch":0,"changeable":0},
-{"key":"抠搜","name":"🍄抠抠┃搜搜","type":3,"api":"csp_KkSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-{"key":"UC","name":"🌈优汐┃搜搜","type":3,"api":"csp_UuSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","pturl":"http://mo.91muou.icu/|http://54271.fun/|http://mo.666291.xyz/"}},
+//{"key":"alllive","name":"📽️一直播┃直播","type":3,"api":"csp_AllliveGuard","playerType":2,"searchable":0,"quickSearch":0,"changeable":0},
 {"key":"原创","name":"☀原创┃不卡","type":3,"api":"csp_YCyzGuard","timeout":15,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"苹果","name":"🍎苹果┃不卡","type":3,"api":"csp_LiteAppleGuard","searchable":1,"quickSearch":1,"changeable":1},
 {"key":"厂长","name":"📔厂长┃不卡","type":3,"api":"csp_NewCzGuard","playerType":2,"searchable":1,"quickSearch":1,"changeable":1,"ext": "https://www.czzyvideo.com/"},
@@ -55,7 +53,8 @@
 {"key":"Aliso","name":"🙀盘搜┃阿狸","type":3,"api":"csp_PanSearchGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"YiSo","name":"😹易搜┃阿狸","type":3,"api":"csp_YiSoGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"🛴手机┃推送","type":3,"api":"csp_PushGuard","searchable":0,"quickSearch":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-
+{"key":"抠搜","name":"🍄抠抠┃搜搜","type":3,"api":"csp_KkSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
+{"key":"UC","name":"🌈优汐┃搜搜","type":3,"api":"csp_UuSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","pturl":"http://mo.91muou.icu/|http://54271.fun/|http://mo.666291.xyz/"}},
 {"key":"Bili","name":"🅱哔哔合集┃弹幕","type": 3,"api": "csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://im.feelec.com.cn/res/file.html?id=2c9a91099293dce40194194e5a5f7474"}},
 {"key":"Biliych","name":"🅱哔哔演唱会┃弹幕","type": 3,"api": "csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://im.feelec.com.cn/res/file.html?id=2c9a91099293dce40194194f4eb2747e"}},
 {"key":"dr_兔小贝","name":"📚儿童┃启蒙","type":3,"api":"https://raw.gitmirror.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js","ext":"https://raw.gitmirror.com/fantaiying7/EXT/refs/heads/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js","style":{"type":"rect","ratio":1.597},"searchable": 0,"quickSearch": 0,"changeable":0},
