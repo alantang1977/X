@@ -77,6 +77,7 @@ https://www.tutieshi.com/
 # 🍓Github在线加速镜像 
 # Github国内代理：https://ghproxy.link
 
+    https://cors.zme.ink/https://raw.githubusercontent.com/
     https://slink.ltd/https://raw.githubusercontent.com/
     https://gh.tryxd.cn/https://raw.githubusercontent.com/
     https://ghproxy.cfd/https:/raw.githubusercontent.com/
