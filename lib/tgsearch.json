@@ -10,10 +10,6 @@
 			"type_name":"片名"
 		},
 		{
-			"type_id":"115.com",
-			"type_name":"115"
-		},
-		{
 			"type_id":"ali",
 			"type_name":"阿里"
 		},
@@ -24,6 +20,14 @@
 		{
 			"type_id":"uc.cn",
 			"type_name":"UC"
+		},
+		{
+			"type_id":"123",
+			"type_name":"123"
+		},
+		{
+			"type_id":"LIST:115,anxia",
+			"type_name":"115"
 		},
 		{
 			"type_id":"pikpak",
