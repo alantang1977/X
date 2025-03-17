@@ -77,7 +77,6 @@
 "pan115_speed_limit_mobile":10485760,
 "pan115_auto_delete":true,
 "pan115_delete_code":"",
-"pan_order":"ali|quark|uc|123|115|yd|thunder|pikpak",
 "tgsearch_url":"./tgsearch.tar.xz",
 "tgsearch_api_id":"",
 "tgsearch_api_hash":"",
@@ -87,7 +86,11 @@
 "tgsearch_api_url":"http://127.0.0.1:10199/",
 "tgsearch_media_url":"http://127.0.0.1:10199/",
 "allinone_url":"./allinone.tar.xz",
+"pan_order":"ali|quark|uc|123|189|115|yd|thunder|pikpak",
 "pan123_username":"",
 "pan123_password":"",
-"pan123_flags":"4kz"
+"pan123_flags":"4kz",
+"pan189_username":"",
+"pan189_password":"",
+"pan189_flags":"4kz"
 }
