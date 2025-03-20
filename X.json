@@ -225,7 +225,7 @@
 	
 {"name": "🐸┃Yuanz港·澳·台直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
-//{"name": "🍵┃Collect-IPTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/zilong7728/Collect-IPTV/refs/heads/main/best_sorted.m3u","playerType":1},
+{"name": "🥨┃lalifeier-IPTV直播","type":0,"url":"https://proxy.lalifeier.eu.org/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u","playerType":1},
 {"name": "👑┃big直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u","playerType":1},
 {"name": "🐻┃CF-IPTV直播","type":0,"url":"https://git.gra.phite.ro/alantang/CF-IPTV/raw/branch/main/allinone.m3u","playerType":1},
 	
