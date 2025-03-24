@@ -47,7 +47,7 @@ jobs:
         
         **IPTV源网址（M3U）** https://ghfast.top/raw.githubusercontent.com/alantang1977/X/main/iptv.m3u
         
-        ![Star History Chart](https://api.star-history.com/svg?repos=alantang1977/iptv)" > READMEbak.md
+        ![Star History Chart](https://api.star-history.com/svg?repos=alantang1977/X)" > READMEbak.md
 
     - name: List files in workspace
       run: ls -la
