@@ -56,7 +56,11 @@ def parse_m3u(content):
     current_program = None
     for line in content.splitlines():
         if line.startswith("#EXTINF"):
-            current_program = re.search(r'tvg-name="([^"]+)"', line).group(1).strip()
+            match = re.search(r'tvg-name="([^"]+)"', line)
+            if match:
+                current_program = match.group(1).strip()
+            else:
+                current_program = None
         elif line.startswith("http") and current_program:
             streams.append({
                 "program_name": current_program,
