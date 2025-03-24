@@ -43,9 +43,9 @@ jobs:
         ### 🎈用法如下
         **安装一个IPTV客户端（其它平台上有相关教程）**
         
-        **IPTV源网址（TXT）** https://ghfast.top/raw.githubusercontent.com/alantang1977/X/main/iptv.txt
+        **IPTV源网址（TXT）** https://ghfast.top/raw.githubusercontent.com/alantang1977/X/main/mytv.txt
         
-        **IPTV源网址（M3U）** https://ghfast.top/raw.githubusercontent.com/alantang1977/X/main/iptv.m3u
+        **IPTV源网址（M3U）** https://ghfast.top/raw.githubusercontent.com/alantang1977/X/main/mytv.m3u
         
         ![Star History Chart](https://api.star-history.com/svg?repos=alantang1977/live)" > READMEbak.md
 
@@ -62,13 +62,13 @@ jobs:
 
     - name: Commit and Push changes
       run: |
-        git add $(pwd)/iptv.txt
-        git add $(pwd)/iptv.m3u
-        git add $(pwd)/READMEbak.md
+        git add $(pwd)/mytv.txt
+        git add $(pwd)/mytv.m3u
+        git add $(pwd)/READMEb.md
         git commit -m "Update on $DATE" --allow-empty
         git push origin main
     - name: Upload streams file
       uses: actions/upload-artifact@v4
       with:
-        name: iptv
-        path: iptv.txt
+        name: mytv
+        path: mytv.txt
