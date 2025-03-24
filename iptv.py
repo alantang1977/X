@@ -20,7 +20,7 @@ ipv6_pattern = re.compile(r'^http://\[([a-fA-F0-9:]+)\]')
 def fetch_streams_from_url(url):
     print(f"正在爬取网站源: {url}")
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=20)
         response.encoding = 'utf-8'
         if response.status_code == 200:
             return response.text
