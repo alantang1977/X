@@ -214,7 +214,8 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType":1},
+//{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🥭┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
 {"name": "🏎️┃A自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u","playerType":1},	
 {"name": "🚗┃B自家源直播","type":0,"url":"https://git.gra.phite.ro/alantang/X/raw/branch/main/live.m3u","playerType":1},
@@ -233,7 +234,7 @@
 {"name": "🍵┃PLTV直播","type":0,"url":"https://codeberg.org/lxxcp/live/raw/branch/main/gsdx.txt","playerType":1},
 {"name": "🏮┃codeberg·IPTV直播","type":0,"url":"https://codeberg.org/sy147258/iptv/raw/branch/main/电视","playerType":1},
 	
-{"name": "🚌┃xhztv直播","type":0,"url":"http://xhztv.top/new.txt","playerType":1},
+{"name": "🚌┃ku9直播","type":0,"url":"https://nft6cf127.serv00.net/ku9.php","playerType":1},
 {"name": "🚎┃xhztv·IPTV直播","type":0,"url":"http://xhztv.top/zbc.txt","playerType":1},
 {"name": "🚍┃kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
 {"name": "🚑┃auto-iptv直播","type":0,"url":"http://47.120.41.246:8899/zb.txt","playerType":1},
