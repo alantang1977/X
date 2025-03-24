@@ -62,9 +62,9 @@ jobs:
 
     - name: Commit and Push changes
       run: |
-        git add $(pwd)/live/iptv.txt
-        git add $(pwd)/live/iptv.m3u
-        git add $(pwd)/live/README.md
+        git add $(pwd)/iptv.txt
+        git add $(pwd)/iptv.m3u
+        git add $(pwd)/READMEbak.md
         git commit -m "Update on $DATE" --allow-empty
         git push origin main
     - name: Upload streams file
