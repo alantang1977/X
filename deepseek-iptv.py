@@ -87,7 +87,7 @@ def organize_streams(content):
     df = pd.DataFrame(parser(content))
     return df.drop_duplicates(subset=['program_name', 'stream_url'])
 
-def save_to_txt(df, filename="iptv.txt"):
+def save_to_txt(df, filename="mytv.txt"):
     categorized = defaultdict(list)
     for _, row in df.iterrows():
         entry = f"{row['program_name']},{row['stream_url']}"
@@ -102,7 +102,7 @@ def save_to_txt(df, filename="iptv.txt"):
     
     print(f"分类文本已保存: {os.path.abspath(filename)}")
 
-def save_to_m3u(df, filename="iptv.m3u"):
+def save_to_m3u(df, filename="mytv.m3u"):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("#EXTM3U\n")
         for category in CATEGORY_RULES:
