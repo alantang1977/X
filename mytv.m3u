@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 分类: 中央频道 (213个频道)
+# 分类: 中央频道 (186个频道)
 #EXTINF:-1 tvg-name="CCTV1",CCTV1
 http://[2409:8087:74d9:21::4]/270000001128/index.m3u8?cmcc_cid=9900000001
 #EXTINF:-1 tvg-name="CCTV1",CCTV1
@@ -373,60 +373,6 @@ http://zb.xzxwhcb.com:9999/hls/world.m3u8
 http://dassby.qqff.top:99/live/高尔夫网球/index.m3u8
 #EXTINF:-1 tvg-name="央视台球",央视台球
 http://183.11.239.36:808/hls/73/index.m3u8
-#EXTINF:-1 tvg-name="CCTV1",CCTV1
-http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226895/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EI0Rkc6neBYgfpoJ1yud8Fw%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPpqgHe3PQ5GNQoO-yUgA8C%2CEND
-#EXTINF:-1 tvg-name="CCTV2",CCTV2
-http://tv.20191209.xyz:37377/migu/631780532.m3u8?migutoken=862217ff2cffee0a741039e700509cb8f9a8b1920fe6cee55afb89ef1551eba3ecc744e93cf8e52cd8b4bf1a27c7a074745b640058072bfa4ad145917cdeb959261218d7b78174684a74ae78
-#EXTINF:-1 tvg-name="CCTV5",CCTV5
-http://tv.20191209.xyz:37377/migu/641886683.m3u8?migutoken=81d12cec2983a402e950068a320720875c9b84d86ead50b7ee5cc3d407f55f3d85a8e298762710bc211027e047162ea27025e20dda4ac4921a6c1d8b950dbe297e15174889d5122c0e3462d0
-#EXTINF:-1 tvg-name="CCTV5+",CCTV5+
-http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226458/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Em70vyfVI_MkrcLYjHWnqOA%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNlS0O1LA8iGydXPYujpRue%2CEND
-#EXTINF:-1 tvg-name="CCTV6",CCTV6
-http://tv.20191209.xyz:37377/migu/624878396.m3u8?migutoken=14b6f481c50ac947cd74bf4b212c490bc99f4bebefd4ce18011c9eb269208a0ce9740af370135e855763df734bac8f57f36721ae54b6afc81829420e84f46c65a2de80938b057c6ec23459eb
-#EXTINF:-1 tvg-name="CCTV7",CCTV7
-http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226234/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EutDC7HLJc_gC0YdIDr7oig%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPOHuulzlCcw92vP3vgYa4n%2CEND
-#EXTINF:-1 tvg-name="CCTV8",CCTV8
-http://tv.20191209.xyz:37377/migu/624878356.m3u8?migutoken=9d347588ab808559db972d3c94b0d970ec130153e4a6dde98c4466f1d3f85f58de23d16994f2f0ed903aa6727a7282cb17103e67b69c8e3f31d253bb78039a4df119e2cfeba6916d123a8003
-#EXTINF:-1 tvg-name="CCTV9",CCTV9
-http://tv.20191209.xyz:37377/migu/673168140.m3u8?migutoken=f031388105c748c586faaad9c60beb6810562043675d6edc5e20d12b433d4ca6cb365c3f3ae060a000a9d0dfcfe0e27fef16bfe073d28cb40758aaa79ab380a9015815cfe9bfc4e6413e284a
-#EXTINF:-1 tvg-name="CCTV10",CCTV10
-http://tv.20191209.xyz:37377/migu/624878405.m3u8?migutoken=06cf776d6a6cbe5cb707174dfad937c2164030bf7ce5f589493870891966f9cdaa5f56bad6e7874d683d5b1e3d9a6e59d0f7c78276d5ec47d979ae42b67833e261a2dda0118f3edcabd6a85b
-#EXTINF:-1 tvg-name="CCTV11",CCTV11
-http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226334/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E0RcQQbNseiHvFO8XWf466A%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 tvg-name="CCTV12",CCTV12
-http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226228/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E2knJCFLHz_HqfBZXNGeA1A%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMIlZ5z7o_ym15iMooogSvj%2CEND
-#EXTINF:-1 tvg-name="CCTV13",CCTV13
-http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226316/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EqHPe9pEEWJ00hz1ArnRZVA%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 tvg-name="CCTV14",CCTV14
-http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226229/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7Ey_UgKg-_uoDiTW1MNHptPg%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNNLabf3bHEXv4444iiOs_Px%2CEND
-#EXTINF:-1 tvg-name="CCTV15",CCTV15
-http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226333/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EWyklhmFh7oMx-lG1tNUcSQ%7EtP4-l0lmSfjwLWEfK_el1vH_mv-s1zo4AQJwdedaVwG9xkuFTDg8J26cwOrNJzn20BErrHdLhuZ9EzLUCD3PMW-OMx4MGteHV2vLeW6BqoY%2CEND
-#EXTINF:-1 tvg-name="CCTV16",CCTV16
-http://[2409:8087:1:20:20::2a]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227002/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EX9goLRw26BM_r54des2PAw%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPt5W7-RovMDpE-7B-0PhHw%2CEND
-#EXTINF:-1 tvg-name="CCTV17",CCTV17
-http://tv.20191209.xyz:37377/migu/673168256.m3u8?migutoken=eb3fbda758006d66837b5b6ef1b7ab6847a99f05f6b3303861d81e6e1335349499a40c8479d9a801327519db10547f9870398da6796159db51812e236c1b6c07d2c0f7e5bc32101c9cc222dc
-#EXTINF:-1 tvg-name="CCTV兵器科技",CCTV兵器科技
-http://61.134.254.90:8001/rtp/226.0.2.223:9696
-#EXTINF:-1 tvg-name="CCTV央视台球",CCTV央视台球
-http://113.234.221.253:4022/rtp/232.0.0.122:9290
-#EXTINF:-1 tvg-name="CCTV女性时尚",CCTV女性时尚
-http://61.134.254.90:8001/rtp/226.0.2.226:9720
-#EXTINF:-1 tvg-name="CCTV怀旧剧场",CCTV怀旧剧场
-http://61.134.254.90:8001/rtp/226.0.2.224:9704
-#EXTINF:-1 tvg-name="CCTV第一剧场",CCTV第一剧场
-http://61.134.254.90:8001/rtp/226.0.2.221:9680
-#EXTINF:-1 tvg-name="CCTV风云剧场",CCTV风云剧场
-http://119.125.134.176:9901/tsfile/live/1042_1.m3u8
-#EXTINF:-1 tvg-name="CCTV风云足球",CCTV风云足球
-http://61.134.254.90:8001/rtp/226.0.2.225:9712
-#EXTINF:-1 tvg-name="CCTV风云音乐",CCTV风云音乐
-http://61.134.254.90:8001/rtp/226.0.2.227:9728
-#EXTINF:-1 tvg-name="CCTV高尔夫球",CCTV高尔夫球
-http://61.134.254.90:8001/rtp/226.0.2.217:9648
-#EXTINF:-1 tvg-name="CCTV电视指南",CCTV电视指南
-http://61.134.254.90:8001/rtp/226.0.2.218:9656
-#EXTINF:-1 tvg-name="CGTN",CGTN
-https://0472.org/hls/cgtn.m3u8
 
 # 分类: 广东频道 (80个频道)
 #EXTINF:-1 tvg-name="广州综合",广州综合
@@ -590,7 +536,7 @@ http://120.198.101.106:9901/tsfile/live/1012_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-name="广州竞赛",广州竞赛
 http://php.jdshipin.com:8880/gztv.php?id=jingsai
 
-# 分类: 港澳台 (41个频道)
+# 分类: 港澳台 (37个频道)
 #EXTINF:-1 tvg-name="香港卫视",香港卫视
 https://piccpndks.v.kcdnvip.com/audio/xianggangweishi_2.m3u8
 #EXTINF:-1 tvg-name="香港卫视",香港卫视
@@ -665,16 +611,8 @@ https://video.mytvsuper.xyz/live/f04bc83119f5799e0233237cd0d19353d7e826a710bfd08
 http://go1.bkpcp.top/tl/null-2
 #EXTINF:-1 tvg-name="杭州明珠",杭州明珠
 http://120.198.101.106:9901/tsfile/live/1008_1.m3u8?key=txiptv
-#EXTINF:-1 tvg-name="凤凰香港",凤凰香港
-http://aktv_stream1.m16tv.cfd/stream/aktv/null-5/AKTV.m3u8
-#EXTINF:-1 tvg-name="明珠台",明珠台
-http://aktv_stream1.m16tv.cfd/stream/aktv/null-2/AKTV.m3u8
-#EXTINF:-1 tvg-name="香港卫视",香港卫视
-http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
-#EXTINF:-1 tvg-name="翡翠剧集台(北美)",翡翠剧集台(北美)
-http://aktv.top/AKTV/live/aktv/null-18/AKTV.m3u8
 
-# 分类: 卫视频道 (368个频道)
+# 分类: 卫视频道 (364个频道)
 #EXTINF:-1 tvg-name="深圳卫视",深圳卫视
 http://[2409:8087:74d9:21::4]/270000001128/index.m3u8?cmcc_cid=9900000529
 #EXTINF:-1 tvg-name="深圳卫视",深圳卫视
@@ -1403,16 +1341,8 @@ http://quan2018.mycloudnas.com:51888/play/a016/index.m3u8
 https://cdn.iptv8k.top/dl/jrys.php?id=21&time=20240926215313&ip=111.229.253.40
 #EXTINF:-1 tvg-name="星空卫视",星空卫视
 http://122.224.58.42:85/tsfile/live/1024_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="江西卫视",江西卫视
-http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226243/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EfPpe3gkzCutYMoqOQQZNzA%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMVuW7agCgULnvgy9rhLyCH%2CEND
-#EXTINF:-1 tvg-name="海南卫视",海南卫视
-http://[2409:8087:1:20:20::29]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226574/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EZOP0PLu1-XG8_Ae0lTe9HQ%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNODcjESMU4f6yMuMuOuQbie%2CEND
-#EXTINF:-1 tvg-name="宁夏卫视",宁夏卫视
-http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226528/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7E9-jWxE6tfiz7aO7MvbCY7Q%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNMi3qn27U9rBeXpVrJ8eLy7%2CEND
-#EXTINF:-1 tvg-name="兵团卫视",兵团卫视
-http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226541/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7ESv-rH0nF41q6pxKZKeRnNA%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNN-56c_rnHTXQA4R-D0Dlau%2CEND
 
-# 分类: 体育 (74个频道)
+# 分类: 体育 (73个频道)
 #EXTINF:-1 tvg-name="江苏体育",江苏体育
 http://api3.52tb.xyz/info?id=455&token=20221127jxwhhemby
 #EXTINF:-1 tvg-name="江苏体育",江苏体育
@@ -1559,8 +1489,6 @@ https://www.freetv.top/migu/796070308.m3u8?migutoken=aef1ffa947e5328dd4ec2bb318b
 https://fmbox.cc/公众号玉玉软件库/tv/migu.php?id=mlzq
 #EXTINF:-1 tvg-name="魅力足球",魅力足球
 http://dassby.qqff.top:99/live/快乐垂钓/index.m3u8
-#EXTINF:-1 tvg-name="五星体育",五星体育
-http://[2409:8087:5e08:24::11]:6610/000000001000/2000000002000000007/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000002000000007
 
 # 分类: 少儿动漫 (96个频道)
 #EXTINF:-1 tvg-name="CN 卡通頻道",CN 卡通頻道
@@ -1756,7 +1684,7 @@ http://124.239.135.194:11080/live/sekj/index.m3u8
 #EXTINF:-1 tvg-name="经典动漫",经典动漫
 http://61.133.118.228:5001/yy/24180320
 
-# 分类: 其他 (1792个频道)
+# 分类: 其他 (1735个频道)
 #EXTINF:-1 tvg-name="4K南国都市频道",4K南国都市频道
 http://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=140110ae3d6c936a77f94c4f4d85b0d3&txTime=18d57929bd4
 #EXTINF:-1 tvg-name="江门综合",江门综合
@@ -5227,117 +5155,3 @@ http://live.iill.top/huya.php?id=23824164
 http://huanqiuzhibo.cn/manifest/huya.php?id=23824164
 #EXTINF:-1 tvg-name="射雕英雄传",射雕英雄传
 http://1.94.31.214:35455/huya/23824164
-#EXTINF:-1 tvg-name="先锋乒羽",先锋乒羽
-http://115.60.241.249:2000/rtp/225.1.4.210:1263
-#EXTINF:-1 tvg-name="凤凰电影",凤凰电影
-http://home.js001.com:7777/stream/channelid/884059847?profile=pass
-#EXTINF:-1 tvg-name="TVB无线新闻",TVB无线新闻
-http://aktv_stream1.m16tv.cfd/stream/aktv/null-1/AKTV.m3u8
-#EXTINF:-1 tvg-name="TVBS新闻",TVBS新闻
-http://aktv_stream1.m16tv.cfd/stream/aktv3/null-2/AKTV.m3u8
-#EXTINF:-1 tvg-name="东森新闻",东森新闻
-http://aktv_stream1.m16tv.cfd/stream/aktv2/null/AKTV.m3u8
-#EXTINF:-1 tvg-name="中天新闻",中天新闻
-http://aktv_stream1.m16tv.cfd/stream/aktv/null-6/AKTV.m3u8
-#EXTINF:-1 tvg-name="民视新闻",民视新闻
-https://iptv.vip-tptv.xyz/litv.php?id=litv-ftv13
-#EXTINF:-1 tvg-name="三立新闻",三立新闻
-https://epg.pw/stream/6b49e3faa38adda85abab446f032dc1e686baa0760a9cfa66e2df8fd6fe3b445.m3u8
-#EXTINF:-1 tvg-name="中视新闻",中视新闻
-http://aktv.top/AKTV/live/aktv/null-10/AKTV.m3u8
-#EXTINF:-1 tvg-name="镜新闻",镜新闻
-https://iptv.vip-tptv.xyz/litv.php?id=4gtv-4gtv075
-#EXTINF:-1 tvg-name="公视",公视
-http://194.87.101.118/live.m3u8?c=8
-#EXTINF:-1 tvg-name="华视新闻",华视新闻
-http://aktv.top/AKTV/live/aktv/null-11/AKTV.m3u8
-#EXTINF:-1 tvg-name="非凡新闻",非凡新闻
-https://iptv.vip-tptv.xyz/litv.php?id=4gtv-4gtv010
-#EXTINF:-1 tvg-name="年代新闻",年代新闻
-http://extraott.com:80/live/7921751389/6097373662/5509.m3u8
-#EXTINF:-1 tvg-name="靖天資訊台",靖天資訊台
-https://iptv.vip-tptv.xyz/litv.php?id=4gtv-4gtv065
-#EXTINF:-1 tvg-name="半岛新闻",半岛新闻
-https://live-hls-aje-ak.getaj.net/AJE/01.m3u8?zshijd
-#EXTINF:-1 tvg-name="NHK東京総合",NHK東京総合
-http://aktv.top/AKTV/live/aktv3/nhk/AKTV.m3u8
-#EXTINF:-1 tvg-name="RT New",RT New
-https://rt-glb.rttv.com/live/rtnews/playlist.m3u8
-#EXTINF:-1 tvg-name="Love_Nature",Love_Nature
-http://aktv_stream1.m16tv.cfd/stream/aktv2/lovenaturehd/AKTV.m3u8
-#EXTINF:-1 tvg-name="Love Pets 🇺🇸",Love Pets 🇺🇸
-https://bit.ly/3uVGkoY?profile=inspirationFreetv.m3u8
-#EXTINF:-1 tvg-name="Tv + Pet 🇧🇷",Tv + Pet 🇧🇷
-https://isaocorp.cloudecast.com/tvmaispet/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="Pet Lovers tv 🇧🇷",Pet Lovers tv 🇧🇷
-https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
-#EXTINF:-1 tvg-name="AXS TV NOW",AXS TV NOW
-https://dikcfc9915kp8.cloudfront.net/hls/1080p/playlist.m3u8
-#EXTINF:-1 tvg-name="AMC电影",AMC电影
-http://61.221.215.25:8800/hls/43/index.m3u8
-#EXTINF:-1 tvg-name="美亚电影台",美亚电影台
-http://aktv_stream1.m16tv.cfd/stream/aktv/hk-1/AKTV.m3u8
-#EXTINF:-1 tvg-name="靖天电影台",靖天电影台
-http://aktv.top/AKTV/live/aktv/null-6/AKTV.m3u8
-#EXTINF:-1 tvg-name="龙华电影台",龙华电影台
-http://aktv.top/AKTV/live/aktv/null-23/AKTV.m3u8
-#EXTINF:-1 tvg-name="纬来电影台",纬来电影台
-https://iptv.vip-tptv.xyz/tv.php?id=3
-#EXTINF:-1 tvg-name="东森电影台",东森电影台
-https://iptv.vip-tptv.xyz/tv.php?id=4
-#EXTINF:-1 tvg-name="东森洋片台",东森洋片台
-https://iptv.vip-tptv.xyz/tv.php?id=5
-#EXTINF:-1 tvg-name="axn",axn
-http://aktv.top/AKTV/live/aktv2/axn/AKTV.m3u8
-#EXTINF:-1 tvg-name="羽球直播",羽球直播
-http://play.cbalive.weibisai.com/live/3848580017390061_AiHD.m3u8?txSecret=dc86d6a7a8fb9326664e28a59d97a4c2&txTime=67E11100
-#EXTINF:-1 tvg-name="羽球直播",羽球直播
-http://play.cbalive.weibisai.com/live/3779448148561061_AiHD.m3u8?txSecret=8f67123284cab39750d0f2b7e8b7e1cc&txTime=676E5E80
-#EXTINF:-1 tvg-name="羽球直播",羽球直播
-http://play.cbalive.weibisai.com/live/3738205416028061_AiHD.m3u8?txSecret=5d3007e91c1c87632e5653a853960a10&txTime=6737D270
-#EXTINF:-1 tvg-name="羽球直播",羽球直播
-http://play.cbalive.weibisai.com/live/3738204362677061_AiHD.m3u8?txSecret=bbb70d7d9704d6be30ebe94e8757a147&txTime=673672E0
-#EXTINF:-1 tvg-name="北京纪实科教",北京纪实科教
-http://[2409:8087:74d9:21::6]:80/270000001128/9900000515/index.m3u8
-#EXTINF:-1 tvg-name="北京IPTV4K",北京IPTV4K
-http://[2409:8087:1:20:20::26]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226550/1.m3u8?GuardEncType=2&accountinfo=~~V2.0~e2qS8h6u-xp3gd50vNr1sw~_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNPPFD3HVWEytEVyliOxehfe%2CEND
-#EXTINF:-1 tvg-name="上海纪实",上海纪实
-http://[2409:8087:74d9:21::6]:80/270000001128/9900000528/index.m3u8
-#EXTINF:-1 tvg-name="全纪实",全纪实
-http://116.231.168.117:4022/udp/239.45.3.135:5140
-#EXTINF:-1 tvg-name="龍華電影台",龍華電影台
-http://aktv.top/AKTV/live/aktv/null-23/AKTV.m3u8
-#EXTINF:-1 tvg-name="靖天電影台",靖天電影台
-http://aktv.top/AKTV/live/aktv/null-6/AKTV.m3u8
-#EXTINF:-1 tvg-name="东方影视",东方影视
-http://[2409:8087:5e08:24::11]:6610/000000001000/2000000002000000013/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000002000000013&IASHttpSessionId=OTT19019320240419154124000281&yang-1989
-#EXTINF:-1 tvg-name="NewTV动作电影",NewTV动作电影
-http://[2409:8087:5e08:24::11]:6610/000000001000/1000000004000018653/1.m3u8?channel-id=ystenlive&Contentid=1000000004000018653&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="NewTV超级电影",NewTV超级电影
-http://[2409:8087:74d9:21::6]:80/270000001128/9900000021/index.m3u8
-#EXTINF:-1 tvg-name="NewTV黑莓电影",NewTV黑莓电影
-http://[2409:8087:5e08:24::11]:6610/000000001000/1000000004000019624/1.m3u8?channel-id=ystenlive&Contentid=1000000004000019624&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="iHot亚洲影院",iHot亚洲影院
-http://[2409:8087:5e08:24::11]:6610/000000001000/2000000004000000006/1.m3u8?channel-id=hnbblive&Contentid=2000000004000000006&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="iHot欧美影院",iHot欧美影院
-http://[2409:8087:5e08:24::11]:6610/000000001000/2000000004000000005/1.m3u8?channel-id=hnbblive&Contentid=2000000004000000005&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="湖南电影",湖南电影
-http://[2409:8087:5e08:24::11]:6610/000000001000/7884242846753128038/1.m3u8?channel-id=hnbblive&Contentid=7884242846753128038&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="精彩影视",精彩影视
-http://[2409:8087:5e08:24::11]:6610/000000001000/6000000006000320630/1.m3u8?channel-id=wasusyt&Contentid=6000000006000320630&livemode=1&stbId=3
-#EXTINF:-1 tvg-name="超级电影",超级电影
-http://[2409:8087:1:20:20::2c]/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226233/1.m3u8?GuardEncType=2&accountinfo=%7E%7EV2.0%7EfPRR4mbRWhkCFuUCVm9THg%7E_eNUbgU9sJGUcVVduOMKhafLvQUgE_zlz_7pvDimJNM4kysjLk_woYMRnu35KtBV%2CEND
-#EXTINF:-1 tvg-name="CHC影迷电影",CHC影迷电影
-http://[2409:8087:3c02:0021:0000:0001:0000:100a]:6410/shandong_cabletv.live.zte.com////CHANNEL00002029/index.m3u8?IASHttpSessionId=
-#EXTINF:-1 tvg-name="CHC动作电影",CHC动作电影
-http://[2409:8087:3c02:0021:0000:0001:0000:100a]:6410/shandong_cabletv.live.zte.com////CHANNEL00002030/index.m3u8?IASHttpSessionId=
-#EXTINF:-1 tvg-name="CHC家庭影院",CHC家庭影院
-http://[2409:8087:3c02:0021:0000:0001:0000:100a]:6410/shandong_cabletv.live.zte.com////CHANNEL00002028/index.m3u8?IASHttpSessionId=
-#EXTINF:-1 tvg-name="求索动物",求索动物
-http://[2409:8087:5e01:24::16]:6610/000000001000/2000000004000000009/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000004000000009&IAS
-#EXTINF:-1 tvg-name="求索纪录",求索纪录
-http://[2409:8087:5e01:24::16]:6610/000000001000/2000000004000000010/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000004000000010&IAS
-#EXTINF:-1 tvg-name="求索科学",求索科学
-http://[2409:8087:5e01:24::16]:6610/000000001000/2000000004000000011/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000004000000011&IAS
-#EXTINF:-1 tvg-name="求索生活",求索生活
-http://[2409:8087:5e01:24::16]:6610/000000001000/2000000004000000008/index.m3u8?stbId=3&livemode=1&HlsProfileId=&channel-id=hnbblive&Contentid=2000000004000000008&IAS
