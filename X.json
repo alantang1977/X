@@ -214,8 +214,8 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType":1},
-//{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
+{"name": "🐶┃jun直播","type": 0,"url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🥭┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
 {"name": "🏎️┃A自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u","playerType":1},	
 {"name": "🚗┃B自家源直播","type":0,"url":"https://git.gra.phite.ro/alantang/X/raw/branch/main/live.m3u","playerType":1},
