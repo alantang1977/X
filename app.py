@@ -194,6 +194,27 @@ def save_m3u(lines, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("\n".join(lines))
 
+def save_txt(lines, filename):
+    """保存为 iptv.txt 格式（格式：分组名称,频道名称,URL）"""
+    with open(filename, 'w', encoding='utf-8') as f:
+        i = 0
+        while i < len(lines):
+            if lines[i].startswith("#EXTINF"):
+                # 提取分组名称
+                group_match = re.search(r'group-title="([^"]+)"', lines[i])
+                group = group_match.group(1) if group_match else ""
+                
+                # 提取频道名称（最后一个逗号后的内容）
+                channel_name = lines[i].split(',')[-1].strip()
+                
+                # 获取URL（确保索引不越界）
+                if i+1 < len(lines):
+                    url = lines[i+1].strip()
+                    f.write(f"{group},{channel_name},{url}\n")
+                i += 2
+            else:
+                i += 1
+
 # ========== 主流程 ==========
 
 def main():
@@ -229,5 +250,10 @@ def main():
     save_m3u(sorted_channels, output_file)
     print(f"✅ 最终合并排序文件已保存为 {output_file}")
 
+    # 新增：保存为iptv.txt格式
+    save_txt(sorted_channels, "iptv.txt")
+    print(f"✅ 新增TXT格式文件已保存为 iptv.txt")
+
 if __name__ == "__main__":
     main()
+[file content end]
