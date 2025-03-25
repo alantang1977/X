@@ -2,17 +2,17 @@
   "lives": [
     {
       "name": "M3U",
-      "url": "https://github.com/live.m3u"
+      "url": "https://myernestlu.github.io/zby.txt"
     },
     {
       "name": "TXT",
-      "url": "https://github.com/live.txt",
+      "url": "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u",
       "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "UA",
-      "url": "https://github.com/live.txt",
+      "url": "https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u",
       "epg": "https://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
@@ -22,7 +22,7 @@
       "name": "Custom",
       "boot": false,
       "pass": true,
-      "url": "https://github.com/live.txt",
+      "url": "https://raw.githubusercontent.com/vamoschuck/TV/main/M3U",
       "epg": "https://epg.112114.xyz/?ch={name}&date={date}&serverTimeZone=Asia/Shanghai",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
       "header": {
@@ -40,18 +40,18 @@
     {
       "name": "JSON",
       "type": 1,
-      "url": "https://github.com/live.json"
+      "url": "https://xxy.free.hr/YIPTV.m3u"
     },
     {
       "name": "Spider-JS",
       "type": 3,
-      "api": "https://github.com/live.js",
+      "api": "https://iptv.228088.xyz/cn.m3u",
       "ext": ""
     },
     {
       "name": "Spider-Python",
       "type": 3,
-      "api": "https://github.com/live.py",
+      "api": "https://testingcf.jsdelivr.net/gh/whpsky/iptv@main/chinatv.m3u",
       "ext": ""
     }
   ],
@@ -66,9 +66,13 @@
   "proxy": [
     "raw.githubusercontent.com"
   ],
-  "hosts": [
-    "cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
-  ],
+"hosts": [
+"cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+ ],
   "ads": [
     "static-mozai.4gtv.tv"
   ]
