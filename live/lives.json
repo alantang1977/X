@@ -19,3 +19,7 @@
 	"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
 	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
 ],
+    "ads": [
+        "static-mozai.4gtv.tv"
+    ]
+}
