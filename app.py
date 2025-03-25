@@ -194,36 +194,42 @@ def save_m3u(lines, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("\n".join(lines))
 
+# ========== 主流程 ==========
 def save_txt(lines, filename):
     """保存为 live.txt 格式（格式：分组名称,频道名称,URL）"""
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             i = 0
+            channel_count = 0  # 频道计数器
             while i < len(lines):
+                # 严格匹配 #EXTINF 行
                 if lines[i].startswith("#EXTINF"):
                     # 提取分组名称
                     group_match = re.search(r'group-title="([^"]+)"', lines[i])
-                    group = group_match.group(1) if group_match else ""
+                    group = group_match.group(1) if group_match else "未知分组"
                     
-                    # 优先使用 tvg-name 作为频道名称，否则取最后一个逗号后的内容
-                    channel_match = re.search(r'tvg-name="([^"]+)"', lines[i])
-                    channel_name = channel_match.group(1).strip() if channel_match else lines[i].split(',')[-1].strip()
+                    # 提取频道名称（兼容含逗号的复杂名称）
+                    channel_name = re.split(r',(?![^"]*\"\,)', lines[i])[-1].strip()
                     
-                    # 获取URL
-                    if i+1 < len(lines):
+                    # 获取URL并校验索引
+                    if i+1 < len(lines) and not lines[i+1].startswith("#"):
                         url = lines[i+1].strip()
                         f.write(f"{group},{channel_name},{url}\n")
+                        channel_count += 1
+                    else:
+                        print(f"⚠️ 第 {i+1} 行URL格式错误，已跳过")
                     i += 2
                 else:
+                    # 跳过非频道行（如#EXTVLCOPT）
                     i += 1
-        print(f"✅ TXT文件 {filename} 已生成，共写入 {(i//2)} 个频道")
+            print(f"✅ 成功写入 {channel_count} 个频道到 {filename}")
     except PermissionError:
-        print(f"❌ 错误：无权限写入文件 {filename}")
+        print(f"❌ 致命错误：无权限写入文件 {filename}")
+        exit(1)
     except Exception as e:
-        print(f"❌ 保存文件时发生未知错误：{str(e)}")
-
-# ========== 主流程 ==========
-
+        print(f"❌ 文件保存失败：{str(e)}")
+        exit(1)
+      
 def main():
     all_processed_m3u = []
 
@@ -257,9 +263,20 @@ def main():
     save_m3u(sorted_channels, output_file)
     print(f"✅ 最终合并排序文件已保存为 {output_file}")
 
-    # 新增：保存为live.txt格式
-    save_txt(sorted_channels, "live.txt")
-    print(f"✅ 新增TXT格式文件已保存为 live.txt")
+    # 新增：在保存前验证数据有效性
+    if len(sorted_channels) == 0:
+        print("❌ 错误：sorted_channels 为空，无法生成文件")
+        exit(1)
+    else:
+        print(f"调试信息：首个频道数据 -> {sorted_channels[0]}")
+
+    # 保存最终文件
+    output_file = "live.m3u"
+    save_m3u(sorted_channels, output_file)
+    print(f"✅ M3U文件已保存为 {output_file}")
+
+    # 保存为TXT格式（增强版）
+    save_txt(sorted_channels, "live.txt") 
 
 if __name__ == "__main__":
     main()
