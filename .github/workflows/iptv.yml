@@ -2,7 +2,7 @@ name: Update-iptv
 
 on:
   schedule:
-    - cron: 0,30 * * * *
+    - cron: '30 5 * * 1,3'
   workflow_dispatch:
 
 permissions:
