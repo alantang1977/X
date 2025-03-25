@@ -1,9 +1,11 @@
 {
-  "lives": [
+"lives": [
 {"name": "LITV直播(python)","type": 3,"api": "https://gh-proxy.com/https://raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_litv.py","ext": {"proxy": {"http": "http://127.0.0.1:10809","https": "http://127.0.0.1:10809"}},
 {"name": "金星","url": "file://tvbus/jx1.txt","epg":"https://diyp100.112114.xyz/?ch={name}&date={date}""logo": "https://epg.v1.mk/logo/{name}.png""core": {"auth": "https://sgla.googlejt.com/v1/auth","name": "08a77819f9b7","pass": "1742653607661","sign": "163428eb20fa4b27","pkg": "com.yby.v11.singapore.tv","so": "file://tvbus/joy.so"}},
 {"name":"国内Live","type":0,"url":"http://127.0.0.1:9978/proxy?do=live&url=https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1740592110565/zq.fif.txt","playerType":2,"timeout":10,"catchup":{"type":"append","source":"&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
-{"name":"国内移动","type":0,"url":"http://127.0.0.1:9978/proxy?do=live&url=https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1739616589773/zq.txt","playerType":2,"timeout":10,"catchup":{"type":"append","source":"&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}}}
+{"name":"国内移动","type":0,"url":"http://127.0.0.1:9978/proxy?do=live&url=https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1739616589773/zq.txt","playerType":2,"timeout":10,"catchup":{"type":"append","source":"&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}}},
+{"name": "Gather.电视直播","type": 0,"url": "https://tv.iill.top/m3u/Gather","ua": "okhttp/3.15","epg": "http://epg.51zmt.top:8000/e.xml","logo": "https://epg.112114.xyz/logo/{name}.png"}, 
+{"name": "PixMan.4GTV","type": 0,"url": "https://myernestlu.github.io/zby.txt","ua": "okhttp/3.15","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"}  
 ],
 
 "hosts": [
@@ -19,7 +21,7 @@
 	"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
 	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
 ],
-    "ads": [
+"ads": [
         "static-mozai.4gtv.tv"
-    ]
-}
+    ],
+
