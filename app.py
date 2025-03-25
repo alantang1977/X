@@ -39,19 +39,19 @@ sort_order = ["收藏频道", "央视频道", "卫视频道", "其他频道", "�
 m3u_list = [
     {"name": "aktv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "big", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "日后", "url": "https://codeberg.org/alantang/MyIPTV/raw/branch/main/MyOg.txt", "ua": "okhttp/4.12.0"},
+    {"name": "big", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/live-ok.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "日后", "url": "https://codeberg.org/alantang/Mylive/raw/branch/main/MyOg.txt", "ua": "okhttp/4.12.0"},
     {"name": "top", "url": "http://tot.totalh.net/tttt.txt", "ua": "okhttp/4.12.0"},
-    {"name": "zbds", "url": "https://live.zbds.top/tv/iptv6.txt", "ua": "okhttp/4.12.0"},
+    {"name": "zbds", "url": "https://live.zbds.top/tv/live6.txt", "ua": "okhttp/4.12.0"},
     {"name": "weidonglong", "url": "http://ww.weidonglong.com/dsj.txt", "ua": "okhttp/4.12.0"},
     {"name": "jundie", "url": "http://home.jundie.top:81/Cat/tv/live.txt", "ua": "okhttp/4.12.0"},
-    {"name": "MyIPTV", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt", "ua": "okhttp/4.12.0"},
+    {"name": "Mylive", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/Mylive/master/黑龙江PLTV移动CDN版.txt", "ua": "okhttp/4.12.0"},
     {"name": "kstore", "url": "https://7337.kstore.space/twkj/tvzb.txt", "ua": "okhttp/4.12.0"},  
-    {"name": "Kimentanm", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "Chinese", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "Kimentanm", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/live.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "Chinese", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-live/master/TV-IPV4.m3u", "ua": "okhttp/4.12.0"},
     {"name": "kimwang1978", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt", "ua": "okhttp/4.12.0"},
     {"name": "mylist", "url": "https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-CU-ipv6.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "Gather", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt", "ua": "okhttp/4.12.0"},
+    {"name": "Gather", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/live-api/gd/output/result.txt", "ua": "okhttp/4.12.0"},
     # 可以继续增加
 ]
 
@@ -195,7 +195,7 @@ def save_m3u(lines, filename):
         f.write("\n".join(lines))
 
 def save_txt(lines, filename):
-    """保存为 iptv.txt 格式（格式：分组名称,频道名称,URL）"""
+    """保存为 live.txt 格式（格式：分组名称,频道名称,URL）"""
     with open(filename, 'w', encoding='utf-8') as f:
         i = 0
         while i < len(lines):
@@ -250,9 +250,9 @@ def main():
     save_m3u(sorted_channels, output_file)
     print(f"✅ 最终合并排序文件已保存为 {output_file}")
 
-    # 新增：保存为iptv.txt格式
-    save_txt(sorted_channels, "iptv.txt")
-    print(f"✅ 新增TXT格式文件已保存为 iptv.txt")
+    # 新增：保存为live.txt格式
+    save_txt(sorted_channels, "live.txt")
+    print(f"✅ 新增TXT格式文件已保存为 live.txt")
 
 if __name__ == "__main__":
     main()
