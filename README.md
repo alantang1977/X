@@ -11,8 +11,6 @@
 
 # 以上为互联网流传资源，不保证内容的真实性和可靠性。本页面只是收集自用请勿宣传。
 
-直播源汇总：https://www.juwanhezi.com/more/live
-
 ## OK版影视APP
 UC盘：https://drive.uc.cn/s/01bc89c897034
 
@@ -58,6 +56,51 @@ https://jm.dovxi.repl.co/api?url=https://download.kstore.space/download/3313/app
 https://www.123pan.com/s/alSeVv-lGO0A.html  香雅情 (https://already.free.hr/Vivo-Max/XYQTVBox/main/XYQTVBox.json)
 
 http://pandown.pro/tvbox/tvbox.json  巧技
+
+# 直播源汇总：https://www.juwanhezi.com/more/live
+
+# 国内直播源：https://myernestlu.github.io/zby.txt
+# 纯 IPv4 源
+      百视通源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u
+      重庆广电源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/cqyx.m3u
+      阳泉广电源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/yqgd.m3u
+      河北广电源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/hbgd.m3u
+      国内4K/8K源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u
+      zbefine源：https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u
+      茶客源：https://raw.githubusercontent.com/vamoschuck/TV/main/M3U
+      YueChan：https://testingcf.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u
+# 直链：
+    https://xxy.free.hr/YIPTV.m3u
+    https://iptv.228088.xyz/cn.m3u
+    https://testingcf.jsdelivr.net/gh/whpsky/iptv@main/chinatv.m3u
+# 部分 IPv4、部分 IPv6 源
+    BigBigGrandG源，有部分IPv6：https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u
+    Kimentanm源，有部分IPv6：https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+    YanG集合源，有部分IPv6：https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+    范明明直播源，有部分IPv6：https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/v6.m3u
+# 纯 IPv6 源,范明明直播源，纯IPv6源
+    https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
+    范明明直播源国内镜像加速地址：https://live.fanmingming.cn/tv/m3u/ipv6.m3u
+    YueChan 直播源，纯 IPv6：https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
+    whpsky 源，纯 IPv6：https://raw.githubusercontent.com/whpsky/iptv/main/chinatv.m3u
+    ZhangHongGuang源，纯IPv6：https://raw.githubusercontent.com/zhanghongguang/zhanghongguang.github.io/main/IPV6_IPTV.m3u
+    https://gitee.com/xxy002/zhiboyuan/raw/master/dsy（央视频道、卫视频道、港澳台、数字电视、动漫）
+# 部分海外源
+    中国大陆频道：https://epg.pw/test_channels.m3u
+    香港频道：https://epg.pw/test_channels_hong_kong.m3u
+    澳门频道：https://epg.pw/test_channels_macau.m3u
+    台湾频道：https://epg.pw/test_channels_taiwan.m3u
+    台湾频道：https://iptv-org.github.io/iptv/countries/tw.m3u
+    新加坡频道：https://epg.pw/test_channels_singapore.m3u
+    马来西亚频道：https://epg.pw/test_channels_malaysia.m3u
+# 其他       
+    YanG: https://yang-1989.eu.org/m3u/Gather
+    https://iptv-org.github.io/iptv/index.m3u
+    https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8
+    https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8
+    https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8
+    # F1TV IPTV源 （仅比赛期间有信号）
+    https://mashaf1.cn/F1.m3u
 
 📄在线M3U转TXT：
 
