@@ -39,6 +39,12 @@ jobs:
           echo "文件未生成"
           exit 1
         fi
+        if [ -f "live.txt" ]; then
+          echo "live.txt 文件已生成"
+        else
+          echo "live.txt 文件未生成"
+          exit 1
+        fi
 
     # 使用 curl 下载内容，并在第 1 到第 3 行插入指定说明文字
     - name: Insert lines on line 1 和 2 和 3
