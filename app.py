@@ -196,24 +196,31 @@ def save_m3u(lines, filename):
 
 def save_txt(lines, filename):
     """保存为 live.txt 格式（格式：分组名称,频道名称,URL）"""
-    with open(filename, 'w', encoding='utf-8') as f:
-        i = 0
-        while i < len(lines):
-            if lines[i].startswith("#EXTINF"):
-                # 提取分组名称
-                group_match = re.search(r'group-title="([^"]+)"', lines[i])
-                group = group_match.group(1) if group_match else ""
-                
-                # 提取频道名称（最后一个逗号后的内容）
-                channel_name = lines[i].split(',')[-1].strip()
-                
-                # 获取URL（确保索引不越界）
-                if i+1 < len(lines):
-                    url = lines[i+1].strip()
-                    f.write(f"{group},{channel_name},{url}\n")
-                i += 2
-            else:
-                i += 1
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            i = 0
+            while i < len(lines):
+                if lines[i].startswith("#EXTINF"):
+                    # 提取分组名称
+                    group_match = re.search(r'group-title="([^"]+)"', lines[i])
+                    group = group_match.group(1) if group_match else ""
+                    
+                    # 优先使用 tvg-name 作为频道名称，否则取最后一个逗号后的内容
+                    channel_match = re.search(r'tvg-name="([^"]+)"', lines[i])
+                    channel_name = channel_match.group(1).strip() if channel_match else lines[i].split(',')[-1].strip()
+                    
+                    # 获取URL
+                    if i+1 < len(lines):
+                        url = lines[i+1].strip()
+                        f.write(f"{group},{channel_name},{url}\n")
+                    i += 2
+                else:
+                    i += 1
+        print(f"✅ TXT文件 {filename} 已生成，共写入 {(i//2)} 个频道")
+    except PermissionError:
+        print(f"❌ 错误：无权限写入文件 {filename}")
+    except Exception as e:
+        print(f"❌ 保存文件时发生未知错误：{str(e)}")
 
 # ========== 主流程 ==========
 
