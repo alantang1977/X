@@ -7,21 +7,24 @@
 {"name": "Gather.电视直播","type": 0,"url": "https://tv.iill.top/m3u/Gather","ua": "okhttp/3.15","epg": "http://epg.51zmt.top:8000/e.xml","logo": "https://epg.112114.xyz/logo/{name}.png"}, 
 {"name": "PixMan.4GTV","type": 0,"url": "https://myernestlu.github.io/zby.txt","ua": "okhttp/3.15","epg": "http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"}  
 ],
-
-"hosts": [
-	"cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-	"cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-	"cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-	"cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-	"cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
-	"cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+  "proxy": [
+    "raw.githubusercontent.com"
+  ],
+  "hosts": [
+"cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+"cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+"cache.ott.wasulive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+"cache.ott.hnbblive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+"cache.ott.*.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.fifalive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
+"cache.ott.ystenlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
 ],
-"ads": [
-        "static-mozai.4gtv.tv"
-    ],
-
+  "ads": [
+    "static-mozai.4gtv.tv"
+  ]
+}
