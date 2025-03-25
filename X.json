@@ -262,6 +262,14 @@
 //{"name": "🥎┃ibert-iptv直播","type": 0,"url": "https://m3u.ibert.me/txt/j_iptv.txt","playerType":1},
 {"name": "😎┃aktv直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
 
+{"name": "🛍️┃1直播","type": 0,"url": "https://myernestlu.github.io/zby.txt","playerType":1},
+{"name": "🛍️┃2直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u","playerType":1},
+{"name": "🛍️┃3直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/vamoschuck/TV/main/M3U","playerType":1},
+{"name": "🛍️┃4直播","type": 0,"url": "https://epg.pw/test_channels_hong_kong.m3u","playerType":1},
+{"name": "🛍️┃5直播","type": 0,"url": "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy","playerType":1},
+{"name": "🛍️┃6直播","type": 0,"url": "https://epg.pw/test_channels.m3u","playerType":1},
+{"name": "🛍️┃7直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8","playerType":1},
+	
 {"name": "⚕️┃iptv粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
 {"name": "🐰┃wwb521粤港澳","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1},
 {"name": "🐹┃中央卫视","type": 0,"url": "https://json.doube.eu.org/live/migu/Sub.php","playerType":1},
