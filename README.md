@@ -16,12 +16,11 @@ UC盘：https://drive.uc.cn/s/01bc89c897034
 
 夸克：https://pan.quark.cn/s/6fead79bddaf
 
-      https://pan.quark.cn/s/3334d8f93c64#/list/share/da5ffe96a7bb45e9aaee577366afe357-OK%E7%8C%AB%E5%BD%B1
 迅雷：https://pan.xunlei.com/s/VNpD7k6FLpuz5kIVU1E4Sd9AA1?pwd=mzsc
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
-## 解密链接：https://www.xn--sss604efuw.com/jm/ 
+## 🚁解密链接：https://www.xn--sss604efuw.com/jm/  https://tools.v1.mk/
 
 http://www.饭太硬.com/tv
 
