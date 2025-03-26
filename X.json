@@ -217,6 +217,7 @@
 {"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "🐶┃jun直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/Alan_result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🥭┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
+{"name": "🍔┃IPTV_auto直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV/main/live_ipv6.m3u","playerType":1},		
 {"name": "🎏┃台湾LITV直播","type": 3,"api": "https://gh-proxy.com/https://raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_litv.py","ext": {"proxy": {"http": "http://127.0.0.1:10809","https": "http://127.0.0.1:10809"}}},
 {"name": "🏎️┃A自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u","playerType":1},	
 {"name": "🚗┃B自家源直播","type":0,"url":"https://git.gra.phite.ro/alantang/X/raw/branch/main/live.m3u","playerType":1},
@@ -224,7 +225,7 @@
 {"name": "🚕┃D自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/live/main/live.txt","playerType":1},
 {"name": "🚜┃E自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/live/main/mylive.txt","playerType":1},
 {"name": "🪂┃F自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/mytv.m3u","playerType":1},
-{"name": "🍔┃G自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV/main/live_ipv4.m3u","playerType":1},	
+
 //{"name": "📢┃联合直播","type": 0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/user_result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 	
 {"name": "🐸┃Yuanz港·澳·台直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
