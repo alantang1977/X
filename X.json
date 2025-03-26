@@ -225,7 +225,7 @@
 {"name": "🚜┃E自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/live/main/mylive.txt","playerType":1},
 {"name": "🍕┃F自家源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/mytv.m3u","playerType":1},
 
-{"name": "📢┃联合直播","type": 0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/YoutubeTV/main/self.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "📢┃联合直播","type": 0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/YoutubeTV/main/YoutubeTV.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 	
 {"name": "🐸┃Yuanz港·澳·台直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u","playerType":1},
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
