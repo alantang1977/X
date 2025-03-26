@@ -21,9 +21,11 @@ UC盘：https://drive.uc.cn/s/01bc89c897034
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
-## iBox_2.2.6 https://www.123684.com/s/6ITiVv-zOtU3
+## 解密链接：https://www.xn--sss604efuw.com/jm/ 
 
-## 奥秘博客  https://omii.top/
+http://www.饭太硬.com/tv
+
+http://www.mpanso.com/小米/DEMO.json
 
 # 🏂影視TV🏄🏻 
 ![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
