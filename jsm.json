@@ -95,7 +95,19 @@
 				"ratio": 1.1
 			}
 		},
-		{"key":"115Share","name":"115云盘分享","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json$$$./lib/115share.txt$$$db$$$1",
+		{"key":"123Share","name":"123云盘分享","type":3,"api":"csp_P123Share","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json$$$./lib/123share.txt$$$db$$$1",
+			"style": {
+				"type": "list",
+				"ratio": 1.1
+			}
+		},
+		{"key":"189Share","name":"189云盘分享","type":3,"api":"csp_P189Share","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json$$$./lib/189share.txt$$$db$$$1",
+			"style": {
+				"type": "list",
+				"ratio": 1.1
+			}
+		},
+		{"key":"ThunderShare","name":"迅雷云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/thundershare.txt",
 			"style": {
 				"type": "list",
 				"ratio": 1.1
@@ -107,7 +119,7 @@
 				"ratio": 1.1
 			}
 		},
-		{"key":"ThunderShare","name":"迅雷云盘分享","type":3,"api":"csp_ThunderShare","searchable":1,"quickSearch":0, "changeable":0, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/thundershare.txt",
+		{"key":"115Share","name":"115云盘分享","type":3,"api":"csp_P115Share","searchable":1,"quickSearch":1, "changeable":0, "filterable":0, "timeout":120, "ext":"./lib/tokenm.json$$$./lib/115share.txt$$$db$$$1",
 			"style": {
 				"type": "list",
 				"ratio": 1.1
@@ -206,7 +218,7 @@
 				"ratio": 1.1
 			}
 		},
-		{"key":"Leijing","name":"雷鲸|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://leijing.xyz/$$$noproxy$$$1$$$LEIJING",
+		{"key":"Leijing","name":"雷鲸|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://leijing.xyz/$$$noproxy$$$1$$$./lib/leijing.txt$$$LEIJING",
 			"style": {
 				"type": "list",
 				"ratio": 1.1
@@ -284,7 +296,7 @@
 				"ratio": 1.1
 			}
 		},
-		{"key":"Panta","name":"盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1",
+		{"key":"Panta","name":"盘Ta|网盘","type":3,"api":"csp_Panta","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1$$$./lib/panta.txt$$$PANTA",
 			"style": {
 				"type": "list",
 				"ratio": 1.1
@@ -784,14 +796,6 @@
 				
 				"ua": "okhttp/3.15",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date=DATE6SUB",
-				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-			},
-			{
-				"name": "肥羊MG赛事直播",
-				"type": 0,
-				"url": "http://127.0.0.1:10079/c/60/null/http://127.0.0.1:35456/miguevent.m3u",
-				"ua": "okhttp/3.15",
-				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
 			},
 			{
