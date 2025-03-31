@@ -215,7 +215,7 @@
 "lives": [
 {"name": "🦸┃tang直播","type": 0,"url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u","playerType":1},
 {"name": "🎂┃Itv直播","type": 0,"url": "https://git.gra.phite.ro/alantang/itv/raw/branch/main/tv.m3u","playerType":1},
-	
+{"name": "🥨┃pxiptv直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u","playerType":1},	
 {"name": "🐶┃jun直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/Alan_result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🥭┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
 {"name": "🍔┃IPTV_auto直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV/main/live_ipv4.m3u","playerType":1},		
