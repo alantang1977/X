@@ -13,15 +13,15 @@ DELETE_CHARS = ["iHOT-", "NewTV-", "SiTV-", "-HEVC", "-50-FPS", "-高码", "-4K"
 GROUP_ORDER = ["收藏频道", "央视频道", "卫视频道", "其他频道", "地方频道"]
 
 M3U_SOURCES = [
-    {"name": "aktv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/main/output/result.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "aktv", "url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "big", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
     {"name": "xhztv", "url": "http://xhztv.top/new.txt", "ua": "okhttp/4.12.0"},
     {"name": "top", "url": "http://tot.totalh.net/tttt.txt", "ua": "okhttp/4.12.0"},
     {"name": "zbds", "url": "https://live.zbds.top/tv/iptv6.txt", "ua": "okhttp/4.12.0"},
     {"name": "野火", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/main/野火959", "ua": "okhttp/4.12.0"},
     {"name": "jundie", "url": "http://home.jundie.top:81/Cat/tv/live.txt", "ua": "okhttp/4.12.0"},
-    {"name": "MyIPTV", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt", "ua": "okhttp/4.12.0"}
+    {"name": "MyIPTV", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv6.m3u", "ua": "okhttp/4.12.0"}
 ]
 
 # ================== 核心功能 ==================
