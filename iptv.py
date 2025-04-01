@@ -4,7 +4,7 @@ import re
 import os
 
 urls = [
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u",
+    "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt",
     "http://rihou.cc:55/lib/kx2024.txt",
     "http://aktv.space/live.m3u",
