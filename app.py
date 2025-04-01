@@ -14,6 +14,7 @@ GROUP_ORDER = ["收藏频道", "央视频道", "卫视频道", "其他频道", "
 
 M3U_SOURCES = [
     {"name": "aktv", "url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "mytv", "url": "http://rihou.cc:55/lib/kx2024.txt", "ua": "okhttp/4.12.0"}, 
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
     {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
     {"name": "xhztv", "url": "http://xhztv.top/new.txt", "ua": "okhttp/4.12.0"},
