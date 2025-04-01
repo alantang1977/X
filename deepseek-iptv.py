@@ -16,12 +16,9 @@ CATEGORY_RULES = {
 }
 
 urls = [
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt",
     "http://rihou.cc:55/lib/kx2024.txt",
     "http://aktv.space/live.m3u",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959",
-    "https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u",
+    "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959",   
     "https://codeberg.org/lxxcp/live/raw/branch/main/gsdx.txt",  
     "https://live.zbds.top/tv/iptv6.txt",
     "https://live.zbds.top/tv/iptv4.txt",
