@@ -62,6 +62,8 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 
 # IPTV直播源地址：https://iptv.hacks.tools/
 
+# IPTV直播：https://live.izbds.com/
+
 # 国内直播源：https://myernestlu.github.io/zby.txt
 # 纯 IPv4 源
       百视通源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u
