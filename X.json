@@ -214,7 +214,10 @@
 
 "lives": [
 {"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
-{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt","playerType":1},	
+{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt","playerType":1},
+	
+{"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u","playerType":1},	
+	
 {"name": "🎂┃Itv直播","type": 0,"url": "https://git.gra.phite.ro/alantang/itv/raw/branch/main/tv.m3u","playerType":1},
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
 {"name": "🥨┃pxiptv直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u","playerType":1},	
