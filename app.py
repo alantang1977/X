@@ -13,14 +13,14 @@ GROUP_ORDER = ["收藏频道", "央视频道", "卫视频道", "其他频道", "
 
 M3U_SOURCES = [
     {"name": "aktv", "url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "mytv", "url": "https://codeberg.org/sy147258/iptv/raw/branch/main/电视", "ua": "okhttp/4.12.0"},
+    {"name": "mytv", "url": "https://git.gra.phite.ro/alantang/CF-IPTV/raw/branch/main/allinone.m3u", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
     {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "xhztv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/hjdhnx/hipy-sniffer/refs/heads/main/static/lives/lives.txt", "ua": "okhttp/4.12.0"},
+    {"name": "xhztv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/qingtingjjjjjjj/iptv-auto-update/main/my.txt", "ua": "okhttp/4.12.0"},
     {"name": "top", "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/4.12.0"},
-    {"name": "zbds", "url": "https://live.zbds.top/tv/iptv6.txt", "ua": "okhttp/4.12.0"},
-    {"name": "野火", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/main/野火959", "ua": "okhttp/4.12.0"},
-    {"name": "jundie", "url": "http://home.jundie.top:81/Cat/tv/live.txt", "ua": "okhttp/4.12.0"},
+    {"name": "zbds", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "Collect", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "jundie", "url": "https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u", "ua": "okhttp/4.12.0"},
     {"name": "MyIPTV", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv6.m3u", "ua": "okhttp/4.12.0"}
 ]
 
