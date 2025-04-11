@@ -17,7 +17,7 @@ M3U_SOURCES = [
     {"name": "mytv", "url": "https://codeberg.org/sy147258/iptv/raw/branch/main/电视", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
     {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "xhztv", "url": "http://xhztv.top/new.txt", "ua": "okhttp/4.12.0"},
+    {"name": "xhztv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Meroser/IPTV/refs/heads/main/IPTV-demo.m3u", "ua": "okhttp/4.12.0"},
     {"name": "top", "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/4.12.0"},
     {"name": "zbds", "url": "https://live.zbds.top/tv/iptv6.txt", "ua": "okhttp/4.12.0"},
     {"name": "野火", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/main/野火959", "ua": "okhttp/4.12.0"},
