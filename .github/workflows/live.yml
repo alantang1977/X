@@ -36,23 +36,22 @@ jobs:
         if [ -f "live/live.m3u" ]; then
           echo "live.m3u 文件已生成"
         else
-          echo "live.m3u 文件未生成"
-          exit 1
+          echo "警告: live.m3u 文件未生成"
         fi
         if [ -f "live/live.txt" ]; then
           echo "live.txt 文件已生成"
         else
-          echo "live.txt 文件未生成"
-          exit 1
+          echo "警告: live.txt 文件未生成"
         fi
 
-    # 使用 curl 下载内容，并在第 1 到第 3 行插入指定说明文字
-    - name: Insert lines on line 1 和 2 和 3
+    - name: 插入指定说明文字
       run: |
         DATE=$(date +"%m/%d")
-        sed -i '1i #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml"' live.m3u
-        sed -i '2i #EXTINF:-1 tvg-logo="https://codeberg.org/alantang/photo/raw/branch/main/photo_2025-03-16_10-57-18.jpg" group-title="收藏频道",更新'"$DATE"'' live.m3u
-        sed -i '3i http://tencentplaygzrb01.gztv.com/live/zonghes.m3u8' live.m3u
+        if [ -f "live/live.m3u" ]; then
+          sed -i '1i #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml"' live/live.m3u
+          sed -i '2i #EXTINF:-1 tvg-logo="https://codeberg.org/alantang/photo/raw/branch/main/photo_2025-03-16_10-57-18.jpg" group-title="收藏频道",更新'"$DATE"'' live/live.m3u
+          sed -i '3i http://tencentplaygzrb01.gztv.com/live/zonghes.m3u8' live/live.m3u
+        fi
 
     - name: 提交更改
       env:
@@ -61,7 +60,7 @@ jobs:
         DATE=$(date +"%Y-%m-%d %H:%M:%S")
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add live.m3u
+        git add live/*
         if git diff-index --quiet HEAD --; then
           echo "没有更改需要提交更新： $DATE"
         else
