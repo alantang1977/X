@@ -140,7 +140,8 @@ def main():
         channels = parse_m3u(content)
         processed = []
         for ch in channels:
-            if cleaned_meta := process_channel(ch["meta"]):
+            # 修复: 检查 "meta" 键是否存在
+            if "meta" in ch and (cleaned_meta := process_channel(ch["meta"])):
                 processed.append({"meta": cleaned_meta, "url": ch["url"]})
         
         all_channels.extend(processed)
