@@ -37,7 +37,7 @@ def robust_download(url, ua, max_retries=3):
             if attempt == max_retries - 1:
                 print(f"❌ 无法下载: {url}. 错误: {str(e)}")
                 return None
-            print(f"正在重试 {url} (第 {attempt + 1} 次)")
+            print(f"正在重试 {url} (第 {attempt+1} 次)")
 
 def process_channel(line):
     if any(f'group-title="{g}"' in line for g in DELETE_GROUPS):
@@ -56,9 +56,9 @@ def process_channel(line):
 
     for char in DELETE_CHARS:
         line = line.replace(char, "")
-
+    
     line = re.sub(r'cctv-?', 'CCTV', line, flags=re.IGNORECASE)
-
+    
     return line
 
 def parse_m3u(content):
@@ -96,24 +96,21 @@ def generate_m3u_output(channels):
     return "\n".join(output)
 
 def generate_txt_output(channels):
-    group_dict = defaultdict(list)
+    """
+    Generates a plain text output for the given channels.
+    Each channel will be written in the format: "Channel Name: URL".
+    """
+    output_lines = []
     for channel in channels:
-        if match_name := re.search(r'tvg-name="([^"]+)"', channel["meta"]):
-            channel_name = match_name.group(1)
+        # Extract channel name from metadata
+        if match := re.search(r'tvg-name="([^"]+)"', channel["meta"]):
+            channel_name = match.group(1)
         else:
             channel_name = "Unknown Channel"
-        if match_group := re.search(r'group-title="([^"]+)"', channel["meta"]):
-            group_name = match_group.group(1)
-        else:
-            group_name = "Unknown Group"
-        group_dict[group_name].append(f"{channel_name}: {channel['url']}")
-
-    output_lines = []
-    for group, channel_list in group_dict.items():
-        output_lines.append(f"{group}:")
-        for channel in channel_list:
-            output_lines.append(f"  {channel}")
-        output_lines.append("")
+        
+        # Append formatted line to output
+        output_lines.append(f"{channel_name}: {channel['url']}")
+    
     return "\n".join(output_lines)
 
 def save_file(content, filename):
@@ -132,20 +129,21 @@ def save_file(content, filename):
 
 def main():
     all_channels = []
-
+    
     print("开始下载和处理数据源...")
     for source in M3U_SOURCES:
         content = robust_download(source["url"], source["ua"])
         if not content:
             print(f"[×] {source['name']} 无法处理，跳过")
             continue
-
+        
         channels = parse_m3u(content)
         processed = []
         for ch in channels:
-            if cleaned_meta := process_channel(ch["meta"]):
+            # 修复: 检查 "meta" 键是否存在
+            if "meta" in ch and (cleaned_meta := process_channel(ch["meta"])):
                 processed.append({"meta": cleaned_meta, "url": ch["url"]})
-
+        
         all_channels.extend(processed)
         print(f"[✓] {source['name']} 处理完成 ({len(processed)} 频道)")
 
@@ -159,9 +157,8 @@ def main():
 
     txt_content = generate_txt_output(all_channels)
     save_file(txt_content, "live.txt")
-
+    
     print(f"\n处理完成！有效频道总数: {len(all_channels)}")
 
 if __name__ == "__main__":
     main()
-    
