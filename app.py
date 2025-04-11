@@ -3,6 +3,7 @@ import requests
 import os
 from collections import defaultdict
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 # ================== 配置区域 ==================
 # 需要删除的分组 (这些分组下的频道会被过滤)
@@ -19,7 +20,7 @@ M3U_SOURCES = [
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
     {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
     {"name": "xhztv", "url": "http://xhztv.top/new.txt", "ua": "okhttp/4.12.0"},
-    {"name": "top", "url": "http://tot.totalh.net/tttt.txt", "ua": "okhttp/4.12.0"},
+    {"name": "top", "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/4.12.0"},
     {"name": "zbds", "url": "https://live.zbds.top/tv/iptv6.txt", "ua": "okhttp/4.12.0"},
     {"name": "野火", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/main/野火959", "ua": "okhttp/4.12.0"},
     {"name": "jundie", "url": "http://home.jundie.top:81/Cat/tv/live.txt", "ua": "okhttp/4.12.0"},
@@ -28,6 +29,8 @@ M3U_SOURCES = [
 
 # 最大响应时间（秒），超过此时间的频道将被视为异常
 MAX_RESPONSE_TIME = 5
+# 线程池最大工作线程数
+MAX_WORKERS = 10
 
 # ================== 核心功能 ==================
 def robust_download(url, ua, max_retries=3):
@@ -100,15 +103,17 @@ def measure_response_time(url, ua):
 
 
 def sort_channels_by_response_time(channels):
-    sorted_channels = []
-    for channel in channels:
+    def measure_and_sort(channel):
         url = channel["url"]
         ua = M3U_SOURCES[0]["ua"]  # 假设所有源使用相同的UA
         response_time = measure_response_time(url, ua)
-        if response_time < MAX_RESPONSE_TIME:
-            sorted_channels.append((response_time, channel))
-    sorted_channels.sort(key=lambda x: x[0])
-    return [channel for _, channel in sorted_channels]
+        return response_time, channel
+
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        results = list(executor.map(measure_and_sort, channels))
+    valid_results = [result for result in results if result[0] < MAX_RESPONSE_TIME]
+    valid_results.sort(key=lambda x: x[0])
+    return [channel for _, channel in valid_results]
 
 
 def generate_m3u_output(channels):
