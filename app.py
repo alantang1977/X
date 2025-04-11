@@ -95,6 +95,24 @@ def generate_m3u_output(channels):
             output.append(item["url"])
     return "\n".join(output)
 
+def generate_txt_output(channels):
+    """
+    Generates a plain text output for the given channels.
+    Each channel will be written in the format: "Channel Name: URL".
+    """
+    output_lines = []
+    for channel in channels:
+        # Extract channel name from metadata
+        if match := re.search(r'tvg-name="([^"]+)"', channel["meta"]):
+            channel_name = match.group(1)
+        else:
+            channel_name = "Unknown Channel"
+        
+        # Append formatted line to output
+        output_lines.append(f"{channel_name}: {channel['url']}")
+    
+    return "\n".join(output_lines)
+
 def save_file(content, filename):
     live_folder = 'live'
     if not os.path.exists(live_folder):
