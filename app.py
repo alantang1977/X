@@ -159,10 +159,11 @@ def generate_txt_output(channels):
 def save_file(content, filename):
     """通用文件保存函数"""
     # 创建 live 文件夹，如果不存在
-    if not os.path.exists('live'):
-        os.makedirs('live')
+    live_folder = 'live'
+    if not os.path.exists(live_folder):
+        os.makedirs(live_folder)
+    file_path = os.path.join(live_folder, filename)
     try:
-        file_path = os.path.join('live', filename)
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"✅ 成功生成 {file_path} 文件")
@@ -206,4 +207,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()    
