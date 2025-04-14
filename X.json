@@ -219,6 +219,7 @@
 {"name": "🪂┃IPTV_SuperB直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperB/refs/heads/main/output/live_ipv4.m3u","playerType":1},	
 {"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u","playerType":1},	
 {"name": "🛺┃IPTV-Playlist直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-Playlist/main/live.m3u","playerType":1},	
+{"name": "🥎┃IPTV_SuperD直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_SuperD/refs/heads/dist/live.m3u","playerType":1},
 	
 {"name": "🎂┃Itv直播","type": 0,"url": "https://git.gra.phite.ro/alantang/itv/raw/branch/main/tv.m3u","playerType":1},
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
