@@ -40,6 +40,7 @@
 {"key":"新6V","name":"🧲新6V┃磁力","type":3,"api":"csp_SixVGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": "https://www.xb6v.com/"},
 
 ##PY源系列
+{"key": "零度","name": "🐼┃零度影视┃TV","type": 3,"api": "./py/零度影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "芒","name": "🥭┃百忙无果┃TV","type": 3,"api": "./py/py_芒.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "腾","name": "🐧┃腾云驾雾┃TV","type": 3,"api": "./py/py_腾.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "爱","name": "🥝┃奇珍异兽┃TV","type": 3,"api": "./py/py_爱.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
