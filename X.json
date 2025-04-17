@@ -41,7 +41,7 @@
 
 ##PY源系列
 {"key": "爱瓜","name": "👲┃爱瓜影视┃TV","type": 3,"api": "./py/爱瓜TV.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
-{"key": "魔方","name": "🦐┃魔方影视┃TV","type": 3,"api": "https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/app/魔方影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
+{"key": "魔方","name": "🦐┃魔方影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/app/魔方影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "小苹果","name": "🍎┃小苹果┃TV","type": 3,"api": "./py/小苹果.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "胖虎","name": "📺┃胖虎影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/app/胖虎APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "边缘","name": "🍨┃边缘影视┃TV","type": 3,"api": "./py/边缘影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
