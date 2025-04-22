@@ -18,6 +18,7 @@
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a","style": {"type": "rect","ratio": 1.5}},
 
 ##PY源系列
+{"key": "奇迹","name": "🍵┃奇迹影视┃TV","type": 3,"api": "./py/奇迹APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "爱瓜","name": "👲┃爱瓜影视┃TV","type": 3,"api": "./py/爱瓜TV.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "恋鱼","name": "🐠┃恋鱼影视┃TV","type": 3,"api": "./py/恋鱼影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "苹果","name": "🍎┃小小苹果┃TV","type": 3,"api": "./py/小苹果.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
