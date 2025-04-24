@@ -2,6 +2,7 @@
 
 	{"name":"范明明IPV6","url":"http://127.0.0.1:10079/c/3600/proxy/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u"},
 	{"name":"最强国内直播","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/tv.m3u"},
+	{"name":"PandaGo投屏直播接收记录","url":"http://127.0.0.1:10079/dlnam3u/tv.m3u"},
 	{"name":"肥羊咪咕直播","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/migu.m3u"},
 	{"name":"肥羊B站直播","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/bililive.m3u"},
 	{"name":"肥羊虎牙一起看","url":"http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35456/huyayqk.m3u"},
