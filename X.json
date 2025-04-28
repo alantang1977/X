@@ -229,7 +229,8 @@
 
 "lives": [
 {"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
-{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/live_ipv4.m3u","playerType":1},	
+{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/live_ipv4.m3u","playerType":1},
+{"name": "🥮┃666直播","type": 0,"url": "http://api.mytv666.top/lives/free.php?type=txt","playerType":1},
 {"name": "🪂┃IPTV_SuperB直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperB/refs/heads/main/output/live_ipv4.m3u","playerType":1},	
 {"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/refs/heads/main/output/result.m3u","playerType":1},	
 {"name": "🛺┃IPTV-Playlist直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-Playlist/main/live.m3u","playerType":1},	
