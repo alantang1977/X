@@ -24,9 +24,6 @@
   </a>
 </p>
 
-[English](./README_en.md) | 中文
-
-
 # 🦁Tang介绍
 <br>
 
