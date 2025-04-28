@@ -1,8 +1,36 @@
-# 🦁Tang介绍
+<div align="center">
+  <img src="./Pictures/Chao%2B.png" alt="logo"/>
+  <h1 align="center">IPTV-API</h1>
+</div>
 
-### :kiss:FongMi影视、TVBox、猫影视配置文件。所有资源均来自于各路大神无私分享，如有侵权，请联系删除。
-:point_right:所有以任何方式查看本仓库内容的人、或直接或间接使用本仓库内容的使用者都应仔细阅读此声明。本仓库管理者保留随时更改或补充此免责声明的权利。一旦使用、复制、修改了本仓库内容，则视为您已接受此免责声明。<br>
-## 免责声明
+<div align="center">💋FongMi影视、TVBox、猫影视配置文件。所有资源均来自于各路大神无私分享，如有侵权，请联系删除。
+👉所有以任何方式查看本仓库内容的人、或直接或间接使用本仓库内容的使用者都应仔细阅读此声明。本仓库管理者保留随时更改或补充此免责声明的权利。一旦使用、复制、修改了本仓库内容，则视为您已接受此免责声明。</div>
+<br>
+<p align="center">
+  <a href="https://github.com/alantang1977/X/releases">
+    <img src="https://img.shields.io/github/v/release/alantang1977/X" />
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/python-%20%3D%203.13-47c219" />
+  </a>
+  <a href="https://github.com/alantang1977/X/releases">
+    <img src="https://img.shields.io/github/downloads/alantang1977/X/total" />
+  </a>
+  <a href="https://hub.docker.com/repository/docker/alantang1977/X">
+    <img src="https://img.shields.io/docker/pulls/alantang1977/X" />
+  </a>
+  <a href="https://github.com/alantang1977/X/fork">
+    <img src="https://img.shields.io/github/forks/alantang1977/X" />
+  </a>
+</p>
+
+[English](./README_en.md) | 中文
+
+
+# 🦁Tang介绍
+<br>
+
+免责声明
 📛本仓库管理者不能保证本仓库内容的合法性、准确性、完整性和有效性，请根据情况自行判断。本仓库内容，仅用于测试和学习研究，禁止用于商业用途，不得将其用于违反国家、地区、组织等的法律法规或相关规定的其他用途，禁止任何公众号、自媒体进行任何形式的转载、发布，请不要在中华人民共和国境内使用本仓库内容，否则后果自负。<br>
 
 本仓库内容中涉及的第三方硬件、软件等，与本仓库内容没有任何直接或间接的关系。本仓库内容仅对部署和使用过程进行客观描述，不代表支持使用任何第三方硬件、软件。使用任何第三方硬件、软件，所造成的一切后果由使用的个人或组织承担，与本仓库内容无关。<br>
