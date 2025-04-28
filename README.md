@@ -16,8 +16,8 @@
   <a href="https://github.com/alantang1977/X/releases">
     <img src="https://img.shields.io/github/downloads/alantang1977/X/total" />
   </a>
-  <a href="https://hub.docker.com/repository/docker/alantang1977/X">
-    <img src="https://img.shields.io/docker/pulls/alantang1977/X" />
+  <a href="https://github.com/alantang1977/X">
+    <img src="https://img.shields.io/github/stars/alantang1977/X" />
   </a>
   <a href="https://github.com/alantang1977/X/fork">
     <img src="https://img.shields.io/github/forks/alantang1977/X" />
