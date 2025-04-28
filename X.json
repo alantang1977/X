@@ -307,6 +307,16 @@
 {"name": "✍️┃qingwen07直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🔢┃serv00直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {
+    "name": "4GTV - 台湾",
+    "url": "docker.livednow.dpdns.org/?type=m3u",
+    "ua": "judy/5.2.1"
+  },
+  {
+    "name": "香港视频 - 安卓",
+    "url": "https://smart.pendy.dpdns.org/m3u/MytvSuper.m3u",
+    "ua": "judy/5.2.1"
+  },
+	{
             "name": "鲍鱼",
             "type": 0,
             "url": "http://lisha521.dynv6.net.fh4u.org/tv.txt",
