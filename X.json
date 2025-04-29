@@ -18,9 +18,6 @@
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a","style": {"type": "rect","ratio": 1.5}},
 
 ##PY源系列
-{"key": "奇迹","name": "🍵┃奇迹影视┃TV","type": 3,"api": "./py/奇迹APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
-{"key": "爱瓜","name": "👲┃爱瓜影视┃TV","type": 3,"api": "./py/爱瓜TV.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
-{"key": "恋鱼","name": "🐠┃恋鱼影视┃TV","type": 3,"api": "./py/恋鱼影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "苹果","name": "🍎┃小小苹果┃TV","type": 3,"api": "./py/小苹果.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "火车","name": "🚂┃火车太顺┃TV","type": 3,"api": "./py/火车太顺APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "边缘","name": "🍨┃边缘影视┃TV","type": 3,"api": "./py/边缘影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
@@ -29,7 +26,13 @@
 {"key": "云速","name": "🏍️┃云速影视┃TV","type": 3,"api": "./py/云速影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "若惜","name": "👲┃若惜追剧┃TV","type": 3,"api": "./py/若惜追剧APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "悠悠","name": "🎯┃悠悠影视┃TV","type": 3,"api": "./py/悠悠APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
+{"key": "金牌","name": "🏅┃金牌影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/html/金牌.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
+{"key": "LIVE","name": "▶️┃LIVES直播┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/html/LIVES.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
+
 {"key": "美帕","name": "✂️┃美帕影视┃TV","type": 3,"api": "./py/美帕APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
+{"key": "奇迹","name": "🍵┃奇迹影视┃TV","type": 3,"api": "./py/奇迹APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
+{"key": "爱瓜","name": "👲┃爱瓜影视┃TV","type": 3,"api": "./py/爱瓜TV.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
+{"key": "恋鱼","name": "🐠┃恋鱼影视┃TV","type": 3,"api": "./py/恋鱼影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "芒","name": "🥭┃百忙无果┃TV","type": 3,"api": "./py/py_芒.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "腾","name": "🐧┃腾云驾雾┃TV","type": 3,"api": "./py/py_腾.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "爱","name": "🥝┃奇珍异兽┃TV","type": 3,"api": "./py/py_爱.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
