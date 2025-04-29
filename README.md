@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./Pictures/Chao%2B.png" alt="logo"/>
+  <img src="./Pictures/107459091.jpg" alt="logo"/>
   <h1 align="center">IPTV-API</h1>
 </div>
 
