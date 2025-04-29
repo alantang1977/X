@@ -238,7 +238,7 @@
 {"name": "🥮┃666直播","type": 0,"url": "http://api.mytv666.top/lives/free.php?type=txt","playerType":1},
 {"name": "🪂┃IPTV_SuperB直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperB/refs/heads/main/output/live_ipv4.m3u","playerType":1},	
 {"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/refs/heads/main/output/result.m3u","playerType":1},	
-{"name": "🛺┃IPTV-Playlist直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-Playlist/main/live.m3u","playerType":1},	
+//{"name": "🛺┃IPTV-Playlist直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-Playlist/main/live.m3u","playerType":1},	
 {"name": "🥎┃IPTV_SuperD直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_SuperD/refs/heads/dist/live.m3u","playerType":1},
 {"name": "🐮┃牛牛直播","type" : 0,"url" : "https://web.banye.tech:7777/tv/hlj.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🐝┃蜜蜂直播","type" : 0,"url" : "https://iptv.catvod.com/tv.m3u","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
