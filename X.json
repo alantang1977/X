@@ -287,7 +287,7 @@
 {"name": "🧸┃CCSH直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/CCSH/IPTV/main/live.txt","playerType":1},
 {"name": "🐏┃ssili126直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt","playerType":1},
 {"name": "〽️┃欧歌电视","type": 0,"url": "https://xn--pggp-rp5imh.v.nxog.top/m//tv/","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-{"name": "🎂┃全国IPTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
+{"name": "🎂┃suxuang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
 //{"name": "😎┃aktv直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
 {"name": "😎┃咪咕直播","type": 0,"url": "https://yun.urldwz.com/f/Q6y3ca/migu.m3u","timeout": 10},
 {"name": "🛍️┃myernestlu直播","type": 0,"url": "https://myernestlu.github.io/zby.txt","playerType":1},
