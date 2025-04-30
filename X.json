@@ -288,7 +288,7 @@
 {"name": "🐏┃ssili126直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt","playerType":1},
 {"name": "〽️┃欧歌电视","type": 0,"url": "https://xn--pggp-rp5imh.v.nxog.top/m//tv/","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🎂┃suxuang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
-//{"name": "😎┃aktv直播","type": 0,"url": "https://aktv.top/live.m3u","playerType":1},
+{"name": "👟┃iptv365直播","type": 0,"url": "https://live.iptv365.org/live.txt","playerType":1},
 {"name": "😎┃咪咕直播","type": 0,"url": "https://yun.urldwz.com/f/Q6y3ca/migu.m3u","timeout": 10},
 {"name": "🛍️┃myernestlu直播","type": 0,"url": "https://myernestlu.github.io/zby.txt","playerType":1},
 {"name": "🛍️┃zbefine直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u","playerType":1},
@@ -315,13 +315,7 @@
 {"name": "🎏┃范明直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "✍️┃qingwen07直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🔢┃serv00直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
-{"name": "🎟️┃央卫港澳台直播",
-    "type": 0,
-    "url": "http://l.gmbbk.com/upload/65336533.txt",
-    "ua": "haotv",
-    "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-    "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-   },
+{"name": "🎟️┃央卫港澳台直播","type": 0,"url": "http://l.gmbbk.com/upload/65336533.txt","ua": "haotv","epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {
     "name": "4GTV - 台湾",
     "url": "docker.livednow.dpdns.org/?type=m3u",
