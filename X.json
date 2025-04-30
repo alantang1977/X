@@ -326,6 +326,12 @@
     "ua": "judy/5.2.1"
   },
 	{
+            "name": "💤┃荔枝网",
+            "type": 0,
+            "url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/荔枝网",
+            "playerType": 1
+        },
+	{
             "name": "鲍鱼",
             "type": 0,
             "url": "http://lisha521.dynv6.net.fh4u.org/tv.txt",
