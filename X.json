@@ -26,6 +26,7 @@
 {"key": "云速","name": "🏍️┃云速影视┃TV","type": 3,"api": "./py/云速影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "若惜","name": "👲┃若惜追剧┃TV","type": 3,"api": "./py/若惜追剧APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "悠悠","name": "🎯┃悠悠影视┃TV","type": 3,"api": "./py/悠悠APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
+{"key": "柯南","name": "🎒┃柯南影视┃TV","type": 3,"api": "./py/柯南影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "4KAV","name": "🏅┃金牌影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/html/4KAV.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "优酷","name": "▶️┃优酷影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/official/优.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "绝对","name": "🏍️┃绝对影视┃TV","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/PyramidStore/refs/heads/main/plugin/html/绝对影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
