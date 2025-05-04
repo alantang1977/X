@@ -1,5 +1,5 @@
 {
-"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1746006525221/f0430.txt;md5;948a482e3bad5bd090a87a6a85d38903",
+"spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1746289852339/f0504.txt;md5;42ef09340295f4070cedad37bf759ef3",
 "wallpaper":"https://深色壁纸.xxooo.cf/","logo":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/yellow.gif",
 
 "sites":[
@@ -7,6 +7,7 @@
 {"key":"玩偶","name":"🤹‍♂️┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a"},
 {"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
+{"key":"YGP","name":"🚀┃叨观荐影┃预告片","type":3,"api":"csp_YGPGuard","searchable":0,"quickSearch":0,"changeable":0},
 {"key":"原创","name":"🧧┃修罗┃影视","type":3,"api":"csp_YCyzGuard","timeout":15,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"白白","name":"🐟┃素白┃秒播","type":3,"api":"csp_SbaibaiGuard","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Guazi","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Guazi","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext": "","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a"},
