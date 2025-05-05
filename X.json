@@ -325,6 +325,24 @@
 {"name": "🎟️┃央卫港澳台直播","type": 0,"url": "http://l.gmbbk.com/upload/65336533.txt","ua": "haotv","epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🥩┃小云TV直播","type": 0,"url": "https://web.banye.tech:7777/tvbus/yogurtTv.txt","playerType":1},
 {
+   "name": "LITV 直播",
+   "type": 3,
+   "api": "https://gh.clun.top/raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_litv.py",
+   "ext": {
+    "proxy": {
+     "http": "http://127.0.0.1:10809",
+     "https": "http://127.0.0.1:10809"
+}}}, 
+{
+   "name": "SMT 直播",
+   "type": 3,
+   "api": "https://gh.clun.top/raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_smt_proxy_001.py",
+   "ext": {
+    "proxy": {
+     "http": "http://127.0.0.1:10809",
+     "https": "http://127.0.0.1:10809"
+}}},
+{
     "name": "4GTV - 台湾",
     "url": "docker.livednow.dpdns.org/?type=m3u",
     "ua": "judy/5.2.1"
