@@ -12,7 +12,7 @@ DELETE_CHARS = ["iHOT-", "NewTV-", "SiTV-", "-HEVC", "-50-FPS", "-高码", "-4K"
 GROUP_ORDER = ["收藏频道", "央视频道", "卫视频道", "其他频道", "地方频道"]
 
 M3U_SOURCES = [
-  
+    {"name": "dsy", "url": "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy", "ua": "okhttp/4.12.0"},
     {"name": "小云TV", "url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/小云TV直播", "ua": "okhttp/4.12.0"},
     {"name": "mytv", "url": "http://gg.7749.org/z/0/dzh.txt", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
