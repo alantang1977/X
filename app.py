@@ -97,20 +97,24 @@ def generate_m3u_output(channels):
     return "\n".join(output)
 
 def generate_txt_output(channels):
-    """
-    Generates a plain text output for the given channels.
-    Each channel will be written in the format: "Channel Name: URL".
-    """
     output_lines = []
     for channel in channels:
-        # Extract channel name from metadata
-        if match := re.search(r'tvg-name="([^"]+)"', channel["meta"]):
-            channel_name = match.group(1)
-        else:
-            channel_name = "Unknown Channel"
-        
-        # Append formatted line to output
-        output_lines.append(f"{channel_name}: {channel['url']}")
+        meta = channel["meta"]
+        url = channel["url"]
+
+        # 提取频道名称
+        name_match = re.search(r'tvg-name="([^"]+)"', meta)
+        channel_name = name_match.group(1) if name_match else "Unknown Channel"
+
+        # 提取频道组
+        group_match = re.search(r'group-title="([^"]+)"', meta)
+        channel_group = group_match.group(1) if group_match else "Unknown Group"
+
+        # 提取电视台ID
+        tvg_id_match = re.search(r'tvg-id="([^"]+)"', meta)
+        tvg_id = tvg_id_match.group(1) if tvg_id_match else "Unknown ID"
+
+        output_lines.append(f"名称: {channel_name}, 组: {channel_group}, 电视台ID: {tvg_id}, URL: {url}")
     
     return "\n".join(output_lines)
 
