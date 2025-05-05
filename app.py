@@ -12,16 +12,17 @@ DELETE_CHARS = ["iHOT-", "NewTV-", "SiTV-", "-HEVC", "-50-FPS", "-高码", "-4K"
 GROUP_ORDER = ["收藏频道", "央视频道", "卫视频道", "其他频道", "地方频道"]
 
 M3U_SOURCES = [
-    {"name": "aktv", "url": "https://git.gra.phite.ro/alantang/tvbs/raw/branch/main/output/result.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "mytv", "url": "https://git.gra.phite.ro/alantang/CF-IPTV/raw/branch/main/allinone.m3u", "ua": "okhttp/4.12.0"},
+  
+    {"name": "小云TV", "url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/小云TV直播", "ua": "okhttp/4.12.0"},
+    {"name": "mytv", "url": "http://gg.7749.org/z/0/dzh.txt", "ua": "okhttp/4.12.0"},
     {"name": "自用收藏", "url": "http://aktv.space/live.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "big", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"},
+    {"name": "big", "url": "http://api.mytv666.top/lives/free.php?type=txt", "ua": "okhttp/4.12.0"},
     {"name": "xhztv", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/qingtingjjjjjjj/iptv-auto-update/main/my.txt", "ua": "okhttp/4.12.0"},
     {"name": "top", "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/4.12.0"},
     {"name": "zbds", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u", "ua": "okhttp/4.12.0"},
     {"name": "Collect", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u", "ua": "okhttp/4.12.0"},
     {"name": "jundie", "url": "https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u", "ua": "okhttp/4.12.0"},
-    {"name": "MyIPTV", "url": "https://git.gra.phite.ro/alantang/auto-iptv/raw/branch/main/live_ipv6.m3u", "ua": "okhttp/4.12.0"}
+    {"name": "MyIPTV", "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/live_ipv4.m3u", "ua": "okhttp/4.12.0"}
 ]
 
 # ================== 核心功能 ==================
