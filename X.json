@@ -324,6 +324,7 @@
 {"name": "🔢┃serv00直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {"name": "🎟️┃央卫港澳台直播","type": 0,"url": "http://l.gmbbk.com/upload/65336533.txt","ua": "haotv","epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🥩┃yogurtTv直播","type": 0,"url": "https://web.banye.tech:7777/tvbus/yogurtTv.txt","playerType":1},
+{"name": "🍬┃169焦点直播","type": 0,"url": "https://codeberg.org/lxxcp/live/raw/branch/main/169焦点","playerType":1},	
 {
    "name": "LITV 直播",
    "type": 3,
