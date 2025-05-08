@@ -246,6 +246,7 @@
 {"name": "🎒┃JunTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/girl/refs/heads/master/tv/iptv4.m3u","playerType":1},	
 {"name": "🏮┃WorkTV直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/电视.txt","playerType":1},		
 {"name": "🥩┃luck9V直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/luck9.txt","playerType":1},	
+{"name": "🍬┃assets直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/yaoxieyoulei/YYKM_assets/refs/heads/main/webview.m3u","playerType":1},	
 {"name": "🧀┃香港直播","type":0,"url":"https://smart.pendy.dpdns.org/m3u/Smart.m3u","playerType":1},
 {"name": "🎃┃中港台馬電視台頻道","type":0,"url":"http://209.141.59.146:50509/?type=m3u","playerType":1},
 {"name": "🛺┃knnnn直播电视","type": 3,"api": "https://framagit.org/knnnn/n/-/raw/main/j/kzb.py","ext": {}},
