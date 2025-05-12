@@ -239,8 +239,9 @@
 {"key":"csp_Anime1","name":"📯SP┃日本┃动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1}],
 
 "lives": [
-{"name": "🦸┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
-{"name": "👟┃chao直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/result.m3u","playerType":1},	
+{"name": "🦸┃tangTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
+{"name": "👟┃chaoMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/result.m3u","playerType":1},
+
 {"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/live_ipv4.m3u","playerType":1},
 {"name": "🥮┃666直播","type": 0,"url": "http://api.mytv666.top/lives/free.php?type=txt","playerType":1},
 {"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/refs/heads/main/output/result.m3u","playerType":1},	
@@ -257,7 +258,10 @@
 {"name": "🐝┃蜜蜂直播","type" : 0,"url" : "https://iptv.catvod.com/tv.m3u","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🍳┃SMT直播","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_smt_proxy_001.py","ext": {"proxy": {"http": "http://127.0.0.1:10809","https": "http://127.0.0.1:10809"}}},
 {"name": "🍔┃hostemail直播","type" : 0,"url" : "https://gh.tryxd.cn/https://raw.githubusercontent.com/hostemail/cdn/main/live/tv.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},	
-{"name": "🦆┃tang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/user_result.txt","playerType":1},
+
+{"name": "🦆┃SuperMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/user_result.txt","playerType":1},
+{"name": "💤┃JunTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/user_result.txt","playerType":1},
+	
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
 {"name": "🥨┃pxiptv直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u","playerType":1},	
 {"name": "🐶┃jun直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/Alan_result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
