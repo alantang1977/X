@@ -52,7 +52,8 @@ http://www.饭太硬.com/tv
 http://www.mpanso.com/小米/DEMO.json
 
 # 🏂影視TV🏄🏻 
-![photo_2023-06-05](https://github.com/alantang1977/X/assets/107459091/179b40c9-b590-4539-bd88-197e3f2e2622)
+![Image](https://github.com/user-attachments/assets/698eeee5-5b2d-4b2c-84ae-f7e0c91fb06e)
+
 ----
 
 ## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.com/jm/ 
