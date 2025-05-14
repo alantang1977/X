@@ -327,6 +327,14 @@
 {"name": "✍️┃qingwen07直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🔢┃serv00直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
 {
+   "name": "牛播一（仅新版影视仓┃ok影视）",
+   "type": 0,
+   "url": "http://127.0.0.1:9978/proxy?do=饭太硬&type=liveList",
+   "playerType": 2,
+   "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+   "logo": "https://epg.v1.mk/logo/{name}.png"
+},
+{
     "name": "4GTV - 台湾",
     "url": "docker.livednow.dpdns.org/?type=m3u",
     "ua": "judy/5.2.1"
