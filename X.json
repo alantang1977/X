@@ -261,8 +261,8 @@
 
 {"name": "🦆┃SuperMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/user_result.txt","playerType":1},
 {"name": "💤┃JunTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/user_result.txt","playerType":1},
-{"name": "🩰┃Meroser直播","type": 0,"url": "https://gitlab.com/Meroser/IPTV/-/raw/main/IPTV-demo.m3u","playerType":1},
 	
+{"name": "🩰┃Meroser直播","type": 0,"url": "https://gitlab.com/Meroser/IPTV/-/raw/main/IPTV-demo.m3u","playerType":1},
 {"name": "🍾┃Kilvn直播","type":0,"url":"https://live.kilvn.com/iptv.m3u","playerType":1},
 {"name": "🥨┃pxiptv直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/pxiptv/live/main/iptv.m3u","playerType":1},	
 {"name": "🐶┃jun直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/Alan_result.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -326,14 +326,6 @@
 {"name": "🎏┃范明直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "✍️┃qingwen07直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
 {"name": "🔢┃serv00直播","type":0,"url":"https://a90120.serv00.net/anbox/p3plink.txt","playerType":1},	
-{
-   "name": "牛播一（仅新版影视仓┃ok影视）",
-   "type": 0,
-   "url": "http://127.0.0.1:9978/proxy?do=饭太硬&type=liveList",
-   "playerType": 2,
-   "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-   "logo": "https://epg.v1.mk/logo/{name}.png"
-},
 {
     "name": "4GTV - 台湾",
     "url": "docker.livednow.dpdns.org/?type=m3u",
