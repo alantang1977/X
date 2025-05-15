@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./Pictures/logo.png" alt="logo"/>
+  <img src="./Pictures/TangImage20250515.png" alt="logo"/>
   <h1 align="center">AlanTang</h1>
 </div>
 
