@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./Pictures/TangImage240.png" alt="logo"/>
-  <h1 align="center">AlanTang</h1>
+  <h1 align="center">影视点播直播源</h1>
 </div>
 
 <div align="center">💋所有资源均来自于各路大神无私分享，如有侵权，请联系删除。
