@@ -242,7 +242,7 @@
 {"name": "🦸┃tangTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "👟┃chaoMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/result.m3u","playerType":1},
 
-{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/live_ipv4.m3u","playerType":1},
+{"name": "🛬┃极速直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "🥮┃666直播","type": 0,"url": "http://api.mytv666.top/lives/free.php?type=txt","playerType":1},
 {"name": "🎳┃咪咕直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播","playerType":1},
 {"name": "🪭┃晓峰直播","type": 0,"url": "http://晓峰.azip.dpdns.org:5008/?type=m3u","playerType":1},
