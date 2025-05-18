@@ -6,6 +6,12 @@ ip_version_priority = "ipv6"
 # 直播源URL列表
 source_urls = [
     "http://api.mytv666.top/lives/free.php?type=txt",
+    "http://1.94.31.214/live/livelite.txt",
+    "https://web.banye.tech:7777/tvbus/yogurtTv.txt",
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/go.txt",
+    "https://6296.kstore.vip/25.txt",
+    "https://smart.pendy.dpdns.org/m3u/Smart.m3u",
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播",
     "http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/Alan-Alana/IPTV/refs/heads/main/channl.txt",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u",
