@@ -1,4 +1,4 @@
-name: Daily Update
+name: IPTV Update
 
 on:
   schedule:
