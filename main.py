@@ -141,13 +141,16 @@ def match_channels(template_channels, all_channels):
     for category, channel_list in template_channels.items():
         matched_channels[category] = OrderedDict()
         for channel_name in channel_list:
-            similar_name = find_similar_name(channel_name, all_online_channel_names)
+            # 增加智能识别相似名称功能
+            similar_name = find_similar_name(clean_channel_name(channel_name), [clean_channel_name(name) for name in all_online_channel_names])
             if similar_name:
-                for online_category, online_channel_list in all_channels.items():
-                    for online_channel_name, online_channel_url in online_channel_list:
-                        if online_channel_name == similar_name:
-                            # 匹配成功的频道信息加入结果中
-                            matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
+                original_name = next((name for name in all_online_channel_names if clean_channel_name(name) == similar_name), None)
+                if original_name:
+                    for online_category, online_channel_list in all_channels.items():
+                        for online_channel_name, online_channel_url in online_channel_list:
+                            if online_channel_name == original_name:
+                                # 匹配成功的频道信息加入结果中
+                                matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
 
     return matched_channels
 
