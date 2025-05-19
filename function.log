@@ -1,5 +1,2 @@
-2025-05-19 09:51:57,991 - ERROR - url: http://92.112.21.169:30000/mytv.m3u 失败❌, Error: HTTPConnectionPool(host='92.112.21.169', port=30000): Max retries exceeded with url: /mytv.m3u (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb9e013c400>: Failed to establish a new connection: [Errno 111] Connection refused'))
-2025-05-19 09:51:58,563 - ERROR - url: http://lisha521.dynv6.net.fh4u.org/tv.txt 失败❌, Error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2025-05-19 09:52:25,831 - ERROR - url: http://xhztv.top/new.txt 失败❌, Error: 404 Client Error: Not Found for url: http://xhztv.top/new.txt
-2025-05-19 09:52:35,420 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403 Client Error: Forbidden for url: https://tv.iill.top/m3u/Gather
-2025-05-19 09:52:41,761 - ERROR - url: http://xhztv.top/zbc.txt 失败❌, Error: 404 Client Error: Not Found for url: http://xhztv.top/zbc.txt
+2025-05-19 10:33:28,741 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
+2025-05-19 10:33:58,938 - ERROR - url: http://lisha521.dynv6.net.fh4u.org/tv.txt 失败❌, Error: Connection timeout to host http://lisha521.dynv6.net.fh4u.org/tv.txt
