@@ -31,7 +31,8 @@ jobs:
 
     - name: Install dependencies  # 安装项目所需的 Python 包
       run: |
-        pip install requests  # 安装 requests 库作为示例
+        pip install aiohttp  # 安装 aiohttp 库
+        pip install requests  # 安装 requests 库
 
     - name: Run Python script  # 执行主脚本
       run: python main.py
