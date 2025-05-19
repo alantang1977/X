@@ -5,6 +5,7 @@ ip_version_priority = "ipv6"
 
 # 直播源URL列表
 source_urls = [
+    "http://47.120.41.246:8899/zb.txt",
     "http://rihou.cc:555/gggg.nzk",
     "http://晓峰.azip.dpdns.org:5008/?type=m3u",
     "http://api.mytv666.top/lives/free.php?type=txt",
