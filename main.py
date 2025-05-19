@@ -2,11 +2,13 @@ import re
 import asyncio
 import aiohttp
 import logging
-from collections import OrderedDict
-from datetime import datetime
-import config
+import json
 import os
+from collections import OrderedDict
+from datetime import datetime, timedelta
+import config
 import difflib
+import hashlib
 
 # 日志记录，只记录错误信息
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
@@ -16,6 +18,45 @@ logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %
 output_folder = "live"
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
+
+# 缓存文件夹和文件
+cache_folder = "cache"
+cache_file = os.path.join(cache_folder, "url_cache.json")
+cache_valid_days = 7  # 缓存有效期（天）
+
+# 确保缓存文件夹存在
+if not os.path.exists(cache_folder):
+    os.makedirs(cache_folder)
+
+# 加载缓存
+def load_cache():
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            logging.error(f"加载缓存失败: {e}")
+    return {"urls": {}, "timestamp": datetime.now().isoformat()}
+
+# 保存缓存
+def save_cache(cache):
+    cache["timestamp"] = datetime.now().isoformat()
+    try:
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logging.error(f"保存缓存失败: {e}")
+
+# 检查缓存是否有效
+def is_cache_valid(cache):
+    if not cache:
+        return False
+    timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
+    return (datetime.now() - timestamp).days < cache_valid_days
+
+# 计算URL内容的哈希值
+def calculate_hash(content):
+    return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 def parse_template(template_file):
     template_channels = OrderedDict()
@@ -43,28 +84,50 @@ def clean_channel_name(channel_name):
 def is_valid_url(url):
     return bool(re.match(r'^https?://', url))
 
-async def fetch_channels(session, url):
+async def fetch_channels(session, url, cache):
     channels = OrderedDict()
     unique_urls = set()
+    cache_hit = False
 
-    try:
-        async with session.get(url) as response:
-            response.raise_for_status()
-            response.encoding = 'utf-8'
-            lines = (await response.text()).split("\n")
-            current_category = None
-            is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
-            source_type = "m3u" if is_m3u else "txt"
+    # 检查URL是否在缓存中且有效
+    url_hash = calculate_hash(url)
+    if url_hash in cache["urls"]:
+        cached_entry = cache["urls"][url_hash]
+        if datetime.now() - datetime.fromisoformat(cached_entry["timestamp"]) <= timedelta(days=cache_valid_days):
+            logging.info(f"从缓存加载: {url}")
+            channels = OrderedDict(cached_entry["channels"])
+            unique_urls = set(cached_entry["unique_urls"])
+            cache_hit = True
 
-            if is_m3u:
-                channels.update(parse_m3u_lines(lines, unique_urls))
-            else:
-                channels.update(parse_txt_lines(lines, unique_urls))
+    if not cache_hit:
+        try:
+            async with session.get(url) as response:
+                response.raise_for_status()
+                content = await response.text()
+                response.encoding = 'utf-8'
+                lines = content.split("\n")
+                current_category = None
+                is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
+                source_type = "m3u" if is_m3u else "txt"
 
-            if channels:
-                categories = ", ".join(channels.keys())
-    except Exception as e:
-        logging.error(f"url: {url} 失败❌, Error: {e}")
+                if is_m3u:
+                    channels.update(parse_m3u_lines(lines, unique_urls))
+                else:
+                    channels.update(parse_txt_lines(lines, unique_urls))
+
+                if channels:
+                    # 更新缓存
+                    cache["urls"][url_hash] = {
+                        "url": url,
+                        "channels": dict(channels),
+                        "unique_urls": list(unique_urls),
+                        "timestamp": datetime.now().isoformat(),
+                        "content_hash": calculate_hash(content)
+                    }
+                    save_cache(cache)
+
+        except Exception as e:
+            logging.error(f"url: {url} 失败❌, Error: {e}")
 
     return channels
 
@@ -124,6 +187,23 @@ def find_similar_name(target_name, name_list):
     matches = difflib.get_close_matches(target_name, name_list, n=1, cutoff=0.6)
     return matches[0] if matches else None
 
+async def filter_source_urls(template_file):
+    template_channels = parse_template(template_file)
+    source_urls = config.source_urls
+    cache = load_cache()
+
+    all_channels = OrderedDict()
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch_channels(session, url, cache) for url in source_urls]
+        fetched_channels_list = await asyncio.gather(*tasks)
+
+    for fetched_channels in fetched_channels_list:
+        merge_channels(all_channels, fetched_channels)
+
+    matched_channels = match_channels(template_channels, all_channels)
+
+    return matched_channels, template_channels, cache
+
 def match_channels(template_channels, all_channels):
     matched_channels = OrderedDict()
 
@@ -146,22 +226,6 @@ def match_channels(template_channels, all_channels):
 
     return matched_channels
 
-async def filter_source_urls(template_file):
-    template_channels = parse_template(template_file)
-    source_urls = config.source_urls
-
-    all_channels = OrderedDict()
-    async with aiohttp.ClientSession() as session:
-        tasks = [fetch_channels(session, url) for url in source_urls]
-        fetched_channels_list = await asyncio.gather(*tasks)
-
-    for fetched_channels in fetched_channels_list:
-        merge_channels(all_channels, fetched_channels)
-
-    matched_channels = match_channels(template_channels, all_channels)
-
-    return matched_channels, template_channels
-
 def merge_channels(target, source):
     for category, channel_list in source.items():
         if category in target:
@@ -172,9 +236,35 @@ def merge_channels(target, source):
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-def updateChannelUrlsM3U(channels, template_channels):
+def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
+    url_changes = {"added": [], "removed": [], "modified": []}
+
+    # 检查缓存中的URL状态
+    if is_cache_valid(cache):
+        previous_urls = {}
+        for url_hash, entry in cache["urls"].items():
+            for category, channel_list in entry["channels"].items():
+                for channel_name, url in channel_list:
+                    previous_urls[url] = (category, channel_name)
+
+        # 检测URL变化
+        current_urls = {}
+        for category, channel_dict in channels.items():
+            for channel_name, urls in channel_dict.items():
+                for url in urls:
+                    current_urls[url] = (category, channel_name)
+
+        # 新增的URL
+        for url, (category, channel_name) in current_urls.items():
+            if url not in previous_urls:
+                url_changes["added"].append((category, channel_name, url))
+
+        # 移除的URL
+        for url, (category, channel_name) in previous_urls.items():
+            if url not in current_urls:
+                url_changes["removed"].append((category, channel_name, url))
 
     current_date = datetime.now().strftime("%Y-%m-%d")
     for group in config.announcements:
@@ -245,6 +335,23 @@ def updateChannelUrlsM3U(channels, template_channels):
         f_txt_ipv4.write("\n")
         f_txt_ipv6.write("\n")
 
+    # 保存URL变化日志
+    if url_changes["added"] or url_changes["removed"] or url_changes["modified"]:
+        with open(os.path.join(output_folder, "url_changes.log"), "a", encoding="utf-8") as f:
+            f.write(f"\n=== 更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n")
+            if url_changes["added"]:
+                f.write("\n新增URL:\n")
+                for category, channel_name, url in url_changes["added"]:
+                    f.write(f"- {category} - {channel_name}: {url}\n")
+            if url_changes["removed"]:
+                f.write("\n移除URL:\n")
+                for category, channel_name, url in url_changes["removed"]:
+                    f.write(f"- {category} - {channel_name}: {url}\n")
+            if url_changes["modified"]:
+                f.write("\n修改URL:\n")
+                for category, channel_name, old_url, new_url in url_changes["modified"]:
+                    f.write(f"- {category} - {channel_name}: {old_url} → {new_url}\n")
+
 def sort_and_filter_urls(urls, written_urls):
     filtered_urls = [
         url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
@@ -267,6 +374,6 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
 if __name__ == "__main__":
     template_file = "demo.txt"
     loop = asyncio.get_event_loop()
-    channels, template_channels = loop.run_until_complete(filter_source_urls(template_file))
-    updateChannelUrlsM3U(channels, template_channels)
+    channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
+    updateChannelUrlsM3U(channels, template_channels, cache)
     loop.close()
