@@ -1,14 +1,31 @@
 import re
 import asyncio
-import aiohttp
 import logging
 import json
 import os
 from collections import OrderedDict
 from datetime import datetime, timedelta
-import config
 import difflib
 import hashlib
+
+# 检查 aiohttp 是否安装
+try:
+    import aiohttp
+except ImportError:
+    print("错误: 缺少必要的依赖库 'aiohttp'。")
+    print("请使用以下命令安装:")
+    print("pip install aiohttp")
+    import sys
+    sys.exit(1)
+
+# 检查 config 是否存在
+try:
+    import config
+except ImportError:
+    print("错误: 找不到配置模块 'config.py'。")
+    print("请确保项目目录下有 config.py 文件。")
+    import sys
+    sys.exit(1)
 
 # 日志记录，只记录错误信息
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
@@ -373,7 +390,12 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
 
 if __name__ == "__main__":
     template_file = "demo.txt"
-    loop = asyncio.get_event_loop()
-    channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
-    updateChannelUrlsM3U(channels, template_channels, cache)
-    loop.close()
+    try:
+        loop = asyncio.get_event_loop()
+        channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
+        updateChannelUrlsM3U(channels, template_channels, cache)
+        loop.close()
+        print("操作完成！结果已保存到live文件夹。")
+    except Exception as e:
+        print(f"执行过程中发生错误: {e}")
+        logging.error(f"程序运行失败: {e}")
