@@ -1,3 +1,4 @@
+# main.py
 import re
 import asyncio
 import logging
@@ -21,9 +22,40 @@ except ImportError:
 # 检查 config 是否存在
 try:
     import config
+    # 验证配置文件的基本结构
+    required_attrs = ['source_urls', 'epg_urls', 'announcements', 'url_blacklist', 'ip_version_priority']
+    for attr in required_attrs:
+        if not hasattr(config, attr):
+            raise AttributeError(f"配置文件缺少必要的属性: {attr}")
 except ImportError:
     print("错误: 找不到配置模块 'config.py'。")
-    print("请确保项目目录下有 config.py 文件。")
+    print("请确保项目目录下有 config.py 文件，内容示例如下:")
+    print("""
+# config.py 示例内容
+source_urls = [
+    "https://example.com/source1.m3u",
+    "https://example.com/source2.m3u"
+]
+epg_urls = ["https://example.com/epg.xml"]
+announcements = [
+    {
+        "channel": "公告",
+        "entries": [
+            {
+                "name": None,
+                "url": "https://example.com/notice",
+                "logo": "https://picsum.photos/100/100?random=1"
+            }
+        ]
+    }
+]
+url_blacklist = []
+ip_version_priority = "ipv4"
+""")
+    import sys
+    sys.exit(1)
+except AttributeError as e:
+    print(f"配置文件错误: {e}")
     import sys
     sys.exit(1)
 
@@ -391,6 +423,24 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
 if __name__ == "__main__":
     template_file = "demo.txt"
     try:
+        # 检查模板文件是否存在
+        if not os.path.exists(template_file):
+            print(f"错误: 找不到模板文件 '{template_file}'。")
+            print("请确保项目目录下有 demo.txt 文件。")
+            print("示例内容如下:")
+            print("""
+# demo.txt 示例内容
+央视,#genre#
+CCTV-1
+CCTV-2
+卫视,#genre#
+北京卫视
+上海卫视
+广东卫视
+""")
+            import sys
+            sys.exit(1)
+
         loop = asyncio.get_event_loop()
         channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
         updateChannelUrlsM3U(channels, template_channels, cache)
