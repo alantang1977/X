@@ -15,22 +15,22 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
       # 设置本地 Git 用户名和邮箱，以便后续提交代码时使用
-    - name: Create output directory
-      run: mkdir -p output
-      # 创建 output 文件夹
+    - name: Create live directory
+      run: mkdir -p live
+      # 创建 live 文件夹
     - name: Download EPG File
-      run: wget http://epg.51zmt.top:8000/e.xml -O output/epg.xml
-      # 使用 wget 命令从指定 URL 下载 EPG 文件并保存到 output 文件夹下
-    - name: Calculate SHA-256 hash of output/epg.xml
+      run: wget http://epg.51zmt.top:8000/e.xml -O live/epg.xml
+      # 使用 wget 命令从指定 URL 下载 EPG 文件并保存到 live 文件夹下
+    - name: Calculate SHA-256 hash of live/epg.xml
       id: calculate_hash
       run: |
-        echo "hash=$(sha256sum output/epg.xml | awk '{print $1}')" >> "$GITHUB_ENV"
+        echo "hash=$(sha256sum live/epg.xml | awk '{print $1}')" >> "$GITHUB_ENV"
       # 计算下载的 epg.xml 文件的 SHA-256 哈希值，并将其存储在环境变量 hash 中，使用 $GITHUB_ENV 文件
     - name: Get previous SHA-256 hash from last commit
       id: get_previous_hash
       run: |
-        if [ -f output/epg.xml ]; then
-          echo "previous_hash=$(git show HEAD:output/epg.xml | sha256sum | awk '{print $1}')" >> "$GITHUB_ENV"
+        if [ -f live/epg.xml ]; then
+          echo "previous_hash=$(git show HEAD:live/epg.xml | sha256sum | awk '{print $1}')" >> "$GITHUB_ENV"
         else
           echo "previous_hash=none" >> "$GITHUB_ENV"
         fi
@@ -38,14 +38,14 @@ jobs:
     - name: Compare hashes and update if different
       run: |
         if [ "${{ env.hash }}" != "${{ env.previous_hash }}" ]; then
-          git add output/epg.xml
+          git add live/epg.xml
           git commit -m "Auto-update epg files."
           git push origin main
         else
-          echo "No changes detected in output/epg.xml, skipping commit."
+          echo "No changes detected in live/epg.xml, skipping commit."
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 比较当前 epg.xml 文件的哈希值与上次提交中的哈希值。
       # 如果哈希值不同，则将文件添加到 Git 并提交更改，然后推送到 main 分支。
-      # 如果哈希值相同，则输出 "No changes detected in output/epg.xml, skipping commit." 并跳过提交和推送
+      # 如果哈希值相同，则输出 "No changes detected in live/epg.xml, skipping commit." 并跳过提交和推送
