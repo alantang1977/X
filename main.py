@@ -61,7 +61,7 @@ except AttributeError as e:
 
 # 日志记录，只记录错误信息
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler("function.log", "w", encoding="utf-8"), logging.StreamHandler()])
+                    handlers=[logging.FileHandler("./live/function.log", "w", encoding="utf-8"), logging.StreamHandler()])
 
 # 确保 live 文件夹存在
 output_folder = "live"
