@@ -326,7 +326,16 @@
 {"name": "🍉┃fanmingming直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "🎏┃范明直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u","playerType":1},
 {"name": "✍️┃qingwen07直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt","playerType":1},
-{"name": "🔢┃Hotel_iptv直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Hotel_iptv/refs/heads/main/itvlist.txt","playerType":1},	
+{"name": "🔢┃Hotel_iptv直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Hotel_iptv/refs/heads/main/itvlist.txt","playerType":1},
+{
+  "name": "BeeSport直播(python)",
+  "type": 3,
+  "api": "https://json.doube.eu.org/python/live_beesport.py",
+  "ext": {},
+  "header": {
+    "Referer": "https://p.m82xg4z0cdbz7.com/"
+  }
+},
 {"name": "👓┃gshtwy直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/gshtwy/MyTv/refs/heads/main/MyTv.m3u","playerType":1}],
 
 "hosts": [
