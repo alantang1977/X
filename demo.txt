@@ -38,6 +38,10 @@ CCTV16,
 CCTV17,
 CCTV4K,
 CCTV8K,
+CETV1,
+CETV2,
+CETV4,
+CETV5,
 
 🥭┃卫视频道,#genre#
 山东卫视,
