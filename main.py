@@ -69,7 +69,7 @@ if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
 # 缓存文件夹和文件
-cache_folder = "cache"
+cache_folder = "./live/cache"
 cache_file = os.path.join(cache_folder, "url_cache.json")
 cache_valid_days = 7  # 缓存有效期（天）
 
