@@ -5,6 +5,14 @@ ip_version_priority = "ipv6"
 
 # 直播源URL列表
 source_urls = [
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV",
+    "https://www.iyouhun.com/tv/myIPTV/ipv6.m3u",
+    "https://www.iyouhun.com/tv/myIPTV/ipv4.m3u",
+    "http://rihou.cc:555/gggg.nzk",
+    "https://live.izbds.com/tv/iptv4.txt",
+    "http://47.120.41.246:8899/zb.txt",
+    "http://live.nctv.top/x.txt",
+    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u",
     "https://live.izbds.com/tv/iptv4.txt",
     "http://47.120.41.246:8899/zb.txt",
     "http://rihou.cc:555/gggg.nzk",
