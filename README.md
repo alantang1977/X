@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./Pictures/HDgreen240.png" alt="logo"/>
+  <img src="./Pictures/chao-assets.png" alt="logo"/>
   <h1 align="center">影视点播直播源</h1>
 </div>
 
