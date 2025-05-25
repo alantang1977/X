@@ -1,0 +1,13 @@
+{
+  "drives": [
+    {
+      "name": "webdav.router",
+      "search": true,
+      "searchable": true,
+      "server": "http://192.168.1.1:5678",
+      "path": "/dav",
+      "user": "guest",
+      "pass": "guest_Api789"
+    }
+  ]
+}
