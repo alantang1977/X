@@ -259,7 +259,7 @@
 {"name": "🥩┃luck9V直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/luck9.txt","playerType":1},	
 {"name": "🍬┃assets直播","type":0,"url":"http://1.94.31.214/live/livelite.txt","playerType":1},	
 {"name": "🧀┃香港台湾秒播","type":0,"url":"https://smart.pendy.dpdns.org/m3u/Smart.m3u","playerType":1},
-//{"name": "🎃┃中港台馬電視台頻道","type":0,"url":"http://209.141.59.146:50509/?type=m3u","playerType":1},
+{"name": "🎃┃uploads頻道","type":0,"url":"https://upld.zone.id/uploads/q9iq9e5iq/lvse.txt","playerType":1},
 //{"name": "🛺┃knnnn直播电视","type": 3,"api": "https://framagit.org/knnnn/n/-/raw/main/j/kzb.py","ext": {}},
 {"name": "🐮┃牛牛直播","type" : 0,"url" : "https://web.banye.tech:7777/tv/hlj.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🐝┃蜜蜂直播","type" : 0,"url" : "https://iptv.catvod.com/tv.m3u","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
