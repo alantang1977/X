@@ -26,7 +26,8 @@
   "quickSearch": 0,
   "filterable": 0,
   "changeable": 0
-}，
+},
+	
 ##PY源系列
 {"key": "苹果","name": "🍎┃小小苹果┃TV","type": 3,"api": "./py/小苹果.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
 {"key": "火车","name": "🚂┃火车太顺┃TV","type": 3,"api": "./py/火车太顺APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
