@@ -1,1 +1,38 @@
-2025-05-27 10:26:03,121 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
+2025-05-29 10:28:01,592 - ERROR - url: https://6296.kstore.vip/25.txt 失败❌, Error: 401, message='', url='https://6296.kstore.vip/25.txt'
+2025-05-29 10:28:03,770 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
+2025-05-29 10:28:03,771 - ERROR - Future exception was never retrieved
+future: <Future finished exception=ClientConnectionError('Connection lost: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2712)')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/asyncio/sslproto.py", line 534, in data_received
+    ssldata, appdata = self._sslpipe.feed_ssldata(data)
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/asyncio/sslproto.py", line 206, in feed_ssldata
+    self._sslobj.unwrap()
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/ssl.py", line 979, in unwrap
+    return self._sslobj.shutdown()
+ssl.SSLError: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2712)
+
+The above exception was the direct cause of the following exception:
+
+aiohttp.client_exceptions.ClientConnectionError: Connection lost: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2712)
+2025-05-29 10:28:22,916 - ERROR - url: https://gitee.com/xxy002/zhiboyuan/raw/master/dsy 失败❌, Error: 403, message='Forbidden', url='https://gitee.com/xxy002/zhiboyuan/raw/master/dsy'
+2025-05-29 10:28:52,479 - ERROR - Future exception was never retrieved
+future: <Future finished exception=ClientConnectionError('Connection lost: [Errno 104] Connection reset by peer')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/asyncio/selector_events.py", line 862, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+aiohttp.client_exceptions.ClientConnectionError: Connection lost: [Errno 104] Connection reset by peer
+2025-05-29 10:32:46,693 - ERROR - Future exception was never retrieved
+future: <Future finished exception=ClientConnectionError('Connection lost: [Errno 104] Connection reset by peer')>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/asyncio/selector_events.py", line 862, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+aiohttp.client_exceptions.ClientConnectionError: Connection lost: [Errno 104] Connection reset by peer
+2025-05-29 10:32:59,483 - ERROR - url: http://晓峰.azip.dpdns.org:5008/?type=m3u 失败❌, Error: 
