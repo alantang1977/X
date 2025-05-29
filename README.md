@@ -155,6 +155,7 @@ https://www.tutieshi.com/
 # Github国内代理：https://ghproxy.link  https://xiake.pro/
                  
 
+    https://ghfile.geekertao.top/https://github.com/
     https://cors.zme.ink/https://raw.githubusercontent.com/
     https://slink.ltd/https://raw.githubusercontent.com/
     https://gh.tryxd.cn/https://raw.githubusercontent.com/
