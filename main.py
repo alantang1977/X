@@ -1,5 +1,3 @@
-# main.py
-
 import re
 import asyncio
 import logging
@@ -14,6 +12,7 @@ import hashlib
 # 检查 aiohttp 是否安装
 try:
     import aiohttp
+    from aiohttp import ClientSSLError
 except ImportError:
     print("错误: 缺少必要的依赖库 'aiohttp'。")
     print("请使用: pip install aiohttp")
@@ -164,9 +163,9 @@ def is_ipv6(url):
 async def fetch_channels(session, url, cache):
     """
     异步请求并解析单个源 URL，返回 OrderedDict{分类: [(频道名, URL), ...], ...}。
-    - 增加了：带统一请求头；
+    - 带统一请求头；
     - 捕获 401/403 直接跳过；
-    - 对 Connection reset 做简单重试（最多 2 次）。
+    - 对 Connection reset 和 SSL 错误做简单重试（最多 2 次）。
     """
     channels = OrderedDict()
     unique_urls = set()
@@ -226,24 +225,29 @@ async def fetch_channels(session, url, cache):
                         save_cache(cache)
                     return channels
 
+            except ClientSSLError as ssl_err:
+                logging.error(f"[抓取失败-SSL错误] URL={url}, Error={ssl_err}")
+                # 不再重试，直接跳过
+                return channels
             except aiohttp.ClientResponseError as cre:
                 logging.error(f"[抓取失败-HTTP错误] URL={url}, Status={cre.status}, Message={cre.message}")
-                break
+                return channels
             except aiohttp.client_exceptions.ClientConnectionError as cce:
+                # Connection reset, 可能重试
                 if attempt < max_retries - 1:
                     await asyncio.sleep(1)
                     continue
                 logging.error(f"[抓取失败-连接错误] URL={url}, Error={cce}")
-                break
+                return channels
             except asyncio.TimeoutError:
                 if attempt < max_retries - 1:
                     await asyncio.sleep(1)
                     continue
                 logging.error(f"[抓取失败-超时] URL={url}")
-                break
+                return channels
             except Exception as e:
                 logging.error(f"[抓取失败-未知错误] URL={url}, Error={e}")
-                break
+                return channels
 
     return channels
 
@@ -330,7 +334,9 @@ async def filter_source_urls(template_file):
     cache = load_cache()
 
     all_channels = OrderedDict()
-    async with aiohttp.ClientSession() as session:
+    # 创建 ClientSession 时禁用 SSL 验证
+    connector = aiohttp.TCPConnector(ssl=False)
+    async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [fetch_channels(session, url, cache) for url in source_urls]
         results = await asyncio.gather(*tasks)
 
@@ -375,11 +381,16 @@ async def test_url_speed(session, url, timeout):
             "Accept": "*/*",
             "Accept-Language": "en-US,en;q=0.9"
         }
-        async with session.head(url, headers=headers, timeout=timeout) as resp:
-            resp.raise_for_status()
-        elapsed = time.monotonic() - start
-        return url, elapsed
+        try:
+            async with session.head(url, headers=headers, timeout=timeout) as resp:
+                resp.raise_for_status()
+            elapsed = time.monotonic() - start
+            return url, elapsed
+        except Exception:
+            # 捕获包括超时、SSL、连接重置等所有异常，返回 None 表示测速失败
+            return url, None
     except Exception:
+        # 任何意外也返回 None，避免未捕获的 Future 异常
         return url, None
 
 
@@ -387,7 +398,9 @@ async def rank_channel_urls(channels_raw):
     timeout = config.speed_test_timeout
     sem = asyncio.Semaphore(config.speed_test_concurrency)
 
-    async with aiohttp.ClientSession() as session:
+    # 同样在这里禁用 SSL 验证
+    connector = aiohttp.TCPConnector(ssl=False)
+    async with aiohttp.ClientSession(connector=connector) as session:
         new_channels = OrderedDict()
         for category, ch_dict in channels_raw.items():
             new_channels[category] = OrderedDict()
