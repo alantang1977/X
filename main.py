@@ -340,7 +340,6 @@ async def filter_source_urls(template_file):
         try:
             return await fetch_channels(session, url, cache)
         except Exception as e:
-            # 任何意外都统一记录日志，返回空的 OrderedDict
             logging.error(f"[抓取失败-未捕获异常] URL={url}, Error={e}")
             return OrderedDict()
 
@@ -398,21 +397,20 @@ async def test_url_speed(session, url, timeout):
             elapsed = time.monotonic() - start
             return url, elapsed
         except Exception:
-            # 捕获包括超时、SSL、连接重置等所有异常，返回 None 表示测速失败
             return url, None
     except Exception:
-        # 任何意外也返回 None，避免未捕获的 Future 异常
         return url, None
 
 
 async def rank_channel_urls(channels_raw):
     """
-    返回的结构变为：
+    返回的结构依然是：
       OrderedDict{
         分类: OrderedDict{
           频道名: [(url1, t1), (url2, t2), ...],  # 已按 t 升序排列，且只保留前 N 条
         }
       }
+    但对每个实际测速任务，额外包了一层 try/except，确保异常只会被吞掉并记录日志。
     """
     timeout = config.speed_test_timeout
     sem = asyncio.Semaphore(config.speed_test_concurrency)
@@ -442,20 +440,29 @@ async def rank_channel_urls(channels_raw):
                 if not ipv4_candidates and not ipv6_candidates:
                     continue
 
-                async def bound_test(u):
+                async def safe_bound_test(u):
+                    """
+                    在这里对每个测速任务再做一层 try/except，捕获所有异常并返回 (url, None)。
+                    """
                     async with sem:
-                        return await test_url_speed(session, u, timeout)
+                        try:
+                            return await test_url_speed(session, u, timeout)
+                        except Exception as e:
+                            logging.error(f"[测速失败-未捕获异常] URL={u}, Error={e}")
+                            return u, None
 
+                # 对 IPv4 候选测速并排序
                 ipv4_results = []
                 if ipv4_candidates:
-                    tasks4 = [bound_test(u) for u in ipv4_candidates]
+                    tasks4 = [safe_bound_test(u) for u in ipv4_candidates]
                     res4 = await asyncio.gather(*tasks4)
                     ipv4_results = [(u, t) for u, t in res4 if t is not None]
                     ipv4_results.sort(key=lambda x: x[1])
 
+                # 对 IPv6 候选测速并排序
                 ipv6_results = []
                 if ipv6_candidates:
-                    tasks6 = [bound_test(u) for u in ipv6_candidates]
+                    tasks6 = [safe_bound_test(u) for u in ipv6_candidates]
                     res6 = await asyncio.gather(*tasks6)
                     ipv6_results = [(u, t) for u, t in res6 if t is not None]
                     ipv6_results.sort(key=lambda x: x[1])
