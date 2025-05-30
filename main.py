@@ -5,7 +5,7 @@ import json
 import os
 import time
 from collections import OrderedDict
-from datetime import datetime, timedelta
+from datetime import datetime
 import difflib
 import hashlib
 
@@ -232,7 +232,6 @@ async def fetch_channels(session, url, cache):
                 logging.error(f"[抓取失败-HTTP错误] URL={url}, Status={cre.status}, Message={cre.message}")
                 return channels
             except aiohttp.client_exceptions.ClientConnectionError as cce:
-                # Connection reset, 可能重试
                 if attempt < max_retries - 1:
                     await asyncio.sleep(1)
                     continue
@@ -329,8 +328,8 @@ def merge_channels(target, source):
 
 async def filter_source_urls(template_file):
     """
-    说明：为了彻底避免“Future exception was never retrieved”，这里增加了一个 safe_fetch()，
-    对 fetch_channels 进行二次包装，确保任何异常都在 safe_fetch 内被捕获。
+    说明：在 asyncio.gather 中使用 return_exceptions=True，
+    并统一处理异常，避免未捕获 Future 异常。
     """
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
@@ -347,9 +346,17 @@ async def filter_source_urls(template_file):
     connector = aiohttp.TCPConnector(ssl=False)
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [safe_fetch(session, url, cache) for url in source_urls]
-        results = await asyncio.gather(*tasks)
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
-    for fetched in results:
+    clean_results = []
+    for url, res in zip(source_urls, results):
+        if isinstance(res, Exception):
+            logging.error(f"[抓取失败-Gather异常] URL={url}, Error={res}")
+            clean_results.append(OrderedDict())
+        else:
+            clean_results.append(res)
+
+    for fetched in clean_results:
         merge_channels(all_channels, fetched)
 
     all_online_names = []
@@ -404,13 +411,13 @@ async def test_url_speed(session, url, timeout):
 
 async def rank_channel_urls(channels_raw):
     """
-    返回的结构依然是：
+    返回结构：
       OrderedDict{
         分类: OrderedDict{
           频道名: [(url1, t1), (url2, t2), ...],  # 已按 t 升序排列，且只保留前 N 条
         }
       }
-    但对每个实际测速任务，额外包了一层 try/except，确保异常只会被吞掉并记录日志。
+    并对 asyncio.gather 使用 return_exceptions=True，统一处理异常。
     """
     timeout = config.speed_test_timeout
     sem = asyncio.Semaphore(config.speed_test_concurrency)
@@ -442,7 +449,7 @@ async def rank_channel_urls(channels_raw):
 
                 async def safe_bound_test(u):
                     """
-                    在这里对每个测速任务再做一层 try/except，捕获所有异常并返回 (url, None)。
+                    对每个测速任务再一层 try/except，捕获所有异常并返回 (url, None)。
                     """
                     async with sem:
                         try:
@@ -451,21 +458,38 @@ async def rank_channel_urls(channels_raw):
                             logging.error(f"[测速失败-未捕获异常] URL={u}, Error={e}")
                             return u, None
 
-                # 对 IPv4 候选测速并排序
+                # IPv4 测速
                 ipv4_results = []
                 if ipv4_candidates:
                     tasks4 = [safe_bound_test(u) for u in ipv4_candidates]
-                    res4 = await asyncio.gather(*tasks4)
-                    ipv4_results = [(u, t) for u, t in res4 if t is not None]
-                    ipv4_results.sort(key=lambda x: x[1])
+                    res4 = await asyncio.gather(*tasks4, return_exceptions=True)
+                    clean4 = []
+                    for item in res4:
+                        if isinstance(item, Exception):
+                            # gather 捕获到异常，通常不会进入这里，因为 safe_bound_test 捕获了内部异常
+                            logging.error(f"[测速失败-Gather异常] Error={item}")
+                            continue
+                        u, t = item
+                        if t is None:
+                            continue
+                        clean4.append((u, t))
+                    ipv4_results = sorted(clean4, key=lambda x: x[1])
 
-                # 对 IPv6 候选测速并排序
+                # IPv6 测速
                 ipv6_results = []
                 if ipv6_candidates:
                     tasks6 = [safe_bound_test(u) for u in ipv6_candidates]
-                    res6 = await asyncio.gather(*tasks6)
-                    ipv6_results = [(u, t) for u, t in res6 if t is not None]
-                    ipv6_results.sort(key=lambda x: x[1])
+                    res6 = await asyncio.gather(*tasks6, return_exceptions=True)
+                    clean6 = []
+                    for item in res6:
+                        if isinstance(item, Exception):
+                            logging.error(f"[测速失败-Gather异常] Error={item}")
+                            continue
+                        u, t = item
+                        if t is None:
+                            continue
+                        clean6.append((u, t))
+                    ipv6_results = sorted(clean6, key=lambda x: x[1])
 
                 N = config.max_links_per_channel
                 merged = []
