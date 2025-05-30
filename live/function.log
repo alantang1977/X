@@ -1,6 +1,5 @@
-2025-05-30 22:03:27,982 - ERROR - url: https://6296.kstore.vip/25.txt 失败❌, Error: 401, message='', url='https://6296.kstore.vip/25.txt'
-2025-05-30 22:03:28,142 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
-2025-05-30 22:03:28,143 - ERROR - Future exception was never retrieved
+2025-05-30 23:41:18,014 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
+2025-05-30 23:41:18,015 - ERROR - Future exception was never retrieved
 future: <Future finished exception=ClientConnectionError('Connection lost: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2712)')>
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/asyncio/sslproto.py", line 534, in data_received
@@ -14,3 +13,4 @@ ssl.SSLError: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after 
 The above exception was the direct cause of the following exception:
 
 aiohttp.client_exceptions.ClientConnectionError: Connection lost: [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2712)
+2025-05-30 23:41:18,525 - ERROR - url: https://6296.kstore.vip/25.txt 失败❌, Error: 401, message='', url='https://6296.kstore.vip/25.txt'
