@@ -52,7 +52,7 @@ http://www.饭太硬.com/tv
 http://www.mpanso.com/小米/DEMO.json
 
 # 🏂影視TV🏄🏻 
-![tang](./Pictures/Welcome.png)
+![tang](./Pictures/W.png)
 
 ----
 
