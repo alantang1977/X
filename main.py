@@ -165,7 +165,7 @@ async def fetch_channels(session, url, cache):
     异步请求并解析单个源 URL，返回 OrderedDict{分类: [(频道名, URL), ...], ...}。
     - 带统一请求头；
     - 捕获 401/403 直接跳过；
-    - 对 Connection reset 和 SSL 错误做简单重试（最多 2 次）。
+    - 对 Connection reset、SSL 错误做简单重试（最多 2 次）。
     """
     channels = OrderedDict()
     unique_urls = set()
@@ -227,7 +227,6 @@ async def fetch_channels(session, url, cache):
 
             except ClientSSLError as ssl_err:
                 logging.error(f"[抓取失败-SSL错误] URL={url}, Error={ssl_err}")
-                # 不再重试，直接跳过
                 return channels
             except aiohttp.ClientResponseError as cre:
                 logging.error(f"[抓取失败-HTTP错误] URL={url}, Status={cre.status}, Message={cre.message}")
@@ -329,15 +328,26 @@ def merge_channels(target, source):
 
 
 async def filter_source_urls(template_file):
+    """
+    说明：为了彻底避免“Future exception was never retrieved”，这里增加了一个 safe_fetch()，
+    对 fetch_channels 进行二次包装，确保任何异常都在 safe_fetch 内被捕获。
+    """
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
     cache = load_cache()
 
+    async def safe_fetch(session, url, cache):
+        try:
+            return await fetch_channels(session, url, cache)
+        except Exception as e:
+            # 任何意外都统一记录日志，返回空的 OrderedDict
+            logging.error(f"[抓取失败-未捕获异常] URL={url}, Error={e}")
+            return OrderedDict()
+
     all_channels = OrderedDict()
-    # 创建 ClientSession 时禁用 SSL 验证
     connector = aiohttp.TCPConnector(ssl=False)
     async with aiohttp.ClientSession(connector=connector) as session:
-        tasks = [fetch_channels(session, url, cache) for url in source_urls]
+        tasks = [safe_fetch(session, url, cache) for url in source_urls]
         results = await asyncio.gather(*tasks)
 
     for fetched in results:
@@ -371,6 +381,7 @@ async def filter_source_urls(template_file):
 async def test_url_speed(session, url, timeout):
     """
     对单个 URL 发起 HEAD 请求测时延，带上常见请求头。
+    返回 (url, elapsed) 或 (url, None)。
     """
     start = time.monotonic()
     try:
@@ -395,10 +406,17 @@ async def test_url_speed(session, url, timeout):
 
 
 async def rank_channel_urls(channels_raw):
+    """
+    返回的结构变为：
+      OrderedDict{
+        分类: OrderedDict{
+          频道名: [(url1, t1), (url2, t2), ...],  # 已按 t 升序排列，且只保留前 N 条
+        }
+      }
+    """
     timeout = config.speed_test_timeout
     sem = asyncio.Semaphore(config.speed_test_concurrency)
 
-    # 同样在这里禁用 SSL 验证
     connector = aiohttp.TCPConnector(ssl=False)
     async with aiohttp.ClientSession(connector=connector) as session:
         new_channels = OrderedDict()
@@ -445,11 +463,11 @@ async def rank_channel_urls(channels_raw):
                 N = config.max_links_per_channel
                 merged = []
                 if config.ip_version_priority == "ipv4":
-                    merged += [u for u, _ in ipv4_results]
-                    merged += [u for u, _ in ipv6_results]
+                    merged += ipv4_results
+                    merged += ipv6_results
                 else:
-                    merged += [u for u, _ in ipv6_results]
-                    merged += [u for u, _ in ipv4_results]
+                    merged += ipv6_results
+                    merged += ipv4_results
                 final_list = merged[:N]
 
                 if final_list:
@@ -474,10 +492,23 @@ def write_to_files(f_m3u, f_txt, category, channel_name, url, index, total):
     f_txt.write(f"{channel_name},{final_url}\n")
 
 
-def write_output_files(channels, template_channels, cache):
+def write_output_files(channels_with_times, template_channels, cache):
+    """
+    channels_with_times 的结构是:
+      {
+        分类1: {
+          频道A: [(urlA1, tA1), (urlA2, tA2), ...],
+          频道B: [(urlB1, tB1), ...],
+          ...
+        },
+        分类2: ...
+      }
+    按“每个频道最快一条 URL 的 t”对同分类下的频道做排序，再输出到文件。
+    """
     written_urls = set()
     url_changes = {"added": [], "removed": []}
 
+    # 比对缓存，找新增/移除的 URL
     if is_cache_valid(cache):
         prev_urls = {}
         for uh, entry in cache["urls"].items():
@@ -486,9 +517,9 @@ def write_output_files(channels, template_channels, cache):
                     prev_urls[u] = (cat, name)
 
         curr_urls = {}
-        for cat, ch_dict in channels.items():
-            for name, urls in ch_dict.items():
-                for u in urls:
+        for cat, ch_dict in channels_with_times.items():
+            for name, url_times in ch_dict.items():
+                for u, _ in url_times:
                     curr_urls[u] = (cat, name)
 
         for u, info in curr_urls.items():
@@ -506,9 +537,11 @@ def write_output_files(channels, template_channels, cache):
     with open(m3u_path, "w", encoding="utf-8") as f_m3u, \
          open(txt_path, "w", encoding="utf-8") as f_txt:
 
+        # 写 EXTM3U 头部
         epg_list = ",".join(f'"{url}"' for url in config.epg_urls)
         f_m3u.write(f'#EXTM3U x-tvg-url={epg_list}\n')
 
+        # 写公告
         for grp in config.announcements:
             f_txt.write(f"{grp['channel']},#genre#\n")
             for ent in grp['entries']:
@@ -525,23 +558,38 @@ def write_output_files(channels, template_channels, cache):
                 f_m3u.write(url + "\n")
                 f_txt.write(f"{name},{url}\n")
 
+        # 按分类输出
         for category, tpl_list in template_channels.items():
             f_txt.write(f"{category},#genre#\n")
-            if category not in channels:
+            if category not in channels_with_times:
                 continue
-            for tpl_name in tpl_list:
-                if tpl_name not in channels[category]:
-                    continue
-                url_list = channels[category][tpl_name]
-                total = len(url_list)
-                if total == 0:
-                    continue
-                for idx, u in enumerate(url_list, start=1):
-                    if u in written_urls:
-                        continue
-                    written_urls.add(u)
-                    write_to_files(f_m3u, f_txt, category, tpl_name, u, idx, total)
 
+            # 1) 把这个分类下的 (频道名, [(url, t), ...]) 条目做列表
+            channel_entries = list(channels_with_times[category].items())
+            # 过滤掉没有任何测速结果的频道
+            channel_entries = [entry for entry in channel_entries if entry[1]]
+            # 按“该频道第一条记录的 t”（也就是最快一条 URL 的用时）排序
+            channel_entries.sort(key=lambda item: item[1][0][1])
+
+            # 2) 按 demo.txt（template_channels）里的顺序输出，如果频道不在 template_channels 中则跳过
+            for tpl_name in tpl_list:
+                if tpl_name not in channels_with_times[category]:
+                    continue
+                # 在排序后的列表里找到这一频道
+                for chan_name, url_times in channel_entries:
+                    if chan_name == tpl_name:
+                        url_list = [u for u, t in url_times]
+                        total = len(url_list)
+                        if total == 0:
+                            break
+                        for idx, u in enumerate(url_list, start=1):
+                            if u in written_urls:
+                                continue
+                            written_urls.add(u)
+                            write_to_files(f_m3u, f_txt, category, tpl_name, u, idx, total)
+                        break
+
+    # 如果有 URL 变动，写入 log
     if url_changes["added"] or url_changes["removed"]:
         log_path = os.path.join(output_folder, "url_changes.log")
         with open(log_path, "a", encoding="utf-8") as f:
@@ -571,8 +619,8 @@ async def main():
 
     try:
         matched_raw, template_channels, cache = await filter_source_urls(template_file)
-        channels_ranked = await rank_channel_urls(matched_raw)
-        write_output_files(channels_ranked, template_channels, cache)
+        channels_with_times = await rank_channel_urls(matched_raw)
+        write_output_files(channels_with_times, template_channels, cache)
         print("操作完成！结果已保存到 live/live.m3u 和 live/live.txt。")
     except Exception as e:
         print(f"执行过程中发生错误: {e}")
