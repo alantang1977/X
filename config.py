@@ -5,6 +5,7 @@ ip_version_priority = "ipv6"
 
 # 直播源URL列表
 source_urls = [
+    "https://yk95.yymmiptv.top",
     "http://go8.myartsonline.com/zx/0/tv.txt",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV",
     "https://www.iyouhun.com/tv/myIPTV/ipv6.m3u",
