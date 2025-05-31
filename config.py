@@ -130,7 +130,3 @@ epg_urls = [
     "https://epg.pw/xmltv/epg_HK.xml",
     "https://epg.pw/xmltv/epg_TW.xml"
 ]
-ip_version_priority = "ipv4"
-max_links_per_channel = 10
-speed_test_timeout = 3.0
-speed_test_concurrency = 20
