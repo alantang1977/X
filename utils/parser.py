@@ -19,7 +19,7 @@ def parse_template(template_file):
     with open(template_file, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
-            if not line or line.startswith('#'):  # 跳过注释和空行
+            if not line or line.startswith('#'):
                 continue
             if line.startswith('[') and line.endswith(']'):
                 current_category = line[1:-1].strip()
@@ -114,35 +114,3 @@ def deduplicate_and_alias_channels(merged_channels):
         for name in merged_channels[category]:
             if isinstance(merged_channels[category][name], list):
                 merged_channels[category][name] = list(OrderedDict.fromkeys(merged_channels[category][name]))
-
-def optimize_and_output_files(merged_channels, speed_map, output_folder):
-    """
-    按测速结果排序并输出m3u和txt，最终只保留模板里的频道和分类
-    """
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder, exist_ok=True)
-    # 输出txt
-    txt_path = os.path.join(output_folder, "output.txt")
-    with open(txt_path, "w", encoding="utf-8") as f:
-        for category, chans in merged_channels.items():
-            if not chans: continue
-            f.write(f'[{category}]\n')
-            for channel_name, urls in chans.items():
-                if not urls: continue
-                # 按测速升序
-                urls_sorted = sorted(urls, key=lambda u: speed_map.get(u, (float('inf'), False))[0])
-                for url in urls_sorted:
-                    f.write(f"{channel_name},{url}\n")
-    # 输出m3u
-    m3u_path = os.path.join(output_folder, "output.m3u")
-    with open(m3u_path, "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
-        for category, chans in merged_channels.items():
-            if not chans: continue
-            f.write(f"#------ {category} ------\n")
-            for channel_name, urls in chans.items():
-                if not urls: continue
-                urls_sorted = sorted(urls, key=lambda u: speed_map.get(u, (float('inf'), False))[0])
-                for url in urls_sorted:
-                    f.write(f'#EXTINF:-1 group-title="{category}",{channel_name}\n')
-                    f.write(f"{url}\n")
