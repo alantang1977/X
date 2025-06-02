@@ -14,6 +14,10 @@ except ImportError:
     print("错误: 找不到配置模块 'config.py'")
     sys.exit(1)
 
+# 全局抑制 aiohttp cookies 警告
+import warnings
+warnings.filterwarnings("ignore", message="Can not load response cookies: Illegal key")
+
 # 导入模块化功能
 import parser
 import speed_test
@@ -64,7 +68,6 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
     只采集内容不测速，失败自动重试，保证主流程不中断。增强异常日志，增加 User-Agent: okhttp。
     """
     from aiohttp import ClientError
-    cache_hit = False
     url_hash = parser.calculate_hash(url)
     if url_hash in cache["urls"]:
         cached_entry = cache["urls"][url_hash]
@@ -140,13 +143,14 @@ async def main(template_file):
 
     print_report(success_urls, failed_urls)
 
-    # 合并模板与抓取
+    # 合并模板与抓取，并去重/规范化
     merged_channels = parser.merge_with_template(all_channels, template_channels)
     parser.deduplicate_and_alias_channels(merged_channels)
 
     # 提取所有url，对最终输出内容测速并排序
     print("开始对所有频道的所有地址进行实际测速，请稍候……")
-    speed_map = await speed_test.speed_test_channels(merged_channels,
+    speed_map = await speed_test.speed_test_channels(
+        merged_channels,
         timeout=getattr(config, "speed_test_timeout", 3),
         max_concurrent=getattr(config, "max_concurrent_speed_tests", 10)
     )
