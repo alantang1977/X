@@ -1,7 +1,7 @@
 # 配置文件，包含直播源URL、黑名单URL、公告信息、EPG URL、测速超时时间和线程池最大工作线程数
 
-# 优先使用的IP版本，这里设置为ipv6
-ip_version_priority = "ipv6"
+# 优先使用的IP版本，这里设置为ipv4
+ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
@@ -110,11 +110,5 @@ epg_urls = [
     "https://epg.pw/xmltv/epg_HK.xml",
     "https://epg.pw/xmltv/epg_TW.xml"
 ]
-# URL 黑名单
-url_blacklist = []
-
-# IP优先级设置
-ip_version_priority = "ipv4"
-
 # 缓存失效时间（天），如 0.5 表示12小时，1 表示1天，2 表示2天
-cache_valid_days = 3  # 可按需修改
+cache_valid_days = 3
