@@ -82,51 +82,6 @@
  "quickSearch":1,"filterable":1,"ext":{"倒序":0,"分类url":"http://sszzyy.com/index.php/vod/show/by/time/id/{cateId}/page/{catePg}/year/{year}.html",
  "分类":"電視劇$37#電影$20#動漫$43#綜藝$45#紀錄片$35#動畫電影$31#B站$47"}},
 {
-            "key": "花都",
-            "name": "花都｜影视",
-            "type": 3,
-            "changeable": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "api": "csp_XBPQ",
-            "jar": "./jar/XBPQ.jar",
-            "ext": {
-                "请求头": "User-Agent$MOBILE_UA",
-                "编码": "UTF-8",
-                "图片": "data-original=\"&&\"",
-                "链接": "href=\"&&\"",
-                "播放链接": "href=\"&&\"",
-                "播放列表": "<a&&</a",
-                "播放数组": "class=\"stui-content__playlist clearfix\">&&</ul>",
-                "分类url": "https://hd.huaduys.cc/vodshow/{cateId}--------{catePg}---.html",
-                "分类": "有码&无码&国产&欧美&动漫",
-                "分类值": "1&2&3&4&5"
-            }
-        },
-{
-            "key": "kiss",
-            "name": "kisd｜影视",
-            "type": 3,
-            "changeable": 1,
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "api": "csp_XBPQ",
-            "jar": "./jar/XBPQ.jar",
-            "ext": {
-                "请求头": "User-Agent$MOBILE_UA",
-                "编码": "UTF-8",
-                "标题": "alt=\"&&\"",
-                
-                "数组": "img-box cover-md bind_video_img&&</a>",
-                "直接播放": "1",
-                "分类url": "https://www.kissavtv.com/index/getstylemvs/id/{cateId}/sort/update/page/{catePg}",
-                "分类": "中文&角色&制服&调教&无码&丝袜&啪啪",
-                "分类值": "3&2&4&7&11&6&5"
-            }
-        },
-{
             "key": "4Kdy",
             "name": "4K🎦DY",
             "type": 3,
