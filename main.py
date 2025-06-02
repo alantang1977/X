@@ -34,7 +34,6 @@ os.makedirs(cache_folder, exist_ok=True)
 cache_file = os.path.join(cache_folder, "url_cache.json")
 cache_valid_days = getattr(config, "cache_valid_days", 1)
 
-# ------ 频道别名及LOGO/EPG补全 ------
 CHANNEL_ALIASES = {
     "CCTV-1": ["CCTV1", "CCTV 1", "央视一台", "CCTV-1 综合", "CCTV 1综合", "CCTV-1HD"],
     "CCTV-2": ["CCTV2", "CCTV 2", "央视二台", "CCTV-2 财经", "CCTV 2财经"],
@@ -81,7 +80,6 @@ def get_epg(channel_name):
     std = get_standard_channel_name(channel_name)
     return CHANNEL_EPGS.get(std, "")
 
-# -------- 缓存 --------
 def load_cache():
     if os.path.exists(cache_file):
         try:
@@ -109,7 +107,6 @@ def is_cache_valid(cache):
 def calculate_hash(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
-# -------- 模板解析，支持频道名/频道名+URL --------
 def parse_template(template_file):
     template_channels = OrderedDict()
     current_category = None
@@ -143,7 +140,7 @@ def normalize_channel_name(name):
 def is_valid_url(url):
     if not url or not url.startswith("http"):
         return False
-    for black in config.url_blacklist:
+    for black in getattr(config, "url_blacklist", []):
         if black in url:
             return False
     return True
@@ -185,7 +182,8 @@ async def fetch_channels(session, url, cache):
                     }
                     save_cache(cache)
         except Exception as e:
-            logging.error(f"url: {url} 失败❌, Error: {e}")
+            # 只记录错误，不抛出异常，跳过该链接
+            logging.error(f"url: {url} 跳过, Error: {e}")
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
@@ -338,7 +336,6 @@ def optimize_and_output_files(channels, health_dict, urls_speed):
                 ipv6_urls = [u for u in url_list if is_ipv6(u)]
                 total_urls_ipv4 = len(ipv4_urls)
                 total_urls_ipv6 = len(ipv6_urls)
-                # 按测速排序，快的在前
                 ipv4_urls = sorted(ipv4_urls, key=lambda u: urls_speed.get(u, float('inf')))
                 ipv6_urls = sorted(ipv6_urls, key=lambda u: urls_speed.get(u, float('inf')))
                 for index, url in enumerate(ipv4_urls, start=1):
