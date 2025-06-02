@@ -1,7 +1,7 @@
 # config.py
 
 # 优先使用的IP版本：可选 "ipv4" 或 "ipv6"
-ip_version_priority = "ipv6"
+ip_version_priority = "ipv4"
 
 # 直播源URL列表（建议去重）
 source_urls = [
