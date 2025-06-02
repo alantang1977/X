@@ -110,3 +110,11 @@ epg_urls = [
     "https://epg.pw/xmltv/epg_HK.xml",
     "https://epg.pw/xmltv/epg_TW.xml"
 ]
+# URL 黑名单
+url_blacklist = []
+
+# IP优先级设置
+ip_version_priority = "ipv4"
+
+# 缓存失效时间（天），如 0.5 表示12小时，1 表示1天，2 表示2天
+cache_valid_days = 3  # 可按需修改
