@@ -1,64 +1,46 @@
-2025-06-02 23:07:30,430 - WARNING - url: https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,431 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,431 - WARNING - url: https://fm1077.serv00.net/SmartTV.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,431 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/Alan-Alana/IPTV/refs/heads/main/channl.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,431 - WARNING - url: https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,431 - WARNING - url: https://cnb.cool/junchao.tang/llive/-/git/raw/main/go.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,432 - WARNING - url: https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,432 - WARNING - url: http://lisha521.dynv6.net.fh4u.org/tv.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,432 - WARNING - url: https://live.zhoujie218.top/tv/iptv6.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,432 - WARNING - url: http://home.jundie.top:81/Cat/tv/live.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,432 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,433 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,433 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,433 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,433 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,433 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: http://live.nctv.top/x.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: https://live.zbds.top/tv/iptv6.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: https://live.zbds.top/tv/iptv4.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,434 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,435 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,435 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,435 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,435 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V6.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,435 - WARNING - url: http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,436 - WARNING - url: https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,436 - WARNING - url: https://live.zhoujie218.top/tv/iptv4.txt 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,436 - WARNING - url: https://live.fanmingming.cn/tv/m3u/ipv6.m3u 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:30,436 - WARNING - url: https://gitee.com/xxy002/zhiboyuan/raw/master/dsy 请求超时(1/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,557 - WARNING - url: https://cnb.cool/junchao.tang/llive/-/git/raw/main/go.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,557 - WARNING - url: https://live.zhoujie218.top/tv/iptv4.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,558 - WARNING - url: http://live.nctv.top/x.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,558 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V6.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,558 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,558 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,558 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,559 - WARNING - url: https://live.zhoujie218.top/tv/iptv6.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,560 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,560 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,560 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:45,561 - WARNING - url: https://gitee.com/xxy002/zhiboyuan/raw/master/dsy 请求超时(2/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:59,297 - WARNING - url: https://gitee.com/xxy002/zhiboyuan/raw/master/dsy 请求超时(3/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:59,297 - ERROR - url: https://gitee.com/xxy002/zhiboyuan/raw/master/dsy 跳过，重试多次仍失败
-2025-06-02 23:07:59,297 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u 请求超时(3/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:59,297 - ERROR - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u 跳过，重试多次仍失败
-2025-06-02 23:07:59,297 - WARNING - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u 请求超时(3/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:07:59,297 - ERROR - url: https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u 跳过，重试多次仍失败
-2025-06-02 23:08:00,267 - WARNING - url: https://live.zhoujie218.top/tv/iptv6.txt 请求超时(3/3)，请检查目标服务器或增大超时时间（当前10秒）
-2025-06-02 23:08:00,267 - ERROR - url: https://live.zhoujie218.top/tv/iptv6.txt 跳过，重试多次仍失败
-2025-06-02 23:08:00,513 - INFO - 采集成功源站数量: 38
-2025-06-02 23:08:00,513 - INFO - 采集失败源站数量: 5
-2025-06-02 23:08:00,513 - INFO - 失败源站清单:
-2025-06-02 23:08:00,514 - INFO -   - https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u
-2025-06-02 23:08:00,514 - INFO -   - https://smart.pendy.dpdns.org/m3u/Smart.m3u
-2025-06-02 23:08:00,514 - INFO -   - https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
-2025-06-02 23:08:00,514 - INFO -   - https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
-2025-06-02 23:08:00,514 - INFO -   - https://live.zhoujie218.top/tv/iptv6.txt
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: https://yk95.yymmiptv.top
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: https://www.iyouhun.com/tv/myIPTV/ipv6.m3u
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: https://www.iyouhun.com/tv/myIPTV/ipv4.m3u
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: http://rihou.cc:555/gggg.nzk
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: https://live.izbds.com/tv/iptv4.txt
+2025-06-02 23:40:01,761 - INFO - 从缓存加载: http://47.120.41.246:8899/zb.txt
+2025-06-02 23:40:01,762 - INFO - 从缓存加载: http://live.nctv.top/x.txt
+2025-06-02 23:40:01,762 - INFO - 从缓存加载: http://1.94.31.214/live/livelite.txt
+2025-06-02 23:40:01,762 - INFO - 从缓存加载: https://cnb.cool/junchao.tang/llive/-/git/raw/main/go.txt
+2025-06-02 23:40:01,762 - INFO - 从缓存加载: https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播
+2025-06-02 23:40:01,762 - INFO - 从缓存加载: http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/Alan-Alana/IPTV/refs/heads/main/channl.txt
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V6.m3u
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: http://lisha521.dynv6.net.fh4u.org/tv.txt
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://iptv.catvod.com/tv.m3u
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://live.zbds.top/tv/iptv4.txt
+2025-06-02 23:40:01,763 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
+2025-06-02 23:40:01,764 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://live.zbds.top/tv/iptv6.txt
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: http://home.jundie.top:81/Cat/tv/live.txt
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://live.fanmingming.cn/tv/m3u/ipv6.m3u
+2025-06-02 23:40:01,765 - INFO - 从缓存加载: https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u
+2025-06-02 23:40:01,766 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt
+2025-06-02 23:40:01,766 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt
+2025-06-02 23:40:01,766 - INFO - 从缓存加载: https://fm1077.serv00.net/SmartTV.m3u
+2025-06-02 23:40:01,766 - INFO - 从缓存加载: https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u
+2025-06-02 23:40:01,766 - INFO - 从缓存加载: https://live.zhoujie218.top/tv/iptv4.txt
+2025-06-02 23:40:07,346 - INFO - 采集成功源站数量: 38
+2025-06-02 23:40:07,346 - INFO - 采集失败源站数量: 5
+2025-06-02 23:40:07,346 - INFO - 失败源站清单:
+2025-06-02 23:40:07,346 - INFO -   - https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u
+2025-06-02 23:40:07,346 - INFO -   - https://smart.pendy.dpdns.org/m3u/Smart.m3u
+2025-06-02 23:40:07,347 - INFO -   - https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
+2025-06-02 23:40:07,347 - INFO -   - https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
+2025-06-02 23:40:07,347 - INFO -   - https://live.zhoujie218.top/tv/iptv6.txt
