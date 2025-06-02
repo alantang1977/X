@@ -24,6 +24,8 @@ except ImportError:
     import sys
     sys.exit(1)
 
+import traceback
+
 # 日志设置，支持DEBUG级别并输出到文件和控制台
 logging.basicConfig(
     level=logging.INFO,
@@ -153,9 +155,7 @@ def is_valid_url(url):
     return True
 
 async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
-    """
-    支持自动重试，失败则跳过，保证主流程不中断。
-    """
+    """支持自动重试，失败则跳过，保证主流程不中断。增加 User-Agent: okhttp，增强异常日志。"""
     channels = OrderedDict()
     unique_urls = set()
     cache_hit = False
@@ -170,11 +170,15 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
             unique_urls = set(cached_entry["unique_urls"])
             cache_hit = True
 
+    headers = {
+        "User-Agent": "okhttp"
+    }
+
     if not cache_hit:
         attempt = 0
         while attempt < retry_times:
             try:
-                async with session.get(url, timeout=getattr(config, "fetch_url_timeout", 10)) as response:
+                async with session.get(url, headers=headers, timeout=getattr(config, "fetch_url_timeout", 10)) as response:
                     response.raise_for_status()
                     content = await response.text()
                     lines = content.split("\n")
@@ -195,7 +199,9 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
                     return channels
             except Exception as e:
                 attempt += 1
-                logging.warning(f"url: {url} 请求失败({attempt}/{retry_times}), Error: {e}")
+                logging.warning(
+                    f"url: {url} 请求失败({attempt}/{retry_times}), Error: {repr(e)}\nTraceback:\n{traceback.format_exc()}"
+                )
                 if attempt < retry_times:
                     await asyncio.sleep(retry_delay)
         logging.error(f"url: {url} 跳过，重试多次仍失败")
@@ -272,13 +278,14 @@ def deduplicate_and_alias_channels(channels_dict):
         channels_dict[cat][std_name] = list(urls)
 
 async def test_url_speed(session, url, timeout=2, retry_times=2):
-    """
-    支持测速失败自动重试，默认2次
-    """
+    """支持测速失败自动重试，默认2次。增加 User-Agent: okhttp。"""
+    headers = {
+        "User-Agent": "okhttp"
+    }
     for attempt in range(retry_times):
         try:
             start = time.perf_counter()
-            async with session.get(url, timeout=timeout) as resp:
+            async with session.get(url, headers=headers, timeout=timeout) as resp:
                 await resp.content.read(1024)
             elapsed = time.perf_counter() - start
             return url, elapsed
