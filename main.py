@@ -23,7 +23,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "utils"))
 import parser
 import speed_test
 
-# 日志设置
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -67,9 +66,7 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
         if elapsed < cache_valid_days:
             logging.info(f"从缓存加载: {url}")
             return OrderedDict(cached_entry["channels"])
-
     headers = {"User-Agent": "okhttp"}
-
     attempt = 0
     while attempt < retry_times:
         try:
@@ -119,13 +116,11 @@ def filter_channels_by_template(merged_channels, template_channels):
     只保留demo.txt（模板）中出现的分类和频道
     """
     filtered = OrderedDict()
-    # 解析模板可用频道
     template_map = OrderedDict()
     for category, channels in template_channels.items():
         template_map[category] = set()
         for channel_name, url in channels:
             template_map[category].add(channel_name.strip())
-    # 过滤主频道
     for category in merged_channels:
         if category not in template_map:
             continue
@@ -136,11 +131,49 @@ def filter_channels_by_template(merged_channels, template_channels):
                 filtered[category][channel_name] = merged_channels[category][channel_name]
     return filtered
 
+def write_final_files(merged_channels, speed_map, output_folder):
+    """
+    写入 live/output.txt 和 live/output.m3u
+    """
+    txt_path = os.path.join(output_folder, "output.txt")
+    m3u_path = os.path.join(output_folder, "output.m3u")
+    total_lines = 0
+    # TXT
+    with open(txt_path, "w", encoding="utf-8") as f:
+        for category, chans in merged_channels.items():
+            if not chans: continue
+            f.write(f'[{category}]\n')
+            for channel_name, urls in chans.items():
+                if not urls: continue
+                # 按测速升序排序
+                urls_sorted = sorted(urls, key=lambda u: speed_map.get(u, (float('inf'), False))[0])
+                for url in urls_sorted:
+                    f.write(f"{channel_name},{url}\n")
+                    total_lines += 1
+    # M3U
+    with open(m3u_path, "w", encoding="utf-8") as f:
+        f.write("#EXTM3U\n")
+        for category, chans in merged_channels.items():
+            if not chans: continue
+            f.write(f"#------ {category} ------\n")
+            for channel_name, urls in chans.items():
+                if not urls: continue
+                urls_sorted = sorted(urls, key=lambda u: speed_map.get(u, (float('inf'), False))[0])
+                for url in urls_sorted:
+                    f.write(f'#EXTINF:-1 group-title="{category}",{channel_name}\n')
+                    f.write(f"{url}\n")
+    print(f"写入 output.txt 和 output.m3u 成功，共写入 {total_lines} 行频道。")
+
 async def main(template_file):
     template_channels = parser.parse_template(template_file)
+    if not template_channels:
+        print("模板 demo.txt 解析为空，请检查文件内容。")
+        return
     source_urls = getattr(config, "source_urls", [])
+    if not source_urls:
+        print("config.py 未配置 source_urls。")
+        return
     cache = load_cache()
-
     all_channels = OrderedDict()
     failed_urls = []
     success_urls = []
@@ -153,17 +186,13 @@ async def main(template_file):
                 success_urls.append(source_urls[idx])
             else:
                 failed_urls.append(source_urls[idx])
-
     print_report(success_urls, failed_urls)
-
-    # 合并模板与抓取，并去重/规范化
     merged_channels = parser.merge_with_template(all_channels, template_channels)
     parser.deduplicate_and_alias_channels(merged_channels)
-
-    # 只保留模板里的分类和频道
     merged_channels = filter_channels_by_template(merged_channels, template_channels)
-
-    # 提取所有url，对最终输出内容测速并排序
+    if not any(merged_channels.values()):
+        print("合并和筛选后频道为空，请检查采集及模板匹配。")
+        return
     print("开始对所有频道的所有地址进行实际测速，请稍候……")
     speed_map = await speed_test.speed_test_channels(
         merged_channels,
@@ -171,9 +200,8 @@ async def main(template_file):
         max_concurrent=getattr(config, "max_concurrent_speed_tests", 10)
     )
     print("测速完成，正在基于测速结果排序并生成最终输出文件……")
-
-    parser.optimize_and_output_files(merged_channels, speed_map, output_folder)
-    print("操作完成！结果已保存到live文件夹。")
+    write_final_files(merged_channels, speed_map, output_folder)
+    print("操作完成！结果已保存到 live 文件夹。")
     if failed_urls:
         print(f"采集失败源站数量: {len(failed_urls)}，请检查日志 function.log")
 
