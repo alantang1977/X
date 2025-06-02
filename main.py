@@ -7,10 +7,8 @@ import aiohttp
 import traceback
 import hashlib
 import difflib
-import time
 from collections import OrderedDict, defaultdict
 from datetime import datetime
-from typing import List
 
 try:
     import config
@@ -149,8 +147,8 @@ def is_valid_url(url):
 
 async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
     """
-    支持自动重试，失败则跳过，保证主流程不中断。
-    增强异常日志，区分超时与取消，增加 User-Agent: okhttp。
+    只采集内容不测速，失败自动重试，保证主流程不中断。
+    增强异常日志，增加 User-Agent: okhttp。
     """
     from aiohttp import ClientError
     channels = OrderedDict()
@@ -284,80 +282,28 @@ def deduplicate_and_alias_channels(channels_dict):
     for (cat, std_name), urls in global_channel_map.items():
         channels_dict[cat][std_name] = list(urls)
 
-async def test_url_speed(session, url, timeout=2, retry_times=2):
-    headers = {
-        "User-Agent": "okhttp"
-    }
-    from aiohttp import ClientError
-    for attempt in range(retry_times):
-        try:
-            start = time.perf_counter()
-            async with session.get(url, headers=headers, timeout=timeout) as resp:
-                await resp.content.read(1024)
-            elapsed = time.perf_counter() - start
-            return url, elapsed
-        except asyncio.TimeoutError:
-            if attempt == retry_times - 1:
-                return url, float('inf')
-            await asyncio.sleep(0.8)
-        except ClientError:
-            if attempt == retry_times - 1:
-                return url, float('inf')
-            await asyncio.sleep(0.8)
-        except Exception:
-            if attempt == retry_times - 1:
-                return url, float('inf')
-            await asyncio.sleep(0.8)
-
-async def speed_test_for_channel_urls(url_list: List[str], max_concurrent=10, timeout=2, repeat=1, retry_times=2):
-    results = {}
-    sem = asyncio.Semaphore(max_concurrent)
-    async with aiohttp.ClientSession() as session:
-        async def sem_test(url):
-            times = []
-            for _ in range(repeat):
-                async with sem:
-                    _, t = await test_url_speed(session, url, timeout, retry_times)
-                    times.append(t)
-            return url, min(times)
-        tasks = [sem_test(url) for url in url_list]
-        for res in await asyncio.gather(*tasks):
-            results[res[0]] = res[1]
-    return results
-
-def filter_and_sort_urls_by_speed(urls_speed, max_keep=10, speed_threshold=3.0):
-    filtered = [url for url, t in sorted(urls_speed.items(), key=lambda x: x[1]) if t < speed_threshold]
-    return filtered[:max_keep]
-
-def extract_all_channel_urls(channels_dict):
-    channel_urls = defaultdict(list)
-    for category in channels_dict:
-        for channel_name in channels_dict[category]:
-            for url in channels_dict[category][channel_name]:
-                channel_urls[(category, channel_name)].append(url)
-    return channel_urls
+def is_ipv6(url):
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
 def add_url_suffix(url, index, total_urls, ip_version):
     suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
     base_url = url.split('$', 1)[0] if '$' in url else url
     return f"{base_url}{suffix}"
 
-def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url, health, speed=None):
+def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url):
     logo_url = get_logo(channel_name)
     extinf = f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\""
     if epg_url:
         extinf += f" epg-url=\"{epg_url}\""
-    extinf += f" health=\"{health}\""
-    if speed is not None:
-        extinf += f" speed=\"{speed:.3f}\""
     f_m3u.write(f"{extinf},{channel_name}\n")
     f_m3u.write(new_url + "\n")
-    f_txt.write(f"{channel_name},{new_url},{health},{speed if speed is not None else ''}\n")
+    f_txt.write(f"{channel_name},{new_url}\n")
 
-def is_ipv6(url):
-    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+def sort_channel_urls(urls):
+    # 可扩展为基于某些优先级规则排序，目前仅返回原始顺序
+    return urls
 
-def optimize_and_output_files(channels, health_dict, urls_speed):
+def optimize_and_output_files(channels):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
     ipv4_m3u_path = os.path.join(output_folder, "live_ipv4.m3u")
@@ -379,21 +325,17 @@ def optimize_and_output_files(channels, health_dict, urls_speed):
                 ipv6_urls = [u for u in url_list if is_ipv6(u)]
                 total_urls_ipv4 = len(ipv4_urls)
                 total_urls_ipv6 = len(ipv6_urls)
-                ipv4_urls = sorted(ipv4_urls, key=lambda u: urls_speed.get(u, float('inf')))
-                ipv6_urls = sorted(ipv6_urls, key=lambda u: urls_speed.get(u, float('inf')))
+                ipv4_urls = sort_channel_urls(ipv4_urls)
+                ipv6_urls = sort_channel_urls(ipv6_urls)
                 for index, url in enumerate(ipv4_urls, start=1):
                     if url not in written_urls_ipv4 and is_valid_url(url):
-                        speed = urls_speed.get(url, None)
-                        health = health_dict.get(url, "fail" if health_dict.get(url, float('inf')) == float('inf') else "ok")
                         new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
-                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url, health, speed)
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url)
                         written_urls_ipv4.add(url)
                 for index, url in enumerate(ipv6_urls, start=1):
                     if url not in written_urls_ipv6 and is_valid_url(url):
-                        speed = urls_speed.get(url, None)
-                        health = health_dict.get(url, "fail" if health_dict.get(url, float('inf')) == float('inf') else "ok")
                         new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
-                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url, health, speed)
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url)
                         written_urls_ipv6.add(url)
             f_txt_ipv4.write("\n")
             f_txt_ipv6.write("\n")
@@ -445,34 +387,12 @@ async def main(template_file):
             else:
                 merged_channels[category].setdefault(channel_name, [])
 
-    # 并发测速，筛选最快有效线路
-    channel_urls = extract_all_channel_urls(merged_channels)
-    all_urls = list({url for urls in channel_urls.values() for url in urls if is_valid_url(url)})
-    print("开始并发测速，请稍候……")
-    max_concurrent = getattr(config, "max_concurrent_speed_tests", 10)
-    speed_test_timeout = getattr(config, "speed_test_timeout", 3)
-    speed_test_repeat = getattr(config, "speed_test_repeat", 2)
-    max_lines_per_channel = getattr(config, "max_lines_per_channel", 10)
-    urls_speed = await speed_test_for_channel_urls(
-        all_urls,
-        max_concurrent=max_concurrent,
-        timeout=speed_test_timeout,
-        repeat=speed_test_repeat
-    )
-    print("测速完成，正在筛选有效线路并写入文件……")
-    health_dict = {}
-    for url, t in urls_speed.items():
-        health_dict[url] = t if t < speed_test_timeout else float('inf')
-    for key, urls in channel_urls.items():
-        filtered = filter_and_sort_urls_by_speed(
-            {u: urls_speed.get(u, float('inf')) for u in urls},
-            max_keep=max_lines_per_channel,
-            speed_threshold=speed_test_timeout
-        )
-        category, channel_name = key
-        merged_channels[category][channel_name] = filtered
+    # 对最终每个频道的URL进行内容级排序（可扩展更多排序逻辑）
+    for category in merged_channels:
+        for channel_name in merged_channels[category]:
+            merged_channels[category][channel_name] = sort_channel_urls(merged_channels[category][channel_name])
 
-    optimize_and_output_files(merged_channels, health_dict, urls_speed)
+    optimize_and_output_files(merged_channels)
     print("操作完成！结果已保存到live文件夹。")
     if failed_urls:
         print(f"采集失败源站数量: {len(failed_urls)}，请检查日志 function.log")
