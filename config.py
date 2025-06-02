@@ -95,7 +95,7 @@ epg_urls = [
 # 缓存失效时间（天），如 0.5 表示12小时，1 表示1天，2 表示2天
 cache_valid_days = 3
 
-# 并发测速最大线路数（如 10/15/20）
+# 并发测速最大线路数
 max_concurrent_speed_tests = 20
 
 # 每个频道保留测速最快的线路数
@@ -106,3 +106,10 @@ speed_test_timeout = 5
 
 # 测速重复测试次数（取最优值）
 speed_test_repeat = 2
+
+# RTMP 推流配置（如启用推流功能）
+enable_rtmp_push = True
+rtmp_server_url = "rtmp://localhost/live"
+# 如需自动生成 HLS，可在此设置输出目录和URL前缀
+hls_output_dir = "./hls"
+hls_url_prefix = "http://localhost/hls"
