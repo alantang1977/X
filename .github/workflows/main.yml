@@ -32,7 +32,9 @@ jobs:
     - name: Install dependencies  # 安装项目所需的 Python 包
       run: |
         pip install requests  # 安装 requests 库作为示例
-
+        
+    - name: 安装依赖
+      run: pip install aiohttp
     - name: Run Python script  # 执行主脚本
       run: python main.py
 
