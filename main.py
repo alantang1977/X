@@ -65,9 +65,6 @@ def is_cache_valid(cache):
     return elapsed < cache_valid_days
 
 async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
-    """
-    只采集内容不测速，失败自动重试，保证主流程不中断。增强异常日志，增加 User-Agent: okhttp。
-    """
     from aiohttp import ClientError
     url_hash = parser.calculate_hash(url)
     if url_hash in cache["urls"]:
@@ -124,6 +121,28 @@ def print_report(success_urls, failed_urls):
         for url in failed_urls:
             logging.info(f"  - {url}")
 
+def filter_channels_by_template(merged_channels, template_channels):
+    """
+    只保留demo.txt（模板）中出现的分类和频道
+    """
+    filtered = OrderedDict()
+    # 解析模板可用频道
+    template_map = OrderedDict()
+    for category, channels in template_channels.items():
+        template_map[category] = set()
+        for channel_name, url in channels:
+            template_map[category].add(channel_name.strip())
+    # 过滤主频道
+    for category in merged_channels:
+        if category not in template_map:
+            continue
+        for channel_name in merged_channels[category]:
+            if channel_name in template_map[category]:
+                if category not in filtered:
+                    filtered[category] = OrderedDict()
+                filtered[category][channel_name] = merged_channels[category][channel_name]
+    return filtered
+
 async def main(template_file):
     template_channels = parser.parse_template(template_file)
     source_urls = getattr(config, "source_urls", [])
@@ -147,6 +166,9 @@ async def main(template_file):
     # 合并模板与抓取，并去重/规范化
     merged_channels = parser.merge_with_template(all_channels, template_channels)
     parser.deduplicate_and_alias_channels(merged_channels)
+
+    # 只保留模板里的分类和频道
+    merged_channels = filter_channels_by_template(merged_channels, template_channels)
 
     # 提取所有url，对最终输出内容测速并排序
     print("开始对所有频道的所有地址进行实际测速，请稍候……")
