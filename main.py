@@ -3,19 +3,14 @@ import asyncio
 import logging
 import json
 import os
+import aiohttp
+import traceback
+import hashlib
+import difflib
+import time
 from collections import OrderedDict, defaultdict
 from datetime import datetime
-import difflib
-import hashlib
-import time
 from typing import List
-
-try:
-    import aiohttp
-except ImportError:
-    print("错误: 缺少依赖库 'aiohttp'，请先安装 (pip install aiohttp)")
-    import sys
-    sys.exit(1)
 
 try:
     import config
@@ -23,8 +18,6 @@ except ImportError:
     print("错误: 找不到配置模块 'config.py'")
     import sys
     sys.exit(1)
-
-import traceback
 
 # 日志设置，支持DEBUG级别并输出到文件和控制台
 logging.basicConfig(
@@ -155,7 +148,11 @@ def is_valid_url(url):
     return True
 
 async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
-    """支持自动重试，失败则跳过，保证主流程不中断。增加 User-Agent: okhttp，增强异常日志。"""
+    """
+    支持自动重试，失败则跳过，保证主流程不中断。
+    增强异常日志，区分超时与取消，增加 User-Agent: okhttp。
+    """
+    from aiohttp import ClientError
     channels = OrderedDict()
     unique_urls = set()
     cache_hit = False
@@ -178,7 +175,9 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
         attempt = 0
         while attempt < retry_times:
             try:
-                async with session.get(url, headers=headers, timeout=getattr(config, "fetch_url_timeout", 10)) as response:
+                async with session.get(
+                    url, headers=headers, timeout=getattr(config, "fetch_url_timeout", 10)
+                ) as response:
                     response.raise_for_status()
                     content = await response.text()
                     lines = content.split("\n")
@@ -197,13 +196,21 @@ async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
                         }
                         save_cache(cache)
                     return channels
+            except asyncio.TimeoutError:
+                attempt += 1
+                logging.warning(
+                    f"url: {url} 请求超时({attempt}/{retry_times})，请检查目标服务器或增大超时时间（当前{getattr(config, 'fetch_url_timeout', 10)}秒）"
+                )
+            except ClientError as e:
+                attempt += 1
+                logging.warning(f"url: {url} 客户端异常({attempt}/{retry_times}), Error: {repr(e)}")
             except Exception as e:
                 attempt += 1
                 logging.warning(
-                    f"url: {url} 请求失败({attempt}/{retry_times}), Error: {repr(e)}\nTraceback:\n{traceback.format_exc()}"
+                    f"url: {url} 其它异常({attempt}/{retry_times}), Error: {repr(e)}\nTraceback:\n{traceback.format_exc()}"
                 )
-                if attempt < retry_times:
-                    await asyncio.sleep(retry_delay)
+            if attempt < retry_times:
+                await asyncio.sleep(retry_delay)
         logging.error(f"url: {url} 跳过，重试多次仍失败")
     return channels
 
@@ -278,10 +285,10 @@ def deduplicate_and_alias_channels(channels_dict):
         channels_dict[cat][std_name] = list(urls)
 
 async def test_url_speed(session, url, timeout=2, retry_times=2):
-    """支持测速失败自动重试，默认2次。增加 User-Agent: okhttp。"""
     headers = {
         "User-Agent": "okhttp"
     }
+    from aiohttp import ClientError
     for attempt in range(retry_times):
         try:
             start = time.perf_counter()
@@ -289,6 +296,14 @@ async def test_url_speed(session, url, timeout=2, retry_times=2):
                 await resp.content.read(1024)
             elapsed = time.perf_counter() - start
             return url, elapsed
+        except asyncio.TimeoutError:
+            if attempt == retry_times - 1:
+                return url, float('inf')
+            await asyncio.sleep(0.8)
+        except ClientError:
+            if attempt == retry_times - 1:
+                return url, float('inf')
+            await asyncio.sleep(0.8)
         except Exception:
             if attempt == retry_times - 1:
                 return url, float('inf')
