@@ -7,6 +7,7 @@ import aiohttp
 import traceback
 import hashlib
 import difflib
+import time
 from collections import OrderedDict, defaultdict
 from datetime import datetime
 
@@ -290,20 +291,75 @@ def add_url_suffix(url, index, total_urls, ip_version):
     base_url = url.split('$', 1)[0] if '$' in url else url
     return f"{base_url}{suffix}"
 
-def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url):
+def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url, speed=None, ok=True):
     logo_url = get_logo(channel_name)
     extinf = f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\""
     if epg_url:
         extinf += f" epg-url=\"{epg_url}\""
+    if speed is not None:
+        extinf += f" speed=\"{speed:.3f}\""
+    extinf += f" health=\"{'ok' if ok else 'fail'}\""
     f_m3u.write(f"{extinf},{channel_name}\n")
     f_m3u.write(new_url + "\n")
-    f_txt.write(f"{channel_name},{new_url}\n")
+    f_txt.write(f"{channel_name},{new_url},{'ok' if ok else 'fail'},{speed if speed is not None else ''}\n")
 
-def sort_channel_urls(urls):
-    # 可扩展为基于某些优先级规则排序，目前仅返回原始顺序
-    return urls
+def extract_all_channel_urls(channels_dict):
+    channel_urls = defaultdict(list)
+    for category in channels_dict:
+        for channel_name in channels_dict[category]:
+            for url in channels_dict[category][channel_name]:
+                channel_urls[(category, channel_name)].append(url)
+    return channel_urls
 
-def optimize_and_output_files(channels):
+async def test_url_speed(url, timeout=3):
+    # 只测速响应速度，不下载全内容
+    headers = {
+        "User-Agent": "okhttp"
+    }
+    try:
+        async with aiohttp.ClientSession() as session:
+            start = time.perf_counter()
+            async with session.get(url, headers=headers, timeout=timeout) as resp:
+                await resp.content.read(512)
+            elapsed = time.perf_counter() - start
+            return url, elapsed, True
+    except Exception:
+        return url, float('inf'), False
+
+async def speed_test_channels(channels_dict, timeout=3, max_concurrent=10):
+    # 并发测速，返回结构：{url: (耗时, ok)}
+    results = {}
+    urls = []
+    for category in channels_dict:
+        for channel_name in channels_dict[category]:
+            urls.extend(channels_dict[category][channel_name])
+    urls = list(set([u for u in urls if is_valid_url(u)]))
+    sem = asyncio.Semaphore(max_concurrent)
+    async def sem_test(url):
+        async with sem:
+            return await test_url_speed(url, timeout)
+    tasks = [sem_test(url) for url in urls]
+    for res in await asyncio.gather(*tasks):
+        url, elapsed, ok = res
+        results[url] = (elapsed, ok)
+    return results
+
+def sort_channel_urls_by_speed(urls, speed_map):
+    # 有测速的放前面，未测速或失败的放后面
+    urls_ok = [u for u in urls if u in speed_map and speed_map[u][1] and speed_map[u][0] < float('inf')]
+    urls_fail = [u for u in urls if u not in urls_ok]
+    urls_ok.sort(key=lambda u: speed_map[u][0])
+    return urls_ok + urls_fail
+
+def print_report(success_urls, failed_urls):
+    logging.info(f"采集成功源站数量: {len(success_urls)}")
+    logging.info(f"采集失败源站数量: {len(failed_urls)}")
+    if failed_urls:
+        logging.info("失败源站清单:")
+        for url in failed_urls:
+            logging.info(f"  - {url}")
+
+def optimize_and_output_files(channels, speed_map):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
     ipv4_m3u_path = os.path.join(output_folder, "live_ipv4.m3u")
@@ -325,28 +381,23 @@ def optimize_and_output_files(channels):
                 ipv6_urls = [u for u in url_list if is_ipv6(u)]
                 total_urls_ipv4 = len(ipv4_urls)
                 total_urls_ipv6 = len(ipv6_urls)
-                ipv4_urls = sort_channel_urls(ipv4_urls)
-                ipv6_urls = sort_channel_urls(ipv6_urls)
+                # 按测速排序
+                ipv4_urls = sort_channel_urls_by_speed(ipv4_urls, speed_map)
+                ipv6_urls = sort_channel_urls_by_speed(ipv6_urls, speed_map)
                 for index, url in enumerate(ipv4_urls, start=1):
                     if url not in written_urls_ipv4 and is_valid_url(url):
+                        speed, ok = speed_map.get(url, (None, False))
                         new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
-                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url)
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url, speed, ok)
                         written_urls_ipv4.add(url)
                 for index, url in enumerate(ipv6_urls, start=1):
                     if url not in written_urls_ipv6 and is_valid_url(url):
+                        speed, ok = speed_map.get(url, (None, False))
                         new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
-                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url)
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url, speed, ok)
                         written_urls_ipv6.add(url)
             f_txt_ipv4.write("\n")
             f_txt_ipv6.write("\n")
-
-def print_report(success_urls, failed_urls):
-    logging.info(f"采集成功源站数量: {len(success_urls)}")
-    logging.info(f"采集失败源站数量: {len(failed_urls)}")
-    if failed_urls:
-        logging.info("失败源站清单:")
-        for url in failed_urls:
-            logging.info(f"  - {url}")
 
 # --------- 主流程 ---------
 async def main(template_file):
@@ -387,12 +438,12 @@ async def main(template_file):
             else:
                 merged_channels[category].setdefault(channel_name, [])
 
-    # 对最终每个频道的URL进行内容级排序（可扩展更多排序逻辑）
-    for category in merged_channels:
-        for channel_name in merged_channels[category]:
-            merged_channels[category][channel_name] = sort_channel_urls(merged_channels[category][channel_name])
+    # 提取所有url，对最终输出内容测速并排序
+    print("开始对所有频道的所有地址进行实际测速，请稍候……")
+    speed_map = await speed_test_channels(merged_channels, timeout=getattr(config, "speed_test_timeout", 3), max_concurrent=getattr(config, "max_concurrent_speed_tests", 10))
+    print("测速完成，正在基于测速结果排序并生成最终输出文件……")
 
-    optimize_and_output_files(merged_channels)
+    optimize_and_output_files(merged_channels, speed_map)
     print("操作完成！结果已保存到live文件夹。")
     if failed_urls:
         print(f"采集失败源站数量: {len(failed_urls)}，请检查日志 function.log")
