@@ -8,6 +8,7 @@ from datetime import datetime
 import difflib
 import hashlib
 import time
+from typing import List
 
 try:
     import aiohttp
@@ -23,12 +24,18 @@ except ImportError:
     import sys
     sys.exit(1)
 
-logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler("./live/function.log", "w", encoding="utf-8"), logging.StreamHandler()])
+# 日志设置，支持DEBUG级别并输出到文件和控制台
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("./live/function.log", "w", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 output_folder = "live"
 os.makedirs(output_folder, exist_ok=True)
-
 cache_folder = "./live/cache"
 os.makedirs(cache_folder, exist_ok=True)
 cache_file = os.path.join(cache_folder, "url_cache.json")
@@ -145,8 +152,10 @@ def is_valid_url(url):
             return False
     return True
 
-# -------- 网络采集与解析 --------
-async def fetch_channels(session, url, cache):
+async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
+    """
+    支持自动重试，失败则跳过，保证主流程不中断。
+    """
     channels = OrderedDict()
     unique_urls = set()
     cache_hit = False
@@ -162,28 +171,34 @@ async def fetch_channels(session, url, cache):
             cache_hit = True
 
     if not cache_hit:
-        try:
-            async with session.get(url) as response:
-                response.raise_for_status()
-                content = await response.text()
-                lines = content.split("\n")
-                is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
-                if is_m3u:
-                    channels.update(parse_m3u_lines(lines, unique_urls))
-                else:
-                    channels.update(parse_txt_lines(lines, unique_urls))
-                if channels:
-                    cache["urls"][url_hash] = {
-                        "url": url,
-                        "channels": dict(channels),
-                        "unique_urls": list(unique_urls),
-                        "timestamp": datetime.now().isoformat(),
-                        "content_hash": calculate_hash(content)
-                    }
-                    save_cache(cache)
-        except Exception as e:
-            # 只记录错误，不抛出异常，跳过该链接
-            logging.error(f"url: {url} 跳过, Error: {e}")
+        attempt = 0
+        while attempt < retry_times:
+            try:
+                async with session.get(url, timeout=getattr(config, "fetch_url_timeout", 10)) as response:
+                    response.raise_for_status()
+                    content = await response.text()
+                    lines = content.split("\n")
+                    is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
+                    if is_m3u:
+                        channels.update(parse_m3u_lines(lines, unique_urls))
+                    else:
+                        channels.update(parse_txt_lines(lines, unique_urls))
+                    if channels:
+                        cache["urls"][url_hash] = {
+                            "url": url,
+                            "channels": dict(channels),
+                            "unique_urls": list(unique_urls),
+                            "timestamp": datetime.now().isoformat(),
+                            "content_hash": calculate_hash(content)
+                        }
+                        save_cache(cache)
+                    return channels
+            except Exception as e:
+                attempt += 1
+                logging.warning(f"url: {url} 请求失败({attempt}/{retry_times}), Error: {e}")
+                if attempt < retry_times:
+                    await asyncio.sleep(retry_delay)
+        logging.error(f"url: {url} 跳过，重试多次仍失败")
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
@@ -256,17 +271,23 @@ def deduplicate_and_alias_channels(channels_dict):
     for (cat, std_name), urls in global_channel_map.items():
         channels_dict[cat][std_name] = list(urls)
 
-async def test_url_speed(session, url, timeout=2):
-    try:
-        start = time.perf_counter()
-        async with session.get(url, timeout=timeout) as resp:
-            await resp.content.read(1024)
-        elapsed = time.perf_counter() - start
-        return url, elapsed
-    except Exception:
-        return url, float('inf')
+async def test_url_speed(session, url, timeout=2, retry_times=2):
+    """
+    支持测速失败自动重试，默认2次
+    """
+    for attempt in range(retry_times):
+        try:
+            start = time.perf_counter()
+            async with session.get(url, timeout=timeout) as resp:
+                await resp.content.read(1024)
+            elapsed = time.perf_counter() - start
+            return url, elapsed
+        except Exception:
+            if attempt == retry_times - 1:
+                return url, float('inf')
+            await asyncio.sleep(0.8)
 
-async def speed_test_for_channel_urls(url_list, max_concurrent=10, timeout=2, repeat=1):
+async def speed_test_for_channel_urls(url_list: List[str], max_concurrent=10, timeout=2, repeat=1, retry_times=2):
     results = {}
     sem = asyncio.Semaphore(max_concurrent)
     async with aiohttp.ClientSession() as session:
@@ -274,7 +295,7 @@ async def speed_test_for_channel_urls(url_list, max_concurrent=10, timeout=2, re
             times = []
             for _ in range(repeat):
                 async with sem:
-                    _, t = await test_url_speed(session, url, timeout)
+                    _, t = await test_url_speed(session, url, timeout, retry_times)
                     times.append(t)
             return url, min(times)
         tasks = [sem_test(url) for url in url_list]
@@ -355,6 +376,14 @@ def optimize_and_output_files(channels, health_dict, urls_speed):
             f_txt_ipv4.write("\n")
             f_txt_ipv6.write("\n")
 
+def print_report(success_urls, failed_urls):
+    logging.info(f"采集成功源站数量: {len(success_urls)}")
+    logging.info(f"采集失败源站数量: {len(failed_urls)}")
+    if failed_urls:
+        logging.info("失败源站清单:")
+        for url in failed_urls:
+            logging.info(f"  - {url}")
+
 # --------- 主流程 ---------
 async def main(template_file):
     template_channels = parse_template(template_file)
@@ -362,11 +391,19 @@ async def main(template_file):
     cache = load_cache()
 
     all_channels = OrderedDict()
+    failed_urls = []
+    success_urls = []
     async with aiohttp.ClientSession() as session:
-        tasks = [fetch_channels(session, url, cache) for url in source_urls]
-        fetched_channels_list = await asyncio.gather(*tasks)
-    for fetched_channels in fetched_channels_list:
-        merge_channels(all_channels, fetched_channels)
+        fetch_tasks = [fetch_channels(session, url, cache) for url in source_urls]
+        results = await asyncio.gather(*fetch_tasks)
+        for idx, fetched_channels in enumerate(results):
+            if fetched_channels:
+                merge_channels(all_channels, fetched_channels)
+                success_urls.append(source_urls[idx])
+            else:
+                failed_urls.append(source_urls[idx])
+
+    print_report(success_urls, failed_urls)
 
     merged_channels = OrderedDict()
     for category, channel_list in all_channels.items():
@@ -376,7 +413,7 @@ async def main(template_file):
             merged_channels[category].setdefault(channel_name, []).append(url)
     deduplicate_and_alias_channels(merged_channels)
 
-    # 把模板文件中的频道名+URL也并入
+    # 并入模板
     for category, channels in template_channels.items():
         if category not in merged_channels:
             merged_channels[category] = OrderedDict()
@@ -415,6 +452,8 @@ async def main(template_file):
 
     optimize_and_output_files(merged_channels, health_dict, urls_speed)
     print("操作完成！结果已保存到live文件夹。")
+    if failed_urls:
+        print(f"采集失败源站数量: {len(failed_urls)}，请检查日志 function.log")
 
 if __name__ == "__main__":
     template_file = "demo.txt"
