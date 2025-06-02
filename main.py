@@ -57,13 +57,6 @@ def save_cache(cache):
     except Exception as e:
         logging.error(f"保存缓存失败: {e}")
 
-def is_cache_valid(cache):
-    if not cache:
-        return False
-    timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
-    elapsed = (datetime.now() - timestamp).total_seconds() / (3600 * 24)
-    return elapsed < cache_valid_days
-
 async def fetch_channels(session, url, cache, retry_times=3, retry_delay=2):
     from aiohttp import ClientError
     url_hash = parser.calculate_hash(url)
