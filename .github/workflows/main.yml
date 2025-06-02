@@ -1,78 +1,52 @@
-name: IPTV Auto Update
+name: Daily Update
 
 on:
   schedule:
-    - cron: '55 0 */2 * *' # 每2天凌晨00点55分执行任务，UTC时间，适配上海时区
+    - cron: '55 0 */2 * *' # 每2天凌晨00点55分执行任务，上海时区的UTC时间
+  #  允许手动触发工作流
   workflow_dispatch:
     branches:
-      - main
+      - main  # 仅在 main 分支上允许手动触发
 
 jobs:
-  update-iptv:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+  run_script:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 运行器
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - name: Checkout repository  # 检出代码库到运行器中
+      uses: actions/checkout@v2
 
-    # 1. 加速依赖安装：缓存 pip（速度优化）
-    - name: Cache pip dependencies
+    - name: Set up Python  # 设置 Python 环境
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'  # 使用 Python 版本 3.10
+
+    - name: Cache dependencies  # 缓存 pip 依赖项以加速后续构建
       uses: actions/cache@v4
       with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        path: ~/.cache/pip  # 依赖项的缓存路径
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}  # 生成缓存键
         restore-keys: |
-          ${{ runner.os }}-pip-
+          ${{ runner.os }}-pip-  # 如果完全匹配的 key 不存在，则尝试使用此恢复键
 
-    # 2. 安装 Python 并锁定版本（成功率优化）
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
-    # 3. 安装依赖并升级 pip（速度+成功率优化）
-    - name: Install dependencies
+    - name: Install dependencies  # 安装项目所需的 Python 包
       run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install requests  # 安装 requests 库作为示例
 
-    # 4. 确保输出目录存在（健壮性）
-    - name: Prepare output folders
-      run: mkdir -p live/cache
-
-    # 5. 运行主脚本，带详细日志（并发/重试建议见 main.py 代码实现）
-    - name: Run IPTV main script
-      env:
-        TZ: Asia/Shanghai
+    - name: Run Python script  # 执行主脚本
       run: python main.py
 
-    # 6. 上传日志和结果（失败便于追溯，速度优化）
-    - name: Upload logs and outputs
-      uses: actions/upload-artifact@v4
-      with:
-        name: live-output
-        path: |
-          live/
-          ./live/function.log
-
-    # 7. 检查变更再提交，避免无效 push（效率+仓库整洁）
-    - name: Commit and push changes
-      env:
-        TZ: Asia/Shanghai
+    - name: Commit and push if changed  # 如果有更改，则提交并推送
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add -A
+        git add -A  # 添加所有更改到暂存区
+        # 如果有更改被暂存，则创建并推送一个新的提交
         if ! git diff --staged --quiet; then
-          git commit -m "Auto-update live files: $(date '+%Y-%m-%d %H:%M:%S')"
-          git pull --rebase
-          git push
+          git commit -m "Auto-update live files"  # 提交信息
+          git pull --rebase  # 拉取远程更新并变基
+          git push  # 推送更改到远程仓库
         fi
 
-    # 8. 失败通知（可选，提升成功率/可维护性）
-    - name: Notify on failure (optional)
-      if: failure()
-      run: |
-        echo "❌ Workflow failed. Please check logs and outputs for details."
-        # 可集成钉钉/企业微信/邮箱等通知服务
+    env:
+      TZ: Asia/Shanghai  # 设置环境变量，将时区设置为上海
