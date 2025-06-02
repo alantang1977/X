@@ -3,13 +3,11 @@ import asyncio
 import logging
 import json
 import os
-import threading
 from collections import OrderedDict, defaultdict
 from datetime import datetime
 import difflib
 import hashlib
 import time
-import subprocess
 
 try:
     import aiohttp
@@ -303,20 +301,22 @@ def add_url_suffix(url, index, total_urls, ip_version):
     base_url = url.split('$', 1)[0] if '$' in url else url
     return f"{base_url}{suffix}"
 
-def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url, health):
+def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url, health, speed=None):
     logo_url = get_logo(channel_name)
     extinf = f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\""
     if epg_url:
         extinf += f" epg-url=\"{epg_url}\""
     extinf += f" health=\"{health}\""
+    if speed is not None:
+        extinf += f" speed=\"{speed:.3f}\""
     f_m3u.write(f"{extinf},{channel_name}\n")
     f_m3u.write(new_url + "\n")
-    f_txt.write(f"{channel_name},{new_url},{health}\n")
+    f_txt.write(f"{channel_name},{new_url},{health},{speed if speed is not None else ''}\n")
 
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-def optimize_and_output_files(channels, health_dict, rtmp_map=None):
+def optimize_and_output_files(channels, health_dict, urls_speed):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
     ipv4_m3u_path = os.path.join(output_folder, "live_ipv4.m3u")
@@ -334,70 +334,29 @@ def optimize_and_output_files(channels, health_dict, rtmp_map=None):
             f_txt_ipv6.write(f"{category},#genre#\n")
             for channel_name, url_list in channel_dict.items():
                 epg_url = get_epg(channel_name)
-                # 优先写入本地推流（RTMP/HLS）地址
-                if rtmp_map and (category, channel_name) in rtmp_map:
-                    local_urls = rtmp_map[(category, channel_name)]
-                    for local_url in local_urls:
-                        health = "local"
-                        new_url = local_url
-                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, 0, new_url, epg_url, health)
                 ipv4_urls = [u for u in url_list if not is_ipv6(u)]
                 ipv6_urls = [u for u in url_list if is_ipv6(u)]
                 total_urls_ipv4 = len(ipv4_urls)
                 total_urls_ipv6 = len(ipv6_urls)
+                # 按测速排序，快的在前
+                ipv4_urls = sorted(ipv4_urls, key=lambda u: urls_speed.get(u, float('inf')))
+                ipv6_urls = sorted(ipv6_urls, key=lambda u: urls_speed.get(u, float('inf')))
                 for index, url in enumerate(ipv4_urls, start=1):
                     if url not in written_urls_ipv4 and is_valid_url(url):
+                        speed = urls_speed.get(url, None)
                         health = health_dict.get(url, "fail" if health_dict.get(url, float('inf')) == float('inf') else "ok")
                         new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
-                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url, health)
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, epg_url, health, speed)
                         written_urls_ipv4.add(url)
                 for index, url in enumerate(ipv6_urls, start=1):
                     if url not in written_urls_ipv6 and is_valid_url(url):
+                        speed = urls_speed.get(url, None)
                         health = health_dict.get(url, "fail" if health_dict.get(url, float('inf')) == float('inf') else "ok")
                         new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
-                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url, health)
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, epg_url, health, speed)
                         written_urls_ipv6.add(url)
             f_txt_ipv4.write("\n")
             f_txt_ipv6.write("\n")
-
-# --------- RTMP 推流管理 ---------
-def push_stream_ffmpeg(src_url, out_url, hls_dir=None):
-    # 死循环守护推流
-    args = [
-        'ffmpeg', '-re', '-i', src_url, '-c', 'copy', '-f', 'flv', out_url
-    ]
-    if hls_dir:  # 可选生成HLS
-        hls_path = os.path.join(hls_dir, out_url.split("/")[-1] + ".m3u8")
-        args += ['-c', 'copy', '-f', 'hls', '-hls_time', '6', '-hls_list_size', '5', hls_path]
-    while True:
-        print(f"推流: {src_url} -> {out_url}")
-        p = subprocess.Popen(args)
-        p.wait()
-        print("推流中断，10秒后重启...")
-        time.sleep(10)
-
-def start_rtmp_push(selected_channels, rtmp_server, hls_dir=None):
-    rtmp_map = {}
-    threads = []
-    for (category, channel_name), src_url in selected_channels.items():
-        if not is_valid_url(src_url):
-            continue
-        safe_name = re.sub(r"[^\w]", "", channel_name)
-        out_url = f"{rtmp_server}/{safe_name}"
-        # 可选 HLS 地址
-        hls_url = None
-        if hls_dir:
-            os.makedirs(hls_dir, exist_ok=True)
-            hls_url = f"{getattr(config, 'hls_url_prefix', 'http://localhost/hls')}/{safe_name}.m3u8"
-            rtmp_map[(category, channel_name)] = [out_url, hls_url]
-        else:
-            rtmp_map[(category, channel_name)] = [out_url]
-        t = threading.Thread(target=push_stream_ffmpeg, args=(src_url, out_url, hls_dir))
-        t.daemon = True
-        t.start()
-        threads.append(t)
-        time.sleep(2)
-    return rtmp_map, threads
 
 # --------- 主流程 ---------
 async def main(template_file):
@@ -457,32 +416,8 @@ async def main(template_file):
         category, channel_name = key
         merged_channels[category][channel_name] = filtered
 
-    # ------- RTMP 推流（可选） -------
-    rtmp_map = None
-    rtmp_threads = []
-    if getattr(config, "enable_rtmp_push", False):
-        # 每频道取测速最快的线路推流
-        selected_channels = {}
-        for (category, channel_name), urls in channel_urls.items():
-            best_urls = filter_and_sort_urls_by_speed(
-                {u: urls_speed.get(u, float('inf')) for u in urls},
-                max_keep=1,
-                speed_threshold=speed_test_timeout
-            )
-            if best_urls:
-                selected_channels[(category, channel_name)] = best_urls[0]
-        hls_dir = getattr(config, "hls_output_dir", None) if hasattr(config, "hls_output_dir") else None
-        rtmp_server = getattr(config, "rtmp_server_url", "rtmp://localhost/live")
-        print("启动推流到本地 RTMP...")
-        rtmp_map, rtmp_threads = start_rtmp_push(selected_channels, rtmp_server, hls_dir=hls_dir)
-        print("推流线程已启动。")
-
-    optimize_and_output_files(merged_channels, health_dict, rtmp_map=rtmp_map)
+    optimize_and_output_files(merged_channels, health_dict, urls_speed)
     print("操作完成！结果已保存到live文件夹。")
-    # 保持推流线程（如启用）
-    if rtmp_threads:
-        while True:
-            time.sleep(60)
 
 if __name__ == "__main__":
     template_file = "demo.txt"
