@@ -73,7 +73,97 @@
                 "分类url": "https://www.knvod.cc/show/{cateId}-{area}--{class}-----{catePg}---{year}/"
             }
         },
-
+{"key":"csp_XBiuSSZZYY",
+ "name":"西瓜",
+ "type": 3,
+ "api":"csp_XBPQ",
+ "jar": "./jar/XBPQ.jar",
+ "searchable":1,
+ "quickSearch":1,"filterable":1,"ext":{"倒序":0,"分类url":"http://sszzyy.com/index.php/vod/show/by/time/id/{cateId}/page/{catePg}/year/{year}.html",
+ "分类":"電視劇$37#電影$20#動漫$43#綜藝$45#紀錄片$35#動畫電影$31#B站$47"}},
+{
+            "key": "花都",
+            "name": "花都｜影视",
+            "type": 3,
+            "changeable": 1,
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "api": "csp_XBPQ",
+            "jar": "./jar/XBPQ.jar",
+            "ext": {
+                "请求头": "User-Agent$MOBILE_UA",
+                "编码": "UTF-8",
+                "图片": "data-original=\"&&\"",
+                "链接": "href=\"&&\"",
+                "播放链接": "href=\"&&\"",
+                "播放列表": "<a&&</a",
+                "播放数组": "class=\"stui-content__playlist clearfix\">&&</ul>",
+                "分类url": "https://hd.huaduys.cc/vodshow/{cateId}--------{catePg}---.html",
+                "分类": "有码&无码&国产&欧美&动漫",
+                "分类值": "1&2&3&4&5"
+            }
+        },
+{
+            "key": "kiss",
+            "name": "kisd｜影视",
+            "type": 3,
+            "changeable": 1,
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "api": "csp_XBPQ",
+            "jar": "./jar/XBPQ.jar",
+            "ext": {
+                "请求头": "User-Agent$MOBILE_UA",
+                "编码": "UTF-8",
+                "标题": "alt=\"&&\"",
+                
+                "数组": "img-box cover-md bind_video_img&&</a>",
+                "直接播放": "1",
+                "分类url": "https://www.kissavtv.com/index/getstylemvs/id/{cateId}/sort/update/page/{catePg}",
+                "分类": "中文&角色&制服&调教&无码&丝袜&啪啪",
+                "分类值": "3&2&4&7&11&6&5"
+            }
+        },
+{
+            "key": "4Kdy",
+            "name": "4K🎦DY",
+            "type": 3,
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1,
+            "playerType": "2",
+            "api": "csp_XBPQ",
+            "jar": "./jar/XBPQ.jar",
+            "ext": {
+                "主页url": "https://www.4kdy.vip",
+                "首页": "120",
+                "数组": "class=\"myui-vodlist__box&&</li>",
+                "标题": "title=\"&&\"",
+                "图片": "data-original=\"&&\"",
+                "副标题": "",
+                "链接": "href=\"&&\"",
+                "线路数组": "class=\"myui-panel__head active&&</div>",
+                "线路标题": "4kdy影视",
+                "播放二次截取": "",
+                "播放数组": "class=\"myui-down__list&&</ul>",
+                "播放列表": "<a&&</a>[不包含:复制地址]",
+                "播放标题": "",
+                "播放链接": "href=\"&&\"",
+                "跳转播放链接": "",
+                "搜索url": "https://www.4kdy.vip/4K-search/{wd}----------{pg}---.html",
+                "搜索模式": "",
+                "搜索数组": "class=\"clearfix&&</li",
+                "搜索标题": "title=\"&&\"",
+                "搜索图片": "data-original=\"&&\"",
+                "搜索副标题": "",
+                "搜索链接": "href=\"&&\"",
+                "分类url": "https://www.4kdy.vip/4K-show/{cateId}-{class}-{by}------{catePg}---{year}.html;;rc",
+                "分类": "电影&剧集&动漫",
+                "分类值": "1&2&3"
+            }
+        },
 	
 ##PY源系列
 {"key": "火车","name": "🚂┃火车太顺┃TV","type": 3,"api": "./py/火车太顺APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
