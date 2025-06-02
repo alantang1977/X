@@ -8,17 +8,18 @@ import traceback
 from collections import OrderedDict
 from datetime import datetime
 
+# 全局抑制 aiohttp cookies 警告
+import warnings
+warnings.filterwarnings("ignore", message="Can not load response cookies: Illegal key")
+
 try:
     import config
 except ImportError:
     print("错误: 找不到配置模块 'config.py'")
     sys.exit(1)
 
-# 全局抑制 aiohttp cookies 警告
-import warnings
-warnings.filterwarnings("ignore", message="Can not load response cookies: Illegal key")
-
-# 导入模块化功能
+# 导入模块化功能（从utils文件夹）
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "utils"))
 import parser
 import speed_test
 
