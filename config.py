@@ -14,7 +14,6 @@ source_urls = [
     "http://47.120.41.246:8899/zb.txt",
     "http://live.nctv.top/x.txt",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u",
-    "http://api.mytv666.top/lives/free.php?type=txt",
     "http://1.94.31.214/live/livelite.txt",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/go.txt", 
     "https://smart.pendy.dpdns.org/m3u/Smart.m3u",
