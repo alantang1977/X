@@ -1,8 +1,8 @@
 # config.py
 
 # 优先使用的IP版本：可选 "ipv4" 或 "ipv6"
-ip_version_priority = "ipv4"
-
+URL_BLACKLIST = []
+IP_VERSION_PRIORITY = ["ipv4", "ipv6"]
 # 直播源URL列表（建议去重）
 source_urls = [
     "https://yk95.yymmiptv.top",
