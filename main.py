@@ -25,27 +25,20 @@ except ImportError:
     import sys
     sys.exit(1)
 
-# 支持手动配置别名词典
+# ========== 别名与LOGO/EPG补全 ==========
 CHANNEL_ALIASES = {
-    # CCTV 系列举例
     "CCTV-1": ["CCTV1", "CCTV 1", "央视一台", "CCTV-1 综合", "CCTV 1综合", "CCTV-1HD"],
     "CCTV-2": ["CCTV2", "CCTV 2", "央视二台", "CCTV-2 财经", "CCTV 2财经"],
-    # 卫视举例
     "北京卫视": ["BTV", "北京台", "BTV-1"],
     "湖南卫视": ["HUNANTV", "湖南台", "MangoTV"],
-    # ...可自行扩展
+    # 可自行扩展
 }
-
-# LOGO 词典补全
 CHANNEL_LOGOS = {
     "CCTV-1": "https://example.com/logos/cctv-1.png",
     "CCTV-2": "https://example.com/logos/cctv-2.png",
     "北京卫视": "https://example.com/logos/btv.png",
     "湖南卫视": "https://example.com/logos/hunantv.png",
-    # ...可自行扩展
 }
-
-# EPG 词典补全（仅举例，可扩展）
 CHANNEL_EPGS = {
     "CCTV-1": "https://example.com/epg/cctv-1.xml",
     "CCTV-2": "https://example.com/epg/cctv-2.xml",
@@ -53,15 +46,8 @@ CHANNEL_EPGS = {
     "湖南卫视": "https://example.com/epg/hunantv.xml",
 }
 
-REVERSE_ALIAS = {}
-for std, aliases in CHANNEL_ALIASES.items():
-    REVERSE_ALIAS[std] = std
-    for a in aliases:
-        REVERSE_ALIAS[a.upper()] = std
-
 def get_standard_channel_name(name):
     name_norm = normalize_channel_name(name)
-    # 先别名词典查找
     for std, aliases in CHANNEL_ALIASES.items():
         if name_norm == normalize_channel_name(std):
             return std
@@ -78,7 +64,6 @@ def get_standard_channel_name(name):
             for a in aliases:
                 if normalize_channel_name(a) == match[0]:
                     return std
-    # 没命中就用规范化名
     return name_norm
 
 def get_logo(channel_name):
@@ -89,6 +74,7 @@ def get_epg(channel_name):
     std = get_standard_channel_name(channel_name)
     return CHANNEL_EPGS.get(std, "")
 
+# ========== 日志与缓存 ==========
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler("./live/function.log", "w", encoding="utf-8"), logging.StreamHandler()])
 
@@ -98,8 +84,7 @@ if not os.path.exists(output_folder):
 
 cache_folder = "./live/cache"
 cache_file = os.path.join(cache_folder, "url_cache.json")
-# 支持缓存失效自动刷新时间配置
-cache_valid_minutes = getattr(config, "cache_valid_minutes", 720)  # 默认12小时
+cache_valid_days = getattr(config, "cache_valid_days", 1)
 
 if not os.path.exists(cache_folder):
     os.makedirs(cache_folder)
@@ -125,8 +110,8 @@ def is_cache_valid(cache):
     if not cache:
         return False
     timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
-    elapsed = (datetime.now() - timestamp).total_seconds() / 60
-    return elapsed < cache_valid_minutes
+    elapsed = (datetime.now() - timestamp).total_seconds() / (3600 * 24)
+    return elapsed < cache_valid_days
 
 def calculate_hash(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
@@ -158,7 +143,13 @@ def normalize_channel_name(name):
     return name
 
 def is_valid_url(url):
-    return bool(re.match(r'^https?://', url))
+    if not url or not url.startswith("http"):
+        return False
+    # 黑名单过滤
+    for black in config.url_blacklist:
+        if black in url:
+            return False
+    return True
 
 async def fetch_channels(session, url, cache):
     channels = OrderedDict()
@@ -168,8 +159,8 @@ async def fetch_channels(session, url, cache):
     if url_hash in cache["urls"]:
         cached_entry = cache["urls"][url_hash]
         timestamp = cached_entry.get("timestamp", datetime.now().isoformat())
-        elapsed = (datetime.now() - datetime.fromisoformat(timestamp)).total_seconds() / 60
-        if elapsed < cache_valid_minutes:
+        elapsed = (datetime.now() - datetime.fromisoformat(timestamp)).total_seconds() / (3600 * 24)
+        if elapsed < cache_valid_days:
             logging.info(f"从缓存加载: {url}")
             channels = OrderedDict(cached_entry["channels"])
             unique_urls = set(cached_entry["unique_urls"])
@@ -182,7 +173,6 @@ async def fetch_channels(session, url, cache):
                 content = await response.text()
                 response.encoding = 'utf-8'
                 lines = content.split("\n")
-                current_category = None
                 is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
                 if is_m3u:
                     channels.update(parse_m3u_lines(lines, unique_urls))
@@ -325,7 +315,7 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, epg_url
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-def optimize_and_output_files(channels, cache, health_dict):
+def optimize_and_output_files(channels, health_dict):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -388,18 +378,31 @@ async def main(template_file):
     channel_urls = extract_all_channel_urls(merged_channels)
     all_urls = list({url for urls in channel_urls.values() for url in urls})
     print("开始并发测速，请稍候……")
-    urls_speed = await speed_test_for_channel_urls(all_urls, max_concurrent=20, timeout=3, repeat=2)
+    max_concurrent = getattr(config, "max_concurrent_speed_tests", 10)
+    speed_test_timeout = getattr(config, "speed_test_timeout", 3)
+    speed_test_repeat = getattr(config, "speed_test_repeat", 2)
+    max_lines_per_channel = getattr(config, "max_lines_per_channel", 10)
+    urls_speed = await speed_test_for_channel_urls(
+        all_urls,
+        max_concurrent=max_concurrent,
+        timeout=speed_test_timeout,
+        repeat=speed_test_repeat
+    )
     print("测速完成，正在筛选有效线路并写入文件……")
     # 健康检查与筛选
     health_dict = {}
     for url, t in urls_speed.items():
-        health_dict[url] = t if t < 3.0 else float('inf')
+        health_dict[url] = t if t < speed_test_timeout else float('inf')
     for key, urls in channel_urls.items():
-        filtered = filter_and_sort_urls_by_speed({u: urls_speed.get(u, float('inf')) for u in urls}, max_keep=10, speed_threshold=3.0)
+        filtered = filter_and_sort_urls_by_speed(
+            {u: urls_speed.get(u, float('inf')) for u in urls},
+            max_keep=max_lines_per_channel,
+            speed_threshold=speed_test_timeout
+        )
         category, channel_name = key
         merged_channels[category][channel_name] = filtered
 
-    optimize_and_output_files(merged_channels, cache, health_dict)
+    optimize_and_output_files(merged_channels, health_dict)
     print("操作完成！结果已保存到live文件夹。")
 
 if __name__ == "__main__":
