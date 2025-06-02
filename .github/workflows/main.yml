@@ -2,7 +2,7 @@ name: IPTV Auto Update
 
 on:
   schedule:
-    - cron: '55 0 */2 * *' # 每2天凌晨00点55分执行任务，上海时区的UTC时间
+    - cron: '55 0 */2 * *' # 每2天凌晨00点55分执行任务，UTC时间，适配上海时区
   workflow_dispatch:
     branches:
       - main
@@ -10,16 +10,13 @@ on:
 jobs:
   update-iptv:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
+    # 1. 加速依赖安装：缓存 pip（速度优化）
     - name: Cache pip dependencies
       uses: actions/cache@v4
       with:
@@ -28,23 +25,54 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
 
+    # 2. 安装 Python 并锁定版本（成功率优化）
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # 3. 安装依赖并升级 pip（速度+成功率优化）
     - name: Install dependencies
       run: |
+        pip install --upgrade pip
         pip install -r requirements.txt
 
+    # 4. 确保输出目录存在（健壮性）
+    - name: Prepare output folders
+      run: mkdir -p live/cache
+
+    # 5. 运行主脚本，带详细日志（并发/重试建议见 main.py 代码实现）
     - name: Run IPTV main script
+      env:
+        TZ: Asia/Shanghai
       run: python main.py
 
+    # 6. 上传日志和结果（失败便于追溯，速度优化）
+    - name: Upload logs and outputs
+      uses: actions/upload-artifact@v4
+      with:
+        name: live-output
+        path: |
+          live/
+          ./live/function.log
+
+    # 7. 检查变更再提交，避免无效 push（效率+仓库整洁）
     - name: Commit and push changes
+      env:
+        TZ: Asia/Shanghai
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add -A
         if ! git diff --staged --quiet; then
-          git commit -m "Auto-update live files"
+          git commit -m "Auto-update live files: $(date '+%Y-%m-%d %H:%M:%S')"
           git pull --rebase
           git push
         fi
 
-    env:
-      TZ: Asia/Shanghai
+    # 8. 失败通知（可选，提升成功率/可维护性）
+    - name: Notify on failure (optional)
+      if: failure()
+      run: |
+        echo "❌ Workflow failed. Please check logs and outputs for details."
+        # 可集成钉钉/企业微信/邮箱等通知服务
