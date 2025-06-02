@@ -125,7 +125,7 @@ def parse_template(template_file):
     return template_channels
 
 def clean_channel_name(channel_name):
-    cleaned_name = re.sub(r'[$「」-]', '', channel_name)
+    cleaned_name = re.sub(r'[$\u300c\u300d-]', '', channel_name)
     cleaned_name = re.sub(r'\s+', '', cleaned_name)
     cleaned_name = re.sub(r'(\D*)(\d+)', lambda m: m.group(1) + str(int(m.group(2))), cleaned_name)
     return cleaned_name.upper()
@@ -183,6 +183,7 @@ async def fetch_channels(session, url, cache):
 def parse_m3u_lines(lines, unique_urls):
     channels = OrderedDict()
     current_category = None
+    channel_name = None  # 修复作用域问题
 
     for line in lines:
         line = line.strip()
@@ -285,6 +286,20 @@ def merge_channels(target, source):
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
+def deduplicate_channel_urls(channels_dict):
+    """
+    对于 channels_dict（{分类: {频道名: [url1, url2, ...]}}），每个频道下只保留唯一 url。
+    """
+    for category in channels_dict:
+        for channel_name in channels_dict[category]:
+            seen = set()
+            unique_urls = []
+            for url in channels_dict[category][channel_name]:
+                if url not in seen:
+                    unique_urls.append(url)
+                    seen.add(url)
+            channels_dict[category][channel_name] = unique_urls
+
 def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
@@ -326,10 +341,14 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
     ipv6_m3u_path = os.path.join(output_folder, "live_ipv6.m3u")
     ipv6_txt_path = os.path.join(output_folder, "live_ipv6.txt")
 
+    # ----------- 频道去重功能集成点 -----------
+    deduplicate_channel_urls(channels)
+    # ----------- END -----------
+
     with open(ipv4_m3u_path, "w", encoding="utf-8") as f_m3u_ipv4, \
-            open(ipv4_txt_path, "w", encoding="utf-8") as f_txt_ipv4, \
-            open(ipv6_m3u_path, "w", encoding="utf-8") as f_m3u_ipv6, \
-            open(ipv6_txt_path, "w", encoding="utf-8") as f_txt_ipv6:
+         open(ipv4_txt_path, "w", encoding="utf-8") as f_txt_ipv4, \
+         open(ipv6_m3u_path, "w", encoding="utf-8") as f_m3u_ipv6, \
+         open(ipv6_txt_path, "w", encoding="utf-8") as f_txt_ipv6:
 
         f_m3u_ipv4.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
         f_m3u_ipv6.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
