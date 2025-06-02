@@ -1,4 +1,3 @@
-# main.py
 import re
 import asyncio
 import logging
@@ -77,7 +76,6 @@ cache_valid_days = 7  # 缓存有效期（天）
 if not os.path.exists(cache_folder):
     os.makedirs(cache_folder)
 
-# 加载缓存
 def load_cache():
     if os.path.exists(cache_file):
         try:
@@ -87,7 +85,6 @@ def load_cache():
             logging.error(f"加载缓存失败: {e}")
     return {"urls": {}, "timestamp": datetime.now().isoformat()}
 
-# 保存缓存
 def save_cache(cache):
     cache["timestamp"] = datetime.now().isoformat()
     try:
@@ -96,21 +93,18 @@ def save_cache(cache):
     except Exception as e:
         logging.error(f"保存缓存失败: {e}")
 
-# 检查缓存是否有效
 def is_cache_valid(cache):
     if not cache:
         return False
     timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
     return (datetime.now() - timestamp).days < cache_valid_days
 
-# 计算URL内容的哈希值
 def calculate_hash(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 def parse_template(template_file):
     template_channels = OrderedDict()
     current_category = None
-
     with open(template_file, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -121,14 +115,28 @@ def parse_template(template_file):
                 elif current_category:
                     channel_name = line.split(",")[0].strip()
                     template_channels[current_category].append(channel_name)
-
     return template_channels
 
 def clean_channel_name(channel_name):
+    # 仅作基本清理
     cleaned_name = re.sub(r'[$\u300c\u300d-]', '', channel_name)
     cleaned_name = re.sub(r'\s+', '', cleaned_name)
     cleaned_name = re.sub(r'(\D*)(\d+)', lambda m: m.group(1) + str(int(m.group(2))), cleaned_name)
     return cleaned_name.upper()
+
+def normalize_channel_name(name):
+    """
+    智能标准化频道名称，自动归类同类频道
+    """
+    name = name.upper()
+    name = re.sub(r'[^\w\s-]', '', name)
+    name = name.replace("高清", "").replace("HD", "")
+    name = re.sub(r'综合|频道', '', name)
+    name = re.sub(r'[\s_]', '', name)
+    name = re.sub(r'CCTV[-\s]?(\d+)', r'CCTV-\1', name)
+    name = re.sub(r'(-)+', '-', name)
+    name = name.strip('-')
+    return name
 
 def is_valid_url(url):
     return bool(re.match(r'^https?://', url))
@@ -137,8 +145,6 @@ async def fetch_channels(session, url, cache):
     channels = OrderedDict()
     unique_urls = set()
     cache_hit = False
-
-    # 检查URL是否在缓存中且有效
     url_hash = calculate_hash(url)
     if url_hash in cache["urls"]:
         cached_entry = cache["urls"][url_hash]
@@ -165,7 +171,6 @@ async def fetch_channels(session, url, cache):
                     channels.update(parse_txt_lines(lines, unique_urls))
 
                 if channels:
-                    # 更新缓存
                     cache["urls"][url_hash] = {
                         "url": url,
                         "channels": dict(channels),
@@ -174,17 +179,14 @@ async def fetch_channels(session, url, cache):
                         "content_hash": calculate_hash(content)
                     }
                     save_cache(cache)
-
         except Exception as e:
             logging.error(f"url: {url} 失败❌, Error: {e}")
-
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
     channels = OrderedDict()
     current_category = None
-    channel_name = None  # 修复作用域问题
-
+    channel_name = None
     for line in lines:
         line = line.strip()
         if line.startswith("#EXTINF"):
@@ -194,7 +196,6 @@ def parse_m3u_lines(lines, unique_urls):
                 channel_name = match.group(2).strip()
                 if channel_name and channel_name.startswith("CCTV"):
                     channel_name = clean_channel_name(channel_name)
-
                 if current_category not in channels:
                     channels[current_category] = []
         elif line and not line.startswith("#"):
@@ -203,13 +204,11 @@ def parse_m3u_lines(lines, unique_urls):
                 unique_urls.add(channel_url)
                 if current_category and channel_name:
                     channels[current_category].append((channel_name, channel_url))
-
     return channels
 
 def parse_txt_lines(lines, unique_urls):
     channels = OrderedDict()
     current_category = None
-
     for line in lines:
         line = line.strip()
         if "#genre#" in line:
@@ -222,7 +221,6 @@ def parse_txt_lines(lines, unique_urls):
                 if channel_name and channel_name.startswith("CCTV"):
                     channel_name = clean_channel_name(channel_name)
                 channel_urls = match.group(2).strip().split('#')
-
                 for channel_url in channel_urls:
                     channel_url = channel_url.strip()
                     if is_valid_url(channel_url) and channel_url not in unique_urls:
@@ -230,7 +228,6 @@ def parse_txt_lines(lines, unique_urls):
                         channels[current_category].append((channel_name, channel_url))
             elif line:
                 channels[current_category].append((line, ''))
-
     return channels
 
 def find_similar_name(target_name, name_list):
@@ -241,27 +238,21 @@ async def filter_source_urls(template_file):
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
     cache = load_cache()
-
     all_channels = OrderedDict()
     async with aiohttp.ClientSession() as session:
         tasks = [fetch_channels(session, url, cache) for url in source_urls]
         fetched_channels_list = await asyncio.gather(*tasks)
-
     for fetched_channels in fetched_channels_list:
         merge_channels(all_channels, fetched_channels)
-
     matched_channels = match_channels(template_channels, all_channels)
-
     return matched_channels, template_channels, cache
 
 def match_channels(template_channels, all_channels):
     matched_channels = OrderedDict()
-
     all_online_channel_names = []
     for online_category, online_channel_list in all_channels.items():
         for online_channel_name, _ in online_channel_list:
             all_online_channel_names.append(online_channel_name)
-
     for category, channel_list in template_channels.items():
         matched_channels[category] = OrderedDict()
         for channel_name in channel_list:
@@ -273,7 +264,6 @@ def match_channels(template_channels, all_channels):
                         for online_channel_name, online_channel_url in online_channel_list:
                             if online_channel_name == original_name:
                                 matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
-
     return matched_channels
 
 def merge_channels(target, source):
@@ -288,7 +278,7 @@ def is_ipv6(url):
 
 def deduplicate_channel_urls(channels_dict):
     """
-    对于 channels_dict（{分类: {频道名: [url1, url2, ...]}}），每个频道下只保留唯一 url。
+    每组下频道内部 URL 去重
     """
     for category in channels_dict:
         for channel_name in channels_dict[category]:
@@ -300,32 +290,69 @@ def deduplicate_channel_urls(channels_dict):
                     seen.add(url)
             channels_dict[category][channel_name] = unique_urls
 
+def deduplicate_global_channels(channels_dict):
+    """
+    全局频道名去重：不同分组下同名频道合并到第一个出现的分组，URL 去重。
+    并对频道名进行智能归类（标准化）。
+    """
+    global_channel_map = {}
+    for category in list(channels_dict.keys()):
+        for channel_name in list(channels_dict[category].keys()):
+            key = normalize_channel_name(channel_name)
+            if key not in global_channel_map:
+                global_channel_map[key] = {
+                    "category": category,
+                    "channel_name": channel_name,
+                    "urls": set(channels_dict[category][channel_name])
+                }
+            else:
+                global_channel_map[key]["urls"].update(channels_dict[category][channel_name])
+                del channels_dict[category][channel_name]
+    for category in channels_dict:
+        channels_dict[category] = {}
+    for info in global_channel_map.values():
+        cat = info["category"]
+        name = info["channel_name"]
+        if cat not in channels_dict:
+            channels_dict[cat] = {}
+        channels_dict[cat][name] = list(info["urls"])
+
+def classify_channels(channels_dict):
+    """
+    用于展示归类后的频道字典结构
+    """
+    classified = {}
+    for category in channels_dict:
+        for channel_name in channels_dict[category]:
+            norm_name = normalize_channel_name(channel_name)
+            if norm_name not in classified:
+                classified[norm_name] = {
+                    'display_name': channel_name,
+                    'urls': []
+                }
+            classified[norm_name]['urls'].extend(channels_dict[category][channel_name])
+    for v in classified.values():
+        v['urls'] = list(set(v['urls']))
+    return classified
+
 def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
     url_changes = {"added": [], "removed": [], "modified": []}
-
-    # 检查缓存中的URL状态
     if is_cache_valid(cache):
         previous_urls = {}
         for url_hash, entry in cache["urls"].items():
             for category, channel_list in entry["channels"].items():
                 for channel_name, url in channel_list:
                     previous_urls[url] = (category, channel_name)
-
-        # 检测URL变化
         current_urls = {}
         for category, channel_dict in channels.items():
             for channel_name, urls in channel_dict.items():
                 for url in urls:
                     current_urls[url] = (category, channel_name)
-
-        # 新增的URL
         for url, (category, channel_name) in current_urls.items():
             if url not in previous_urls:
                 url_changes["added"].append((category, channel_name, url))
-
-        # 移除的URL
         for url, (category, channel_name) in previous_urls.items():
             if url not in current_urls:
                 url_changes["removed"].append((category, channel_name, url))
@@ -341,8 +368,9 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
     ipv6_m3u_path = os.path.join(output_folder, "live_ipv6.m3u")
     ipv6_txt_path = os.path.join(output_folder, "live_ipv6.txt")
 
-    # ----------- 频道去重功能集成点 -----------
+    # ----------- 频道去重与归类功能集成点 -----------
     deduplicate_channel_urls(channels)
+    deduplicate_global_channels(channels)
     # ----------- END -----------
 
     with open(ipv4_m3u_path, "w", encoding="utf-8") as f_m3u_ipv4, \
@@ -371,39 +399,32 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
                         f_m3u_ipv4.write(f"{url}\n")
                         f_txt_ipv4.write(f"{announcement['name']},{url}\n")
 
-        for category, channel_list in template_channels.items():
+        for category, channel_dict in channels.items():
             f_txt_ipv4.write(f"{category},#genre#\n")
             f_txt_ipv6.write(f"{category},#genre#\n")
-            if category in channels:
-                for channel_name in channel_list:
-                    if channel_name in channels[category]:
-                        sorted_urls_ipv4 = []
-                        sorted_urls_ipv6 = []
-                        for url in channels[category][channel_name]:
-                            if is_ipv6(url):
-                                if url not in written_urls_ipv6 and is_valid_url(url):
-                                    sorted_urls_ipv6.append(url)
-                                    written_urls_ipv6.add(url)
-                            else:
-                                if url not in written_urls_ipv4 and is_valid_url(url):
-                                    sorted_urls_ipv4.append(url)
-                                    written_urls_ipv4.add(url)
+            for channel_name, url_list in channel_dict.items():
+                sorted_urls_ipv4 = []
+                sorted_urls_ipv6 = []
+                for url in url_list:
+                    if is_ipv6(url):
+                        if url not in written_urls_ipv6 and is_valid_url(url):
+                            sorted_urls_ipv6.append(url)
+                            written_urls_ipv6.add(url)
+                    else:
+                        if url not in written_urls_ipv4 and is_valid_url(url):
+                            sorted_urls_ipv4.append(url)
+                            written_urls_ipv4.add(url)
+                total_urls_ipv4 = len(sorted_urls_ipv4)
+                total_urls_ipv6 = len(sorted_urls_ipv6)
+                for index, url in enumerate(sorted_urls_ipv4, start=1):
+                    new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
+                    write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url)
+                for index, url in enumerate(sorted_urls_ipv6, start=1):
+                    new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
+                    write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url)
+            f_txt_ipv4.write("\n")
+            f_txt_ipv6.write("\n")
 
-                        total_urls_ipv4 = len(sorted_urls_ipv4)
-                        total_urls_ipv6 = len(sorted_urls_ipv6)
-
-                        for index, url in enumerate(sorted_urls_ipv4, start=1):
-                            new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
-                            write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url)
-
-                        for index, url in enumerate(sorted_urls_ipv6, start=1):
-                            new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
-                            write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url)
-
-        f_txt_ipv4.write("\n")
-        f_txt_ipv6.write("\n")
-
-    # 保存URL变化日志
     if url_changes["added"] or url_changes["removed"] or url_changes["modified"]:
         with open(os.path.join(output_folder, "url_changes.log"), "a", encoding="utf-8") as f:
             f.write(f"\n=== 更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n")
@@ -420,14 +441,6 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
                 for category, channel_name, old_url, new_url in url_changes["modified"]:
                     f.write(f"- {category} - {channel_name}: {old_url} → {new_url}\n")
 
-def sort_and_filter_urls(urls, written_urls):
-    filtered_urls = [
-        url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
-        if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist)
-    ]
-    written_urls.update(filtered_urls)
-    return filtered_urls
-
 def add_url_suffix(url, index, total_urls, ip_version):
     suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
     base_url = url.split('$', 1)[0] if '$' in url else url
@@ -442,7 +455,6 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
 if __name__ == "__main__":
     template_file = "demo.txt"
     try:
-        # 检查模板文件是否存在
         if not os.path.exists(template_file):
             print(f"错误: 找不到模板文件 '{template_file}'。")
             print("请确保项目目录下有 demo.txt 文件。")
@@ -450,8 +462,10 @@ if __name__ == "__main__":
             print("""
 # demo.txt 示例内容
 央视,#genre#
-CCTV-1
+CCTV-1综合
+CCTV1
 CCTV-2
+CCTV 2 综合频道
 卫视,#genre#
 北京卫视
 上海卫视
@@ -459,10 +473,14 @@ CCTV-2
 """)
             import sys
             sys.exit(1)
-
         loop = asyncio.get_event_loop()
         channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
         updateChannelUrlsM3U(channels, template_channels, cache)
+        # 展示归类效果示例
+        print("频道归类结果示例：")
+        classified = classify_channels(channels)
+        for norm_name, info in classified.items():
+            print(f"{info['display_name']} ({norm_name}): {len(info['urls'])} 路径")
         loop.close()
         print("操作完成！结果已保存到live文件夹。")
     except Exception as e:
