@@ -1,4 +1,3 @@
-# main.py
 import re
 import asyncio
 import logging
@@ -8,6 +7,7 @@ from collections import OrderedDict
 from datetime import datetime, timedelta
 import difflib
 import hashlib
+from urllib.parse import urlparse, urlunparse, parse_qs
 
 # 检查 aiohttp 是否安装
 try:
@@ -133,6 +133,18 @@ def clean_channel_name(channel_name):
 def is_valid_url(url):
     return bool(re.match(r'^https?://', url))
 
+def remove_unnecessary_params(url):
+    parsed_url = urlparse(url)
+    query_params = parse_qs(parsed_url.query)
+    # 假设只保留必要的参数，这里可以根据实际情况修改
+    necessary_params = {}
+    for param, values in query_params.items():
+        if param in ['必要参数1', '必要参数2']:  # 替换为实际必要的参数名
+            necessary_params[param] = values
+    new_query = '&'.join([f'{param}={value[0]}' for param, value in necessary_params.items()])
+    new_url = urlunparse((parsed_url.scheme, parsed_url.netloc, parsed_url.path, parsed_url.params, new_query, parsed_url.fragment))
+    return new_url
+
 async def fetch_channels(session, url, cache):
     channels = OrderedDict()
     unique_urls = set()
@@ -177,6 +189,16 @@ async def fetch_channels(session, url, cache):
 
         except Exception as e:
             logging.error(f"url: {url} 失败❌, Error: {e}")
+
+    # 再次检查并去除重复的频道
+    for category, channel_list in channels.items():
+        new_channel_list = []
+        seen_channels = set()
+        for channel_name, url in channel_list:
+            if (channel_name, url) not in seen_channels:
+                new_channel_list.append((channel_name, url))
+                seen_channels.add((channel_name, url))
+        channels[category] = new_channel_list
 
     return channels
 
@@ -339,18 +361,15 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
             f_txt_ipv6.write(f"{group['channel']},#genre#\n")
             for announcement in group['entries']:
                 url = announcement['url']
+                url = remove_unnecessary_params(url)
                 if is_ipv6(url):
                     if url not in written_urls_ipv6 and is_valid_url(url):
                         written_urls_ipv6.add(url)
-                        f_m3u_ipv6.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-                        f_m3u_ipv6.write(f"{url}\n")
-                        f_txt_ipv6.write(f"{announcement['name']},{url}\n")
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, group['channel'], announcement['name'], 1, url)
                 else:
                     if url not in written_urls_ipv4 and is_valid_url(url):
                         written_urls_ipv4.add(url)
-                        f_m3u_ipv4.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-                        f_m3u_ipv4.write(f"{url}\n")
-                        f_txt_ipv4.write(f"{announcement['name']},{url}\n")
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, group['channel'], announcement['name'], 1, url)
 
         for category, channel_list in template_channels.items():
             f_txt_ipv4.write(f"{category},#genre#\n")
@@ -361,6 +380,7 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
                         sorted_urls_ipv4 = []
                         sorted_urls_ipv6 = []
                         for url in channels[category][channel_name]:
+                            url = remove_unnecessary_params(url)
                             if is_ipv6(url):
                                 if url not in written_urls_ipv6 and is_valid_url(url):
                                     sorted_urls_ipv6.append(url)
@@ -404,7 +424,7 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
 def sort_and_filter_urls(urls, written_urls):
     filtered_urls = [
         url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
-        if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist)
+        if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist) and is_valid_url(url)
     ]
     written_urls.update(filtered_urls)
     return filtered_urls
@@ -415,8 +435,8 @@ def add_url_suffix(url, index, total_urls, ip_version):
     return f"{base_url}{suffix}"
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
-    logo_url = f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
-    f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\",{channel_name}\n")
+    # 减少不必要的元数据
+    f_m3u.write(f"#EXTINF:-1 group-title=\"{category}\",{channel_name}\n")
     f_m3u.write(new_url + "\n")
     f_txt.write(f"{channel_name},{new_url}\n")
 
