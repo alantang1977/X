@@ -1,4 +1,3 @@
-# main.py
 import re
 import asyncio
 import logging
@@ -10,7 +9,7 @@ import difflib
 import hashlib
 import time
 
-# 检查 aiohttp
+# 检查 aiohttp 是否安装
 try:
     import aiohttp
 except ImportError:
@@ -18,7 +17,7 @@ except ImportError:
     import sys
     sys.exit(1)
 
-# 检查 config
+# 检查 config 是否存在
 try:
     import config
     for attr in ['source_urls', 'epg_urls', 'announcements', 'url_blacklist', 'ip_version_priority']:
@@ -33,7 +32,7 @@ except AttributeError as e:
     import sys
     sys.exit(1)
 
-# 日志
+# 日志和目录
 output_folder = "live"
 cache_folder = os.path.join(output_folder, "cache")
 cache_file = os.path.join(cache_folder, "url_cache.json")
@@ -42,9 +41,14 @@ cache_valid_days = 7
 os.makedirs(output_folder, exist_ok=True)
 os.makedirs(cache_folder, exist_ok=True)
 
-logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler(os.path.join(output_folder, "function.log"), "w", encoding="utf-8"),
-                              logging.StreamHandler()])
+logging.basicConfig(
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(os.path.join(output_folder, "function.log"), "w", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 def load_cache():
     if os.path.exists(cache_file):
@@ -52,7 +56,7 @@ def load_cache():
             with open(cache_file, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            logging.error(f"加载缓存失败: {e}")
+            logging.error(f"加载缓存失败: {repr(e)}")
     return {"urls": {}, "timestamp": datetime.now().isoformat()}
 
 def save_cache(cache):
@@ -61,7 +65,7 @@ def save_cache(cache):
         with open(cache_file, "w", encoding="utf-8") as f:
             json.dump(cache, f, ensure_ascii=False, indent=2)
     except Exception as e:
-        logging.error(f"保存缓存失败: {e}")
+        logging.error(f"保存缓存失败: {repr(e)}")
 
 def is_cache_valid(cache):
     if not cache:
@@ -129,7 +133,6 @@ async def fetch_channels(session, url, cache):
             cache_hit = True
     if not cache_hit:
         try:
-            # 部分站点403/401，尝试加User-Agent
             headers = {
                 "User-Agent": "Mozilla/5.0 (compatible; IPTVBot/1.0; +https://github.com/alantang1977/X)"
             }
@@ -150,7 +153,7 @@ async def fetch_channels(session, url, cache):
                 }
                 save_cache(cache)
         except Exception as e:
-            logging.error(f"url: {url} 失败❌, Error: {e}")
+            logging.error(f"url: {url} 失败❌, Error: {repr(e)}")
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
@@ -226,7 +229,6 @@ def match_channels(template_channels, all_channels):
                                 matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
     return matched_channels
 
-# 自动测速：HEAD请求，超时/非200为失效，响应越快越优
 async def test_url(session, url, timeout=3):
     try:
         start = time.monotonic()
@@ -234,7 +236,7 @@ async def test_url(session, url, timeout=3):
             if resp.status == 200:
                 cost = time.monotonic() - start
                 return (url, cost, True)
-    except Exception:
+    except Exception as e:
         pass
     return (url, None, False)
 
@@ -257,14 +259,8 @@ async def speedtest_channel_urls(channel_urls_dict, test_timeout=3, concurrency=
         result[channel].sort(key=lambda x: x[1])
     return result
 
-# 自动logo库和EPG（可扩展为自定义映射/爬取）
 def get_logo_url(channel_name):
-    # 可对接自建logo库或其他素材源
     return f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
-
-def get_epg_id(channel_name):
-    # 可扩展为频道名自动映射EPG id
-    return ""
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
     logo_url = get_logo_url(channel_name)
@@ -388,12 +384,10 @@ async def filter_source_urls(template_file):
 
 async def filter_and_speedtest_channels(template_file):
     matched_channels, template_channels, cache = await filter_source_urls(template_file)
-    # 频道名:URL列表
     channel_urls_dict = {}
     for category, ch_dict in matched_channels.items():
         for ch, url_list in ch_dict.items():
             url_list = [u for u in url_list if not any(blk in u for blk in config.url_blacklist)]
-            # 去重
             url_list = list(dict.fromkeys(url_list))
             channel_urls_dict.setdefault(ch, []).extend(url_list)
     print("正在对所有频道源测速、优选，请稍候...")
@@ -434,5 +428,5 @@ CCTV-2
         loop.close()
         print("操作完成！结果已保存到live文件夹。")
     except Exception as e:
-        print(f"执行过程中发生错误: {e}")
-        logging.error(f"程序运行失败: {e}")
+        print(f"执行过程中发生错误: {repr(e)}")
+        logging.error(f"程序运行失败: {repr(e)}")
