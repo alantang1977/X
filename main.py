@@ -8,13 +8,14 @@ from datetime import datetime, timedelta
 import difflib
 import hashlib
 import time
+import sys
+import traceback
 
 # 检查 aiohttp 是否安装
 try:
     import aiohttp
 except ImportError:
     print("缺少 aiohttp，请先 pip install aiohttp")
-    import sys
     sys.exit(1)
 
 # 检查 config 是否存在
@@ -25,11 +26,9 @@ try:
             raise AttributeError(f"配置文件缺少: {attr}")
 except ImportError:
     print("缺少 config.py，请参考示例自行创建。")
-    import sys
     sys.exit(1)
 except AttributeError as e:
     print(f"配置文件错误: {e}")
-    import sys
     sys.exit(1)
 
 # 日志和目录
@@ -37,10 +36,10 @@ output_folder = "live"
 cache_folder = os.path.join(output_folder, "cache")
 cache_file = os.path.join(cache_folder, "url_cache.json")
 cache_valid_days = 7
-
 os.makedirs(output_folder, exist_ok=True)
 os.makedirs(cache_folder, exist_ok=True)
 
+# 日志配置
 logging.basicConfig(
     level=logging.ERROR,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -70,8 +69,12 @@ def save_cache(cache):
 def is_cache_valid(cache):
     if not cache:
         return False
-    timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
-    return (datetime.now() - timestamp).days < cache_valid_days
+    try:
+        timestamp = datetime.fromisoformat(cache.get("timestamp", datetime.now().isoformat()))
+        return (datetime.now() - timestamp).days < cache_valid_days
+    except Exception as e:
+        logging.error(f"检测缓存有效性失败: {repr(e)}")
+        return False
 
 def calculate_hash(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
@@ -125,12 +128,14 @@ async def fetch_channels(session, url, cache):
     cache_hit = False
     url_hash = calculate_hash(url)
     if url_hash in cache["urls"]:
-        cached_entry = cache["urls"][url_hash]
-        if datetime.now() - datetime.fromisoformat(cached_entry["timestamp"]) <= timedelta(days=cache_valid_days):
-            logging.info(f"从缓存加载: {url}")
-            channels = OrderedDict(cached_entry["channels"])
-            unique_urls = set(cached_entry["unique_urls"])
-            cache_hit = True
+        try:
+            cached_entry = cache["urls"][url_hash]
+            if datetime.now() - datetime.fromisoformat(cached_entry["timestamp"]) <= timedelta(days=cache_valid_days):
+                channels = OrderedDict(cached_entry["channels"])
+                unique_urls = set(cached_entry["unique_urls"])
+                cache_hit = True
+        except Exception as e:
+            logging.error(f"读取缓存异常: {repr(e)}")
     if not cache_hit:
         try:
             headers = {
@@ -153,7 +158,7 @@ async def fetch_channels(session, url, cache):
                 }
                 save_cache(cache)
         except Exception as e:
-            logging.error(f"url: {url} 失败❌, Error: {repr(e)}")
+            logging.error(f"url: {url} 失败❌, Error: {repr(e)}\n{traceback.format_exc()}")
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
@@ -237,6 +242,7 @@ async def test_url(session, url, timeout=3):
                 cost = time.monotonic() - start
                 return (url, cost, True)
     except Exception as e:
+        # 不再报错，只返回不可用
         pass
     return (url, None, False)
 
@@ -260,6 +266,7 @@ async def speedtest_channel_urls(channel_urls_dict, test_timeout=3, concurrency=
     return result
 
 def get_logo_url(channel_name):
+    # 可自定义logo库
     return f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
@@ -418,7 +425,6 @@ CCTV-2
 上海卫视
 广东卫视
 """)
-            import sys
             sys.exit(1)
         loop = asyncio.get_event_loop()
         channels, template_channels, cache = loop.run_until_complete(
@@ -429,4 +435,4 @@ CCTV-2
         print("操作完成！结果已保存到live文件夹。")
     except Exception as e:
         print(f"执行过程中发生错误: {repr(e)}")
-        logging.error(f"程序运行失败: {repr(e)}")
+        logging.error(f"程序运行失败: {repr(e)}\n{traceback.format_exc()}")
