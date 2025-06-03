@@ -39,7 +39,7 @@ cache_valid_days = 7
 os.makedirs(output_folder, exist_ok=True)
 os.makedirs(cache_folder, exist_ok=True)
 
-# 日志配置
+# 日志配置（调整：把常见异常降为WARNING，简化栈输出）
 logging.basicConfig(
     level=logging.ERROR,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -110,18 +110,31 @@ def find_similar_name(target_name, name_list):
     matches = difflib.get_close_matches(target_name, name_list, n=1, cutoff=0.6)
     return matches[0] if matches else None
 
-async def fetch_with_retry(session, url, retries=2, headers=None, timeout=10):
+# 优化后的fetch_with_retry
+async def fetch_with_retry(session, url, retries=1, headers=None, timeout=5):
     last_exc = None
-    for _ in range(retries):
+    for attempt in range(retries + 1):
         try:
             async with session.get(url, headers=headers, timeout=timeout) as response:
                 response.raise_for_status()
                 return await response.text()
+        except aiohttp.ClientResponseError as e:
+            if e.status in [401, 403, 404, 429]:
+                logging.warning(f"url: {url} 失败({e.status}), 跳过")
+                return None
+            last_exc = e
+            break
+        except (asyncio.TimeoutError, aiohttp.ClientConnectorError) as e:
+            logging.warning(f"url: {url} 请求超时或连接失败，跳过")
+            last_exc = e
+            break
         except Exception as e:
             last_exc = e
-            await asyncio.sleep(0.5)
-    raise last_exc
+            await asyncio.sleep(0.3)
+    logging.error(f"url: {url} 失败❌, Error: {repr(last_exc)}")
+    return None
 
+# fetch_channels 支持失败/跳过逻辑
 async def fetch_channels(session, url, cache):
     channels = OrderedDict()
     unique_urls = set()
@@ -142,6 +155,8 @@ async def fetch_channels(session, url, cache):
                 "User-Agent": "Mozilla/5.0 (compatible; IPTVBot/1.0; +https://github.com/alantang1977/X)"
             }
             content = await fetch_with_retry(session, url, headers=headers)
+            if content is None:
+                return channels  # 跳过该源
             lines = content.split("\n")
             is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
             if is_m3u:
@@ -158,7 +173,7 @@ async def fetch_channels(session, url, cache):
                 }
                 save_cache(cache)
         except Exception as e:
-            logging.error(f"url: {url} 失败❌, Error: {repr(e)}\n{traceback.format_exc()}")
+            logging.error(f"url: {url} 失败❌, Error: {repr(e)}")
     return channels
 
 def parse_m3u_lines(lines, unique_urls):
@@ -241,8 +256,7 @@ async def test_url(session, url, timeout=3):
             if resp.status == 200:
                 cost = time.monotonic() - start
                 return (url, cost, True)
-    except Exception as e:
-        # 不再报错，只返回不可用
+    except Exception:
         pass
     return (url, None, False)
 
@@ -376,13 +390,20 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
                 for category, channel_name, old_url, new_url in url_changes["modified"]:
                     f.write(f"- {category} - {channel_name}: {old_url} → {new_url}\n")
 
+# fetch_channels 加限流
+async def fetch_channels_limited(session, url, cache, semaphore):
+    async with semaphore:
+        return await fetch_channels(session, url, cache)
+
+# 全局源并发控制在10
 async def filter_source_urls(template_file):
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
     cache = load_cache()
     all_channels = OrderedDict()
+    semaphore = asyncio.Semaphore(10)
     async with aiohttp.ClientSession() as session:
-        tasks = [fetch_channels(session, url, cache) for url in source_urls]
+        tasks = [fetch_channels_limited(session, url, cache, semaphore) for url in source_urls]
         fetched_channels_list = await asyncio.gather(*tasks)
     for fetched_channels in fetched_channels_list:
         merge_channels(all_channels, fetched_channels)
