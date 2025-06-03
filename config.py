@@ -1,7 +1,7 @@
 # 配置文件，包含直播源URL、黑名单URL、公告信息、EPG URL、测速超时时间和线程池最大工作线程数
 
-# 优先使用的IP版本，这里设置为ipv6
-ip_version_priority = "ipv6"
+# 优先使用的IP版本，这里设置为ipv4或ipv6
+ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
