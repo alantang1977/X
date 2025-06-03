@@ -1,0 +1,4 @@
+2025-06-03 12:31:52,398 - ERROR - url: https://tv.iill.top/m3u/Gather 失败❌, Error: 403, message='Forbidden', url='https://tv.iill.top/m3u/Gather'
+2025-06-03 12:31:52,500 - ERROR - url: https://6296.kstore.vip/25.txt 失败❌, Error: 401, message='', url='https://6296.kstore.vip/25.txt'
+2025-06-03 12:32:21,675 - ERROR - url: http://rihou.cc:555/gggg.nzk 失败❌, Error: Connection timeout to host http://rihou.cc:555/gggg.nzk
+2025-06-03 12:32:21,675 - ERROR - url: http://rihou.cc:555/gggg.nzk 失败❌, Error: Connection timeout to host http://rihou.cc:555/gggg.nzk
