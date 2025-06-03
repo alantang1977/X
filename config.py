@@ -5,6 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "https://git.acwing.com/cisenyuan/kdsb/-/raw/main/txt/tvzb.txt",
     "https://yk95.yymmiptv.top",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV",
     "https://www.iyouhun.com/tv/myIPTV/ipv6.m3u",
