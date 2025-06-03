@@ -1,3 +1,4 @@
+# main.py
 import re
 import asyncio
 import logging
@@ -9,48 +10,22 @@ import difflib
 import hashlib
 import time
 
-# 检查 aiohttp 是否安装
+# 检查 aiohttp
 try:
     import aiohttp
 except ImportError:
-    print("错误: 缺少必要的依赖库 'aiohttp'。")
-    print("请使用以下命令安装:")
-    print("pip install aiohttp")
+    print("缺少 aiohttp，请先 pip install aiohttp")
     import sys
     sys.exit(1)
 
-# 检查 config 是否存在
+# 检查 config
 try:
     import config
-    required_attrs = ['source_urls', 'epg_urls', 'announcements', 'url_blacklist', 'ip_version_priority']
-    for attr in required_attrs:
+    for attr in ['source_urls', 'epg_urls', 'announcements', 'url_blacklist', 'ip_version_priority']:
         if not hasattr(config, attr):
-            raise AttributeError(f"配置文件缺少必要的属性: {attr}")
+            raise AttributeError(f"配置文件缺少: {attr}")
 except ImportError:
-    print("错误: 找不到配置模块 'config.py'。")
-    print("请确保项目目录下有 config.py 文件，内容示例如下:")
-    print("""
-# config.py 示例内容
-source_urls = [
-    "https://example.com/source1.m3u",
-    "https://example.com/source2.m3u"
-]
-epg_urls = ["https://example.com/epg.xml"]
-announcements = [
-    {
-        "channel": "公告",
-        "entries": [
-            {
-                "name": None,
-                "url": "https://example.com/notice",
-                "logo": "https://picsum.photos/100/100?random=1"
-            }
-        ]
-    }
-]
-url_blacklist = []
-ip_version_priority = "ipv4"
-""")
+    print("缺少 config.py，请参考示例自行创建。")
     import sys
     sys.exit(1)
 except AttributeError as e:
@@ -58,19 +33,18 @@ except AttributeError as e:
     import sys
     sys.exit(1)
 
-logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler("./live/function.log", "w", encoding="utf-8"), logging.StreamHandler()])
-
+# 日志
 output_folder = "live"
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
-
-cache_folder = "./live/cache"
+cache_folder = os.path.join(output_folder, "cache")
 cache_file = os.path.join(cache_folder, "url_cache.json")
 cache_valid_days = 7
 
-if not os.path.exists(cache_folder):
-    os.makedirs(cache_folder)
+os.makedirs(output_folder, exist_ok=True)
+os.makedirs(cache_folder, exist_ok=True)
+
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[logging.FileHandler(os.path.join(output_folder, "function.log"), "w", encoding="utf-8"),
+                              logging.StreamHandler()])
 
 def load_cache():
     if os.path.exists(cache_file):
@@ -122,6 +96,25 @@ def clean_channel_name(channel_name):
 def is_valid_url(url):
     return bool(re.match(r'^https?://', url))
 
+def is_ipv6(url):
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+
+def find_similar_name(target_name, name_list):
+    matches = difflib.get_close_matches(target_name, name_list, n=1, cutoff=0.6)
+    return matches[0] if matches else None
+
+async def fetch_with_retry(session, url, retries=2, headers=None, timeout=10):
+    last_exc = None
+    for _ in range(retries):
+        try:
+            async with session.get(url, headers=headers, timeout=timeout) as response:
+                response.raise_for_status()
+                return await response.text()
+        except Exception as e:
+            last_exc = e
+            await asyncio.sleep(0.5)
+    raise last_exc
+
 async def fetch_channels(session, url, cache):
     channels = OrderedDict()
     unique_urls = set()
@@ -136,26 +129,26 @@ async def fetch_channels(session, url, cache):
             cache_hit = True
     if not cache_hit:
         try:
-            async with session.get(url) as response:
-                response.raise_for_status()
-                content = await response.text()
-                response.encoding = 'utf-8'
-                lines = content.split("\n")
-                current_category = None
-                is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
-                if is_m3u:
-                    channels.update(parse_m3u_lines(lines, unique_urls))
-                else:
-                    channels.update(parse_txt_lines(lines, unique_urls))
-                if channels:
-                    cache["urls"][url_hash] = {
-                        "url": url,
-                        "channels": dict(channels),
-                        "unique_urls": list(unique_urls),
-                        "timestamp": datetime.now().isoformat(),
-                        "content_hash": calculate_hash(content)
-                    }
-                    save_cache(cache)
+            # 部分站点403/401，尝试加User-Agent
+            headers = {
+                "User-Agent": "Mozilla/5.0 (compatible; IPTVBot/1.0; +https://github.com/alantang1977/X)"
+            }
+            content = await fetch_with_retry(session, url, headers=headers)
+            lines = content.split("\n")
+            is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
+            if is_m3u:
+                channels.update(parse_m3u_lines(lines, unique_urls))
+            else:
+                channels.update(parse_txt_lines(lines, unique_urls))
+            if channels:
+                cache["urls"][url_hash] = {
+                    "url": url,
+                    "channels": dict(channels),
+                    "unique_urls": list(unique_urls),
+                    "timestamp": datetime.now().isoformat(),
+                    "content_hash": calculate_hash(content)
+                }
+                save_cache(cache)
         except Exception as e:
             logging.error(f"url: {url} 失败❌, Error: {e}")
     return channels
@@ -207,60 +200,12 @@ def parse_txt_lines(lines, unique_urls):
                 channels[current_category].append((line, ''))
     return channels
 
-def find_similar_name(target_name, name_list):
-    matches = difflib.get_close_matches(target_name, name_list, n=1, cutoff=0.6)
-    return matches[0] if matches else None
-
-# -------------------- 并发测速功能 --------------------
-async def test_url(session, url, timeout=3):
-    try:
-        start = time.monotonic()
-        async with session.head(url, timeout=timeout) as resp:
-            if resp.status == 200:
-                cost = time.monotonic() - start
-                return (url, cost, True)
-    except Exception:
-        pass
-    return (url, None, False)
-
-async def speedtest_channel_urls(channel_urls_dict, test_timeout=3, concurrency=30):
-    """
-    channel_urls_dict: {频道名: [url1, url2, ...]}
-    返回: {频道名: [(url, cost), ...]}，只包含测速通过且按速度升序
-    """
-    result = {}
-    semaphore = asyncio.Semaphore(concurrency)
-    async with aiohttp.ClientSession() as session:
-        tasks = []
-        channel_url_map = []
-        for channel, urls in channel_urls_dict.items():
-            for url in urls:
-                async def sem_test_url(channel=channel, url=url):
-                    async with semaphore:
-                        return channel, *await test_url(session, url, test_timeout)
-                tasks.append(sem_test_url())
-                channel_url_map.append((channel, url))
-        all_ping = await asyncio.gather(*tasks)
-    for channel, url, cost, ok in all_ping:
-        if ok:
-            result.setdefault(channel, []).append((url, cost))
-    for channel in result:
-        result[channel].sort(key=lambda x: x[1])  # 按耗时升序
-    return result
-# -----------------------------------------------------
-
-async def filter_source_urls(template_file):
-    template_channels = parse_template(template_file)
-    source_urls = config.source_urls
-    cache = load_cache()
-    all_channels = OrderedDict()
-    async with aiohttp.ClientSession() as session:
-        tasks = [fetch_channels(session, url, cache) for url in source_urls]
-        fetched_channels_list = await asyncio.gather(*tasks)
-    for fetched_channels in fetched_channels_list:
-        merge_channels(all_channels, fetched_channels)
-    matched_channels = match_channels(template_channels, all_channels)
-    return matched_channels, template_channels, cache
+def merge_channels(target, source):
+    for category, channel_list in source.items():
+        if category in target:
+            target[category].extend(channel_list)
+        else:
+            target[category] = channel_list
 
 def match_channels(template_channels, all_channels):
     matched_channels = OrderedDict()
@@ -281,15 +226,56 @@ def match_channels(template_channels, all_channels):
                                 matched_channels[category].setdefault(channel_name, []).append(online_channel_url)
     return matched_channels
 
-def merge_channels(target, source):
-    for category, channel_list in source.items():
-        if category in target:
-            target[category].extend(channel_list)
-        else:
-            target[category] = channel_list
+# 自动测速：HEAD请求，超时/非200为失效，响应越快越优
+async def test_url(session, url, timeout=3):
+    try:
+        start = time.monotonic()
+        async with session.head(url, timeout=timeout, allow_redirects=True) as resp:
+            if resp.status == 200:
+                cost = time.monotonic() - start
+                return (url, cost, True)
+    except Exception:
+        pass
+    return (url, None, False)
 
-def is_ipv6(url):
-    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+async def speedtest_channel_urls(channel_urls_dict, test_timeout=3, concurrency=30):
+    result = {}
+    semaphore = asyncio.Semaphore(concurrency)
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for channel, urls in channel_urls_dict.items():
+            for url in urls:
+                async def sem_test_url(channel=channel, url=url):
+                    async with semaphore:
+                        return channel, *await test_url(session, url, test_timeout)
+                tasks.append(sem_test_url())
+        all_ping = await asyncio.gather(*tasks)
+    for channel, url, cost, ok in all_ping:
+        if ok:
+            result.setdefault(channel, []).append((url, cost))
+    for channel in result:
+        result[channel].sort(key=lambda x: x[1])
+    return result
+
+# 自动logo库和EPG（可扩展为自定义映射/爬取）
+def get_logo_url(channel_name):
+    # 可对接自建logo库或其他素材源
+    return f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
+
+def get_epg_id(channel_name):
+    # 可扩展为频道名自动映射EPG id
+    return ""
+
+def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
+    logo_url = get_logo_url(channel_name)
+    f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\",{channel_name}\n")
+    f_m3u.write(new_url + "\n")
+    f_txt.write(f"{channel_name},{new_url}\n")
+
+def add_url_suffix(url, index, total_urls, ip_version):
+    suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
+    base_url = url.split('$', 1)[0] if '$' in url else url
+    return f"{base_url}{suffix}"
 
 def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
@@ -387,43 +373,35 @@ def updateChannelUrlsM3U(channels, template_channels, cache):
                 for category, channel_name, old_url, new_url in url_changes["modified"]:
                     f.write(f"- {category} - {channel_name}: {old_url} → {new_url}\n")
 
-def sort_and_filter_urls(urls, written_urls):
-    filtered_urls = [
-        url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
-        if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist)
-    ]
-    written_urls.update(filtered_urls)
-    return filtered_urls
+async def filter_source_urls(template_file):
+    template_channels = parse_template(template_file)
+    source_urls = config.source_urls
+    cache = load_cache()
+    all_channels = OrderedDict()
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch_channels(session, url, cache) for url in source_urls]
+        fetched_channels_list = await asyncio.gather(*tasks)
+    for fetched_channels in fetched_channels_list:
+        merge_channels(all_channels, fetched_channels)
+    matched_channels = match_channels(template_channels, all_channels)
+    return matched_channels, template_channels, cache
 
-def add_url_suffix(url, index, total_urls, ip_version):
-    suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
-    base_url = url.split('$', 1)[0] if '$' in url else url
-    return f"{base_url}{suffix}"
-
-def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
-    logo_url = f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
-    f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\",{channel_name}\n")
-    f_m3u.write(new_url + "\n")
-    f_txt.write(f"{channel_name},{new_url}\n")
-
-# 主流程集成测速优选
 async def filter_and_speedtest_channels(template_file):
     matched_channels, template_channels, cache = await filter_source_urls(template_file)
-    # --------- 整理出频道名:URL列表 ---------
+    # 频道名:URL列表
     channel_urls_dict = {}
     for category, ch_dict in matched_channels.items():
         for ch, url_list in ch_dict.items():
-            # 剔除黑名单
             url_list = [u for u in url_list if not any(blk in u for blk in config.url_blacklist)]
+            # 去重
+            url_list = list(dict.fromkeys(url_list))
             channel_urls_dict.setdefault(ch, []).extend(url_list)
     print("正在对所有频道源测速、优选，请稍候...")
     speedtest_result = await speedtest_channel_urls(channel_urls_dict)
-    # --------- 回填测速优选后的结果 ---------
     for category, ch_dict in matched_channels.items():
         for ch in ch_dict:
             urlcosts = speedtest_result.get(ch, [])
             if urlcosts:
-                # 只保留测速正常且最快的N个（可按需调整）
                 ch_dict[ch] = [url for url, _ in urlcosts]
             else:
                 ch_dict[ch] = []
