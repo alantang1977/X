@@ -191,10 +191,8 @@ async def fetch_channels(session, url, cache):
             try:
                 # 使用随机请求头
                 headers = get_random_headers()
-                
                 # 设置超时和重定向
                 timeout = aiohttp.ClientTimeout(total=15, connect=10)
-                
                 # 使用浏览器请求头发送请求
                 async with session.get(url, headers=headers, timeout=timeout, allow_redirects=True) as response:
                     # 检查状态码
@@ -397,6 +395,13 @@ async def test_and_sort_urls(session, urls):
     # 只返回URL列表
     return [url for url, _ in sorted_results]
 
+def write_to_files(f_m3u, f_txt, category, channel_name, index, url):
+    # 写入M3U和TXT格式
+    m3u_line = f'#EXTINF:-1 group-title="{category}",{channel_name}\n{url}\n'
+    txt_line = f'{channel_name},{url}\n'
+    f_m3u.write(m3u_line)
+    f_txt.write(txt_line)
+
 async def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
@@ -502,9 +507,15 @@ async def updateChannelUrlsM3U(channels, template_channels, cache):
                 # 分离IPv4和IPv6
                 ipv4_urls = [url for url in sorted_urls if not is_ipv6(url)]
                 ipv6_urls = [url for url in sorted_urls if is_ipv6(url)]
-                
-                total_urls_ipv4 = len(ipv4_urls)
-                total_urls_ipv6 = len(ipv6_urls)
-                
+
                 # 写入IPv4 URL
-                for index
+                for index, url in enumerate(ipv4_urls, start=1):
+                    if url not in written_urls_ipv4:
+                        written_urls_ipv4.add(url)
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, url)
+
+                # 写入IPv6 URL
+                for index, url in enumerate(ipv6_urls, start=1):
+                    if url not in written_urls_ipv6:
+                        written_urls_ipv6.add(url)
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, url)
