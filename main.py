@@ -3,8 +3,6 @@ import asyncio
 import logging
 import json
 import os
-import random
-import time
 from collections import OrderedDict
 from datetime import datetime, timedelta
 import difflib
@@ -14,7 +12,6 @@ from urllib.parse import urlparse, urlunparse, parse_qs
 # 检查 aiohttp 是否安装
 try:
     import aiohttp
-    from aiohttp import TCPConnector
 except ImportError:
     print("错误: 缺少必要的依赖库 'aiohttp'。")
     print("请使用以下命令安装:")
@@ -80,26 +77,15 @@ cache_valid_days = 7  # 缓存有效期（天）
 if not os.path.exists(cache_folder):
     os.makedirs(cache_folder)
 
-# 随机User-Agent列表
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
-    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15',
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0',
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1',
-    'Mozilla/5.0 (Linux; Android 10; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36'
-]
-
-# 获取随机请求头
-def get_random_headers():
-    return {
-        'User-Agent': random.choice(USER_AGENTS),
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        'Cache-Control': 'max-age=0',
-    }
+# 模拟浏览器的请求头
+BROWSER_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Cache-Control': 'max-age=0',
+}
 
 # 加载缓存
 def load_cache():
@@ -185,66 +171,35 @@ async def fetch_channels(session, url, cache):
             cache_hit = True
 
     if not cache_hit:
-        max_retries = 3
-        retry_delay = 2
-        for attempt in range(max_retries):
-            try:
-                # 使用随机请求头
-                headers = get_random_headers()
-                # 设置超时和重定向
-                timeout = aiohttp.ClientTimeout(total=15, connect=10)
-                # 使用浏览器请求头发送请求
-                async with session.get(url, headers=headers, timeout=timeout, allow_redirects=True) as response:
-                    # 检查状态码
-                    if response.status in [403, 401]:
-                        logging.warning(f"url: {url} 访问受限 (状态码: {response.status}), 尝试更换User-Agent...")
-                        headers = get_random_headers()
-                        continue
-                    
-                    response.raise_for_status()
-                    content = await response.text()
-                    response.encoding = 'utf-8'
-                    lines = content.split("\n")
-                    current_category = None
-                    is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
-                    source_type = "m3u" if is_m3u else "txt"
+        try:
+            # 使用浏览器请求头发送请求
+            async with session.get(url, headers=BROWSER_HEADERS) as response:
+                response.raise_for_status()
+                content = await response.text()
+                response.encoding = 'utf-8'
+                lines = content.split("\n")
+                current_category = None
+                is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
+                source_type = "m3u" if is_m3u else "txt"
 
-                    if is_m3u:
-                        channels.update(parse_m3u_lines(lines, unique_urls))
-                    else:
-                        channels.update(parse_txt_lines(lines, unique_urls))
-
-                    if channels:
-                        # 更新缓存
-                        cache["urls"][url_hash] = {
-                            "url": url,
-                            "channels": dict(channels),
-                            "unique_urls": list(unique_urls),
-                            "timestamp": datetime.now().isoformat(),
-                            "content_hash": calculate_hash(content)
-                        }
-                        save_cache(cache)
-                    break  # 成功获取后跳出重试循环
-
-            except aiohttp.ClientResponseError as e:
-                if e.status in [403, 401] and attempt < max_retries - 1:
-                    logging.warning(f"url: {url} 访问受限 (状态码: {e.status}), 重试 {attempt+1}/{max_retries}...")
-                    await asyncio.sleep(retry_delay)
+                if is_m3u:
+                    channels.update(parse_m3u_lines(lines, unique_urls))
                 else:
-                    logging.error(f"url: {url} 失败❌ (状态码: {e.status}), Error: {e}")
-                    break
-                    
-            except (aiohttp.ClientConnectionError, asyncio.TimeoutError) as e:
-                if attempt < max_retries - 1:
-                    logging.warning(f"url: {url} 连接超时, 重试 {attempt+1}/{max_retries}...")
-                    await asyncio.sleep(retry_delay)
-                else:
-                    logging.error(f"url: {url} 连接失败❌, Error: {e}")
-                    break
-                    
-            except Exception as e:
-                logging.error(f"url: {url} 失败❌, Error: {e}")
-                break
+                    channels.update(parse_txt_lines(lines, unique_urls))
+
+                if channels:
+                    # 更新缓存
+                    cache["urls"][url_hash] = {
+                        "url": url,
+                        "channels": dict(channels),
+                        "unique_urls": list(unique_urls),
+                        "timestamp": datetime.now().isoformat(),
+                        "content_hash": calculate_hash(content)
+                    }
+                    save_cache(cache)
+
+        except Exception as e:
+            logging.error(f"url: {url} 失败❌, Error: {e}")
 
     # 再次检查并去除重复的频道
     for category, channel_list in channels.items():
@@ -319,9 +274,8 @@ async def filter_source_urls(template_file):
     source_urls = config.source_urls
     cache = load_cache()
 
-    # 创建连接池和会话
-    connector = TCPConnector(limit_per_host=5, ttl_dns_cache=300)
-    async with aiohttp.ClientSession(connector=connector) as session:
+    # 创建带有浏览器请求头的会话
+    async with aiohttp.ClientSession() as session:
         tasks = [fetch_channels(session, url, cache) for url in source_urls]
         fetched_channels_list = await asyncio.gather(*tasks)
 
@@ -365,42 +319,13 @@ def merge_channels(target, source):
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-# 每个频道最大URL数量
-MAX_URLS_PER_CHANNEL = 20
-
-async def measure_response_time(session, url):
-    """测量URL的响应时间（毫秒）"""
+async def test_url(session, url):
     try:
-        start_time = asyncio.get_event_loop().time()
-        async with session.head(url, headers=get_random_headers(), timeout=5) as response:
-            await response.read()  # 确保完全读取响应
-            elapsed = (asyncio.get_event_loop().time() - start_time) * 1000
-            return url, round(elapsed, 2)
+        # 使用浏览器请求头测试URL
+        async with session.head(url, headers=BROWSER_HEADERS, timeout=5) as response:
+            return response.status == 200
     except Exception:
-        return url, float('inf')  # 超时或错误返回无限大
-
-async def test_and_sort_urls(session, urls):
-    """测试并排序URL列表（响应时间短的优先）"""
-    if not urls:
-        return []
-    
-    # 创建测速任务
-    tasks = [measure_response_time(session, url) for url in urls]
-    results = await asyncio.gather(*tasks)
-    
-    # 过滤无效URL并排序
-    valid_results = [item for item in results if item[1] < float('inf')]
-    sorted_results = sorted(valid_results, key=lambda x: x[1])  # 按响应时间升序排序
-    
-    # 只返回URL列表
-    return [url for url, _ in sorted_results]
-
-def write_to_files(f_m3u, f_txt, category, channel_name, index, url):
-    # 写入M3U和TXT格式
-    m3u_line = f'#EXTINF:-1 group-title="{category}",{channel_name}\n{url}\n'
-    txt_line = f'{channel_name},{url}\n'
-    f_m3u.write(m3u_line)
-    f_txt.write(txt_line)
+        return False
 
 async def updateChannelUrlsM3U(channels, template_channels, cache):
     written_urls_ipv4 = set()
@@ -443,9 +368,8 @@ async def updateChannelUrlsM3U(channels, template_channels, cache):
     ipv6_m3u_path = os.path.join(output_folder, "live_ipv6.m3u")
     ipv6_txt_path = os.path.join(output_folder, "live_ipv6.txt")
 
-    # 创建连接池和会话
-    connector = TCPConnector(limit_per_host=10, ttl_dns_cache=300)
-    async with aiohttp.ClientSession(connector=connector) as session:
+    # 创建带有浏览器请求头的会话用于测试URL
+    async with aiohttp.ClientSession() as session:
         with open(ipv4_m3u_path, "w", encoding="utf-8") as f_m3u_ipv4, \
                 open(ipv4_txt_path, "w", encoding="utf-8") as f_txt_ipv4, \
                 open(ipv6_m3u_path, "w", encoding="utf-8") as f_m3u_ipv6, \
@@ -454,7 +378,6 @@ async def updateChannelUrlsM3U(channels, template_channels, cache):
             f_m3u_ipv4.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
             f_m3u_ipv6.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
 
-            # 写入公告频道
             for group in config.announcements:
                 f_txt_ipv4.write(f"{group['channel']},#genre#\n")
                 f_txt_ipv6.write(f"{group['channel']},#genre#\n")
@@ -470,52 +393,105 @@ async def updateChannelUrlsM3U(channels, template_channels, cache):
                             written_urls_ipv4.add(url)
                             write_to_files(f_m3u_ipv4, f_txt_ipv4, group['channel'], announcement['name'], 1, url)
 
-            # 创建频道URL测速任务
-            channel_tasks = []
             for category, channel_list in template_channels.items():
+                f_txt_ipv4.write(f"{category},#genre#\n")
+                f_txt_ipv6.write(f"{category},#genre#\n")
                 if category in channels:
                     for channel_name in channel_list:
                         if channel_name in channels[category]:
-                            urls = channels[category][channel_name]
-                            # 去重和清理
-                            unique_urls = set()
-                            cleaned_urls = []
-                            for url in urls:
-                                cleaned_url = remove_unnecessary_params(url)
-                                if cleaned_url not in unique_urls and is_valid_url(cleaned_url) and not any(blacklist in cleaned_url for blacklist in config.url_blacklist):
-                                    cleaned_urls.append(cleaned_url)
-                                    unique_urls.add(cleaned_url)
-                            channel_tasks.append((category, channel_name, cleaned_urls))
-            
-            # 批量处理所有频道的URL测速和排序
-            sorted_results = {}
-            for category, channel_name, urls in channel_tasks:
-                if urls:
-                    sorted_urls = await test_and_sort_urls(session, urls)
-                    # 限制每个频道最多MAX_URLS_PER_CHANNEL条URL
-                    sorted_results[(category, channel_name)] = sorted_urls[:MAX_URLS_PER_CHANNEL]
-                else:
-                    sorted_results[(category, channel_name)] = []
-            
-            # 先写入分类标题
-            for category in template_channels:
-                f_txt_ipv4.write(f"{category},#genre#\n")
-                f_txt_ipv6.write(f"{category},#genre#\n")
-            
-            # 写入排序后的频道URL
-            for (category, channel_name), sorted_urls in sorted_results.items():
-                # 分离IPv4和IPv6
-                ipv4_urls = [url for url in sorted_urls if not is_ipv6(url)]
-                ipv6_urls = [url for url in sorted_urls if is_ipv6(url)]
+                            sorted_urls_ipv4 = []
+                            sorted_urls_ipv6 = []
+                            for url in channels[category][channel_name]:
+                                url = remove_unnecessary_params(url)
+                                if await test_url(session, url):
+                                    if is_ipv6(url):
+                                        if url not in written_urls_ipv6 and is_valid_url(url):
+                                            sorted_urls_ipv6.append(url)
+                                            written_urls_ipv6.add(url)
+                                    else:
+                                        if url not in written_urls_ipv4 and is_valid_url(url):
+                                            sorted_urls_ipv4.append(url)
+                                            written_urls_ipv4.add(url)
 
-                # 写入IPv4 URL
-                for index, url in enumerate(ipv4_urls, start=1):
-                    if url not in written_urls_ipv4:
-                        written_urls_ipv4.add(url)
-                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, url)
+                            sorted_urls_ipv4 = sorted_urls_ipv4[:20]
+                            sorted_urls_ipv6 = sorted_urls_ipv6[:20]
 
-                # 写入IPv6 URL
-                for index, url in enumerate(ipv6_urls, start=1):
-                    if url not in written_urls_ipv6:
-                        written_urls_ipv6.add(url)
-                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, url)
+                            total_urls_ipv4 = len(sorted_urls_ipv4)
+                            total_urls_ipv6 = len(sorted_urls_ipv6)
+
+                            for index, url in enumerate(sorted_urls_ipv4, start=1):
+                                new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
+                                write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url)
+
+                            for index, url in enumerate(sorted_urls_ipv6, start=1):
+                                new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
+                                write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url)
+
+            f_txt_ipv4.write("\n")
+            f_txt_ipv6.write("\n")
+
+    # 保存URL变化日志
+    if url_changes["added"] or url_changes["removed"] or url_changes["modified"]:
+        with open(os.path.join(output_folder, "url_changes.log"), "a", encoding="utf-8") as f:
+            f.write(f"\n=== 更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===\n")
+            if url_changes["added"]:
+                f.write("\n新增URL:\n")
+                for category, channel_name, url in url_changes["added"]:
+                    f.write(f"- {category} - {channel_name}: {url}\n")
+            if url_changes["removed"]:
+                f.write("\n移除URL:\n")
+                for category, channel_name, url in url_changes["removed"]:
+                    f.write(f"- {category} - {channel_name}: {url}\n")
+            if url_changes["modified"]:
+                f.write("\n修改URL:\n")
+                for category, channel_name, old_url, new_url in url_changes["modified"]:
+                    f.write(f"- {category} - {channel_name}: {old_url} → {new_url}\n")
+
+def sort_and_filter_urls(urls, written_urls):
+    filtered_urls = [
+        url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
+        if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist) and is_valid_url(url)
+    ]
+    written_urls.update(filtered_urls)
+    return filtered_urls
+
+def add_url_suffix(url, index, total_urls, ip_version):
+    suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
+    base_url = url.split('$', 1)[0] if '$' in url else url
+    return f"{base_url}{suffix}"
+
+def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
+    # 减少不必要的元数据
+    f_m3u.write(f"#EXTINF:-1 group-title=\"{category}\",{channel_name}\n")
+    f_m3u.write(new_url + "\n")
+    f_txt.write(f"{channel_name},{new_url}\n")
+
+if __name__ == "__main__":
+    template_file = "demo.txt"
+    try:
+        # 检查模板文件是否存在
+        if not os.path.exists(template_file):
+            print(f"错误: 找不到模板文件 '{template_file}'。")
+            print("请确保项目目录下有 demo.txt 文件。")
+            print("示例内容如下:")
+            print("""
+# demo.txt 示例内容
+央视,#genre#
+CCTV-1
+CCTV-2
+卫视,#genre#
+北京卫视
+上海卫视
+广东卫视
+""")
+            import sys
+            sys.exit(1)
+
+        loop = asyncio.get_event_loop()
+        channels, template_channels, cache = loop.run_until_complete(filter_source_urls(template_file))
+        loop.run_until_complete(updateChannelUrlsM3U(channels, template_channels, cache))
+        loop.close()
+        print("操作完成！结果已保存到live文件夹。")
+    except Exception as e:
+        print(f"执行过程中发生错误: {e}")
+        logging.error(f"程序运行失败: {e}")
