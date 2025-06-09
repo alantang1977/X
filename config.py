@@ -5,6 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "http://is.is-great.org/ii/1749383140.txt",
     "https://live.kakaxi-1.ink/ipv4.txt",
     "https://live.kakaxi-1.ink/ipv4.1.txt",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/myTV.txt",
