@@ -252,7 +252,7 @@
 {"name": "📺┃vbskycn直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u","playerType":1},
 {"name": "🎃┃全国秒播TV","type":0,"url":"http://live.nctv.top/x.txt","playerType":1},	
 {"name": "🎳┃咪咕直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播","playerType":1},
-{"name": "🪭┃my机车直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/","playerType":1},
+{"name": "🪭┃my机车直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/机车","playerType":1},
 {"name": "🍳┃台湾全岛直播","api": "csp_MQiTV","jar": "./jar/custom_spider.jar","ext": "https://59.125.210.231:4433"},
 {"name": "🤿┃IPTV_SuperA直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/refs/heads/main/output/result.m3u","playerType":1},	
 {"name": "🪂┃IPTV_SuperB直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperB/refs/heads/main/output/live_ipv4.m3u","playerType":1},
