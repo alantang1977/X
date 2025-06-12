@@ -274,7 +274,7 @@
 {"name": "🍬┃assets直播","type":0,"url":"http://1.94.31.214/live/livelite.txt","playerType":1},	
 {"name": "🧀┃香港台湾秒播","type":0,"url":"https://smart.pendy.dpdns.org/m3u/Smart.m3u","playerType":1},
 {"name": "🎃┃uploads頻道","type":0,"url":"https://upld.zone.id/uploads/q9iq9e5iq/lvse.txt","playerType":1},
-//{"name": "🛺┃knnnn直播电视","type": 3,"api": "http://is.is-great.org/ii/1749383140.txt","ext": {}},
+{"name": "🚚┃cftv頻道","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/cftv.m3u","playerType":1},
 {"name": "🐮┃牛牛直播","type" : 0,"url" : "https://web.banye.tech:7777/tv/hlj.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🐝┃蜜蜂直播","type" : 0,"url" : "https://iptv.catvod.com/tv.m3u","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 //{"name": "🍳┃SMT直播","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_smt_proxy_001.py","ext": {"proxy": {"http": "http://127.0.0.1:10809","https": "http://127.0.0.1:10809"}}},
