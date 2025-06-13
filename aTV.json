@@ -102,6 +102,15 @@
 {"name": "🪂┃IPTV_SuperB直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperB/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "🥎┃IPTV_SuperD直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_SuperD/refs/heads/dist/live.m3u","playerType":1},
 
+{
+      "name": "🥎sao0🥎",
+      "type": 0,
+      "url": "https://gitee.com/mt4k/bp/raw/ss/zb4",
+      "playerType": 1,
+      "ua": "okhttp/3.15",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
+    },
 {"name": "🎒┃girlTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/girl/refs/heads/master/tv/iptv4.m3u","playerType":1},	
 {"name": "🏮┃WorkTV直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/电视.txt","playerType":1},		
 {"name": "🥩┃luck9V直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/luck9.txt","playerType":1},	
