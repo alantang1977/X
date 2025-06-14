@@ -253,6 +253,8 @@
 {"name": "🏮┃广东移动源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/playlist/广东移动.txt","playerType":1},	
 {"name": "🥬┃广东电信源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/playlist/广东电信.txt","playerType":1},
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通","playerType":1},	
+{"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt","playerType":1},	
+
 	
 {"name": "🥮┃aTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/aTV/refs/heads/master/output/result.m3u","playerType":1},	
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
