@@ -1,47 +1,41 @@
-name: 自动替换文件中的Emoji,并每个Emoji都不一样
+name: 自动替换Emoji
 
 on:
-  workflow_dispatch:
-    inputs:
-      commit_message:
-        description: '提交消息'
-        required: true
-        default: '自动替换文件中的Emoji'
+  workflow_dispatch:   # 允许手动触发
+  push:
+    paths:
+      - 'emojis/*.json'
+      - 'emojis/emojis.py'
 
 jobs:
-  replace-emojis:
+  emoji-replace:
     runs-on: ubuntu-latest
-    
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          ref: ${{ github.ref }}
-      
+
       - name: 设置Python环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-      
-      - name: 运行Emoji替换脚本
+          python-version: '3.10'
+
+      - name: 安装依赖
         run: |
-          python emojis/emojis.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: 提交更改
+          pip install --upgrade pip
+
+      - name: 运行Emoji自动替换
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          # 检查是否有文件更改
-          if [[ -n $(git status --porcelain) ]]; then
-            echo "检测到文件更改，准备提交..."
-            git add emojis/output/*.json
-            git commit -m "${{ github.event.inputs.commit_message }}"
-            git push
-            echo "更改已提交并推送"
+          cd emojis
+          python emojis.py
+
+      - name: 提交更新（如有变更）
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add output/*.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
           else
-            echo "没有检测到文件更改"
+            git commit -m "自动更新: 替换emojis"
+            git push
           fi
