@@ -104,39 +104,51 @@ def replace_emojis_in_file(input_file_path, output_file_path):
                                    u"\U000024C2-\U0001F251"
                                    "]+", flags=re.UNICODE)
         
-        # 找出所有"name":"..."模式的字符串
-        name_pattern = re.compile(r'"name":"([^"]*)"')
-        name_matches = name_pattern.finditer(content)
-        
         # 用于跟踪已替换的Emoji，确保唯一性
         used_emojis = set()
         total_replacements = 0
         
-        # 替换每个匹配的"name"字段中的Emoji
+        # 定义替换函数
+        def replace_emoji(match):
+            nonlocal used_emojis, total_replacements
+            # 获取匹配的Emoji
+            old_emoji = match.group(0)
+            # 生成新的Emoji
+            available_emojis = [emoji for emoji in emoji_list if emoji not in used_emojis]
+            if not available_emojis:
+                print(f"警告: Emoji列表中的Emoji不够用了，已使用 {len(used_emojis)} 个不同Emoji，将重新使用池")
+                available_emojis = emoji_list
+            new_emoji = random.choice(available_emojis)
+            used_emojis.add(new_emoji)
+            total_replacements += 1
+            return new_emoji
+        
+        # 找出所有"name":"..."模式的字符串
+        name_pattern = re.compile(r'"name":"([^"]*)"')
         new_content = content
-        for match in reversed(list(name_matches)):  # 从后往前替换，避免索引问题
+        
+        # 替换每个匹配的"name"字段中的Emoji
+        for match in reversed(list(name_pattern.finditer(new_content))):
+            # 获取完整匹配和name值
+            full_match = match.group(0)
             name_value = match.group(1)
-            emojis_in_name = emoji_pattern.findall(name_value)
             
-            if not emojis_in_name:
-                continue
+            # 处理可能存在的竖线 |
+            if '|' in name_value:
+                parts = name_value.split('|', 1)
+                emoji_part = parts[0]  # 竖线前的部分
+                remaining_part = parts[1]  # 竖线后的部分
                 
-            # 为每个Emoji生成一个新的不同的Emoji
-            new_name_value = name_value
-            for old_emoji in reversed(emojis_in_name):  # 从后往前替换，避免索引问题
-                available_emojis = [emoji for emoji in emoji_list if emoji not in used_emojis]
-                if not available_emojis:
-                    print(f"警告: Emoji列表中的Emoji不够用了，已使用 {len(used_emojis)} 个不同Emoji，将重新使用池")
-                    available_emojis = emoji_list
-                new_emoji = random.choice(available_emojis)
-                new_name_value = new_name_value[::-1].replace(old_emoji[::-1], new_emoji[::-1], 1)[::-1]
-                used_emojis.add(new_emoji)
-                total_replacements += 1
+                # 只替换竖线前的Emoji
+                new_emoji_part = emoji_pattern.sub(replace_emoji, emoji_part)
+                new_name_value = f"{new_emoji_part}|{remaining_part}"
+            else:
+                # 没有竖线，替换整个值中的Emoji
+                new_name_value = emoji_pattern.sub(replace_emoji, name_value)
             
-            # 更新整个匹配的字符串
-            original_text = match.group(0)
-            new_text = f'"name":"{new_name_value}"'
-            new_content = new_content[:match.start()] + new_text + new_content[match.end():]
+            # 更新完整匹配
+            new_full_match = f'"name":"{new_name_value}"'
+            new_content = new_content[:match.start()] + new_full_match + new_content[match.end():]
         
         print(f"在文件中找到并替换了 {total_replacements} 个Emoji")
         
@@ -180,4 +192,4 @@ def main():
     print("\n所有文件处理完成")
 
 if __name__ == "__main__":
-    main()    
+    main()
