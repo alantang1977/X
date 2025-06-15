@@ -3,7 +3,7 @@ import json
 import random
 import re
 
-# 完整 Emoji 列表（常用表情、动物、人物、物品、旗帜等，未省略）
+# 完整 Emoji 列表（可根据需求扩充，此处给出常用的）
 ALL_EMOJIS = [
     "😀","😁","😂","🤣","😃","😄","😅","😆","😉","😊","😋","😎","😍","😘","🥰",
     "😗","😙","😚","🙂","🤗","🤩","🤔","🤨","😐","😑","😶","🙄","😏","😣","😥",
@@ -32,7 +32,7 @@ ALL_EMOJIS = [
     "🏳️‍🌈","🏳️‍⚧️","🇨🇳","🇺🇸","🇬🇧","🇫🇷","🇯🇵","🇰🇷","🇩🇪","🇷🇺","🇮🇳"
 ]
 
-# emoji 正则表达式，支持单字符和复合 emoji
+# emoji 正则表达式
 EMOJI_PATTERN = re.compile(
     "[" +
     "\U0001F600-\U0001F64F" +  # 表情
@@ -51,23 +51,14 @@ EMOJI_PATTERN = re.compile(
 )
 
 def random_emoji():
-    """
-    随机返回一个新的 emoji
-    """
     return random.choice(ALL_EMOJIS)
 
 def replace_emojis_in_str(s):
-    """
-    将字符串中所有 emoji 精准替换为随机新 emoji，数量、位置不变
-    """
     def repl(match):
         return random_emoji()
     return EMOJI_PATTERN.sub(repl, s)
 
 def process_json_emojis(obj):
-    """
-    递归遍历 JSON 对象，对所有字符串字段中的 emoji 精准替换
-    """
     if isinstance(obj, dict):
         return {k: process_json_emojis(v) for k, v in obj.items()}
     elif isinstance(obj, list):
@@ -78,9 +69,6 @@ def process_json_emojis(obj):
         return obj
 
 def update_emojis_in_json_file(input_path, output_path):
-    """
-    处理单个 json 文件，将其中所有 emoji 替换后写入 output_path
-    """
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -97,9 +85,6 @@ def update_emojis_in_json_file(input_path, output_path):
         print(f"写入文件失败: {output_path}, 错误: {e}")
 
 def main():
-    """
-    主程序，自动查找并处理 emojis 文件夹下所有 json 文件，将结果输出到 output 目录下（可覆盖旧文件）
-    """
     script_dir = os.path.dirname(os.path.abspath(__file__))
     emojis_dir = script_dir
     output_dir = os.path.join(emojis_dir, "output")
