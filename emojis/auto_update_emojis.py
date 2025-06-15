@@ -1,10 +1,9 @@
 import os
-import json
 import random
 import re
 
-# 安卓系统支持的主流 Emoji 列表（可根据需要补充）
-ALL_EMOJIS = [
+# 安卓系统主流支持的 Emoji 列表（Unicode 13.0+，广泛兼容，欢迎自行补充扩展）
+ANDROID_SUPPORTED_EMOJIS = [
     # 表情符号
     "😀","😁","😂","🤣","😃","😄","😅","😆","😉","😊","😋","😎","😍","😘","🥰","😗","😙","😚",
     "🙂","🤗","🤩","🤔","🤨","😐","😑","😶","🙄","😏","😣","😥","😮","🤐","😯","😪","😫",
@@ -55,45 +54,32 @@ ALL_EMOJIS = [
     "🇪🇬"
 ]
 
-EMOJI_PATTERN = re.compile(
-    "["  # 匹配绝大部分安卓支持的 emoji
-    "\U0001F600-\U0001F64F"
-    "\U0001F300-\U0001F5FF"
-    "\U0001F680-\U0001F6FF"
-    "\U0001F1E0-\U0001F1FF"
-    "\U00002700-\U000027BF"
-    "\U0001F900-\U0001F9FF"
-    "\U00002600-\U000026FF"
-    "\U0001F700-\U0001F77F"
-    "\U0001FA70-\U0001FAFF"
-    "\U0001F780-\U0001F7FF"
-    "\U0001F800-\U0001F8FF"
-    "\U0001FA00-\U0001FA6F"
-    "]+", flags=re.UNICODE
+# 替换用的 emoji 集合
+REPLACEMENT_EMOJIS = ANDROID_SUPPORTED_EMOJIS.copy()
+
+# 构造正则：匹配所有安卓主流支持的 Emoji
+# 这里采用分组拼接所有 emoji 字符，保证精确匹配每一个单体 emoji
+TARGET_EMOJI_PATTERN = re.compile(
+    r'({})'.format('|'.join(re.escape(emoji) for emoji in ANDROID_SUPPORTED_EMOJIS))
 )
 
-def get_unique_emoji(used_emojis):
+def replace_android_emojis_in_line(line, used_emojis):
     """
-    获取一个全局唯一未用过的emoji。如果emoji用尽，则允许重复。
-    """
-    available = list(set(ALL_EMOJIS) - used_emojis)
-    if not available:
-        # 已经用完全部emoji，则允许重复
-        available = ALL_EMOJIS
-    emoji = random.choice(available)
-    used_emojis.add(emoji)
-    return emoji
-
-def replace_emojis_preserve_text(line, used_emojis):
-    """
-    只替换line中的emoji字符（每个emoji不重复），其他内容一律不变。
+    替换一行中所有安卓支持的 emoji（每个新 emoji 全局不重复，直到用尽），其他内容不变。
     """
     def emoji_replacer(match):
-        return get_unique_emoji(used_emojis)
-    # 仅替换emoji字符，其他内容和格式完全不动
-    return EMOJI_PATTERN.sub(emoji_replacer, line)
+        available = list(set(REPLACEMENT_EMOJIS) - used_emojis)
+        if not available:
+            available = REPLACEMENT_EMOJIS  # 用尽后允许重复
+        chosen = random.choice(available)
+        used_emojis.add(chosen)
+        return chosen
+    return TARGET_EMOJI_PATTERN.sub(emoji_replacer, line)
 
-def process_txt_file(input_path, output_path):
+def process_file(input_path, output_path):
+    """
+    逐行处理文件：只替换安卓支持的 emoji，其他内容（字母/数字/标点/缩进/换行/中文等）全部保留
+    """
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -103,32 +89,28 @@ def process_txt_file(input_path, output_path):
     used_emojis = set()
     processed_lines = []
     for line in lines:
-        # 保持每行结尾格式
-        original_line = line
-        replaced_line = replace_emojis_preserve_text(original_line.rstrip('\n'), used_emojis)
-        # 保留原有的换行符
-        if original_line.endswith('\n'):
-            replaced_line += '\n'
+        replaced_line = replace_android_emojis_in_line(line, used_emojis)
         processed_lines.append(replaced_line)
-    # 写入为json数组，每项为一行（含换行符），保证还原原文件格式
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(processed_lines, f, ensure_ascii=False, indent=2)
+            f.writelines(processed_lines)
         print(f"已生成文件: {output_path}")
     except Exception as e:
         print(f"写入文件失败: {output_path}, 错误: {e}")
 
 def main():
+    """
+    默认处理 emojis 目录下所有 .json 文件，结果保存在 emojis/output/ 下，文件名保持一致
+    """
     script_dir = os.path.dirname(os.path.abspath(__file__))
     emojis_dir = script_dir
     output_dir = os.path.join(emojis_dir, "output")
     os.makedirs(output_dir, exist_ok=True)
     for file in os.listdir(emojis_dir):
-        if file.endswith('.txt'):
+        if file.endswith('.json'):
             input_path = os.path.join(emojis_dir, file)
-            out_name = os.path.splitext(file)[0] + ".json"
-            output_path = os.path.join(output_dir, out_name)
-            process_txt_file(input_path, output_path)
+            output_path = os.path.join(output_dir, file)
+            process_file(input_path, output_path)
 
 if __name__ == "__main__":
     main()
