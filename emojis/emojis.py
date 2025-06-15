@@ -1,5 +1,3 @@
-# emojis/emojis.py
-
 import os
 import glob
 import json
@@ -81,47 +79,52 @@ EMOJI_POOL: List[str] = [
     "🏪", "🏫", "🏭", "🚉", "🚊", "🚆", "🚅", "🚂", "🚢", "🛳️",
     "⛴️", "🚁", "✈️", "🛫", "🛬", "🚀", "🛸"
 ]
-
 # 精确匹配单个 Emoji 的正则（Unicode 常用块）
 EMOJI_PATTERN = re.compile(
-    r'['
-    u'\U0001F300-\U0001F5FF'
-    u'\U0001F600-\U0001F64F'
-    u'\U0001F680-\U0001F6FF'
-    u'\U0001F1E0-\U0001F1FF'
-    u'\u2600-\u27BF'
-    r']',
+    r'('
+    u'[\U0001F300-\U0001F5FF]'
+    u'|[\U0001F600-\U0001F64F]'
+    u'|[\U0001F680-\U0001F6FF]'
+    u'|[\U0001F1E0-\U0001F1FF]'
+    u'|[\u2600-\u27BF]'
+    r')',
     flags=re.UNICODE
 )
 
-# 目录设置
-BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
-INPUT_DIR  = BASE_DIR
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR = BASE_DIR
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
 
-def count_name_segment_emojis(obj: Any, key: str = "name") -> int:
+def find_emojis_in_head(text: str) -> List[str]:
     """
-    递归统计所有 dict 中 key="name" 字段里，
-    第一段（第一个 '┃' 之前）内的 Emoji 数量。
+    查找文本第一段（第一个 '┃' 前）中的所有 Emoji。
     """
-    count = 0
+    head = text.split('┃', 1)[0]
+    emojis = EMOJI_PATTERN.findall(head)
+    return emojis
+
+
+def collect_all_emojis(obj: Any, key: str = "name") -> List[str]:
+    """
+    递归收集所有 dict 中 key="name" 第一段的 Emoji，保持顺序。
+    """
+    found = []
     if isinstance(obj, dict):
         for k, v in obj.items():
             if k == key and isinstance(v, str):
-                head = v.split('┃', 1)[0]
-                count += len(EMOJI_PATTERN.findall(head))
+                found.extend(find_emojis_in_head(v))
             else:
-                count += count_name_segment_emojis(v, key)
+                found.extend(collect_all_emojis(v, key))
     elif isinstance(obj, list):
         for item in obj:
-            count += count_name_segment_emojis(item, key)
-    return count
+            found.extend(collect_all_emojis(item, key))
+    return found
 
 
-def replace_name_segment_emojis(obj: Any, replacements: List[str], key: str = "name"):
+def replace_name_head_emojis(obj: Any, replacements: List[str], key: str = "name"):
     """
-    递归替换所有 dict 中 key="name" 第一段的 Emoji。
+    递归精准替换所有 dict 中 key="name" 第一段的 Emoji，保持 Emoji 数量不变，顺序一致。
     """
     if isinstance(obj, dict):
         for k, v in obj.items():
@@ -130,16 +133,16 @@ def replace_name_segment_emojis(obj: Any, replacements: List[str], key: str = "n
                 head = parts[0]
                 tail = ('┃' + parts[1]) if len(parts) == 2 else ''
 
-                def sub(m):
+                def repl(m):
                     return replacements.pop(0)
 
-                new_head = EMOJI_PATTERN.sub(sub, head)
+                new_head = EMOJI_PATTERN.sub(repl, head, count=len(find_emojis_in_head(head)))
                 obj[k] = new_head + tail
             else:
-                replace_name_segment_emojis(v, replacements, key)
+                replace_name_head_emojis(v, replacements, key)
     elif isinstance(obj, list):
         for item in obj:
-            replace_name_segment_emojis(item, replacements, key)
+            replace_name_head_emojis(item, replacements, key)
 
 
 def process_file(input_path: str, output_path: str):
@@ -154,26 +157,30 @@ def process_file(input_path: str, output_path: str):
         print(f"[错误] 无法解析 JSON 文件 {os.path.basename(input_path)}: {e}")
         return
 
-    # 2. 统计 Emoji 数量
-    total = count_name_segment_emojis(data)
+    # 2. 收集所有需要替换的 emoji
+    old_emojis = collect_all_emojis(data)
+    total = len(old_emojis)
     if total == 0:
         print(f"[跳过] `{os.path.basename(input_path)}` 中 “name” 字段第一段无 Emoji。")
         return
 
-    # 3. 抽取新 Emoji
+    # 3. 检查 Emoji 池是否充足
     if total > len(EMOJI_POOL):
         print(f"[错误] 需要替换 {total} 个 Emoji，但池中只有 {len(EMOJI_POOL)} 个，请补充 EMOJI_POOL。")
         return
-    replacements = random.sample(EMOJI_POOL, k=total)
 
-    # 4. 替换
-    replace_name_segment_emojis(data, replacements)
+    # 4. 随机抽取不重复的新 Emoji
+    new_emojis = random.sample(EMOJI_POOL, k=total)
 
-    # 5. 写文件
+    # 5. 替换
+    data_copy = json.loads(json.dumps(data, ensure_ascii=False))  # 避免原地修改
+    replace_name_head_emojis(data_copy, new_emojis.copy())
+
+    # 6. 写文件
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data_copy, f, ensure_ascii=False, indent=2)
 
-    print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，替换 {total} 个 Emoji")
+    print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，已精准替换 {total} 个 Emoji")
 
 
 def main():
@@ -184,7 +191,7 @@ def main():
 
     for path in json_files:
         fname = os.path.basename(path)
-        out   = os.path.join(OUTPUT_DIR, fname)
+        out = os.path.join(OUTPUT_DIR, fname)
         process_file(path, out)
 
     print("🎉 全部处理完成，输出目录：", OUTPUT_DIR)
