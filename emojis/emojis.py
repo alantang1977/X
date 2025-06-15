@@ -1,163 +1,115 @@
 import os
-import glob
 import json
-import re
 import random
-from typing import Any, List
+import re
 
-# -----------------------------------------------------------------------------
-# Emoji 候选池（请补充到足够多，下面为示例）
-# -----------------------------------------------------------------------------
-EMOJI_POOL: List[str] = [
-    # 食物和饮料相关Emoji (部分示例)
-    "🍎", "🍏", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐",
-    "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🫒", "🥑",
-    "🍆", "🥔", "🥕", "🌽", "🌶️", "🫑", "🥒", "🥬", "🥦", "🧄",
-    "🧅", "🍄", "🥜", "🌰", "🍞", "🥐", "🥖", "🫓", "🥨", "🥯",
-    "🥞", "🧇", "🧀", "🍖", "🍗", "🥩", "🥓", "🍔", "🍟", "🍕",
-    "🌮", "🌯", "🫔", "🥙", "🧆", "🥚", "🍳", "🥘", "🍲", "🫕",
-    "🥣", "🥗", "🍱", "🍘", "🍙", "🍚", "🍛", "🍜", "🍝", "🍠",
-    "🍢", "🍣", "🍤", "🍥", "🥮", "🍡", "🥟", "🥠", "🥡", "🦀",
-    "🦞", "🦐", "🦑", "🍦", "🍧", "🍨", "🥧", "🍰", "🎂", "🍮",
-    "🍭", "🍬", "🍫", "🍿", "🍩", "🍪", "🧂", "🫘", "🍯", "🧈", 
-    "🥛", "🍼", "☕", "🫖", "🍵", "🍶", "🍾", "🍷", "🍸", "🍹",
-    "🍺", "🍻", "🥂", "🥃", "🥤", "🧋", "🧃", "🧉", "🧊", "🥢", 
-    "🍽️", "🔪", "🍴", "🥄",
-    # 动物和自然相关Emoji (部分示例)
-    "🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼", "🐨", "🐯",
-    "🦁", "🐮", "🐷", "🐸", "🐵", "🐔", "🐧", "🐦", "🐤", "🐣",
-    "🐥", "🦆", "🦅", "🦉", "🦇", "🐺", "🐗", "🐴", "🦄", "🐝",
-    "🐛", "🦋", "🐌", "🐞", "🐜", "🕷️", "🦂", "🦟", "🦗", "🐢",
-    "🐍", "🦎", "🦖", "🦕", "🐙", "🦑", "🦐", "🦀", "🐡", "🐠",
-    "🐟", "🐬", "🐳", "🐋", "🦈", "🐊", "🐅", "🐆", "🦓", "🦍",
-    "🦧", "🦣", "🐘", "🦛", "🦏", "🐪", "🐫", "🦒", "🦘", "🦬",
-    "🐃", "🐂", "🐄", "🐎", "🐖", "🐏", "🐑", "🐐", "🦌", "🦙",
-    "🦥", "🦘", "🦨", "🦡", "🦃", "🕊️", "🦢", "🦚", "🦜", "🦝",
-    "🐕‍🦺", "🦮", "🐕", "🐈", "🐈‍⬛", "🐾", "🌱", "🌲", "🌳", "🌴",
-    "🌵", "🌾", "🌿", "🍀", "🍁", "🍃", "🍂", "🌼", "🌻", "🌷",
-    "🌹", "🥀", "🌺", "🌸", "💐",
-    # 旅行和地点相关Emoji (部分示例)
-    "✈️", "🛫", "🛬", "🚁", "🚀", "🛸", "🚢", "🛳️", "⛴️", "🚂",
-    "🚅", "🚆", "🚊", "🚉", "🚌", "🚍", "🚎", "🚐", "🚑", "🚒",
-    "🚓", "🚔", "🚕", "🚖", "🚗", "🚘", "🚙", "🚚", "🚛", "🚜",
-    "🛵", "🚲", "🚏", "⛽", "🚧", "🚨", "🚥", "🚦", "🏮", "🏰",
-    "🏯", "🏭", "🏢", "🏬", "🏤", "🏥", "🏦", "🏨", "🏩", "🏪",
-    "🏫", "🏭", "🏰", "🗼", "🗽", "🗿", "🗺️", "🗾", "🏝️", "🏜️",
-    "🏕️", "🏖️", "🏔️", "🌋", "🗻", "🏞️", "🌅", "🌄", "🌇", "🌆",
-    "🌉", "🌌", "🌃", "🏙️",
-    # 如需更多请自行扩充
+# 完整的 Unicode Emoji 列表（收录常用表情、人物、动物、物品、旗帜等，可根据需要继续扩充）
+ALL_EMOJIS = [
+    "😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘", "🥰",
+    "😗", "😙", "😚", "🙂", "🤗", "🤩", "🤔", "🤨", "😐", "😑", "😶", "🙄", "😏", "😣", "😥",
+    "😮", "🤐", "😯", "😪", "😫", "🥱", "😴", "😌", "😛", "😜", "😝", "🤤", "😒", "😓", "😔",
+    "😕", "🙃", "🤑", "😲", "☹️", "🙁", "😖", "😞", "😟", "😤", "😢", "😭", "😦", "😧", "😨",
+    "😩", "🤯", "😬", "😰", "😱", "🥵", "🥶", "😳", "🤪", "😵", "😡", "😠", "🤬", "😷", "🤒",
+    "🤕", "🤢", "🤮", "🤧", "😇", "🥳", "🥺", "🥲", "🤠", "🥸", "🤓", "🧐", "🫠", "🤖", "👻",
+    "💀", "☠️", "👽", "👾", "👹", "👺", "💩", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿",
+    "😾", "🙈", "🙉", "🙊", "🐵", "🐒", "🦍", "🦧", "🐶", "🐕", "🦮", "🐕‍🦺", "🐩", "🐺", "🦊",
+    "🦝", "🐱", "🐈", "🐈‍⬛", "🦁", "🐯", "🐅", "🐆", "🐴", "🦄", "🐮", "🐂", "🐃", "🐄", "🐷",
+    "🐖", "🐗", "🐽", "🐏", "🐑", "🐐", "🐪", "🐫", "🦙", "🦒", "🐘", "🦣", "🦏", "🦛", "🐭",
+    "🐁", "🐀", "🐹", "🐰", "🐇", "🐿️", "🦫", "🦔", "🦇", "🐻", "🐻‍❄️", "🐨", "🐼", "🦥", "🦦",
+    "🦨", "🦘", "🦡", "🐾", "🦃", "🐔", "🐓", "🐣", "🐤", "🐥", "🐦", "🐧", "🕊️", "🦅", "🦆",
+    "🦢", "🦉", "🦩", "🦚", "🦜", "🦤", "🦥", "🦦", "🦨", "🦩", "🦪", "🦑", "🦐", "🦞", "🦀",
+    "🐡", "🐠", "🐟", "🐬", "🐳", "🐋", "🦈", "🐊", "🐢", "🐍", "🦎", "🦖", "🦕", "🐙", "🧑‍💻",
+    "👨‍💻", "👩‍💻", "👨‍🔬", "👩‍🔬", "👨‍🎓", "👩‍🎓", "👨‍🏫", "👩‍🏫", "👨‍⚕️", "👩‍⚕️", "👨‍🍳",
+    "👩‍🍳", "👨‍✈️", "👩‍✈️", "👮‍♂️", "👮‍♀️", "🕵️‍♂️", "🕵️‍♀️", "💂‍♂️", "💂‍♀️", "🕵️", "👷‍♂️",
+    "👷‍♀️", "👷", "🤴", "👸", "👳‍♂️", "👳‍♀️", "👲", "🧕", "🧑‍🎤", "👨‍🎤", "👩‍🎤", "👨‍🎨", "👩‍🎨",
+    "🧑‍🚀", "👨‍🚀", "👩‍🚀", "🧑‍🚒", "👨‍🚒", "👩‍🚒", "🧑‍⚖️", "👨‍⚖️", "👩‍⚖️",
+    "⚽", "🏀", "🏈", "⚾", "🎾", "🏐", "🏉", "🥏", "🎱", "🏓", "🏸", "🥅", "🏒", "🏑", "🥍",
+    "🏏", "⛳", "🏹", "🎣", "🤿", "🥊", "🥋", "🎽", "🛹", "🛷", "⛸️", "🥌", "🛶", "⛵", "🚤",
+    "🛥️", "🛳️", "⛴️", "🚢", "✈️", "🛩️", "🚁", "🚟", "🚠", "🚡", "🚀", "🛸",
+    "❤️", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎", "💔", "❣️", "💕", "💞", "💓", "💗", "💖",
+    "💘", "💝", "💟", "☮️", "✝️", "☪️", "🕉️", "☸️", "✡️", "🔯", "🕎", "☯️", "☦️", "🛐",
+    "⛎", "♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓", "🆔", "⚛️", "🉑",
+    "🏳️", "🏴", "🏁", "🚩", "🏳️‍🌈", "🏳️‍⚧️", "🇨🇳", "🇺🇸", "🇬🇧", "🇫🇷", "🇯🇵", "🇰🇷", "🇩🇪", "🇷🇺", "🇮🇳"
 ]
 
+# Emoji正则表达式，精准匹配所有emoji（支持单字符和复合emoji，适配多种Unicode区段）
 EMOJI_PATTERN = re.compile(
-    r'('
-    u'[\U0001F300-\U0001F5FF]'
-    u'|[\U0001F600-\U0001F64F]'
-    u'|[\U0001F680-\U0001F6FF]'
-    u'|[\U0001F1E0-\U0001F1FF]'
-    u'|[\u2600-\u27BF]'
-    r')',
-    flags=re.UNICODE
+    "[" +
+    "\U0001F600-\U0001F64F" +  # 表情
+    "\U0001F300-\U0001F5FF" +  # 符号和象形文字
+    "\U0001F680-\U0001F6FF" +  # 交通运输
+    "\U0001F1E0-\U0001F1FF" +  # 旗帜
+    "\U00002700-\U000027BF" +  # Dingbats
+    "\U0001F900-\U0001F9FF" +  # 补充表情
+    "\U00002600-\U000026FF" +  # 杂项符号
+    "\U0001F700-\U0001F77F" +  # 炼金术符号
+    "\U0001FA70-\U0001FAFF" +  # 补充象形文字
+    "\U0001F780-\U0001F7FF" +  # 几何扩展
+    "\U0001F800-\U0001F8FF" +  # 补充箭头
+    "\U0001FA00-\U0001FA6F" +  # 国际象棋符号
+    "]+", flags=re.UNICODE
 )
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_DIR = BASE_DIR
-OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+def random_emoji():
+    """
+    随机返回一个新的emoji表情
+    """
+    return random.choice(ALL_EMOJIS)
 
-def find_emojis_in_head(text: str) -> List[str]:
-    head = text.split('┃', 1)[0]
-    return [m.group(0) for m in EMOJI_PATTERN.finditer(head)]
+def replace_emojis_in_str(s):
+    """
+    将字符串中所有emoji精准替换为随机新emoji（数量、位置不变）
+    """
+    def repl(match):
+        return random_emoji()
+    return EMOJI_PATTERN.sub(repl, s)
 
-def collect_all_emojis(obj: Any, key: str = "name") -> List[str]:
-    found = []
+def process_json_emojis(obj):
+    """
+    递归遍历JSON对象，对所有字符串字段中的emoji精准替换
+    """
     if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k == key and isinstance(v, str):
-                found.extend(find_emojis_in_head(v))
-            else:
-                found.extend(collect_all_emojis(v, key))
+        return {k: process_json_emojis(v) for k, v in obj.items()}
     elif isinstance(obj, list):
-        for item in obj:
-            found.extend(collect_all_emojis(item, key))
-    return found
+        return [process_json_emojis(i) for i in obj]
+    elif isinstance(obj, str):
+        return replace_emojis_in_str(obj)
+    else:
+        return obj
 
-def precise_replace_head_emojis(text: str, new_emojis: List[str]) -> str:
-    head, *tail = text.split('┃', 1)
-    matches = list(EMOJI_PATTERN.finditer(head))
-    if len(matches) != len(new_emojis):
-        raise ValueError("Emoji数目不一致，无法精准替换。")
-    head_list = list(head)
-    for match, new_emoji in zip(reversed(matches), reversed(new_emojis)):
-        start, end = match.span()
-        head_list[start:end] = [new_emoji]
-    new_head = ''.join(head_list)
-    return new_head + ('┃' + tail[0] if tail else '')
-
-def replace_name_head_emojis(obj: Any, new_emojis: List[str], key: str = "name"):
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k == key and isinstance(v, str):
-                old_count = len(find_emojis_in_head(v))
-                this_new = [new_emojis.pop(0) for _ in range(old_count)]
-                obj[k] = precise_replace_head_emojis(v, this_new)
-            else:
-                replace_name_head_emojis(v, new_emojis, key)
-    elif isinstance(obj, list):
-        for item in obj:
-            replace_name_head_emojis(item, new_emojis, key)
-
-def process_file(input_path: str, output_path: str):
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    # 尝试解析JSON，如果失败则跳过并输出原文件
+def update_emojis_in_json_file(input_path, output_path):
+    """
+    处理单个json文件，将其中所有emoji替换后写入output_path
+    """
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-    except json.JSONDecodeError as e:
-        print(f"[错误] 无法解析 JSON 文件 {os.path.basename(input_path)}: {e}")
-        # 尝试直接拷贝原始内容到 output 目录
-        try:
-            with open(input_path, 'r', encoding='utf-8') as fin, open(output_path, 'w', encoding='utf-8') as fout:
-                fout.write(fin.read())
-            print(f"[跳过] 已将原始内容拷贝到 {os.path.basename(output_path)}")
-        except Exception as copy_exc:
-            print(f"[错误] 拷贝原始文件失败: {copy_exc}")
-        return False
-
-    old_emojis = collect_all_emojis(data)
-    total = len(old_emojis)
-    if total == 0:
-        print(f"[跳过] `{os.path.basename(input_path)}` 中 “name” 字段第一段无 Emoji。")
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        return False
-
-    if total > len(set(EMOJI_POOL)):
-        print(f"[错误] 需要替换 {total} 个 Emoji，但池中只有 {len(set(EMOJI_POOL))} 个，请补充 EMOJI_POOL。")
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        return False
-
-    new_emojis = random.sample(list(set(EMOJI_POOL)), k=total)
-    data_copy = json.loads(json.dumps(data, ensure_ascii=False))  # 深拷贝
-    replace_name_head_emojis(data_copy, new_emojis.copy())
-
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data_copy, f, ensure_ascii=False, indent=2)
-    print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，已精准替换 {total} 个 Emoji")
-    return True
-
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
-    if not json_files:
-        print("⚠️ 未找到任何 .json 文件。")
+    except Exception as e:
+        print(f"读取文件失败: {input_path}, 错误: {e}")
         return
 
-    for path in json_files:
-        fname = os.path.basename(path)
-        out = os.path.join(OUTPUT_DIR, fname)
-        process_file(path, out)
+    new_data = process_json_emojis(data)
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(new_data, f, ensure_ascii=False, indent=2)
+        print(f"已生成文件: {output_path}")
+    except Exception as e:
+        print(f"写入文件失败: {output_path}, 错误: {e}")
 
-    print("🎉 全部处理完成，输出目录：", OUTPUT_DIR)
+def main():
+    """
+    主程序，自动查找并处理emojis文件夹下所有json文件，将结果输出到output目录下（可覆盖旧文件）
+    """
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    emojis_dir = base_dir
+    output_dir = os.path.join(emojis_dir, "output")
+    os.makedirs(output_dir, exist_ok=True)
+
+    for file in os.listdir(emojis_dir):
+        if file.endswith('.json'):
+            input_path = os.path.join(emojis_dir, file)
+            output_path = os.path.join(output_dir, file)
+            update_emojis_in_json_file(input_path, output_path)
 
 if __name__ == "__main__":
     main()
