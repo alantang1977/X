@@ -1,3 +1,4 @@
+# emojis/emojis.py
 import re
 import random
 import os
@@ -77,6 +78,13 @@ emoji_list = [
 ]
 
 def replace_emojis_in_file(input_file_path, output_file_path):
+    """
+    替换文件中的Emoji表情符号为新的、不同的Emoji
+    
+    参数:
+    input_file_path (str): 输入文件路径
+    output_file_path (str): 输出文件路径
+    """
     try:
         # 确保输出目录存在
         output_dir = os.path.dirname(output_file_path)
@@ -138,9 +146,12 @@ def replace_emojis_in_file(input_file_path, output_file_path):
         print(f"发生错误: {e}")
 
 def main():
-    # 获取emojis文件夹下所有的.json文件
+    """
+    主函数：处理emojis文件夹下的所有JSON文件
+    """
+    # 获取emojis文件夹路径
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_dir = os.path.join(script_dir)
+    input_dir = script_dir
     output_dir = os.path.join(script_dir, "output")
     
     # 查找所有.json文件
