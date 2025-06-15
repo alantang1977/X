@@ -1,57 +1,33 @@
 name: 自动替换Emoji
 
 on:
-  workflow_dispatch:   # 允许手动触发
-  push:
-    paths:
-      - 'emojis/*.json'
-      - 'emojis/emojis.py'
+  schedule:
+    - cron: '0 0 * * *' # 每天零点自动运行
+  workflow_dispatch: # 支持手动触发
 
 jobs:
-  emoji-replace:
+  update-emojis:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出代码
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: 设置Python环境
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
-      - name: 安装依赖
+      - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
 
-      - name: 运行Emoji自动替换
-        run: |
-          cd emojis
-          python emojis.py
+      - name: Run Emoji Updater
+        run: python auto_update_emojis.py
 
-      - name: 查找所有变更的output文件
-        id: changed
-        run: |
-          cd emojis/output
-          if [ -f .changed_files.txt ]; then
-            cat .changed_files.txt
-            echo "files<<EOF" >> $GITHUB_OUTPUT
-            cat .changed_files.txt >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          else
-            echo "files=" >> $GITHUB_OUTPUT
-          fi
-
-      - name: 提交更新（如有变更）
-        if: steps.changed.outputs.files != ''
+      - name: Commit and push changes
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          while read fn; do
-            git add "$fn"
-          done < emojis/output/.changed_files.txt
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "自动更新: 替换emojis"
-            git push
-          fi
+          git add '*.json'
+          git commit -m 'chore: auto update emojis in json files' || echo "No changes to commit"
+          git push
