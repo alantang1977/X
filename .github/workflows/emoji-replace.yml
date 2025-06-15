@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       file_path:
-        description: '要处理的文件路径'
+        description: '要处理的文件路径（相对于emojis文件夹）'
         required: true
-        default: 'emojis/aTV.json'
+        default: 'aTV.json'
       commit_message:
         description: '提交消息'
         required: true
@@ -28,13 +28,9 @@ jobs:
         with:
           python-version: '3.9'
       
-      - name: 安装依赖
-        run: |
-          python -m pip install --upgrade pip
-      
       - name: 运行Emoji替换脚本
         run: |
-          python emojis/emojis.py "${{ github.event.inputs.file_path }}"
+          python emojis/emojis.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -46,10 +42,10 @@ jobs:
           # 检查是否有文件更改
           if [[ -n $(git status --porcelain) ]]; then
             echo "检测到文件更改，准备提交..."
-            git add ${{ github.event.inputs.file_path }}
+            git add emojis/output/*.json
             git commit -m "${{ github.event.inputs.commit_message }}"
             git push
             echo "更改已提交并推送"
           else
             echo "没有检测到文件更改"
-          fi    
+          fi
