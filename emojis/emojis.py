@@ -94,15 +94,8 @@ def replace_emojis_in_file(input_file_path, output_file_path):
         with open(input_file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         
-        # 定义Emoji的正则表达式模式
-        emoji_pattern = re.compile("["
-                                   u"\U0001F600-\U0001F64F"  # emoticons
-                                   u"\U0001F300-\U0001F5FF"  # symbols & pictographs
-                                   u"\U0001F680-\U0001F6FF"  # transport & map symbols
-                                   u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
-                                   u"\U00002702-\U000027B0"
-                                   u"\U000024C2-\U0001F251"
-                                   "]+", flags=re.UNICODE)
+        # 定义Emoji的正则表达式模式，使用更精确的Emoji正则表达式
+        emoji_pattern = re.compile(r'[\U0001F300-\U0001F5FF\U0001F600-\U0001F64F\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF\U00002702-\U000027B0\U000024C2-\U0001F251]')
         
         # 用于跟踪已替换的Emoji，确保唯一性
         used_emojis = set()
@@ -192,4 +185,4 @@ def main():
     print("\n所有文件处理完成")
 
 if __name__ == "__main__":
-    main()
+    main()    
