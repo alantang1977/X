@@ -6,7 +6,7 @@ import random
 from typing import Any, List
 
 # -----------------------------------------------------------------------------
-# Emoji 候选池（请自行补充至足够多）
+# Emoji 候选池（请补充到足够多，下面为示例）
 # -----------------------------------------------------------------------------
 EMOJI_POOL: List[str] = [
     # 样例：请根据需要完整填写
@@ -140,10 +140,7 @@ def replace_name_head_emojis(obj: Any, new_emojis: List[str], key: str = "name")
             replace_name_head_emojis(item, new_emojis, key)
 
 def process_file(input_path: str, output_path: str):
-    # 确保输出目录存在
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-
-    # 1. 读取 JSON
     try:
         with open(input_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -151,7 +148,6 @@ def process_file(input_path: str, output_path: str):
         print(f"[错误] 无法解析 JSON 文件 {os.path.basename(input_path)}: {e}")
         return False
 
-    # 2. 收集所有需要替换的 emoji
     old_emojis = collect_all_emojis(data)
     total = len(old_emojis)
     if total == 0:
@@ -161,31 +157,26 @@ def process_file(input_path: str, output_path: str):
             json.dump(data, f, ensure_ascii=False, indent=2)
         return False
 
-    # 3. 检查 Emoji 池是否充足
     if total > len(set(EMOJI_POOL)):
         print(f"[错误] 需要替换 {total} 个 Emoji，但池中只有 {len(set(EMOJI_POOL))} 个，请补充 EMOJI_POOL。")
         return False
 
-    # 4. 随机抽取不重复的新 Emoji
     new_emojis = random.sample(list(set(EMOJI_POOL)), k=total)
-
-    # 5. 替换
     data_copy = json.loads(json.dumps(data, ensure_ascii=False))  # 深拷贝
     replace_name_head_emojis(data_copy, new_emojis.copy())
 
-    # 6. 写文件
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(data_copy, f, ensure_ascii=False, indent=2)
     print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，已精准替换 {total} 个 Emoji")
     return True
 
 def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
     if not json_files:
         print("⚠️ 未找到任何 .json 文件。")
         return
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
     for path in json_files:
         fname = os.path.basename(path)
         out = os.path.join(OUTPUT_DIR, fname)
