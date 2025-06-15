@@ -79,7 +79,7 @@ emoji_list = [
 
 def replace_emojis_in_file(input_file_path, output_file_path):
     """
-    替换文件中的Emoji表情符号为新的、不同的Emoji
+    替换JSON文件中"name"字段值里的Emoji表情符号为新的、不同的Emoji
     
     参数:
     input_file_path (str): 输入文件路径
@@ -90,10 +90,10 @@ def replace_emojis_in_file(input_file_path, output_file_path):
         output_dir = os.path.dirname(output_file_path)
         os.makedirs(output_dir, exist_ok=True)
         
-        # 读取文件内容
+        # 读取JSON文件内容
         with open(input_file_path, 'r', encoding='utf-8') as file:
             content = file.read()
-
+        
         # 定义Emoji的正则表达式模式
         emoji_pattern = re.compile("["
                                    u"\U0001F600-\U0001F64F"  # emoticons
@@ -103,41 +103,46 @@ def replace_emojis_in_file(input_file_path, output_file_path):
                                    u"\U00002702-\U000027B0"
                                    u"\U000024C2-\U0001F251"
                                    "]+", flags=re.UNICODE)
-
-        # 找出所有Emoji
-        emojis = emoji_pattern.findall(content)
-        total_emojis = len(emojis)
-        print(f"在文件中找到 {total_emojis} 个Emoji")
-
-        if total_emojis == 0:
-            print("没有需要替换的Emoji，直接复制文件")
-            with open(output_file_path, 'w', encoding='utf-8') as out_file:
-                out_file.write(content)
-            return
-
-        # 为每个Emoji生成一个新的不同的Emoji
-        new_emojis = []
+        
+        # 找出所有"name":"..."模式的字符串
+        name_pattern = re.compile(r'"name":"([^"]*)"')
+        name_matches = name_pattern.finditer(content)
+        
+        # 用于跟踪已替换的Emoji，确保唯一性
         used_emojis = set()
-        for i, _ in enumerate(emojis):
-            available_emojis = [emoji for emoji in emoji_list if emoji not in used_emojis]
-            if not available_emojis:
-                print(f"警告: Emoji列表中的Emoji不够用了，已使用 {len(used_emojis)} 个不同Emoji，将重新使用池")
-                available_emojis = emoji_list
-            new_emoji = random.choice(available_emojis)
-            new_emojis.append(new_emoji)
-            used_emojis.add(new_emoji)
+        total_replacements = 0
+        
+        # 替换每个匹配的"name"字段中的Emoji
+        new_content = content
+        for match in reversed(list(name_matches)):  # 从后往前替换，避免索引问题
+            name_value = match.group(1)
+            emojis_in_name = emoji_pattern.findall(name_value)
             
-            # 显示进度
-            if (i + 1) % 100 == 0 or (i + 1) == total_emojis:
-                print(f"已处理 {i + 1}/{total_emojis} 个Emoji")
-
-        # 替换文件中的Emoji
-        for old_emoji, new_emoji in zip(emojis, new_emojis):
-            content = content.replace(old_emoji, new_emoji, 1)
-
+            if not emojis_in_name:
+                continue
+                
+            # 为每个Emoji生成一个新的不同的Emoji
+            new_name_value = name_value
+            for old_emoji in reversed(emojis_in_name):  # 从后往前替换，避免索引问题
+                available_emojis = [emoji for emoji in emoji_list if emoji not in used_emojis]
+                if not available_emojis:
+                    print(f"警告: Emoji列表中的Emoji不够用了，已使用 {len(used_emojis)} 个不同Emoji，将重新使用池")
+                    available_emojis = emoji_list
+                new_emoji = random.choice(available_emojis)
+                new_name_value = new_name_value[::-1].replace(old_emoji[::-1], new_emoji[::-1], 1)[::-1]
+                used_emojis.add(new_emoji)
+                total_replacements += 1
+            
+            # 更新整个匹配的字符串
+            original_text = match.group(0)
+            new_text = f'"name":"{new_name_value}"'
+            new_content = new_content[:match.start()] + new_text + new_content[match.end():]
+        
+        print(f"在文件中找到并替换了 {total_replacements} 个Emoji")
+        
         # 将修改后的内容写回文件
         with open(output_file_path, 'w', encoding='utf-8') as file:
-            file.write(content)
+            file.write(new_content)
 
         print(f"Emoji替换完成，输出文件: {output_file_path}")
     except FileNotFoundError:
@@ -175,4 +180,4 @@ def main():
     print("\n所有文件处理完成")
 
 if __name__ == "__main__":
-    main()
+    main()    
