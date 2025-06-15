@@ -28,11 +28,27 @@ jobs:
           cd emojis
           python emojis.py
 
+      - name: 查找所有变更的output文件
+        id: changed
+        run: |
+          cd emojis/output
+          if [ -f .changed_files.txt ]; then
+            cat .changed_files.txt
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            cat .changed_files.txt >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "files=" >> $GITHUB_OUTPUT
+          fi
+
       - name: 提交更新（如有变更）
+        if: steps.changed.outputs.files != ''
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git add output/*.json
+          while read fn; do
+            git add "$fn"
+          done < emojis/output/.changed_files.txt
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
