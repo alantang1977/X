@@ -1,18 +1,16 @@
-# emojis/replace_emojis.py
+# emojis/emojis.py
 
 import os
 import glob
 import json
 import re
 import random
-from typing import Any
+from typing import Any, List
 
 # -----------------------------------------------------------------------------
-# 配置区，可根据需要调整
+# Emoji 候选池：请在此处填入你的完整列表，共数百个
 # -----------------------------------------------------------------------------
-
-# 待替换的 Emoji 候选池（示例中只列出部分，实际请填入你的完整列表）
-EMOJI_POOL = [
+EMOJI_POOL: List[str] = [
     # 食物和饮料相关Emoji (156个)
     "🍎", "🍏", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐",
     "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🫒", "🥑",
@@ -84,7 +82,7 @@ EMOJI_POOL = [
     "⛴️", "🚁", "✈️", "🛫", "🛬", "🚀", "🛸"
 ]
 
-# 精确匹配单个 Emoji 的正则（涵盖常用 Unicode Block）
+# 精确匹配单个 Emoji 的正则（Unicode 常用块）
 EMOJI_PATTERN = re.compile(
     r'['
     u'\U0001F300-\U0001F5FF'
@@ -96,112 +94,99 @@ EMOJI_PATTERN = re.compile(
     flags=re.UNICODE
 )
 
-# 输入、输出目录
-INPUT_DIR  = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(INPUT_DIR, "output")
+# 目录设置
+BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR  = BASE_DIR
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
 
-# -----------------------------------------------------------------------------
-# 工具函数
-# -----------------------------------------------------------------------------
-
-def collect_all_strings(obj: Any, collector: list):
+def count_name_segment_emojis(obj: Any, key: str = "name") -> int:
     """
-    递归遍历 JSON 结构，将所有字符串值加入 collector 列表。
+    递归统计所有 dict 中 key="name" 字段里，
+    第一段（第一个 '┃' 之前）内的 Emoji 数量。
     """
+    cnt = 0
     if isinstance(obj, dict):
-        for v in obj.values():
-            collect_all_strings(v, collector)
+        for k, v in obj.items():
+            if k == key and isinstance(v, str):
+                segment = v.split('┃', 1)[0]
+                cnt += len(EMOJI_PATTERN.findall(segment))
+            else:
+                cnt += count_name_segment_emojis(v, key)
     elif isinstance(obj, list):
         for item in obj:
-            collect_all_strings(item, collector)
-    elif isinstance(obj, str):
-        collector.append(obj)
+            cnt += count_name_segment_emojis(item, key)
+    return cnt
 
 
-def replace_in_string(s: str, replacements: dict) -> str:
+def replace_name_segment_emojis(obj: Any, replacements: List[str], key: str = "name"):
     """
-    在单个字符串中，使用预先准备好的 replacements 映射表替换所有 Emoji。
-    """
-    def _sub(m):
-        old = m.group(0)
-        # 每次匹配取出队列中下一个 new emoji
-        return replacements.pop(0)
-    return EMOJI_PATTERN.sub(_sub, s)
-
-
-def traverse_and_replace(obj: Any, replacements: list) -> Any:
-    """
-    递归遍历 JSON，遇到字符串就调用 replace_in_string，替换队列中的 Emoji。
+    递归遍历 JSON，遇到 key="name" 时，只替换第一段中的 Emoji，
+    从 replacements 列表依次 pop 出新 Emoji。
     """
     if isinstance(obj, dict):
-        return {k: traverse_and_replace(v, replacements) for k, v in obj.items()}
+        for k, v in obj.items():
+            if k == key and isinstance(v, str):
+                parts = v.split('┃', 1)
+                head = parts[0]
+                tail = ('┃' + parts[1]) if len(parts) == 2 else ''
+                
+                def _sub(m):
+                    return replacements.pop(0)
+                
+                new_head = EMOJI_PATTERN.sub(_sub, head)
+                obj[k] = new_head + tail
+            else:
+                replace_name_segment_emojis(v, replacements, key)
     elif isinstance(obj, list):
-        return [traverse_and_replace(item, replacements) for item in obj]
-    elif isinstance(obj, str):
-        return replace_in_string(obj, replacements)
-    else:
-        return obj
+        for item in obj:
+            replace_name_segment_emojis(item, replacements, key)
 
-
-# -----------------------------------------------------------------------------
-# 主处理逻辑
-# -----------------------------------------------------------------------------
 
 def process_file(input_path: str, output_path: str):
-    # 1. 确保输出目录存在
+    # 确保输出目录存在
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    # 2. 读取并解析 JSON
+    # 1. 读取 JSON
     with open(input_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # 3. 收集所有字符串，统计要替换的 Emoji 总数
-    all_strings = []
-    collect_all_strings(data, all_strings)
-
-    emoji_count = 0
-    for s in all_strings:
-        emoji_count += len(EMOJI_PATTERN.findall(s))
-
-    if emoji_count == 0:
-        print(f"[跳过] 文件 {os.path.basename(input_path)} 中无 Emoji。")
+    # 2. 统计所有 "name" 字段第一段里的 Emoji 数量
+    total = count_name_segment_emojis(data)
+    if total == 0:
+        print(f"[跳过] `{os.path.basename(input_path)}` 中 “name” 字段第一段无 Emoji。")
         return
 
-    # 4. 从候选池中随机选取 emoji_count 个不重复的 Emoji
-    if emoji_count > len(EMOJI_POOL):
-        raise ValueError(
-            f"需要替换 {emoji_count} 个 Emoji，但候选池中只有 {len(EMOJI_POOL)} 个，请扩充候选池。"
+    # 3. 抽取同等数量的互不重复新 Emoji
+    if total > len(EMOJI_POOL):
+        raise RuntimeError(
+            f"需要替换 {total} 个 Emoji，但池中只有 {len(EMOJI_POOL)} 个，请扩充 EMOJI_POOL。"
         )
+    replacements = random.sample(EMOJI_POOL, k=total)
 
-    replacements = random.sample(EMOJI_POOL, k=emoji_count)
-    # 转为可 pop 的队列
-    replacements = list(replacements)
+    # 4. 执行替换
+    replace_name_segment_emojis(data, replacements)
 
-    # 5. 递归替换
-    new_data = traverse_and_replace(data, replacements)
-
-    # 6. 写回 JSON
+    # 5. 写出结果
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(new_data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"[完成] {os.path.basename(input_path)} → {os.path.basename(output_path)} 替换了 {emoji_count} 个 Emoji")
+    print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，替换 {total} 个 Emoji")
 
 
 def main():
-    # 查找所有 .json 文件
+    # 批量处理所有 .json 文件
     json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
     if not json_files:
-        print("在目录中未找到任何 .json 文件")
+        print("⚠️ 未找到任何 .json 文件。")
         return
 
-    # 处理每个文件
     for path in json_files:
-        filename = os.path.basename(path)
-        out_path = os.path.join(OUTPUT_DIR, filename)
+        fname    = os.path.basename(path)
+        out_path = os.path.join(OUTPUT_DIR, fname)
         process_file(path, out_path)
 
-    print("所有文件处理完成。")
+    print("🎉 全部处理完成，输出目录：", OUTPUT_DIR)
 
 
 if __name__ == "__main__":
