@@ -1,0 +1,55 @@
+name: 替换文件中的Emoji
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_path:
+        description: '要处理的文件路径'
+        required: true
+        default: 'emojis/aTV.json'
+      commit_message:
+        description: '提交消息'
+        required: true
+        default: '自动替换文件中的Emoji'
+
+jobs:
+  replace-emojis:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.ref }}
+      
+      - name: 设置Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+      
+      - name: 运行Emoji替换脚本
+        run: |
+          python emojis/emojis.py "${{ github.event.inputs.file_path }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 提交更改
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # 检查是否有文件更改
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "检测到文件更改，准备提交..."
+            git add ${{ github.event.inputs.file_path }}
+            git commit -m "${{ github.event.inputs.commit_message }}"
+            git push
+            echo "更改已提交并推送"
+          else
+            echo "没有检测到文件更改"
+          fi    
