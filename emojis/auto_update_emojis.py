@@ -3,9 +3,8 @@ import json
 import random
 import re
 
-# 安卓系统主流支持的 Emoji 列表（可继续扩充），建议用最新版安卓表情字符集
+# 安卓主流支持 emoji 列表（可自行添加扩展）
 ANDROID_SUPPORTED_EMOJIS = [
-    # 仅列举部分，需可自行扩展
     "😀","😁","😂","🤣","😃","😄","😅","😆","😉","😊","😋","😎","😍","😘","🥰","😗","😙","😚",
     "🙂","🤗","🤩","🤔","🤨","😐","😑","😶","🙄","😏","😣","😥","😮","🤐","😯","😪","😫",
     "🥱","😴","😌","😛","😜","😝","🤤","😒","😓","😔","😕","🙃","🤑","😲","☹️","🙁","😖",
@@ -21,14 +20,14 @@ ANDROID_SUPPORTED_EMOJIS = [
     "🐀","🐿️","🦔"
 ]
 
-# 构造正则：精确匹配列表内所有emoji
+# 精确匹配安卓支持 emoji
 ANDROID_EMOJI_PATTERN = re.compile(
     r'({})'.format('|'.join(re.escape(emoji) for emoji in ANDROID_SUPPORTED_EMOJIS))
 )
 
 def replace_android_emojis_in_line(line, used_emojis):
     """
-    替换行内所有安卓支持的 emoji，其他内容完全不变，每个新 emoji 全局唯一，除非用尽
+    替换行内所有安卓支持的 emoji（全局唯一，除非用尽），其它全部不变
     """
     def emoji_replacer(match):
         available = list(set(ANDROID_SUPPORTED_EMOJIS) - used_emojis)
@@ -49,10 +48,10 @@ def process_txt_file(input_path, output_path):
     used_emojis = set()
     processed_lines = []
     for line in lines:
-        # 只替换emoji，保持其余内容100%不变
-        replaced_line = replace_android_emojis_in_line(line.rstrip('\n'), used_emojis)
+        # 保持每行换行符，内容除了 emoji 替换外全部保留
+        replaced_line = replace_android_emojis_in_line(line, used_emojis)
         processed_lines.append(replaced_line)
-    # 写为json数组，每行为一项
+    # 写为json数组，每项为一行的原始内容（含换行符）
     try:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(processed_lines, f, ensure_ascii=False, indent=2)
