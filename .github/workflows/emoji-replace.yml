@@ -1,12 +1,8 @@
-name: 替换文件中的Emoji
+name: 自动替换文件中的Emoji,并每个Emoji都不一样
 
 on:
   workflow_dispatch:
     inputs:
-      file_path:
-        description: '要处理的文件路径（相对于emojis文件夹）'
-        required: true
-        default: 'aTV.json'
       commit_message:
         description: '提交消息'
         required: true
