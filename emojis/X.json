@@ -3,7 +3,6 @@
 "wallpaper":"http://王二小放牛娃牛逼.999888987.xyz","logo":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/yellow.gif",
 
 "sites":[
-##常用系列
 {"key":"玩偶","name":"🤹‍♂️┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a"},
 //{"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
@@ -30,8 +29,6 @@
 {"key":"cspJ","name":"🌎┃饺子┃外剧","type":3,"api":"csp_Jiaozi","playerType":2,"jar":"./jar/PandaQ250604.jpg"},
 {"key":"Wwys","name":"🌾️┃农民┃影视","type":3,"api":"csp_Wwys","ext":"https://www.wwgz.cn","jar":"./jar/PandaQ250604.jpg"},
 
-	
-##PY源系列
 {"key": "火车","name": "🚂┃火车太顺┃TV","type": 3,"api": "./py/火车太顺APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "热播","name": "📻┃热播影视┃TV","type": 3,"api": "./py/热播APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},		
 {"key": "海马","name": "🏇┃海马影视┃TV","type": 3,"api": "./py/海马影视APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
@@ -66,8 +63,7 @@
 //{"key":"Youtube","name":"🦄️┃Youtube┃🦄️","type":3,"api": "csp_Youtube","searchable": 1,"quickSearch": 0,"changeable": 0,"jar": "./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a","ext":{"json":"./lib/youtube.json","type":"直播#新闻#剧集#电影#综艺#纪录片#音乐#体育#动物#风光#放松#4K#HDR#movie#music#documentary#bbc documentary#national geographic documentary","proxy":"proxy","codecs":""},"style": {"type": "rect","ratio": 1.5}},
 {"key":"Bili","name":"🅱┃哔哩┃合集","type":3,"api":"csp_Bili","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":"https://gitlab.com/fantaiying/ext/-/raw/main/bilibili.json"},
 //{"key":"界界影视","name":"🐌┃界界┃影视","type":3,"api":"csp_XBPQ","jar":"./jar/XBPQ.jar","ext": {"主页url": "https://www.hkybqufgh.com/","简介": "</label>&&</div>","影片类型": "tags\">&&director\">","影片状态": "bottom\">&&</div>","二次截取": "videoList\":\\[&&\\]","数组": "{&&}[不包含:伦理剧]","图片": "https+://ywxohs.com+obs.gduamoe.com&&\",","标题": "vodName\":\"&&\"","副标题": "vodRemarks\":\"&&\"","链接": "https://www.hkybqufgh.com/detail/+vodId\":&&,","导演": "导演:</div>&&主演","主演": "主演:</div>&&别名","线路标题": "寶寳","播放数组": "listitem\">&&info\">","播放列表": "<a&&</a>","倒序": "否","搜索url": "https://www.hkybqufgh.com/vod/search/{wd}","分类": "电影$1#电视剧$2#综艺$3#动漫$4","分类url": "https://www.hkybqufgh.com/vod/show/id/{cateId}/class/{class}/year/{year}/area/{area}/page/{catePg}"}},
-	
-##饭太硬系列
+
 {"key":"直播转点播","name": "🐼️┃电视┃直播","type": 3,"searchable": 0,"api": "./lib/live2vod.js","ext": "./live/feimaolive.json","jar":"./pg.jar;md5;fd53509ee96e1519441cfa9f182fe66a"},
 {"key":"白白","name":"🐟白白┃秒播","type":3,"api":"csp_SbaibaiGuard","timeout":10,"playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"原创","name":"☀原创┃不卡","type":3,"api":"csp_YCyzGuard","timeout":10,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
@@ -87,8 +83,6 @@
 {"key":"贱贱","name":"🐭荐片┃P2P","type":3,"api":"csp_JPJGuard","timeout":10,"playerType":2,"searchable":1,"quickSearch":1,"changeable":0},
 {"key":"新6V","name":"🧲新6V┃磁力","type":3,"api":"csp_SixVGuard","timeout":10,"searchable":1,"quickSearch":1,"changeable":0,"ext":"https://www.xb6v.com/"},
 
-
-##搜索系列
 {"key":"抠搜","name":"🍄┃抠抠┃搜搜","type":3,"api":"csp_KkSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"UC","name":"🌈┃优汐┃搜搜","type":3,"api":"csp_UuSsGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"PanSso","name":"🐌┃盘他┃三盘","type":3,"api":"csp_PanSsoGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
@@ -100,7 +94,6 @@
 {"key":"YiSo","name":"😹┃易搜┃阿狸","type":3,"api":"csp_YiSoGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"🛴┃手机┃推送","type":3,"api":"csp_PushGuard","searchable":0,"quickSearch":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 	
-##官源系列
 {"key":"dr_布雷蓝光","name":"💥┃布布┃官源","type":3,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/布雷蓝光.jsd"},
 {"key":"dr_百忙无果","name":"🥭┃果果TV┃官源","type":3,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/百忙无果.js"},
 {"key":"dr_360影视","name":"♑┃三三影视┃官源","type":3,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":0,"filterable":0,"ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/360影视.js"},
@@ -111,8 +104,7 @@
 {"key":"csp_xBPQ_奇优","name":"🏥┃奇优TV┃官源","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/json/奇优影视.json","jar":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/jar/HeChengChaXiu.jar"},
 {"key": "dr_酷云77","name": "💋┃酷云77┃官源","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/酷云77.js"},
 {"key": "新6V","name":"🔰┃新6V磁力┃慎用","type": 3,"api": "csp_SixV","searchable": 1,"quickSearch": 1,"changeable": 0,"ext": "http://www.xb6v.com/"},
-	
-##墙外系列
+
 {"key":"csp_Nbys","name":"🛫┃泥巴┃墙外","type":3,"api":"csp_NiNi","searchable":1,"quickSearch":1,"filterable":1},
 {"key": "Nbys","name": "🛫┃蜂蜜新泥巴┃墙外","type":3,"api":"csp_NiNi","searchable": 1,"viewType": 1,"changeable": 1,"jar": "https://qu.ax/XTuU.jpg"},
 {"key": "star","name": "🛫┃星星┃墙外","type": 3,"api": "csp_Star","searchable": 1,"changeable": 1,"jar":"https://fm.t4tv.hz.cz/jar/fm.jar;md5;55c157414346e3ff571baad0a223bf15"},
@@ -129,7 +121,6 @@
 {"key":"drpy_dbk","name":"🛫┃独播┃墙外","type":3,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/独播库[飞].js"},
 {"key":"drpy_爱壹帆","name":"🛫┃爱壹帆┃墙外","type":3,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/js/爱壹帆[飞].js"},
 
-##dr_js系列
 {"key":"荐片","name":"🌟┃荐片┃JS","type":3,"viewType": 1,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/js/荐片.js"},
 {"key":"喵物次元","name":"💂🏿‍♀️┃喵物次元┃JS","type":3,"viewType": 1,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/js/喵物次元.js"},
 {"key":"高光影视","name":"🔅┃高光影视┃JS","type":3,"viewType": 1,"api":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","ext":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/js/高光影视.js"},
