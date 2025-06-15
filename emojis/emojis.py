@@ -6,7 +6,7 @@ import random
 from typing import Any, List
 
 # -----------------------------------------------------------------------------
-# Emoji 候选池：请在此处填入你的完整列表，共数百个
+# Emoji 候选池（请自行补充至足够多）
 # -----------------------------------------------------------------------------
 EMOJI_POOL: List[str] = [
     # 样例：请根据需要完整填写
@@ -82,7 +82,6 @@ EMOJI_POOL: List[str] = [
     # 如需更多请自行扩充
 ]
 
-# 精确匹配单个 Emoji 的正则（Unicode 常用块）
 EMOJI_PATTERN = re.compile(
     r'('
     u'[\U0001F300-\U0001F5FF]'
@@ -98,19 +97,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = BASE_DIR
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
-
 def find_emojis_in_head(text: str) -> List[str]:
-    """
-    查找文本第一段（第一个 '┃' 前）中的所有 Emoji。
-    """
     head = text.split('┃', 1)[0]
     return [m.group(0) for m in EMOJI_PATTERN.finditer(head)]
 
-
 def collect_all_emojis(obj: Any, key: str = "name") -> List[str]:
-    """
-    递归收集所有 dict 中 key="name" 第一段的 Emoji，保持顺序。
-    """
     found = []
     if isinstance(obj, dict):
         for k, v in obj.items():
@@ -123,16 +114,11 @@ def collect_all_emojis(obj: Any, key: str = "name") -> List[str]:
             found.extend(collect_all_emojis(item, key))
     return found
 
-
 def precise_replace_head_emojis(text: str, new_emojis: List[str]) -> str:
-    """
-    只替换文本第一段（第一个 '┃' 前）中的 Emoji，且一一对应、精准替换。
-    """
     head, *tail = text.split('┃', 1)
     matches = list(EMOJI_PATTERN.finditer(head))
     if len(matches) != len(new_emojis):
         raise ValueError("Emoji数目不一致，无法精准替换。")
-    # 替换时倒序处理，防止下标偏移
     head_list = list(head)
     for match, new_emoji in zip(reversed(matches), reversed(new_emojis)):
         start, end = match.span()
@@ -140,11 +126,7 @@ def precise_replace_head_emojis(text: str, new_emojis: List[str]) -> str:
     new_head = ''.join(head_list)
     return new_head + ('┃' + tail[0] if tail else '')
 
-
 def replace_name_head_emojis(obj: Any, new_emojis: List[str], key: str = "name"):
-    """
-    递归精准替换所有 dict 中 key="name" 第一段的 Emoji，保持 Emoji 数量不变，顺序一致。
-    """
     if isinstance(obj, dict):
         for k, v in obj.items():
             if k == key and isinstance(v, str):
@@ -156,7 +138,6 @@ def replace_name_head_emojis(obj: Any, new_emojis: List[str], key: str = "name")
     elif isinstance(obj, list):
         for item in obj:
             replace_name_head_emojis(item, new_emojis, key)
-
 
 def process_file(input_path: str, output_path: str):
     # 确保输出目录存在
@@ -175,6 +156,9 @@ def process_file(input_path: str, output_path: str):
     total = len(old_emojis)
     if total == 0:
         print(f"[跳过] `{os.path.basename(input_path)}` 中 “name” 字段第一段无 Emoji。")
+        # 依然写原样文件到 output 目录
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
         return False
 
     # 3. 检查 Emoji 池是否充足
@@ -189,18 +173,11 @@ def process_file(input_path: str, output_path: str):
     data_copy = json.loads(json.dumps(data, ensure_ascii=False))  # 深拷贝
     replace_name_head_emojis(data_copy, new_emojis.copy())
 
-    # 6. 写文件（如内容有变化才写）
-    orig_json = json.dumps(data, ensure_ascii=False, indent=2)
-    new_json = json.dumps(data_copy, ensure_ascii=False, indent=2)
-    if orig_json != new_json:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(new_json)
-        print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，已精准替换 {total} 个 Emoji")
-        return True
-    else:
-        print(f"[无变化] `{os.path.basename(input_path)}` Emoji 替换后内容无变化。")
-        return False
-
+    # 6. 写文件
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(data_copy, f, ensure_ascii=False, indent=2)
+    print(f"[完成] `{os.path.basename(input_path)}` → `{os.path.basename(output_path)}`，已精准替换 {total} 个 Emoji")
+    return True
 
 def main():
     json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
@@ -208,21 +185,13 @@ def main():
         print("⚠️ 未找到任何 .json 文件。")
         return
 
-    changed_files = []
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     for path in json_files:
         fname = os.path.basename(path)
         out = os.path.join(OUTPUT_DIR, fname)
-        changed = process_file(path, out)
-        if changed:
-            changed_files.append(os.path.relpath(out))
+        process_file(path, out)
 
     print("🎉 全部处理完成，输出目录：", OUTPUT_DIR)
-    # 输出变更文件列表，供GitHub Actions读取
-    if changed_files:
-        with open(os.path.join(OUTPUT_DIR, ".changed_files.txt"), "w", encoding="utf-8") as f:
-            for fn in changed_files:
-                f.write(fn + "\n")
-
 
 if __name__ == "__main__":
     main()
