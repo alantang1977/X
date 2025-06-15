@@ -1,11 +1,18 @@
-# emojis/emojis.py
-import re
-import random
+# emojis/replace_emojis.py
+
 import os
 import glob
+import json
+import re
+import random
+from typing import Any
 
-# 定义一个包含多种Emoji的列表
-emoji_list = [
+# -----------------------------------------------------------------------------
+# 配置区，可根据需要调整
+# -----------------------------------------------------------------------------
+
+# 待替换的 Emoji 候选池（示例中只列出部分，实际请填入你的完整列表）
+EMOJI_POOL = [
     # 食物和饮料相关Emoji (156个)
     "🍎", "🍏", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐",
     "🍈", "🍒", "🍑", "🥭", "🍍", "🥥", "🥝", "🍅", "🫒", "🥑",
@@ -77,112 +84,125 @@ emoji_list = [
     "⛴️", "🚁", "✈️", "🛫", "🛬", "🚀", "🛸"
 ]
 
-def replace_emojis_in_file(input_file_path, output_file_path):
-    """
-    替换JSON文件中"name"字段值里的Emoji表情符号为新的、不同的Emoji
-    
-    参数:
-    input_file_path (str): 输入文件路径
-    output_file_path (str): 输出文件路径
-    """
-    try:
-        # 确保输出目录存在
-        output_dir = os.path.dirname(output_file_path)
-        os.makedirs(output_dir, exist_ok=True)
-        
-        # 读取JSON文件内容
-        with open(input_file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # 定义Emoji的正则表达式模式，使用更精确的Emoji正则表达式
-        emoji_pattern = re.compile(r'[\U0001F300-\U0001F5FF\U0001F600-\U0001F64F\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF\U00002702-\U000027B0\U000024C2-\U0001F251]')
-        
-        # 用于跟踪已替换的Emoji，确保唯一性
-        used_emojis = set()
-        total_replacements = 0
-        
-        # 定义替换函数
-        def replace_emoji(match):
-            nonlocal used_emojis, total_replacements
-            # 获取匹配的Emoji
-            old_emoji = match.group(0)
-            # 生成新的Emoji
-            available_emojis = [emoji for emoji in emoji_list if emoji not in used_emojis]
-            if not available_emojis:
-                print(f"警告: Emoji列表中的Emoji不够用了，已使用 {len(used_emojis)} 个不同Emoji，将重新使用池")
-                available_emojis = emoji_list
-            new_emoji = random.choice(available_emojis)
-            used_emojis.add(new_emoji)
-            total_replacements += 1
-            return new_emoji
-        
-        # 找出所有"name":"..."模式的字符串
-        name_pattern = re.compile(r'"name":"([^"]*)"')
-        new_content = content
-        
-        # 替换每个匹配的"name"字段中的Emoji
-        for match in reversed(list(name_pattern.finditer(new_content))):
-            # 获取完整匹配和name值
-            full_match = match.group(0)
-            name_value = match.group(1)
-            
-            # 处理可能存在的竖线 |
-            if '|' in name_value:
-                parts = name_value.split('|', 1)
-                emoji_part = parts[0]  # 竖线前的部分
-                remaining_part = parts[1]  # 竖线后的部分
-                
-                # 只替换竖线前的Emoji
-                new_emoji_part = emoji_pattern.sub(replace_emoji, emoji_part)
-                new_name_value = f"{new_emoji_part}|{remaining_part}"
-            else:
-                # 没有竖线，替换整个值中的Emoji
-                new_name_value = emoji_pattern.sub(replace_emoji, name_value)
-            
-            # 更新完整匹配
-            new_full_match = f'"name":"{new_name_value}"'
-            new_content = new_content[:match.start()] + new_full_match + new_content[match.end():]
-        
-        print(f"在文件中找到并替换了 {total_replacements} 个Emoji")
-        
-        # 将修改后的内容写回文件
-        with open(output_file_path, 'w', encoding='utf-8') as file:
-            file.write(new_content)
+# 精确匹配单个 Emoji 的正则（涵盖常用 Unicode Block）
+EMOJI_PATTERN = re.compile(
+    r'['
+    u'\U0001F300-\U0001F5FF'
+    u'\U0001F600-\U0001F64F'
+    u'\U0001F680-\U0001F6FF'
+    u'\U0001F1E0-\U0001F1FF'
+    u'\u2600-\u27BF'
+    r']',
+    flags=re.UNICODE
+)
 
-        print(f"Emoji替换完成，输出文件: {output_file_path}")
-    except FileNotFoundError:
-        print(f"错误: 文件不存在 - {input_file_path}")
-    except Exception as e:
-        print(f"发生错误: {e}")
+# 输入、输出目录
+INPUT_DIR  = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(INPUT_DIR, "output")
+
+
+# -----------------------------------------------------------------------------
+# 工具函数
+# -----------------------------------------------------------------------------
+
+def collect_all_strings(obj: Any, collector: list):
+    """
+    递归遍历 JSON 结构，将所有字符串值加入 collector 列表。
+    """
+    if isinstance(obj, dict):
+        for v in obj.values():
+            collect_all_strings(v, collector)
+    elif isinstance(obj, list):
+        for item in obj:
+            collect_all_strings(item, collector)
+    elif isinstance(obj, str):
+        collector.append(obj)
+
+
+def replace_in_string(s: str, replacements: dict) -> str:
+    """
+    在单个字符串中，使用预先准备好的 replacements 映射表替换所有 Emoji。
+    """
+    def _sub(m):
+        old = m.group(0)
+        # 每次匹配取出队列中下一个 new emoji
+        return replacements.pop(0)
+    return EMOJI_PATTERN.sub(_sub, s)
+
+
+def traverse_and_replace(obj: Any, replacements: list) -> Any:
+    """
+    递归遍历 JSON，遇到字符串就调用 replace_in_string，替换队列中的 Emoji。
+    """
+    if isinstance(obj, dict):
+        return {k: traverse_and_replace(v, replacements) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [traverse_and_replace(item, replacements) for item in obj]
+    elif isinstance(obj, str):
+        return replace_in_string(obj, replacements)
+    else:
+        return obj
+
+
+# -----------------------------------------------------------------------------
+# 主处理逻辑
+# -----------------------------------------------------------------------------
+
+def process_file(input_path: str, output_path: str):
+    # 1. 确保输出目录存在
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # 2. 读取并解析 JSON
+    with open(input_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    # 3. 收集所有字符串，统计要替换的 Emoji 总数
+    all_strings = []
+    collect_all_strings(data, all_strings)
+
+    emoji_count = 0
+    for s in all_strings:
+        emoji_count += len(EMOJI_PATTERN.findall(s))
+
+    if emoji_count == 0:
+        print(f"[跳过] 文件 {os.path.basename(input_path)} 中无 Emoji。")
+        return
+
+    # 4. 从候选池中随机选取 emoji_count 个不重复的 Emoji
+    if emoji_count > len(EMOJI_POOL):
+        raise ValueError(
+            f"需要替换 {emoji_count} 个 Emoji，但候选池中只有 {len(EMOJI_POOL)} 个，请扩充候选池。"
+        )
+
+    replacements = random.sample(EMOJI_POOL, k=emoji_count)
+    # 转为可 pop 的队列
+    replacements = list(replacements)
+
+    # 5. 递归替换
+    new_data = traverse_and_replace(data, replacements)
+
+    # 6. 写回 JSON
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(new_data, f, ensure_ascii=False, indent=2)
+
+    print(f"[完成] {os.path.basename(input_path)} → {os.path.basename(output_path)} 替换了 {emoji_count} 个 Emoji")
+
 
 def main():
-    """
-    主函数：处理emojis文件夹下的所有JSON文件
-    """
-    # 获取emojis文件夹路径
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_dir = script_dir
-    output_dir = os.path.join(script_dir, "output")
-    
-    # 查找所有.json文件
-    json_files = glob.glob(os.path.join(input_dir, "*.json"))
-    
+    # 查找所有 .json 文件
+    json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
     if not json_files:
-        print("在emojis文件夹中未找到JSON文件")
+        print("在目录中未找到任何 .json 文件")
         return
-    
-    print(f"找到 {len(json_files)} 个JSON文件需要处理")
-    
-    # 处理每个JSON文件
-    for json_file in json_files:
-        file_name = os.path.basename(json_file)
-        input_path = os.path.join(input_dir, file_name)
-        output_path = os.path.join(output_dir, file_name)
-        
-        print(f"\n处理文件: {file_name}")
-        replace_emojis_in_file(input_path, output_path)
-    
-    print("\n所有文件处理完成")
+
+    # 处理每个文件
+    for path in json_files:
+        filename = os.path.basename(path)
+        out_path = os.path.join(OUTPUT_DIR, filename)
+        process_file(path, out_path)
+
+    print("所有文件处理完成。")
+
 
 if __name__ == "__main__":
-    main()    
+    main()
