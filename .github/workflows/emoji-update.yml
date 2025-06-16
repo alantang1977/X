@@ -24,13 +24,26 @@ jobs:
         with:
           python-version: '3.9'
 
+      # 缓存依赖
+      - name: Cache Python dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # 安装依赖
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install tqdm
+
       # 运行 Emoji 替换脚本
       - name: Run Emoji Replacer
         run: |
-          # 确保脚本可执行
-          chmod +x emoji_replacer.py
-          # 运行脚本（递归处理emojis目录）
-          python ./emojis/emoji_replacer.py -r -v
+          cd emojis
+          python emoji_replacer.py -r -v --incremental --report ../emoji_report.txt
 
       # 检查文件变更并提交
       - name: Commit changes
