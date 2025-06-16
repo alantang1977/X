@@ -29,7 +29,7 @@ jobs:
       - name: Run Emoji Update
         run: |
           # 假设脚本名为emoji_replacer.py，输入目录为data
-          python emoji_replacer.py -i data -r -v
+          python ./emojis/emoji_replacer.py -i data -r -v
           
       - name: Commit changes
         run: |
