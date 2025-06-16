@@ -1,33 +1,47 @@
-name: JSON Emoji Processor
+name: Emoji Update
+
 on:
+  # 定时触发，每周一执行
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点运行
-  workflow_dispatch:     # 允许手动触发
-  push:
-    paths:
-      - 'input.json'
+    - cron: '0 0 * * 1'
+  # 也可以手动触发
+  workflow_dispatch:
 
 jobs:
-  process:
+  update:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-        
-    - name: Run emoji processor
-      run: python emoji_processor.py
-      
-    - name: Commit and push changes
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
-        git add output.json
-        git commit -m "Update JSON with Android emojis"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史记录
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          
+      - name: Run Emoji Update
+        run: |
+          # 假设脚本名为emoji_replacer.py，输入目录为data
+          python emoji_replacer.py -i data -r -v
+          
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          
+          # 检查是否有文件变更
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "自动更新：替换Emoji表情"
+            git push
+            echo "已提交更新"
+          else
+            echo "没有文件需要更新"
+          fi
