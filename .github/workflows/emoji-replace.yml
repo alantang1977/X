@@ -1,27 +1,33 @@
-name: 自动替换Emoji
-
+name: JSON Emoji Processor
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: '0 0 * * *'  # 每天UTC时间0点运行
+  workflow_dispatch:     # 允许手动触发
+  push:
+    paths:
+      - 'input.json'
 
 jobs:
-  update-emojis:
+  process:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: pip install --upgrade pip
-      - name: Run auto_update_emojis.py
-        run: python emojis/auto_update_emojis.py
-      - name: Commit changes
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "github-actions[bot]"
-          git add .
-          git diff --cached --quiet || git commit -m "Auto update emojis in JSON files"
-          git push
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Run emoji processor
+      run: python emoji_processor.py
+      
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add output.json
+        git commit -m "Update JSON with Android emojis"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
