@@ -126,16 +126,19 @@ class EmojiReplacer:
 
 def main():
     """主函数，处理命令行参数并执行Emoji替换"""
+    # 获取当前脚本所在目录
+    script_dir = Path(__file__).parent.resolve()
+    
     parser = argparse.ArgumentParser(
-        description="将指定目录下的JSON/文本文件中的Emoji替换为安卓系统支持的Emoji"
+        description="将emojis目录下的JSON/文本文件中的Emoji替换为安卓系统支持的Emoji"
     )
     parser.add_argument(
-        '-i', '--input', type=Path, required=True,
-        help='输入文件或目录路径'
+        '-i', '--input', type=Path, default=script_dir / "emojis",
+        help='输入文件或目录路径（默认为脚本所在目录下的emojis文件夹）'
     )
     parser.add_argument(
-        '-o', '--output', type=Path,
-        help='输出文件或目录路径（默认为input目录下的output文件夹）'
+        '-o', '--output', type=Path, default=script_dir / "output",
+        help='输出文件或目录路径（默认为脚本所在目录下的output文件夹）'
     )
     parser.add_argument(
         '-r', '--recursive', action='store_true',
@@ -151,36 +154,27 @@ def main():
     replacer = EmojiReplacer()
     
     # 处理输入路径
-    input_path = args.input
+    input_path = args.input.resolve()
     if not input_path.exists():
         print(f"错误：输入路径 '{input_path}' 不存在")
         return
     
     # 确定输出路径
-    if args.output:
-        output_path = args.output
-    else:
-        if input_path.is_dir():
-            output_path = input_path / "output"
-        else:
-            output_path = input_path.parent / "output" / input_path.name
+    output_path = args.output.resolve()
+    
+    # 确保输出目录存在
+    output_path.mkdir(parents=True, exist_ok=True)
     
     # 处理文件或目录
     if input_path.is_file():
         # 处理单个文件
-        if output_path.is_dir():
-            output_file = output_path / input_path.name
-        else:
-            output_file = output_path
-            
+        output_file = output_path / input_path.name
         replaced_count = replacer.process_file(input_path, output_file)
         print(f"已处理文件: {input_path} → {output_file}")
         print(f"替换了 {replaced_count} 个Emoji")
         
     elif input_path.is_dir():
         # 处理目录
-        output_path.mkdir(parents=True, exist_ok=True)
-        
         # 获取所有要处理的文件
         if args.recursive:
             files = list(input_path.rglob("*.*"))
@@ -188,7 +182,7 @@ def main():
             files = list(input_path.glob("*.*"))
             
         # 过滤允许的文件类型
-        allowed_extensions = {'.json', '.txt', '.md', '.csv', '.xml', '.html', '.htm'}
+        allowed_extensions = {'.json', '.txt'}
         files = [f for f in files if f.is_file() and f.suffix.lower() in allowed_extensions]
         
         if not files:
