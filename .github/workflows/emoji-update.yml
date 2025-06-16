@@ -1,47 +1,53 @@
-name: Emoji Update
+name: Emoji Replacer Auto Update
 
 on:
-  # 定时触发，每周一执行
+  # 定时触发，每周日凌晨2点执行
   schedule:
-    - cron: '0 0 * * 1'
-  # 也可以手动触发
+    - cron: '0 2 * * 0'
+  # 也支持手动触发
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # 检出代码仓库
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取完整历史记录
           token: ${{ secrets.GITHUB_TOKEN }}
-          
+          fetch-depth: 0  # 获取完整历史记录
+
+      # 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          
-      - name: Install dependencies
+
+      # 运行 Emoji 替换脚本
+      - name: Run Emoji Replacer
         run: |
-          python -m pip install --upgrade pip
-          
-      - name: Run Emoji Update
-        run: |
-          # 假设脚本名为emoji_replacer.py，输入目录为data
-          python ./emojis/emoji_replacer.py -i data -r -v
-          
+          # 确保脚本可执行
+          chmod +x emoji_replacer.py
+          # 运行脚本（递归处理emojis目录）
+          python ./emojis/emoji_replacer.py -r -v
+
+      # 检查文件变更并提交
       - name: Commit changes
         run: |
+          # 配置 Git 用户信息
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           
           # 检查是否有文件变更
           if [[ -n $(git status --porcelain) ]]; then
+            # 添加所有变更文件
             git add .
-            git commit -m "自动更新：替换Emoji表情"
+            # 提交变更
+            git commit -m "🤖 Auto-update: Replace Emojis with Android-compatible versions"
+            # 推送到远程仓库
             git push
-            echo "已提交更新"
+            echo "✅ Changes committed and pushed successfully"
           else
-            echo "没有文件需要更新"
+            echo "❎ No changes to commit"
           fi
