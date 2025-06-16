@@ -30,7 +30,7 @@ jobs:
           # 确保脚本可执行
           chmod +x emoji_replacer.py
           # 运行脚本（递归处理emojis目录）
-          python ./emojis/emoji_replacer.py -r -v
+          python emoji_replacer.py -r -v
 
       # 检查文件变更并提交
       - name: Commit changes
