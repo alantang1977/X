@@ -39,6 +39,12 @@ jobs:
           else
             git commit -m "Process JSON and TXT files in emojis directory"
             
+            # 清理重复的output目录
+            git ls-files | grep -E '/output/output/' | while read -r file; do
+              clean_file=$(echo "$file" | sed 's/output\/output/output/g')
+              git mv "$file" "$clean_file"
+            done
+            
             # 使用合并而非rebase处理远程更新
             git pull --no-rebase origin ${{ github.ref_name }}
             
@@ -46,14 +52,30 @@ jobs:
             if git status | grep -q "conflict"; then
               echo "合并冲突，尝试自动解决..."
               
-              # 自动解决冲突：使用我们的修改
-              git checkout --ours $(git diff --name-only --diff-filter=U)
-              git add .
+              # 获取所有冲突文件列表
+              conflict_files=$(git diff --name-only --diff-filter=U)
+              
+              # 处理每一个冲突文件
+              for file in $conflict_files; do
+                # 对于输出目录中的文件，使用我们的版本
+                if echo "$file" | grep -q "${{ github.event.inputs.output_dir || 'emojis/output' }}"; then
+                  git checkout --ours "$file"
+                  git add "$file"
+                else
+                  # 对于其他文件，使用远程版本
+                  git checkout --theirs "$file"
+                  git add "$file"
+                fi
+              done
               
               # 继续合并
-              git commit -m "Merge remote changes"
+              if git diff --staged --quiet; then
+                echo "冲突解决后没有更改，跳过提交"
+              else
+                git commit -m "Merge remote changes, resolve conflicts"
+              fi
             fi
             
             # 推送修改
             git push origin ${{ github.ref_name }}
-          fi    
+          fi
