@@ -1,7 +1,7 @@
-# 文件: .github/workflows/emoji_workflow.yml
 name: Emoji Manager CI
 
 on:
+  # 自动触发：push 到指定路径时
   push:
     paths:
       - 'emojis/**'
@@ -11,6 +11,9 @@ on:
       - '**/*.csv'
       - '**/*.xml'
       - '**/*.html'
+
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
   process-emojis:
