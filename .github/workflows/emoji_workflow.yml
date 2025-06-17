@@ -1,34 +1,32 @@
-# .github/workflows/emoji_replace.yml
-
-name: Emoji 替换管理器
+name: Emoji Processor
 
 on:
   push:
+    branches: [ main ]
     paths:
       - 'emojis/**'
-      - '.github/workflows/emoji_replace.yml'
-  workflow_dispatch:  # 手动触发
 
 jobs:
-  run-emoji-processor:
+  process-emojis:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v3
-
-      - name: 设置 Python 环境
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: 安装依赖
-        run: pip install requests
-
-      - name: 执行 Emoji 替换处理
-        run: python emojis/process_emojis.py --input_dir=. --output_dir=emojis/output
-
-      - name: 上传结果文件
-        uses: actions/upload-artifact@v4
-        with:
-          name: processed-emojis
-          path: emojis/output/
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: pip install -r emojis/requirements.txt
+    
+    - name: Run Emoji Processor
+      run: python emojis/emoji_manager.py emojis/input
+    
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add .
+        git commit -m "Processed emojis [skip ci]" || echo "No changes to commit"
+        git push
