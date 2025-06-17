@@ -115,6 +115,10 @@ class EmojiProcessor:
         
         # 处理所有文件
         for item in input_dir.iterdir():
+            # 跳过输出目录，避免无限递归
+            if item.is_dir() and item == output_dir:
+                continue
+                
             if item.is_file():
                 # 构建输出文件路径，保持文件名相同但扩展名为.json
                 output_file = output_dir / (item.stem + '.json')
@@ -146,4 +150,4 @@ def main():
     print(f"处理后的文件已保存在: {output_dir}")
 
 if __name__ == "__main__":
-    main()    
+    main()
