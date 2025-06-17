@@ -1,0 +1,40 @@
+name: Process Emoji Files
+
+on:
+  push:
+    paths:
+      - 'emojis/**'
+  workflow_dispatch:
+
+jobs:
+  process-emojis:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+      
+      - name: Process emoji files
+        run: |
+          python emoji_processor.py
+          
+      - name: Commit and push processed files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Process emoji files"
+            git push
+          fi    
