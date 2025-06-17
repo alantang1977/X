@@ -39,12 +39,6 @@ jobs:
           else
             git commit -m "Process JSON and TXT files in emojis directory"
             
-            # 清理重复的output目录
-            git ls-files | grep -E '/output/output/' | while read -r file; do
-              clean_file=$(echo "$file" | sed 's/output\/output/output/g')
-              git mv "$file" "$clean_file"
-            done
-            
             # 使用合并而非rebase处理远程更新
             git pull --no-rebase origin ${{ github.ref_name }}
             
@@ -78,4 +72,4 @@ jobs:
             
             # 推送修改
             git push origin ${{ github.ref_name }}
-          fi
+          fi    
