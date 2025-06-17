@@ -48,5 +48,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Process emoji files"
+            # 拉取远程更新并尝试合并
+            git pull --rebase origin main
             git push
-          fi    
+          fi
