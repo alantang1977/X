@@ -2,7 +2,6 @@ import os
 import re
 import json
 import argparse
-import chardet
 from pathlib import Path
 from typing import Dict, List, Union, Any
 
@@ -48,7 +47,7 @@ class EmojiManager:
         return EMOJI_REGEX.sub(lambda m: emoji_mapping.get(m.group(0), m.group(0)), text)
 
 class FileProcessor:
-    """文件处理类，智能识别并处理不同格式文件"""
+    """文件处理类，处理JSON和TXT文件"""
     
     def __init__(self, emoji_manager: EmojiManager):
         self.emoji_manager = emoji_manager
@@ -63,84 +62,66 @@ class FileProcessor:
             return self.emoji_manager.replace_emojis(content)
         return content
     
-    def process_text_file(self, content: str, input_path: Path) -> Dict[str, Any]:
+    def process_text_file(self, content: str) -> str:
         """处理文本文件中的Emoji"""
-        return {
-            "original_file": str(input_path),
-            "content": self.emoji_manager.replace_emojis(content)
-        }
-    
-    def is_valid_json(self, content_str: str) -> bool:
-        """检查字符串是否为有效的JSON"""
-        try:
-            json.loads(content_str)
-            return True
-        except json.JSONDecodeError:
-            return False
+        return self.emoji_manager.replace_emojis(content)
     
     def process_file(self, input_path: Path, output_path: Path) -> None:
-        """处理单个文件，智能识别JSON格式"""
+        """处理单个文件，区分JSON和TXT格式"""
         try:
-            # 检测文件编码
-            with open(input_path, 'rb') as f:
-                raw_data = f.read()
-                encoding = chardet.detect(raw_data)['encoding'] or 'utf-8'
+            # 读取文件内容
+            with open(input_path, 'r', encoding='utf-8') as f:
+                if input_path.suffix.lower() == '.json':
+                    # 处理JSON文件
+                    content = json.load(f)
+                    processed_content = self.process_json(content)
+                    with open(output_path, 'w', encoding='utf-8') as out_f:
+                        json.dump(processed_content, out_f, ensure_ascii=False, indent=2)
+                elif input_path.suffix.lower() == '.txt':
+                    # 处理TXT文件
+                    content = f.read()
+                    processed_content = self.process_text_file(content)
+                    with open(output_path, 'w', encoding='utf-8') as out_f:
+                        out_f.write(processed_content)
+                else:
+                    print(f"警告: 文件 '{input_path}' 不是JSON或TXT格式，跳过")
+                    return
             
-            content_str = raw_data.decode(encoding, errors='replace')
-            
-            # 智能识别JSON文件
-            is_json = self.is_valid_json(content_str)
-            
-            if is_json:
-                # 处理JSON文件（保持JSON格式）
-                content = json.loads(content_str)
-                processed_content = self.process_json(content)
-                with open(output_path, 'w', encoding='utf-8') as out_f:
-                    json.dump(processed_content, out_f, ensure_ascii=False, indent=2)
-            else:
-                # 处理非JSON文本文件
-                processed_data = self.process_text_file(content_str, input_path)
-                with open(output_path, 'w', encoding='utf-8') as out_f:
-                    json.dump(processed_data, out_f, ensure_ascii=False, indent=2)
-            
-            print(f"已处理: {input_path} -> {output_path} ({'JSON' if is_json else '文本'})")
+            print(f"已处理: {input_path} -> {output_path}")
             
         except Exception as e:
             print(f"处理文件 {input_path} 时出错: {str(e)}")
-            # 生成错误报告
-            error_data = {
-                "original_file": str(input_path),
-                "error": str(e),
-                "content": None
-            }
-            with open(output_path, 'w', encoding='utf-8') as out_f:
-                json.dump(error_data, out_f, ensure_ascii=False, indent=2)
 
-def process_files(target_files: List[str], input_dir: Path, output_dir: Path) -> None:
-    """处理指定的目标文件"""
+def process_files(input_dir: Path, output_dir: Path) -> None:
+    """处理emojis文件夹下的JSON和TXT文件"""
     emoji_manager = EmojiManager()
     file_processor = FileProcessor(emoji_manager)
     
     # 创建输出目录
     output_dir.mkdir(parents=True, exist_ok=True)
     
-    for file_name in target_files:
-        input_file = input_dir / file_name
-        if not input_file.exists():
-            print(f"警告: 文件 '{input_file}' 不存在，跳过")
-            continue
+    # 遍历emojis文件夹下的所有文件
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            input_file = Path(root) / file
             
-        if input_file.is_file():
+            # 检查文件是否为JSON或TXT格式
+            if input_file.suffix.lower() not in ['.json', '.txt']:
+                continue
+                
+            # 计算输出文件路径，保持目录结构
+            relative_path = input_file.relative_to(input_dir)
+            output_file = output_dir / relative_path
+            
+            # 确保输出目录存在
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            
             # 处理文件
-            output_file = output_dir / (input_file.stem + '.json')
             file_processor.process_file(input_file, output_file)
-        else:
-            print(f"警告: '{input_file}' 不是文件，跳过")
 
 def main():
     """主函数"""
-    parser = argparse.ArgumentParser(description='智能处理文件中的Emoji')
-    parser.add_argument('--files', nargs='+', required=True, help='目标文件列表')
+    parser = argparse.ArgumentParser(description='处理emojis文件夹下的JSON和TXT文件')
     parser.add_argument('--input-dir', default='emojis', help='输入目录')
     parser.add_argument('--output-dir', default='emojis/output', help='输出目录')
     
@@ -153,8 +134,8 @@ def main():
         return
     
     print(f"开始处理文件，输入目录: {input_dir}")
-    process_files(args.files, input_dir, output_dir)
+    process_files(input_dir, output_dir)
     print(f"处理完成! 结果保存在: {output_dir}")
 
 if __name__ == "__main__":
-    main()    
+    main()
