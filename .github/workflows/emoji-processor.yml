@@ -1,4 +1,4 @@
-name: Process Emoji Files
+name: Emoji File Processor
 
 on:
   push:
@@ -13,42 +13,21 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整仓库历史，避免推送冲突
       
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
       
-      - name: Debug - List files
-        run: |
-          ls -la
-          pwd
-      
-      - name: Verify script existence
-        run: |
-          if [ ! -f "emojis/emoji_processor.py" ]; then
-            echo "Error: emoji_processor.py not found in emojis/ directory!"
-            exit 1
-          fi
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-      
       - name: Process emoji files
         run: |
-          python emojis/emoji_processor.py
+          python emoji_processor.py
           
-      - name: Commit and push processed files
+      - name: Commit and push results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add emojis/output/
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Process emoji files"
-            # 拉取远程更新并尝试合并
-            git pull --rebase origin main
-            git push
-          fi
+          git diff --staged && git commit -m "Process emoji files" && git push || echo "No changes to commit"
