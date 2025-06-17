@@ -99,14 +99,36 @@ class FileProcessor:
             print(f"处理文件: {input_path}")
             print(f"输出路径: {output_path}")
             
-            # 检查并防止路径嵌套问题
-            if "output" in input_path.parts:
+            # 防止路径嵌套问题
+            input_parts = list(input_path.parts)
+            output_parts = list(output_path.parts)
+            
+            # 检测并移除路径中的重复"output"部分
+            if "output" in input_parts:
                 print(f"警告: 输入文件路径包含'output'，可能导致路径嵌套: {input_path}")
-                # 移除路径中的所有"output"部分
-                clean_parts = [p for p in input_path.parts if p != "output"]
-                clean_path = Path(*clean_parts)
-                output_path = output_dir / clean_path.relative_to(input_dir)
+                
+                # 计算input_dir在input_path中的位置
+                input_dir_parts = input_dir.parts
+                input_dir_index = 0
+                for i, part in enumerate(input_parts):
+                    if part == input_dir_parts[-1]:
+                        input_dir_index = i
+                        break
+                
+                # 获取input_path中相对于input_dir的部分
+                relative_parts = input_parts[input_dir_index + 1:]
+                
+                # 移除相对路径中的所有"output"
+                clean_parts = [p for p in relative_parts if p != "output"]
+                
+                # 构建新的输出路径
+                output_parts = list(output_dir.parts) + clean_parts
+                output_path = Path(*output_parts)
+                
                 print(f"修正后的输出路径: {output_path}")
+            
+            # 确保输出目录存在
+            output_path.parent.mkdir(parents=True, exist_ok=True)
             
             # 读取文件内容
             with open(input_path, 'r', encoding='utf-8') as f:
@@ -133,6 +155,8 @@ class FileProcessor:
 
 def process_files(input_dir: Path, output_dir: Path) -> None:
     """处理emojis文件夹下的JSON和TXT文件"""
+    global input_dir, output_dir  # 声明为全局变量，供FileProcessor使用
+    
     emoji_manager = EmojiManager()
     file_processor = FileProcessor(emoji_manager)
     
@@ -151,9 +175,6 @@ def process_files(input_dir: Path, output_dir: Path) -> None:
             # 计算输出文件路径，保持目录结构
             relative_path = input_file.relative_to(input_dir)
             output_file = output_dir / relative_path
-            
-            # 确保输出目录存在
-            output_file.parent.mkdir(parents=True, exist_ok=True)
             
             # 处理文件
             file_processor.process_file(input_file, output_file)
@@ -183,4 +204,4 @@ def main():
     print(f"处理完成! 结果保存在: {output_dir}")
 
 if __name__ == "__main__":
-    main()
+    main()    
