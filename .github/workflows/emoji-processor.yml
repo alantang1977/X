@@ -26,8 +26,8 @@ jobs:
       
       - name: Verify script existence
         run: |
-          if [ ! -f "emoji/emoji_processor.py" ]; then
-            echo "Error: emoji_processor.py not found in emoji/ directory!"
+          if [ ! -f "emojis/emoji_processor.py" ]; then
+            echo "Error: emoji_processor.py not found in emojis/ directory!"
             exit 1
           fi
       
@@ -37,7 +37,7 @@ jobs:
       
       - name: Process emoji files
         run: |
-          python emoji/emoji_processor.py
+          python emojis/emoji_processor.py
           
       - name: Commit and push processed files
         run: |
