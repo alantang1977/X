@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import argparse
 from pathlib import Path
 from typing import Dict, List, Union, Any
 
@@ -130,51 +131,55 @@ class FileProcessor:
             print(f"处理文件 {input_path} 时出错: {str(e)}")
 
 
-class DirectoryProcessor:
-    """目录处理类，负责递归处理目录下的所有文件"""
+def process_files(target_files: List[str], input_dir: Path, output_dir: Path) -> None:
+    """处理指定的目标文件"""
+    emoji_manager = EmojiManager()
+    file_processor = FileProcessor(emoji_manager)
     
-    def __init__(self, file_processor: FileProcessor):
-        """初始化目录处理器"""
-        self.file_processor = file_processor
+    # 创建输出目录
+    output_dir.mkdir(parents=True, exist_ok=True)
     
-    def process_directory(self, input_dir: Path, output_dir: Path) -> None:
-        """递归处理目录中的所有文件"""
-        # 创建输出目录（如果不存在）
-        output_dir.mkdir(parents=True, exist_ok=True)
-        
-        # 处理目录中的每个项目
-        for item in input_dir.iterdir():
-            if item.is_file():
-                # 处理文件
-                output_file = output_dir / (item.stem + '.json')
-                self.file_processor.process_file(item, output_file)
-            elif item.is_dir() and item != output_dir:
-                # 递归处理子目录
-                sub_output_dir = output_dir / item.name
-                self.process_directory(item, sub_output_dir)
+    for file_name in target_files:
+        input_file = input_dir / file_name
+        if not input_file.exists():
+            print(f"警告: 文件 '{input_file}' 不存在，跳过")
+            continue
+            
+        if input_file.is_file():
+            # 处理文件
+            output_file = output_dir / (input_file.stem + '.json')
+            file_processor.process_file(input_file, output_file)
+        else:
+            print(f"警告: '{input_file}' 不是文件，跳过")
 
 
 def main():
     """主函数，协调整个Emoji处理流程"""
     try:
-        # 定义输入输出目录
-        current_dir = Path.cwd()
-        input_dir = current_dir / 'emojis'
-        output_dir = input_dir / 'output'
+        # 创建命令行参数解析器
+        parser = argparse.ArgumentParser(description='处理指定的Emoji文件')
+        parser.add_argument('--files', nargs='+', required=True, 
+                            help='要处理的目标文件列表，用空格分隔')
+        parser.add_argument('--input-dir', default='emojis', 
+                            help='输入目录路径，默认为emojis')
+        parser.add_argument('--output-dir', default='emojis/output', 
+                            help='输出目录路径，默认为emojis/output')
+        
+        # 解析命令行参数
+        args = parser.parse_args()
+        
+        # 转换为Path对象
+        input_dir = Path(args.input_dir)
+        output_dir = Path(args.output_dir)
         
         # 检查输入目录是否存在
         if not input_dir.exists():
             print(f"错误: 输入目录 '{input_dir}' 不存在")
             return
         
-        # 初始化Emoji管理器和文件处理器
-        emoji_manager = EmojiManager()
-        file_processor = FileProcessor(emoji_manager)
-        directory_processor = DirectoryProcessor(file_processor)
-        
-        # 开始处理目录
-        print(f"开始处理目录: {input_dir}")
-        directory_processor.process_directory(input_dir, output_dir)
+        # 开始处理指定文件
+        print(f"开始处理指定文件，输入目录: {input_dir}")
+        process_files(args.files, input_dir, output_dir)
         
         print(f"处理完成! 结果保存在: {output_dir}")
         
