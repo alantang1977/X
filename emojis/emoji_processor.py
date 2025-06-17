@@ -131,7 +131,7 @@ def main():
     
     # 默认输入和输出目录
     input_dir = current_dir / 'emojis'
-    output_dir = current_dir / 'output'
+    output_dir = current_dir / 'emojis/output'
     
     # 检查输入目录是否存在
     if not input_dir.exists():
