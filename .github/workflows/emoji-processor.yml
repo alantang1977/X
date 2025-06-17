@@ -5,6 +5,19 @@ on:
     paths:
       - 'emojis/**'
   workflow_dispatch:
+    inputs:
+      files:
+        description: '要处理的目标文件列表，用空格分隔'
+        required: true
+        default: 'X.json aTV.json'
+      input_dir:
+        description: '输入目录路径'
+        required: false
+        default: 'emojis'
+      output_dir:
+        description: '输出目录路径'
+        required: false
+        default: 'emojis/output'
 
 jobs:
   process-emojis:
@@ -13,6 +26,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整的仓库历史，避免拉取时冲突
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,17 +52,20 @@ jobs:
       
       - name: Process emoji files
         run: |
-          python emojis/emoji_processor.py
+          python emojis/emoji_processor.py \
+            --files ${{ github.event.inputs.files || 'X.json aTV.json' }} \
+            --input-dir ${{ github.event.inputs.input_dir || 'emojis' }} \
+            --output-dir ${{ github.event.inputs.output_dir || 'emojis/output' }}
           
       - name: Commit and push processed files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add emojis/output/
+          git add ${{ github.event.inputs.output_dir || 'emojis/output' }}
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Process emoji files"
-            git pull --rebase origin main
+            git commit -m "Process emoji files: ${{ github.event.inputs.files || 'X.json aTV.json' }}"
+            git pull --rebase origin ${{ github.ref_name }}
             git push
           fi    
