@@ -13,27 +13,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史，避免rebase问题
       
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-      
-      - name: Debug - List files
-        run: |
-          ls -la
-          pwd
-      
-      - name: Verify script existence
-        run: |
-          if [ ! -f "emojis/emoji_processor.py" ]; then
-            echo "Error: emoji_processor.py not found in emojis/ directory!"
-            exit 1
-          fi
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
       
       - name: Process emoji files
         run: |
@@ -46,10 +32,28 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ${{ github.event.inputs.output_dir || 'emojis/output' }}
+          
+          # 检查是否有文件需要提交
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Process JSON and TXT files in emojis directory"
-            git pull --rebase origin ${{ github.ref_name }}
-            git push
+            
+            # 使用合并而非rebase处理远程更新
+            git pull --no-rebase origin ${{ github.ref_name }}
+            
+            # 尝试解决冲突（如果有）
+            if git status | grep -q "conflict"; then
+              echo "合并冲突，尝试自动解决..."
+              
+              # 自动解决冲突：使用我们的修改
+              git checkout --ours $(git diff --name-only --diff-filter=U)
+              git add .
+              
+              # 继续合并
+              git commit -m "Merge remote changes"
+            fi
+            
+            # 推送修改
+            git push origin ${{ github.ref_name }}
           fi
