@@ -1,34 +1,26 @@
-: Process Emojis
+name: Emoji Manager Workflow
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
     paths:
-      - 'emojis/input/**'
+      - 'emojis/**'
+      - '.github/workflows/emoji-manager.yml'
 
 jobs:
-  process:
+  emoji-manager-job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # 获取完整历史记录
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    
-    - name: Run processor
-      run: |
-        cd emojis
-        python emoji_manager.py
-        
-    - name: Commit changes
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git pull origin main  # 先拉取最新变更
-        git add output/
-        git commit -m "Processed emojis [skip ci]" || echo "No changes"
-        git push origin main
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install --upgrade pip
+
+      - name: Run emoji manager
+        run: python emojis/emoji_manager.py emojis
