@@ -19,13 +19,25 @@ jobs:
         with:
           python-version: '3.9'
       
+      - name: Debug - List files
+        run: |
+          ls -la
+          pwd
+      
+      - name: Verify script existence
+        run: |
+          if [ ! -f "emoji/emoji_processor.py" ]; then
+            echo "Error: emoji_processor.py not found in emoji/ directory!"
+            exit 1
+          fi
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
       
       - name: Process emoji files
         run: |
-          python emoji_processor.py
+          python emoji/emoji_processor.py
           
       - name: Commit and push processed files
         run: |
