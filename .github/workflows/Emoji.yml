@@ -3,7 +3,7 @@ name: 更新替换Emoji
 on:
   push:
     paths:
-      - 'emojis/**'
+      - 'emoji/**'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Run emoji manager
         run: |
-          cd emojis
+          cd emoji
           python emoji_manager.py
 
       - name: Commit and push changes
