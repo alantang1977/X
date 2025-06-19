@@ -86,7 +86,7 @@ EMOJI_REGEX = re.compile(
 
 SUPPORTED_EXTS = (".json", ".txt", ".md", ".csv", ".xml", ".html", ".htm")
 
-def extract_emojis(text):
+def extract_emoji(text):
     # Find all emoji/sequence, keeping order, including duplicates
     return [m.group(0) for m in EMOJI_REGEX.finditer(text)]
 
@@ -240,9 +240,9 @@ def main():
         print(f"Processing {filename}")
         with open(src_path, "r", encoding="utf-8") as f:
             text = f.read()
-        emoji_list = extract_emojis(text)
+        emoji_list = extract_emoji(text)
         if not emoji_list:
-            print(f"  No emojis found in {filename}, skip.")
+            print(f"  No emoji found in {filename}, skip.")
             continue
         emoji_replace_map, positions = build_duplicate_emoji_mapping(emoji_list, EMOJI_POOL)
         ext = os.path.splitext(filename)[-1].lower()
