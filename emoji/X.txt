@@ -252,7 +252,16 @@
 {"name": "🥬┃广东电信源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/playlist/广东电信.txt","playerType":1},
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通","playerType":1},	
 {"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt","playerType":1},	
-	
+{
+    "name": "MQiTV",
+      "api": "csp_MQiTV",
+      "jar": "https://slink.ltd/https://raw.githubusercontent.com/sqspot/tac/refs/heads/main/jar/fmMQiTV.jar",
+      "ext": "http://182.113.234.53:8899",
+      "playerType": 1,
+
+      "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+},	
 {"name": "🥮┃aTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/aTV/refs/heads/master/output/result.m3u","playerType":1},	
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "🛺┃港台秒播頻道","type":0,"url":"http://is.is-great.org/ii/1749383140.txt","playerType":1},
