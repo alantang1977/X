@@ -1,3 +1,2 @@
-2025-06-21 10:26:40,139 - ERROR - url: https://web.banye.tech:7777/tvbus/yogurtTv.txt 失败❌, Error: Cannot connect to host web.banye.tech:7777 ssl:default [None]
-2025-06-21 10:26:40,171 - ERROR - url: http://live.nctv.top/x.txt 失败❌, Error: 404, message='Not Found', url='http://live.nctv.top/x.txt'
-2025-06-21 10:27:01,071 - ERROR - url: http://rihou.cc:555/gggg.nzk 失败❌, Error: Connection timeout to host http://rihou.cc:555/gggg.nzk
+2025-06-23 10:47:24,374 - ERROR - url: http://live.nctv.top/x.txt 失败❌, Error: 404, message='Not Found', url='http://live.nctv.top/x.txt'
+2025-06-23 10:47:26,254 - ERROR - url: https://gitee.com/t-v/tt/raw/t/c.txt 失败❌, Error: 404, message='Not Found', url='https://gitee.com/t-v/tt/raw/t/c.txt'
