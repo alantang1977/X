@@ -310,7 +310,7 @@
 {"name": "👑┃big直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u","playerType":1},	
 {"name": "🤿┃mytvsources直播","type":0,"url":"https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u","playerType":1},
 {"name": "🍵┃中国IPTV直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/中国IPTV","playerType":1},
-//{"name": "🏮┃codeberg·IPTV直播","type":0,"url":"https://codeberg.org/sy147258/iptv/raw/branch/main/电视","playerType":1},	
+{"name": "🏮┃大众·IPTV直播","type":0,"url":"http://8.138.7.223/51.txt","playerType":1},	
 {"name": "🚌┃hipy直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/hjdhnx/hipy-sniffer/refs/heads/main/static/lives/lives.txt","playerType":1},
 {"name": "🚑┃auto-iptv直播","type":0,"url":"http://47.120.41.246:8899/zb.txt","playerType":1},	
 {"name": "😁┃Gather港·澳·台","type":0,"url":"https://tv.iill.top/m3u/MyTV","playerType":1},
