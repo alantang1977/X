@@ -343,6 +343,7 @@
 {"name": "✨┃555TV直播","type": 0,"url": "http://rihou.cc:555/gggg.nzk","playerType":1},	
 {"name": "🎁┃migu直播","type": 0,"url": "https://json.doube.eu.org/live/migu/Sub.php","playerType":1},
 //{"name": "🍟┃Kimentanm直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u","playerType":1},
+{"name": "🍟┃APTV直播","type": 0,"url": "https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.iill.top/logo/{name}.png","ua": "okhttp/3.15,AptvPlayer/1.4.0","timeout": 10,"playerType": 2},
 {"name": "🎗️┃butterfly直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/butterfly202400/dsy/refs/heads/main/ln2403.m3u","playerType":1},
 {"name": "🐸┃全面直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/Collect.m3u","playerType":1},
 {"name": "❤️┃春盈直播","type": 0,"url": "http://home.jundie.top:81/Cat/tv/live.txt","playerType":1},
