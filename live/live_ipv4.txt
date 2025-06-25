@@ -1,5 +1,5 @@
 更新日期,#genre#
-2025-06-23,https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4
+2025-06-25,https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4
 🍎┃广东频道,#genre#
 广州综合,http://113.104.185.181:7088/udp/239.253.43.71:5146$IPV4•线路1
 广州综合,http://113.101.245.46:9988/udp/239.253.43.71:5146$IPV4•线路2

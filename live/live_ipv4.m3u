@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml","http://epg.51zmt.top:8000/e.xml","https://epg.pw/xmltv/epg_CN.xml","https://epg.pw/xmltv/epg_HK.xml","https://epg.pw/xmltv/epg_TW.xml"
-#EXTINF:-1 group-title="更新日期",2025-06-23
+#EXTINF:-1 group-title="更新日期",2025-06-25
 https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4
 #EXTINF:-1 group-title="🍎┃广东频道",广州综合
 http://113.104.185.181:7088/udp/239.253.43.71:5146$IPV4•线路1
