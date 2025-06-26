@@ -597,7 +597,7 @@ UFC格斗精选 ,http://150.158.112.123/公众号~玉玉软件库/mg.php?id=ufcg
 江苏教育,http://101.43.145.141:12002/migu/628008321.m3u8?migutoken=06e4323a51eb1984b3674ae4203e2ee3be2b07020c476b05f85cae725f8e927496c9fd1ea5aa54f7190f20da96eb671e6e8e59d66d7a7b2a77b6483e313585e59ec580d111fad1a397a1c880
 江苏影视频道,http://101.43.145.141:12002/migu/626064697.m3u8?migutoken=3c9c38a31399ca61a61d5d814e624bb50d3cc193afb0b75f0f400b9b7fb48bdb14701c0a64fccf6efe613a35a94b55241ad998a155451502b32e00b9f1db008c84f8f759b941709e95c379cd
 优漫卡通频道,http://101.43.145.141:12002/migu/626064703.m3u8?migutoken=7c2240820189c042277306129d3cdfd2c59404b7cf76cfc229daa1f5c6d30fb3fa7cdf0c91ea0d26c9b426799fbd46bf0befec19f1f05c82a77fbcb4bd48a113453503764e8479c02527cb2e
-大陸,#genre#
+央视卫视,#genre#
 CCTV1 综合HD,https://hls-gateway.vpstv.net/streams/476879.m3u8
 CCTV2 财经HD,https://hls-gateway.vpstv.net/streams/476881.m3u8
 CCTV3 综艺HD,https://hls-gateway.vpstv.net/streams/476883.m3u8
