@@ -1,6 +1,6 @@
 {
 "spider":"https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1750152746722/f0617.jpg;md5;9b4406d5c1de4d695db13d5f771a835a",
-"wallpaper":"http://王二小放牛娃牛逼.999888987.xyz","logo":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/junmeng.gif",
+"wallpaper":"https://bing.img.run/rand.php","logo":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/junmeng.gif",
 
 "sites":[
 ##常用系列
@@ -317,12 +317,12 @@
 {"name": "🍌┃Gather电视直播","type":0,"url":"https://tv.iill.top/m3u/Gather","playerType":1},
 {"name": "🐲┃Gather网络直播","type":0,"url":"https://tv.iill.top/m3u/Live","playerType":1},
 {"name": "🌞┃日后港·澳·台","type":0,"url":"http://rihou.cc:567/gggg.nzk","playerType":1},
-//{"name": "🌞┃日后港·澳·台","type": 0,"url": "http://rihou.cc:567/gggg.nzk","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🚈┃小众直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/go.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🌞┃小众直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/影视频道","playerType":1},
 {"name": "🔥┃野火港·澳·韩·台直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 //{"name": "🥬┃BOX港·澳·韩·台直播","type": 0,"url": "http://8.138.7.223/live.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 //{"name": "🐏┃Live肥羊直播","type": 3,"api": "csp_Feiyang","url": "tv.m3u","ext": "https://gh.tryxd.cn/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://gh.tryxd.cn/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5","jar": "https://gh.tryxd.cn/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"},
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
-//{"name": "🎳┃judy直播VPN","type": 0,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.iill.top/logo/{name}.png","ua": "xieanqishiwoerzi/0.0.1","timeout": 10,"playerType": 2},
 {"name": "🎳┃judy直播","type": "0","pass": true,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","timeout": 30,"playerType": 1,"ua": "xieanqishiwoerzi/0.0.1"},
 {"name": "🧸┃CCSH直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/CCSH/IPTV/main/live.m3u","playerType":1},
 {"name": "🛺┃IPTV-CCSH直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-CCSH/refs/heads/main/live.m3u","playerType":1},
@@ -337,7 +337,7 @@
 {"name": "🛍️┃zhiboyuan直播","type": 0,"url": "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy","playerType":1},
 {"name": "🛍️┃channels直播","type": 0,"url": "https://epg.pw/test_channels.m3u","playerType":1},
 {"name": "🛍️┃Free-TV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8","playerType":1},	
-{"name": "⚕️┃iptv粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
+//{"name": "⚕️┃iptv粤Live","type": 0,"url": "http://box.1890222.xyz:8081/iptv/live.m3u","playerType":1},
 {"name": "🐰┃wwb521粤港澳","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u","playerType":1},
 //{"name": "🍡┃kimwang1978直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt","playerType":1},
 {"name": "✨┃555TV直播","type": 0,"url": "http://rihou.cc:555/gggg.nzk","playerType":1},	
