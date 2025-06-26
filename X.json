@@ -320,7 +320,7 @@
 {"name": "🚈┃小众直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/go.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "📟┃小众直播","type":0,"url":"https://cnb.cool/junchao.tang/llive/-/git/raw/main/影视频道","playerType":1},
 {"name": "🌶️┃野火港·澳·韩·台直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-//{"name": "🔑┃BOX港·澳·韩·台直播","type": 0,"url": "http://8.138.7.223/live.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🔑┃BOX直播","type": 0,"url": "https://xiaotan.860775.xyz/mytvsuper.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 //{"name": "🗝️┃Live肥羊直播","type": 3,"api": "csp_Feiyang","url": "tv.m3u","ext": "https://gh.tryxd.cn/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://gh.tryxd.cn/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5","jar": "https://gh.tryxd.cn/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"},
 {"name": "🐤┃Guovin直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u","playerType": 1,"epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://live.fanmingming.com/tv/{name}.png"},	
 {"name": "🏒┃judy直播","type": "0","pass": true,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","timeout": 30,"playerType": 1,"ua": "xieanqishiwoerzi/0.0.1"},
