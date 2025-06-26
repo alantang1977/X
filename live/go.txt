@@ -1,4 +1,4 @@
-咪咕,#genre#
+央视咪咕,#genre#
 CCTV1,http://101.43.145.141:12002/gaoma/cctv1.m3u8
 CCTV1,http://101.43.145.141:12002/migu/608807420.m3u8?migutoken=7594047e85530de86e5c89e057eb75121d90648c33cd394e0246f75e0e0866a2e6db333d386ff8398ecbef533c403a869fec56017728fb5fe03990dc5b749e39ab42d75bae00cc28b90f0ecf
 CCTV1,http://101.43.145.141:12002/itv/6000000001000029752.m3u8?cdn=wasusyt
@@ -100,7 +100,8 @@ CGTN西语,http://goo.bkpcp.top/mg/cgtne#http://z.b.bkpcp.top/m.php?id=cgtne
 CGTN阿语,http://goo.bkpcp.top/mg/cgtna#http://z.b.bkpcp.top/m.php?id=cgtna
 CGTN法语,http://goo.bkpcp.top/mg/cgtnf#http://z.b.bkpcp.top/m.php?id=cgtnf
 CGTN俄语,http://goo.bkpcp.top/mg/cgtnr#http://z.b.bkpcp.top/m.php?id=cgtnr
-TVB,#genre#
+
+港澳台外,#genre#
 翡翠台,https://hls-gateway.vpstv.net/streams/476929.m3u8
 J2台,https://hls-gateway.vpstv.net/streams/476932.m3u8
 TVBPlus,https://hls-gateway.vpstv.net/streams/476923.m3u8
@@ -125,8 +126,6 @@ TVBJ1台,https://hls-gateway.vpstv.net/streams/476199.m3u8
 无线音乐,https://hls-gateway.vpstv.net/streams/709467.m3u8
 无线剧场,https://hls-gateway.vpstv.net/streams/709468.m3u8
 无线话当年,https://hls-gateway.vpstv.net/streams/709469.m3u8
-
-港澳台外,#genre#
 ZooMoo,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=ZooMoo
 Nickelodeon,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=Nickelodeon
 NickJr儿童频道,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=NickJr儿童频道
@@ -203,7 +202,7 @@ GinxTV电竞频道,http://api.mytv666.top/api/qwt.php?t=体育频道&id=GinxTV�
 智林体育台,http://api.mytv666.top/api/qwt.php?t=体育频道&id=智林体育台
 TRACESportStars,http://api.mytv666.top/api/qwt.php?t=体育频道&id=TRACESportStars
 纬来体育,http://api.mytv666.top/api/qwt.php?t=体育频道&id=纬来体育
-香港频道,#genre#
+港澳台外,#genre#
 凤凰中文台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰中文台
 凤凰资讯台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰资讯台
 凤凰香港台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰香港台
@@ -594,7 +593,7 @@ UFC格斗精选 ,http://150.158.112.123/公众号~玉玉软件库/mg.php?id=ufcg
 四川卫视,http://58.220.219.14:9901/tsfile/live/0123_1.m3u8#http://61.157.139.15:9901/tsfile/live/2393_1.m3u8#http://222.169.85.8:9901/tsfile/live/0123_1.m3u8#http://125.89.163.44:8888/udp/239.77.1.215:5146#http://113.25.252.226:9901/tsfile/live/0123_1.m3u8#http://118.122.189.74:9901/tsfile/live/0123_1.m3u8#http://114.252.238.87:8000/udp/239.3.1.29:8288#http://123.132.233.194:352/tsfile/live/0123_1.m3u8#http://221.2.148.205:8154/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0#http://61.136.67.238:50085/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0#http://60.2.190.206:4000/udp/239.253.92.16:6043#http://123.138.22.30:9901/tsfile/live/0123_1.m3u8#http://124.116.183.146:9901/tsfile/live/0123_1.m3u8#http://60.7.56.33:4000/udp/239.253.92.16:6043
 康巴卫视,http://61.157.139.15:9901/tsfile/live/2415_1.m3u8?key=txiptv&playlive=1&authid=0
 蒙语卫视,https://livestream-bt.nmtv.cn/nmtv/2315general.m3u8?txSecret=4971666599ef9411629213c9a300bf66&txTime=771EF880
-地方,#genre#
+大陸,#genre#
 江苏教育,http://101.43.145.141:12002/migu/628008321.m3u8?migutoken=06e4323a51eb1984b3674ae4203e2ee3be2b07020c476b05f85cae725f8e927496c9fd1ea5aa54f7190f20da96eb671e6e8e59d66d7a7b2a77b6483e313585e59ec580d111fad1a397a1c880
 江苏影视频道,http://101.43.145.141:12002/migu/626064697.m3u8?migutoken=3c9c38a31399ca61a61d5d814e624bb50d3cc193afb0b75f0f400b9b7fb48bdb14701c0a64fccf6efe613a35a94b55241ad998a155451502b32e00b9f1db008c84f8f759b941709e95c379cd
 优漫卡通频道,http://101.43.145.141:12002/migu/626064703.m3u8?migutoken=7c2240820189c042277306129d3cdfd2c59404b7cf76cfc229daa1f5c6d30fb3fa7cdf0c91ea0d26c9b426799fbd46bf0befec19f1f05c82a77fbcb4bd48a113453503764e8479c02527cb2e
@@ -701,7 +700,7 @@ CHC高清电影/265,https://hls-gateway.vpstv.net/streams/708870.m3u8
 新疆卫视,https://hls-gateway.vpstv.net/streams/709094.m3u8
 CGTN 中国新闻,https://hls-gateway.vpstv.net/streams/709495.m3u8
 上海纪实,https://hls-gateway.vpstv.net/streams/709570.m3u8
-港澳,#genre#
+港澳台外,#genre#
 黃金翡翠台,https://hls-gateway.vpstv.net/streams/477554.m3u8
 TVB翡翠台HD,https://hls-gateway.vpstv.net/streams/476929.m3u8
 TVB明珠台HD,https://hls-gateway.vpstv.net/streams/476936.m3u8
@@ -1863,7 +1862,7 @@ HAPPY CHANNEL,https://hls-gateway.vpstv.net/streams/709085.m3u8
 erox,https://hls-gateway.vpstv.net/streams/644724.m3u8
 eroxxx,https://hls-gateway.vpstv.net/streams/644725.m3u8
 brazzers,https://hls-gateway.vpstv.net/streams/644730.m3u8
-💓港澳台📶,#genre#
+港澳台外,#genre#
 翡翠台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fct#http://php.jdshipin.com:8880/smt.php?id=jade_twn#http://122.152.202.33/s/81a8a44f/index.m3u8?id=53
 TVB无线功夫,http://v2h.jdshipin.com/asia_action1/1asia_action.stream/chunklist_w101.m3u8
 TVB无线新闻,http://php.jdshipin.com:8880/smt.php?id=inews_twn
@@ -2079,7 +2078,7 @@ BAND NEWS,https://stream1.freetv.fun/band-news-1.m3u8
 DAZN2,https://stream1.freetv.fun/dazn-sport-2-1.ctv
 skysports,https://stream1.freetv.fun/skysports-14.ctv#https://stream1.freetv.fun/skysports-15.ctv#https://stream1.freetv.fun/skysports-16.ctv
 
-港澳台,#genre#
+港澳台外,#genre#
 凤凰香港,http://50.7.234.10:8278/hkphoenix_twn/playlist.m3u8?tid=MACA2858291128582911&ct=19225&tsum=0f01288bbaa6c0403d07e96b0a5db4ed#https://stream1.freetv.fun/feng-huang-xiang-gang-5.ctv#http://wo.xiang.lai.ge.bi.jiao.chang.de.yu.ming.wan.wan.jie.xi.bu.zhi.dao.ke.bu.ke.xing.hk3.345888.xyz.cdn.cloudflare.net/gt/aktv.php?variable=null-5
 凤凰中文,http://202.168.187.208:9089/tsfile/live/1009_1.m3u8#https://stream1.freetv.fun/4e695e885cc20b20b7e3ec874fe52ed75e27443778c8ff29e498c4c9d7cec4a0.m3u8#https://stream1.freetv.fun/2cd8b0d0e8b7bda9c76ae4e0d554782532055b48e88e266f743eaa21ca7e44e0.ctv#https://stream1.freetv.fun/feng-huang-zhong-wen-10.m3u8#https://stream1.freetv.fun/feng-huang-zhong-wen-11.m3u8#https://stream1.freetv.fun/feng-huang-zhong-wen-12.m3u8#https://stream1.freetv.fun/feng-huang-zhong-wen-2.ctv#https://stream1.freetv.fun/feng-huang-zhong-wen-4.m3u8#https://stream1.freetv.fun/feng-huang-zhong-wen-18.m3u8#https://stream1.freetv.fun/feng-huang-zhong-wen-5.ctv#https://stream1.freetv.fun/feng-huang-zhong-wen-15.ctv#https://stream1.freetv.fun/feng-huang-zhong-wen-12.ctv
 凤凰资讯,http://cdn5.1678520.xyz:80/live/live2.1.php?id=fhzx#https://stream1.freetv.fun/5fb13a1ac8acfc0fbc7121568b65c78e0383919949c35c2a7f278a1ddd081e2b.m3u8#https://stream1.freetv.fun/feng-huang-zi-xun-1.m3u8#https://stream1.freetv.fun/feng-huang-zi-xun-8.ctv#https://stream1.freetv.fun/feng-huang-zi-xun-8.m3u8#https://stream1.freetv.fun/feng-huang-zi-xun-2.ctv#http://wo.xiang.lai.ge.bi.jiao.chang.de.yu.ming.wan.wan.jie.xi.bu.zhi.dao.ke.bu.ke.xing.hk3.345888.xyz.cdn.cloudflare.net/gt/aktv.php?variable=null-4#https://stream1.freetv.fun/feng-huang-zi-xun-24.ctv
