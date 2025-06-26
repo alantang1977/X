@@ -131,7 +131,6 @@ ZooMoo,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=ZooMoo
 Nickelodeon,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=Nickelodeon
 NickJr儿童频道,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=NickJr儿童频道
 i-Fun動漫台,http://api.mytv666.top/api/qwt.php?t=少儿频道&id=i-Fun動漫台
-影视频道~8218,#genre#
 POPC,http://api.mytv666.top/api/qwt.php?t=影视频道&id=POPC
 Now爆谷台,http://api.mytv666.top/api/qwt.php?t=影视频道&id=Now爆谷台
 Now星影台,http://api.mytv666.top/api/qwt.php?t=影视频道&id=Now星影台
@@ -161,7 +160,7 @@ HBO强档,http://api.mytv666.top/api/qwt.php?t=影视频道&id=HBO强档
 HBO家庭,http://api.mytv666.top/api/qwt.php?t=影视频道&id=HBO家庭
 好莱坞电影,http://api.mytv666.top/api/qwt.php?t=影视频道&id=好莱坞电影
 amc最爱电影,http://api.mytv666.top/api/qwt.php?t=影视频道&id=amc最爱电影
-体育频道~8218,#genre#
+体育频道,#genre#
 CCTV5,http://api.mytv666.top/api/qwt.php?t=体育频道&id=CCTV5
 CCTV5+,http://api.mytv666.top/api/qwt.php?t=体育频道&id=CCTV5+
 CCTV16,http://api.mytv666.top/api/qwt.php?t=体育频道&id=CCTV16
@@ -204,7 +203,7 @@ GinxTV电竞频道,http://api.mytv666.top/api/qwt.php?t=体育频道&id=GinxTV�
 智林体育台,http://api.mytv666.top/api/qwt.php?t=体育频道&id=智林体育台
 TRACESportStars,http://api.mytv666.top/api/qwt.php?t=体育频道&id=TRACESportStars
 纬来体育,http://api.mytv666.top/api/qwt.php?t=体育频道&id=纬来体育
-香港频道~8218,#genre#
+香港频道,#genre#
 凤凰中文台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰中文台
 凤凰资讯台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰资讯台
 凤凰香港台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=凤凰香港台
@@ -260,7 +259,7 @@ HandsUP,http://api.mytv666.top/api/qwt.php?t=香港频道&id=HandsUP
 粤语片台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=粤语片台
 亚洲综合娱乐台,http://api.mytv666.top/api/qwt.php?t=香港频道&id=亚洲综合娱乐台
 28AI智慧赛马,http://api.mytv666.top/api/qwt.php?t=香港频道&id=28AI智慧赛马
-台湾频道~8218,#genre#
+台湾频道,#genre#
 中视,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=中视
 中视新闻,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=中视新闻
 中视经典,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=中视经典
@@ -378,7 +377,7 @@ Smart知识台,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=Smart知识�
 MTV音乐频道,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=MTV音乐频道
 韩国娱乐台,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=韩国娱乐台
 猪哥亮歌厅秀,http://api.mytv666.top/api/qwt.php?t=台湾频道&id=猪哥亮歌厅秀
-国外频道~8218,#genre#
+国外频道,#genre#
 AstroAEC,http://api.mytv666.top/api/qwt.php?t=国外频道&id=AstroAEC
 AstroQJ,http://api.mytv666.top/api/qwt.php?t=国外频道&id=AstroQJ
 AstroAOD,http://api.mytv666.top/api/qwt.php?t=国外频道&id=AstroAOD
