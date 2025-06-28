@@ -253,6 +253,7 @@
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通","playerType":1},	
 {"name": "🐏┃TG收集tv","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/TG收集.m3u","playerType":1},	
 {"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt","playerType":1},	
+{"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 	
 {"name": "🥮┃aTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/aTV/refs/heads/master/output/result.m3u","playerType":1},	
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
@@ -329,7 +330,6 @@
 {"name": "🧸┃CCSH直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/CCSH/IPTV/main/live.m3u","playerType":1},
 {"name": "⛴️┃IPTV-CCSH直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-CCSH/refs/heads/main/live.m3u","playerType":1},
 {"name": "🔑┃ssili126直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt","playerType":1},
-{"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🎂┃suxuang直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u","playerType":1},
 {"name": "😎┃咪咕直播","type": 0,"url": "https://yun.urldwz.com/f/Q6y3ca/migu.m3u","timeout": 10},
 {"name": "🛍️┃myernestlu直播","type": 0,"url": "https://myernestlu.github.io/zby.txt","playerType":1},
