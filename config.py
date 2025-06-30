@@ -5,6 +5,9 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/TG收集.m3u",
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt",
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通",
     "https://gitee.com/t-v/tt/raw/t/c.txt",
     "http://kkk.888.3116598.xyz/user/HKTV.txt",
     "http://gg.7749.org/z/i/gdss.txt",
