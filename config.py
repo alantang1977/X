@@ -7,9 +7,7 @@ ip_version_priority = "ipv4"
 source_urls = [
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/TG收集.m3u",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt",
-    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通",
-    "https://gitee.com/t-v/tt/raw/t/c.txt",
-    "http://kkk.888.3116598.xyz/user/HKTV.txt",
+    "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通",   
     "http://gg.7749.org/z/i/gdss.txt",
     "http://is.is-great.org/ii/1749383140.txt",
     "https://live.kakaxi-1.ink/ipv4.txt",
