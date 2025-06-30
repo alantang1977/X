@@ -58,6 +58,8 @@ http://www.mpanso.com/小米/DEMO.json
 
 ----
 
+## 🛩️Github文件加速：https://gh.catmak.name/
+
 ## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.com/jm/ 
 
 TVBOX/影视接口解密  https://tools.v1.mk/
