@@ -28,7 +28,18 @@
 {"key":"Lkdy","name":"🏔️┃来看┃影视","type":3,"api":"csp_Lkdy","jar":"./jar/PandaQ.jpg"},
 {"key":"cspJ","name":"🌎┃饺子┃外剧","type":3,"api":"csp_Jiaozi","playerType":2,"jar":"./jar/PandaQ.jpg"},
 {"key":"Wwys","name":"🌾️┃农民┃影视","type":3,"api":"csp_Wwys","ext":"https://www.wwgz.cn","jar":"./jar/PandaQ.jpg"},
-
+{
+            "key": "爱瓜TV",
+            "name": "爱瓜TV",
+            "type": 4,
+            "api": "http://zhangqun66.com/aigua.php",
+            "searchable": 1,
+            "style": {
+                "type": "rect",
+                "ratio": 1.33
+            },
+            "changeable": 1
+}, 
 	
 ##PY源系列
 {"key": "火车","name": "🚂┃火车太顺┃TV","type": 3,"api": "./py/火车太顺APP.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
