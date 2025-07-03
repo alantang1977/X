@@ -15,7 +15,7 @@
 {"key": "边缘","name": "🍐┃边缘影视┃TV","type": 3,"api": "./py/边缘影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key":"原创","name":"🧧┃修罗┃影视","type":3,"api":"csp_YCyzGuard","timeout":15,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"白白","name":"🐟┃素白┃秒播","type":3,"api":"csp_SbaibaiGuard","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key": "爱瓜","name": "🥝┃爱瓜┃秒播","type": 3,"api": "./py/爱瓜.py","searchable": 1,"filterable": 0,"changeable": 0},
+{"key": "iKanbot","name": "🥽┃iKanbot┃秒播","type": 3,"api": "csp_Ikanbot","jar": "./jar/XBPQ.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://v.aikanbot.com"},
 {"key":"Guazi","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Guazi","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext": "","jar":"./pg.jar;md5;7840d0b61f9641a47728e3a92020f35a"},
 //{"key":"Xiaomi","name":"🍚┃PG┃小米","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.mucpan.cc/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI","jar":"./pg.jar;md5;7840d0b61f9641a47728e3a92020f35a"},
 {"key": "至臻","name": "💌┃️至臻┃影视","type": 3,"api": "csp_Wobg","quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60,"ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN","jar":"./pg.jar;md5;7840d0b61f9641a47728e3a92020f35a"},	
