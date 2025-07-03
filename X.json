@@ -274,7 +274,7 @@
 {"name": "🔨┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
 
 {"name": "🚎┃Mytv直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/myTV.txt","playerType":1},
-{"name": "📻┃My爱米直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/爱米.txt","playerType":1},
+//{"name": "📻┃My爱米直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/爱米.txt","playerType":1},
 
 {"name": "🪓┃网络收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
 {"name": "📞┃vbskycn直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u","playerType":1},
