@@ -90,7 +90,7 @@
 "lives": [
 {"name": "🦸┃tangTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "📢┃JunTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.m3u","playerType":1},
-{"name": "👟┃chaoMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/result.m3u","playerType":1},
+{"name": "👟┃chaoMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Nice/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "📺┃vbskycn直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u","playerType":1},
 {"name": "🎃┃全国秒播TV","type":0,"url":"http://live.nctv.top/x.txt","playerType":1},	
@@ -114,7 +114,7 @@
 //{"name": "🍳┃SMT直播","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/doube-ba/Sub/refs/heads/main/live/live_smt_proxy_001.py","ext": {"proxy": {"http": "http://127.0.0.1:10809","https": "http://127.0.0.1:10809"}}},
 {"name": "🍔┃hostemail直播","type" : 0,"url" : "https://gh.tryxd.cn/https://raw.githubusercontent.com/hostemail/cdn/main/live/tv.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},	
 
-{"name": "🦆┃SuperMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/user_result.txt","playerType":1},
+{"name": "🦆┃Nice直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Nice/refs/heads/main/output/user_result.txt","playerType":1},
 {"name": "💤┃JunTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/user_result.txt","playerType":1},
 	
 {"name": "🩰┃Meroser直播","type": 0,"url": "https://gitlab.com/Meroser/IPTV/-/raw/main/IPTV-demo.m3u","playerType":1},
