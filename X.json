@@ -259,7 +259,7 @@
 "lives": [
 {"name": "🦸┃tangTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "🎲┃xTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.m3u","playerType":1},
-{"name": "🐬┃SuperMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/result.m3u","playerType":1},
+{"name": "🐬┃Nice直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Nice/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "🏀┃广东移动源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/playlist/广东移动.txt","playerType":1},
 {"name": "🥬┃广东电信源直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/playlist/广东电信.txt","playerType":1},
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/全网通","playerType":1},
@@ -305,7 +305,7 @@
 {"name": "🍔┃hostemail直播","type" : 0,"url" : "https://gh.tryxd.cn/https://raw.githubusercontent.com/hostemail/cdn/main/live/tv.txt","ua" : "okhttp/3.15","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},	
 {"name": "🎞️┃Rivens7頻道","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/Rivens7/Livelist/refs/heads/main/IPTV.m3u","playerType":1},
 
-{"name": "🗻┃SuperMAN直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/SuperMAN/refs/heads/main/output/user_result.txt","playerType":1},
+{"name": "🗻┃Nice直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Nice/refs/heads/main/output/user_result.txt","playerType":1},
 {"name": "💤┃JunTV直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/user_result.txt","playerType":1},
 
 {"name": "🍖️┃沐佬直播","type": 3,"api": "https://json.doube.eu.org/python/live_kzb.py","ext": "68747470733A2F2F6A7A623132332E7A68756261696368656E672E636F6D2F70726F642D6170692F697074762F676574497074764C697374"},
