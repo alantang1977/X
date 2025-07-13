@@ -11,7 +11,7 @@ source_urls = [
     "https://live.catvod.com/mq.php?catvod.com=m3u",
     "http://183.189.97.61:35455/tv.m3u",
     "http://115.190.105.236:35455/tv.m3u",
-    "https://since1986.fun/epg/mix.m3u",",
+    "https://since1986.fun/epg/mix.m3u",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/TG收集.m3u",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通",   
