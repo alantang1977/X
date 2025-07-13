@@ -5,6 +5,13 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "http://is.is-great.org/i/0885557.txt",
+    "https://115.190.105.236/vip/qwt.m3u",
+    "https://115.190.105.236/vip/vip.m3u",
+    "https://live.catvod.com/mq.php?catvod.com=m3u",
+    "http://183.189.97.61:35455/tv.m3u",
+    "http://115.190.105.236:35455/tv.m3u",
+    "https://since1986.fun/epg/mix.m3u",",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/TG收集.m3u",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/webview.txt",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/全网通",   
