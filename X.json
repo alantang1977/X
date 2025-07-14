@@ -267,6 +267,7 @@
 {"name": "🏂┃TG收集tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/TG收集.m3u","playerType":1},
 {"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/webview.txt","playerType":1},
 {"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+{"name": "🎃┃Alan央视.卫视TV","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/adventure/refs/heads/main/itvlist.txt","playerType":1},
 {"name": "🥔┃shanxixr直播","type": 0,"url": "http://kds.shanxixr.com/migu01.txt","playerType":1},
 {"name": "🎮┃IPTV_auto直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV/main/live_ipv4.m3u","playerType":1},	
 {"name": "🧩┃PG直播","type": 0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/pg/refs/heads/main/live.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -282,7 +283,6 @@
 
 {"name": "🎞️┃live直播","type": 0,"url": "https://live.916919.xyz/live.txt","playerType":1},
 {"name": "📞┃vbskycn直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u","playerType":1},
-//{"name": "🎃┃全国秒播TV","type":0,"url":"http://live.nctv.top/x.txt","playerType":1},
 {"name": "🏐┃my机车直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/机车","playerType":1},
 
 //{"name": "🌳┃XingHuo","url": "https://json.doube.eu.org/XingHuo.txt","header": {"Referer": "https://www.kds.tw/"}},
