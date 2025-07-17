@@ -100,8 +100,8 @@
 {"name": "LiTV 52sw", "type": 0, "url": "http://xg.52sw.top/iptv/litv.php", "ua": "okhttp/3.15", "epg": "http://iptv.52sw.top:668/?ch={name}&date={date}", "pass": true},
 {"name": "WEBTV 港台", "type": 0, "url": "https://gh-proxy.com/raw.githubusercontent.com/alenin-zhang/IPTV/master/web2.txt", "ua": "okhttp/3.15", "epg": "https://iptv.crestekk.cn/epgphp/?ch={name}&date={date}"},
 {"name":"Catvod smart","url":"https://live.catvod.com/smart.php"},
-
-
+{"name":"斯玛特","url":"https://cnb.cool/junchao.tang/live/-/raw/main/斯玛特.py"},
+{"name":"amt","url":"https://cnb.cool/junchao.tang/live/-/raw/main/smt.py"},	
 {"name":"Judy","url":"https://raw.githubusercontent.com/sqspot/tac/refs/heads/main/tvbus/merged_judy.m3u"},
 	
 {"name": "🥮┃666直播","type": 0,"url": "http://api.mytv666.top/lives/free.php?type=txt","playerType":1},
