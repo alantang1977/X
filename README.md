@@ -51,7 +51,7 @@ https://tools.v1.mk/
 
 http://www.饭太硬.com/tv
 
-https://肥猫.com/
+https://肥猫.com
 
 http://www.mpanso.com/小米/DEMO.json
 
