@@ -261,6 +261,7 @@
 {"name": "🎲┃xTV直播","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.m3u","playerType":1},
 {"name": "🐬┃Nice直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/Nice/refs/heads/main/output/result.m3u","playerType":1},
 {"name": "🛹┃咪咕直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/咪咕直播","playerType":1},
+{"name":"📢┃smart直播","url":"https://live.catvod.com/smart.php"},
 {"name": "🪓┃网络收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
 
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/全网通","playerType":1},
