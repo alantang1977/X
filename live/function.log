@@ -1,6 +1,8 @@
-2025-07-19 10:41:57,760 - ERROR - url: http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt 失败❌, Error: 404, message='Not Found', url='http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt'
-2025-07-19 10:41:57,920 - ERROR - url: https://live.catvod.com/mq.php?catvod.com=m3u 失败❌, Error: 403, message='Forbidden', url='https://www.catvod.com/'
-2025-07-19 10:41:57,966 - ERROR - url: http://live.nctv.top/x.txt 失败❌, Error: 404, message='Not Found', url='http://live.nctv.top/x.txt'
-2025-07-19 10:42:27,821 - ERROR - url: https://115.190.105.236/vip/qwt.m3u 失败❌, Error: Connection timeout to host https://115.190.105.236/vip/qwt.m3u
-2025-07-19 10:42:27,821 - ERROR - url: https://115.190.105.236/vip/vip.m3u 失败❌, Error: Connection timeout to host https://115.190.105.236/vip/vip.m3u
-2025-07-19 10:42:27,821 - ERROR - url: https://since1986.fun/epg/mix.m3u 失败❌, Error: Connection timeout to host https://since1986.fun/epg/mix.m3u
+2025-07-21 10:56:10,707 - ERROR - url: http://183.189.97.61:35455/tv.m3u 失败❌, Error: Cannot connect to host 183.189.97.61:35455 ssl:default [Connect call failed ('183.189.97.61', 35455)]
+2025-07-21 10:56:10,713 - ERROR - url: http://115.190.105.236:35455/tv.m3u 失败❌, Error: Cannot connect to host 115.190.105.236:35455 ssl:default [Connect call failed ('115.190.105.236', 35455)]
+2025-07-21 10:56:11,155 - ERROR - url: http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt 失败❌, Error: 404, message='Not Found', url='http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt'
+2025-07-21 10:56:11,273 - ERROR - url: https://live.catvod.com/mq.php?catvod.com=m3u 失败❌, Error: 403, message='Forbidden', url='https://www.catvod.com/'
+2025-07-21 10:56:12,266 - ERROR - url: http://live.nctv.top/x.txt 失败❌, Error: 404, message='Not Found', url='http://live.nctv.top/x.txt'
+2025-07-21 10:56:40,556 - ERROR - url: https://115.190.105.236/vip/qwt.m3u 失败❌, Error: Connection timeout to host https://115.190.105.236/vip/qwt.m3u
+2025-07-21 10:56:40,556 - ERROR - url: https://115.190.105.236/vip/vip.m3u 失败❌, Error: Connection timeout to host https://115.190.105.236/vip/vip.m3u
+2025-07-21 10:56:41,543 - ERROR - url: https://since1986.fun/epg/mix.m3u 失败❌, Error: Connection timeout to host https://since1986.fun/epg/mix.m3u
