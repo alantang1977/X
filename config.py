@@ -5,6 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "http://8.138.7.223/51.php",
     "http://kds.shanxixr.com/migu01.txt",
     "http://is.is-great.org/i/0885557.txt",
     "https://115.190.105.236/vip/qwt.m3u",
