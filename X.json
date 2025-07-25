@@ -265,8 +265,9 @@
 {"name": "🐮┃judy直播","type" : 0,"url" : "https://judy.diver.eu.org/m3u/4GTV-TS.m3u","ua" : "judy/5.2.1","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 
 {"name": "🛹┃咪咕直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/咪咕直播","playerType":1},
-{"name":"🕹️️┃smart直播","url":"https://live.catvod.com/smart.php"},
+{"name": "🕹️️┃smart直播","url":"https://live.catvod.com/smart.php"},
 {"name": "🪓┃网络收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
+{"name": "🛩️┃TV收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/TVshow/refs/heads/main/data/output/iptv_collection.m3u","playerType":1},
 
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/全网通","playerType":1},
 {"name": "🥝┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},
