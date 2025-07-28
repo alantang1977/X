@@ -1,184 +1,229 @@
 # -*- coding: utf-8 -*-
-# by @嗷呜
-import json
 import sys
 import time
 import requests
-from base64 import b64decode, b64encode
-from Crypto.Hash import MD5
 from pyquery import PyQuery as pq
 sys.path.append('..')
 from base.spider import Spider
 
 class Spider(Spider):
-
     def init(self, extend=""):
         pass
 
     def getName(self):
-        pass
+        return "4kfox爬虫"
 
     def isVideoFormat(self, url):
-        pass
+        return any([url.endswith(ext) for ext in ['.mp4', '.m3u8', '.flv', '.avi']])
 
     def manualVideoCheck(self):
-        pass
+        return False
 
     def destroy(self):
         pass
 
-    host='https://4kfox.com/'
-
+    # 网站基础配置
+    host = 'https://4kfox.com'
     headers = {
-        'User-Agent': 'okhttp-okgo/jeasonlzy',
-        'Accept-Language': 'zh-CN,zh;q=0.8'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Referer': host
     }
 
     def homeContent(self, filter):
-        data=requests.post(f'{self.host}/v3/type/top_type',headers=self.headers,files=self.getfiles({'': (None, '')})).json()
-        result = {}
-        classes = []
-        filters = {}
-        for k in data['data']['list']:
-            classes.append({
-                'type_name': k['type_name'],
-                'type_id': k['type_id']
-            })
-            fts = []
-            for i,x in k.items():
-                if isinstance(x, list) and len(x)>2:
-                    fts.append({
-                        'name': i,
-                        'key': i,
-                        'value': [{'n': j, 'v': j} for j in x if j and j!= '全部']
+        """获取首页分类信息"""
+        result = {"class": [], "filters": {}}
+        try:
+            resp = requests.get(self.host, headers=self.headers, timeout=10)
+            doc = pq(resp.text)
+            
+            # 解析分类（导航栏中的主要分类）
+            categories = doc('nav#main-nav ul li a').items()
+            for item in categories:
+                href = item.attr('href')
+                if not href or 'javascript' in href:
+                    continue
+                # 提取分类ID（从URL中截取，如/category/movies -> movies）
+                tid = href.strip('/').split('/')[-1]
+                type_name = item.text().strip()
+                if tid and type_name and type_name not in ['Home', 'TV Shows', 'Movies']:  # 过滤不需要的分类
+                    result["class"].append({
+                        "type_id": tid,
+                        "type_name": type_name
                     })
-            if len(fts):filters[k['type_id']] = fts
-        result['class'] = classes
-        result['filters'] = filters
-        return result
+            
+            # 过滤条件（示例：按年份/地区，实际可根据网站筛选器扩展）
+            result["filters"] = {}
+            return result
+        except Exception as e:
+            print(f"首页分类解析错误: {e}")
+            return result
 
     def homeVideoContent(self):
-        data=requests.post(f'{self.host}/v3/type/tj_vod',headers=self.headers,files=self.getfiles({'': (None, '')})).json()
-        return {'list':self.getv(data['data']['cai']+data['data']['loop'])}
+        """获取首页推荐视频"""
+        try:
+            resp = requests.get(self.host, headers=self.headers, timeout=10)
+            doc = pq(resp.text)
+            
+            # 解析首页推荐视频（如Featured、Latest Updates区域）
+            video_items = doc('div.post-listing div.item').items()
+            video_list = []
+            for item in video_items:
+                video = self.parse_video_item(item)
+                if video:
+                    video_list.append(video)
+            return {"list": video_list}
+        except Exception as e:
+            print(f"首页推荐视频解析错误: {e}")
+            return {"list": []}
 
     def categoryContent(self, tid, pg, filter, extend):
-        files = {
-            'type_id': (None, tid),
-            'limit': (None, '12'),
-            'page': (None, pg)
-        }
-        for k,v in extend.items():
-            if k=='extend':k='class'
-            files[k] = (None, v)
-        data=requests.post(f'{self.host}/v3/home/type_search',headers=self.headers,files=self.getfiles(files)).json()
-        result = {}
-        result['list'] = self.getv(data['data']['list'])
-        result['page'] = pg
-        result['pagecount'] = 9999
-        result['limit'] = 90
-        result['total'] = 999999
-        return result
+        """获取分类下的视频列表（分页）"""
+        result = {"list": [], "page": pg, "pagecount": 1, "limit": 20, "total": 0}
+        try:
+            # 构造分类页URL（如https://4kfox.com/category/movies/page/2）
+            url = f"{self.host}/category/{tid}/page/{pg}" if pg != "1" else f"{self.host}/category/{tid}"
+            resp = requests.get(url, headers=self.headers, timeout=10)
+            doc = pq(resp.text)
+            
+            # 解析视频列表
+            video_items = doc('div.post-listing div.item').items()
+            for item in video_items:
+                video = self.parse_video_item(item)
+                if video:
+                    result["list"].append(video)
+            
+            # 解析分页（获取总页数）
+            pagination = doc('div.pagination span.page-numbers').text()
+            if pagination and 'Page' in pagination:
+                total_pages = pagination.split('of')[-1].strip()
+                result["pagecount"] = int(total_pages) if total_pages.isdigit() else 1
+            
+            result["total"] = result["pagecount"] * result["limit"]
+            return result
+        except Exception as e:
+            print(f"分类视频解析错误: {e}")
+            return result
 
     def detailContent(self, ids):
-        data=requests.post(f'{self.host}/v3/home/vod_details',headers=self.headers,files=self.getfiles({'vod_id': (None, ids[0])})).json()
-        v=data['data']
-        vod = {
-            'vod_name': v.get('vod_name'),
-            'type_name': v.get('type_name'),
-            'vod_year': v.get('vod_year'),
-            'vod_area': v.get('vod_area'),
-            'vod_remarks': v.get('vod_remarks'),
-            'vod_actor': v.get('vod_actor'),
-            'vod_director': v.get('vod_director'),
-            'vod_content': pq(pq(v.get('vod_content','无') or '无').text()).text()
-        }
-        n,p=[],[]
-        for o,i in enumerate(v['vod_play_list']):
-            n.append(f"线路{o+1}({i.get('flag')})")
-            c=[]
-            for j in i.get('urls'):
-                d={'url':j.get('url'),'p':i.get('parse_urls'),'r':i.get('referer'),'u':i.get('ua')}
-                c.append(f"{j.get('name')}${self.e64(json.dumps(d))}")
-            p.append('#'.join(c))
-        vod.update({'vod_play_from':'$$$'.join(n),'vod_play_url':'$$$'.join(p)})
-        return {'list':[vod]}
+        """获取视频详情（根据视频ID，即详情页URL中的标识）"""
+        result = {"list": []}
+        try:
+            # 视频详情页URL（ids为视频标识，如/post-name）
+            url = f"{self.host}/{ids}"
+            resp = requests.get(url, headers=self.headers, timeout=10)
+            doc = pq(resp.text)
+            
+            # 解析视频详情
+            vod_name = doc('h1.entry-title').text().strip()
+            if not vod_name:
+                return result
+            
+            # 解析封面图
+            vod_pic = doc('div.post-thumbnail img').attr('src') or doc('div.single-post-thumbnail img').attr('src')
+            
+            # 解析描述
+            vod_content = doc('div.entry-content p').text().strip()
+            
+            # 解析演员/导演（从元数据中提取）
+            vod_actor = ", ".join([item.text() for item in doc('div.metadata span:contains("Stars") a').items()])
+            vod_director = ", ".join([item.text() for item in doc('div.metadata span:contains("Director") a').items()])
+            
+            # 解析播放链接（假设在iframe中）
+            play_url = doc('div.video-container iframe').attr('src')
+            if not play_url:
+                # 尝试从按钮中提取播放链接
+                play_btn = doc('a:contains("Watch Now")').attr('href')
+                play_url = play_btn if play_btn else ""
+            
+            # 构造播放列表（单线路单集）
+            vod_play_from = "Default Line"
+            vod_play_url = f"Watch Now${play_url}"
+            
+            result["list"].append({
+                "vod_id": ids,
+                "vod_name": vod_name,
+                "vod_pic": vod_pic,
+                "vod_actor": vod_actor,
+                "vod_director": vod_director,
+                "vod_content": vod_content,
+                "vod_play_from": vod_play_from,
+                "vod_play_url": vod_play_url,
+                "vod_remarks": "HD"  # 示例：清晰度
+            })
+            return result
+        except Exception as e:
+            print(f"视频详情解析错误: {e}")
+            return result
 
     def searchContent(self, key, quick, pg="1"):
-        files = {
-            'limit': (None, '12'),
-            'page': (None, pg),
-            'keyword': (None, key),
-        }
-        data=requests.post(f'{self.host}/v3/home/search',headers=self.headers,files=self.getfiles(files)).json()
-        return {'list':self.getv(data['data']['list']),'page':pg}
+        """搜索视频"""
+        result = {"list": [], "page": pg}
+        try:
+            # 构造搜索URL（如https://4kfox.com/?s=keyword&page=1）
+            url = f"{self.host}/?s={key}&page={pg}"
+            resp = requests.get(url, headers=self.headers, timeout=10)
+            doc = pq(resp.text)
+            
+            # 解析搜索结果中的视频
+            video_items = doc('div.post-listing div.item').items()
+            for item in video_items:
+                video = self.parse_video_item(item)
+                if video:
+                    result["list"].append(video)
+            return result
+        except Exception as e:
+            print(f"搜索解析错误: {e}")
+            return result
 
     def playerContent(self, flag, id, vipFlags):
-        ids=json.loads(self.d64(id))
-        url=ids['url']
-        if isinstance(ids['p'],list) and len(ids['p']):
-            url=[]
-            for i,x in enumerate(ids['p']):
-                up={'url':ids['url'],'p':x,'r':ids['r'],'u':ids['u']}
-                url.extend([f"解析{i+1}",f"{self.getProxyUrl()}&data={self.e64(json.dumps(up))}"])
-        h={}
-        if ids.get('r'):
-            h['Referer'] = ids['r']
-        if ids.get('u'):
-            h['User-Agent'] = ids['u']
-        return  {'parse': 0, 'url': url, 'header': h}
+        """处理播放链接"""
+        # id为播放链接（如https://example.com/stream）
+        return {
+            "parse": 0,  # 不使用解析器，直接返回链接
+            "url": id,
+            "header": self.headers
+        }
 
-    def localProxy(self, param):
-        data=json.loads(self.d64(param['data']))
-        h = {}
-        if data.get('r'):
-            h['Referer'] = data['r']
-        if data.get('u'):
-            h['User-Agent'] = data['u']
-        res=self.fetch(f"{data['p']}{data['url']}",headers=h).json()
-        url=res.get('url') or res['data'].get('url')
-        return [302,'video/MP2T',None,{'Location':url}]
+    def parse_video_item(self, item):
+        """解析单个视频项（通用方法，用于列表页）"""
+        try:
+            # 提取视频ID（从URL中获取，如/posts/movie-name -> movie-name）
+            link = item.find('a').attr('href')
+            if not link:
+                return None
+            ids = link.strip('/').split('/')[-1]
+            
+            # 提取标题
+            title = item.find('h3.entry-title a').text().strip()
+            if not title:
+                return None
+            
+            # 提取封面图
+            img = item.find('img').attr('src') or item.find('img').attr('data-src')
+            
+            # 提取备注（如年份/评分）
+            vod_remarks = item.find('span.year').text().strip() or "HD"
+            
+            return {
+                "vod_id": ids,
+                "vod_name": title,
+                "vod_pic": img,
+                "vod_remarks": vod_remarks
+            }
+        except Exception as e:
+            print(f"视频项解析错误: {e}")
+            return None
 
+    # 以下方法为兼容原框架，无需修改
     def liveContent(self, url):
         pass
 
-    def getfiles(self, p=None):
-        if p is None:p = {}
-        t=str(int(time.time()))
-        h = MD5.new()
-        h.update(f"7gp0bnd2sr85ydii2j32pcypscoc4w6c7g5spl{t}".encode('utf-8'))
-        s = h.hexdigest()
-        files = {
-            'sign': (None, s),
-            'timestamp': (None, t)
-        }
-        p.update(files)
-        return p
+    def isVideoFormat(self, url):
+        return any([url.endswith(ext) for ext in ['.mp4', '.m3u8', '.flv', '.avi', '.mov']])
 
-    def getv(self,data):
-        videos = []
-        for i in data:
-            if i.get('vod_id') and str(i['vod_id']) != '0':
-                videos.append({
-                    'vod_id': i['vod_id'],
-                    'vod_name': i.get('vod_name'),
-                    'vod_pic': i.get('vod_pic') or i.get('vod_pic_thumb'),
-                    'vod_year': i.get('tag'),
-                    'vod_remarks': i.get('vod_remarks')
-                })
-        return videos
+    def manualVideoCheck(self):
+        return False
 
-    def e64(self, text):
-        try:
-            text_bytes = text.encode('utf-8')
-            encoded_bytes = b64encode(text_bytes)
-            return encoded_bytes.decode('utf-8')
-        except Exception as e:
-            return ""
-
-    def d64(self,encoded_text):
-        try:
-            encoded_bytes = encoded_text.encode('utf-8')
-            decoded_bytes = b64decode(encoded_bytes)
-            return decoded_bytes.decode('utf-8')
-        except Exception as e:
-            return ""
+    def destroy(self):
+        pass
