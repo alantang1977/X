@@ -267,7 +267,8 @@
 {"name": "🛹┃咪咕直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/咪咕直播","playerType":1},
 {"name": "🕹️️┃smart直播","url":"https://live.catvod.com/smart.php"},
 {"name": "🪓┃网络收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
-{"name": "🛩️┃TV收集直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/TVshow/refs/heads/main/data/output/iptv_collection.m3u","playerType":1},
+{"name": "🛩️┃TVCrazy直播","type": 0,"url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/TVCrazy/refs/heads/main/output/unicast_result.m3u","playerType":1},
+{"name": "🎃┃央视.卫视TV","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/TVCrazy/refs/heads/main/output/itvlist.m3u","playerType":1},
 
 {"name": "💄┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/全网通","playerType":1},
 {"name": "🥝┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},
@@ -276,12 +277,8 @@
 {"name": "🚚┃白嫖军团直播","type": 0,"url": "http://gg.7749.org/z/0/白嫖军团.txt","playerType":1},	
 {"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/webview.txt","playerType":1},
 {"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-{"name": "🎃┃Alan央视.卫视TV","type":0,"url":"https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv-sources/refs/heads/main/output/itvlist.m3u","playerType":1},
-{"name": "♟️️️┃元宝直播TV","type":0,"url":"http://go8.myartsonline.com/zx/0/38.txt","playerType":1},
-{"name": "♟️┃宝强直播TV","type":0,"url":"http://go8.myartsonline.com/zx/0/66.txt","playerType":1},
 
 {"name": "🃏️️┃交流直播TV1","type":0,"url":"http://is.is-great.org/i/2758810.txt","playerType":1},
-{"name": "🀄️┃交流直播TV2","type":0,"url":"https://d.kstore.dev/download/13670/cs.txt","playerType":1},
 {"name": "🌶️️️┃交流直播TV3","type":0,"url":"http://ox.my.to/8/3026688.txt","playerType":1},	
 {"name": "🃏┃东拼西凑TV","type":0,"url":"https://3043.kstore.space/bhvip/bh/bhzb2.txt","playerType":1},
 	
