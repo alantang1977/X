@@ -17,7 +17,7 @@
 {"key":"原创","name":"🧧┃修罗┃影视","type":3,"api":"csp_YCyzGuard","timeout":15,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"白白","name":"🐟┃素白┃秒播","type":3,"api":"csp_SbaibaiGuard","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
 {"key": "iKanbot","name": "🥽┃iKanbot┃秒播","type": 3,"api": "csp_Ikanbot","jar": "./jar/iKanbot.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://v.aikanbot.com"},
-{"key":"Guazi","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Guazi","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext": "","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
+//{"key":"Guazi","name":"🍉┃瓜子┃秒播","type":3,"api":"csp_Guazi","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext": "","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
 //{"key":"Xiaomi","name":"🍚┃PG┃小米","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://www.mucpan.cc/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
 {"key": "至臻","name": "💌┃️至臻┃影视","type": 3,"api": "csp_Wobg","quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60,"ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},	
 {"key":"Mogg","name":"🗼┃木偶┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://123.666291.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
