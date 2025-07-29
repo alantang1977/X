@@ -43,7 +43,7 @@
 {"key":"一碗","name":"🥣┃一碗┃影视","type":3,"api":"csp_AppGet","ext":"cOS1UvSbYM3xW1jXF4QBcYkSAhpFDDoh7c53wGBZEyxDhNunH+Feq+RreiUkQsV1","jar":"./jar/PandaQ.jpg"},
 {"key":"猫抓","name":"🐱┃猫抓┃影视","type":3,"api":"csp_AppGet","ext":"uOx4WoHPKe5LbDsNX+u7yPZ/33148sHvWON6kZmflkJm9N9mwXRjT6S/UJau4nVckbCH+h6lvztfl/Ag6BM8Ng==","jar":"./jar/PandaQ.jpg"},
 {"key":"仓鼠","name":"🐹┃耗子┃影视","type":3,"api":"csp_AppGet","ext":"uOx4WoHPKe5LbDsNX+u7yPwU6Ups0duUFWxZbQqPo2oF+jkgV7jbW6aOO1kS4+9PdDFoRHhRxKKvcUOgzloTKw==","jar":"./jar/PandaQ.jpg"},
-{"key":"蔬菜","name":"🫛┃蔬菜┃影视","type":3,"api":"csp_AppGet","ext":"II6EBjEX9APRjw9zkvfuusSMPTiiXvPm9pK9Zv0wFaq4AWWODp1x+otEA1t0ZFTSq+p0AmaiQvE9cq5Hdl/Vlg==","jar":"./jar/PandaQ.jpg"},
+{"key":"蔬菜","name":"🔪┃蔬菜┃影视","type":3,"api":"csp_AppGet","ext":"II6EBjEX9APRjw9zkvfuusSMPTiiXvPm9pK9Zv0wFaq4AWWODp1x+otEA1t0ZFTSq+p0AmaiQvE9cq5Hdl/Vlg==","jar":"./jar/PandaQ.jpg"},
 {"key":"黑猫","name":"🌶️┃黑猫┃影视","type":3,"api":"csp_AppGet","ext":"cLeOXZXsq65z+2s8qkWsD+GYhlTxoLn2cNnZiAXyiQPBfOCR3nVfgmZWdkvjSaqJFD9Bmb+U0RVCI9wv8BMVIg==","jar":"./jar/PandaQ.jpg"},
 {"key":"Jpys","name":"🥇️┃金牌┃影视","type":3,"api":"csp_Jpys","jar":"./jar/PandaQ.jpg"},
 {"key":"Lkdy","name":"🏔️┃来看┃影视","type":3,"api":"csp_Lkdy","jar":"./jar/PandaQ.jpg"},
