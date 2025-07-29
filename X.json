@@ -4,7 +4,7 @@
 
 "sites":[
 ##常用系列
-{"key": "4kfox","name": "💋┃极狐┃4K","type": 3,"api": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "./js/4kfox.js"},
+{"key": "4kfox","name": "💋┃极狐┃4K","type": 3,"api": "./js/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "./js/4kfox.js"},
 {"key":"玩偶","name":"🤹‍♂️┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;7840d0b61f9641a47728e3a92020f35a"},
 {"key":"BAIJIA","name":"🛖┃PG┃百家网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://cj.jiexi.news/$$$noproxy$$$1$$$./lib/wogg.json$$$BAIJIA","jar":"./pg.jar;md5;7840d0b61f9641a47728e3a92020f35a"},	
