@@ -22,6 +22,7 @@
 {"key": "至臻","name": "💌┃️至臻┃影视","type": 3,"api": "csp_Wobg","quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60,"ext": "./lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$ZHIZHEN","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},	
 {"key":"Mogg","name":"🗼┃木偶┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://123.666291.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
 //{"key":"4kfox","name": "🦊┃极狐影视┃4K","type": 3,"api": "./js/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "./js/4kfox.js"},
+{"key":"FourKFox","name":"🦊┃极狐影视┃4K","type":3,"api":"csp_FourKFox","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://4kfox.com/$$$noproxy$$$1$$$./lib/4kfox.txt$$$4KFOX","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
 //{"key":"蜡笔网盘","name":"🖍️┃蜡笔┃网盘","type":3,"api":"csp_Wobg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$https://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json$$$LABI","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60"},
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;0e3498ee4e79afff6111a7525b89cd60","style": {"type": "rect","ratio": 1.5}},
 
