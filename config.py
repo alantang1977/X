@@ -31,7 +31,7 @@ source_urls = [
     "https://live.izbds.com/tv/iptv4.txt",
     "http://47.120.41.246:8899/zb.txt",
     "http://live.nctv.top/x.txt",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u",
+    "https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u",
     "https://live.izbds.com/tv/iptv4.txt",
     "http://47.120.41.246:8899/zb.txt",
     "http://1.94.31.214/live/livelite.txt",
@@ -40,12 +40,12 @@ source_urls = [
     "https://smart.pendy.dpdns.org/m3u/Smart.m3u",
     "https://cnb.cool/junchao.tang/llive/-/git/raw/main/咪咕直播",
     "http://zhibo.feylen.top/fltv/js/ku9live.php?tpye=fl.txt",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/Alan-Alana/IPTV/refs/heads/main/channl.txt",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u",
+    "https://raw.githubusercontent.com/Alan-Alana/IPTV/refs/heads/main/channl.txt",
+    "https://raw.githubusercontent.com/peterHchina/iptv/refs/heads/main/IPTV-V4.m3u",
     "https://iptv.catvod.com/tv.m3u",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/hostemail/cdn/main/live/tv.txt",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u",
+    "https://raw.githubusercontent.com/hostemail/cdn/main/live/tv.txt",
+    "https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.m3u",
+    "https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u",
     "https://live.zbds.top/tv/iptv4.txt",
     "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy",  
     "https://live.zbds.top/tv/iptv6.txt",
@@ -99,8 +99,8 @@ announcements = [
         "entries": [
             {
                 "name": None,
-                "url": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4",
-                "logo": "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/X/main/Pictures/SuperMAN.png"
+                "url": "https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4",
+                "logo": "https://raw.githubusercontent.com/alantang1977/X/main/Pictures/SuperMAN.png"
             }
         ]
     }
