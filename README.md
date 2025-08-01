@@ -53,7 +53,7 @@ http://www.饭太硬.com/tv
 
 https://肥猫.com
 
-http://www.mpanso.com/小米/DEMO.json
+http://miqk.cc/小米/DEMO.json
 
 # 🏂影視TV🏄🏻 
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
