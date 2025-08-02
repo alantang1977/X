@@ -413,13 +413,13 @@ https://www.metools.info/other/o21.html
 
 ------
 随机轮换壁纸：
+## https://imgs.catvod.com/
 ## https://bing.img.run/rand.php
 ## http://王二小放牛娃牛逼.999888987.xyz
 ## http://我不是.肥猫.love:63/ppic/feimao.php
 ## http://饭太硬.top/深色壁纸/api.php
 ## http://www.kf666888.cn/api/tvbox/img
 ## http://img.fongmi.eu.org
-## https://tuapi.eees.cc/api.php?category=fengjing&type=302
 ## https://jianbian.chuqiuyu.workers.dev/
 
 ![2700_2013040313000400_IMG_0164](https://github.com/alantang1977/X/assets/107459091/912df5d9-da50-479f-88f9-92adfc74429b)
