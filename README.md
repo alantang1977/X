@@ -418,22 +418,9 @@ https://www.metools.info/other/o21.html
 ## http://我不是.肥猫.love:63/ppic/feimao.php
 ## http://饭太硬.top/深色壁纸/api.php
 ## http://www.kf666888.cn/api/tvbox/img
-## https://xhdwc.tk/api/img.php
 ## http://img.fongmi.eu.org
 ## https://tuapi.eees.cc/api.php?category=fengjing&type=302
-## https://bing.img.run/rand.php
-## https://tuapi.eees.cc/api.php?category=fengjing&type=302
 ## https://jianbian.chuqiuyu.workers.dev/
-## 
-（1）https://tian.chuqiuyu.tk 自制横屏精美壁纸1
-
-（2）https://yun.chuqiuyu.tk 自制横屏精美壁纸2
-
-（3）https://shuping.chuqiuyu.tk 自制竖屏精美壁纸
-
-（4）https://jianbian.chuqiuyu.tk 自制渐变简约壁纸
-
-
 
 ![2700_2013040313000400_IMG_0164](https://github.com/alantang1977/X/assets/107459091/912df5d9-da50-479f-88f9-92adfc74429b)
 
