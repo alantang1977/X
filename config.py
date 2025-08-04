@@ -100,7 +100,7 @@ announcements = [
             {
                 "name": None,
                 "url": "https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4",
-                "logo": "https://raw.githubusercontent.com/alantang1977/X/main/Pictures/SuperMAN.png"
+                "logo":"https://codeberg.org/alantang/photo/raw/branch/main/SuperMAN.png"
             }
         ]
     }
