@@ -99,7 +99,7 @@ announcements = [
         "entries": [
             {
                 "name": None,
-                "url": "https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Robot.mp4",
+                "url": "https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4",
                 "logo": "https://raw.githubusercontent.com/alantang1977/X/main/Pictures/SuperMAN.png"
             }
         ]
