@@ -256,7 +256,8 @@
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "🥮┃aTV直播","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/aTV/refs/heads/master/output/result.m3u","playerType":1},
  
-{"name": "🐏┃catvod直播0","type": 0,"url": "https://live.catvod.com/catvod_com.php","playerType":1},
+{"name": "🐏┃catvod直播","type": 0,"url": "https://live.catvod.com/catvod_com.php","playerType":1},
+{"name": "🕹️️┃catvod直播0","url":"https://live.catvod.com/smart.php"},
 {"name": "⛵┃catvod直播1","type": 0,"pass": true,"ua": "catvod.com","url": "https://iptv.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 //{"name": "⛵┃catvod直播1","url": "https://iptv.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/e.xml","ua": "catvod.com","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
 {"name": "⛵┃catvod直播2","url": "https://live.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/e.xml","ua": "catvod.com","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
@@ -298,7 +299,6 @@
 {"name": "🧩┃PG直播","type": 0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/pg/refs/heads/main/live.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 
 {"name": "🐮┃judy直播","type" : 0,"url" : "https://judy.diver.eu.org/m3u/4GTV-TS.m3u","ua" : "judy/5.2.1","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},	
-{"name": "🕹️️┃smart直播","url":"https://live.catvod.com/smart.php"},
 {"name": "🥝┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},	
 {"name": "🚚┃白嫖军团直播","type": 0,"url": "http://gg.7749.org/z/0/白嫖军团.txt","playerType":1},	
 {"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -399,6 +399,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
