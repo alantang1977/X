@@ -257,7 +257,8 @@
 {"name": "🥮┃aTV直播","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/aTV/refs/heads/master/output/result.m3u","playerType":1},
  
 {"name": "🐏┃catvod直播0","type": 0,"url": "https://live.catvod.com/catvod_com.php","playerType":1},
-{"name": "⛵┃catvod直播1","url": "https://iptv.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/e.xml","ua": "catvod.com","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
+{"name": "⛵┃catvod直播1","type": 0,"pass": true,"ua": "catvod.com","url": "https://iptv.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
+//{"name": "⛵┃catvod直播1","url": "https://iptv.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/e.xml","ua": "catvod.com","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
 {"name": "⛵┃catvod直播2","url": "https://live.catvod.com/tv.m3u","epg": "http://epg.51zmt.top:8000/e.xml","ua": "catvod.com","catchup": {"type": "append","replace": "livemode=1,livemode=4","source": "&starttime=${(b)yyyyMMdd'T'HHmm}00.00Z&endtime=${(e)yyyyMMdd'T'HHmm}00.00Z"}},
 
 {"name": "🐶┃酷狗tv","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/fuxinyi0505/Ku9-IPTV-source/refs/heads/main/Ku9-IPTV-source.txt","playerType":1},  
@@ -398,6 +399,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
