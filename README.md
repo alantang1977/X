@@ -37,11 +37,11 @@
 # 以上为互联网流传资源，不保证内容的真实性和可靠性。本页面只是收集自用请勿宣传。
 
 ## OK版影视APP（标准版与Pro）
-UC盘：https://drive.uc.cn/s/01bc89c897034
+夸克：https://pan.quark.cn/s/d2d555b3b54a
 
-夸克：https://pan.quark.cn/s/6fead79bddaf
+UC盘：https://drive.uc.cn/s/126316a434e34
 
-迅雷：https://pan.xunlei.com/s/VNpD7k6FLpuz5kIVU1E4Sd9AA1?pwd=mzsc
+迅雷: https://pan.xunlei.com/s/VOW_qwXse6BiG_Wv_-PDp7KnA1?pwd=uaq2
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
