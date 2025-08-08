@@ -5,7 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
-    "https://cnb.cool/junchao.tang/live/-/git/raw/main/%E5%85%A8%E7%90%83%E9%80%9A.py",
+    "https://daili.korice.eu.org/https://raw.githubusercontent.com/Mursor/LIVE/refs/heads/main/iptv.m3u",
     "http://is.is-great.org/i/0885557.txt",
     "https://cnb.cool/junchao.tang/live/-/git/raw/main/临时收集",
     "https://live.zhoujie218.top/tv/iptv4.txt"
