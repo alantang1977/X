@@ -265,7 +265,8 @@
 {"name": "🛬┃iptv_api直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/iptv_api/refs/heads/main/output/live_ipv4.m3u","playerType":1},
 {"name": "🛷┃日后·电视直播","type":0,"url":"http://rihou.cc:555/gggg.nzk","playerType":1},
 {"name": "📻┃itv直播","boot": true,"type":0,"url":"https://itv-list.myukj.cn/list/itv.m3u","playerType":1,"ua":"70bd564ac1ae0801","epg":"https://epg.112114.eu.org/?ch={name}&date={date}","logo":"https://epg.112114.eu.org/logo/{name}.png"},
-{"name": "🎎┃Live「直播」","type": 0,"url": "https://tv-1.iill.top/m3u/Live","ua": "okhttp/3.8.1","timeout": 20,"playerType": 2},
+//{"name": "🎎┃Live「直播」","type": 0,"url": "https://tv-1.iill.top/m3u/Live","ua": "okhttp/3.8.1","timeout": 20,"playerType": 2},
+{"name": "😁┃Gather「直播」","type":0,"url":"https://tv-1.iill.top/m3u/Gather","playerType":1},
 {"name": "🍌┃Gather「电视」","type":0,"url":"https://tv-1.iill.top/m3u/MyTV","ua": "okhttp/3.8.1","timeout": 20,"playerType": 2},
 {"name": "🏊‍♀️️┃临时收集直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/临时收集","playerType":1},
 {"name": "🕹️️┃BXTV直播","type": 0,"url": "http://bxtv.3a.ink/live.m3u","playerType":1},
@@ -367,7 +368,6 @@
 {"name": "🎾┃大众·IPTV直播","type":0,"url":"http://8.138.7.223/51.txt","playerType":1},	
 {"name": "⌚┃hipy直播","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/hjdhnx/hipy-sniffer/refs/heads/main/static/lives/lives.txt","playerType":1},
 {"name": "🚓┃auto-iptv直播","type":0,"url":"http://47.120.41.246:8899/zb.txt","playerType":1},	
-{"name": "😁┃Gather港·澳·台","type":0,"url":"https://tv-1.iill.top/m3u/Gather","playerType":1},
 //{"name": "🐲┃Gather网络直播","type":0,"url":"https://tv-1.iill.top/m3u/Live","playerType":1},
 {"name": "🌞┃日后·电视直播","type":0,"url":"http://rihou.cc:567/gggg.nzk","playerType":1},
 {"name": "🔑┃BOX直播","type": 0,"url": "https://xiaotan.860775.xyz/mytvsuper.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
@@ -432,6 +432,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
