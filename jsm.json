@@ -564,7 +564,7 @@
 				"name": "FeiYang牧场",
 				"type": 0,
 				"url": "http://127.0.0.1:10079/c/3600/proxy/https://raw.githubusercontent.com/Mursor/LIVE/refs/heads/main/iptv.m3u",
-				"ua": "okhttp/3.15",
+				"ua": "okHttp/Mursor-1.0.0",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date=DATE1SUB",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
 				"catchup": {
