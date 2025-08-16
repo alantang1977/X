@@ -21,8 +21,6 @@
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;22feaf41eac3645a5c1535907699bf6c","style": {"type": "rect","ratio": 1.5}},
 
 ##小米系列
-{"key":"菲菲","name":"🐱┃加菲┃影视","type":3,"quickSearch":0,"searchable":1,"api":"csp_AppQi","ext":"BciM/oLDYQqSU++RAsI5xz2Dmz98Blyw0pp0T+0QPiq/bSU1IhcLmPsn25NijfG6B3fLoAmVGEL0/tWb+o0nZYn1u5i3pWNxWaYYmNV1x0c=","jar":"./jar/DEMO.png"},
-//{"key":"QD4K","name":"🐷┃猪猪┃影视","type":3,"searchable":1,"quickSearch":0,"api":"https://d.feiliupan.com/t/109056264444579840/AppV2.py","playerType":2,"ext":"","jar":"./jar/DEMO.png":{"api":"http://dmmax.juxiafan.com/icciu_api.php/v1.vod","datasignkey":"6QQNUsP3PkD2ajJCPCY8","apisignkey":"lvdoutv-1.0.0"}},
 {"key":"热热","name":"🔥┃热热┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_AppRJ","ext":"jsSMEuhTZIAHjnUoLBzKdlRu5exzno6M4efF8LzwjWM=","jar":"./jar/DEMO.png"},
 {"key":"瓜子","name":"🐼┃瓜子┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_Gz360","jar":"./jar/DEMO.png"},
 {"key":"聚吧","name":"🐓┃剧霸┃影视","type":3,"searchable":1,"quickSearch":1,"api":"https://13826.kstore.space/jubaba.py","ext":"","jar":"./jar/DEMO.png"},
@@ -298,6 +296,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
