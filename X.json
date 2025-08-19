@@ -135,23 +135,24 @@
 {"name": "🎎┃Live「直播」","type": 0,"url": "http://txt.kesug.com/users/alantang.txt","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
 {"name": "😁┃Gather「直播」","type":0,"url":"https://tv-1.iill.top/m3u/Gather","ua": "","timeout": 10,"playerType": 2},
 {"name": "🍌┃Gather「电视」","type":0,"url":"https://tv-1.iill.top/m3u/MyTV","ua": "","timeout": 10,"playerType": 2},
-{"name": "🏊‍♀️️┃临时收集直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/临时收集","playerType":1},
-{"name": "🕹️️┃BXTV直播","type": 0,"url": "http://bxtv.3a.ink/live.m3u","playerType":1},
-
+//{"name": "🏊‍♀️️┃临时收集直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/临时收集","playerType":1},
+//{"name": "🕹️️┃BXTV直播","type": 0,"url": "https://bxtv.3a.ink/live.m3u","playerType":1},
+{"name": "🕹️️┃BXTV直播","type": 0,"url": "https://bxtv.3a.ink/live.m3u","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
+	
 {"name": "🐞┃肥猫live","type":0,"playerType":1,"url":"https://6296.kstore.vip/25.txt","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "❤️┃春盈直播","type": 0,"url": "http://home.jundie.top:81/Cat/tv/live.txt","playerType":1},
 {"name": "🥓┃movie直播","type": 0,"url": "https://gitee.com/junchao321/cinematography/raw/master/json.txt","playerType":1},
 {"name": "Ⓜ️┃靳学领直播","type": 0,"url": "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt","playerType":1},
 	
 {"name": "💰┃ranli直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/ranli2023/live/refs/heads/main/live2.json","playerType":1},
-{"name": "🔓┃斯玛特全球直播","url":"https://tvbot.dpdns.org/tv.m3u"},
+//{"name": "🔓┃斯玛特全球直播","url":"https://tvbot.dpdns.org/tv.m3u"},
 {"name": "🪂┃aktv直播","type": 0,"url": "https://aktv.space/live.m3u","playerType":1},
-{"name": "🐦┃smt直播","type": 0,"url": "http://iptv.herissmon.dpdns.org/jiekou/live.txt","ua": "Herissmon/2016","epg": "http://epg.112114.xyz/?ch={name}&date={date}"},
+//{"name": "🐦┃smt直播","type": 0,"url": "http://iptv.herissmon.dpdns.org/jiekou/live.txt","ua": "Herissmon/2016","epg": "http://epg.112114.xyz/?ch={name}&date={date}"},
 {"name": "🚎┃Mytv直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/tushen6/xxooo/refs/heads/main/fyzb/ipv6.m3u","playerType":1},
 {"name": "🍳┃中央卫视直播0","type": 3,"api": "https://d.kstore.dev/download/14756/python/live_kzb.py","ext": {"host": "https://jzb5kqln.huajiaedu.com"}},
 {"name": "🔢┃中央卫视直播1","type":0,"url":"https://php.946985.xyz/stv.m3u","playerType":1},
 {"name": "🔢┃中央卫视直播2","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/TV_video/refs/heads/main/interface.txt","playerType":1},
-{"name": "🔢┃中央卫视直播3","boot": true,"type":0,"url":"https://sub.ottiptv.cc/iptv.m3u","playerType":1,"ua":"okHttp/Mursor-1.0.0","epg":"https://epg.112114.eu.org/?ch={name}&date={date}","logo":"https://epg.112114.eu.org/logo/{name}.png"},
+//{"name": "🔢┃中央卫视直播3","boot": true,"type":0,"url":"https://sub.ottiptv.cc/iptv.m3u","playerType":1,"ua":"okHttp/Mursor-1.0.0","epg":"https://epg.112114.eu.org/?ch={name}&date={date}","logo":"https://epg.112114.eu.org/logo/{name}.png"},
 {"name": "🔢┃中央卫视直播4","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/TV_live/refs/heads/main/live.txt","playerType":1},
 {"name": "🔢┃中央卫视直播5","type":0,"url":"https://gitee.com/junchao321/migu_video/raw/main/interface.txt","playerType":1},
 	
@@ -163,11 +164,11 @@
 {"name": "🎫┃ssili126直播","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/Hotel_iptv/refs/heads/main/speed_results.txt","playerType":1},
 {"name": "🎗️┃晴天iptv直播","type":0,"url":"https://igdux.top/BNMe","playerType":1},	
 	
-{"name": "💄┃1288直播","type": 0,"url": "https://ds65.tv1288.xyz","playerType":1},
+{"name": "💄┃潇雨萌萌「直播」","type": 0,"url": "https://ds65.tv1288.xyz","playerType":1},
 {"name": "🃏┃酷狗tv","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/fuxinyi0505/Ku9-IPTV-source/refs/heads/main/Ku9-IPTV-source.txt","playerType":1},  
 {"name": "🌭┃全网通tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/全网通","playerType":1},
-{"name": "🏂┃TG收集tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/TG收集.m3u","playerType":1},
-{"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/webview.txt","playerType":1},
+//{"name": "🏂┃TG收集tv","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/TG收集.m3u","playerType":1},
+//{"name": "🍿┃Webview直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/webview.txt","playerType":1},
 {"name": "🏹┃My爱米直播","type": 0,"url": "http://210.245.166.84:1299/live/live.txt","playerType":1},
 {"name": "🚪┃my机车直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/机车","playerType":1},
 {"name": "⚾┃WorkTV直播","type":0,"url":"https://live.zbds.org/tv/iptv4.txt","playerType":1},
@@ -190,7 +191,7 @@
 {"name": "🪓┃网络收集直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
 {"name": "🥬┃kimwang1978直播","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/bbxx.m3u","playerType":1},
 {"name": "🌽️┃A自家源直播","type":0,"url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/Collect-IPTV/refs/heads/main/mylive.m3u","playerType":1},	
-{"name": "🤗┃sjbox直播","type":0,"url":"http://m3u.sjbox.cc/113.m3u","playerType":1},
+//{"name": "🤗┃sjbox直播","type":0,"url":"http://m3u.sjbox.cc/113.m3u","playerType":1},
 {"name": "🔗┃Yuanz港·澳·台直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/yuanzl77/refs/heads/main/live.m3u","playerType":1},
 {"name": "🚈┃小众直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/go.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 {"name": "🦀️┃TVsmile直播","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/TVsmile/refs/heads/main/网络收集.txt","playerType":1},
@@ -200,10 +201,10 @@
 
 {"name": "🏒┃judy直播","type": "0","pass": true,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","timeout": 10,"playerType": 1,"ua": "Goiptv/8.8.8"},
 {"name": "🐮┃judy直播","type" : 0,"url" : "https://daili.korice.eu.org/https://raw.githubusercontent.com/judy-gotv/iptv/refs/heads/main/smart.txt","ua" : "Goiptv/8.8.8","epg" : "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo" : "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},	
-{"name": "🐱┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},	
-{"name": "🗝️┃白嫖军团直播","type": 0,"url": "http://gg.7749.org/z/0/白嫖军团.txt","playerType":1},	
-{"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
-{"name": "🛡️️️️┃交流直播TV","type":0,"url":"http://ox.my.to/8/3026688.txt","playerType":1},	
+{"name": "🐱┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},
+//{"name": "🗝️┃白嫖军团直播","type": 0,"url": "http://gg.7749.org/z/0/白嫖军团.txt","playerType":1},	
+//{"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
+//{"name": "🛡️️️️┃交流直播TV","type":0,"url":"http://ox.my.to/8/3026688.txt","playerType":1},	
 {"name": "🃏┃东拼西凑TV","type":0,"url":"https://3043.kstore.space/bhvip/bh/bhzb2.txt","playerType":1},	
 	
 {"name": "🔨┃aktvspace直播","type": 0,"url": "http://aktv.space/live.m3u","playerType":1},
@@ -297,6 +298,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
