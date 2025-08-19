@@ -522,7 +522,7 @@
 				"name": "FeiYang牧场",
 				"type": 0,
 				"url": "http://sub.ottiptv.cc/iptv.m3u",
-				"ua": "okHttp/Mod-1.0.0",
+				"ua": "okHttp/Mod-1.0.1",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date=DATE1SUB",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
 				"catchup": {
