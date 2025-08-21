@@ -5,6 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt",
     "https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u",
     "https://gitee.com/junchao321/migu_video/raw/main/interface.txt",
     "https://d.kstore.dev/download/15114/TVSolo.txt",
