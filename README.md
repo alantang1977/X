@@ -59,6 +59,7 @@ http://miqk.cc/小米/DEMO.json
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
 
 ----
+淘IPTV(国内秒播iptv）：https://taoiptv.com/
 
 ## 🛩️Github文件加速：
 
