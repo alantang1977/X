@@ -137,7 +137,7 @@
 {"name": "😁┃Gather「直播」","type":0,"url":"https://tv-1.iill.top/m3u/Gather","ua": "okhttp/1.1.1","timeout": 10,"playerType": 2},
 {"name": "🍌┃Gather「电视」","type":0,"url":"https://tv-1.iill.top/m3u/MyTV","ua": "okhttp/1.1.1","timeout": 10,"playerType": 2},
 {"name": "🏊‍♀️️┃临时收集直播","type": 0,"url": "hhttps://be.is-best.net/i/8/5611948.txt","playerType":1},
-//{"name": "🕹️️┃BXTV直播","type": 0,"url": "https://bxtv.3a.ink/live.m3u","playerType":1},
+{"name": "📻️┃测试直播","type": 0,"url": "https://cnb.cool/junchao.tang/live/-/git/raw/main/test","playerType":1},
 {"name": "🕹️️┃BXTV直播","type": 0,"url": "https://bxtv.3a.ink/live.m3u","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
 	
 {"name": "🐞┃肥猫live","type":0,"playerType":1,"url":"https://6296.kstore.vip/25.txt","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
@@ -296,6 +296,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
