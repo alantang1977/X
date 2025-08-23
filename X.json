@@ -148,10 +148,10 @@
 {"name": "📻️┃mytvJS「直播」","type": 0,"url": "https://gitee.com/mytv-android/mytvJS/raw/main/js.gitee.m3u","playerType":1},
 {"name": "🕹️️┃BXTV直播","type": 0,"url": "https://bxtv.3a.ink/live.m3u","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
 {"name": "🀄️┃中央卫视(python)", "type": 3, "api": "https://cnb.cool/junchao.tang/live/-/git/raw/main/live_kzb.py", "ext": { "host": "https://jzb5kqln.huajiaedu.com"}}, 
-{"name": "TsyTV「IPV6」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/ipv6.json","ua": "hequan","epg": "https://epg.112114.xyz/pp.xml","logo": "https://gitee.com/tushaoyong/logo/raw/master/img/{name}.png"},
-{"name": "TsyTV电信「直播」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/电信IPTV.json","ua": "hequan","epg": "https://raw.githubusercontent.com/mytv-android/iptv-api/refs/heads/master/output/epg/epg.gz","logo": "https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name}.png"},
-{"name": "TsyTV移动「直播」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/移动IPTV.json","ua": "hequan","epg": "https://raw.githubusercontent.com/mytv-android/iptv-api/refs/heads/master/output/epg/epg.gz","logo": "https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name}.png"},
-	
+{"name": "🤿┃TsyTV「IPV6」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/ipv6.json","ua": "hequan","epg": "https://epg.112114.xyz/pp.xml","logo": "https://gitee.com/tushaoyong/logo/raw/master/img/{name}.png"},
+{"name": "🏈┃TsyTV电信「直播」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/电信IPTV.json","ua": "hequan","epg": "https://raw.githubusercontent.com/mytv-android/iptv-api/refs/heads/master/output/epg/epg.gz","logo": "https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name}.png"},
+{"name": "🥌┃TsyTV移动「直播」","type": 0,"url": "https://gitee.com/tushaoyong/live/raw/master/接口/移动IPTV.json","ua": "hequan","epg": "https://raw.githubusercontent.com/mytv-android/iptv-api/refs/heads/master/output/epg/epg.gz","logo": "https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name}.png"},
+{"name": "💍┃青龙电视","type": 0,"url": "https://d.kstore.dev/download/15366/6988.txt","ua": "okhttp/5.0.0-alpha.14","epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}","logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🐞┃肥猫live","type":0,"playerType":1,"url":"https://6296.kstore.vip/25.txt","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
 {"name": "❤️┃春盈直播","type": 0,"url": "http://home.jundie.top:81/Cat/tv/live.txt","playerType":1},
 	
@@ -305,6 +305,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
