@@ -426,6 +426,7 @@ https://www.metools.info/other/o21.html
 ## http://www.kf666888.cn/api/tvbox/img
 ## http://img.fongmi.eu.org
 ## https://jianbian.chuqiuyu.workers.dev/
+## https://api.btstu.cn/sjbz/api.php
 
 ![2700_2013040313000400_IMG_0164](https://github.com/alantang1977/X/assets/107459091/912df5d9-da50-479f-88f9-92adfc74429b)
 
