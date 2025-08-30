@@ -126,7 +126,7 @@
 {"name": "Ⓜ️┃靳学领「直播1」","type": 0,"url": "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt","playerType":1},
 {"name": "Ⓜ️┃靳学领「直播2」","type": 0,"url": "https://gitee.com/jin-xueling/cinematography/raw/master/json.txt","playerType":1},
 {"name": "Ⓜ️┃靳学领「直播3」","type": 0,"url": "https://gitee.com/jin-xueling/cinematography/raw/master/lc2.txt","playerType":1},
-{"name": "🀄️┃Mursor「肥羊直播」","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u","ua": "okHttp/Mod-1.1.0","timeout": 10,"playerType": 2},
+{"name": "🀄️┃Mursor「肥羊直播」","type": 0,"url": "https://gh.catmak.name/https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u","ua": "okHttp/Mod-1.2.0","timeout": 10,"playerType": 2},
 {"name": "🚊┃淘IPTV「全网通播」","type": 0,"url": "https://gitee.com/junchao321/private/raw/master/JS/长苏影视（全网通版）.txt","playerType":1},
 {"name": "🚇┃淘IPTV「快秒直播」","type": 0,"url": "https://gitee.com/junchao321/private/raw/master/JS/直播接口测试.txt","playerType":1},
 {"name": "🎣┃台湾直播","api":"csp_MQiTV","ext":"https://59.125.210.231:4433","jar":"./jar/custom_spider.jar","epg": "http://iptv.52sw.top:668/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
@@ -318,6 +318,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
