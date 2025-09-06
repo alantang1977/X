@@ -18,7 +18,7 @@
 				"keywords":"名称,片名,推荐",
 				"tgsearch_url":"http://127.0.0.1:10199",
 				"tgsearch_media_url":"http://127.0.0.1:10199",
-				"channellist":"tgsearchers,leoziyuan,ucpanpan,tyysypzypd,pan123pan,zyfb123,zyzhpd123,xx123pan,tianyi_pd2,tianyirigeng,tyypzhpd,cloudtianyi,kuakeclound,ydypzyfx,clouddriveresources,NewQuark,New_Sharing,alypzyhzq|1000,Mbox115|1000,shares_115|1000,wanwansubchat|1000",
+				"channellist":"tgsearchers,leoziyuan,ucpanpan,tyysypzypd,+1pDtGDqv-bJmYjM1,pan123pan,zyfb123,zyzhpd123,xx123pan,tianyi_pd2,tianyirigeng,tyypzhpd,cloudtianyi,kuakeclound,ydypzyfx,clouddriveresources,NewQuark,New_Sharing,alypzyhzq|1000,Mbox115|1000,shares_115|1000,wanwansubchat|1000",
 				"proxy":"proxy",
 				"douban":"./lib/douban.json",
 				"danmu":true
@@ -77,7 +77,7 @@
 				"keywords":"名称,片名,推荐",
 				"tgsearch_url":"http://127.0.0.1:10199",
 				"tgsearch_media_url":"http://127.0.0.1:10199",
-				"channellist":"tgsearchers,leoziyuan,ucpanpan,tyysypzypd,pan123pan,zyfb123,zyzhpd123,xx123pan,tianyi_pd2,tianyirigeng,tyypzhpd,cloudtianyi,kuakeclound,ydypzyfx,clouddriveresources,NewQuark,New_Sharing,oneonefivewpfx,hao115,guaguale115,Channel_Shares_115,dianyingshare,XiangxiuNB,yunpanpan,kuakeyun,zaihuayun,Quark_Movies,vip115hot,yunpanshare,shareAliyun,ikiviyyp,alyp_1,quanziyuanshe",
+				"channellist":"tgsearchers,leoziyuan,ucpanpan,tyysypzypd,+1pDtGDqv-bJmYjM1,pan123pan,zyfb123,zyzhpd123,xx123pan,tianyi_pd2,tianyirigeng,tyypzhpd,cloudtianyi,kuakeclound,ydypzyfx,clouddriveresources,NewQuark,New_Sharing,oneonefivewpfx,hao115,guaguale115,Channel_Shares_115,dianyingshare,XiangxiuNB,yunpanpan,kuakeyun,zaihuayun,Quark_Movies,vip115hot,yunpanshare,shareAliyun,ikiviyyp,alyp_1,quanziyuanshe",
 				"proxy":"proxy",
 				"danmu":true
 			},
@@ -522,7 +522,7 @@
 				"name": "FeiYang牧场",
 				"type": 0,
 				"url": "http://sub.ottiptv.cc/iptv.m3u",
-				"ua": "okHttp/Mod-1.2.0",
+				"ua": "okHttp/Mod-1.2.0.1",
 				"epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date=DATE1SUB",
 				"logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
 				"catchup": {
