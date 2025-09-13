@@ -454,7 +454,7 @@
            "categories": ["动作片","喜剧片","动画片","科幻片","惊悚片","冒险片","恐怖片","剧情片","战争片","历史片","犯罪片","悬疑片","国产剧","港台剧","欧美剧","动漫","综艺"]
     }
     ],
-    {"lives": [
+    "lives": [
         {
             "name": "网络源大杂烩",
             "type": 0,
@@ -1366,11 +1366,11 @@
         "cms.qdwght.com"
     ],
     "hosts": [
- "cache.ott.wasulive.itv.cmvideo.cn=39.135.132.221",
-    "cache.ott.bestlive.itv.cmvideo.cn=39.135.132.221",
-    "cache.ott.ystenlive.itv.cmvideo.cn=39.135.132.221",
-    "cache.ott.hnbblive.itv.cmvideo.cn=39.135.132.221",
-    "cache.ott.fifalive.itv.cmvideo.cn=base-v4v6-cm-miguvideo.e.cdn.chinamobile.com"
+ "cache.ott.wasu.itv.cmvideo.cn=39.135.132.221",
+    "cache.ott.best.itv.cmvideo.cn=39.135.132.221",
+    "cache.ott.ysten.itv.cmvideo.cn=39.135.132.221",
+    "cache.ott.hnbb.itv.cmvideo.cn=39.135.132.221",
+    "cache.ott.fifa.itv.cmvideo.cn=base-v4v6-cm-miguvideo.e.cdn.chinamobile.com"
     ],
     "proxy": [
         "raw.githubusercontent.com",
@@ -1387,7 +1387,7 @@
         ".*boku.*",
         ".*nivod.*",
         "*.t4tv.hz.cz",
-        ".*ulivetv.*"
+        ".*utv.*"
     ],
     "rules": [
         {
