@@ -35,7 +35,8 @@
          "key":"电影天堂",
          "name":"电影天堂",
          "type":4,
-         "api":"https://tvbot.ggff.net/dytt","jar":"https://tvbot.dpdns.org/spider.jar"},
+         "api":"https://tvbot.ggff.net/dytt"
+      },
       {
          "key":"嗷呜小苹果",
          "name":"嗷呜小苹果",
@@ -71,6 +72,66 @@
          "name":"欧乐影院",
          "type":4,
          "api":"https://tvbot.ggff.net/oule"
+      },
+      {
+         "key":"荐片",
+         "name":"荐片",
+         "type":3,
+         "api":"https://tvbot.dpdns.org/py_jianpian.py"
+      },
+      {
+         "key":"独播库",
+         "name":"独播库",
+         "type":4,
+         "api":"https://tvbot.ggff.net/duboku"
+      },
+      {
+         "key":"嗷呜剧爸爸",
+         "name":"嗷呜剧爸爸",
+         "type":3,
+         "api":"https://tvbot.dpdns.org/py_jubaba.py"
+      },
+      {
+         "key":"Cori爱壹帆",
+         "name":"Cori爱壹帆",
+         "type":3,
+         "style":{
+            "type":"rect",
+            "ratio":0.75
+         },
+         "api":"csp_GM",
+         "ext":{
+            "userScript":"https://github.com/CatVodSpider-GM/SFW-Spiders/raw/refs/heads/main/userScripts/ysfp.user.js",
+            "debug":false,
+            "webViewSettings":{
+               "blockNetworkImage":true,
+               "blockList":[
+                  "*.png*",
+                  "*.mp3*",
+                  "*.css*",
+                  "https://*.googletagmanager.com/*",
+                  "https://*.google-analytics.com/*"
+               ]
+            },
+            "spider":{
+               "homeContent":{
+                  "loadUrl":"https://m.yfsp.tv/"
+               },
+               "categoryContent":{
+                  "loadUrl":"https://m.yfsp.tv/list/${tid}?type=${index-0:-0}${index-1:-,0}${index-2:-,0}${index-3:-,0}${index-4:-,0}${index-5:-}"
+               },
+               "detailContent":{
+                  "loadUrl":"https://m.yfsp.tv/play/${id}"
+               },
+               "playerContent":{
+                  "loadUrl":"https://m.yfsp.tv/play/${mediaKey}?id=${episodeKey}"
+               },
+               "searchContent":{
+                  "loadUrl":"https://m.yfsp.tv/search"
+               }
+            }
+         },
+         "jar":"https://github.com/CatVodSpider-GM/SFW-Spiders/raw/refs/heads/main/Spiders-Lib/GM.jar"
       },
 
 ##PY源系列
@@ -377,6 +438,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
