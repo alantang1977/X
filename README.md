@@ -55,6 +55,8 @@ https://肥猫.com
 
 http://miqk.cc/小米/DEMO.json
 
+http://mpanso.me/小米/DEMO.json
+
 # 🏂影視TV🏄🏻 
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
 
