@@ -1,1 +1,3 @@
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml","http://epg.51zmt.top:8000/e.xml","https://epg.pw/xmltv/epg_CN.xml","https://epg.pw/xmltv/epg_HK.xml","https://epg.pw/xmltv/epg_TW.xml"
+#EXTINF:-1 group-title="🐶┃影视频道",NewTV惊悚悬疑
+http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000024282/index.m3u8$IPV6
