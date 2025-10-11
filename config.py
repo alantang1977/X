@@ -9,6 +9,13 @@ source_urls = [
     "https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u",
     "https://gitee.com/junchao321/migu_video/raw/main/interface.txt",
     "https://d.kstore.dev/download/15114/TVSolo.txt",
+    "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+    "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+    "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
+    "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
+    "https://live.hacks.tools/tv/iptv4.txt",
+    "http://xo.html-5.me//i/9918352.txt",
     "https://live.zhoujie218.top/tv/iptv4.txt"
 ]
 
