@@ -1,5 +1,5 @@
 更新日期,#genre#
-2025-10-13,https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4
+2025-10-15,https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4
 🍎┃广东频道,#genre#
 广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8$IPV4•线路1
 广州综合,https://tencentplaygsm.gztv.com/live/zonghes.m3u8$IPV4•线路2
