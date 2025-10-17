@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # by @嗷呜
 import re
 import sys
@@ -75,10 +76,10 @@ class Spider(Spider):
         data = self.getpq(self.fetch(f"{self.host}/list/{ids[0]}/", headers=self.headers).text)
         v=data('.detail-info.lightSpeedIn .slide-info')
         vod = {
-            'vod_year': v.eq(-1).text(),
-            'vod_remarks': v.eq(0).text(),
-            'vod_actor': v.eq(3).text(),
-            'vod_director': v.eq(2).text(),
+            'vod_year': v.eq(-1).text().split(':',1)[-1],
+            'vod_remarks': v.eq(0),
+            'vod_actor': v.eq(3).text().split(':',1)[-1],
+            'vod_director': v.eq(2).text().split(':',1)[-1],
             'vod_content': data('.switch-box #height_limit').text()
         }
         np=data('.anthology.wow.fadeInUp')
