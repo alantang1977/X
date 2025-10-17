@@ -1,5 +1,6 @@
+
 # -*- coding: utf-8 -*-
-# by @嗷呜
+# by @嗷呜  http://asp.xpgtv.com http://item.xpgcom.com
 import sys
 sys.path.append('..')
 from base.spider import Spider
@@ -18,7 +19,7 @@ class Spider(Spider):
     def destroy(self):
         pass
 
-    host='http://item.xpgcom.com'
+    host='http://asp.xpgtv.com'
 
     headers = {
       "User-Agent": "okhttp/3.12.11"
@@ -97,7 +98,7 @@ class Spider(Spider):
             'vod_actor':v.get('actor'),
             'vod_director':v.get('director'),
             'vod_content':v.get('content'),
-            'vod_play_from': '小苹果',
+            'vod_play_from': '书生玩剣ⁱ·*₁＇',
             'vod_play_url': '#'.join([f"{i['key']}${i['url']}" for i in v['urls']])
         }
         return {'list':[vod]}
@@ -109,15 +110,16 @@ class Spider(Spider):
     def playerContent(self, flag, id, vipFlags):
         header = {
             'user_id': 'XPGBOX',
-            'token2': 'SnAXiSW8vScXE0Z9aDOnK5xffbO75w1+uPom3WjnYfVEA1oWtUdi2Ihy1N8=',
-            'version': 'XPGBOX com.phoenix.tv1.5.7',
-            'hash': 'd78a',
-            'screenx': '2345',
+            'token2': 'XFxIummRrngadHB4TCzeUaleebTX10Vl/ftCvGLPeI5tN2Y/liZ5tY5e4t8=',
+            'version': 'XPGBOX com.phoenix.tv1.5.5',
+            'hash': '524f',
+            'screenx': '2331',
+            'user-agent': 'okhttp/3.12.11',
             'user-agent': 'Lavf/58.12.100',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36',
-            'token': 'ElEDlwCVgXcFHFhddiq2JKteHofExRBUrfNlmHrWetU3VVkxnzJAodl52N9EUFS+Dig2A/fBa/V9RuoOZRBjYvI+GW8kx3+xMlRecaZuECdb/3AdGkYpkjW3wCnpMQxf8vVeCz5zQLDr8l8bUChJiLLJLGsI+yiNskiJTZz9HiGBZhZuWh1mV1QgYah5CLTbSz8=',
-            'timestamp': '1743060300',
-            'screeny': '1065',
+            'token': 'VkxTyy6Krh4hd3lrQySUCJlsDYzzxxBbttphr3DiQNhmJkwoyEEm2YEu8qcOFGz2SmxGbIaSC91pa+8+VE9+SPQjGWY/wnqwKk1McYhsGyVVvHRAF0B1mD7922ara1o3k/EwZ1xyManr90EeUSxI7rPOLBwX5zeOri31MeyDfBnIdhckWld4V1k2ZfZ3QKbN',
+            'timestamp': '1749174636',
+            'screeny': '1121',
         }
         if 'http' not in id:id=f"http://c.xpgtv.net/m3u8/{id}.m3u8"
         return {"parse": 0, "url": id, "header": header}
@@ -135,4 +137,5 @@ class Spider(Spider):
                 "vod_pic": vod['pic'],
                 "vod_remarks": r or vod['score']
             })
+
         return videos
