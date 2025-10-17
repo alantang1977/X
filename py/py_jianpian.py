@@ -1,159 +1,202 @@
 # -*- coding: utf-8 -*-
-# @Author  : Doubebly
-# @Time    : 2025/1/21 20:57
-# JianPian
+import json
 import sys
-import requests
 sys.path.append('..')
 from base.spider import Spider
-
+import requests
 
 class Spider(Spider):
+    def init(self, extend=""):
+        self.host = 'https://ev5356.970xw.com'
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 9; V2196A Build/PQ3A.190705.08211809; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36;webank/h5face;webank/1.0;netType:NETWORK_WIFI;appVersion:416;packageName:com.jp3.xg3',
+            'Referer': self.host
+        }
+        self.ihost = self.imgsite()
+        self.skey = ''
+        self.stype = '3'
+
     def getName(self):
         return "JianPian"
 
-    def init(self, extend):
-        self.home_url = 'http://apijp.jianpianedge.com'
-        self.headers = {
-            "User-Agent": "jianpian-android/365",
-            'Host': 'apijp.jianpianedge.com',
-            'JPAUTH': 'bhhxAK8WwQNOcZk9C4+mO4H+W3IdMN52/XBD3ND0yr4C',
-            'Connection': 'keep-alive',
-            'Accept-Encoding': 'gzip',
-        }
-
-    def getDependence(self):
-        return []
-
-    def isVideoFormat(self, url):
-        pass
-
-    def manualVideoCheck(self):
-        pass
+    def imgsite(self):
+        data = requests.get(f"{self.host}/api/appAuthConfig", headers=self.headers).json()
+        host = data['data']['imgDomain']
+        return f"https://{host}" if not host.startswith('http') else host
 
     def homeContent(self, filter):
-
-        return {'class': [
-            {
-                'type_id': '1',
-                'type_name': '电影'
-            },
-            {
-                'type_id': '2',
-                'type_name': '电视剧'
-            },
-            {
-                'type_id': '3',
-                'type_name': '动漫'
-            },
-            {
-                'type_id': '4',
-                'type_name': '综艺'
-            }
-        ]}
+        classes = [
+            {'type_id': '1', 'type_name': '电影'},
+            {'type_id': '2', 'type_name': '电视剧'},
+            {'type_id': '3', 'type_name': '动漫'},
+            {'type_id': '4', 'type_name': '综艺'}
+        ]
+        filterObj = {
+            "1": [
+                {"key": "cateId", "name": "分类", "value": [
+                    {"v": "1", "n": "剧情"}, {"v": "2", "n": "爱情"}, {"v": "3", "n": "动画"}, {"v": "4", "n": "喜剧"},
+                    {"v": "5", "n": "战争"}, {"v": "6", "n": "歌舞"}, {"v": "7", "n": "古装"}, {"v": "8", "n": "奇幻"},
+                    {"v": "9", "n": "冒险"}, {"v": "10", "n": "动作"}, {"v": "11", "n": "科幻"}, {"v": "12", "n": "悬疑"},
+                    {"v": "13", "n": "犯罪"}, {"v": "14", "n": "家庭"}, {"v": "15", "n": "传记"}, {"v": "16", "n": "运动"},
+                    {"v": "18", "n": "惊悚"}, {"v": "20", "n": "短片"}, {"v": "21", "n": "历史"}, {"v": "22", "n": "音乐"},
+                    {"v": "23", "n": "西部"}, {"v": "24", "n": "武侠"}, {"v": "25", "n": "恐怖"}
+                ]},
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "2": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "3": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ],
+            "4": [
+                {"key": "area", "name": "地區", "value": [
+                    {"v": "1", "n": "国产"}, {"v": "3", "n": "香港"}, {"v": "6", "n": "台湾"},
+                    {"v": "5", "n": "美国"}, {"v": "18", "n": "韩国"}, {"v": "2", "n": "日本"}
+                ]},
+                {"key": "year", "name": "年代", "value": [
+                    {"v": "107", "n": "2025"}, {"v": "119", "n": "2024"}, {"v": "153", "n": "2023"},
+                    {"v": "101", "n": "2022"}, {"v": "118", "n": "2021"}, {"v": "16", "n": "2020"},
+                    {"v": "7", "n": "2019"}, {"v": "2", "n": "2018"}, {"v": "3", "n": "2017"},
+                    {"v": "22", "n": "2016"}, {"v": "2015", "n": "2015以前"}
+                ]},
+                {"key": "sort", "name": "排序", "value": [
+                    {"v": "update", "n": "最新"}, {"v": "hot", "n": "最热"}, {"v": "rating", "n": "评分"}
+                ]}
+            ]
+        }
+        return {
+            'class': classes,
+            'filters': filterObj
+        }
 
     def homeVideoContent(self):
-        a = []
-        try:
-            res = requests.get(url=self.home_url + '/api/crumb/list?area=0&code=unknownbe2a5c4162bb5528&category_id=0&year=0&limit=24&channel=wandoujia&page=1&sort=hot&type=0', headers=self.headers)
-            if res.status_code != 200:
-                return {'list': [], 'parse': 0, 'jx': 0, 'msg': f'status_code: {res.status_code}'}
-            data_list = res.json()['data']
-            for i in data_list:
-                a.append(
-                    {
-                        'vod_id': i['id'],
-                        'vod_name': i['title'],
-                        'vod_pic': i['path'],
-                        'vod_remarks': i['playlist']['title'],
-                        'vod_year': i['score'],
-                    }
-                )
-            return {'list': a, 'parse': 0, 'jx': 0}
-        except requests.exceptions.RequestException as e:
-            return {'list': [], 'parse': 0, 'jx': 0, 'msg': str(e)}
+        url = f"{self.host}/api/slide/list?pos_id=88"
+        data = requests.get(url, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['jump_id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['thumbnail']}",
+            'vod_remarks': "",
+            'style': json.dumps({"type": "rect", "ratio": 1.33})
+        } for item in data['data']]
+        return {'list': videos}
 
-    def categoryContent(self, cid, page, filter, ext):
-        a = []
-        try:
-            res = requests.get(url=self.home_url + f'/api/crumb/list?area=0&code=unknownbe2a5c4162bb5528&category_id={cid}&year=0&limit=24&channel=wandoujia&page={page}&sort=hot&type=0',
-                               headers=self.headers)
-            if res.status_code != 200:
-                return {'list': [], 'parse': 0, 'jx': 0, 'msg': f'status_code: {res.status_code}'}
-            data_list = res.json()['data']
-            for i in data_list:
-                a.append(
-                    {
-                        'vod_id': i['id'],
-                        'vod_name': i['title'],
-                        'vod_pic': i['path'],
-                        'vod_remarks': i['playlist']['title'],
-                        'vod_year': i['score'],
-                    }
-                )
-            return {'list': a, 'parse': 0, 'jx': 0}
-        except requests.exceptions.RequestException as e:
-            return {'list': [], 'parse': 0, 'jx': 0, 'msg': str(e)}
-
-
-    def detailContent(self, did):
-        ids = did[0]
-        video_list = []
-        try:
-            res = requests.get(f'{self.home_url}/api/node/detail?channel=wandoujia&token=&id={ids}', headers=self.headers)
-            if res.status_code != 200:
-                return {"list": video_list, 'parse': 0, 'jx': 0}
-            video_list.append(
-                {
-                    'type_name': ' '.join(i['name'] for i in res.json()['data']['types']),
-                    'vod_id': ids,
-                    'vod_name': res.json()['data']['title'],
-                    'vod_remarks': res.json()['data']['mask'],
-                    'vod_year': res.json()['data']['year']['title'],
-                    'vod_area': ' '.join(i['title'] for i in res.json()['data']['category']),
-                    'vod_actor': ' '.join(i['name'] for i in res.json()['data']['actors']),
-                    'vod_director': res.json()['data']['directors'][0]['name'],
-                    'vod_content': res.json()['data']['description'],
-                    'vod_play_from': '边下边播超清版',
-                    'vod_play_url': '#'.join([i['val'] for i in res.json()['data']['m3u8_downlist']])
-                }
-            )
-            return {"list": video_list, 'parse': 0, 'jx': 0}
-        except requests.RequestException as e:
-            return {'list': [], 'msg': str(e)}
-
-    def searchContent(self, key, quick, page='1'):
-        a = []
-        try:
-            res = requests.get(url=self.home_url + f'/api/video/search?page={page}&key={key}',headers=self.headers)
-            if res.status_code != 200:
-                return {'list': [], 'parse': 0, 'jx': 0, 'msg': f'status_code: {res.status_code}'}
-            data_list = res.json()['data']
-            for i in data_list:
-                a.append(
-                    {
-                        'vod_id': i['id'],
-                        'vod_name': i['title'],
-                        'vod_pic': i['tvimg'],
-                        'vod_remarks': i['mask'],
-                        'vod_year': i['score'],
-                    }
-                )
-            return {'list': a, 'parse': 0, 'jx': 0}
-        except requests.exceptions.RequestException as e:
-            return {'list': [], 'parse': 0, 'jx': 0, 'msg': str(e)}
-
-    def playerContent(self, flag, pid, vipFlags):
-        h = {
-            'User-Agent': 'jianpian-android/365',
+    def categoryContent(self, tid, pg, filter, extend):
+        params = {
+            'fcate_pid': tid,
+            'page': pg,
+            'category_id': extend.get('cateId', ''),
+            'area': extend.get('area', ''),
+            'year': extend.get('year', ''),
+            'type': extend.get('cateId', ''),
+            'sort': extend.get('sort', '')
         }
-        return {'url': pid, 'header': h, 'parse': 0, 'jx': 0}
+        url = f"{self.host}/api/crumb/list"
+        data = requests.get(url, params=params, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['path']}",
+            'vod_remarks': item['mask'],
+            'vod_year': ""
+        } for item in data['data']]
+        return {
+            'list': videos,
+            'page': pg,
+            'pagecount': 99999,
+            'limit': 15,
+            'total': 99999
+        }
 
-    def localProxy(self, params):
-        pass
+    def detailContent(self, ids):
+        id = ids[0]
+        url = f"{self.host}/api/video/detailv2?id={id}"
+        data = requests.get(url, headers=self.headers).json()
+        res = data['data']
+        
+        play_from = ['边下边播']
+        play_url = []
+        
+        # 寻找并处理“常规线路”
+        for source in res.get('source_list_source', []):
+            if source['name'] == '常规线路':
+                parts = [f"{part.get('source_name', part.get('weight', ''))}${part['url']}" for part in source.get('source_list', [])]
+                play_url.append('#'.join(parts))
+                break  # 找到后立即退出循环
+        
+        vod = {
+            'vod_id': id,
+            'type_name': '/'.join([t['name'] for t in res.get('types', [])]),
+            'vod_year': res.get('year', ''),
+            'vod_area': res.get('area', ''),
+            'vod_remarks': res.get('mask', ''),
+            'vod_content': res.get('description', ''),
+            'vod_play_from': '$$$'.join(play_from),
+            'vod_play_url': '$$$'.join(play_url)
+        }
+        return {'list': [vod]}
 
-    def destroy(self):
-        return '正在Destroy'
+    def playerContent(self, flag, id, vipFlags):
+        if ".m3u8" in id:
+            return {'parse': 0, 'url': id}
+        else:
+            return {'parse': 0, 'url': f"tvbox-xg:{id}"}
 
-if __name__ == '__main__':
-    pass
+    def searchContent(self, key, quick, pg="1"):
+        url = f"{self.host}/api/v2/search/videoV2"
+        params = {'key': key, 'category_id': 88, 'page': pg, 'pageSize': 20}
+        data = requests.get(url, params=params, headers=self.headers).json()
+        videos = [{
+            'vod_id': item['id'],
+            'vod_name': item['title'],
+            'vod_pic': f"{self.ihost}{item['thumbnail']}",
+            'vod_remarks': item.get('mask', ''),
+            'vod_year': ""
+        } for item in data['data']]
+        return {
+            'list': videos,
+            'limit': 20
+        }
+
+    def isVideoFormat(self, url): pass
+    def manualVideoCheck(self): pass
+    def destroy(self): pass
+    def localProxy(self, param): pass
+    def liveContent(self, url): pass
