@@ -1,1 +1,2 @@
-2025-10-17 10:15:58,919 - ERROR - url: https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u'
+2025-10-19 10:28:25,421 - ERROR - url: https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u'
+2025-10-19 10:28:58,212 - ERROR - url: http://xo.html-5.me//i/9918352.txt 失败❌, Error: Connection timeout to host http://xo.html-5.me//i/9918352.txt
