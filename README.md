@@ -36,6 +36,8 @@
 
 # 以上为互联网流传资源，不保证内容的真实性和可靠性。本页面只是收集自用请勿宣传。
 
+## 朵拉音乐：https://duolayy.top/?share 全网无损音乐MP3歌曲免费下载
+
 ## OK版影视APP（标准版与Pro）
 夸克：https://pan.quark.cn/s/d2d555b3b54a
 
