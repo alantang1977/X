@@ -155,9 +155,9 @@
 {"name": "📠┃咪咕LITV「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/qingtingjjjjjjj/iptv-auto-update/main/my.txt","playerType":1},
 {"name": "🐳┃全国IPTV「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/develop202/migu_video/main/interface.txt","playerType":1},
 {"name": "🏈┃咪咕「直播」","url": "https://down.nigx.cn/raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt","header": {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36","Referer": "","cookie": ""},"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}","logo": "http://diyp5.112114.xyz/{name}.png"},
-{"name": "🏈┃Gather「直播」","url": "https://tv.iill.top/m3u/Gather","header": {"User-Agent": "okhttp/3.8.1"}},
-{"name": "🏈┃MyTV「直播」","url": "https://tv.iill.top/m3u/MyTV","header": {"User-Agent": "okhttp/3.8.1"}},
-{"name": "🏈┃网络「直播」","url": "https://m.iill.top/Live.m3u","header": {"User-Agent": "okhttp/3.8.1","Referer": "https://m.iill.top/"}},
+{"name": "🏈┃Gather「直播」","url": "https://tv.iill.top/m3u/Gather","header": {"User-Agent": ""}},
+{"name": "🏈┃MyTV「直播」","url": "https://tv.iill.top/m3u/MyTV","header": {"User-Agent": ""}},
+//{"name": "🏈┃网络「直播」","url": "https://m.iill.top/Live.m3u","header": {"User-Agent": "okhttp/3.8.1","Referer": "https://m.iill.top/"}},
 {"name": "🏈┃电视家「直播」","url": "https://down.nigx.cn/dsj.zzong6599.workers.dev/","header": {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36","Referer": "","cookie": ""},"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}","logo": "http://diyp5.112114.xyz/{name}.png"},
 {"name": "🏈┃裤佬「直播」","url": "https://down.nigx.cn/raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1","header": {"Referer": "https://www.kds.tw/"},"epg": "http://diyp5.112114.xyz/?ch={name}&date={date}","logo": "http://diyp5.112114.xyz/{name}.png"},
 	
@@ -363,6 +363,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
