@@ -332,7 +332,9 @@
 {"name": "🛷┃日后大湿特区「直播」","boot": true,"type":0,"url": "http://rihou.cc:555/ggg.nzk","playerType":2,"ua": "judy/5.2.1"},
 {"name": "🛷┃日后大湿itv「直播」","boot": true,"type":0,"url":"https://itv-list.myukj.cn/list/itv.m3u","playerType":1,"ua":"c1c42b9e0d9e3a3a","epg":"https://epg.112114.eu.org/?ch={name}&date={date}","logo":"https://epg.112114.eu.org/logo/{name}.png"},	
 {"name": "🔐┃gshtwy直播","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/gshtwy/MyTv/refs/heads/main/MyTv.m3u","playerType":1}],
-
+	
+"proxy": [
+    "raw.githubusercontent.com"],
 "hosts": [
 	"cache.ott.ystenlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
 	"cache.ott.bestlive.itv.cmvideo.cn=itv.dns.xuran1983.cn",
@@ -344,7 +346,12 @@
 	"cache.ott.bestlive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
 	"cache.ott.wasulive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
 	"cache.ott.fifalive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
-	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com"
+	"cache.ott.hnbblive.itv.cmvideo.cn=base-v4-free-mghy.e.cdn.chinamobile.com",
+	"hlsztemgsplive.miguvideo.com=hlsztemgsplive.miguvideo.com.b.cdn.chinamobile.com",
+    "push-rtmp-hs-spe-f5.douyincdn.com=source-fcdn-spe-push.s.bytefcdn.com",
+    "cdn9.163189.xyz=gcore.jsdelivr.net",
+    "cache.ott.fifalive.itv.cmvideo.cn=cache.ott.fifalive.itv.cmvideo.cn.e.cdn.chinamobile.com",
+    "studentlive.migucloud.com=base-v4v6-miguvideo.e.cdn.chinamobile.com"
 ],
   "ads": [
     "static-mozai.4gtv.tv"
@@ -363,6 +370,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
