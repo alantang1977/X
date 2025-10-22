@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # by @嗷呜
+# 温馨提示：官方APP数据是错误的，你们可以给官方反馈，然后就可以写APP
 import re
 import sys
 from Crypto.Hash import MD5
@@ -98,19 +99,8 @@ class Spider(Spider):
         return result
 
     def searchContent(self, key, quick, pg="1"):
-        # data = self.getpq(self.fetch(f"{self.host}/vodsearch/{key}----------{pg}---.html", headers=self.headers).text)
-        # return {'list': self.getlist(data('.row-right .search-box .public-list-bj')), 'page': pg}
-        data = self.fetch(
-            f"{self.host}/index.php/ajax/suggest?mid={pg}&wd={key}&limit=999&timestamp={int(time.time() * 1000)}",
-            headers=self.headers).json()
-        videos = []
-        for i in data['list']:
-            videos.append({
-                'vod_id': i['id'],
-                'vod_name': i['name'],
-                'vod_pic': i['pic']
-            })
-        return {'list': videos, 'page': pg}
+        data = self.getpq(self.fetch(f"{self.host}/vodsearch/{key}----------{pg}---.html", headers=self.headers).text)
+        return {'list': self.getlist(data('.row-right .search-box .public-list-bj')), 'page': pg}
 
     def playerContent(self, flag, id, vipFlags):
         h, p = {"User-Agent": "okhttp/3.14.9"}, 1
