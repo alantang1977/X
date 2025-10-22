@@ -576,7 +576,7 @@ class Spider(Spider):
     def get_working_host(self):
         """Get working host from known dynamic URLs"""
         dynamic_urls = [
-            'https://kanliao2.one/',
+            'https://kanliao25.com//',
             'https://kanliao7.org/',
             'https://kanliao7.net/',
             'https://kanliao14.com/'

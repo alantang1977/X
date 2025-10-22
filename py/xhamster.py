@@ -172,11 +172,11 @@ class Spider(Spider):
 
     def gethost(self):
         try:
-            response = self.fetch('https://xhamster.com', headers=self.headers, allow_redirects=False)
+            response = self.fetch('https://zh.xhamster1.desi/', headers=self.headers, allow_redirects=False)
             return response.headers['Location']
         except Exception as e:
             print(f"获取主页失败: {str(e)}")
-            return "https://zn.xhamster.com"
+            return "https://zh.xhamster1.desi/"
 
     def e64(self, text):
         try:
