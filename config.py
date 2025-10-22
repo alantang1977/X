@@ -5,6 +5,7 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
+    "https://gh.catmak.name/https://raw.githubusercontent.com/aiyakuaile/easy_tv_live/refs/heads/main/temp",
     "https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt",
     "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt",
     "https://gh.catmak.name/https://raw.githubusercontent.com/develop202/migu_video/main/interface.txt",
