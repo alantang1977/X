@@ -1,0 +1,23 @@
+电台,#genre#
+清晨音乐,https://live.ximalaya.com/radio-first-page-app/live/1011/64.m3u8
+怀集音乐,https://live.ximalaya.com/radio-first-page-app/live/966/64.m3u8
+粤语,https://live.ximalaya.com/radio-first-page-app/live/999/64.m3u8
+CRI劲曲 HIT FM,http://sk.cri.cn/887.m3u8
+经典,https://live.ximalaya.com/radio-first-page-app/live/2689/64.m3u8
+亚洲热歌,https://live.ximalaya.com/radio-first-page-app/live/1908/64.m3u8
+年代音乐,https://live.ximalaya.com/radio-first-page-app/live/763/64.m3u8
+FM105.6,https://live.ximalaya.com/radio-first-page-app/live/325/64.m3u8
+音悦台,https://live.ximalaya.com/radio-first-page-app/live/2684/64.m3u8
+年代965,https://live.ximalaya.com/radio-first-page-app/live/2878/64.m3u8
+经典调频1038,https://live.ximalaya.com/radio-first-page-app/live/2728/64.m3u8
+走秀,#genre#
+Музыка 1,https://fl1001.bozztv.com/ushba-t2/tracks-v1a1/mono.m3u8
+Музыка 2,https://fl1001.bozztv.com/ushba-monj/tracks-v1a1/mono.m3u8
+Мода 1,https://fl1001.bozztv.com/ushba-t8/tracks-v1a1/mono.m3u8
+Мода 2,https://fl1001.bozztv.com/ushba-m6/tracks-v1a1/mono.m3u8
+Мода 3,https://fl1001.bozztv.com/ushba-m7/tracks-v1a1/mono.m3u8
+Мода 4,https://fl1001.bozztv.com/ushba-m8/tracks-v1a1/mono.m3u8
+Мода 5,https://fl1001.bozztv.com/ushba-m9/tracks-v1a1/mono.m3u8
+Мода 6,https://fl1001.bozztv.com/ushba-m1/tracks-v1a1/mono.m3u8
+Fashion Channel,https://fl1001.bozztv.com/ushba19/tracks-v1a1/mono.m3u8
+Тик Ток,https://fl1001.bozztv.com/ushba61/index.m3u8
