@@ -1,2 +1,2 @@
-2025-10-21 10:19:57,915 - ERROR - url: https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u'
-2025-10-21 10:20:29,156 - ERROR - url: http://xo.html-5.me//i/9918352.txt 失败❌, Error: Connection timeout to host http://xo.html-5.me//i/9918352.txt
+2025-10-22 13:41:02,927 - ERROR - url: https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u'
+2025-10-22 13:41:02,969 - ERROR - url: https://fy.188766.xyz/?url=https%3A%2F%2Flive.tangshop.top%3A35455&mishitong=true&mima=mianfeidehaimaiqian&json=true 失败❌, Error: 403, message='Forbidden', url='https://fy.188766.xyz/?url=https://live.tangshop.top:35455&mishitong=true&mima=mianfeidehaimaiqian&json=true'
