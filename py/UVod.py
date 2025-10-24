@@ -9,7 +9,7 @@ from Crypto.Util.Padding import pad,unpad
 class Spider(Spider):
     def __init__(self):
         super().__init__()
-        self.base_url = 'https://api-h5.uvod.tv'; self.web_url = 'https://www.uvod.tv'; self.token = ''; self._iv = b"abcdefghijklmnop"
+        self.base_url = 'https://api-h5.uvod.tv'; self.web_url = 'https://m.uvod.tv'; self.token = ''; self._iv = b"abcdefghijklmnop"
         self._client_private = """-----BEGIN PRIVATE KEY-----
 MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJ4FBai1Y6my4+fc
 8AD5tyYzxgN8Q7M/PuFv+8i1Xje8ElXYVwzvYd1y/cNxwgW4RX0tDy9ya562V33x
