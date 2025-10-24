@@ -27,11 +27,11 @@
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d","style": {"type": "rect","ratio": 1.5}},
 
 ##小米系列
-{"key":"热热","name":"🔥┃热热┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_AppRJ","ext":"jsSMEuhTZIAHjnUoLBzKdlRu5exzno6M4efF8LzwjWM=","jar":"./jar/DEMO.png"},
-{"key":"瓜子","name":"🐼┃瓜子┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_Gz360","jar":"./jar/DEMO.png"},
-{"key":"聚吧","name":"🐓┃剧霸┃影视","type":3,"searchable":1,"quickSearch":1,"api":"https://13826.kstore.space/jubaba.py","ext":"","jar":"./jar/DEMO.png"},
-{"key":"天天","name":"💯┃天天┃影视","type":3,"quickSearch":1,"searchable":1,"api":"csp_AppRJ","ext":"vxw35/hHSj07Q+maxQzOVMq1rjRCOTXpUCx8iKu5jIg=","jar":"./jar/DEMO.png"},
-{"key":"农民","name":"🖍️┃农民┃极速","type":3,"api":"csp_Wwys","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://www.wwgz.cn","jar":"./jar/DEMO.png"},
+{"key":"热热","name":"🔥┃热热┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_AppRJ","ext":"jsSMEuhTZIAHjnUoLBzKdlRu5exzno6M4efF8LzwjWM=","jar":"./jar/DEMO.jpg"},
+{"key":"瓜子","name":"🐼┃瓜子┃影视","type":3,"searchable":1,"quickSearch":1,"api":"csp_Gz360","jar":"./jar/DEMO.jpg"},
+{"key":"聚吧","name":"🐓┃剧霸┃影视","type":3,"searchable":1,"quickSearch":1,"api":"https://13826.kstore.space/jubaba.py","ext":"","jar":"./jar/DEMO.jpg"},
+{"key":"天天","name":"💯┃天天┃影视","type":3,"quickSearch":1,"searchable":1,"api":"csp_AppRJ","ext":"vxw35/hHSj07Q+maxQzOVMq1rjRCOTXpUCx8iKu5jIg=","jar":"./jar/DEMO.jpg"},
+{"key":"农民","name":"🖍️┃农民┃极速","type":3,"api":"csp_Wwys","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://www.wwgz.cn","jar":"./jar/DEMO.jpg"},
 
 ##PY源系列
 {"key": "壹帆","name": "🥝┃壹帆影视┃TV","type": 3,"api": "./py/爱壹帆.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
