@@ -65,6 +65,12 @@ http://mpanso.me/小米/DEMO.json
 ----
 域名购买：https://www.spaceship.com/
 
+# 🏂大神分享注册工具🏂
+
+##  临时邮箱 https://etempmail.com/zh ； https://www.mffac.com/
+
+## 真实地址生成器 https://ip-geoaddress-generator.pages.dev/
+
 淘IPTV(国内秒播iptv）：https://taoiptv.com/
 
 ## 🛩️Github文件加速：
