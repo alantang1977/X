@@ -63,7 +63,7 @@ http://mpanso.me/小米/DEMO.json
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
 
 ----
-域名购买：https://www.spaceship.com/
+## 域名购买：https://www.spaceship.com/
 
 # 🏂大神分享注册工具🏂
 
@@ -71,7 +71,9 @@ http://mpanso.me/小米/DEMO.json
 
 ## 真实地址生成器 https://ip-geoaddress-generator.pages.dev/
 
-淘IPTV(国内秒播iptv）：https://taoiptv.com/
+## 测试真实网速 https://www.itdog.cn/tcping/
+
+
 
 ## 🛩️Github文件加速：
 
@@ -114,6 +116,7 @@ http://pandown.pro/tvbox/tvbox.json  巧技
 # IPTV直播：https://live.izbds.com/
 
 # 国内直播源：https://myernestlu.github.io/zby.txt
+            淘IPTV(国内秒播iptv）：https://taoiptv.com/
 # 纯 IPv4 源
       百视通源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/bestv.m3u
       重庆广电源：https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/cqyx.m3u
