@@ -22,17 +22,7 @@
 {"key":"Bili","name":"🅱┃哔哔合集┃弹幕","type":3,"api":"csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://d.kstore.dev/download/15114/bilibili.txt"}},	
 {"key":"MyDrive","name":"🗂┃我的云盘┃配置","type":3,"api":"csp_MyDriveGuard","changeable":0,"indexs":0,"searchable":1,"style":{"type":"oval"},"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt"}},
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d","style": {"type": "rect","ratio": 1.5}},
-{
-            "key": "金牌",
-            "name": "金牌测试",
-            "type": 4,
-            "api": "http://127.0.0.1:8082/?sp=金牌",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1
-        },
+ 
 ##小米系列
 {"key":"仓鼠2","name":"🐨┃仓鼠┃小米","quickSearch":0,"searchable":1,"type":3,"api":"csp_AppQi","ext":"lo54N2bJ4DtrhxC9P676hHekMnvMvX1mNNhVKf3kE5Wgy3H/b30VkkDKAYauTqZsEMYaTrPKBtx3YUMTA+XHh7FPLmLfqp6gWseDzGVsgesALIba2gHVzuE75Sx1II8A","jar":"./jar/DEMO.jpg"},
 {"key":"猪猪","name":"🐷┃小猪┃影视","quickSearch":0,"searchable":1,"type":3,"api":"csp_AppGet","ext":"I7L3u12iTGax7pIKDBrd0Czr1qZntIntytqeFyDzetDIICoeNSd3afmMXMhm296uAkb3qZ7kxihetfT8V6h4kw==","jar":"./jar/DEMO.jpg"},
@@ -43,17 +33,6 @@
 {"key":"天天","name":"💯┃天天┃影视","type":3,"quickSearch":1,"searchable":1,"api":"csp_AppRJ","ext":"vxw35/hHSj07Q+maxQzOVMq1rjRCOTXpUCx8iKu5jIg=","jar":"./jar/DEMO.jpg"},
 {"key":"农民","name":"🖍️┃农民┃极速","type":3,"api":"csp_Wwys","searchable":1,"quickSearch":0,"filterable":1,"ext":"https://www.wwgz.cn","jar":"./jar/DEMO.jpg"},
 
-##月佬影视
-{"key":"月佬瓜子","name":"🦆┃月佬瓜子影视","type":4,"api":"https://tvbot.ggff.net/guazi"},
-{"key":"Qile优视频","name":"🏸┃嗷呜Qile优视频","type":4,"api":"https://tvbot.ggff.net/uvod"},
-{"key":"电影天堂","name":"🥅┃嗷呜电影天堂","type":4,"api":"https://tvbot.ggff.net/dytt"},
-{"key":"嗷呜小苹果","name":"⛳┃嗷呜小苹果","type":4,"api":"https://tvbot.ggff.net/pingguo"},
-{"key":"嗷呜爱瓜TV","name":"🥊┃嗷呜爱瓜TV","type":4,"api":"https://tvbot.ggff.net/aigua"},
-{"key":"嗷呜金牌影院","name":"🪁┃嗷呜金牌影院","type":3,"api":"https://tvbot.dpdns.org/py_jinpai.py"},
-{"key":"欧乐影院","name":"⛷️┃嗷呜欧乐影院","type":4,"api":"https://tvbot.ggff.net/oule"},
-{"key":"荐片","name":"🏄‍♂️┃嗷呜荐片","type":3,"api":"https://tvbot.dpdns.org/py_jianpian.py"},
-{"key":"独播库","name":"🏊‍♀️┃嗷呜独播库","type":4,"api":"https://tvbot.ggff.net/duboku"},
-{"key":"嗷呜剧爸爸","name":"🀄┃嗷呜剧爸爸","type":3,"api":"https://tvbot.dpdns.org/py_jubaba.py"},
 	
 ##PY源系列
 {"key": "4KFS","name": "🦄️┃4KFS┃挂梯","type": 3,"api": "./py/4KFS.py","style": {"type": "rect","ratio": 1.33},"changeable": 1},
@@ -399,6 +378,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
