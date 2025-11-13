@@ -39,11 +39,10 @@
 ## 朵拉音乐：https://duolayy.top/?share 全网无损音乐MP3歌曲免费下载
 
 ## OK版影视APP（标准版与Pro）
-夸克：https://pan.quark.cn/s/d2d555b3b54a
 
-UC盘：https://drive.uc.cn/s/126316a434e34
+UC盘: https://drive.uc.cn/s/e7b5fd4698704
 
-迅雷: https://pan.xunlei.com/s/VOW_qwXse6BiG_Wv_-PDp7KnA1?pwd=uaq2
+迅雷: https://pan.xunlei.com/s/VOdNIFrnI0RLf8qAs3b5BGUCA1?pwd=ir74
  
 ## 影视APP：https://github.com/FongMi/Release/tree/main/apk/release
 
