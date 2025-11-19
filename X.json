@@ -21,6 +21,7 @@
 {"key": "应用商店","name": "🤡┃商店┃市场","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"UA": "leifeng","ext": "https://000.hfr1107.top/tool/yc/yc2fm.php?code=11AA,bb1d&url=http://000.hfr1107.top/tool/yc/market.json","jar": "http://000.hfr1107.top/tool/yc/fm.jar"},
 	
 ##PY源系列
+{"key": "飞快","name": "🧀┃飞快┃TV","type": 3,"api": "./py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 //{"key": "毒舌","name": "🍄┃毒舌┃影视","type": 3,"api": "./py/毒舌电影.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
 {"key": "hollymoviehd","name": "🎭┃好莱坞┃影视","type": 3,"api": "./py/好莱坞.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "hohaiemby","name": "🧃┃影视┃EMBY","type": 3,"api": "./py/emby.py","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 1,"ext": {"server": "https://emby.hohai.eu.org:443","username": "chuxin666","password": "ycc123456","proxy": "","thread": 0,"device_name": "My Computer","client": "Hills Windows","client_version": "0.2.2","device_id": "a9f74849-83d5-4a28-8b85-a087af1402e3"}},     
@@ -398,6 +399,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
