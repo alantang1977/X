@@ -40,6 +40,8 @@
 
 ## OK版影视APP（标准版与Pro）
 
+垮客: https://pan.quark.cn/s/cb0ee2b9ac64
+
 UC盘: https://drive.uc.cn/s/e7b5fd4698704
 
 迅雷: https://pan.xunlei.com/s/VOdNIFrnI0RLf8qAs3b5BGUCA1?pwd=ir74
