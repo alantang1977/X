@@ -1,6 +1,5 @@
 {
-	"spider":"./pg.jar;md5;c10464a367e55bef8b5c1ab58995144a",
-	"logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
+	"spider":"./pg.jar",
 	"sites":[
 		{
 			"key": "豆瓣",
