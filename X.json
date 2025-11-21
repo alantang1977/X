@@ -237,7 +237,7 @@
 {"name": "⚔️️┃tvzb直播","type":0,"url":"https://php.946985.xyz/fengyunTV.txt","playerType":1},
 	
 {"name": "🎎┃smartLive「php直播」","type": 0,"url": "http://alantang.serv00.net/smt.php","ua": "","timeout": 10,"playerType": 2},
-//{"name": "😁┃tmxk「php直播」","type":0,"url":"https://tmxk.pp.ua/smart-cn.m3u","ua": "","timeout": 10,"playerType": 2},
+{"name": "🍉┃serv00「php直播」","type":0,"url":"http://alantang.serv00.net/smt-2.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "⚖️┃zgstLive「php直播」","type": 0,"url": "http://alantang.serv00.net/smt.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "🐯┃咪咕1080「php直播」","type":0,"url":"http://alantang.serv00.net/hktv.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "🃏┃蛤蟆mytv「直播」","type":0,"url":"http://xtvantsc.xyz/mytv.m3u","ua": "","timeout": 10,"playerType": 2},
@@ -403,3 +403,4 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
