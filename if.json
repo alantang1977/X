@@ -66,8 +66,8 @@
 {"name":"🐻┃伪巧技","url":"http://tv.laohu.cool/tvbox.json"},
 {"name":"📿┃神秘哥哥","url":"https://神器每日推送.tk/pz.json"},
 {"name":"🐄┃牛哥","url":"http://yingshi.fongmi.eu.org"},
-{"name":"🏡┃潇洒","url":"https://tvbox.catvod.com/xs/api.json"},
-{"name":"🍋┃云星","url":"http://itvbox.cc/tvbox/云星日记/1.m3u8"},
-{"name":"🦉┃猫爪","url":"https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json"}
+{"name":"🏡┃catvod","url":"https://tvbox.catvod.com/catvod.json"}
+//{"name":"🍋┃云星","url":"http://itvbox.cc/tvbox/云星日记/1.m3u8"}
+//{"name":"🦉┃猫爪","url":"https://codeberg.org/AK47/drpy-js/raw/branch/main/js.json"}
   
 ]}
