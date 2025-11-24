@@ -74,7 +74,7 @@ http://mpanso.me/小米/DEMO.json
 
 ## 测试真实网速 https://www.itdog.cn/tcping/
 
-
+## 在线TXT/M3U 转换工具 https://lives.catvod.com
 
 ## 🛩️Github文件加速：
 
