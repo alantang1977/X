@@ -8,6 +8,7 @@
 {"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d"},
 {"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
 {"key":"木兮","name": "🍃┃爱木兮┃影视","type": 3,"api": "./py/山有木兮.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
+{"key": "飞快","name": "🥊┃飞快┃TV","type": 3,"api": "./py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"爱看","name":"🤖┃爱看机器人┃影视","type":3,"api":"https://wget.la/raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://wget.la/raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/爱看机器人[虫].js"},
 {"key":"爱壹帆","name": "⛵┃爱壹帆┃影视","type": 3,"api": "./py/ayf.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key":"瓜瓜","name":"🍉┃瓜子┃影视","type":3,"api":"https://wget.la/raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://wget.la/raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/瓜子.js"},
@@ -24,19 +25,12 @@
 {"key":"MyDrive","name":"🗂┃我的云盘┃配置","type":3,"api":"csp_MyDriveGuard","changeable":0,"indexs":0,"searchable":1,"style":{"type":"oval"},"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt"}},
 {"key":"网盘配置","name": "🐧┃网盘及彈幕┃配置","type": 3,"api": "csp_Config","searchable": 0,"changeable": 0,"ext":"./lib/tokenm.json","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d","style": {"type": "rect","ratio": 1.5}},
 {"key": "应用商店","name": "🤡┃商店┃市场","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"UA": "leifeng","ext": "https://000.hfr1107.top/tool/yc/yc2fm.php?code=11AA,bb1d&url=http://000.hfr1107.top/tool/yc/market.json","jar": "http://000.hfr1107.top/tool/yc/fm.jar"},
-{
-            "key": "影视+穿透",
-            "name": "👍┃影视+穿透",
-            "type": 4,
-            "api": "http://127.0.0.1:1988/lb?lb=17",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1
-        },	
+
+{"key": "有声","name": "🥊┃有声小说┃书籍","type": 3,"api": "./py/有声小说.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+{"key": "恰逢","name": "🥊┃恰逢小说┃书籍","type": 3,"api": "./py/恰逢小说.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+
+
 ##PY源系列
-{"key": "飞快","name": "🥊┃飞快┃TV","type": 3,"api": "./py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "瓜子","name": "🚗┃瓜子┃影视","type": 3,"api": "./py/瓜子.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
 {"key": "hollymoviehd","name": "🎭┃好莱坞┃影视","type": 3,"api": "./py/好莱坞.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "hohaiemby","name": "🧃┃EMBY┃影视","type": 3,"api": "./py/emby.py","searchable": 1,"quickSearch": 1,"filterable": 1,"changeable": 1,"ext": {"server": "https://emby.hohai.eu.org:443","username": "chuxin666","password": "ycc123456","proxy": "","thread": 0,"device_name": "My Computer","client": "Hills Windows","client_version": "0.2.2","device_id": "a9f74849-83d5-4a28-8b85-a087af1402e3"}},     
@@ -415,6 +409,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
