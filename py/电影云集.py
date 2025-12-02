@@ -98,31 +98,21 @@ class Spider(Spider):
             baidu_pattern = r'https?://pan\.baidu\.com/s/[a-zA-Z0-9_-]+(?:\?[^"\'\s]*)?'
             baidu_matches = re.findall(baidu_pattern, content_html, re.I)
             for link in list(dict.fromkeys(baidu_matches)):
-                # 提取码处理
+            # 提取码处理
                 if '?pwd=' not in link and 'pwd=' not in link:
                     link_pos = content_html.find(link)
                     if link_pos != -1:
                         start, end = max(0, link_pos-100), min(len(content_html), link_pos+len(link)+100)
                         nearby = content_html[start:end]
-                        pwd_match = re.search(r'[提取码密码pwd][：:]\s*([a-zA-Z0-9]{4})', nearby, re.I)
+                        
                         if pwd_match:
                             password = pwd_match.group(1)
                             separator = '?' if '?' not in link else '&'
                             link = f"{link}{separator}pwd={password}"
                 play_items.append(('百度网盘', link))
             
-            # 其他网盘
-            other_patterns = [
-                ('阿里云盘', r'https?://(?:www\.)?aliyundrive\.com/s/[a-zA-Z0-9]+'),
-                ('迅雷云盘', r'https?://pan\.xunlei\.com/s/[a-zA-Z0-9]+'),
-                ('115网盘', r'https?://115\.com/s/[a-zA-Z0-9]+'),
-                ('磁力链接', r'magnet:\?xt=urn:btih:[a-zA-Z0-9]{32,}')
-            ]
-            for netdisk_name, pattern in other_patterns:
-                matches = re.findall(pattern, content_html, re.I)
-                for link in list(dict.fromkeys(matches)):
-                    play_items.append((netdisk_name, link))
             
+                            
             # 构建播放链接
             if play_items:
                 play_items.sort(key=lambda x: (0 if x[0] == '夸克网盘' else 1 if x[0] == '百度网盘' else 2))
