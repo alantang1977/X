@@ -82,6 +82,8 @@ https://gh.catmak.name/
 
 https://daili.korice.eu.org/
 
+https://jsnzkpg.github.io/  (裤佬收藏网)
+
 ## 🚁TVBox配置接口解密： https://www.xn--sss604efuw.com/jm/ 
 
 TVBOX/影视接口解密  https://tools.v1.mk/
