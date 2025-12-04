@@ -166,7 +166,8 @@
 {"name": "🌶️┃小众「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/zxmlxw520/5566/refs/heads/main/gat.txt","playerType":1},
 {"name": "🥔┃小众「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/zxmlxw520/5566/refs/heads/main/jdlb+.txt","playerType":1},
 {"name": "⛷️┃小众「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/zxmlxw520/5566/refs/heads/main/ycds.txt","playerType":1},
-	
+
+{"name": "🏒┃judy直播","type": "0","pass": true,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","timeout": 10,"playerType": 1,"ua": "Goiptv/8.8.8"},	
 {"name": "🖨️┃judy-smart「直播」","type": 0,"pass": true,"ua": " judy/5.2.1","url": "https://gh.catmak.name/https://raw.githubusercontent.com/judy-gotv/iptv/main/logo-smart.m3u","epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
 {"name": "🎅┃judy-4gtv「挂梯直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/judy-gotv/iptv/refs/heads/main/4gtv.m3u","playerType":1},
 {"name": "🪁┃judy-ofiii「直播」","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/judy-gotv/iptv/main/ofiii.m3u","playerType":1},
@@ -238,7 +239,7 @@
 ##serv00服务器系列
 {"name": "🎎┃smartLive「php直播」","type": 0,"url": "http://alantang.serv00.net/smt.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "🗝️┃serv00「php直播」","type":0,"url":"http://alantang.serv00.net/smt-2.php","ua": "","timeout": 10,"playerType": 2},
-{"name": "⚖️┃zgstLive「php直播」","type": 0,"url": "http://alantang.serv00.net/smt.php","ua": "","timeout": 10,"playerType": 2},
+{"name": "⚖️┃zgstLive「php直播」","type": 0,"url": "http://alantang.serv00.net/smt-1.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "🐯┃咪咕1080「php直播」","type":0,"url":"http://alantang.serv00.net/hktv.php","ua": "","timeout": 10,"playerType": 2},
 {"name": "🌴️️┃migu720p「php直播」","type":0,"url":"http://alantang.serv00.net/migu720p.php","ua": "","timeout": 10,"playerType": 2},	
 {"name": "🃏┃蛤蟆mytv「直播」","type":0,"url":"http://xtvantsc.xyz/mytv.m3u","ua": "","timeout": 10,"playerType": 2},
@@ -298,7 +299,6 @@
 {"name": "🎮┃IPTV_auto直播","type":0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/IPTV/main/live_ipv4.m3u","playerType":1},	
 {"name": "🧩┃PG直播","type": 0,"url":"https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/pg/refs/heads/main/live.m3u","playerType": 1,"logo": "https://live.fanmingming.com/tv/{name}.png"},
 
-{"name": "🏒┃judy直播","type": "0","pass": true,"url": "https://smart.pendy.dpdns.org/m3u/merged_judy.m3u","timeout": 10,"playerType": 1,"ua": "Goiptv/8.8.8"},
 {"name": "🐱┃全球通tv","type": 0,"url": "http://8.138.7.223/51.php","playerType":1},
 {"name": "⛳️┃白嫖军团直播","type": 0,"url": "http://gg.7749.org/z/0/白嫖军团.txt","playerType":1},
 {"name": "〽️┃欧歌电视秒播","type": 0,"url": "http://gg.7749.org/z/i/gdss.txt","playerType":1},
@@ -404,6 +404,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
