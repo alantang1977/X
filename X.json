@@ -6,8 +6,7 @@
 ##常用系列
 {"key":"玩偶","name":"🤹‍♂️┃饭硬┃玩偶哥哥","type":3,"api":"csp_WoGGGuard","searchable":1,"quickSearch":1,"changeable":0,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","siteUrl":"https://www.wogg.net/","danMu":"弹"}},
 {"key":"Lib","name":"🏈┃Libvio┃秒播","type":3,"api":"csp_LibvioGuard","searchable":1,"quickSearch":1,"changeable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
-//{"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d"},
-{"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
+{"key":"Wogg","name":"🎩┃PG┃玩偶哥哥","type":3,"api":"csp_Wogg","quickSearch":1, "changeable":1, "filterable":1, "timeout":60, "ext":"./lib/tokenm.json$$$http://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG","jar":"./pg.jar;md5;eebd540f3a683eb8c5b4f5a61288053d"},
 {"key": "剧透","name": "🚗┃剧透社┃影视","type": 3,"api": "./py/剧透社[盘]_夸克在前.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"木兮","name": "🍃┃爱木兮┃影视","type": 3,"api": "./py/山有木兮.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "飞快","name": "🥊┃飞快┃TV","type": 3,"api": "./py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
@@ -33,6 +32,7 @@
 //{"key": "dr_荐片[优]","name": "☯┃荐片[DR]","type": 3,"api": "./lib/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"timeout": 30,"ext": "./js/荐片[磁].js"},	
 {"key":"GitHub","name": "🐙┃商店┃市场","type":3,"api":"csp_GitHubAmns","searchable":0,"filterable":0,"quickSearch":0,"changeable":0,"ext":"https://cloud.7so.top/f/ZVYqCQ/github(APP).json","jar":"./jar/嗷嗚.jar"},
 {"key":"瓜子","name":"🍉┃瓜子┃影视","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cloud.7so.top/f/1r61hq/guazi.json","jar":"./jar/嗷嗚.jar"},
+{"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
 	
 ##PY源系列
 {"key": "瓜子","name": "🚗┃瓜子┃影视","type": 3,"api": "./py/瓜子.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
@@ -426,6 +426,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
