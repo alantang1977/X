@@ -78,11 +78,16 @@ http://mpanso.me/小米/DEMO.json
 
 ## 在线TXT/M3U 转换工具 https://lives.catvod.com
 
-## FOFA https://fofa.info
+# CF搭建地址
+    ## fofa官网 https://fofa.info  【搜索关键词：asn!="13335" && region="TW" && server=="cloudflare"】，"TW"代表是台湾缩写
 
-## CloudFlare优选IPV4地址 https://www.wetest.vip/page/cloudflare/address_v4.html
+    ## CloudFlare优选IPV4地址 https://www.wetest.vip/page/cloudflare/address_v4.html
 
-## CF优选域名 https://mrxn.net/BESTCFDOMAIN
+    ## CF优选域名 https://mrxn.net/BESTCFDOMAIN
+
+    ## 地区码对照表 http://szdm.00cha.net
+    
+    ## 临时邮箱 https://www.linshiyouxiang.net
 
 ## 🛩️Github文件加速：
 
