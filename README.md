@@ -89,6 +89,14 @@ http://mpanso.me/小米/DEMO.json
     
     ## 临时邮箱 https://www.linshiyouxiang.net
 
+    DOH服务器：
+
+    阿里云（默认）：dns.alidns.com/dns-query
+
+    腾讯 DNSPod：doh.pub/dns-query
+
+     360 安全 DNS： doh.360.cn/dns-query
+
 ## 🛩️Github文件加速：
 
 https://gh.catmak.name/
