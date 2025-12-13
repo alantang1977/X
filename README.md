@@ -78,6 +78,12 @@ http://mpanso.me/小米/DEMO.json
 
 ## 在线TXT/M3U 转换工具 https://lives.catvod.com
 
+## FOFA https://fofa.info
+
+## CloudFlare优选IPV4地址 https://www.wetest.vip/page/cloudflare/address_v4.html
+
+## CF优选域名 https://mrxn.net/BESTCFDOMAIN
+
 ## 🛩️Github文件加速：
 
 https://gh.catmak.name/
