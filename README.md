@@ -38,8 +38,6 @@
 
 ## 朵拉音乐：https://duolayy.top/?share 全网无损音乐MP3歌曲免费下载
 
-## 免翻代理  https://git-proxy.playdreamer.cn/
-
 ## OK版影视APP（标准版与Pro）
 
 垮客: https://pan.quark.cn/s/cb0ee2b9ac64
