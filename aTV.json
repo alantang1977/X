@@ -107,7 +107,7 @@
 {"key":"Aliso","name":"🙀┃盘搜┃阿狸","type":3,"api":"csp_PanSearchGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"YiSo","name":"😹┃易搜┃阿狸","type":3,"api":"csp_YiSoGuard","searchable":1,"quickSearch":1,"changeable":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},
 {"key":"push_agent","name":"🛴┃手机┃推送","type":3,"api":"csp_PushGuard","searchable":0,"quickSearch":0,"ext": {"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto","jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/jar/dongli-spider.jar"}},
-{"key": "配置","name": "⚙️┃配置┃中心","type": 3,"api": "csp_ConfigCenter","searchable": 0,"changeable": 0,"style": {"type": "list","ratio": 1.433},"ext": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/config/configcenter.json","jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/jar/dongli-spider.jar"},
+{"key": "配置","name": "⚙️┃东篱配置┃中心","type": 3,"api": "csp_ConfigCenter","searchable": 0,"changeable": 0,"style": {"type": "list","ratio": 1.433},"ext": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/config/configcenter.json","jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/jar/dongli-spider.jar"},
 {"key": "剧透","name": "🚗┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 	
 ##官源系列
