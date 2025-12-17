@@ -1,6 +1,7 @@
 import re
 import sys
 import urllib.parse
+import json
 from pyquery import PyQuery as pq
 
 sys.path.append('..')
@@ -12,49 +13,56 @@ class Spider(Spider):
     
     def init(self, extend):
         self.siteUrl = "https://www.hanjukankan.com"
-        pass
-        
+        self.header = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Referer': self.siteUrl,
+            'Origin': self.siteUrl
+        }
+    
+    def getHeader(self):
+        return self.header
+
     def homeContent(self, filter):
         result = {}
         classes = []
         try:
-            rsp = self.fetch(self.siteUrl)
+            rsp = self.fetch(self.siteUrl, headers=self.getHeader())
             if rsp and rsp.text:
                 doc = pq(rsp.text)
                 
-                # Handling categories: Try standard navigation selectors
-                # Scenario A: Top Menu
+                # 策略1：抓取顶部导航 (最常见的位置)
+                # 针对韩剧、韩影、韩综等分类
                 items = doc('.stui-header__menu li a')
                 
-                # Scenario B: Fallback to common nav if A fails
+                # 策略2：如果是移动端模板，尝试抓取滑动菜单
                 if not items:
-                     items = doc('.nav-menu li a')
-
+                    items = doc('.type-slide li a')
+                
+                seen_ids = set()
+                
                 for item in items.items():
-                    name = item.text()
+                    name = item.text().strip()
                     href = item.attr('href')
-                    if name and href and name != "首页":
-                        # Match standard category pattern: /vodtype/id.html or similar
-                        # Trying to extract ID from patterns like /vodtype/20.html or /list/20.html
-                        match = re.search(r'/vodtype/(\d+)\.html', href)
-                        if not match:
-                             match = re.search(r'/list/(\d+)\.html', href)
-                             
-                        if match:
+                    
+                    # 过滤无效分类
+                    if not name or not href or name == "首页" or name == "全站":
+                        continue
+                        
+                    # 提取分类ID
+                    # 匹配格式: /vodtype/1.html 或 /list/1.html
+                    match = re.search(r'/(?:vodtype|list)/(\d+)', href)
+                    if match:
+                        tid = match.group(1)
+                        if tid not in seen_ids:
+                            seen_ids.add(tid)
                             classes.append({
                                 'type_name': name,
-                                'type_id': match.group(1)
+                                'type_id': tid
                             })
-                
-                # Remove duplicates
-                seen = set()
-                unique_classes = []
-                for cls in classes:
-                    if cls['type_id'] not in seen:
-                        seen.add(cls['type_id'])
-                        unique_classes.append(cls)
-                classes = unique_classes
-                
+            
+            # 排序优化：尽量让韩剧、电影排在前面（如果抓取顺序乱的话）
+            # 这里保持原站顺序通常是最好的
+
         except Exception as e:
             print(f"homeContent error: {e}")
             
@@ -67,48 +75,20 @@ class Spider(Spider):
         result = {}
         try:
             videos = []
-            rsp = self.fetch(self.siteUrl)
+            rsp = self.fetch(self.siteUrl, headers=self.getHeader())
             if rsp and rsp.text:
                 doc = pq(rsp.text)
-                # Select standard video list items (common in STUI templates)
-                items = doc('.stui-vodlist li, .stui-vodlist__box')
+                
+                # 首页推荐内容选择器
+                # 兼容 stui-vodlist 和 common-list
+                items = doc('.stui-vodlist li, .index-list li')
                 
                 for item in items.items():
-                    a = item.find('a.stui-vodlist__thumb')
-                    if not a:
-                         a = item.find('a.module-item-cover') # Fallback selector
-                         
-                    href = a.attr('href')
-                    title = a.attr('title') 
-                    
-                    # Image handling
-                    img = a.attr('data-original') or a.attr('style')
-                    if img and 'background-image:' in img:
-                        match = re.search(r'url\(["\']?(.*?)["\']?\)', img)
-                        if match:
-                            img = match.group(1)
-                    if img and not img.startswith('http'):
-                        img = urllib.parse.urljoin(self.siteUrl, img)
-                    
-                    if not title or not href:
-                        continue
-                    
-                    # Remarks (Score/Status)
-                    play_count = item.find('.pic-text').text() or item.find('.text-right').text() 
-                    if not play_count:
-                         play_count = item.find('.module-item-text').text()
-                         
-                    score = item.find('.score').text()
-                    remarks = score if score else play_count
-
-                    videos.append({
-                        'vod_id': href,
-                        'vod_name': title,
-                        'vod_pic': img,
-                        'vod_remarks': remarks or ''
-                    })
+                    videos.append(self._parse_vod_item(item))
             
-            result['list'] = videos
+            # 过滤掉空的条目
+            result['list'] = [v for v in videos if v['vod_id']]
+            
         except Exception as e:
             print(f"homeVideoContent error: {e}")
             
@@ -118,46 +98,22 @@ class Spider(Spider):
         result = {}
         videos = []
         try:
-            # Construct Category URL: https://www.hanjukankan.com/vodtype/{tid}-{pg}.html
+            # 拼接分类链接：/vodtype/{tid}-{pg}.html
             url = f"{self.siteUrl}/vodtype/{tid}-{pg}.html"
             
-            rsp = self.fetch(url)
+            rsp = self.fetch(url, headers=self.getHeader())
             if rsp and rsp.text:
                 doc = pq(rsp.text)
-                items = doc('.stui-vodlist li, .module-item')
+                
+                # 分类页列表选择器
+                items = doc('.stui-vodlist li, .vod-list li')
                 for item in items.items():
-                    a = item.find('a.stui-vodlist__thumb')
-                    if not a:
-                        a = item.find('a.module-item-cover')
-
-                    href = a.attr('href')
-                    title = a.attr('title')
+                    videos.append(self._parse_vod_item(item))
                     
-                    img = a.attr('data-original') or a.attr('style') or a.attr('src')
-                    if img and 'background-image:' in img:
-                        match = re.search(r'url\(["\']?(.*?)["\']?\)', img)
-                        if match:
-                            img = match.group(1)
-                    if img and not img.startswith('http'):
-                        img = urllib.parse.urljoin(self.siteUrl, img)
-                    
-                    if not title or not href:
-                        continue
-                    
-                    play_count = item.find('.pic-text').text() or item.find('.text-right').text()
-                    if not play_count:
-                        play_count = item.find('.module-item-text').text()
-
-                    videos.append({
-                        'vod_id': href,
-                        'vod_name': title,
-                        'vod_pic': img,
-                        'vod_remarks': play_count or ''
-                    })
         except Exception as e:
             print(f"categoryContent error: {e}")
             
-        result['list'] = videos
+        result['list'] = [v for v in videos if v['vod_id']]
         result['page'] = int(pg)
         result['pagecount'] = 9999
         result['limit'] = 90
@@ -171,12 +127,13 @@ class Spider(Spider):
             
         try:
             aid = array[0]
+            # 补全链接
             if aid.startswith('http'):
                 url = aid
             else:
                 url = urllib.parse.urljoin(self.siteUrl, aid)
                 
-            rsp = self.fetch(url)
+            rsp = self.fetch(url, headers=self.getHeader())
             if not rsp or not rsp.text:
                 return result
                 
@@ -185,7 +142,7 @@ class Spider(Spider):
             
             vod = {
                 'vod_id': aid,
-                'vod_name': doc('h1.title').text() or doc('title').text(),
+                'vod_name': doc('h1.title').text() or doc('.stui-content__detail .title').text(),
                 'vod_pic': '',
                 'vod_remarks': '',
                 'vod_content': '',
@@ -193,42 +150,47 @@ class Spider(Spider):
                 'vod_play_url': ''
             }
             
-            # Extract Image
-            img = doc('.stui-vodlist__thumb').attr('data-original') or doc('.stui-vodlist__thumb').attr('src')
-            if not img:
-                 img = doc('.module-item-cover .module-item-pic img').attr('data-src')
-
-            if img and not img.startswith('http'):
-                img = urllib.parse.urljoin(self.siteUrl, img)
-            vod['vod_pic'] = img
+            # 1. 解析图片
+            img = doc('.stui-vodlist__thumb').attr('data-original') or \
+                  doc('.stui-vodlist__thumb').attr('src') or \
+                  doc('.picture img').attr('src')
+            vod['vod_pic'] = self._fix_url(img)
             
-            # Extract Description
-            desc = doc('.stui-content__detail').text() or doc('.vod_content').text() or doc('meta[name="description"]').attr('content')
-            vod['vod_content'] = desc
+            # 2. 解析简介
+            content = doc('.stui-content__detail .desc').text() or \
+                      doc('.stui-pannel_bd .col-pd').text() or \
+                      doc('meta[name="description"]').attr('content')
+            vod['vod_content'] = content.strip() if content else ""
             
-            # Extract Playlist
-            # Finds tabs (Sources)
+            # 3. 解析备注（年份、地区等）
+            info = doc('.stui-content__detail .data').text()
+            if info:
+                vod['vod_remarks'] = info
+            
+            # 4. 解析播放列表 (核心部分)
             playFrom = []
             playList = []
             
-            # Selector for Tabs
-            tabs = doc('.stui-pannel__head h3, .module-tab-item')
+            # 获取播放源标题 (例如: 专线线路, 极速云)
+            tabs = doc('.stui-pannel__head h3, .stui-vodlist__head h3')
+            if not tabs:
+                tabs = doc('.nav-tabs li')
+                
             for tab in tabs.items():
-                name = tab.text()
+                name = tab.text().replace("播放", "").strip()
                 if name:
-                    playFrom.append(name.replace("线路", "Source").strip())
+                    playFrom.append(name)
             
-            # If no tabs found, default to 'Generic'
-            if not playFrom:
-                playFrom = ['韩剧看看']
-
-            # Selector for Lists
-            # Supports standard stui-content__playlist and module-play-list
-            lists = doc('.stui-content__playlist, .module-play-list')
+            # 如果没找到标题，但有列表，给个默认名
+            playlists = doc('.stui-content__playlist, .playlist')
+            if len(playlists) > len(playFrom):
+                for i in range(len(playlists) - len(playFrom)):
+                    playFrom.append(f"线路{len(playFrom)+1}")
             
-            for i, ul in enumerate(lists.items()):
+            # 获取每一集的链接
+            for pl in playlists.items():
                 urls = []
-                links = ul.find('a')
+                links = pl.find('a')
                 for link in links.items():
                     name = link.text()
                     href = link.attr('href')
@@ -252,46 +214,24 @@ class Spider(Spider):
             if not key:
                 return result
             
-            # Search URL format: /vodsearch/-------------.html?wd=key
-            # Encoding the key
-            # some sites use /index.php/ajax/suggest?mid=1&wd=... but let's use the HTML search page
+            # 搜索URL构造
+            # 韩剧看看通常使用 /vodsearch/-------------.html?wd=关键字
+            # 或者 /index.php/ajax/suggest?mid=1&wd=关键字 (JSON)
+            # 这里使用HTML搜索页
+            
             search_url = f"{self.siteUrl}/vodsearch/-------------.html?wd={urllib.parse.quote(key)}"
             
-            rsp = self.fetch(search_url)
+            rsp = self.fetch(search_url, headers=self.getHeader())
             if rsp and rsp.text:
                 doc = pq(rsp.text)
-                items = doc('.stui-vodlist__media li, .module-search-item')
-                
+                items = doc('.stui-vodlist li, .search-list li')
                 for item in items.items():
-                    a = item.find('a.stui-vodlist__thumb') or item.find('a.video-cover')
-                    if not a: continue
-
-                    href = a.attr('href')
-                    title = a.attr('title') or item.find('.title a').text()
+                    videos.append(self._parse_vod_item(item))
                     
-                    img = a.attr('data-original') or a.attr('style')
-                    if img and 'background-image:' in img:
-                        match = re.search(r'url\(["\']?(.*?)["\']?\)', img)
-                        if match:
-                            img = match.group(1)
-                    if img and not img.startswith('http'):
-                        img = urllib.parse.urljoin(self.siteUrl, img)
-
-                    if not title or not href:
-                        continue
-                    
-                    remarks = item.find('.pic-text').text() or item.find('.text-right').text()
-                    
-                    videos.append({
-                        'vod_id': href,
-                        'vod_name': title,
-                        'vod_pic': img,
-                        'vod_remarks': remarks or ''
-                    })
         except Exception as e:
             print(f"searchContent error: {e}")
             
-        result['list'] = videos
+        result['list'] = [v for v in videos if v['vod_id']]
         return result
 
     def playerContent(self, flag, id, vipFlags):
@@ -305,19 +245,67 @@ class Spider(Spider):
             else:
                 url = urllib.parse.urljoin(self.siteUrl, id)
             
-            # Use webview parsing (sniffing)
-            result["parse"] = 1 
+            # 嗅探模式：parse=1
+            # 大多数CMS站点使用iframe嵌入或者m3u8，直接开启嗅探最稳
+            result["parse"] = 1
             result["playUrl"] = ''
             result["url"] = url
-            result["header"] = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-                'Referer': self.siteUrl
-            }
+            result["header"] = self.getHeader()
             
         except Exception as e:
             print(f"playerContent error: {e}")
             
         return result
+
+    # --- 辅助函数 ---
+    
+    def _parse_vod_item(self, item):
+        """解析单个视频条目的通用函数"""
+        res = {'vod_id': '', 'vod_name': '', 'vod_pic': '', 'vod_remarks': ''}
+        try:
+            a = item.find('a.stui-vodlist__thumb')
+            if not a:
+                a = item.find('a') # 兜底
+                
+            if not a: return res
+
+            # 获取标题
+            title = a.attr('title') or item.find('.title a').text() or item.find('h4 a').text()
+            
+            # 获取链接
+            href = a.attr('href')
+            
+            # 获取图片 (处理懒加载和背景图)
+            img = a.attr('data-original') or a.attr('style') or a.find('img').attr('src')
+            
+            # 处理背景图样式 url('...')
+            if img and 'background-image' in img:
+                match = re.search(r'url\([\'"]?(.*?)[\'"]?\)', img)
+                if match:
+                    img = match.group(1)
+            
+            # 获取备注 (集数/评分)
+            remarks = item.find('.pic-text').text() or \
+                      item.find('.pic-tag').text() or \
+                      item.find('.remarks').text()
+            
+            res['vod_id'] = href
+            res['vod_name'] = title
+            res['vod_pic'] = self._fix_url(img)
+            res['vod_remarks'] = remarks
+            
+        except Exception as e:
+            pass
+        return res
+
+    def _fix_url(self, url):
+        """修复相对路径"""
+        if not url: return ""
+        if url.startswith('//'):
+            return "https:" + url
+        if not url.startswith('http'):
+            return urllib.parse.urljoin(self.siteUrl, url)
+        return url
 
     def isVideoFormat(self, url):
         return False
