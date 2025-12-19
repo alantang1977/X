@@ -37,7 +37,7 @@
 {"key": "配置","name": "⚙️┃东篱配置┃中心","type": 3,"api": "csp_ConfigCenter","searchable": 0,"changeable": 0,"style": {"type": "list","ratio": 1.433},"ext": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/config/configcenter.json","jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/jar/dongli-spider.jar"},
 {"key": "商店","name": "🏬┃东篱商店┃app","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"style": {"type": "oval","ratio": 1.1},"ext": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/config/market.json","jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/jar/dongli-spider.jar"},
 
-{"key": "韩剧","name": "🍖┃韩剧影视┃TV","type": 3,"api": "./js/hanju7.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
+{"key": "韩剧","name": "🍖┃韩剧影视┃TV","type": 3,"api": "./js/hanju7.js","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
 //{"key": "云集","name": "🎛️┃电影云集┃TV","type": 3,"api": "./py/电影云集.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "韩剧7","name": "🍒┃韩剧影视┃TV","type": 3,"api": "./lib/drpy2.min.js","searchable": 2,"quickSearch": 0,"filterable": 1,"ext": "./js/hanju7.js"},
 
@@ -444,6 +444,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
