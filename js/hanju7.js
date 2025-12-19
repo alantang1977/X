@@ -1,105 +1,162 @@
 /**
- * 新韩剧网(hanju7.com)爬虫
- * 作者：deepseek
+ * 韩剧网(hanju7.com)爬虫
+ * 作者：基于ddys爬虫模板适配
  * 版本：1.0
  * 最后更新：2025-12-17
- * 专注于韩国影视作品的爬虫
- * 发布页 https://www.hanju7.com/
  */
 
-function wvSpider() {
+function hanju7Spider() {
     const baseUrl = 'https://www.hanju7.com';
+    
     // 延时函数
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     
     /**
      * 提取视频列表数据（私有方法）
      * @param {Document} document - DOM文档对象
-     * @param {string} selector - 选择器，可选，默认为'.list li'
+     * @param {string} selector - 选择器，默认为'.list li'
      * @returns {Array} 视频数据数组
      */
     const extractVideos = (document, selector = '.list li') => {
         return Array.from(document.querySelectorAll(selector)).map(li => {
+            const linkEl = li.querySelector('a.tu');
             const titleEl = li.querySelector('p a');
-            const thumbEl = li.querySelector('.tu');
-            const remarksEl = li.querySelector('.tip');
-            const actorEl = li.querySelectorAll('p')[1];
+            const tipEl = li.querySelector('.tip');
+            const actorEl = li.querySelector('p:nth-child(3)');
             
-            let vodId = titleEl?.getAttribute('href') || '';
-            if (vodId && !vodId.startsWith('http')) {
-                vodId = baseUrl + (vodId.startsWith('/') ? '' : '/') + vodId;
+            // 提取图片URL
+            let vod_pic = '';
+            if (linkEl) {
+                vod_pic = linkEl.getAttribute('data-original') || 
+                          linkEl.style.backgroundImage?.match(/url\(["']?([^"')]+)["']?\)/)?.[1] || '';
+            }
+            
+            // 提取详情页链接
+            let vod_id = '';
+            if (linkEl && linkEl.href) {
+                vod_id = linkEl.href.startsWith('http') ? linkEl.href : baseUrl + (linkEl.href.startsWith('/') ? '' : '/') + linkEl.href;
+            } else if (titleEl && titleEl.href) {
+                vod_id = titleEl.href.startsWith('http') ? titleEl.href : baseUrl + (titleEl.href.startsWith('/') ? '' : '/') + titleEl.href;
+            }
+            
+            // 提取标题
+            let vod_name = '';
+            if (titleEl) {
+                vod_name = titleEl.title || titleEl.textContent || '';
+            } else if (linkEl) {
+                vod_name = linkEl.title || '';
+            }
+            
+            // 生成视频ID（用于详情页）
+            let videoId = '';
+            if (vod_id) {
+                const match = vod_id.match(/\/detail\/(\d+)\.html/);
+                if (match) {
+                    videoId = match[1];
+                }
             }
             
             return {
-                vod_name: titleEl?.title || titleEl?.textContent || '',
-                vod_pic: thumbEl?.getAttribute('data-original') || '',
-                vod_remarks: remarksEl?.textContent || '',
-                vod_id: vodId,
-                vod_actor: actorEl?.textContent || ''
+                vod_id: videoId || vod_name.replace(/[^\w]/g, '_'),
+                vod_name: vod_name,
+                vod_pic: vod_pic,
+                vod_remarks: tipEl?.textContent?.trim() || '',
+                vod_actor: actorEl?.textContent?.trim() || '',
+                vod_href: vod_id // 保存完整链接用于详情页
             };
-        });
+        }).filter(video => video.vod_name && video.vod_pic); // 过滤无效数据
     };
-
+    
     /**
-     * 提取分类筛选器（私有方法）
+     * 提取排行榜数据
      * @param {Document} document - DOM文档对象
-     * @returns {Object} 筛选器对象
+     * @returns {Array} 排行榜视频数据
      */
-    const extractFilters = (document) => {
-        const filters = {
-            hanju: [], // 韩剧筛选器
-            hanmovie: [], // 韩国电影筛选器
-            hanzongyi: [] // 韩国综艺筛选器
-        };
+    const extractRankVideos = (document) => {
+        const rankVideos = [];
         
-        // 提取年份筛选
-        const yearItems = Array.from(document.querySelectorAll('.category_box .category:nth-child(2) dd a'))
-            .map(a => ({
-                n: a.textContent.trim(),
-                v: a.getAttribute('href').match(/list\/\d+-(.*?)--\.html/)?.[1] || ''
-            }));
-        
-        // 提取排序筛选
-        const sortItems = Array.from(document.querySelectorAll('.category_box .category:nth-child(3) dd a'))
-            .map(a => ({
-                n: a.textContent.trim(),
-                v: a.getAttribute('href').match(/list\/\d+--(.*?)-\.html/)?.[1] || ''
-            }));
-        
-        // 为各类别添加相同的筛选条件（年份和排序）
-        ['hanju', 'hanmovie', 'hanzongyi'].forEach(type => {
-            filters[type].push(
-                {
-                    key: 'year',
-                    name: '年份',
-                    value: yearItems
-                },
-                {
-                    key: 'sort',
-                    name: '排序',
-                    value: sortItems
-                }
-            );
+        // 提取韩剧榜
+        const kdramaRankList = document.querySelectorAll('.box:nth-child(1) .list_txt li');
+        kdramaRankList.forEach(li => {
+            const spanEl = li.querySelector('span');
+            const aEl = li.querySelector('a');
+            const iEl = li.querySelector('i');
+            
+            if (aEl && aEl.href) {
+                const vod_id = aEl.href.match(/\/detail\/(\d+)\.html/)?.[1] || '';
+                rankVideos.push({
+                    vod_id: vod_id,
+                    vod_name: aEl.textContent.replace(/^\d+\s*/, '').trim(),
+                    vod_remarks: spanEl?.textContent?.trim() || '',
+                    vod_pic: `//pics.hanju7.com/pics/${vod_id}.jpg`,
+                    vod_href: baseUrl + (aEl.href.startsWith('/') ? '' : '/') + aEl.href,
+                    vod_type: '韩剧',
+                    vod_rank: iEl?.textContent?.trim() || ''
+                });
+            }
         });
         
-        return filters;
+        // 提取韩影榜
+        const movieRankList = document.querySelectorAll('.box:nth-child(2) .list_txt li');
+        movieRankList.forEach(li => {
+            const spanEl = li.querySelector('span');
+            const aEl = li.querySelector('a');
+            const iEl = li.querySelector('i');
+            
+            if (aEl && aEl.href) {
+                const vod_id = aEl.href.match(/\/detail\/(\d+)\.html/)?.[1] || '';
+                rankVideos.push({
+                    vod_id: vod_id,
+                    vod_name: aEl.textContent.replace(/^\d+\s*/, '').trim(),
+                    vod_remarks: spanEl?.textContent?.trim() || '',
+                    vod_pic: `//pics.hanju7.com/pics/${vod_id}.jpg`,
+                    vod_href: baseUrl + (aEl.href.startsWith('/') ? '' : '/') + aEl.href,
+                    vod_type: '韩影',
+                    vod_rank: iEl?.textContent?.trim() || ''
+                });
+            }
+        });
+        
+        // 提取韩综榜
+        const varietyRankList = document.querySelectorAll('.box:nth-child(3) .list_txt li');
+        varietyRankList.forEach(li => {
+            const spanEl = li.querySelector('span');
+            const aEl = li.querySelector('a');
+            const iEl = li.querySelector('i');
+            
+            if (aEl && aEl.href) {
+                const vod_id = aEl.href.match(/\/detail\/(\d+)\.html/)?.[1] || '';
+                rankVideos.push({
+                    vod_id: vod_id,
+                    vod_name: aEl.textContent.replace(/^\d+\s*/, '').trim(),
+                    vod_remarks: spanEl?.textContent?.trim() || '',
+                    vod_pic: `//pics.hanju7.com/pics/${vod_id}.jpg`,
+                    vod_href: baseUrl + (aEl.href.startsWith('/') ? '' : '/') + aEl.href,
+                    vod_type: '韩综',
+                    vod_rank: iEl?.textContent?.trim() || ''
+                });
+            }
+        });
+        
+        return rankVideos;
     };
 
     return {
         async init(cfg) {
             return {
                 webview: {
-                    debug: true,                // 是否开启调试模式
-                    showWebView: false,         // 默认不显示
-                    widthPercent: 80,           // 窗口宽度百分比
-                    heightPercent: 60,          // 窗口高度百分比
-                    keyword: '',                // 页面关键字检测
-                    returnType: 'dom',          // 返回类型: 'html'或'dom'
-                    timeout: 30,                // 超时时间（秒）
-                    blockImages: true,          // 禁止加载图片
-                    enableJavaScript: true,     // 是否启用JavaScript
-                    header: {                   // 全局请求头
-                        'Referer': baseUrl
+                    debug: true,
+                    showWebView: false,
+                    widthPercent: 80,
+                    heightPercent: 60,
+                    keyword: '',
+                    returnType: 'dom',
+                    timeout: 30,
+                    blockImages: true,
+                    enableJavaScript: true,
+                    header: {
+                        'Referer': baseUrl,
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
                     }
                 }
             };
@@ -107,165 +164,213 @@ function wvSpider() {
         
         async homeContent(filter) {
             console.log("homeContent 开始执行, filter:", filter);
-            
-            // 获取分类页面以提取完整筛选器
-            const document = await Java.wvOpen(baseUrl + '/list/1---.html');
-            const filters = extractFilters(document);
-            
+
             return {
                 class: [
-                    { type_id: "hanju", type_name: "韩剧" },
-                    { type_id: "hanmovie", type_name: "韩国电影" },
-                    { type_id: "hanzongyi", type_name: "韩国综艺" },
-                    { type_id: "hanyu", type_name: "韩娱" }
-                ],
-                filters: filters
+                    { type_id: "1", type_name: "韩剧" },
+                    { type_id: "3", type_name: "韩国电影" },
+                    { type_id: "4", type_name: "韩国综艺" },
+                    { type_id: "hot", type_name: "排行榜" },
+                    { type_id: "new", type_name: "最近更新" }
+                ]
             };
         },
         
         async homeVideoContent() {
             console.log("homeVideoContent 开始执行");
-            
-            const document = await Java.wvOpen(baseUrl + '/');
-            const videos = extractVideos(document);
-            
-            console.log("取到的首页列表", videos);
-            return { list: videos };
+
+            try {
+                const document = await Java.wvOpen(baseUrl + '/');
+                
+                // 提取首页的三个板块
+                const allVideos = [];
+                
+                // 韩剧板块
+                const kdramaSection = document.querySelector('.box:nth-child(1) .list');
+                if (kdramaSection) {
+                    const kdramaVideos = extractVideos(kdramaSection);
+                    allVideos.push(...kdramaVideos.map(v => ({...v, vod_type: '韩剧'})));
+                }
+                
+                // 韩影板块
+                const movieSection = document.querySelector('.box:nth-child(2) .list');
+                if (movieSection) {
+                    const movieVideos = extractVideos(movieSection);
+                    allVideos.push(...movieVideos.map(v => ({...v, vod_type: '韩影'})));
+                }
+                
+                // 韩综板块
+                const varietySection = document.querySelector('.box:nth-child(3) .list');
+                if (varietySection) {
+                    const varietyVideos = extractVideos(varietySection);
+                    allVideos.push(...varietyVideos.map(v => ({...v, vod_type: '韩综'})));
+                }
+                
+                // 提取排行榜数据
+                const rankVideos = extractRankVideos(document);
+                allVideos.push(...rankVideos);
+                
+                console.log("首页取到的视频列表，共", allVideos.length, "条");
+                return { list: allVideos };
+            } catch (error) {
+                console.error("homeVideoContent 出错:", error);
+                return { list: [] };
+            }
         },
         
         async categoryContent(tid, pg, filter, extend) {
-            console.log("categoryContent 开始执行, 参数:", { tid, pg, filter, extend });
+            console.log(`categoryContent - tid:${tid}, pg:${pg}`);
             
-            // 映射类型ID到网站分类ID
-            const typeMap = {
-                'hanju': 1,
-                'hanmovie': 3,
-                'hanzongyi': 4,
-                'hanyu': 'hanyu'
-            };
-            
-            const siteTypeId = typeMap[tid] || 1;
-            
-            // 构建筛选参数
-            let yearParam = '';
-            let sortParam = 'newstime'; // 默认按最新排序
-            
-            if (filter) {
-                if (filter.year) yearParam = filter.year;
-                if (filter.sort) sortParam = filter.sort;
-            }
-            
-            // 构建URL
-            let url = '';
-            if (tid === 'hanyu') {
-                // 韩娱页面URL格式不同
-                url = `${baseUrl}/${siteTypeId}.html`;
-                if (pg > 1) {
-                    url = `${baseUrl}/${siteTypeId}-${pg}.html`;
-                }
-            } else {
-                // 其他分类的URL格式
-                url = `${baseUrl}/list/${siteTypeId}-${yearParam}--${sortParam}-${pg > 1 ? pg - 1 : ''}.html`;
-            }
-            
-            console.log("请求的分类URL:", url);
-            const document = await Java.wvOpen(url);
-            
-            // 提取视频列表
-            const videos = extractVideos(document);
-            
-            // 提取分页信息
-            let page = 1;
-            let pagecount = 1;
-            
-            const pageEls = document.querySelectorAll('.page a, .page .current');
-            if (pageEls.length > 0) {
-                // 当前页
-                const currentEl = document.querySelector('.page .current');
-                if (currentEl) {
-                    page = parseInt(currentEl.textContent) || 1;
+            try {
+                let url = '';
+                if (tid === 'hot') {
+                    url = `${baseUrl}/hot.html`;
+                } else if (tid === 'new') {
+                    url = `${baseUrl}/new.html`;
+                } else {
+                    url = `${baseUrl}/list/${tid}---${pg}---.html`;
                 }
                 
-                // 总页数 - 从最后一个页码链接获取
-                const lastPageEl = pageEls[pageEls.length - 2]; // 倒数第二个是最后一页
-                if (lastPageEl) {
-                    const lastPageMatch = lastPageEl.getAttribute('href').match(/-(\d+)\.html$/);
-                    if (lastPageMatch) {
-                        pagecount = parseInt(lastPageMatch[1]) + 1 || 1; // 页码是从0开始的
+                const document = await Java.wvOpen(url);
+                
+                // 提取列表数据
+                const videos = extractVideos(document);
+                
+                // 提取分页信息
+                let page = pg || 1;
+                let pagecount = 1;
+                let total = videos.length;
+                
+                // 尝试获取分页信息
+                const pageElement = document.querySelector('.pages a:last-child');
+                if (pageElement) {
+                    const pageText = pageElement.textContent;
+                    const pageMatch = pageText.match(/\d+/);
+                    if (pageMatch) {
+                        pagecount = parseInt(pageMatch[0]);
                     }
                 }
+                
+                console.log(`categoryContent - 获取到 ${videos.length} 条数据`);
+                
+                return {
+                    code: 1,
+                    msg: "数据列表",
+                    list: videos,
+                    page: parseInt(page),
+                    pagecount: pagecount,
+                    limit: 20,
+                    total: total
+                };
+            } catch (error) {
+                console.error("categoryContent 出错:", error);
+                return { code: 0, msg: "获取数据失败", list: [] };
             }
-            
-            const result = {
-                code: 1,
-                msg: "数据列表",
-                list: videos,
-                page: page,
-                pagecount: pagecount,
-                limit: videos.length,
-                total: pagecount * videos.length
-            };
-            
-            console.log("分类数据结果:", result);
-            return result;
         },
         
         async detailContent(ids) {
-            console.log("detailContent 开始执行, ids:", ids[0]);
-            const document = await Java.wvOpen(ids[0]);
+            console.log("detailContent - ids:", ids);
             
-            // 提取基本信息
-            const titleEl = document.querySelector('title');
-            const title = titleEl ? titleEl.textContent.replace(' - 新韩剧网', '') : '';
-            
-            const imgEl = document.querySelector('.tu.lazyload');
-            const vod_pic = imgEl?.getAttribute('data-original') || '';
-            
-            // 提取详细数据（这里需要根据实际详情页结构调整选择器）
-            let vod_area = '韩国', vod_year = '', vod_actor = '', vod_director = '', type_name = '', vod_remarks = '';
-            
-            // 提取演员信息（从列表页带过来的简略信息）
-            const actorText = document.querySelector('.list li p:nth-child(2)')?.textContent || '';
-            if (actorText) {
-                vod_actor = actorText;
-            }
-            
-            // 提取更新状态
-            const tipEl = document.querySelector('.tip');
-            if (tipEl) {
-                vod_remarks = tipEl.textContent || '';
-            }
-            
-            // 提取简介（这里需要根据实际详情页结构调整）
-            const vod_content = document.querySelector('.intro')?.textContent?.trim() || '暂无简介';
-            
-            // 提取播放列表（这里需要根据实际详情页结构调整）
-            const playlists = [];
-            // 假设播放列表在class为play-list的元素中
-            const playListEl = document.querySelector('.play-list');
-            if (playListEl) {
-                const episodes = Array.from(playListEl.querySelectorAll('a')).map(a => 
-                    `${a.textContent.trim()}$${baseUrl + (a.getAttribute('href').startsWith('/') ? '' : '/') + a.getAttribute('href')}`
-                );
+            try {
+                const id = ids[0];
+                let url = '';
                 
-                if (episodes.length > 0) {
-                    playlists.push({
-                        title: '在线播放',
-                        episodes: episodes
+                // 判断是完整URL还是ID
+                if (id.startsWith('http')) {
+                    url = id;
+                } else if (id.match(/^\d+$/)) {
+                    url = `${baseUrl}/detail/${id}.html`;
+                } else {
+                    // 尝试从vod_href中获取
+                    url = id;
+                }
+                
+                const document = await Java.wvOpen(url);
+                
+                // 提取基本信息
+                const title = document.querySelector('.detail h1')?.textContent?.trim() || 
+                             document.querySelector('.detail .title')?.textContent?.trim() || '';
+                
+                // 提取图片
+                const imgEl = document.querySelector('.pic img, .detail-pic img');
+                let vod_pic = '';
+                if (imgEl) {
+                    vod_pic = imgEl.getAttribute('src') || 
+                             imgEl.getAttribute('data-src') || 
+                             imgEl.getAttribute('data-original') || '';
+                }
+                
+                if (!vod_pic && id.match(/^\d+$/)) {
+                    vod_pic = `//pics.hanju7.com/pics/${id}.jpg`;
+                }
+                
+                // 提取详细信息
+                let vod_area = '', vod_year = '', vod_actor = '', vod_director = '', 
+                    vod_remarks = '', vod_lang = '', vod_content = '';
+                
+                const infoElements = document.querySelectorAll('.info p, .detail-info p, .info li');
+                infoElements.forEach(el => {
+                    const text = el.textContent.trim();
+                    if (text.includes('地区：')) vod_area = text.replace('地区：', '').trim();
+                    else if (text.includes('年份：')) vod_year = text.replace('年份：', '').trim();
+                    else if (text.includes('主演：')) vod_actor = text.replace('主演：', '').trim();
+                    else if (text.includes('导演：')) vod_director = text.replace('导演：', '').trim();
+                    else if (text.includes('语言：')) vod_lang = text.replace('语言：', '').trim();
+                    else if (text.includes('状态：')) vod_remarks = text.replace('状态：', '').trim();
+                    else if (text.includes('更新：')) vod_remarks = text.replace('更新：', '').trim();
+                });
+                
+                // 提取简介
+                const contentEl = document.querySelector('.content, .intro, .detail-content');
+                if (contentEl) {
+                    vod_content = contentEl.textContent.trim();
+                }
+                
+                // 提取播放列表
+                const playlists = [];
+                const playElements = document.querySelectorAll('.playlist, .play-list, .downlist');
+                
+                playElements.forEach((playlist, index) => {
+                    const episodes = [];
+                    const links = playlist.querySelectorAll('a');
+                    
+                    links.forEach(a => {
+                        const episodeName = a.textContent.trim();
+                        let episodeUrl = a.getAttribute('href') || '';
+                        
+                        if (episodeUrl && !episodeUrl.startsWith('http')) {
+                            episodeUrl = baseUrl + (episodeUrl.startsWith('/') ? '' : '/') + episodeUrl;
+                        }
+                        
+                        if (episodeName && episodeUrl) {
+                            episodes.push(`${episodeName}$${episodeUrl}`);
+                        }
+                    });
+                    
+                    if (episodes.length > 0) {
+                        playlists.push({
+                            title: `线路${index + 1}`,
+                            episodes: episodes
+                        });
+                    }
+                });
+                
+                // 如果没有找到播放列表，尝试其他选择器
+                if (playlists.length === 0) {
+                    const allLinks = document.querySelectorAll('a[href*="play"]');
+                    allLinks.forEach(a => {
+                        if (a.textContent.includes('播放') || a.href.includes('play')) {
+                            playlists.push({
+                                title: '在线播放',
+                                episodes: [`播放$${a.href}`]
+                            });
+                        }
                     });
                 }
-            }
-            
-            // 构建结果
-            const vod = {
-                code: 1,
-                msg: "数据列表",
-                page: 1,
-                pagecount: 1,
-                limit: 1,
-                total: 1,
-                list: [{
-                    vod_id: ids[0],
+                
+                // 构建视频对象
+                const vod = {
+                    vod_id: id.match(/^\d+$/) ? id : id.replace(/[^\w]/g, '_'),
                     vod_name: title,
                     vod_pic: vod_pic,
                     vod_remarks: vod_remarks,
@@ -273,93 +378,113 @@ function wvSpider() {
                     vod_actor: vod_actor,
                     vod_director: vod_director,
                     vod_area: vod_area,
-                    vod_lang: '韩语',
+                    vod_lang: vod_lang || '韩语',
                     vod_content: vod_content,
                     vod_play_from: playlists.map(p => p.title).join('$$$'),
                     vod_play_url: playlists.map(p => p.episodes.join('#')).join('$$$'),
-                    type_name: type_name
-                }]
-            };
-            
-            console.log("详情页数据:", vod);
-            return vod;
+                    type_name: '' // 将在下面判断
+                };
+                
+                // 判断类型
+                if (url.includes('/detail/')) {
+                    const typeMatch = url.match(/\/list\/(\d+)---/);
+                    if (typeMatch) {
+                        const typeId = typeMatch[1];
+                        if (typeId === '1') vod.type_name = '韩剧';
+                        else if (typeId === '3') vod.type_name = '韩国电影';
+                        else if (typeId === '4') vod.type_name = '韩国综艺';
+                    }
+                }
+                
+                return {
+                    code: 1,
+                    msg: "数据列表",
+                    page: 1,
+                    pagecount: 1,
+                    limit: 1,
+                    total: 1,
+                    list: [vod]
+                };
+                
+            } catch (error) {
+                console.error("detailContent 出错:", error);
+                return {
+                    code: 0,
+                    msg: "获取详情失败",
+                    list: []
+                };
+            }
         },
         
         async searchContent(key, quick, pg) {
-            console.log("searchContent 开始执行, 参数:", { key, quick, pg });
+            console.log("searchContent - key:", key, "pg:", pg);
             
-            const searchUrl = `${baseUrl}/search/?show=searchkey&keyboard=${encodeURIComponent(key)}${pg > 1 ? `&page=${pg}` : ''}`;
-            const document = await Java.wvOpen(searchUrl);
-            
-            const videos = extractVideos(document);
-            
-            // 提取分页信息
-            let page = pg || 1;
-            let pagecount = 1;
-            
-            const pageEls = document.querySelectorAll('.page a');
-            if (pageEls.length > 0) {
-                // 总页数
-                const lastPageEl = pageEls[pageEls.length - 1];
-                if (lastPageEl && lastPageEl.textContent.includes('下一页')) {
-                    const prevPageEl = pageEls[pageEls.length - 2];
-                    if (prevPageEl) {
-                        pagecount = parseInt(prevPageEl.textContent) || 1;
-                    }
+            try {
+                const encodedKey = encodeURIComponent(key);
+                const url = `${baseUrl}/search/?wd=${encodedKey}&page=${pg || 1}`;
+                
+                const document = await Java.wvOpen(url);
+                
+                // 提取搜索结果
+                const videos = extractVideos(document, '.search-list li');
+                
+                // 如果没有找到，尝试其他选择器
+                if (videos.length === 0) {
+                    const fallbackVideos = extractVideos(document, '.list li');
+                    return {
+                        code: 1,
+                        msg: "搜索结果",
+                        list: fallbackVideos,
+                        page: pg || 1,
+                        pagecount: 1,
+                        limit: 20,
+                        total: fallbackVideos.length
+                    };
                 }
+                
+                return {
+                    code: 1,
+                    msg: "搜索结果",
+                    list: videos,
+                    page: pg || 1,
+                    pagecount: 1,
+                    limit: 20,
+                    total: videos.length
+                };
+            } catch (error) {
+                console.error("searchContent 出错:", error);
+                return { code: 0, msg: "搜索失败", list: [] };
             }
-            
-            return {
-                code: 1,
-                msg: "搜索结果",
-                list: videos,
-                page: page,
-                pagecount: pagecount,
-                limit: videos.length,
-                total: pagecount * videos.length
-            };
         },
         
         async playerContent(flag, id, vipFlags) {
-            console.log("playerContent 开始执行, 参数:", { flag, id, vipFlags });
+            console.log("playerContent - flag:", flag, "id:", id);
             
-            // 获取播放页面内容
-            const document = await Java.wvOpen(id);
-            
-            // 提取实际播放地址（这里需要根据实际播放页结构调整）
-            let playUrl = '';
-            const iframeEl = document.querySelector('iframe');
-            if (iframeEl) {
-                playUrl = iframeEl.getAttribute('src') || '';
-                if (playUrl && !playUrl.startsWith('http')) {
-                    playUrl = baseUrl + (playUrl.startsWith('/') ? '' : '/') + playUrl;
+            // 韩剧网直接返回原始播放链接
+            return { 
+                url: id, 
+                parse: 1,  // 表示需要解析
+                header: {
+                    'Referer': baseUrl,
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
                 }
-            }
-            
-            // 如果没找到iframe，尝试查找视频源
-            if (!playUrl) {
-                const videoEl = document.querySelector('video');
-                if (videoEl) {
-                    playUrl = videoEl.getAttribute('src') || '';
-                }
-            }
-            
-            return { url: playUrl || id, parse: 1 };
+            };
         },
         
         async action(actionStr) {
-            console.log("action 开始执行, actionStr:", actionStr);
+            console.log("action - actionStr:", actionStr);
             try {
                 const params = JSON.parse(actionStr);
-                console.log("action 参数解析:", params);
-                // 可以根据需要处理自定义动作
+                console.log("action params:", params);
+                // 这里可以根据action参数执行特定操作
+                return { code: 1, msg: "操作成功", list: [] };
             } catch (e) {
-                console.log("action 不是JSON格式，作为字符串处理");
+                console.log("action is not JSON, treat as string");
+                return { code: 0, msg: "操作失败", list: [] };
             }
-            return { list: [] };
         }
     };
 }
 
-const spider = wvSpider();
+const spider = hanju7Spider();
 spider;
