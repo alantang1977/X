@@ -1,5 +1,6 @@
 import re
 import sys
+import json
 import urllib.parse
 from pyquery import PyQuery as pq
 
@@ -17,16 +18,33 @@ class Spider(Spider):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Referer': self.baseUrl
         }
-        # 分类配置
-        self.classes = [
-            {'type_id': '1', 'type_name': '韩剧'},
-            {'type_id': '3', 'type_name': '韩国电影'},
-            {'type_id': '4', 'type_name': '韩国综艺'}
-        ]
         
     def homeContent(self, filter):
         result = {}
-        result['class'] = self.classes
+        classes = []
+        
+        try:
+            # 基础分类
+            base_classes = [
+                {'type_id': '1', 'type_name': '韩剧'},
+                {'type_id': '3', 'type_name': '韩国电影'},
+                {'type_id': '4', 'type_name': '韩国综艺'}
+            ]
+            
+            classes.extend(base_classes)
+            
+            # 热门分类
+            hot_classes = [
+                {'type_id': 'hot', 'type_name': '排行榜'},
+                {'type_id': 'new', 'type_name': '最近更新'}
+            ]
+            
+            classes.extend(hot_classes)
+            
+        except Exception as e:
+            print(f"homeContent error: {e}")
+            
+        result['class'] = classes
         return result
 
     def homeVideoContent(self):
@@ -37,12 +55,23 @@ class Spider(Spider):
             if rsp and rsp.text:
                 doc = pq(rsp.text)
                 
-                # 提取首页视频
-                items = doc('.box .list li')
-                for item in items.items():
-                    video = self._parse_video_item(item)
-                    if video:
-                        videos.append(video)
+                # 提取首页三个板块的视频
+                sections = [
+                    ('.box:nth-child(1) .list li', '韩剧'),
+                    ('.box:nth-child(2) .list li', '韩影'),
+                    ('.box:nth-child(3) .list li', '韩综')
+                ]
+                
+                for selector, vod_type in sections:
+                    items = doc(selector)
+                    for item in items.items():
+                        video = self._parse_video_item(item)
+                        if video:
+                            video['vod_type'] = vod_type
+                            videos.append(video)
+                
+                # 限制数量
+                videos = videos[:30]
             
             result['list'] = videos
         except Exception as e:
@@ -106,6 +135,8 @@ class Spider(Spider):
             
             # 演员
             vod_actor = actor_el.text().strip() if actor_el else ''
+            if vod_actor and vod_actor.endswith('…'):
+                vod_actor = vod_actor[:-1]
             
             return {
                 'vod_id': vod_id,
@@ -123,25 +154,20 @@ class Spider(Spider):
     def categoryContent(self, tid, pg, filter, extend):
         result = {}
         videos = []
+        
         try:
-            # 解析过滤条件
-            year = ''
-            sort = ''
-            category = ''
-            
-            if filter:
-                # 解析年份
-                if 'year' in filter:
-                    year = filter['year']
-                # 解析排序
-                if 'sort' in filter:
-                    sort = filter['sort']
-                # 解析分类
-                if 'category' in filter:
-                    category = filter['category']
-            
             # 构建URL
-            url = self._build_category_url(tid, pg, year, sort, category)
+            if tid == 'hot':
+                url = f"{self.baseUrl}/hot.html"
+            elif tid == 'new':
+                url = f"{self.baseUrl}/new.html"
+            else:
+                # 解析过滤参数
+                year = filter.get('year', '') if filter else ''
+                sort = filter.get('sort', '') if filter else ''
+                
+                # 构建分类URL
+                url = self._build_category_url(tid, pg, year, sort)
             
             rsp = self.fetch(url, headers=self.header)
             if rsp and rsp.text:
@@ -159,7 +185,9 @@ class Spider(Spider):
                 pagecount = self._parse_page_count(doc)
                 
                 # 提取过滤选项
-                filters = self._parse_filter_options(doc, tid)
+                if tid in ['1', '3', '4']:
+                    filters = self._parse_filter_options(doc, tid)
+                    result['filters'] = filters
                 
         except Exception as e:
             print(f"categoryContent error: {e}")
@@ -168,51 +196,37 @@ class Spider(Spider):
         result['page'] = int(pg) if pg and pg.isdigit() else 1
         result['pagecount'] = pagecount if 'pagecount' in locals() else 1
         result['limit'] = 20
-        result['total'] = len(videos)
+        result['total'] = len(videos) * result['pagecount']
         
-        # 如果有过滤选项，添加到结果中
-        if 'filters' in locals() and filters:
-            result['filters'] = filters
-            
         return result
 
-    def _build_category_url(self, tid, pg, year='', sort='', category=''):
+    def _build_category_url(self, tid, pg, year='', sort=''):
         """构建分类页URL"""
-        # 基础URL模式: /list/{type}-{year}-{sort}-{page}.html
+        # 默认值处理
+        if not pg or not pg.isdigit():
+            pg = '1'
         
-        # 处理年份
-        year_part = year if year else ''
-        
-        # 处理排序
-        sort_part = ''
-        if sort == 'newstime':
-            sort_part = 'newstime'
-        elif sort == 'onclick':
-            sort_part = 'onclick'
+        # 将页码转换为URL格式（从0开始）
+        page_num = int(pg) - 1 if int(pg) > 0 else 0
         
         # 构建URL
-        url = f"{self.baseUrl}/list/{tid}-{year_part}-{sort_part}-{int(pg)-1 if pg and pg.isdigit() else ''}.html"
+        url = f"{self.baseUrl}/list/{tid}-{year}-{sort}-{page_num}.html"
         
         # 清理多余的横线
         url = re.sub(r'-+', '-', url)
-        url = re.sub(r'\.html$', '.html', url.replace('-.html', '.html'))
+        url = url.replace('-.html', '.html')
         
         return url
 
     def _parse_page_count(self, doc):
         """解析总页数"""
         try:
-            page_links = doc('.page a')
-            if page_links:
-                last_page = 0
-                for link in page_links.items():
-                    text = link.text().strip()
-                    if text.isdigit():
-                        num = int(text)
-                        if num > last_page:
-                            last_page = num
-                if last_page > 0:
-                    return last_page
+            page_text = doc('.page').text() or ''
+            if page_text:
+                # 匹配数字
+                numbers = re.findall(r'\d+', page_text)
+                if numbers:
+                    return int(max(numbers))
         except:
             pass
         return 1
@@ -222,21 +236,14 @@ class Spider(Spider):
         filters = {}
         
         try:
-            # 解析年份过滤
+            # 年份过滤器
             year_filter = {
                 'key': 'year',
                 'name': '年份',
                 'value': [{'n': '全部', 'v': ''}]
             }
             
-            # 解析分类过滤
-            category_filter = {
-                'key': 'category',
-                'name': '分类',
-                'value': [{'n': '全部', 'v': ''}]
-            }
-            
-            # 解析排序过滤
+            # 排序过滤器
             sort_filter = {
                 'key': 'sort',
                 'name': '排序',
@@ -247,11 +254,11 @@ class Spider(Spider):
             }
             
             # 提取年份选项
-            year_elements = doc('.category:contains("年份") a')
+            year_elements = doc('.category:contains("年份") a, dl:contains("年份") a')
             for element in year_elements.items():
                 text = element.text().strip()
                 href = element.attr('href')
-                if href:
+                if href and text:
                     # 从URL中提取年份值
                     match = re.search(r'/list/\d+-(\d+[^\-]*)', href)
                     if match:
@@ -259,6 +266,21 @@ class Spider(Spider):
                         year_filter['value'].append({
                             'n': text,
                             'v': year_value
+                        })
+            
+            # 提取排序选项
+            sort_elements = doc('.category:contains("排序") a, dl:contains("排序") a')
+            for element in sort_elements.items():
+                text = element.text().strip()
+                href = element.attr('href')
+                if href and text:
+                    # 从URL中提取排序值
+                    match = re.search(r'/list/\d+[^\-]*-([^\-]+)-', href)
+                    if match:
+                        sort_value = match.group(1)
+                        sort_filter['value'].append({
+                            'n': text,
+                            'v': sort_value
                         })
             
             # 添加过滤器
@@ -283,7 +305,12 @@ class Spider(Spider):
             elif aid.isdigit():
                 url = f"{self.baseUrl}/detail/{aid}.html"
             else:
-                url = f"{self.baseUrl}/detail/{aid}.html"
+                # 尝试解析ID
+                match = re.search(r'(\d+)', aid)
+                if match:
+                    url = f"{self.baseUrl}/detail/{match.group(1)}.html"
+                else:
+                    return result
             
             rsp = self.fetch(url, headers=self.header)
             if not rsp or not rsp.text:
@@ -292,97 +319,66 @@ class Spider(Spider):
             doc = pq(rsp.text)
             
             # 提取标题
-            title = doc('h1').text() or doc('.title').text() or doc('.detail-title').text() or ''
+            title = doc('#m').text() or doc('h1').text() or doc('.detail-title').text() or ''
             
             # 提取图片
             vod_pic = ''
-            img_el = doc('.pic img, .detail-pic img, .thumb img')
+            img_el = doc('.pic img')
             if img_el:
-                vod_pic = img_el.attr('src') or img_el.attr('data-src') or img_el.attr('data-original') or ''
+                vod_pic = img_el.attr('data-original') or img_el.attr('src') or ''
             
             # 如果没有找到图片，使用默认格式
             if not vod_pic and aid.isdigit():
                 vod_pic = f'//pics.hanju7.com/pics/{aid}.jpg'
             
+            # 从script标签提取信息
+            vod_info = self._extract_info_from_script(doc)
+            
             # 提取详细信息
-            vod_area = vod_year = vod_actor = vod_director = vod_remarks = vod_lang = vod_content = ''
+            vod_area = vod_info.get('area', '')
+            vod_year = vod_info.get('year', '')
+            vod_actor = vod_info.get('actor', '')
+            vod_director = vod_info.get('director', '')
+            vod_remarks = vod_info.get('remarks', '')
+            vod_lang = vod_info.get('lang', '韩语')
+            vod_content = vod_info.get('content', '')
             
-            # 尝试多种信息选择器
-            info_items = doc('.info p, .detail-info p, .info li, .data p, .vodinfo p')
+            # 提取其他信息
+            info_items = doc('.info dl')
             for item in info_items.items():
-                text = item.text().strip()
-                if '地区：' in text:
-                    vod_area = text.replace('地区：', '').strip()
-                elif '年份：' in text:
-                    vod_year = text.replace('年份：', '').strip()
-                elif '主演：' in text:
-                    vod_actor = text.replace('主演：', '').strip()
-                elif '导演：' in text:
-                    vod_director = text.replace('导演：', '').strip()
-                elif '语言：' in text:
-                    vod_lang = text.replace('语言：', '').strip()
-                elif '状态：' in text or '更新：' in text:
-                    vod_remarks = text.replace('状态：', '').replace('更新：', '').strip()
+                dt_text = item.find('dt').text().strip()
+                dd_text = item.find('dd').text().strip()
+                
+                if '主演：' in dt_text or '主演' in dt_text:
+                    vod_actor = dd_text
+                elif '状态：' in dt_text or '状态' in dt_text:
+                    vod_remarks = dd_text.replace('<em>', '').replace('</em>', '').strip()
+                elif '上映：' in dt_text:
+                    if not vod_year and dd_text:
+                        match = re.search(r'(\d{4})', dd_text)
+                        if match:
+                            vod_year = match.group(1)
+                elif '集数：' in dt_text:
+                    vod_total_episodes = dd_text
             
-            # 提取简介
-            content_el = doc('.content, .intro, .detail-content, .sketch')
+            # 提取剧情介绍
+            content_el = doc('.juqing')
             if content_el:
                 vod_content = content_el.text().strip()
             
-            # 提取播放列表
-            playlists = []
-            
-            # 查找所有可能的播放列表容器
-            playlist_containers = doc('.playlist, .play-list, .downlist, .stui-content__playlist, .player')
-            
-            for container in playlist_containers.items():
-                # 提取线路标题
-                line_title = container.prev('h3, h4, .head, .title').text() or '线路1'
-                
-                # 提取剧集
-                episodes = []
-                links = container.find('a')
-                
-                for link in links.items():
-                    episode_name = link.text().strip()
-                    episode_url = link.attr('href') or ''
-                    
-                    if episode_url and not episode_url.startswith('http'):
-                        episode_url = self.baseUrl + ('' if episode_url.startswith('/') else '/') + episode_url
-                    
-                    if episode_name and episode_url:
-                        episodes.append(f"{episode_name}${episode_url}")
-                
-                if episodes:
-                    playlists.append({
-                        'title': line_title,
-                        'episodes': episodes
-                    })
-            
-            # 如果没有找到播放列表，尝试查找播放按钮
-            if not playlists:
-                play_buttons = doc('a[href*="play"], a:contains("播放"), .playbtn, .player-btn')
-                if play_buttons:
-                    episodes = []
-                    for btn in play_buttons.items():
-                        episode_name = btn.text().strip() or '播放'
-                        episode_url = btn.attr('href') or ''
-                        
-                        if episode_url and not episode_url.startswith('http'):
-                            episode_url = self.baseUrl + ('' if episode_url.startswith('/') else '/') + episode_url
-                        
-                        if episode_url:
-                            episodes.append(f"{episode_name}${episode_url}")
-                    
-                    if episodes:
-                        playlists.append({
-                            'title': '在线播放',
-                            'episodes': episodes
-                        })
+            # 提取播放列表（关键优化）
+            playlists = self._extract_playlists(doc, aid)
             
             # 构建播放信息
-            vod_play_from = '$$$'.join([p['title'] for p in playlists]) if playlists else '韩剧网'
-            vod_play_url = '$$$'.join(['#'.join(p['episodes']) for p in playlists]) if playlists else f'正片${url}'
+            if playlists:
+                vod_play_from = '$$$'.join([p['title'] for p in playlists])
+                vod_play_url = '$$$'.join(['#'.join(p['episodes']) for p in playlists])
+            else:
+                vod_play_from = '韩剧网'
+                vod_play_url = f'正片${url}'
+            
+            # 确定类型
+            type_name = self._get_type_name(url)
             
             # 构建视频对象
             vod = {
@@ -394,11 +390,11 @@ class Spider(Spider):
                 'vod_actor': vod_actor,
                 'vod_director': vod_director,
                 'vod_area': vod_area,
-                'vod_lang': vod_lang or '韩语',
+                'vod_lang': vod_lang,
                 'vod_content': vod_content,
                 'vod_play_from': vod_play_from,
                 'vod_play_url': vod_play_url,
-                'type_name': self._get_type_name(url)
+                'type_name': type_name
             }
             
             result['list'] = [vod]
@@ -407,6 +403,132 @@ class Spider(Spider):
             print(f"detailContent error: {e}")
             
         return result
+
+    def _extract_info_from_script(self, doc):
+        """从script标签提取视频信息"""
+        info = {}
+        
+        try:
+            # 查找包含korcms的script标签
+            scripts = doc('script')
+            for script in scripts.items():
+                text = script.text()
+                if 'korcms' in text:
+                    # 提取JSON数据
+                    match = re.search(r'korcms\s*=\s*({[^}]+})', text)
+                    if match:
+                        data_str = match.group(1)
+                        # 修复JSON格式
+                        data_str = data_str.replace('"', "'")
+                        data_str = data_str.replace("'", '"')
+                        
+                        try:
+                            data = json.loads(data_str)
+                            info['year'] = data.get('year', '')
+                        except:
+                            pass
+        except:
+            pass
+        
+        return info
+
+    def _extract_playlists(self, doc, vid):
+        """提取播放列表（关键优化）"""
+        playlists = []
+        
+        try:
+            # 查找播放列表容器
+            play_section = doc('.box:contains("在线云播")')
+            if not play_section:
+                play_section = doc('.playlist, .play-list')
+            
+            if play_section:
+                # 提取剧集
+                episode_items = play_section.find('li')
+                episodes = []
+                
+                for item in episode_items.items():
+                    a_tag = item.find('a')
+                    if a_tag:
+                        episode_name = a_tag.text().strip()
+                        onclick = a_tag.attr('onclick') or ''
+                        
+                        # 从onclick中提取播放参数
+                        match = re.search(r"bb_a\('([^']+)','([^']+)'", onclick)
+                        if match:
+                            play_params = match.group(1)  # 3544_1_1 这样的格式
+                            episode_name = match.group(2) or episode_name
+                            
+                            # 构建播放URL
+                            play_url = self._build_play_url(vid, play_params)
+                            if play_url:
+                                episodes.append(f"{episode_name}${play_url}")
+                        else:
+                            # 如果没有onclick，尝试使用href
+                            href = a_tag.attr('href')
+                            if href and href != '#':
+                                if not href.startswith('http'):
+                                    href = self.baseUrl + ('' if href.startswith('/') else '/') + href
+                                episodes.append(f"{episode_name}${href}")
+                
+                if episodes:
+                    playlists.append({
+                        'title': '在线播放',
+                        'episodes': episodes
+                    })
+            
+            # 如果没有找到，尝试其他选择器
+            if not playlists:
+                all_episodes = doc('a[onclick*="bb_a"], a[href*="play"]')
+                if all_episodes:
+                    episodes = []
+                    for ep in all_episodes.items():
+                        episode_name = ep.text().strip()
+                        onclick = ep.attr('onclick') or ''
+                        href = ep.attr('href') or ''
+                        
+                        if onclick:
+                            match = re.search(r"bb_a\('([^']+)','([^']+)'", onclick)
+                            if match:
+                                play_params = match.group(1)
+                                episode_name = match.group(2) or episode_name
+                                play_url = self._build_play_url(vid, play_params)
+                                if play_url:
+                                    episodes.append(f"{episode_name}${play_url}")
+                        elif href:
+                            if not href.startswith('http'):
+                                href = self.baseUrl + ('' if href.startswith('/') else '/') + href
+                            episodes.append(f"{episode_name}${href}")
+                    
+                    if episodes:
+                        playlists.append({
+                            'title': '播放列表',
+                            'episodes': episodes
+                        })
+            
+        except Exception as e:
+            print(f"_extract_playlists error: {e}")
+        
+        return playlists
+
+    def _build_play_url(self, vid, play_params):
+        """构建播放URL"""
+        try:
+            # 解析参数格式：3544_1_1
+            parts = play_params.split('_')
+            if len(parts) >= 3:
+                video_id = parts[0]  # 视频ID
+                source_id = parts[1]  # 源ID
+                episode_id = parts[2]  # 剧集ID
+                
+                # 构建播放URL（根据网站实际播放地址格式调整）
+                # 这里使用通用的播放器地址
+                play_url = f"{self.baseUrl}/player/{video_id}/{source_id}/{episode_id}.html"
+                return play_url
+        except:
+            pass
+        
+        return None
 
     def _get_type_name(self, url):
         """从URL获取类型名称"""
@@ -419,7 +541,7 @@ class Spider(Spider):
                 return '韩国电影'
             elif type_id == '4':
                 return '韩国综艺'
-        return ''
+        return '韩剧'
 
     def searchContent(self, key, quick, page='1'):
         result = {}
@@ -441,8 +563,10 @@ class Spider(Spider):
                 
                 for item in items.items():
                     video = self._parse_video_item(item)
-                    if video and key.lower() in video['vod_name'].lower():
-                        videos.append(video)
+                    if video:
+                        # 检查是否包含搜索关键词
+                        if key.lower() in video['vod_name'].lower() or not key:
+                            videos.append(video)
                 
         except Exception as e:
             print(f"searchContent error: {e}")
@@ -460,21 +584,17 @@ class Spider(Spider):
             if id.startswith('http'):
                 play_url = id
             else:
-                # 如果id是数字，尝试获取详情页
-                if id.isdigit():
-                    detail_url = f"{self.baseUrl}/detail/{id}.html"
-                    rsp = self.fetch(detail_url, headers=self.header)
-                    if rsp and rsp.text:
-                        doc = pq(rsp.text)
-                        # 查找播放地址
-                        play_link = doc('a[href*="play"], .playbtn, iframe[src*="player"], video source')
-                        if play_link:
-                            play_url = play_link.attr('href') or play_link.attr('src') or ''
-                            if play_url and not play_url.startswith('http'):
-                                play_url = self.baseUrl + ('' if play_url.startswith('/') else '/') + play_url
-                        else:
-                            # 如果没有找到播放地址，使用详情页作为播放页
-                            play_url = detail_url
+                # 如果id是剧集参数，构建播放URL
+                if '_' in id:
+                    # 格式：3544_1_1
+                    parts = id.split('_')
+                    if len(parts) >= 3:
+                        video_id = parts[0]
+                        play_url = f"{self.baseUrl}/player/{video_id}/{parts[1]}/{parts[2]}.html"
+                    else:
+                        play_url = f"{self.baseUrl}/detail/{id}.html"
+                elif id.isdigit():
+                    play_url = f"{self.baseUrl}/player/{id}/1/1.html"
                 else:
                     play_url = id
             
