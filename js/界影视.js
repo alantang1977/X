@@ -119,18 +119,19 @@ async function detail(id) {
     headers: getHeaders({ id })
   });
   const vod = normalizeVodList([res.data])[0];
-  if (!vod) {
-    return JSON.stringify({ list: [{ vod_id: id, vod_name: '加载失败', vod_play_url: '' }] });
-  }
-
+  if (!vod) return JSON.stringify({ list: [{ vod_id: id, vod_name: '加载失败', vod_play_url: '' }] });
   vod.vod_play_from = '界影视';
-  if (vod.episodelist?.length) {
-    const name = vod.episodelist.length > 1 ? vod.episodelist[0].name : vod.vod_name;
-    vod.vod_play_url = vod.episodelist.map(ep => `${name}$${id}-${ep.nid}`).join('#');
-    delete vod.episodelist;
+  const eps = vod.episodelist || [];
+  if (eps.length === 0) {
+    vod.vod_play_url = `${vod.vod_name}$${id}-1`;
+  } else if (eps.length === 1) {
+    vod.vod_play_url = `${vod.vod_name}$${id}-${eps[0].nid}`;
+  } else {
+    vod.vod_play_url = eps.map(ep => {
+      const name = ep.name?.trim() || `第${ep.nid}集`;
+      return `${name}$${id}-${ep.nid}`;
+    }).join('#');
   }
-  return JSON.stringify({ list: [vod] });
-}
 
 async function play(_, id) {
   const [vid, nid] = id.split('-');
