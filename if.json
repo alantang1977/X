@@ -5,8 +5,9 @@
 //{"name":"🐏┃湯┃采集源","url":"https://edgeone.gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/采集.json"},
 {"name":"🐼┃湯┃(PG节奏熊猫)","url":"https://edgeone.gh-proxy.org/https://raw.githubusercontent.com/alantang1977/pg/refs/heads/main/jsm.json"},
 {"name":"🐞┃湯┃东篱大佬源","url":"https://16151.kstore.space"},
-{"name":"🐞┃湯┃东篱py源","url":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/py.json"},
-{"name":"🐞┃湯┃东篱cj源","url":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/dongliTV/cj.json"},
+{"name":"🐞┃湯┃东篱api源","url":"https://cnb.cool/junchao.tang/live/-/git/raw/main/api.json"},
+{"name":"🐞┃湯┃东篱py源","url":"https://cnb.cool/junchao.tang/live/-/git/raw/main/py.json"},
+{"name":"🐞┃湯┃东篱cj源","url":"https://cnb.cool/junchao.tang/live/-/git/raw/main/cj.json"},
 {"name":"🐰┃湯┃(真心大佬源)","url":"https://cnb.cool/junchao.tang/LoveTV/-/git/raw/master/FongMi.json"},
 {"name":"🍙┃饭太硬","url":"http://www.饭太硬.com/tv"},
 {"name":"🌊┃米家互联","url":"http://miqk.cc/小米/DEMO.json"},
@@ -17,7 +18,7 @@
 {"name":"💘┃clunPG源","url":"https://tvbox.catvod.com/jsm.json"},
 {"name":"🦉┃嗷呜影视","url":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/config"},
 //{"name":"🐄┃王二小放牛娃","url":"ttp://tv.999888987.xyz"},
-//{"name":"🐄┃王二小放牛娃","url":"https://9280.kstore.space/wex.json"},
+{"name":"🐄┃道长源","url":"https://cnb.cool/junchao.tang/dr/-/git/raw/main/custom.json"},
 //魔力云播 猫爪（ios专用）接口：http://wexfnw:wexfnw@cat.xn--4kq62z5rby2qupq9ub.top/index.js.md5
 //http://wexfnw:wexfnw@cat.999888987.xyz/index.js.md5
 //http://wexfnw:wexfnw@cat.999888123.xyz/index.js.md5
