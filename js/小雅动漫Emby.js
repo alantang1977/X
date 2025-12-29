@@ -1,7 +1,7 @@
 const config = {
-    host: 'https://emby.bangumi.ca',/*Emby服务器URL (例如 http://localhost:8096)*/
-    userId: "80e861cbff1343bfa0bedcea78895b91",/*Emby_userId (通过账号密码获取)*/
-    token: "8b0b16aae7e8403cb3d19969b82c3902",/*Emby_token (通过账号密码获取)*/
+    host: 'http://139.9.106.196:2345',/*Emby服务器URL (例如 http://localhost:8096)*/
+    userId: "623ba3ccaae348f9a3ce90adafb05bc1",/*Emby_userId (通过账号密码获取)*/
+    token: "61450f3dc3e34bea80e5cbe4ae34fc05",/*Emby_token (通过账号密码获取)*/
     deviceId: "ea27caf7-9a51-4209-b1a5-374bf30c2ffd",
     clientVersion: "4.9.0.31"
 };
