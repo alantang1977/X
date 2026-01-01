@@ -30,16 +30,18 @@ class Spider(Spider):
         })
 
         # [核心优化2] 缓存系统初始化
-        self.cache_dir = "/storage/emulated/0/lz/cache/"
+        self.cache_dir = os.path.join(os.path.expanduser("~"), ".lz/cache/")  # 跨平台缓存路径
         self.memory_cache = {} # 内存缓存 (用于详情页，应用关闭即销毁)
         self.disk_ttl = 3600   # 磁盘缓存有效期 1小时
         
         if not os.path.exists(self.cache_dir):
-            try: os.makedirs(self.cache_dir)
-            except: pass
+            try: 
+                os.makedirs(self.cache_dir, exist_ok=True)
+            except: 
+                pass
 
-        # 加载站点配置
-        default_path = "/storage/emulated/0/lz/cj.json"
+        # 加载站点配置（支持GitHub等远程URL）
+        default_path = "https://edgeone.gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/js/cj.json"  # 默认GitHub地址
         mode = "0"
         json_path = default_path
 
@@ -54,12 +56,23 @@ class Spider(Spider):
                 json_path = extend
 
         try:
-            if os.path.exists(json_path):
-                with open(json_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
+            # 判断是否为URL
+            if json_path.startswith(('http://', 'https://')):
+                # 从远程URL获取配置
+                res = self.session.get(json_path, timeout=10, verify=False)
+                if res.status_code == 200:
+                    data = res.json()
                     all_sites = data.get("api_site", [])
                     self.sites = self._filter_sites(all_sites, mode)
-        except Exception:
+            else:
+                # 兼容本地文件读取
+                if os.path.exists(json_path):
+                    with open(json_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        all_sites = data.get("api_site", [])
+                        self.sites = self._filter_sites(all_sites, mode)
+        except Exception as e:
+            print(f"加载配置失败: {e}")
             pass
 
     # --- 缓存核心逻辑 ---
