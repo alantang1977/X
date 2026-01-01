@@ -39,7 +39,7 @@ class Spider(Spider):
             except: pass
 
         # 加载站点配置
-        default_path = "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/js/cj.json"
+        default_path = "/storage/emulated/0/lz/cj.json"
         mode = "0"
         json_path = default_path
 
