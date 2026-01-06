@@ -5,6 +5,9 @@ import time
 import random
 import requests
 import urllib.parse
+from urllib.parse import urlparse, parse_qs, urljoin
+import hashlib
+
 sys.path.append('..')
 from base.spider import Spider
 
@@ -12,17 +15,15 @@ class Spider(Spider):
     def __init__(self):
         self.name = "剧透社"
         self.host = "https://1.star2.cn"
-        self.timeout = 15000  # 延长超时时间
+        self.timeout = 15000
         self.limit = 20
-        # 增强请求头，模拟真实浏览器
         self.headers = {
             "User-Agent": random.choice([
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
             ]),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,zh-HK;q=0.7,en-US;q=0.6,en;q=0.5",
+            "Accept-Language": "zh-CN,zh;q=0.9",
             "Accept-Encoding": "gzip, deflate, br",
             "Referer": f"{self.host}/",
             "Connection": "keep-alive",
@@ -35,10 +36,12 @@ class Spider(Spider):
             "DNT": "1"
         }
         self.default_image = "https://images.gamedog.cn/gamedog/imgfile/20241205/05105843u5j9.png"
-        # 创建会话保持
+        
+        # 创建会话
         self.session = requests.Session()
         self.session.headers.update(self.headers)
-        # 设置请求适配器，增加重试次数
+        
+        # 设置请求适配器
         adapter = requests.adapters.HTTPAdapter(
             pool_connections=10,
             pool_maxsize=10,
@@ -46,23 +49,37 @@ class Spider(Spider):
         )
         self.session.mount('http://', adapter)
         self.session.mount('https://', adapter)
+        
+        # 播放地址验证配置
+        self.verify_config = {
+            'enable_verification': True,  # 启用验证
+            'timeout_verify': 10,  # 验证超时(秒)
+            'max_retries': 2,  # 最大重试次数
+            'check_https': True,  # 检查HTTPS[citation:2]
+            'check_domain': True,  # 检查域名
+            'follow_redirects': True,  # 跟随重定向
+        }
+        
+        # 已知可靠的网盘域名模式[citation:2][citation:9]
+        self.trusted_domains = [
+            'pan.baidu.com', 'yun.baidu.com',
+            'pan.quark.cn', 'pan.aliyundrive.com', 'aliyundrive.com',
+            'cloud.189.cn', 'pan.xunlei.com', 'www.123pan.com',
+            'lanzou.com', 'lanzoux.com', 'lanzouv.com',
+            'ctfile.com', 'weiyun.com'
+        ]
+        
+        # 视频文件扩展名
+        self.video_extensions = ['.mp4', '.m3u8', '.mkv', '.flv', '.avi', '.mov', '.wmv', '.ts', '.webm']
 
     def getName(self):
         return self.name
     
     def init(self, extend=""):
         print(f"============{extend}============")
-        # 初始化时先获取首页Cookie
         try:
             response = self.session.get(self.host, timeout=self.timeout/1000)
-            # 更新可能的动态Cookie
-            if 'Set-Cookie' in response.headers:
-                for cookie in response.headers.get_list('Set-Cookie'):
-                    if '=' in cookie:
-                        name, value = cookie.split('=', 1)
-                        value = value.split(';', 1)[0]
-                        self.session.cookies.set(name.strip(), value.strip())
-            time.sleep(random.uniform(1, 2))  # 初始延迟
+            time.sleep(random.uniform(1, 2))
         except Exception as e:
             print(f"初始化会话失败: {e}")
     
@@ -82,13 +99,11 @@ class Spider(Spider):
     
     def categoryContent(self, tid, pg, filter, extend):
         result = {}
-        # 添加页码处理
         page_param = f"?page={pg}" if pg > 1 else ""
         url = f"{self.host}/{tid}/{page_param}".rstrip('/')
         
         try:
-            # 添加随机延迟，避免请求过于频繁
-            time.sleep(random.uniform(2, 4))
+            time.sleep(random.uniform(1.5, 3))
             rsp = self.fetch(url)
             if rsp:
                 videos = self._parse_video_list(rsp.text)
@@ -100,7 +115,7 @@ class Spider(Spider):
                     'total': 999999
                 })
         except Exception as e:
-            print(f"Category parse error for {url}: {e}")
+            print(f"分类内容获取失败 {url}: {e}")
             
         return result
     
@@ -115,51 +130,45 @@ class Spider(Spider):
             return f"{self.host}{href}" if href.startswith("/") else f"{self.host}/{href}"
         
         try:
-            # 改进正则表达式，提高匹配精度
-            pattern = r'<a[^>]*href=["\']([^"\']+)["\'][^>]*class=["\']main["\'][^>]*>([^<]+)</a>'
+            # 改进的正则表达式匹配
+            pattern = r'<a[^>]*href=["\']([^"\']+?)["\'][^>]*class=["\']main["\'][^>]*>([^<]+)</a>'
             for match in re.finditer(pattern, html_text, re.I | re.S):
                 href = match.group(1).strip()
                 name = match.group(2).strip()
                 
                 if href and name:
-                    # 清理标题中的多余符号
                     cleaned_name = re.sub(r'^【[^】]*】\s*', '', name).strip()
                     cleaned_name = re.sub(r'\s+', ' ', cleaned_name)
                     if not cleaned_name:
                         cleaned_name = name
                     
+                    # 提取备注信息
+                    remarks = []
+                    if re.search(r'4K|2160P|超清', name, re.I):
+                        remarks.append("4K")
+                    elif re.search(r'1080P|高清', name, re.I):
+                        remarks.append("1080P")
+                    elif re.search(r'720P|标清', name, re.I):
+                        remarks.append("720P")
+                    
+                    if re.search(r'全\d+集|完结', name):
+                        remarks.append("完结")
+                    elif re.search(r'更新至[第]?(\d+)', name):
+                        ep_match = re.search(r'更新至[第]?(\d+)', name)
+                        if ep_match:
+                            remarks.append(f"更{ep_match.group(1)}")
+                    
                     videos.append({
                         "vod_id": build_full_url(href),
                         "vod_name": cleaned_name,
                         "vod_pic": self.default_image,
-                        "vod_remarks": self._extract_remarks(name),
+                        "vod_remarks": " ".join(remarks),
                         "vod_content": cleaned_name
                     })
         except Exception as e:
-            print(f"Parse video list error: {e}")
+            print(f"解析视频列表错误: {e}")
         
-        return videos[:self.limit]  # 限制返回数量
-    
-    def _extract_remarks(self, title):
-        """从标题中提取备注信息（如更新状态、清晰度等）"""
-        remarks = []
-        # 提取清晰度
-        if re.search(r'4K|2160P|超清', title, re.I):
-            remarks.append("4K")
-        elif re.search(r'1080P|高清', title, re.I):
-            remarks.append("1080P")
-        elif re.search(r'720P|标清', title, re.I):
-            remarks.append("720P")
-        
-        # 提取更新状态
-        if re.search(r'全\d+集|完结', title):
-            remarks.append("完结")
-        elif re.search(r'更新至|连载', title):
-            match = re.search(r'更新至[第]?(\d+)', title)
-            if match:
-                remarks.append(f"更{match.group(1)}")
-        
-        return " ".join(remarks) if remarks else ""
+        return videos[:self.limit]
     
     def detailContent(self, array):
         result = {'list': []}
@@ -169,14 +178,14 @@ class Spider(Spider):
         try:
             vod_id = array[0]
             detail_url = vod_id if vod_id.startswith("http") else f"{self.host}{vod_id}"
-            time.sleep(random.uniform(1.5, 2.5))  # 详情页请求延迟
+            time.sleep(random.uniform(1, 2))
             rsp = self.fetch(detail_url)
             if rsp:
                 vod = self._parse_detail_page(rsp.text, detail_url)
                 if vod:
                     result['list'] = [vod]
         except Exception as e:
-            print(f"Detail parse error for {vod_id}: {e}")
+            print(f"详情页解析错误 {vod_id}: {e}")
         return result
     
     def _parse_detail_page(self, html_text, detail_url):
@@ -187,7 +196,7 @@ class Spider(Spider):
             title = re.sub(r'^【[^】]+】\s*', '', title).strip() or "未知标题"
             title = re.sub(r'\s+', ' ', title)
             
-            # 提取描述信息
+            # 提取描述
             desc_patterns = [
                 r'<div[^>]*class=["\']content["\'][^>]*>(.*?)</div>',
                 r'<p[^>]*class=["\']desc["\'][^>]*>(.*?)</p>',
@@ -202,7 +211,7 @@ class Spider(Spider):
                         description = desc[:200] + "..." if len(desc) > 200 else desc
                         break
             
-            # 提取封面图片
+            # 提取封面
             cover_patterns = [
                 r'<img[^>]*src=["\']([^"\']+?\.(?:jpg|jpeg|png|gif|webp))["\'][^>]*>',
                 r'data-original=["\']([^"\']+?)["\']',
@@ -217,117 +226,330 @@ class Spider(Spider):
                         cover_url = img_url if img_url.startswith('http') else f"{self.host}{img_url}"
                         break
             
-            # 优化资源链接提取规则
-            play_links = self._extract_play_links(html_text)
+            # 改进的播放链接提取和验证
+            play_links_info = self._extract_and_verify_play_links(html_text, detail_url)
             
             # 构建播放URL
-            play_url = self._build_play_url(play_links)
-            play_from = "剧透社" if play_links else "无资源"
+            play_items = []
+            for link_info in play_links_info:
+                name = link_info.get('name', '未知来源')
+                url = link_info.get('url', '')
+                if url:
+                    play_items.append(f"{name}${url}")
+            
+            play_url = "#".join(play_items) if play_items else "暂无资源$#"
+            play_from = "剧透社" if play_items else "无资源"
             
             return {
                 "vod_id": detail_url,
                 "vod_name": title,
                 "vod_pic": cover_url,
                 "vod_content": description or title,
-                "vod_remarks": self._extract_remarks(title),
+                "vod_remarks": "",
                 "vod_play_from": play_from,
                 "vod_play_url": play_url
             }
         except Exception as e:
-            print(f"Parse detail page error: {e}")
+            print(f"解析详情页错误: {e}")
             return {
                 "vod_id": detail_url,
                 "vod_name": "未知标题",
                 "vod_pic": self.default_image,
-                "vod_content": f"加载详情页失败：{str(e)[:50]}",
+                "vod_content": f"加载详情页失败",
                 "vod_remarks": "",
                 "vod_play_from": "无资源",
                 "vod_play_url": "暂无资源$#"
             }
     
-    def _extract_play_links(self, html_text):
-        """提取播放链接，包括网盘链接和可能的直链"""
-        play_links = []
+    def _extract_and_verify_play_links(self, html_text, source_url):
+        """
+        提取并验证播放链接[citation:1][citation:2][citation:4]
+        返回格式: [{'name': '来源名称', 'url': '验证后的URL', 'verified': True/False}]
+        """
+        links_info = []
         
-        # 网盘链接模式
-        pan_patterns = [
-            r'(https?://[^\s"\']*pan\.baidu\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*pan\.quark\.cn[^\s"\']+)',
-            r'(https?://[^\s"\']*aliyundrive\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*cloud\.189\.cn[^\s"\']+)',
-            r'(https?://[^\s"\']*pan\.xunlei\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*lanzou[^\.]*\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*123pan\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*ctfile\.com[^\s"\']+)',
-            r'(https?://[^\s"\']*weiyun\.com[^\s"\']+)'
-        ]
+        # 1. 提取所有可能的链接
+        all_links = self._extract_all_links(html_text)
         
-        for pattern in pan_patterns:
-            for match in re.finditer(pattern, html_text, re.I):
-                link = match.group(1).strip()
-                if link and link not in play_links:
-                    # 清理链接中的多余字符
-                    link = re.sub(r'["\'<>]', '', link)
-                    play_links.append(link)
+        # 2. 过滤和分类链接
+        filtered_links = self._filter_and_classify_links(all_links)
         
-        # 提取密码信息
-        pwd_patterns = [
-            r'提取码[：:]\s*(\w{4})',
-            r'密码[：:]\s*(\w{4})',
-            r'码[：:]\s*(\w{4})',
-            r'[提取]?码\s*[:：]?\s*(\w{4})'
-        ]
-        passwords = []
-        for pattern in pwd_patterns:
-            for match in re.finditer(pattern, html_text):
-                pwd = match.group(1).strip()
-                if pwd and pwd not in passwords:
-                    passwords.append(pwd)
-        
-        # 将密码附加到链接中
-        if passwords and play_links:
-            for i, link in enumerate(play_links):
-                if i < len(passwords):
-                    play_links[i] = f"{link}#{passwords[i]}"
-        
-        return play_links
-    
-    def _build_play_url(self, play_links):
-        """构建播放URL格式"""
-        if not play_links:
-            return "暂无资源$#"
-        
-        play_items = []
-        for i, link in enumerate(play_links):
-            # 判断网盘类型
-            if "pan.baidu.com" in link:
-                name = f"百度网盘{i+1}"
-            elif "pan.quark.cn" in link:
-                name = f"夸克网盘{i+1}"
-            elif "aliyundrive.com" in link:
-                name = f"阿里云盘{i+1}"
-            elif "cloud.189.cn" in link:
-                name = f"天翼云盘{i+1}"
-            elif "pan.xunlei.com" in link:
-                name = f"迅雷网盘{i+1}"
-            elif "lanzou" in link:
-                name = f"蓝奏云{i+1}"
-            elif "123pan.com" in link:
-                name = f"123云盘{i+1}"
-            elif "ctfile.com" in link:
-                name = f"城通网盘{i+1}"
-            elif "weiyun.com" in link:
-                name = f"微云{i+1}"
+        # 3. 验证链接真实性[citation:2][citation:4][citation:9]
+        for link_data in filtered_links:
+            original_url = link_data['url']
+            link_type = link_data['type']
+            name = link_data.get('name', '未知来源')
+            
+            print(f"验证链接: {name} - {original_url}")
+            
+            # 验证链接
+            verified_url = self._verify_link(original_url, link_type, source_url)
+            
+            if verified_url:
+                links_info.append({
+                    'name': name,
+                    'url': verified_url,
+                    'verified': True,
+                    'type': link_type
+                })
+                print(f"✓ 链接验证成功: {verified_url}")
             else:
-                name = f"资源{i+1}"
-            
-            # 确保链接格式正确
-            if not link.startswith("http"):
-                link = f"http://{link}"
-            
-            play_items.append(f"{name}${link}")
+                # 即使验证失败，也保留原始链接（标记为未验证）
+                links_info.append({
+                    'name': f"{name}(未验证)",
+                    'url': original_url,
+                    'verified': False,
+                    'type': link_type
+                })
+                print(f"✗ 链接验证失败: {original_url}")
         
-        return "#".join(play_items)
+        return links_info
+    
+    def _extract_all_links(self, html_text):
+        """提取页面中所有可能的链接"""
+        links = []
+        
+        # 匹配<a>标签中的链接
+        a_pattern = r'<a[^>]*href=["\']([^"\']+?)["\'][^>]*>([^<]*?)</a>'
+        for match in re.finditer(a_pattern, html_text, re.I | re.S):
+            href = match.group(1).strip()
+            text = match.group(2).strip()
+            if href and not href.startswith('javascript:'):
+                links.append({'url': href, 'text': text})
+        
+        # 匹配纯文本中的URL
+        url_pattern = r'https?://[^\s<>"\']+'
+        for match in re.finditer(url_pattern, html_text, re.I):
+            url = match.group(0).strip()
+            links.append({'url': url, 'text': ''})
+        
+        return links
+    
+    def _filter_and_classify_links(self, links):
+        """过滤和分类链接"""
+        filtered = []
+        
+        for link_info in links:
+            url = link_info['url']
+            text = link_info['text']
+            
+            # 跳过无效链接
+            if not url or len(url) < 10:
+                continue
+            
+            # 解码URL
+            try:
+                url = urllib.parse.unquote(url)
+            except:
+                pass
+            
+            # 分类链接
+            link_type = self._classify_link(url, text)
+            
+            if link_type != 'other':
+                # 为不同类型链接分配名称
+                name = self._get_link_name(url, text, link_type)
+                filtered.append({
+                    'url': url,
+                    'type': link_type,
+                    'name': name,
+                    'text': text
+                })
+        
+        return filtered
+    
+    def _classify_link(self, url, text):
+        """分类链接类型"""
+        url_lower = url.lower()
+        text_lower = text.lower()
+        
+        # 检查是否为视频直链[citation:1]
+        if any(ext in url_lower for ext in self.video_extensions):
+            return 'video_direct'
+        
+        # 检查是否为网盘链接
+        pan_keywords = {
+            'baidu': ['baidu', '百度', '网盘'],
+            'quark': ['quark', '夸克'],
+            'aliyun': ['aliyun', '阿里', '云盘'],
+            '189': ['189', '天翼', '电信'],
+            'xunlei': ['xunlei', '迅雷'],
+            'lanzou': ['lanzou', '蓝奏'],
+            '123': ['123pan', '123云盘'],
+            'ctfile': ['ctfile', '城通'],
+            'weiyun': ['weiyun', '微云']
+        }
+        
+        for pan_type, keywords in pan_keywords.items():
+            if any(keyword in url_lower or keyword in text_lower for keyword in keywords):
+                return f'pan_{pan_type}'
+        
+        # 检查是否为播放列表
+        if '.m3u8' in url_lower or 'playlist' in url_lower:
+            return 'playlist'
+        
+        return 'other'
+    
+    def _get_link_name(self, url, text, link_type):
+        """获取链接显示名称"""
+        if text and len(text) < 20:
+            # 清理文本
+            clean_text = re.sub(r'[【】\[\]<>]', '', text).strip()
+            if clean_text:
+                return clean_text
+        
+        # 根据链接类型返回默认名称
+        type_names = {
+            'video_direct': '视频直链',
+            'playlist': '播放列表',
+            'pan_baidu': '百度网盘',
+            'pan_quark': '夸克网盘',
+            'pan_aliyun': '阿里云盘',
+            'pan_189': '天翼云盘',
+            'pan_xunlei': '迅雷网盘',
+            'pan_lanzou': '蓝奏云',
+            'pan_123': '123云盘',
+            'pan_ctfile': '城通网盘',
+            'pan_weiyun': '腾讯微云'
+        }
+        
+        return type_names.get(link_type, '未知来源')
+    
+    def _verify_link(self, url, link_type, source_url):
+        """
+        验证链接的真实性和可用性[citation:2][citation:4][citation:9]
+        """
+        if not self.verify_config['enable_verification']:
+            return url
+        
+        try:
+            # 1. 基本URL验证
+            parsed = urlparse(url)
+            if not parsed.scheme or not parsed.netloc:
+                print(f"无效的URL格式: {url}")
+                return None
+            
+            # 2. 检查HTTPS[citation:2]
+            if self.verify_config['check_https'] and parsed.scheme != 'https':
+                print(f"非HTTPS链接，可能存在安全风险: {url}")
+                # 不直接拒绝，但记录警告
+            
+            # 3. 检查域名可信度[citation:9]
+            if self.verify_config['check_domain']:
+                domain = parsed.netloc.lower()
+                is_trusted = any(trusted_domain in domain for trusted_domain in self.trusted_domains)
+                
+                if not is_trusted:
+                    print(f"非受信任域名: {domain}")
+                    # 对非受信任域名进行更严格的检查
+            
+            # 4. 对于网盘链接，尝试获取真实地址
+            if link_type.startswith('pan_'):
+                return self._verify_pan_link(url, link_type)
+            
+            # 5. 对于视频直链，检查可访问性
+            elif link_type == 'video_direct':
+                return self._verify_video_link(url)
+            
+            # 6. 通用链接验证
+            else:
+                return self._verify_general_link(url)
+                
+        except Exception as e:
+            print(f"链接验证过程中出错 {url}: {e}")
+            return None
+        
+        return url
+    
+    def _verify_pan_link(self, url, link_type):
+        """验证网盘链接"""
+        try:
+            # 添加Referer头模拟正常访问
+            headers = {
+                'Referer': 'https://pan.baidu.com/' if 'baidu' in link_type else self.host,
+                'User-Agent': self.headers['User-Agent']
+            }
+            
+            # 发送HEAD请求检查链接是否可访问
+            response = self.session.head(
+                url,
+                headers=headers,
+                timeout=self.verify_config['timeout_verify'],
+                allow_redirects=self.verify_config['follow_redirects']
+            )
+            
+            if response.status_code in [200, 301, 302]:
+                # 处理重定向
+                final_url = response.url if hasattr(response, 'url') else url
+                
+                # 提取可能的密码信息（从URL参数或片段中）
+                parsed = urlparse(final_url)
+                query_params = parse_qs(parsed.query)
+                
+                # 常见网盘密码参数
+                password_keys = ['pwd', 'password', '提取码', '提取密码', 'access_code']
+                for key in password_keys:
+                    if key in query_params:
+                        password = query_params[key][0]
+                        if password and len(password) >= 4:
+                            final_url = f"{final_url}#{password}"
+                            break
+                
+                return final_url
+            else:
+                print(f"网盘链接不可访问: {url}, 状态码: {response.status_code}")
+                return None
+                
+        except Exception as e:
+            print(f"验证网盘链接失败 {url}: {e}")
+            return None
+    
+    def _verify_video_link(self, url):
+        """验证视频直链"""
+        try:
+            # 发送HEAD请求检查Content-Type
+            response = self.session.head(
+                url,
+                timeout=self.verify_config['timeout_verify'],
+                allow_redirects=self.verify_config['follow_redirects']
+            )
+            
+            if response.status_code == 200:
+                content_type = response.headers.get('Content-Type', '').lower()
+                
+                # 检查是否为视频内容类型
+                video_content_types = ['video/', 'application/vnd.apple.mpegurl', 'application/x-mpegurl']
+                if any(video_type in content_type for video_type in video_content_types):
+                    return response.url if hasattr(response, 'url') else url
+                else:
+                    print(f"非视频内容类型: {content_type}")
+                    return None
+            else:
+                print(f"视频链接不可访问: {url}, 状态码: {response.status_code}")
+                return None
+                
+        except Exception as e:
+            print(f"验证视频链接失败 {url}: {e}")
+            return None
+    
+    def _verify_general_link(self, url):
+        """验证通用链接"""
+        try:
+            response = self.session.head(
+                url,
+                timeout=self.verify_config['timeout_verify'],
+                allow_redirects=self.verify_config['follow_redirects']
+            )
+            
+            if response.status_code in [200, 301, 302]:
+                return response.url if hasattr(response, 'url') else url
+            else:
+                print(f"链接不可访问: {url}, 状态码: {response.status_code}")
+                return None
+                
+        except Exception as e:
+            print(f"验证链接失败 {url}: {e}")
+            return None
     
     def searchContent(self, key, quick, pg):
         result = {'list': []}
@@ -337,7 +559,7 @@ class Spider(Spider):
         try:
             encoded_key = urllib.parse.quote(key.strip())
             url = f"{self.host}/search/?keyword={encoded_key}&page={pg}"
-            time.sleep(random.uniform(1.5, 2.5))
+            time.sleep(random.uniform(1, 2))
             rsp = self.fetch(url)
             if rsp:
                 videos = self._parse_video_list(rsp.text)
@@ -346,18 +568,16 @@ class Spider(Spider):
                 result['pagecount'] = 9999
                 result['total'] = 999999
         except Exception as e:
-            print(f"Search error for '{key}': {e}")
+            print(f"搜索失败 '{key}': {e}")
         return result
     
     def playerContent(self, flag, id, vipFlags):
         """
-        改进播放内容处理，解决无声问题
-        flag: 播放来源标记
-        id: 播放链接（可能包含密码）
-        vipFlags: VIP标记
+        改进的播放内容处理[citation:7][citation:10]
+        解决播放无声和无法播放的问题
         """
         try:
-            # 分离链接和密码
+            # 分离链接和可能的密码
             if '#' in id:
                 url, pwd = id.split('#', 1)
             else:
@@ -366,84 +586,91 @@ class Spider(Spider):
             # 解码URL
             url = urllib.parse.unquote(url)
             
-            # 根据不同网盘类型返回不同的播放参数
+            # 准备请求头
             headers = dict(self.session.headers)
             
-            # 根据网盘类型设置特定的Referer和User-Agent
-            if "pan.baidu.com" in url:
-                headers.update({
-                    "Referer": "https://pan.baidu.com/",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-                })
-                parse = 0  # 百度网盘通常需要外部解析
-            elif "aliyundrive.com" in url:
-                headers.update({
-                    "Referer": "https://www.aliyundrive.com/",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-                })
-                parse = 1  # 阿里云盘通常可以直接播放
-            elif "pan.quark.cn" in url:
-                headers.update({
-                    "Referer": "https://pan.quark.cn/",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-                })
-                parse = 0
-            else:
-                parse = 0  # 默认不解析
+            # 根据链接类型设置不同的播放参数[citation:10]
+            parse_mode, play_url, final_url = self._determine_playback_params(url, headers, pwd)
             
-            # 如果链接已经是push协议，直接使用
-            if url.startswith("push://"):
-                return {
-                    "parse": parse,
-                    "playUrl": "",
-                    "url": url,
-                    "header": json.dumps(headers)
-                }
-            
-            # 对于网盘链接，使用push协议推送
-            # 如果是视频直链，则直接播放
-            if any(ext in url.lower() for ext in ['.mp4', '.m3u8', '.flv', '.avi', '.mkv', '.ts']):
-                return {
-                    "parse": 0,  # 直链直接播放
-                    "playUrl": "",
-                    "url": url,
-                    "header": json.dumps(headers)
-                }
-            else:
-                # 网盘链接使用push协议
-                return {
-                    "parse": parse,
-                    "playUrl": "",
-                    "url": f"push://{url}",
-                    "header": json.dumps(headers)
-                }
+            return {
+                "parse": parse_mode,
+                "playUrl": play_url,
+                "url": final_url,
+                "header": json.dumps(headers)
+            }
                 
         except Exception as e:
-            print(f"Player content error: {e}")
+            print(f"播放内容处理错误: {e}")
             # 出错时返回基本配置
             return {
                 "parse": 0,
                 "playUrl": "",
-                "url": f"push://{id}" if not id.startswith("push://") else id,
+                "url": id if id.startswith("push://") else f"push://{id}",
                 "header": json.dumps(dict(self.session.headers))
             }
     
+    def _determine_playback_params(self, url, headers, password):
+        """
+        根据URL类型确定播放参数[citation:7][citation:10]
+        返回: (parse_mode, play_url, final_url)
+        """
+        url_lower = url.lower()
+        
+        # 1. 如果是push协议，直接使用
+        if url.startswith("push://"):
+            return 0, "", url
+        
+        # 2. 视频直链 - 直接播放
+        if any(ext in url_lower for ext in self.video_extensions):
+            # 设置适当的Referer
+            if 'referer' not in [k.lower() for k in headers.keys()]:
+                parsed = urlparse(url)
+                headers['Referer'] = f"{parsed.scheme}://{parsed.netloc}/"
+            
+            # 对于M3U8，可能需要特殊处理
+            if '.m3u8' in url_lower:
+                return 1, "", url  # parse=1表示需要解析
+            else:
+                return 0, "", url  # 直接播放
+        
+        # 3. 网盘链接 - 使用push协议
+        elif any(domain in url_lower for domain in self.trusted_domains):
+            # 设置网盘特定的请求头
+            if 'pan.baidu.com' in url_lower:
+                headers.update({
+                    "Referer": "https://pan.baidu.com/",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                })
+                # 如果有密码，添加到URL中
+                if password:
+                    url = f"{url}#{password}"
+                return 0, "", f"push://{url}"
+            
+            elif 'aliyundrive.com' in url_lower:
+                headers.update({
+                    "Referer": "https://www.aliyundrive.com/",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                })
+                return 1, "", f"push://{url}"
+            
+            else:
+                # 其他网盘
+                return 0, "", f"push://{url}"
+        
+        # 4. 其他链接 - 默认使用push协议
+        else:
+            return 0, "", f"push://{url}"
+    
     def fetch(self, url):
-        """改进的请求方法，增加重试和错误处理"""
+        """改进的请求方法"""
         max_retries = 3
         for attempt in range(max_retries):
             try:
                 # 随机更换User-Agent
                 self.session.headers["User-Agent"] = random.choice([
                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0"
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
                 ])
-                
-                # 动态设置Referer
-                if not self.session.headers.get("Referer") or random.random() > 0.5:
-                    self.session.headers["Referer"] = self.host
                 
                 response = self.session.get(
                     url,
@@ -452,19 +679,13 @@ class Spider(Spider):
                     verify=False  # 注意：生产环境建议设为True
                 )
                 
-                # 处理重定向
-                if response.history:
-                    for resp in response.history:
-                        if 'Set-Cookie' in resp.headers:
-                            self._update_cookies(resp.headers.get_list('Set-Cookie'))
-                
                 response.encoding = response.apparent_encoding or 'utf-8'
                 
                 if response.status_code == 200:
                     return response
                 elif response.status_code in [403, 429, 503]:
                     wait_time = (attempt + 1) * random.uniform(3, 5)
-                    print(f"请求被限制，状态码: {response.status_code}，等待{wait_time:.1f}秒后重试...")
+                    print(f"请求被限制，等待{wait_time:.1f}秒后重试...")
                     time.sleep(wait_time)
                     continue
                 else:
@@ -485,16 +706,3 @@ class Spider(Spider):
                 time.sleep(random.uniform(2, 4))
         
         return None
-    
-    def _update_cookies(self, cookie_list):
-        """更新会话Cookie"""
-        for cookie in cookie_list:
-            if '=' in cookie:
-                name, value = cookie.split('=', 1)
-                value = value.split(';', 1)[0]
-                self.session.cookies.set(name.strip(), value.strip())
-    
-    def isVideoFormat(self, url):
-        """判断是否为视频格式链接"""
-        video_extensions = ['.mp4', '.m3u8', '.flv', '.avi', '.mkv', '.mov', '.wmv', '.ts']
-        return any(url.lower().endswith(ext) for ext in video_extensions)
