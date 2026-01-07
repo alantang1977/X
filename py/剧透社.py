@@ -12,7 +12,7 @@ class Spider(Spider):
     def __init__(self):
         self.name = "剧透社"
         self.host = "https://1.star2.cn"
-        self.timeout = 8000
+        self.timeout = 10000
         self.limit = 20
         # 增强请求头，模拟真实浏览器
         self.headers = {
@@ -29,7 +29,8 @@ class Spider(Spider):
             "Upgrade-Insecure-Requests": "1",
             "Cache-Control": "max-age=0"
         }
-        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/AlanShot.png"
+        # 将默认图片替换为指定固定图片
+        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/alanShot.png"
         
         # 智能网盘识别配置
         self.cloud_disk_rules = {
