@@ -30,7 +30,7 @@ class Spider(Spider):
             "Cache-Control": "max-age=0"
         }
         # 将默认图片替换为指定固定图片
-        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/alanShot.png"
+        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/Chao.png"
         
         # 智能网盘识别配置
         self.cloud_disk_rules = {
