@@ -29,7 +29,7 @@ class Spider(Spider):
             "Upgrade-Insecure-Requests": "1",
             "Cache-Control": "max-age=0"
         }
-        self.default_image = "https://images.gamedog.cn/gamedog/imgfile/20241205/05105843u5j9.png"
+        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/AlanShot.png"
         
         # 智能网盘识别配置
         self.cloud_disk_rules = {
