@@ -5,10 +5,10 @@ ip_version_priority = "ipv4"
 
 # 直播源URL列表
 source_urls = [
-    "https://gh.catmak.name/https://raw.githubusercontent.com/aiyakuaile/easy_tv_live/refs/heads/main/temp",
-    "https://gh.catmak.name/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt",
+    "https://raw.githubusercontent.com/aiyakuaile/easy_tv_live/refs/heads/main/temp",
+    "https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt",
     "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt",
-    "https://gh.catmak.name/https://raw.githubusercontent.com/develop202/migu_video/main/interface.txt",
+    "https://raw.githubusercontent.com/develop202/migu_video/main/interface.txt",
     "https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u",
     "https://fy.188766.xyz/?url=https%3A%2F%2Flive.tangshop.top%3A35455&mishitong=true&mima=mianfeidehaimaiqian&json=true",
     "https://d.kstore.dev/download/15114/TVSolo.txt",
