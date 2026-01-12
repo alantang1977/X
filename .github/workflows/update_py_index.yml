@@ -1,26 +1,25 @@
 name: Update Python Files Index
 
 on:
+  # 定时触发：每天UTC 0点（北京时间8点）运行
   schedule:
-    # 每天UTC时间0点（北京时间8点）运行
     - cron: '0 0 * * *'
   
+  # 手动触发
   workflow_dispatch:
     inputs:
       input_folder:
-        description: 'Python文件目录路径'
-        required: true
-        default: './py'
-      output_file:
-        description: 'JSON输出文件路径'
-        required: true
-        default: './configs/plugins.json'
-      verbose:
-        description: '显示详细日志'
+        description: 'Python文件目录'
         required: false
-        default: 'false'
-        type: boolean
+        default: './py'
+        type: string
+      output_file:
+        description: '输出JSON文件'
+        required: false
+        default: './configs/plugins.json'
+        type: string
   
+  # 推送触发：当py目录或脚本变更时
   push:
     paths:
       - 'py/**'
@@ -28,93 +27,101 @@ on:
       - '.github/workflows/update_py_index.yml'
 
 jobs:
-  update-index:
-    runs-on: ubuntu-latest  # 改为ubuntu-latest，更轻量且支持Python
+  generate-index:
+    runs-on: ubuntu-latest  # 使用Ubuntu运行器
+    
+    permissions:
+      contents: write  # 允许写入仓库
     
     steps:
+    # 1. 检出代码
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0  # 获取完整历史记录
     
-    - name: Set up Python
+    # 2. 设置Python环境
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-        cache: 'pip'
+        # 不再检查requirements.txt
     
-    - name: Install dependencies
+    # 3. 创建空的requirements.txt文件（解决Actions错误）
+    - name: Create requirements.txt
       run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # 如果文件不存在，创建空文件
+        if [ ! -f requirements.txt ]; then
+          echo "# 空文件，用于避免GitHub Actions错误" > requirements.txt
+          echo "# 实际依赖在generate_config.py中" >> requirements.txt
+        fi
+        cat requirements.txt
     
-    - name: Generate Python Files Index
-      env:
-        INPUT_FOLDER: ${{ github.event.inputs.input_folder || './py' }}
-        OUTPUT_FILE: ${{ github.event.inputs.output_file || './configs/plugins.json' }}
-        VERBOSE: ${{ github.event.inputs.verbose || 'false' }}
+    # 4. 运行索引生成脚本
+    - name: Generate JSON Index
+      id: generate
       run: |
-        echo "生成Python文件索引..."
-        echo "输入目录: $INPUT_FOLDER"
-        echo "输出文件: $OUTPUT_FILE"
-        echo "详细模式: $VERBOSE"
+        echo "开始生成Python文件索引..."
+        echo "工作目录: $(pwd)"
+        echo "目录内容:"
+        ls -la
         
-        VERBOSE_FLAG=""
-        if [ "$VERBOSE" = "true" ]; then
-          VERBOSE_FLAG="-v"
+        echo "检查py目录:"
+        if [ -d "py" ]; then
+          ls -la py/
+        else
+          echo "py目录不存在，将创建示例文件"
+          mkdir -p py
+          echo "print('示例文件')" > py/示例.py
         fi
         
-        python configs/generate_config.py -i "$INPUT_FOLDER" -o "$OUTPUT_FILE" $VERBOSE_FLAG
+        echo "运行生成脚本..."
+        python configs/generate_config.py
+        
+        echo "生成的JSON文件:"
+        if [ -f "configs/plugins.json" ]; then
+          cat configs/plugins.json
+        fi
     
+    # 5. 检查是否有文件变更
     - name: Check for changes
       id: check-changes
       run: |
         echo "检查文件变更..."
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # 检查是否有变更
-        if git diff --quiet configs/plugins.json; then
-          echo "没有检测到变更"
-          echo "has_changes=false" >> $GITHUB_OUTPUT
-        else
-          echo "检测到变更"
-          echo "has_changes=true" >> $GITHUB_OUTPUT
+        # 配置Git用户
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # 检查plugins.json是否有变更
+        if [ -f "configs/plugins.json" ]; then
+          # 添加文件到暂存区
+          git add configs/plugins.json
           
-          # 显示变更摘要
-          echo "变更摘要:"
-          git diff --stat configs/plugins.json
+          # 检查是否有未提交的变更
+          if git diff --cached --quiet configs/plugins.json; then
+            echo "没有检测到变更"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "检测到配置变更"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "变更内容:"
+            git diff --cached configs/plugins.json | head -50
+          fi
+        else
+          echo "plugins.json文件不存在"
+          echo "changed=false" >> $GITHUB_OUTPUT
         fi
     
-    - name: Commit and push changes
-      if: steps.check-changes.outputs.has_changes == 'true'
+    # 6. 提交并推送变更
+    - name: Commit and Push
+      if: steps.check-changes.outputs.changed == 'true'
       run: |
         echo "提交并推送变更..."
         
-        # 添加变更的文件
-        git add configs/plugins.json
-        
-        # 检查是否还有其他JSON文件变更
-        if git status --porcelain | grep -q "\.json$"; then
-          git add *.json
-        fi
-        
         # 创建提交
-        COMMIT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
-        COMMIT_MSG="🤖 Auto-update: Python文件索引 [$COMMIT_DATE]"
-        
-        git commit -m "$COMMIT_MSG"
+        commit_message="🤖 自动更新: Python文件索引 [$(date +'%Y-%m-%d %H:%M:%S')]"
+        git commit -m "$commit_message"
         
         # 推送变更
-        git push origin HEAD:${{ github.ref_name }}
-    
-    - name: Upload logs as artifact
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: generation-logs
-        path: |
-          configs/generate_config.log
-          configs/plugins_*.json
-        retention-days: 7
+        git push origin HEAD:${{ github.ref }}
