@@ -1,0 +1,44 @@
+name: Auto Generate Plugins JSON
+
+# 定时触发：北京时间周五00:00（UTC时区为周四16:00，周五对应cron的5，UTC的5是北京时间13点，需修正为UTC 16:00=北京时间00:00）
+on:
+  schedule:
+    - cron: '0 16 * * 4'  # UTC周四16:00 = 北京时间周五00:00
+  workflow_dispatch:      # 手动触发开关（方便测试）
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出仓库代码
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉取完整历史，方便提交
+
+      # 2. 设置Python环境
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # 指定Python版本
+
+      # 3. 安装依赖（若有需要，此处暂无）
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+      # 4. 创建configs目录（若不存在）
+      - name: Create Configs Directory
+        run: mkdir -p configs
+
+      # 5. 执行Python脚本生成plugins.json
+      - name: Generate Plugins JSON
+        run: python generate_plugins.py
+
+      # 6. 提交并推送修改后的文件
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto update plugins.json [skip ci]"
+          file_pattern: "configs/plugins.json"
+          branch: main  # 替换为你的仓库主分支（如master）
