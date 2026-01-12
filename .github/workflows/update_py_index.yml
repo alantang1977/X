@@ -1,73 +1,120 @@
 name: Update Python Files Index
 
 on:
-  # 1. 定时触发：每天UTC时间0点（北京时间8点）运行一次[citation:3]
   schedule:
+    # 每天UTC时间0点（北京时间8点）运行
     - cron: '0 0 * * *'
-  # 2. 手动触发：在GitHub网页点击运行[citation:3]
+  
   workflow_dispatch:
     inputs:
       input_folder:
-        description: 'py'
+        description: 'Python文件目录路径'
         required: true
         default: './py'
       output_file:
-        description: 'JSON配置输出路径'
+        description: 'JSON输出文件路径'
         required: true
         default: './configs/plugins.json'
-  # 3. 推送触发：当py目录或脚本有变更时运行
+      verbose:
+        description: '显示详细日志'
+        required: false
+        default: 'false'
+        type: boolean
+  
   push:
     paths:
       - 'py/**'
-      - 'scripts/**'
+      - 'configs/generate_config.py'
       - '.github/workflows/update_py_index.yml'
 
 jobs:
   update-index:
-    runs-on: windows-latest  # 使用Windows环境以保持路径一致性[citation:1]
+    runs-on: ubuntu-latest  # 改为ubuntu-latest，更轻量且支持Python
     
     steps:
-    # 1. 检出仓库代码
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
     
-    # 2. 设置Python环境 (GitHub运行器已预装Python[citation:1])
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'  # 使用预装的最新稳定版本[citation:1]
+        python-version: '3.10'
+        cache: 'pip'
     
-    # 3. 运行索引生成脚本
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
     - name: Generate Python Files Index
       env:
-        # 手动触发时使用输入参数，否则使用默认值
-        INPUT_FOLDER: ${{ github.event_name == 'workflow_dispatch' && inputs.input_folder || './py' }}
-        OUTPUT_FILE: ${{ github.event_name == 'workflow_dispatch' && inputs.output_file || './configs/plugins.json' }}
+        INPUT_FOLDER: ${{ github.event.inputs.input_folder || './py' }}
+        OUTPUT_FILE: ${{ github.event.inputs.output_file || './configs/plugins.json' }}
+        VERBOSE: ${{ github.event.inputs.verbose || 'false' }}
       run: |
-        python scripts/generate_config.py
+        echo "生成Python文件索引..."
+        echo "输入目录: $INPUT_FOLDER"
+        echo "输出文件: $OUTPUT_FILE"
+        echo "详细模式: $VERBOSE"
+        
+        VERBOSE_FLAG=""
+        if [ "$VERBOSE" = "true" ]; then
+          VERBOSE_FLAG="-v"
+        fi
+        
+        python configs/generate_config.py -i "$INPUT_FOLDER" -o "$OUTPUT_FILE" $VERBOSE_FLAG
     
-    # 4. 检查是否有文件变更，若有则提交
-    - name: Check for changes and commit
-      id: git-check
+    - name: Check for changes
+      id: check-changes
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add configs/  # 添加configs目录下的变更
-        # 检查是否有需要提交的变更
-        if [ -n "$(git status --porcelain configs/)" ]; then
-          git commit -m "🤖 Auto-update: 更新Python文件索引 [$(date +'%Y-%m-%d %H:%M')]"
-          echo "changes=true" >> $GITHUB_OUTPUT
+        echo "检查文件变更..."
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # 检查是否有变更
+        if git diff --quiet configs/plugins.json; then
+          echo "没有检测到变更"
+          echo "has_changes=false" >> $GITHUB_OUTPUT
         else
-          echo "No changes detected."
-          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "检测到变更"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          
+          # 显示变更摘要
+          echo "变更摘要:"
+          git diff --stat configs/plugins.json
         fi
     
-    # 5. 推送变更回仓库
-    - name: Push changes
-      if: steps.git-check.outputs.changes == 'true'
-      uses: ad-m/github-push-action@master
+    - name: Commit and push changes
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        echo "提交并推送变更..."
+        
+        # 添加变更的文件
+        git add configs/plugins.json
+        
+        # 检查是否还有其他JSON文件变更
+        if git status --porcelain | grep -q "\.json$"; then
+          git add *.json
+        fi
+        
+        # 创建提交
+        COMMIT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
+        COMMIT_MSG="🤖 Auto-update: Python文件索引 [$COMMIT_DATE]"
+        
+        git commit -m "$COMMIT_MSG"
+        
+        # 推送变更
+        git push origin HEAD:${{ github.ref_name }}
+    
+    - name: Upload logs as artifact
+      if: always()
+      uses: actions/upload-artifact@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref_name }}
+        name: generation-logs
+        path: |
+          configs/generate_config.log
+          configs/plugins_*.json
+        retention-days: 7
