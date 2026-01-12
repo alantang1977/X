@@ -28,7 +28,7 @@ class Spider(Spider):
             "Upgrade-Insecure-Requests": "1",
             "Cache-Control": "max-age=0"
         }
-        self.default_image = "https://images.gamedog.cn/gamedog/imgfile/20241205/05105843u5j9.png"
+        self.default_image = "https://codeberg.org/alantang/photo/raw/branch/main/Chao.png"
         # 创建会话保持
         self.session = requests.Session()
         self.session.headers.update(self.headers)
@@ -239,3 +239,4 @@ class Spider(Spider):
         except Exception as e:
             print(f"请求异常: {e}")
             return None
+
