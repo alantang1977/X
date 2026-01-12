@@ -1,39 +1,42 @@
 import os
 import json
+from collections import defaultdict
 
 # ===================== 基础配置 =====================
 
 PY_DIR = "py"
 OUTPUT = "config.json"
 
-# 优先级前缀（最高优先级，整体排最前）
-PRIORITY_PREFIXES = [
-    "剧透社"
-]
+# ===================== Emoji 分类池 =====================
 
-# Emoji 分组规则（顺序即优先级）
-EMOJI_GROUPS = [
+EMOJI_POOLS = [
     {
-        "emoji": "🤖┃",
-        "keywords": ["剧透社", "AI", "智能"]
+        "keywords": ["剧透", "AI", "智能"],
+        "emojis": ["🤖", "🧠", "👁️"]
     },
     {
-        "emoji": "🎬┃",
-        "keywords": ["影视", "电影", "影院"]
+        "keywords": ["电影", "影视", "猎手", "影院"],
+        "emojis": ["🎬", "🍿", "📽️"]
     },
     {
-        "emoji": "⚡┃",
-        "keywords": ["飞快", "快", "秒播"]
+        "keywords": ["飞快", "快", "秒播"],
+        "emojis": ["⚡", "🚀", "💨"]
     },
     {
-        "emoji": "📺┃",
-        "keywords": ["TV", "电视", "直播"]
+        "keywords": ["TV", "电视", "直播"],
+        "emojis": ["📺", "📡", "🛰️"]
     },
     {
-        "emoji": "🌐┃",
-        "keywords": ["海外", "国际"]
+        "keywords": ["海外", "国际", "global"],
+        "emojis": ["🌐", "🗺️", "✈️"]
     }
 ]
+
+DEFAULT_EMOJIS = ["📦", "📁", "🧩"]
+
+# ===================== 内部状态（防重复） =====================
+
+emoji_index = defaultdict(int)
 
 # ===================== 固定模板 =====================
 
@@ -46,57 +49,44 @@ BASE_CONFIG = {
 
 # ===================== 核心逻辑 =====================
 
+def pick_emoji(name: str) -> str:
+    """
+    根据名称关键字选择 Emoji，并在同分类中轮换，尽量避免重复
+    """
+    lname = name.lower()
+
+    for group in EMOJI_POOLS:
+        if any(k.lower() in lname for k in group["keywords"]):
+            idx = emoji_index[id(group)] % len(group["emojis"])
+            emoji_index[id(group)] += 1
+            return group["emojis"][idx]
+
+    # 默认兜底 Emoji
+    idx = emoji_index["default"] % len(DEFAULT_EMOJIS)
+    emoji_index["default"] += 1
+    return DEFAULT_EMOJIS[idx]
+
+
 def build_sites():
-    py_files = [f for f in os.listdir(PY_DIR) if f.endswith(".py")]
-
-    priority_files = []
-    normal_files = []
-
-    # 1️⃣ 按优先前缀拆分
-    for file in py_files:
-        name = file[:-3]
-        if any(name.startswith(p) for p in PRIORITY_PREFIXES):
-            priority_files.append(file)
-        else:
-            normal_files.append(file)
-
+    files = sorted(f for f in os.listdir(PY_DIR) if f.endswith(".py"))
     sites = []
 
-    # 2️⃣ 优先组先输出
-    for file in sorted(priority_files):
-        sites.append(create_site(file))
+    for file in files:
+        raw_name = file[:-3]
+        emoji = pick_emoji(raw_name)
 
-    # 3️⃣ 普通组后输出
-    for file in sorted(normal_files):
-        sites.append(create_site(file))
+        sites.append({
+            "key": raw_name,
+            "name": f"{emoji}┃{raw_name}",
+            "type": 3,
+            "api": f"./py/{file}",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        })
 
     return sites
-
-
-def decorate_name(raw_name: str) -> str:
-    """
-    根据关键字自动添加 Emoji 分组前缀
-    """
-    for group in EMOJI_GROUPS:
-        for kw in group["keywords"]:
-            if kw in raw_name:
-                return f"{group['emoji']}{raw_name}"
-    return raw_name
-
-
-def create_site(file: str) -> dict:
-    raw_name = file[:-3]
-
-    return {
-        "key": raw_name,
-        "name": decorate_name(raw_name),
-        "type": 3,
-        "api": f"./py/{file}",
-        "searchable": 1,
-        "quickSearch": 0,
-        "filterable": 0,
-        "changeable": 0
-    }
 
 
 # ===================== 主入口 =====================
