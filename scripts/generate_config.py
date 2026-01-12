@@ -3,7 +3,7 @@ import json
 
 PY_DIR = "py"
 OUTPUT = "config.json"
-PRIORITY_FILE = "剧透.py"
+PRIORITY_PREFIX = "剧透社"
 
 BASE_CONFIG = {
     "wallpaper": "https://imgs.catvod.com/",
