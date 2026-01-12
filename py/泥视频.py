@@ -1,304 +1,436 @@
 # -*- coding: utf-8 -*-
-# @Author  : 老王叔叔 for 泥視頻.CC with Multi-Source Support
-# @Time    : 2025/04/06
-
-import sys
-import requests
-from lxml import etree
-import json
+# 泥视频 - https://www.nivod.vip/
 import re
-from urllib.parse import urlencode
+import sys
+import json
+import time
+from urllib.parse import quote, unquote
+from pyquery import PyQuery as pq
 sys.path.append('..')
 from base.spider import Spider
 
 class Spider(Spider):
-    def __init__(self):
-        self.home_url = 'https://www.nivod.cc'
-        self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-            "Referer": "https://www.nivod.cc/",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "zh-CN,zh;q=0.9",
-            "Connection": "keep-alive",
-        }
-        self.placeholder_pic = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/placeholder.jpg'
-
     def init(self, extend=""):
         pass
 
     def getName(self):
-        return "泥視頻.CC"
-
-    def getDependence(self):
-        return []
+        return "泥视频"
 
     def isVideoFormat(self, url):
-        return url.endswith('.m3u8') or url.endswith('.mp4')
+        pass
 
     def manualVideoCheck(self):
-        return False
-
-    def homeContent(self, filter):
-        categories = "電影$movie#電視劇$tv#綜藝$show#動漫$anime"
-        class_list = [{'type_id': v.split('$')[1], 'type_name': v.split('$')[0]} for v in categories.split('#')]
-        filters = {
-            'movie': [
-                {'key': 'class', 'name': '剧情', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "冒险$mao-xian#剧情$ju-qing#动作$dong-zuo#同性$tong-xing#喜剧$xi-ju#奇幻$qi-huan#恐怖$kong-bu#悬疑$xuan-yi#惊悚$jing-song#战争$zhan-zheng#歌舞$ge-wu#灾难$zai-nan#爱情$ai-qing#犯罪$fan-zui#科幻$ke-huan".split('#')]},
-                {'key': 'area', 'name': '地区', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "大陆$cn#香港$hk#台湾$tw#欧美$west#泰国$th#新马$sg-my#其他$other".split('#')]},
-                {'key': 'year', 'name': '年份', 'value': [{'n': v, 'v': v} for v in ["2025", "2024", "2023", "2022", "2021", "2020", "2019-2010", "2009-2000", "90年代", "80年代", "更早"]]}
-            ],
-            'tv': [
-                {'key': 'class', 'name': '剧情', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "剧情$ju-qing#动作$dong-zuo#历史$li-shi#历险$mao-xian#古装$gu-zhuang#同性$tong-xing#喜剧$xi-ju#奇幻$qi-huan#家庭$jia-ting#悬疑$xuan-yi#惊悚$jing-song#战争$zhan-zheng#武侠$wu-xia#爱情$ai-qing#科幻$ke-huan#罪案$zui-an".split('#')]},
-                {'key': 'area', 'name': '地区', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "大陆$cn#香港$hk#台湾$tw#日本$jp#韩国$kr#欧美$west#泰国$th#新马$sg-my".split('#')]},
-                {'key': 'year', 'name': '年份', 'value': [{'n': v, 'v': v} for v in ["2025", "2024", "2023", "2022", "2021", "2020", "2019-2015", "2014-2010", "2009-2000", "90年代", "80年代", "更早"]]}
-            ],
-            'show': [
-                {'key': 'class', 'name': '剧情', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "搞笑$gao-xiao#音乐$yin-yue#真人秀$zhen-ren-xiu#脱口秀$tuo-kou-xiu".split('#')]},
-                {'key': 'area', 'name': '地区', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "大陆$cn#韩国$kr#欧美$west#其它$other".split('#')]},
-                {'key': 'year', 'name': '年份', 'value': [{'n': v, 'v': v} for v in ["2025", "2024", "2023", "2022", "2021", "2020", "2019-2015", "2014-2010", "2009-2000", "90年代", "80年代", "更早"]]}
-            ],
-            'anime': [
-                {'key': 'class', 'name': '剧情', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "冒险$mao-xian#动画电影$movie#推理$tui-li#校园$xiao-yuan#治愈$zhi-yu#泡面$pao-mian#热血$re-xue#科幻$ke-huan#魔幻$mo-huan".split('#')]},
-                {'key': 'area', 'name': '地区', 'value': [{'n': v.split('$')[0], 'v': v.split('$')[1]} for v in "大陆$cn#日本$jp#欧美$west".split('#')]},
-                {'key': 'year', 'name': '年份', 'value': [{'n': v, 'v': v} for v in ["2025", "2024", "2023", "2022", "2021", "2020", "2019-2015", "2014-2010", "2009-2000", "90年代", "80年代", "更早"]]}
-            ]
-        }
-        return {'class': class_list, 'filters': filters if filter else {}}
-
-    def homeVideoContent(self):
-        result = {'list': []}
-        try:
-            res = requests.get(self.home_url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//div[contains(@class, "qy-mod-link-wrap")]/a')
-            for i in data_list:
-                name_nodes = i.xpath('.//picture[@class="video-item-preview-img"]/img/@alt')
-                vod_name = name_nodes[0].strip() if name_nodes else None
-                if not vod_name:
-                    vod_name = i.xpath('./@title')
-                    vod_name = vod_name[0].strip() if vod_name else "未知"
-                vod_id = i.get('href', '')
-                pic_nodes = i.xpath('.//picture[@class="video-item-preview-img"]/img/@src')
-                vod_pic = pic_nodes[0] if pic_nodes else self.placeholder_pic
-                if vod_pic.startswith('/'):
-                    vod_pic = self.home_url + vod_pic
-                remark_nodes = i.xpath('.//span[contains(@class, "qy-mod-label")]/text()')
-                vod_remarks = remark_nodes[0].strip() if remark_nodes else ''
-                result['list'].append({
-                    'vod_id': vod_id,
-                    'vod_name': vod_name,
-                    'vod_pic': vod_pic,
-                    'vod_remarks': vod_remarks
-                })
-            result['list'] = result['list'][:10]
-        except Exception as e:
-            print(f"Error in homeVideoContent: {e}")
-        return result
-
-    def categoryContent(self, tid, pg, filter, ext):
-        result = {'list': []}
-        _year = ext.get('year', '')
-        _class = ext.get('class', '')
-        _area = ext.get('area', '')
-        params = {
-            'channel': tid,
-            'region': _area,
-            'class': _class,
-            'year': _year,
-            'page': pg
-        }
-        url = f"{self.home_url}/filter.html?{urlencode(params)}"
-        
-        # 如果頁碼超過 5，直接返回空結果
-        if int(pg) > 5:
-            result['page'] = int(pg)
-            result['pagecount'] = 5
-            result['limit'] = 0
-            result['total'] = 240
-            return result
-        
-        try:
-            res = requests.get(url, headers=self.headers)
-            res.encoding = 'utf-8'
-            print(f"categoryContent URL: {url}")
-            print(f"categoryContent Response Status: {res.status_code}")
-            print(f"categoryContent HTML length: {len(res.text)}")
-            
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//li[contains(@class, "qy-mod-li")]')
-            
-            for i in data_list:
-                vod_id = i.xpath('.//a/@href')[0] if i.xpath('.//a/@href') else ''
-                name_nodes = i.xpath('.//a/@title')
-                vod_name = name_nodes[0].strip() if name_nodes else "未知"
-                pic_nodes = i.xpath('.//div[@class="qy-mod-cover"]/@style')
-                vod_pic = None
-                if pic_nodes:
-                    style = pic_nodes[0]
-                    match = re.search(r'url\((.*?)\)', style)
-                    vod_pic = match.group(1).strip() if match else None
-                if not vod_pic:
-                    vod_pic = self.placeholder_pic
-                if vod_pic.startswith('/'):
-                    vod_pic = self.home_url + vod_pic
-                remark_nodes = i.xpath('.//span[@class="qy-mod-label"]/text()')
-                vod_remarks = remark_nodes[0].strip() if remark_nodes else ''
-                
-                result['list'].append({
-                    'vod_id': vod_id,
-                    'vod_name': vod_name,
-                    'vod_pic': vod_pic,
-                    'vod_remarks': vod_remarks
-                })
-            
-            # 假設每頁最多 48 個項目，網站分頁上限為 5 頁
-            current_items = len(data_list)
-            total_pages = 5  # 網站分頁上限為 5
-            if current_items < 48:  # 如果當前頁項目少於 48，假設是最後一頁
-                total_pages = int(pg)
-            total_items = (int(pg) - 1) * 48 + current_items if total_pages == int(pg) else total_pages * 48
-            
-            result['page'] = int(pg)
-            result['pagecount'] = total_pages
-            result['limit'] = current_items
-            result['total'] = total_items
-        except Exception as e:
-            print(f"Error in categoryContent: {e}")
-        
-        return result
-
-    def detailContent(self, array):
-        result = {'list': []}
-        ids = array[0]
-        detail_url = f"{self.home_url}{ids}"
-        try:
-            res = requests.get(detail_url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            vod_name = root.xpath('//div[@class="right-title"]/text()')[0].strip() if root.xpath('//div[@class="right-title"]') else "未知"
-            vod_year = root.xpath('//div[@id="postYear"]/text()')[0].strip() if root.xpath('//div[@id="postYear"]') else ""
-            vod_area = root.xpath('//div[@id="region"]/text()')[0].strip() if root.xpath('//div[@id="region"]') else ""
-            vod_content = root.xpath('//div[@id="show-desc"]/text()')[0].strip() if root.xpath('//div[@id="show-desc"]') else ""
-            vod_remarks = root.xpath('//div[@id="updateTxt"]/text()')[0].strip() if root.xpath('//div[@id="updateTxt"]') else ""
-            vod_actor = root.xpath('//div[@id="actors"]/text()')[0].strip() if root.xpath('//div[@id="actors"]') else ""
-            vod_director = root.xpath('//div[@id="director"]/text()')[0].strip() if root.xpath('//div[@id="director"]') else ""
-            vod_pic = root.xpath('//img[@class="left-img"]/@src')[0] if root.xpath('//img[@class="left-img"]') else self.placeholder_pic
-            if vod_pic.startswith('/'):
-                vod_pic = self.home_url + vod_pic
-            
-            episodes = root.xpath('//div[@id="list-jj"]/a')
-            if not episodes:
-                vod = {
-                    'vod_id': ids,
-                    'vod_name': vod_name,
-                    'vod_pic': vod_pic,
-                    'type_name': '',
-                    'vod_year': vod_year,
-                    'vod_area': vod_area,
-                    'vod_remarks': vod_remarks,
-                    'vod_actor': vod_actor,
-                    'vod_director': vod_director,
-                    'vod_content': vod_content,
-                    'vod_play_from': '泥視頻',
-                    'vod_play_url': '第1集$https://www.nivod.cc/vodplay/202552243/ep1'
-                }
-            else:
-                play_from = set()
-                play_urls = {}
-                for ep in episodes[::-1]:
-                    ep_name = ep.xpath('.//div[@class="item"]/text()')[0].strip() if ep.xpath('.//div[@class="item"]') else "未知"
-                    ep_url = self.home_url + ep.get('href', '')
-                    vod_id = ids.split('/')[2]
-                    ep_id = ep_url.split('/')[-1]
-                    xhr_url = f"{self.home_url}/xhr_playinfo/{vod_id}-{ep_id}"
-                    res = requests.get(xhr_url, headers=self.headers)
-                    res.encoding = 'utf-8'
-                    data = res.json()
-                    if 'pdatas' in data and data['pdatas']:
-                        for source in data['pdatas']:
-                            source_name = source['from']
-                            play_from.add(source_name)
-                            if source_name not in play_urls:
-                                play_urls[source_name] = []
-                            play_urls[source_name].append(f"{ep_name}${source['playurl']}")
-                
-                vod_play_from = '$$$'.join(play_from)
-                vod_play_url = '$$$'.join(['#'.join(play_urls[source]) for source in play_from])
-                
-                vod = {
-                    'vod_id': ids,
-                    'vod_name': vod_name,
-                    'vod_pic': vod_pic,
-                    'type_name': '',
-                    'vod_year': vod_year,
-                    'vod_area': vod_area,
-                    'vod_remarks': vod_remarks,
-                    'vod_actor': vod_actor,
-                    'vod_director': vod_director,
-                    'vod_content': vod_content,
-                    'vod_play_from': vod_play_from,
-                    'vod_play_url': vod_play_url
-                }
-            result['list'].append(vod)
-        except Exception as e:
-            print(f"Error in detailContent: {e}")
-            result['list'].append({
-                'vod_id': ids,
-                'vod_name': '未知',
-                'vod_pic': self.placeholder_pic,
-                'vod_play_from': '泥視頻',
-                'vod_play_url': ''
-            })
-        return result
-
-    def searchContent(self, key, quick, pg='1'):
-        result = {'list': []}
-        try:
-            search_url = f"{self.home_url}/search_x.html?keyword={key}&page={pg}"
-            res = requests.get(search_url, headers=self.headers)
-            res.encoding = 'utf-8'
-            root = etree.HTML(res.text)
-            data_list = root.xpath('//a[contains(@class, "qy-mod-link")]')
-            for item in data_list:
-                name_nodes = item.xpath('.//picture[@class="video-item-preview-img"]/img/@alt')
-                vod_name = name_nodes[0].strip() if name_nodes else None
-                if not vod_name:
-                    vod_name = item.xpath('./@title')
-                    vod_name = vod_name[0].strip() if vod_name else "未知"
-                vod_id = item.get('href', '')
-                pic_nodes = item.xpath('.//picture[@class="video-item-preview-img"]/img/@src')
-                vod_pic = pic_nodes[0] if pic_nodes else self.placeholder_pic
-                if vod_pic.startswith('/'):
-                    vod_pic = self.home_url + vod_pic
-                vod_remarks = ''
-                result['list'].append({
-                    'vod_id': vod_id,
-                    'vod_name': vod_name,
-                    'vod_pic': vod_pic,
-                    'vod_remarks': vod_remarks
-                })
-        except Exception as e:
-            print(f"Error in searchContent: {e}")
-        return result
-
-    def playerContent(self, flag, id, vipFlags):
-        result = {}
-        try:
-            play_url = id.split('$')[1] if '$' in id else id
-            result = {
-                'url': play_url,
-                'header': json.dumps(self.headers),
-                'parse': 0,
-                'playUrl': ''
-            }
-        except Exception as e:
-            print(f"Error in playerContent: {e}")
-            result = {'url': '', 'parse': 0}
-        return result
-
-    def localProxy(self, param):
-        return [200, "video/MP2T", {}, b""]
+        pass
 
     def destroy(self):
         pass
+
+    host = 'https://www.nivod.vip'
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+    }
+
+    def homeContent(self, filter):
+        """获取首页内容和分类"""
+        try:
+            response = self.fetch_with_encoding(self.host, headers=self.headers)
+            doc = self.getpq(response.text)
+            
+            result = {}
+            classes = []
+            
+            # 获取分类导航
+            nav_items = doc('.navbar a')
+            for item in nav_items.items():
+                text = item.text().strip()
+                href = item.attr('href')
+                if text and href and href != '/' and '/t/' in href:
+                    # 提取分类ID
+                    type_id = href.split('/t/')[-1].rstrip('/')
+                    if type_id.isdigit():
+                        classes.append({
+                            'type_name': text,
+                            'type_id': type_id
+                        })
+            
+            # 获取首页视频列表
+            videos = []
+            video_items = doc('.module-item')
+            for item in video_items.items():
+                try:
+                    title = item.attr('title') or ''
+                    href = item.attr('href') or ''
+                    
+                    if title and href:
+                        # 提取视频ID
+                        vod_id = href.split('/nivod/')[-1].rstrip('/')
+                        
+                        # 获取图片 - 优先获取data-original（真实图片），避免懒加载占位图
+                        img_elem = item.find('img')
+                        pic = ''
+                        if img_elem:
+                            # 优先获取data-original（真实图片URL），然后是data-src，最后是src
+                            pic = img_elem.attr('data-original') or img_elem.attr('data-src') or img_elem.attr('src') or ''
+                            if pic and not pic.startswith('http'):
+                                pic = self.host + pic if pic.startswith('/') else ''
+                        
+                        # 获取备注信息
+                        note_elem = item.find('.module-item-note')
+                        remarks = note_elem.text() if note_elem else ''
+                        
+                        videos.append({
+                            'vod_id': vod_id,
+                            'vod_name': title,
+                            'vod_pic': pic,
+                            'vod_year': '',
+                            'vod_remarks': remarks
+                        })
+                except Exception as e:
+                    self.log(f"解析视频项时出错: {e}")
+                    continue
+            
+            result['class'] = classes
+            result['list'] = videos
+            return result
+            
+        except Exception as e:
+            self.log(f"获取首页内容时出错: {e}")
+            return {'class': [], 'list': []}
+
+    def homeVideoContent(self):
+        """获取推荐视频"""
+        return {'list': []}
+
+    def categoryContent(self, tid, pg, filter, extend):
+        """获取分类内容"""
+        try:
+            # 构建分类URL
+            url = f"{self.host}/t/{tid}/"
+            if int(pg) > 1:
+                url = f"{self.host}/t/{tid}/page/{pg}/"
+            
+            response = self.fetch_with_encoding(url, headers=self.headers)
+            doc = self.getpq(response.text)
+            
+            # 获取视频列表
+            videos = []
+            video_items = doc('.module-item')
+            for item in video_items.items():
+                try:
+                    title = item.attr('title') or ''
+                    href = item.attr('href') or ''
+                    
+                    if title and href:
+                        # 提取视频ID
+                        vod_id = href.split('/nivod/')[-1].rstrip('/')
+                        
+                        # 获取图片 - 优先获取data-original（真实图片），避免懒加载占位图
+                        img_elem = item.find('img')
+                        pic = ''
+                        if img_elem:
+                            # 优先获取data-original（真实图片URL），然后是data-src，最后是src
+                            pic = img_elem.attr('data-original') or img_elem.attr('data-src') or img_elem.attr('src') or ''
+                            if pic and not pic.startswith('http'):
+                                pic = self.host + pic if pic.startswith('/') else ''
+                        
+                        # 获取备注信息
+                        note_elem = item.find('.module-item-note')
+                        remarks = note_elem.text() if note_elem else ''
+                        
+                        videos.append({
+                            'vod_id': vod_id,
+                            'vod_name': title,
+                            'vod_pic': pic,
+                            'vod_year': '',
+                            'vod_remarks': remarks
+                        })
+                except Exception as e:
+                    self.log(f"解析分类视频项时出错: {e}")
+                    continue
+            
+            result = {
+                'list': videos,
+                'page': pg,
+                'pagecount': 9999,  # 设置一个较大的值
+                'limit': 80,
+                'total': 999999
+            }
+            return result
+            
+        except Exception as e:
+            self.log(f"获取分类内容时出错: {e}")
+            return {'list': [], 'page': pg, 'pagecount': 1, 'limit': 80, 'total': 0}
+
+    def detailContent(self, ids):
+        """获取视频详情"""
+        try:
+            vod_id = ids[0]
+            url = f"{self.host}/nivod/{vod_id}/"
+            
+            response = self.fetch_with_encoding(url, headers=self.headers)
+            doc = self.getpq(response.text)
+            
+            # 获取标题
+            title_elem = doc('h1')
+            title = self.fix_encoding(title_elem.text()) if title_elem else ''
+
+            # 获取视频信息
+            info_elem = doc('.module-info')
+            content = self.fix_encoding(info_elem.text()) if info_elem else ''
+            
+            # 获取播放源和播放列表
+            play_from = []
+            play_url = []
+            
+            # 获取播放源标签
+            tab_items = doc('.module-tab-item')
+            play_lists = doc('.module-play-list')
+            
+            for i, tab in enumerate(tab_items.items()):
+                # 分别提取播放源名称和集数
+                span_elem = tab.find('span')
+                small_elem = tab.find('small')
+
+                source_name = ''
+                if span_elem:
+                    source_name = self.fix_encoding(span_elem.text().strip())
+                    # 如果有集数信息，添加到播放源名称后
+                    if small_elem:
+                        episode_count = self.fix_encoding(small_elem.text().strip())
+                        source_name = f"{source_name}{episode_count}"
+                else:
+                    # 如果没有span元素，使用整个文本
+                    source_name = self.fix_encoding(tab.text().strip())
+
+                if source_name:
+                    play_from.append(source_name)
+                    
+                    # 获取对应的播放列表
+                    episodes = []
+                    if i < len(play_lists):
+                        episode_items = play_lists.eq(i).find('a')
+                        for ep in episode_items.items():
+                            ep_title = self.fix_encoding(ep.text().strip())
+                            ep_href = ep.attr('href')
+                            if ep_title and ep_href:
+                                episodes.append(f"{ep_title}${ep_href}")
+                    
+                    play_url.append('#'.join(episodes))
+            
+            vod = {
+                'vod_id': vod_id,
+                'vod_name': title,
+                'vod_pic': '',
+                'vod_year': '',
+                'vod_remarks': '',
+                'vod_actor': '',
+                'vod_director': '',
+                'vod_content': content,
+                'vod_play_from': '$$$'.join(play_from),
+                'vod_play_url': '$$$'.join(play_url)
+            }
+            
+            return {'list': [vod]}
+            
+        except Exception as e:
+            self.log(f"获取视频详情时出错: {e}")
+            return {'list': []}
+
+    def searchContent(self, key, quick, pg="1"):
+        """搜索内容"""
+        try:
+            # 使用正确的搜索URL格式
+            search_url = f"{self.host}/s/-------------/"
+            params = {'wd': key}
+
+            response = self.fetch_with_encoding(search_url, params=params, headers=self.headers)
+            doc = self.getpq(response.text)
+            
+            # 获取搜索结果
+            videos = []
+            video_items = doc('.module-item')
+            for item in video_items.items():
+                try:
+                    # 搜索页面的结构不同，需要从内部链接获取信息
+                    # 查找详情链接（通常是第一个或标题链接）
+                    detail_links = item.find('a[href*="/nivod/"]')
+                    if not detail_links:
+                        continue
+
+                    # 获取第一个详情链接
+                    detail_link = detail_links.eq(0)
+                    href = detail_link.attr('href')
+
+                    if not href:
+                        continue
+
+                    # 提取视频ID
+                    vod_id = href.split('/nivod/')[-1].rstrip('/')
+
+                    # 获取标题 - 尝试多种方式
+                    title = ''
+                    # 方法1: 从链接的strong标签获取
+                    strong_elem = detail_link.find('strong')
+                    if strong_elem:
+                        title = self.fix_encoding(strong_elem.text().strip())
+
+                    # 方法2: 从图片的alt属性获取
+                    if not title:
+                        img_elem = item.find('img')
+                        if img_elem:
+                            title = self.fix_encoding(img_elem.attr('alt') or '')
+
+                    # 方法3: 从链接文本获取
+                    if not title:
+                        title = self.fix_encoding(detail_link.text().strip())
+
+                    if not title:
+                        continue
+
+                    # 获取图片 - 优先获取data-original（真实图片），避免懒加载占位图
+                    img_elem = item.find('img')
+                    pic = ''
+                    if img_elem:
+                        # 优先获取data-original（真实图片URL），然后是data-src，最后是src
+                        pic = img_elem.attr('data-original') or img_elem.attr('data-src') or img_elem.attr('src') or ''
+                        if pic and not pic.startswith('http'):
+                            pic = self.host + pic if pic.startswith('/') else ''
+
+                    # 获取备注信息
+                    note_elem = item.find('.module-item-note')
+                    remarks = self.fix_encoding(note_elem.text()) if note_elem else ''
+
+                    videos.append({
+                        'vod_id': vod_id,
+                        'vod_name': title,
+                        'vod_pic': pic,
+                        'vod_year': '',
+                        'vod_remarks': remarks
+                    })
+                except Exception as e:
+                    self.log(f"解析搜索结果时出错: {e}")
+                    continue
+            
+            return {'list': videos, 'page': pg}
+            
+        except Exception as e:
+            self.log(f"搜索时出错: {e}")
+            return {'list': [], 'page': pg}
+
+    def playerContent(self, flag, id, vipFlags):
+        """获取播放地址"""
+        try:
+            # 播放页面URL
+            play_url = f"{self.host}{id}"
+            
+            response = self.fetch_with_encoding(play_url, headers=self.headers)
+            doc = self.getpq(response.text)
+            
+            # 查找播放器配置
+            scripts = doc('script')
+            for script in scripts.items():
+                script_text = script.text()
+                if 'player' in script_text and ('url' in script_text):
+                    # 尝试提取播放地址
+                    url_match = re.search(r'"url"\s*:\s*"([^"]+)"', script_text)
+                    if url_match:
+                        video_url = url_match.group(1)
+                        return {
+                            'parse': 0,
+                            'url': video_url,
+                            'header': self.headers
+                        }
+            
+            # 如果没有找到直接播放地址，返回播放页面让系统解析
+            return {
+                'parse': 1,
+                'url': play_url,
+                'header': self.headers
+            }
+            
+        except Exception as e:
+            self.log(f"获取播放地址时出错: {e}")
+            return {
+                'parse': 1,
+                'url': f"{self.host}{id}",
+                'header': self.headers
+            }
+
+    def localProxy(self, param):
+        pass
+
+    def fix_encoding(self, text):
+        """修复UTF-8编码问题"""
+        if not text:
+            return text
+
+        try:
+            # 检查是否包含乱码特征（常见的UTF-8乱码模式）
+            garbled_patterns = [
+                '\u00e4\u00b8', '\u00e5', '\u00e6', '\u00e7', '\u00e8', '\u00e9',  # 常见乱码前缀
+                '\u00c3\u00a4', '\u00c3\u00a5', '\u00c3\u00a6',  # UTF-8被误解为Latin1
+                '\u00ef\u00bc', '\u00e2\u0080'  # 标点符号乱码
+            ]
+
+            has_garbled = any(pattern in text for pattern in garbled_patterns)
+
+            if has_garbled:
+                self.log("检测到编码问题，尝试修复...")
+
+                # 方法1: 尝试Latin1->UTF-8转换
+                try:
+                    fixed = text.encode('latin1').decode('utf-8')
+                    # 检查是否修复成功（包含中文字符）
+                    if re.search(r'[\u4e00-\u9fff]', fixed):
+                        self.log("使用Latin1->UTF-8修复成功")
+                        return fixed
+                except Exception as e:
+                    self.log(f"Latin1->UTF-8修复失败: {e}")
+
+                # 方法2: 尝试其他编码转换
+                encodings = ['cp1252', 'iso-8859-1']
+                for encoding in encodings:
+                    try:
+                        fixed = text.encode(encoding).decode('utf-8')
+                        if re.search(r'[\u4e00-\u9fff]', fixed):
+                            self.log(f"使用{encoding}->UTF-8修复成功")
+                            return fixed
+                    except:
+                        continue
+
+                self.log("编码修复失败，返回原文本")
+
+            return text
+
+        except Exception as e:
+            self.log(f"编码修复异常: {e}")
+            return text
+
+    def fetch_with_encoding(self, url, **kwargs):
+        """带编码处理的请求方法"""
+        try:
+            response = self.fetch(url, **kwargs)
+            # 确保使用UTF-8编码
+            response.encoding = 'utf-8'
+            return response
+        except Exception as e:
+            self.log(f"请求失败: {e}")
+            raise
+
+    def getpq(self, text):
+        """安全的pyquery解析"""
+        try:
+            return pq(text)
+        except Exception as e:
+            self.log(f"pyquery解析出错: {e}")
+            try:
+                return pq(text.encode('utf-8'))
+            except:
+                return pq('')
