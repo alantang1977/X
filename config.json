@@ -2362,14 +2362,6 @@
                 "8.8.4.4",
                 "8.8.8.8"
             ]
-        },
-        {
-            "name": "Cloudflare",
-            "url": "https://cloudflare-dns.com/dns-query",
-            "ips": [
-                "1.1.1.1",
-                "1.0.0.1"
-            ]
         }
     ]
 }
