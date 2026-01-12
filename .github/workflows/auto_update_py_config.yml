@@ -1,0 +1,195 @@
+name: Auto Update Python Config
+
+on:
+  # 定时检查：每小时检查一次
+  schedule:
+    - cron: '0 * * * *'
+  
+  # 手动触发
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: '强制重新生成配置'
+        required: false
+        default: false
+        type: boolean
+  
+  # 推送触发：当py目录有变化时
+  push:
+    paths:
+      - 'py/**'
+      - 'update_py_config.py'
+      - '.github/workflows/auto_update_py_config.yml'
+
+jobs:
+  update-config:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    # 1. 检出代码（使用完整历史）
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    # 2. 设置Python环境
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    # 3. 检查文件变化并更新配置
+    - name: Check and Update Config
+      id: update-config
+      run: |
+        echo "🚀 开始智能配置更新..."
+        echo "工作目录: $(pwd)"
+        
+        # 显示当前py目录状态
+        if [ -d "py" ]; then
+          echo "📁 py目录内容:"
+          ls -la py/ || echo "py目录为空"
+        else
+          echo "📁 创建py目录..."
+          mkdir -p py
+        fi
+        
+        # 检查状态文件
+        if [ -f "py_state.json" ]; then
+          echo "📊 当前状态文件:"
+          python3 -c "import json; data=json.load(open('py_state.json')); print(f'已记录 {len(data)} 个文件')"
+        fi
+        
+        # 运行更新脚本
+        echo "🔄 运行更新脚本..."
+        
+        FORCE_FLAG=""
+        if [ "${{ github.event.inputs.force_update }}" = "true" ]; then
+          FORCE_FLAG="--force"
+          echo "🔧 强制重新生成模式"
+        fi
+        
+        python update_py_config.py $FORCE_FLAG
+        
+        # 检查是否生成了新配置
+        if [ -f "configs/plugins.json" ]; then
+          echo "✅ 配置文件已生成"
+          echo "📄 配置文件预览:"
+          head -20 configs/plugins.json
+          
+          # 验证JSON格式
+          if python3 -m json.tool configs/plugins.json > /dev/null 2>&1; then
+            echo "✅ JSON格式正确"
+          else
+            echo "❌ JSON格式错误"
+            exit 1
+          fi
+        else
+          echo "ℹ️  未生成新配置文件（可能没有变化）"
+        fi
+    
+    # 4. 配置Git
+    - name: Configure Git
+      if: steps.update-config.outcome == 'success'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+    
+    # 5. 检查是否有文件需要提交
+    - name: Check for changes to commit
+      id: check-changes
+      if: steps.update-config.outcome == 'success'
+      run: |
+        echo "🔍 检查文件变更..."
+        
+        # 添加所有可能变更的文件
+        git add configs/ plugins.json py_state.json update_py_config.py
+        
+        # 检查是否有未提交的变更
+        if ! git diff --cached --quiet; then
+          echo "📝 检测到变更，准备提交"
+          
+          # 显示变更摘要
+          echo "变更摘要:"
+          git diff --cached --stat
+          
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "✅ 没有检测到变更"
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
+    
+    # 6. 提交变更
+    - name: Commit changes
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        echo "📝 提交变更..."
+        
+        COMMIT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
+        COMMIT_MSG="🤖 自动更新: Python配置 [$COMMIT_DATE]"
+        
+        git commit -m "$COMMIT_MSG"
+        
+        # 显示提交历史
+        echo "📜 最近提交:"
+        git log --oneline -3
+    
+    # 7. 推送变更（使用安全推送）
+    - name: Push changes
+      if: steps.check-changes.outputs.has_changes == 'true'
+      run: |
+        echo "🚀 推送变更..."
+        
+        # 先拉取最新代码，避免冲突
+        echo "📥 拉取最新代码..."
+        git pull origin ${{ github.ref_name }} --rebase --autostash || echo "拉取失败，继续推送"
+        
+        # 安全推送
+        if git push origin HEAD:${{ github.ref_name }} --force-with-lease; then
+          echo "✅ 推送成功"
+        else
+          echo "⚠️ 推送失败，尝试标准推送..."
+          git push origin HEAD:${{ github.ref_name }}
+        fi
+    
+    # 8. 生成报告
+    - name: Generate report
+      if: always()
+      run: |
+        echo "=" * 50
+        echo "工作流执行报告"
+        echo "=" * 50
+        
+        echo "📅 运行时间: $(date)"
+        echo "🔄 触发方式: ${{ github.event_name }}"
+        
+        if [ -f "configs/plugins.json" ]; then
+          echo "📊 配置状态:"
+          python3 << 'EOF'
+import json, os
+try:
+    with open('configs/plugins.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    print(f"  配置项数量: {len(data)}")
+    
+    # 检查格式
+    if isinstance(data, list) and data:
+        first_item = data[0]
+        if isinstance(first_item, dict):
+            print(f"  第一个配置: {first_item.get('name', '未命名')}")
+except Exception as e:
+    print(f"  读取配置文件失败: {e}")
+EOF
+        fi
+        
+        if [ -f "py_state.json" ]; then
+          echo "📁 文件监控状态:"
+          python3 -c "import json; data=json.load(open('py_state.json')); print(f'  监控文件数: {len(data)}')"
+        fi
+        
+        echo "=" * 50
