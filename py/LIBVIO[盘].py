@@ -35,21 +35,13 @@ except ImportError:
 class Spider(Spider):
     def __init__(self):
         self.cache = TTLCache(maxsize=100, ttl=600)
-        self.cloud_drive_map = {
-            'kuake': '夸克网盘',
-            'uc': 'UC网盘',
-            'xunlei1': '百度网盘'
-        }
-        
     def getName(self):
         return "Libvio"
-        
     def init(self, extend=""):
         print("============{0}============".format(extend))
         if not hasattr(self, 'cache'):
             self.cache = TTLCache(maxsize=100, ttl=600)
         pass
-        
     def _fetch_with_cache(self, url, headers=None):
         cache_key = f"{url}_{hash(str(headers))}"
         if cache_key in self.cache:
@@ -62,7 +54,6 @@ class Spider(Spider):
         if response:
             self.cache[cache_key] = response
         return response
-        
     def _parse_html_fast(self, html_text):
         if not html_text:
             return None
@@ -72,7 +63,6 @@ class Spider(Spider):
             except:
                 pass
         return self.html(self.cleanText(html_text))
-        
     def homeContent(self, filter):
         result = {}
         cateManual = {"电影": "1", "电视剧": "2", "动漫": "4", "日韩剧": "15", "欧美剧": "16"}
@@ -80,8 +70,9 @@ class Spider(Spider):
         for k in cateManual:
             classes.append({'type_name': k, 'type_id': cateManual[k]})
         result['class'] = classes
+        if (filter):
+            result['filters'] = self._generate_filters()
         return result
-        
     def homeVideoContent(self):
         rsp = self._fetch_with_cache("https://www.libvio.site")
         if not rsp:
@@ -126,7 +117,6 @@ class Spider(Spider):
             except Exception as e: print(f"Homepage parse failed: {e}")
         result = {'list': videos}
         return result
-        
     def categoryContent(self, tid, pg, filter, extend):
         result = {}
         url = 'https://www.libvio.site/type/{0}-{1}.html'.format(tid, pg)
@@ -178,7 +168,6 @@ class Spider(Spider):
         result['limit'] = 90
         result['total'] = 999999
         return result
-        
     def detailContent(self, array):
         tid = array[0]
         url = 'https://www.libvio.site/detail/{0}.html'.format(tid)
@@ -219,6 +208,7 @@ class Spider(Spider):
         playFrom = []
         playList = []
         
+        # 改进的播放线路提取逻辑
         vodlist_heads = doc('.stui-vodlist__head')
         for i in range(vodlist_heads.length):
             head = vodlist_heads.eq(i)
@@ -227,12 +217,13 @@ class Spider(Spider):
                 continue
                 
             header_text = h3_elem.text().strip()
-            if not any(keyword in header_text for keyword in ['播放', '下载', 'BD5'] + list(self.cloud_drive_map.values())):
+            if not any(keyword in header_text for keyword in ['播放', '下载', 'BD5', 'UC', '夸克']):
                 continue
                 
             playFrom.append(header_text)
             vodItems = []
             
+            # 提取当前播放线路下的所有播放链接
             play_links = head.find('a[href*="/play/"]')
             for j in range(play_links.length):
                 try:
@@ -272,10 +263,143 @@ class Spider(Spider):
                 jArray.append({"vod_id": j.get('id', ''), "vod_name": j.get('name', ''), "vod_pic": j.get('pic', ''), "vod_remarks": ""})
         result = {'list': jArray}
         return result
+    def _generate_filters(self):
         
+        
+        years = [{"n": "全部", "v": ""}]
+        for year in range(2025, 1999, -1):
+            years.append({"n": str(year), "v": str(year)})
+        
+        
+        movie_filters = [
+            {
+                "key": "class", "name": "剧情",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "爱情", "v": "爱情"}, {"n": "恐怖", "v": "恐怖"},
+                    {"n": "动作", "v": "动作"}, {"n": "科幻", "v": "科幻"}, {"n": "剧情", "v": "剧情"},
+                    {"n": "战争", "v": "战争"}, {"n": "警匪", "v": "警匪"}, {"n": "犯罪", "v": "犯罪"},
+                    {"n": "动画", "v": "动画"}, {"n": "奇幻", "v": "奇幻"}, {"n": "武侠", "v": "武侠"},
+                    {"n": "冒险", "v": "冒险"}, {"n": "枪战", "v": "枪战"}, {"n": "悬疑", "v": "悬疑"},
+                    {"n": "惊悚", "v": "惊悚"}, {"n": "经典", "v": "经典"}, {"n": "青春", "v": "青春"},
+                    {"n": "文艺", "v": "文艺"}, {"n": "微电影", "v": "微电影"}, {"n": "古装", "v": "古装"},
+                    {"n": "历史", "v": "历史"}, {"n": "运动", "v": "运动"}, {"n": "农村", "v": "农村"},
+                    {"n": "儿童", "v": "儿童"}, {"n": "网络电影", "v": "网络电影"}
+                ]
+            },
+            {
+                "key": "area", "name": "地区",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "大陆", "v": "中国大陆"}, {"n": "香港", "v": "中国香港"},
+                    {"n": "台湾", "v": "中国台湾"}, {"n": "美国", "v": "美国"}, {"n": "法国", "v": "法国"},
+                    {"n": "英国", "v": "英国"}, {"n": "日本", "v": "日本"}, {"n": "韩国", "v": "韩国"},
+                    {"n": "德国", "v": "德国"}, {"n": "泰国", "v": "泰国"}, {"n": "印度", "v": "印度"},
+                    {"n": "意大利", "v": "意大利"}, {"n": "西班牙", "v": "西班牙"},
+                    {"n": "加拿大", "v": "加拿大"}, {"n": "其他", "v": "其他"}
+                ]
+            },
+            {"key": "year", "name": "年份", "value": years}
+        ]
+        
+        
+        tv_filters = [
+            {
+                "key": "class", "name": "剧情",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "战争", "v": "战争"}, {"n": "青春偶像", "v": "青春偶像"},
+                    {"n": "喜剧", "v": "喜剧"}, {"n": "家庭", "v": "家庭"}, {"n": "犯罪", "v": "犯罪"},
+                    {"n": "动作", "v": "动作"}, {"n": "奇幻", "v": "奇幻"}, {"n": "剧情", "v": "剧情"},
+                    {"n": "历史", "v": "历史"}, {"n": "经典", "v": "经典"}, {"n": "乡村", "v": "乡村"},
+                    {"n": "情景", "v": "情景"}, {"n": "商战", "v": "商战"}, {"n": "网剧", "v": "网剧"},
+                    {"n": "其他", "v": "其他"}
+                ]
+            },
+            {
+                "key": "area", "name": "地区",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "大陆", "v": "中国大陆"}, {"n": "台湾", "v": "中国台湾"},
+                    {"n": "香港", "v": "中国香港"}, {"n": "韩国", "v": "韩国"}, {"n": "日本", "v": "日本"},
+                    {"n": "美国", "v": "美国"}, {"n": "泰国", "v": "泰国"}, {"n": "英国", "v": "英国"},
+                    {"n": "新加坡", "v": "新加坡"}, {"n": "其他", "v": "其他"}
+                ]
+            },
+            {"key": "year", "name": "年份", "value": years}
+        ]
+        
+        
+        anime_filters = [
+            {
+                "key": "class", "name": "剧情",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "科幻", "v": "科幻"}, {"n": "热血", "v": "热血"},
+                    {"n": "推理", "v": "推理"}, {"n": "搞笑", "v": "搞笑"}, {"n": "冒险", "v": "冒险"},
+                    {"n": "萝莉", "v": "萝莉"}, {"n": "校园", "v": "校园"}, {"n": "动作", "v": "动作"},
+                    {"n": "机战", "v": "机战"}, {"n": "运动", "v": "运动"}, {"n": "战争", "v": "战争"},
+                    {"n": "少年", "v": "少年"}, {"n": "少女", "v": "少女"}, {"n": "社会", "v": "社会"},
+                    {"n": "原创", "v": "原创"}, {"n": "亲子", "v": "亲子"}, {"n": "益智", "v": "益智"},
+                    {"n": "励志", "v": "励志"}, {"n": "其他", "v": "其他"}
+                ]
+            },
+            {
+                "key": "area", "name": "地区",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "中国", "v": "中国"}, {"n": "日本", "v": "日本"},
+                    {"n": "欧美", "v": "欧美"}, {"n": "其他", "v": "其他"}
+                ]
+            },
+            {"key": "year", "name": "年份", "value": years}
+        ]
+        
+        
+        asian_filters = [
+            {
+                "key": "class", "name": "剧情",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "剧情", "v": "剧情"}, {"n": "喜剧", "v": "喜剧"},
+                    {"n": "爱情", "v": "爱情"}, {"n": "动作", "v": "动作"}, {"n": "悬疑", "v": "悬疑"},
+                    {"n": "惊悚", "v": "惊悚"}, {"n": "恐怖", "v": "恐怖"}, {"n": "犯罪", "v": "犯罪"}
+                ]
+            },
+            {
+                "key": "area", "name": "地区",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "韩国", "v": "韩国"}, {"n": "日本", "v": "日本"},
+                    {"n": "泰国", "v": "泰国"}
+                ]
+            },
+            {"key": "year", "name": "年份", "value": years[:25]}
+        ]
+        
+        
+        western_filters = [
+            {
+                "key": "class", "name": "剧情",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "剧情", "v": "剧情"}, {"n": "喜剧", "v": "喜剧"},
+                    {"n": "爱情", "v": "爱情"}, {"n": "动作", "v": "动作"}, {"n": "科幻", "v": "科幻"},
+                    {"n": "悬疑", "v": "悬疑"}, {"n": "惊悚", "v": "惊悚"}, {"n": "恐怖", "v": "恐怖"},
+                    {"n": "犯罪", "v": "犯罪"}
+                ]
+            },
+            {
+                "key": "area", "name": "地区",
+                "value": [
+                    {"n": "全部", "v": ""}, {"n": "美国", "v": "美国"}, {"n": "英国", "v": "英国"},
+                    {"n": "加拿大", "v": "加拿大"}, {"n": "其他", "v": "其他"}
+                ]
+            },
+            {"key": "year", "name": "年份", "value": years[:25]}
+        ]
+        
+        return {
+            "1": movie_filters,    # 电影
+            "2": tv_filters,       # 电视剧
+            "4": anime_filters,    # 动漫
+            "15": asian_filters,   # 日韩剧
+            "16": western_filters  # 欧美剧
+        }
     header = {"Referer": "https://www.libvio.site", "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"}
-    
     def playerContent(self, flag, id, vipFlags):
+        # 如果已经是push链接，直接返回
         if id.startswith('push://'):
             return {"parse": 0, "playUrl": "", "url": id, "header": ""}
             
@@ -293,21 +417,31 @@ class Spider(Spider):
     def _handle_cloud_drive(self, url, rsp, id):
         try:
             page_text = rsp.text
+            
+            # 首先尝试从JavaScript变量中提取网盘链接
             script_pattern = r'var player_[^=]*=\s*({[^}]+})'
             matches = re.findall(script_pattern, page_text)
+            
             for match in matches:
                 try:
                     player_data = ujson.loads(match)
                     from_value = player_data.get('from', '')
                     url_value = player_data.get('url', '')
-                    if from_value in self.cloud_drive_map and url_value:
+                    
+                    if from_value == 'kuake' and url_value:
+                        # 夸克网盘
                         drive_url = url_value.replace('\\/', '/')
-                        print(f"检测到{self.cloud_drive_map[from_value]}链接: {drive_url}")
+                        return {"parse": 0, "playUrl": "", "url": f"push://{drive_url}", "header": ""}
+                    elif from_value == 'uc' and url_value:
+                        # UC网盘
+                        drive_url = url_value.replace('\\/', '/')
                         return {"parse": 0, "playUrl": "", "url": f"push://{drive_url}", "header": ""}
                 except:
                     continue
         except Exception as e:
             print(f"Cloud drive parse error: {e}")
+        
+        # 如果所有网盘解析都失败，尝试BD5播放源
         return self._handle_bd5_player(url, rsp, id)
     
     def _handle_bd5_player(self, url, rsp, id):
@@ -347,14 +481,14 @@ class Spider(Spider):
                 except Exception as e: print(f"JavaScript播放器解析失败: {e}")
         except Exception as e: print(f"BD5播放源解析错误: {e}")
         return {"parse": 1, "playUrl": "", "url": url, "header": ujson.dumps(self.header)}
-        
     def isVideoFormat(self, url):
+        
         return False
-        
     def manualVideoCheck(self):
-        pass
         
+        pass
     def localProxy(self, param):
+        
         action = b''
         try:
             header_dict = json.loads(param.get('header', '{}')) if param.get('header') else {}
