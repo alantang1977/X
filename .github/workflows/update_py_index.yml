@@ -1,0 +1,73 @@
+name: Update Python Files Index
+
+on:
+  # 1. 定时触发：每天UTC时间0点（北京时间8点）运行一次[citation:3]
+  schedule:
+    - cron: '0 0 * * *'
+  # 2. 手动触发：在GitHub网页点击运行[citation:3]
+  workflow_dispatch:
+    inputs:
+      input_folder:
+        description: 'py'
+        required: true
+        default: './py'
+      output_file:
+        description: 'JSON配置输出路径'
+        required: true
+        default: './configs/plugins.json'
+  # 3. 推送触发：当py目录或脚本有变更时运行
+  push:
+    paths:
+      - 'py/**'
+      - 'scripts/**'
+      - '.github/workflows/update_py_index.yml'
+
+jobs:
+  update-index:
+    runs-on: windows-latest  # 使用Windows环境以保持路径一致性[citation:1]
+    
+    steps:
+    # 1. 检出仓库代码
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    # 2. 设置Python环境 (GitHub运行器已预装Python[citation:1])
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # 使用预装的最新稳定版本[citation:1]
+    
+    # 3. 运行索引生成脚本
+    - name: Generate Python Files Index
+      env:
+        # 手动触发时使用输入参数，否则使用默认值
+        INPUT_FOLDER: ${{ github.event_name == 'workflow_dispatch' && inputs.input_folder || './py' }}
+        OUTPUT_FILE: ${{ github.event_name == 'workflow_dispatch' && inputs.output_file || './configs/plugins.json' }}
+      run: |
+        python scripts/generate_config.py
+    
+    # 4. 检查是否有文件变更，若有则提交
+    - name: Check for changes and commit
+      id: git-check
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add configs/  # 添加configs目录下的变更
+        # 检查是否有需要提交的变更
+        if [ -n "$(git status --porcelain configs/)" ]; then
+          git commit -m "🤖 Auto-update: 更新Python文件索引 [$(date +'%Y-%m-%d %H:%M')]"
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "No changes detected."
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+    
+    # 5. 推送变更回仓库
+    - name: Push changes
+      if: steps.git-check.outputs.changes == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref_name }}
