@@ -3,6 +3,7 @@ import json
 
 PY_DIR = "py"
 OUTPUT = "config.json"
+PRIORITY_FILE = "剧透.py"
 
 BASE_CONFIG = {
     "wallpaper": "https://imgs.catvod.com/",
@@ -42,41 +43,42 @@ BASE_CONFIG = {
             "name": "Google",
             "url": "https://dns.google/dns-query",
             "ips": ["8.8.4.4", "8.8.8.8"]
-        },
-        {
-            "name": "Cloudflare",
-            "url": "https://cloudflare-dns.com/dns-query",
-            "ips": ["1.1.1.1", "1.0.0.1"]
         }
     ]
 }
 
+
 def build_sites():
+    files = [
+        f for f in os.listdir(PY_DIR)
+        if f.endswith(".py")
+    ]
+
     sites = []
-    for file in sorted(os.listdir(PY_DIR)):
-        if not file.endswith(".py"):
-            continue
 
-        name = file[:-3]
-        site = {
-            "key": name,
-            "name": name,
-            "type": 3,
-            "api": f"./py/{file}",
-            "searchable": 1,
-            "quickSearch": 0,
-            "filterable": 0,
-            "changeable": 0
-        }
+    # 1️⃣ 剧透.py 永远第一
+    if PRIORITY_FILE in files:
+        files.remove(PRIORITY_FILE)
+        sites.append(create_site(PRIORITY_FILE))
 
-        # 可按需定制特殊规则
-        if name == "界影视":
-            site["style"] = {"type": "rect", "ratio": 0.75}
-            site["changeable"] = 1
-
-        sites.append(site)
+    # 2️⃣ 其余文件按排序追加
+    for file in sorted(files):
+        sites.append(create_site(file))
 
     return sites
+
+
+def create_site(file):
+    name = file[:-3]
+
+    site = {"key": name,"name": name,"type": 3,"api": f"./py/{file}","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0}
+
+    # 示例：单独定制
+    if name == "界影视":
+        site["style"] = {"type": "rect", "ratio": 0.75}
+        site["changeable"] = 1
+
+    return site
 
 
 if __name__ == "__main__":
