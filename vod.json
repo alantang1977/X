@@ -105,7 +105,7 @@
     },
     {
       "key": "本地txt",
-      "name": "本地txt",
+      "name": "wv | 本地txt",
       "api": "csp_FileSpider",
       "type": "3",
       "ext": "./file/黄色仓库.txt",
@@ -115,7 +115,7 @@
     },
 	  {
       "key": "本地m3u",
-      "name": "本地m3u",
+      "name": "wv | 本地m3u",
       "api": "csp_FileSpider",
       "type": "3",
       "ext": "./file/麻豆图标版.m3u",
@@ -418,3 +418,4 @@
   ]
 
 }
+
