@@ -60,8 +60,8 @@ announcements = [
         "entries": [
             {
                 "name": None,
-                "url": "https://codeberg.org/alantang/photo/raw/branch/main/Robot.mp4",
-                "logo":"https://codeberg.org/alantang/photo/raw/branch/main/SuperMAN.png"
+                "url": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/Robot.mp4",
+                "logo": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/Chao.png"
             }
         ]
     }
