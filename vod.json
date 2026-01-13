@@ -143,7 +143,8 @@
 {"name": "🧊┃全球揾定「直播」","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/swhtv/1/refs/heads/main/swtvlive","playerType":1},
 {"name": "🏊‍♀️┃锋哥港台「直播」","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆频道无18内容","playerType":1},
 {"name": "🌶️┃锋哥iptvpro「直播」","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/iptvpro","playerType":1},
-
+{"name": "🐬┃斯瑪特「直播」","type": 0,"ua": "okhttp/5.3.2","url": "http://96.44.160.246:9999/smt.php"},
+	
 {"name": "📱┃揾定咪咕「直播」","type": 0,"url": "https://l.gmbbk.com/upload/39183918.txt","playerType":1},
 {"name": "🍺┃冰茶官方「TG直播」","type": 0,"playerType": 2,"url": "https://bc.188766.xyz/?url=https://live.iill.top&mima=bingcha1130","ua": "bingcha/1.1 (mianfeifenxiang) "},
 {"name": "🪓┃jtv收集「网络直播」","type": 0,"url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt","playerType":1},
@@ -415,4 +416,5 @@
       ]
     }
   ]
+
 }
