@@ -1,33 +1,40 @@
 /**
- * 低端影视(ddys.run)爬虫
+ * 金牌影视 爬虫
  * 作者：deepseek
  * 版本：1.0
  * 最后更新：2025-12-17
- * 发布页：https://www.ddys.diy/
- *
- * @config
-//  * debug: true
- // * showWebView: true
- * percent: 80,60
- * returnType: dom
- * timeout: 30
- * keywords: 系统安全验证|系统提示......|人机验证
- * blockImages: true
- * blockList: *.[ico|png|jpeg|jpg|gif|webp]*|*.css|*.js
- *
+ * 发布页 https://www.jpyy.com/
  */
 
-
-
-
-const baseUrl = 'https://www.ddys.run';
-const headers = { 'Referer': baseUrl };
+const baseUrl = 'https://www.x8kb9k8.com/';
 
 /**
- * 初始化
+ * 初始化配置
  */
 async function init(cfg) {
-    return;
+    return {
+        webview: {
+            debug: true,
+            showWebView: true,
+            widthPercent: 80,
+            heightPercent: 60,
+            keyword: '',
+            returnType: 'dom',
+            timeout: 30,
+            blockImages: true,
+            enableJavaScript: true,
+            header: { 'Referer': baseUrl },
+            blockList: [
+                "*.ico*",
+                "*.png*",
+                "*.jpg*",
+                "*.jpeg*",
+                "*.gif*",
+                "*.webp*",
+                "*.css*"
+            ]
+        }
+    };
 }
 
 /**
@@ -60,8 +67,8 @@ async function homeContent(filter) {
             ],
             "4": [
                 { key: "type",  name: "按类型",  value: [ {n:"全部",v:""}, {n:"日韩动漫",v:"rihandongman"}, {n:"国产动漫",v:"guochandongman"}, {n:"欧美动漫",v:"oumeidongman"}, {n:"港台动漫",v:"gangtaidongman"}, {n:"其他动漫",v:"qitadongman"} ] },
-                // { key: "class", name: "按剧情",  value: [ {n:"全部",v:""}, {n:"情感",v:"情感"}, {n:"科幻",v:"科幻"}, {n:"热血",v:"热血"}, {n:"推理",v:"推理"}, {n:"搞笑",v:"搞笑"}, {n:"冒险",v:"冒险"}, {n:"萝莉",v:"萝莉"}, {n:"校园",v:"校园"}, {n:"动作",v:"动作"}, {n:"机战",v:"机战"}, {n:"运动",v:"运动"}, {n:"战争",v:"战争"}, {n:"少年",v:"少年"}, {n:"少女",v:"少女"}, {n:"社会",v:"社会"}, {n:"原创",v:"原创"}, {n:"亲子",v:"亲子"}, {n:"益智",v:"益智"}, {n:"励志",v:"励志"}, {n:"其他",v:"其他"} ] },
-                // { key: "area",  name: "按地区",  value: [ {n:"全部",v:""}, {n:"国产",v:"国产"}, {n:"日本",v:"日本"}, {n:"欧美",v:"欧美"}, {n:"其他",v:"其他"} ] },
+                { key: "class", name: "按剧情",  value: [ {n:"全部",v:""}, {n:"情感",v:"情感"}, {n:"科幻",v:"科幻"}, {n:"热血",v:"热血"}, {n:"推理",v:"推理"}, {n:"搞笑",v:"搞笑"}, {n:"冒险",v:"冒险"}, {n:"萝莉",v:"萝莉"}, {n:"校园",v:"校园"}, {n:"动作",v:"动作"}, {n:"机战",v:"机战"}, {n:"运动",v:"运动"}, {n:"战争",v:"战争"}, {n:"少年",v:"少年"}, {n:"少女",v:"少女"}, {n:"社会",v:"社会"}, {n:"原创",v:"原创"}, {n:"亲子",v:"亲子"}, {n:"益智",v:"益智"}, {n:"励志",v:"励志"}, {n:"其他",v:"其他"} ] },
+                { key: "area",  name: "按地区",  value: [ {n:"全部",v:""}, {n:"国产",v:"国产"}, {n:"日本",v:"日本"}, {n:"欧美",v:"欧美"}, {n:"其他",v:"其他"} ] },
                 { key: "year",  name: "按年份",  value: [ {n:"全部",v:""}, {n:"2025",v:"2025"}, {n:"2024",v:"2024"}, {n:"2023",v:"2023"}, {n:"2022",v:"2022"}, {n:"2021",v:"2021"}, {n:"2020",v:"2020"}, {n:"2019",v:"2019"}, {n:"2018",v:"2018"}, {n:"2017",v:"2017"}, {n:"2016",v:"2016"}, {n:"2015",v:"2015"}, {n:"2014",v:"2014"}, {n:"2013",v:"2013"}, {n:"2012",v:"2012"}, {n:"2011",v:"2011"}, {n:"2010",v:"2010"}, {n:"2009",v:"2009"}, {n:"2008",v:"2008"}, {n:"2007",v:"2007"}, {n:"2006",v:"2006"}, {n:"2005",v:"2005"}, {n:"2004",v:"2004"} ] },
                 { key: "lang",  name: "按语言",  value: [ {n:"全部",v:""}, {n:"国语",v:"国语"}, {n:"英语",v:"英语"}, {n:"粤语",v:"粤语"}, {n:"闽南语",v:"闽南语"}, {n:"韩语",v:"韩语"}, {n:"日语",v:"日语"}, {n:"其它",v:"其它"} ] },
                 { key: "sort",  name: "按排序",  value: [ {n:"时间",v:"time"}, {n:"人气",v:"hits"}, {n:"评分",v:"score"} ] }
@@ -77,7 +84,7 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    const document = await Java.wvOpen(`${baseUrl}/`);  // 使用模板字符串
+    const document = await Java.wvOpen(baseUrl + '/');
     const videos = parseVideoList(document);
     return { list: videos };
 }
@@ -95,7 +102,8 @@ async function categoryContent(tid, pg, filter, extend) {
     const lang = extend.lang || '';
 
     // console.log("筛选参数:", extend, `type=${type}, area=${area}, year=${year}, cat=${cat}, sort=${sort}, lang=${lang}`);
-    const document = await Java.wvOpen(`${baseUrl}/list/${type||tid}-${area}-${sort}-${cat}-${lang}----${pg}---${year}.html`);
+    // const document = await Java.wvOpen(`${baseUrl}/list/${type||tid}-${area}-${sort}-${cat}-${lang}----${pg}---${year}.html`);
+    const document = await Java.wvOpen(`${baseUrl}/show/${tid}-${area}-${sort}-${type}-${lang}-${letter}---${pg}---${year}.html`);
     const videos = parseVideoList(document);
     const getPages = document.querySelector("ul > li.active.num").outerText;
     const pages = getPages.split('/');
@@ -223,3 +231,8 @@ function parseDetailPage(document) {
         vod_play_url: vod_play_url
     }];
 }
+
+
+/* ---------------- 导出对象 ---------------- */
+const spider = { init, homeContent, homeVideoContent, categoryContent, detailContent, searchContent, playerContent, action };
+spider;

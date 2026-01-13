@@ -4,6 +4,15 @@
  * 版本：1.0
  * 最后更新：2025-12-19
  * 发布页 https://www.hanju7.com/
+ *
+ * @config
+ * debug: true
+ // * showWebView: true
+ * percent: 80,60
+ * returnType: dom
+ * timeout: 30
+ * blockImages: true
+ * blockList: *.[ico|png|jpeg|jpg|gif|webp]*,.css
  */
  
 const baseUrl = 'https://www.hanju7.com';
@@ -13,29 +22,7 @@ const baseUrl = 'https://www.hanju7.com';
  */
 async function init(cfg) {
 	
-    return {
-        webview: {
-            debug: true,
-            showWebView: false,
-            widthPercent: 80,
-            heightPercent: 60,
-            keyword: '',
-            returnType: 'dom',
-            timeout: 30,
-            blockImages: true,
-            enableJavaScript: true,
-            header: { 'Referer': baseUrl },
-            blockList: [
-                "*.ico*",
-                "*.png*",
-                "*.jpg*",
-                "*.jpeg*",
-                "*.gif*",
-                "*.webp*",
-                "*.css*"
-            ]
-        }
-    };
+    return;
 }
 
 /**
@@ -74,7 +61,7 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    const document = await Java.wvOpen(baseUrl + '/');
+    const document = await Java.wvOpen(`${baseUrl}/`);  // 使用模板字符串
     const videos = parseVideoList(document);
     return { list: videos };
 }
@@ -86,11 +73,11 @@ async function categoryContent(tid, pg, filter, extend) {
     // console.log("筛选参数:", extend, `type=${type}, area=${area}, year=${year}, cat=${cat}, sort=${sort}, lang=${lang}`);
     const year = extend.year || '';
     const sort = extend.sort || '';
-
+	Java.wvOpen(`${baseUrl}/list/${tid}-${year}-${sort}-${pg}.html`).when('tid=hot|new', `${baseUrl}/${tid}.html`);
 
     if (tid === 'hot' || tid === 'new') {
         // 排行榜或最新更新
-        const document = await Java.wvOpen(`${baseUrl}/${tid}.html`);
+        // const document = await Java.req(`${baseUrl}/${tid}.html`);
         let i = 1;
         const videos = Array.from(document.querySelectorAll('#t ~ li')).map(li => ({
             vod_id: baseUrl + li.querySelector('a[href^="/detail/"]').getAttribute('href'),
@@ -109,7 +96,7 @@ async function categoryContent(tid, pg, filter, extend) {
     } else {
         // 普通分类
         // https://www.hanju7.com/list/1-2024-onclick-1.html
-        const document = await Java.wvOpen(`${baseUrl}/list/${tid}-${year}-${sort}-${pg}.html`);
+        // const document = await Java.wvOpen(`${baseUrl}/list/${tid}-${year}-${sort}-${pg}.html`);
         const videos = parseVideoList(document);
         return { code: 1, msg: "数据列表", list: videos, page: pg, pagecount: 10000, limit: 24, total: 240000 };
     }

@@ -4,7 +4,15 @@
  * 版本：1.0
  * 最后更新：2025-12-20
  * 发布页 https://www.aizju.com
+ * @config
+//  * debug: true
+//  * showWebView: true
+ * percent: 80,60
+ * returnType: dom
+ * timeout: 30
+ *
  */
+
 
 const baseUrl = 'https://www.aizju.com';
 
@@ -12,29 +20,7 @@ const baseUrl = 'https://www.aizju.com';
  * 初始化配置
  */
 async function init(cfg) {
-    return {
-        webview: {
-            debug: true,
-            showWebView: false,
-            widthPercent: 80,
-            heightPercent: 60,
-            keyword: '',
-            returnType: 'dom',
-            timeout: 30,
-            blockImages: true,
-            enableJavaScript: true,
-            header: { 'Referer': baseUrl },
-            blockList: [ //拦截的链接
-                "*.ico*",
-                "*.png*",
-                "*.jpg*",
-                "*.jpeg*",
-                "*.gif*",
-                "*.webp*",
-                "*.css*"
-            ]
-        }
-    };
+    return {};
 }
 
 /**
@@ -91,8 +77,10 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    const document = await Java.wvOpen(baseUrl + '/');
-    const videos = parseVideoList(document);
+    let res = Java.req(baseUrl);
+    if (res.error) return Result.error('获取数据失败:'  + res.error);
+    const doc = res.doc;
+    const videos = parseVideoList(doc);
     return { list: videos };
 }
 
@@ -100,27 +88,24 @@ async function homeVideoContent() {
  * 分类内容
  */
 async function categoryContent(tid, pg, filter, extend) {
-    
     const area = extend.area || '';
     const year = extend.year || '';
     const type = extend.class || '';
     const sort = extend.sort || '';
     const letter = extend.letter || '';
     const lang = extend.lang || '';
-	//https://www.aizju.com/vodshow/3-地区-排序-类型-语言-字母---分页---年份.html
-
-	console.log("分类被调用, 参数:", tid, pg, filter, extend);
-
-    const document = await Java.wvOpen(`${baseUrl}/vodshow/${tid}-${area}-${sort}-${type}-${lang}-${letter}---${pg}---${year}.html`);
 	
-    const videos = parseVideoList(document);
-	console.log(videos);
+	//https://www.aizju.com/vodshow/3-地区-排序-类型-语言-字母---分页---年份.html
+    const res = Java.req(`${baseUrl}/vodshow/${tid}-${area}-${sort}-${type}-${lang}-${letter}---${pg}---${year}.html`);
+    const doc = res.doc;
+    const videos = parseVideoList(doc);
+    
     let pages = [1, 1];
     let total = videos.length;
     try {
-        const getPages = document.querySelector("#conch-content .hl-page-total").textContent.replace(/\D*(\d+)\s*\/\s*(\d+)\D*/, '$1/$2');
+        const getPages = doc.querySelector("#conch-content .hl-page-total").textContent.replace(/\D*(\d+)\s*\/\s*(\d+)\D*/, '$1/$2');
         pages = getPages.split('/');
-        total = document.querySelector("#conch-content .hl-head-page em").textContent;
+        total = doc.querySelector("#conch-content .hl-head-page em").textContent;
     } catch (e) {}
     return { code: 1, msg: "数据列表", list: videos, page: pages[0], pagecount: pages[1], limit: 36, total: pages[1] * 36 };
 }
@@ -129,14 +114,13 @@ async function categoryContent(tid, pg, filter, extend) {
  * 详情页
  */
 async function detailContent(ids) {
-	console.log("详情被调用, 参数:", ids)
-	// Java.showWebView();
-    const document = await Java.wvOpen(ids[0]);
-    const list = parseDetailPage(document, baseUrl);
-	console.log("取到的详情数据",list)
-	
+    const res = Java.req(baseUrl + ids[0]);
+    const doc = res.doc;
+
+    const list = parseDetailPage(doc, ids[0]);
     return { code: 1, msg: "数据列表", page: 1, pagecount: 1, limit: 1, total: 1, list };
 }
+
 
 /**
  * 搜索
@@ -146,41 +130,34 @@ async function searchContent(key, quick, pg) {
 	
 	console.log("搜索被调用, 参数:", url, key, quick, pg);
 	
-    let res = await Java.req(url);
+    let res = Java.req(url);
 	
-    const videos = parseVideoList(res.doc);
-    let pages = [1, 1];
-    let total = videos.length;
-	
-    try {
-        const getPages = res.doc.querySelector("ul li.hl-page-tips > a").textContent.replace(/\D*(\d+)\s*\/\s*(\d+)\D*/, '$1/$2');
-        pages = getPages.split('/');
-    } catch (e) {}
-	
-	
-	const vods = { code: 1, msg: "数据列表", list: videos, page: pages[0], pagecount: pages[1], limit: 12, total: pages[1] * 12 };
-    return vods;
+    const vods = [];
+    const items = res.doc.querySelectorAll('.hl-one-list .hl-list-item');
+    
+    items.forEach(item => {
+        const link = item.querySelector('.hl-item-thumb');
+        const vod = {
+            vod_id: link?.getAttribute('href') || '',
+            vod_name: link?.getAttribute('title') || '',
+            vod_pic: link?.getAttribute('data-original') || '',
+
+            vod_remarks: item.querySelector('.remarks')?.textContent?.trim() || '',
+        };
+        vods.push(vod);
+    });
+    
+    const pageText = res.doc.querySelector('.hl-page-total')?.textContent || '1 / 1';
+    const pages = pageText.split('/').map(num => parseInt(num.trim().replace('页', '')) || 1);
+    
+    return { code: 1, msg: "数据列表", list: vods, page: pages[0], pagecount: pages[1], limit: 12, total: pages[1] * 12 };
 }
 
 /**
  * 播放器
  */
 async function playerContent(flag, id, vipFlags) {
-	console.log("播放器被调用, 参数:", flag, id, vipFlags);
     return { url: id, parse: 1 };
-}
-
-/**
- * action
- */
-async function action(actionStr) {
-    try {
-        const params = JSON.parse(actionStr);
-        console.log("action params:", params);
-    } catch (e) {
-        console.log("action is not JSON, treat as string");
-    }
-    return;
 }
 
 
@@ -191,15 +168,16 @@ async function action(actionStr) {
  */
 function parseVideoList(document) {
     const vods = [];
-    const items = document.querySelectorAll('ul.hl-vod-list li, ul.hl-one-list li');
+    const items = document.querySelectorAll('.hl-vod-list .hl-list-item');
+    
     items.forEach(item => {
-
+        const link = item.querySelector('.hl-item-thumb');
+        const titleLink = item.querySelector('.hl-item-title a');
         
         const vod = {
-            vod_id: item.querySelector('a')?.href || '',
-            vod_name: item.querySelector('a')?.title || '',
-            vod_pic: item.querySelector('a')?.getAttribute('data-original') || '',
-            vod_year: item.querySelector('.state')?.textContent?.trim() || '',
+            vod_id: link?.getAttribute('href') || titleLink?.getAttribute('href') || '',
+            vod_name: link?.getAttribute('title') || titleLink?.getAttribute('title') || '',
+            vod_pic: link?.getAttribute('data-original') || '',
             vod_remarks: item.querySelector('.remarks')?.textContent?.trim() || '',
         };
         
@@ -212,7 +190,7 @@ function parseVideoList(document) {
 /**
  * 解析详情页
  */
-function parseDetailPage(document, baseUrl = window.location.origin) {
+function parseDetailPage(document, vod_id) {
 
     const vod_name = document.querySelector('.video-name')?.textContent?.trim() || '';
     const vod_pic = document.querySelector('.hl-item-thumb')?.getAttribute('data-original') || '';
@@ -238,7 +216,7 @@ function parseDetailPage(document, baseUrl = window.location.origin) {
     const vod_play_url = playUrls.join('$$$');
     
     return [{
-        vod_id: window.location.href,
+        vod_id: vod_id,
         vod_name: vod_name,
         vod_pic: vod_pic,
         vod_remarks: '',
@@ -249,8 +227,3 @@ function parseDetailPage(document, baseUrl = window.location.origin) {
         vod_play_url: vod_play_url
     }];
 }
-
-
-/* ---------------- 导出对象 ---------------- */
-const spider = { init, homeContent, homeVideoContent, categoryContent, detailContent, searchContent, playerContent, action };
-spider;
