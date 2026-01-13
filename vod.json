@@ -5,7 +5,7 @@
   "sites": [
     {
       "key": "wv_3q",
-      "name": "wv | 3Q影视",
+      "name": "👮wv | 3Q影视",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/3Q影视.js",
@@ -15,7 +15,7 @@
     },
     {
       "key": "wv_ddys",
-      "name": "wv | 低端影视",
+      "name": "👮wv | 低端影视",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/低端影视.js",
@@ -25,7 +25,7 @@
     },
     {
       "key": "wv_jldj",
-      "name": "wv | 锦鲤短剧",
+      "name": "👮wv | 锦鲤短剧",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/锦鲤短剧.js",
@@ -35,7 +35,7 @@
     },
     {
       "key": "wv_xhjw",
-      "name": "wv | 新韩剧网",
+      "name": "👮wv | 新韩剧网",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/新韩剧网.js",
@@ -45,7 +45,7 @@
     },
     {
       "key": "wv_jqqzx",
-      "name": "wv | 剧圈圈",
+      "name": "👮wv | 剧圈圈",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/剧圈圈.js",
@@ -55,7 +55,7 @@
     },
     {
       "key": "wv_jddzx",
-      "name": "wv | 剧多多",
+      "name": "👮wv | 剧多多",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/剧多多.js",
@@ -65,7 +65,7 @@
     },
     {
       "key": "wv_aizju",
-      "name": "wv | 爱追剧",
+      "name": "👮wv | 爱追剧",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/爱追剧.js",
@@ -75,7 +75,7 @@
     },
     {
       "key": "wv_555ys",
-      "name": "wv | 555影视",
+      "name": "👮wv | 555影视",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/555影视.js",
@@ -85,7 +85,7 @@
     },
     {
       "key": "wv_fktv",
-      "name": "wv | 快点播",
+      "name": "👮wv | 快点播",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/快点播.js",
@@ -95,7 +95,7 @@
     },
     {
       "key": "wv_xlys",
-      "name": "wv | 修罗影视",
+      "name": "👮wv | 修罗影视",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/修罗影视.js",
@@ -105,7 +105,7 @@
     },
     {
       "key": "本地txt",
-      "name": "wv | 本地txt",
+      "name": "👮wv | 本地txt",
       "api": "csp_FileSpider",
       "type": "3",
       "ext": "./file/黄色仓库.txt",
@@ -113,9 +113,9 @@
       "filterable": 1,
       "switchable": 1
     },
-	  {
+	{
       "key": "本地m3u",
-      "name": "wv | 本地m3u",
+      "name": "👮wv | 本地m3u",
       "api": "csp_FileSpider",
       "type": "3",
       "ext": "./file/麻豆图标版.m3u",
@@ -123,9 +123,19 @@
       "filterable": 1,
       "switchable": 1
     },
+	{
+      "key": "独家传媒",
+      "name": "👮wv | 独家传媒",
+      "api": "csp_FileSpider",
+      "type": "3",
+      "ext": "./file/18+千部独家传媒无水印.txt",
+      "searchable": 1,
+      "filterable": 1,
+      "switchable": 1
+    },
     {
       "key": "wv_ysp",
-      "name": "wv | 央视直播",
+      "name": "👮wv | 央视直播",
       "api": "csp_WvSpider",
       "type": "3",
       "ext": "./vod/央视频.js"
@@ -418,4 +428,5 @@
   ]
 
 }
+
 
