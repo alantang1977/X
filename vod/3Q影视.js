@@ -67,10 +67,8 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    let res = Java.req(baseUrl);
-    if (res.error) return Result.error('获取数据失败:'  + res.error);
-    const doc = res.doc;
-    const videos = parseVideoList(doc);
+    await Java.wvOpen(`${baseUrl}`);
+    const videos = parseVideoList();
 
     return { list: videos };
 }
@@ -191,7 +189,7 @@ async function playerContent(flag, id, vipFlags) {
 /**
  * 提取视频列表
  */
-function parseVideoList(document) {
+function parseVideoList() {
     const vods = [];
     const items = document.querySelectorAll('.grid-cols-3 > div');
 
@@ -239,7 +237,7 @@ function parseDetailPage(doc, jsonData, vod_id) {
 
     const html = doc.documentElement.outerHTML || doc.body.outerHTML;
     const match = html.match(/PLAYLIST_DATA\s*=\s*(\{[^;]+?\});/s);
-    
+    console.log(match)
     if (match?.[1]) {
         const playlistData = JSON.parse(match[1]);
         
