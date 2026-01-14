@@ -2,7 +2,7 @@
 # 本资源来源于互联网公开渠道，仅可用于个人学习爬虫技术。
 # 严禁将其用于任何商业用途，下载后请于 24 小时内删除，搜索结果均来自源站，本人不承担任何责任。
 
-import sys,urllib3
+import sys, urllib3
 sys.path.append('..')
 from base.spider import Spider
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -20,100 +20,197 @@ class Spider(Spider):
         'sec-ch-ua-platform': '"Windows"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin'
+        'sec-fetch-site': 'same-origin',
+        'Referer': 'https://film.symx.club/'
     }, 'https://film.symx.club'
 
     def init(self, extend=''):
         try:
-            host = extend.strip().rstrip('/')
-            if host.startswith('http'):
-                self.host = host
-                return None
+            if extend and extend.strip():
+                host = extend.strip().rstrip('/')
+                if host.startswith('http'):
+                    self.host = host
             return None
         except Exception as e:
             print(f'初始化异常：{e}')
             return None
 
     def homeContent(self, filter):
-        response = self.fetch(f'{self.host}/api/category/top', headers=self.headers, verify=False).json()
-        classes = []
-        for i in  response['data']:
-            if isinstance(i,dict):
-                classes.append({'type_id': i['id'], 'type_name': i['name']})
-        return {'class': classes}
+        try:
+            response = self.fetch(f'{self.host}/api/category/top', headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'class': []}
+            
+            data = response.json()
+            classes = []
+            if 'data' in data and isinstance(data['data'], list):
+                for item in data['data']:
+                    if isinstance(item, dict) and 'id' in item and 'name' in item:
+                        classes.append({
+                            'type_id': str(item['id']),
+                            'type_name': str(item['name'])
+                        })
+            return {'class': classes}
+        except Exception as e:
+            print(f'homeContent异常：{e}')
+            return {'class': []}
 
     def homeVideoContent(self):
-        response = self.fetch(f'{self.host}/api/film/category',headers=self.headers, verify=False).json()
-        videos = []
-        for i in response['data']:
-            for j in i.get('filmList',[]):
-                videos.append({
-                    'vod_id': j.get('id'),
-                    'vod_name': j.get('name'),
-                    'vod_pic': j.get('cover'),
-                    'vod_remarks': j.get('doubanScore')
-                    })
-        return {'list': videos}
+        try:
+            response = self.fetch(f'{self.host}/api/film/category', headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'list': []}
+            
+            data = response.json()
+            videos = []
+            if 'data' in data and isinstance(data['data'], list):
+                for category in data['data']:
+                    if isinstance(category, dict) and 'filmList' in category:
+                        film_list = category.get('filmList', [])
+                        for film in film_list:
+                            if isinstance(film, dict):
+                                videos.append({
+                                    'vod_id': str(film.get('id', '')),
+                                    'vod_name': str(film.get('name', '')),
+                                    'vod_pic': str(film.get('cover', '')),
+                                    'vod_remarks': str(film.get('doubanScore', ''))
+                                })
+            return {'list': videos}
+        except Exception as e:
+            print(f'homeVideoContent异常：{e}')
+            return {'list': []}
 
     def categoryContent(self, tid, pg, filter, extend):
-        response = self.fetch(f'{self.host}/api/film/category/list?area=&categoryId={tid}&language=&pageNum={pg}&pageSize=15&sort=updateTime&year=', headers=self.headers, verify=False).json()
-        videos = []
-        for i in response['data']['list']:
-            videos.append({
-                'vod_id': i.get('id'),
-                'vod_name': i.get('name'),
-                'vod_pic': i.get('cover'),
-                'vod_remarks': i.get('updateStatus')
-            })
-        return {'list': videos, 'page': pg}
+        try:
+            url = f'{self.host}/api/film/category/list?categoryId={tid}&pageNum={pg}&pageSize=15'
+            if extend:
+                url += f'&{extend}'
+                
+            response = self.fetch(url, headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'list': [], 'page': int(pg)}
+            
+            data = response.json()
+            videos = []
+            if 'data' in data and 'list' in data['data']:
+                film_list = data['data']['list']
+                for film in film_list:
+                    if isinstance(film, dict):
+                        videos.append({
+                            'vod_id': str(film.get('id', '')),
+                            'vod_name': str(film.get('name', '')),
+                            'vod_pic': str(film.get('cover', '')),
+                            'vod_remarks': str(film.get('updateStatus', ''))
+                        })
+            return {'list': videos, 'page': int(pg)}
+        except Exception as e:
+            print(f'categoryContent异常：{e}')
+            return {'list': [], 'page': int(pg)}
 
     def searchContent(self, key, quick, pg='1'):
-        response = self.fetch(f'{self.host}/api/film/search?keyword={key}&pageNum={pg}&pageSize=10', headers=self.headers, verify=False).json()
-        videos = []
-        for i in response['data']['list']:
-            videos.append({
-                'vod_id': i.get('id'),
-                'vod_name': i.get('name'),
-                'vod_pic': i.get('cover'),
-                'vod_remarks': i.get('updateStatus'),
-                'vod_year': i.get('year'),
-                'vod_area': i.get('area'),
-                'vod_director': i.get('director')
-        })
-        return {'list': videos, 'page': pg}
+        try:
+            url = f'{self.host}/api/film/search?keyword={key}&pageNum={pg}&pageSize=10'
+            response = self.fetch(url, headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'list': [], 'page': int(pg)}
+            
+            data = response.json()
+            videos = []
+            if 'data' in data and 'list' in data['data']:
+                film_list = data['data']['list']
+                for film in film_list:
+                    if isinstance(film, dict):
+                        videos.append({
+                            'vod_id': str(film.get('id', '')),
+                            'vod_name': str(film.get('name', '')),
+                            'vod_pic': str(film.get('cover', '')),
+                            'vod_remarks': str(film.get('updateStatus', '')),
+                            'vod_year': str(film.get('year', '')),
+                            'vod_area': str(film.get('area', '')),
+                            'vod_director': str(film.get('director', ''))
+                        })
+            return {'list': videos, 'page': int(pg)}
+        except Exception as e:
+            print(f'searchContent异常：{e}')
+            return {'list': [], 'page': int(pg)}
 
     def detailContent(self, ids):
-        response = self.fetch(f'{self.host}/api/film/detail?id={ids[0]}',headers=self.headers, verify=False).json()
-        data = response['data']
-        video, show, play_urls, = {}, [], []
-        for i in data['playLineList']:
-            show.append(i['playerName'])
-            play_url = []
-            for j in i['lines']:
-                play_url.append(f"{j['name']}${j['id']}")
-            play_urls.append('#'.join(play_url))
-        video.update({
-            'vod_id': data.get('id'),
-            'vod_name': data.get('name'),
-            'vod_pic': data.get('cover'),
-            'vod_year': data.get('year'),
-            'vod_area': data.get('other'),
-            'vod_actor': data.get('actor'),
-            'vod_director': data.get('director'),
-            'vod_content': data.get('blurb'),
-            'vod_score': data.get('doubanScore'),
-            'vod_play_from': '$$$'.join(show),
-            'vod_play_url': '$$$'.join(play_urls)
-        })
-        return {'list': [video]}
+        try:
+            if not ids or not ids[0]:
+                return {'list': []}
+                
+            url = f'{self.host}/api/film/detail?id={ids[0]}'
+            response = self.fetch(url, headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'list': []}
+            
+            data = response.json()
+            if 'data' not in data:
+                return {'list': []}
+                
+            film_data = data['data']
+            show, play_urls = [], []
+            
+            if 'playLineList' in film_data and isinstance(film_data['playLineList'], list):
+                for play_line in film_data['playLineList']:
+                    if isinstance(play_line, dict):
+                        player_name = play_line.get('playerName', '')
+                        if player_name:
+                            show.append(player_name)
+                            
+                        play_url = []
+                        if 'lines' in play_line and isinstance(play_line['lines'], list):
+                            for line in play_line['lines']:
+                                if isinstance(line, dict) and 'name' in line and 'id' in line:
+                                    play_url.append(f"{line['name']}${line['id']}")
+                        
+                        if play_url:
+                            play_urls.append('#'.join(play_url))
+            
+            video = {
+                'vod_id': str(film_data.get('id', '')),
+                'vod_name': str(film_data.get('name', '')),
+                'vod_pic': str(film_data.get('cover', '')),
+                'vod_year': str(film_data.get('year', '')),
+                'vod_area': str(film_data.get('other', film_data.get('area', ''))),
+                'vod_actor': str(film_data.get('actor', '')),
+                'vod_director': str(film_data.get('director', '')),
+                'vod_content': str(film_data.get('blurb', '')),
+                'vod_score': str(film_data.get('doubanScore', '')),
+                'vod_play_from': '$$$'.join(show) if show else '',
+                'vod_play_url': '$$$'.join(play_urls) if play_urls else ''
+            }
+            
+            return {'list': [video]}
+        except Exception as e:
+            print(f'detailContent异常：{e}')
+            return {'list': []}
 
     def playerContent(self, flag, id, vipflags):
-        response = self.fetch(f'{self.host}/api/line/play/parse?lineId={id}', headers=self.headers).json()
-        return { 'jx': '0', 'parse': '0', 'url': response['data'], 'header': {'User-Agent': self.headers['User-Agent']}}
-
+        try:
+            url = f'{self.host}/api/line/play/parse?lineId={id}'
+            response = self.fetch(url, headers=self.headers, verify=False)
+            if response.status_code != 200:
+                return {'jx': '0', 'parse': '0', 'url': '', 'header': {'User-Agent': self.headers['User-Agent']}}
+            
+            data = response.json()
+            play_url = data.get('data', '') if 'data' in data else ''
+            
+            return {
+                'jx': '0',
+                'parse': '0',
+                'url': str(play_url),
+                'header': {
+                    'User-Agent': self.headers['User-Agent'],
+                    'Referer': f'{self.host}/'
+                }
+            }
+        except Exception as e:
+            print(f'playerContent异常：{e}')
+            return {'jx': '0', 'parse': '0', 'url': '', 'header': {'User-Agent': self.headers['User-Agent']}}
 
     def getName(self):
-        pass
+        return "山有木兮影视"
 
     def isVideoFormat(self, url):
         pass
