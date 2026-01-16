@@ -18,7 +18,7 @@ source_urls = [
     "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
     "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
     "https://live.hacks.tools/tv/iptv4.txt",
-    "http://xo.html-5.me//i/9918352.txt",
+    "https://gitee.com/alexkw/app/raw/master/kgk.txt",
     "https://live.zhoujie218.top/tv/iptv4.txt"
 ]
 
