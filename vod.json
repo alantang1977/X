@@ -154,11 +154,14 @@
       "switchable": 1
     },
     {
-      "key": "wv_ysp",
-      "name": "🥷┃💥央视直播",
+      "key": "wv_yszb",
+      "name": "🥷┃💥央视直播(1080P)",
       "api": "csp_WvSpider",
       "type": "3",
-      "ext": "./vod/央视频.js"
+      "ext": "./vod/央视直播.js",
+      "searchable": 1,
+      "filterable": 1,
+      "switchable": 1
     },
     {
       "key": "push_agent",
