@@ -291,14 +291,14 @@ http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227027/1.m3u8$IPV6
 #EXTINF:-1 group-title="🥭┃卫视频道",延边卫视
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221227045/1.m3u8$IPV6
-#EXTINF:-1 group-title="🍉┃咪咕频道",动作电影咪咕
-http://[2409:8087:1a01:df::4021]:80/TVOD/88888888/224/3221225555/main.m3u8$IPV6
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226999/1.m3u8$IPV6
 #EXTINF:-1 group-title="🐟┃少儿频道",哈哈炫动
 http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226931/1.m3u8$IPV6•线路1
 #EXTINF:-1 group-title="🐟┃少儿频道",哈哈炫动
 http://[2409:8087:1a15:10d1::39]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225657/index.m3u8$IPV6•线路2
+#EXTINF:-1 group-title="🐶┃影视频道",CHC动作电影
+http://[2409:8087:1a01:df::4021]:80/TVOD/88888888/224/3221225555/main.m3u8$IPV6
 #EXTINF:-1 group-title="🐶┃影视频道",NewTV惊悚悬疑
 http://[2409:8087:5e00:24::2d]:6610/000000001000/1/1000000004000024282/index.m3u8$IPV6•线路1
 #EXTINF:-1 group-title="🐶┃影视频道",NewTV惊悚悬疑
