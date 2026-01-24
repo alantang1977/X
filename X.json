@@ -8,6 +8,12 @@
 {"key":"豆","name":"🎁┃豆瓣┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
 //{"key":"木兮","name": "🍃┃爱木兮┃影视","type": 3,"api": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/py/山有木兮.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 
+{"key": "哔哩大全","name": "🎚️️┃哔哩大全┃影视","type": 3,"api": "./js/哔哩大全.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+{"key": "耐看","name": "🎚️️┃耐看┃影视","type": 3,"api": "./js/耐看.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+{"key": "三q影视","name": "🎚️️┃叁Q视频┃影视","type": 3,"api": "./js/三q影视.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+{"key": "电影港","name": "🎚️️┃电影港┃影视","type": 3,"api": "./js/电影港.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+
+	
 {"key":"Lib","name":"🏈┃Libvio┃秒播","type":3,"api":"csp_LibvioGuard","searchable":1,"quickSearch":1,"changeable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},	
 //{"key": "及时雨PHP","name": "🌦️┃及时雨┃PHP","type": 4,"api": "https://diwu.de5.net/XPG/及时雨.php","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key":"爱看","name":"🤖┃机器人┃爱看","type":3,"api":"https://cdn.gh-proxy.org/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://cdn.gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/爱看机器人[虫].js"},
@@ -20,6 +26,7 @@
 {"key": "js集合","name": "☎️┃js采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/js.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "采集集合","name": "🥇┃采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/cj/cjjh.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"ext":"1","changeable": 1},
 
+
 ##wv源收集
 {"key": "wv_libvio","name": "🥷┃💥libvio","api": "csp_WvSpider","type": "3","ext": "./vod/libvio.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_在线之家","name": "🥷┃💥在线之家","api": "csp_WvSpider","type": "3","ext": "./vod/在线之家.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
@@ -27,8 +34,8 @@
 {"key": "wv_ddys","name": "🥷┃💥低端影视","api": "csp_WvSpider","type": "3","ext": "./vod/低端影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_jldj","name": "🥷┃💥锦鲤短剧","api": "csp_WvSpider","type": "3","ext": "./vod/锦鲤短剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_xhjw","name": "🥷┃💥新韩剧网","api": "csp_WvSpider","type": "3","ext": "./vod/新韩剧网.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_jqqzx","name": "🥷┃💥剧圈圈","api": "csp_WvSpider","type": "3","ext": "./vod/剧圈圈.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_jddzx","name": "🥷┃💥剧多多","api": "csp_WvSpider","type": "3","ext": "./vod/剧多多.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+//{"key": "wv_jqqzx","name": "🥷┃💥剧圈圈","api": "csp_WvSpider","type": "3","ext": "./vod/剧圈圈.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+//{"key": "wv_jddzx","name": "🥷┃💥剧多多","api": "csp_WvSpider","type": "3","ext": "./vod/剧多多.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_aizju","name": "🥷┃💥爱追剧","api": "csp_WvSpider","type": "3","ext": "./vod/爱追剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_555ys","name": "🥷┃💥555影视","api": "csp_WvSpider","type": "3","ext": "./vod/555影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_fktv","name": "🥷┃💥快点播","api": "csp_WvSpider","type": "3","ext": "./vod/快点播.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
@@ -486,6 +493,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
