@@ -52,7 +52,7 @@
 //{"key": "电影天堂","name": "🚔┃电影天堂┃影视","type": 3,"api": "./js/电影天堂.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 
 	
-//{"key": "4K指南","name": "🎚️️┃4K指南┃影视","type": 3,"api": "./js/4K指南.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
+{"key": "七猫小说","name": "🐈┃七猫小说┃小说","type": 3,"api": "./js/七猫小说.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "Emby视频","name": "🏎️️️┃Emby视频┃影视","type": 3,"api": "./js/Emby.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "永乐视频","name": "🍄┃永乐视频┃影视","type": 3,"api": "./js/永乐视频.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "hanju51","name": "🍖┃韩剧视频┃影视","type": 3,"api": "./js/韩剧网.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
@@ -71,7 +71,7 @@
 //{"key":"采集(异步)","name":"🧀┃采集┃(异步)","type": 4,"api": "http://zhangqun1818.serv00.net:6628/?user=萝莉","searchable": 1,"quickSearch": 1,"style": {"type": "rect","ratio": 1.33}, "filterable": 1},
 {"key": "小红","name": "🛤️┃小红影视┃影视","type": 3,"api": "./py/小红影视.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 	
-{"key":"七猫小说","name": "🐈┃七猫小说┃影视","type": 3,"api": "./py/七猫小说[书].py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
+//{"key":"七猫小说","name": "🐈┃七猫小说┃影视","type": 3,"api": "./py/七猫小说[书].py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 	
 {"key":"端木","name": "🧅┃端木┃影视","type": 3,"api": "./py/端木.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key":"爱壹帆","name": "⛵┃爱壹帆┃影视","type": 3,"api": "./py/ayf.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},	
@@ -548,6 +548,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
