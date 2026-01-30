@@ -233,46 +233,6 @@
 
 {"name": "🎭┃电视家「直播」","url": "https://down.nigx.cn/dsj.zzong6599.workers.dev/","header": {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36","Referer": "","cookie": ""},"epg": "https://iptv.crestekk.cn/epgphp/index.php"},
 {"name": "🪅┃粉妹电视「直播」直播","url": "https://rt.http3.lol/index.php?q=aHR0cHM6Ly96Yi56em9uZzY1OTkud29ya2Vycy5kZXY="},
-{
-            "name": "SMT(py)",
-            "type": 3,
-            "api": "./py/lives-SMT.py",
-            "ext": {}
-        },
-        {
-            "name": "iptv345",
-            "type": 3,
-            "api": "./py/lives-iptv345.py",
-            "ext": {}
-        },
-        {
-            "name": "zxbv",
-            "type": 3,
-            "api": "./py/live_zxbv.py",
-            "ext": {}
-        },
-        {
-            "name": "kzb",
-            "type": 3,
-            "api": "./py/lives-kzb.py",
-            "ext": {}
-        },
-        {
-            "name": "直播bx5kge(js)",
-            "type": 3,
-            "url": "https://b6f56s23.bx5kge.com/assets/js/tv.js",
-            "api": "./js/直播bx5kge.min.js",
-            "ext": {}
-        },
-        {
-            "name": "快直播(js)",
-            "type": 3,
-            "url": "https://jzb5kqln.huajiaedu.com",
-            "api": "./js/快直播.min.js",
-            "ext": {}
-        },
-
-
 	
 ##长青云盘直播
 {"name": "🛺┃大广东「长青」","type":0,"url":"https://cloud.7so.top/f/9QXOc2/jjtv.txt","ua": "","timeout": 10,"playerType": 1},
@@ -548,6 +508,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
