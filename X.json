@@ -36,18 +36,22 @@
 
 
 ##wv源收集
-{"key": "wv_libvio","name": "🥷┃💥libvio","api": "csp_WvSpider","type": "3","ext": "./vod/libvio.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-{"key": "wv_在线之家","name": "🥷┃💥在线之家","api": "csp_WvSpider","type": "3","ext": "./vod/在线之家.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_注视影视","name": "🥷┃💥注视影视","api": "csp_WvSpider","type": "3","ext": "./vod/注视影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_热播之家","name": "🥷┃💥热播之家","api": "csp_WvSpider","type": "3","ext": "./vod/热播之家.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_3q","name": "🥷┃💥3Q影视","api": "csp_WvSpider","type": "3","ext": "./vod/3Q影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_ddys","name": "🥷┃💥低端影视","api": "csp_WvSpider","type": "3","ext": "./vod/低端影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_jldj","name": "🥷┃💥锦鲤短剧","api": "csp_WvSpider","type": "3","ext": "./vod/锦鲤短剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_xhjw","name": "🥷┃💥新韩剧网","api": "csp_WvSpider","type": "3","ext": "./vod/新韩剧网.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-//{"key": "wv_jqqzx","name": "🥷┃💥剧圈圈","api": "csp_WvSpider","type": "3","ext": "./vod/剧圈圈.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
-//{"key": "wv_jddzx","name": "🥷┃💥剧多多","api": "csp_WvSpider","type": "3","ext": "./vod/剧多多.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_蛋蛋鱼","name": "🥷┃💥蛋蛋鱼","api": "csp_WvSpider","type": "3","ext": "./vod/蛋蛋鱼.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_茶杯狐","name": "🥷┃💥茶杯狐","api": "csp_WvSpider","type": "3","ext": "./vod/茶杯狐.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_aizju","name": "🥷┃💥爱追剧","api": "csp_WvSpider","type": "3","ext": "./vod/爱追剧.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_555ys","name": "🥷┃💥555影视","api": "csp_WvSpider","type": "3","ext": "./vod/555影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_fktv","name": "🥷┃💥快点播","api": "csp_WvSpider","type": "3","ext": "./vod/快点播.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
 {"key": "wv_xlys","name": "🥷┃💥修罗影视","api": "csp_WvSpider","type": "3","ext": "./vod/修罗影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_嘀嗒影视","name": "🥷┃💥嘀嗒影视","api": "csp_WvSpider","type": "3","ext": "./vod/嘀嗒影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_子子影视","name": "🥷┃💥子子影视","api": "csp_WvSpider","type": "3","ext": "./vod/子子影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+{"key": "wv_央视频","name": "🥷┃💥央视频","api": "csp_WvSpider","type": "3","ext": "./vod/央视频.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
+
 //{"key": "腾讯","name": "🏎️️️┃腾讯-不夜┃影视","type": 3,"api": "./js/腾讯-不夜.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 //{"key": "电影天堂","name": "🚔┃电影天堂┃影视","type": 3,"api": "./js/电影天堂.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 
@@ -514,6 +518,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
