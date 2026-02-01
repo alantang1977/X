@@ -6,7 +6,7 @@
  * 发布页 https://qqqys.com
  * 
  * @config
- * debug: true
+//  * debug: true
  */
 
 const baseUrl = 'https://qqqys.com';
@@ -67,8 +67,10 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    await Java.wvOpen(`${baseUrl}`);
-    const videos = parseVideoList();
+    let res = Java.req(baseUrl);
+    if (res.error) return Result.error('获取数据失败:'  + res.error);
+    const doc = res.doc;
+    const videos = parseVideoList(doc);
 
     return { list: videos };
 }
@@ -94,7 +96,6 @@ async function categoryContent(tid, pg, filter, extend) {
  */
 async function detailContent(ids) {
     let res = Java.req(`${baseUrl}/vd/${ids[0]}.html`);
-
     if (res.error) return Result.error('详情获取失败:'  + res.error);
     let j = Java.req(`${baseUrl}/api.php/internal/search_aggregate?vod_id=${ids[0]}`);
     const jsonData = JSON.parse(j.body);
@@ -161,27 +162,8 @@ async function searchContent(key, quick, pg) {
  * 播放器
  */
 async function playerContent(flag, id, vipFlags) {
-    const [vodFrom, ...urlParts] = id.split(':');
-    
-    if (vodFrom === 'http' || vodFrom === 'https') {
-        return { url: id, parse: 0 };
-    }
-    
-    const url = urlParts.join(':');
-    const apiUrl = `${baseUrl}/api.php/decode/url/?url=${encodeURIComponent(url)}&vodFrom=${vodFrom}`;
-    
-    let res = Java.req(apiUrl);
-    res = JSON.parse(res.body);
-    const token = eval(res.challenge);
-    
-    res = Java.req(`${apiUrl}&token=${token}`);
-    res = JSON.parse(res.body);
-    if (!res.code) return Result.error(vodFrom + '地址解析失败，请切换其他播放源');
-    
-    return { url: res.data, parse: 0 };
+    return { url: id, parse: 0 };
 }
-
-
 
 
 /* ---------------- 工具函数 ---------------- */
@@ -189,7 +171,7 @@ async function playerContent(flag, id, vipFlags) {
 /**
  * 提取视频列表
  */
-function parseVideoList() {
+function parseVideoList(document) {
     const vods = [];
     const items = document.querySelectorAll('.grid-cols-3 > div');
 
@@ -232,36 +214,10 @@ function parseDetailPage(doc, jsonData, vod_id) {
         div.textContent.replace(/[\t\n]/g, '').trim()
     ).filter(text => text).join(' / ');
 
-    let playFromList = [];
-    let playUrlList = [];
-
-    const html = doc.documentElement.outerHTML || doc.body.outerHTML;
-    const match = html.match(/PLAYLIST_DATA\s*=\s*(\{[^;]+?\});/s);
-    console.log(match)
-    if (match?.[1]) {
-        const playlistData = JSON.parse(match[1]);
-        
-        Object.values(playlistData).forEach(item => {
-            if (item.player_info?.show && item.urls) {
-                playFromList.push(item.player_info.show);
-                
-                const episodes = Object.values(item.urls).map(urlItem => 
-                    `${urlItem.name}$${urlItem.from}:${urlItem.url}`
-                ).join('#');
-                
-                playUrlList.push(episodes);
-            }
-        });
-    }
-
-    const fromJson = jsonData.data?.map(item => item.site_name).filter(Boolean) || [];
-    const urlsJson = jsonData.data?.map(item => item.vod_play_url?.replace(/\t+/g, '').trim()).filter(Boolean) || [];
-    
-    playFromList.push(...fromJson);
-    playUrlList.push(...urlsJson);
-
-    const vod_play_from = playFromList.join('$$$');
-    const vod_play_url = playUrlList.join('$$$');
+    const vod_play_from = jsonData.data?.map(item => item.site_name).filter(Boolean).join('$$$') || '';
+    const vod_play_url = jsonData.data?.map(item => 
+        item.vod_play_url?.replace(/\t+/g, '').trim()
+    ).filter(Boolean).join('$$$') || '';
 
     const flexItems = doc.querySelectorAll('.module-info-content .flex');
     let vod_director = '';
@@ -272,12 +228,12 @@ function parseDetailPage(doc, jsonData, vod_id) {
         if (span?.textContent.includes('导演')) {
             const directorLinks = item.querySelectorAll('a');
             if (directorLinks.length > 0) {
-                vod_director = Array.from(directorLinks).map(link => link.textContent.trim()).join(',');
+                const vod_director = Array.from(directorLinks).map(link => link.textContent.trim());
             }
         } else if (span?.textContent.includes('主演')) {
             const actorLinks = item.querySelectorAll('a');
             if (actorLinks.length > 0) {
-                vod_actor = Array.from(actorLinks).map(link => link.textContent.trim()).join(',');
+                const vod_actor = Array.from(actorLinks).map(link => link.textContent.trim());
             }
         }
     });
