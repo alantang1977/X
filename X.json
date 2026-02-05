@@ -27,9 +27,12 @@
 {"key":"瓜子","name":"🍉┃瓜子┃影视","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cloud.7so.top/f/1r61hq/guazi.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
 {"name":"🥔┃瓜子┃秒播","key":"Guazi","type":3,"api":"csp_GuaziAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/guazi.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
 {"name":"☕┃韩剧┃秒播","key":"Hxq","type":3,"api":"csp_HxqAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
+{"name":"🎸┃酷狗┃音乐","key":"KuGou","type":3,"api":"csp_KuGouAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":0,"jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"},
+{"name":"😄┃二小┃4K","key":"exWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://erxiaofn.click,http://2xiaopan.fun,http://erxiaofn.site,https://www.erixaopan.fun,https://wexwp.cc,https://xhww.net","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/woex.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"}},
+{"name":"😆┃虎斑┃|4K","key":"hbWobg","type":3,"api":"csp_WobgAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"ext":{"sites":"http://103.45.162.207:20720","filters":"https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/json/wohb.json","jar":"./jar/嗷嗚.png;md5;796c14b118450f2325a5c8a0d2ce341d"}},	
+
 	
 {"key": "飞快","name": "🥊┃飞快┃TV","type": 3,"api": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/py/飞快_pan.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
-
 {"key": "采集合集py","name": "⚖️┃py采集┃合集","type": 3,"api": "./py/采集合集.py","searchable": 1,"quickSearch": 1,"filterable": 0,"changeable": 1,"playerType": 2,"ext": "1"},
 {"key": "js集合","name": "☎️┃js采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/js.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "采集集合","name": "🥇┃采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/cj/cjjh.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"ext":"1","changeable": 1},
@@ -520,6 +523,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
