@@ -36,94 +36,7 @@
 {"key": "采集合集py","name": "⚖️┃py采集┃合集","type": 3,"api": "./py/采集合集.py","searchable": 1,"quickSearch": 1,"filterable": 0,"changeable": 1,"playerType": 2,"ext": "1"},
 {"key": "js集合","name": "☎️┃js采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/js.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "采集集合","name": "🥇┃采集┃合集","type": 4,"api": "http://zhangqun1818.serv00.net/cj/cjjh.php","searchable": 1,"style": {"type": "rect","ratio": 1.33},"ext":"1","changeable": 1},
-{
-            "key": "采集集合",
-            "name": "采集集合",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/cj/cjjh.php",
-            "searchable": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "ext": "0",
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "js集合",
-            "name": "js集合",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/js.php",
-            "searchable": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "php集合",
-            "name": "php集合",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/php.php",
-            "searchable": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "python集合",
-            "name": "python集合",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/py.php",
-            "searchable": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "服务器油管",
-            "name": "服务器油管",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/yt/yt0021.php",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "searchable": 1,
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "油管播放列表1",
-            "name": "油管播放列表1",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/ytlb.php",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "searchable": 1,
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "油管播放列表2",
-            "name": "油管播放列表2",
-            "type": 4,
-            "api": ".http://zhangqun1818.serv00.net/zq/ytlb1.php",
-            "searchable": 1,
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1,"jar":"./jar/zhang.jar"},
-        {
-            "key": "CNTV低分辨",
-            "name": "CNTV低分辨",
-            "type": 1,
-            "api": ".http://zhangqun1818.serv00.net/zq/cctv.php",
-            "style": {
-                "type": "rect",
-                "ratio": 1.33
-            },
-            "changeable": 1,"jar":"./jar/zhang.jar"},
+
 
 ##wv源收集
 {"key": "wv_注视影视","name": "🥷┃💥注视影视","api": "csp_WvSpider","type": "3","ext": "./vod/注视影视.js","searchable": 1,"filterable": 1,"switchable": 1,"jar":"./jar/WvSpider.jar"},
@@ -620,6 +533,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
