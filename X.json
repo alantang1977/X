@@ -58,7 +58,7 @@
 //{"key": "腾讯","name": "🏎️️️┃腾讯-不夜┃影视","type": 3,"api": "./js/腾讯-不夜.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 //{"key": "电影天堂","name": "🚔┃电影天堂┃影视","type": 3,"api": "./js/电影天堂.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 
-{"key":"33Q影视"，"name":"🐠┃3Q影视┃摸鱼"，"type":3,"api":"./lib/模板js","ext":"./js/33Q影视.js"},
+{"key":"3Q影视"，"name":"3Q影视"，"type":3,"api":"./lib/模板.js"，"ext":"./js/3Q影视.js"},
 {"key": "3新韩剧网","name": "🐈┃新韩剧网┃摸鱼","type": 3,"api": "./js/3新韩剧网.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/摸鱼.png"},
 {"key": "fishhxq","name": "🎭┃韩小圈┃摸鱼","type": 3,"api": "csp_FishHxq","ext": "https://fishapi.wya6.com/fish/fishhxq.php","jar":"./jar/摸鱼.png"},
 {"key": "Symx","name": "🎉┃山有木兮┃摸鱼","type": 3,"api": "csp_Symx","ext": "https://film.symx.club","jar":"./jar/摸鱼.png"},
@@ -538,6 +538,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
