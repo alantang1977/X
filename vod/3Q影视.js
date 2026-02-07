@@ -6,7 +6,7 @@
  * 发布页 https://qqqys.com
  * 
  * @config
-//  * debug: true
+ * debug: false
  */
 
 const baseUrl = 'https://qqqys.com';
@@ -67,11 +67,26 @@ async function homeContent(filter) {
  * 首页推荐视频
  */
 async function homeVideoContent() {
-    let res = Java.req(baseUrl);
-    if (res.error) return Result.error('获取数据失败:'  + res.error);
-    const doc = res.doc;
-    const videos = parseVideoList(doc);
-
+    let res = Java.req(`${baseUrl}/api.php/web/index/home`);
+    if (res.error) return Result.error('获取首页失败:' + res.error);
+    
+    const jsonData = JSON.parse(res.body);
+    if (!jsonData.data || !jsonData.data.categories) return { list: [] };
+    
+    const videos = [];
+    jsonData.data.categories.forEach(category => {
+        if (category.videos && Array.isArray(category.videos)) {
+            category.videos.forEach(vod => {
+                videos.push({
+                    vod_id: vod.vod_id ? vod.vod_id.toString() : '',
+                    vod_name: vod.vod_name || '',
+                    vod_pic: vod.vod_pic || '',
+                    vod_remarks: vod.vod_remarks || ''
+                });
+            });
+        }
+    });
+    
     return { list: videos };
 }
 
@@ -82,79 +97,142 @@ async function categoryContent(tid, pg, filter, extend) {
     const area = extend.area || '';
     const year = extend.year || '';
     const cat = extend.class || '';
-    const sort = extend.sort || '';
-    let res = Java.req(`${baseUrl}/api.php/filter/vod?type_name=${tid}&class=${cat}&year=${year}&area=${area}&sort=${sort}&page=${pg}&limit=24`);
-    if (res.error) return Result.error('获取数据失败:'  + res.error);
+    const sort = extend.sort || 'hits';
+    
+    let url = `${baseUrl}/api.php/web/filter/vod?type_name=${encodeURIComponent(tid)}&page=${pg}&sort=${sort}`;
+    if (cat) url += `&class=${encodeURIComponent(cat)}`;
+    if (area) url += `&area=${encodeURIComponent(area)}`;
+    if (year) url += `&year=${encodeURIComponent(year)}`;
+    
+    let res = Java.req(url);
+    if (res.error) return Result.error('获取数据失败:' + res.error);
+    
     const result = JSON.parse(res.body);
-    result.list = result.data;
-    delete result.data;
-    return result;
+    const list = [];
+    
+    if (result.data && Array.isArray(result.data)) {
+        result.data.forEach(vod => {
+            list.push({
+                vod_id: vod.vod_id ? vod.vod_id.toString() : '',
+                vod_name: vod.vod_name || '',
+                vod_pic: vod.vod_pic || '',
+                vod_remarks: vod.vod_remarks || ''
+            });
+        });
+    }
+    
+    return { 
+        code: 1, 
+        msg: "数据列表", 
+        list: list, 
+        page: parseInt(pg), 
+        pagecount: result.pageCount || 1, 
+        limit: 24, 
+        total: result.total || list.length 
+    };
 }
 
 /**
  * 详情页
  */
 async function detailContent(ids) {
-    let res = Java.req(`${baseUrl}/vd/${ids[0]}.html`);
-    if (res.error) return Result.error('详情获取失败:'  + res.error);
-    let j = Java.req(`${baseUrl}/api.php/internal/search_aggregate?vod_id=${ids[0]}`);
-    const jsonData = JSON.parse(j.body);
-    const vods = parseDetailPage(res.doc, jsonData, ids[0]);
-    return { code: 1, msg: "数据列表", page: 1, pagecount: 1, limit: 1, total: 1, list: vods };
+    const vod_id = ids[0];
+    
+    let mainRes = await Java.req(`${baseUrl}/api.php/web/vod/get_detail?vod_id=${vod_id}`);
+    
+    if (mainRes.error) return Result.error('详情获取失败:' + mainRes.error);
+    
+    const mainData = JSON.parse(mainRes.body);
+    if (!mainData.data || mainData.data.length === 0) return { list: [] };
+    
+    const vodData = mainData.data[0];
+    const vodplayer = mainData.vodplayer || [];
+    
+    const playFromList = [];
+    const playUrlList = [];
+
+    if (vodData.vod_play_from && vodData.vod_play_url) {
+        const raw_shows = vodData.vod_play_from.split('$$$');
+        const raw_urls_list = vodData.vod_play_url.split('$$$');
+        
+        for (let i = 0; i < raw_shows.length; i++) {
+            let show_code = raw_shows[i];
+            let player = vodplayer.find(p => p.from === show_code);
+            if (!player) continue;
+            
+            let lineName = player.show || show_code;
+            let urls = [];
+            let items = raw_urls_list[i].split('#');
+            
+            for (let j = 0; j < items.length; j++) {
+                if (items[j].includes('$')) {
+                    let [name, url_val] = items[j].split('$');
+                    urls.push(`${name}$${lineName}@@${show_code}@@qqqparse@@${vod_id}@@${j + 1}@@${url_val}`);
+                }
+            }
+            
+            if (urls.length > 0) {
+                playFromList.push(lineName);
+                playUrlList.push(urls.join('#'));
+            }
+        }
+    }
+    
+    return { 
+        code: 1, 
+        msg: "数据列表", 
+        page: 1, 
+        pagecount: 1, 
+        limit: 1, 
+        total: 1, 
+        list: [{
+            vod_id: vod_id,
+            vod_name: vodData.vod_name || '',
+            vod_pic: vodData.vod_pic || '',
+            vod_content: vodData.vod_blurb || '',
+            vod_director: vodData.vod_director || '',
+            vod_actor: vodData.vod_actor || '',
+            vod_year: vodData.vod_year || '',
+            vod_area: vodData.vod_area || '',
+            vod_class: vodData.vod_class || '',
+            vod_remarks: vodData.vod_remarks || '',
+            vod_play_from: playFromList.join('$$$'),
+            vod_play_url: playUrlList.join('$$$')
+        }] 
+    };
 }
 
 /**
  * 搜索
  */
 async function searchContent(key, quick, pg) {
-    let res = await Java.req(`${baseUrl}/vodsearch/${key}--/page/${pg}.html`);
-    const vods = [];
-    const items = res.doc.querySelectorAll('div.p-2 > div');
+    let url = `${baseUrl}/api.php/web/search/index?wd=${encodeURIComponent(key)}&page=${pg}`;
+    let res = await Java.req(url);
     
-    items.forEach(item => {
-        const link = item.querySelector('a[href*="/vd/"]');
-        if (!link) return;
-        
-        const href = link.getAttribute('href');
-        const vod_id = href.match(/\/vd\/(\d+)\.html/)?.[1] || '';
-        
-        const nameEl = item.querySelector('.text-\\[16px\\] span strong') || 
-                      item.querySelector('.text-\\[16px\\] strong') ||
-                      item.querySelector('div.ml-\\[105px\\] strong');
-        const vod_name = nameEl?.textContent?.trim() || '';
-        
-        const img = item.querySelector('img[data-original]');
-        const vod_pic = img?.getAttribute('data-original') || '';
-        
-        const remarkDiv = item.querySelector('div[class*="bottom-0"][class*="right-0"]') ||
-                         item.querySelector('div[style*="gradient"]');
-        const vod_remarks = remarkDiv?.textContent?.trim() || '';
-        
-        if (vod_id && vod_name) {
-            vods.push({
-                vod_id: vod_id,
-                vod_name: vod_name,
-                vod_pic: vod_pic,
-                vod_remarks: vod_remarks
+    if (res.error) return Result.error('搜索失败:' + res.error);
+    
+    const result = JSON.parse(res.body);
+    const list = [];
+    
+    if (result.data && Array.isArray(result.data)) {
+        result.data.forEach(vod => {
+            list.push({
+                vod_id: vod.vod_id ? vod.vod_id.toString() : '',
+                vod_name: vod.vod_name || '',
+                vod_pic: vod.vod_pic || '',
+                vod_remarks: vod.vod_remarks || ''
             });
-        }
-    });
-    
-    const totalText = document.querySelector('.mac_total')?.textContent || '0';
-    const total = parseInt(totalText) || vods.length;
-    const pagecount = Math.ceil(total / 15);
-    
-    const pageMatch = window.location.href.match(/page\/(\d+)\.html/);
-    const page = pageMatch ? parseInt(pageMatch[1]) : 1;
+        });
+    }
     
     return { 
         code: 1, 
         msg: "数据列表", 
-        list: vods, 
-        page: page, 
-        pagecount: pagecount, 
+        list: list, 
+        page: parseInt(pg), 
+        pagecount: result.pageCount || 1, 
         limit: 15, 
-        total: total 
+        total: result.total || list.length 
     };
 }
 
@@ -162,91 +240,40 @@ async function searchContent(key, quick, pg) {
  * 播放器
  */
 async function playerContent(flag, id, vipFlags) {
-    return { url: id, parse: 0 };
-}
+    console.log('播放请求:', { flag, id });
 
-
-/* ---------------- 工具函数 ---------------- */
-
-/**
- * 提取视频列表
- */
-function parseVideoList(document) {
-    const vods = [];
-    const items = document.querySelectorAll('.grid-cols-3 > div');
-
-    items.forEach(item => {
-        const link = item.querySelector('a');
-        const img = item.querySelector('img');
-        const remarkDiv = item.querySelector('.absolute.right-0.bottom-0.left-0');
+    if (id.includes('@@')) {
+        const parts = id.split('@@');
         
-        let vod_id = '';
-        const href = link?.getAttribute('href') || '';
-        if (href.includes('/vd/')) {
-            vod_id = href.match(/\/vd\/(\d+)\.html/)?.[1] || '';
-        } else if (href.includes('.html')) {
-            vod_id = href.match(/(\d+)\.html/)?.[1] || '';
-        }
-        
-        const vod = {
-            vod_id: vod_id,
-            vod_name: link?.getAttribute('title') || '',
-            vod_pic: img?.getAttribute('data-original') || '',
-            vod_remarks: remarkDiv?.textContent?.trim() || '',
-        };
-        
-        vods.push(vod);
-    });
-    
-    return vods;
-}
-
-/**
- * 解析详情页
- */
-function parseDetailPage(doc, jsonData, vod_id) {
-    const vod_name = doc.querySelector('.module-info-heading h1')?.textContent?.trim() || '';
-    const vod_pic = doc.querySelector('img[data-original]')?.getAttribute('data-original') || '';
-    const vod_content = doc.querySelector('.module-info-content .line-clamp-5 p')?.textContent?.trim() || '';
-
-    const infoDivs = doc.querySelectorAll('.module-info-heading > div > div');
-    const vod_remark = Array.from(infoDivs).map(div => 
-        div.textContent.replace(/[\t\n]/g, '').trim()
-    ).filter(text => text).join(' / ');
-
-    const vod_play_from = jsonData.data?.map(item => item.site_name).filter(Boolean).join('$$$') || '';
-    const vod_play_url = jsonData.data?.map(item => 
-        item.vod_play_url?.replace(/\t+/g, '').trim()
-    ).filter(Boolean).join('$$$') || '';
-
-    const flexItems = doc.querySelectorAll('.module-info-content .flex');
-    let vod_director = '';
-    let vod_actor = '';
-    
-    flexItems.forEach(item => {
-        const span = item.querySelector('span');
-        if (span?.textContent.includes('导演')) {
-            const directorLinks = item.querySelectorAll('a');
-            if (directorLinks.length > 0) {
-                const vod_director = Array.from(directorLinks).map(link => link.textContent.trim());
+        if (parts.length >= 6) {
+            const lineName = parts[0];
+            const siteId = parts[1];
+            const mode = parts[2];
+            const mediaId = parts[3];
+            const nid = parts[4];
+            const rawUrl = parts[5];
+            
+            if (mode === 'direct') {
+                console.log('direct模式，直接播放:', rawUrl);
+                return { url: rawUrl, parse: 0 };
             }
-        } else if (span?.textContent.includes('主演')) {
-            const actorLinks = item.querySelectorAll('a');
-            if (actorLinks.length > 0) {
-                const vod_actor = Array.from(actorLinks).map(link => link.textContent.trim());
+
+            if (mode === '360parse' || mode === 'qqqparse') {
+                const finalUrl = `${baseUrl}/play/${mediaId}#sid=${siteId}&nid=${nid}`;
+                return { 
+                    parse: 1, 
+                    url: finalUrl, 
+                    header: { 'User-Agent': 'Mozilla/5.0' } 
+                };
             }
         }
-    });
-
-    return [{
-        vod_id: vod_id,
-        vod_name: vod_name,
-        vod_pic: vod_pic,
-        vod_director: vod_director,
-        vod_actor: vod_actor,
-        vod_remark: vod_remark,
-        vod_content: vod_content,
-        vod_play_from: vod_play_from,
-        vod_play_url: vod_play_url
-    }];
+    }
+    
+    const [vodFrom, ...urlParts] = id.split(':');
+    
+    if (vodFrom === 'http' || vodFrom === 'https') {
+        return { url: id, parse: 0 };
+    }
+    const url = urlParts.join(':');
+    return { url: url, parse: 0 };
 }
