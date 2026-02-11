@@ -99,7 +99,7 @@
 //{"key": "B站高清","name": "🎳┃B站高清┃影视","type": 3,"api": "./js/B站高清.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "兄弟影视","name": "🏄‍♂️┃兄弟影视┃TV","type": 3,"api": "./py/兄弟影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 	
-{"key":"MTV1","name":"🎙️易听音乐┃带歌词","type":3,"api":"csp_MusicGuard","style":{"type":"rect","ratio":1},"playerType":2,"searchable":1,"quickSearch":0,"changeable":0},	
+{"key":"MTV1","name":"🎙️┃易听音乐┃带歌词","type":3,"api":"csp_MusicGuard","style":{"type":"rect","ratio":1},"playerType":2,"searchable":1,"quickSearch":0,"changeable":0},	
 {"key": "网易云音乐","name": "♟️┃网易云音乐┃MV","type": 3,"api": "./py/网易云音乐.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "枫叶音乐","name": "👍┃枫叶音乐┃MV","type": 3,"api": "./json/枫叶音乐.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 {"key": "爱听音乐","name": "🥊┃爱听音乐┃MV","type": 3,"api": "./json/爱听音乐.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
@@ -541,6 +541,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
