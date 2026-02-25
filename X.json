@@ -267,7 +267,8 @@
 {"name": "🪅┃kakaxi「直播」","url": "https://kakaxi.indevs.in/ipv4.txt"},
 {"name": "🐰┃kakaxi「直播ipv6」","type":0,"url":"https://kakaxi.indevs.in/ipv6.m3u","playerType":1},
 {"name": "📚┃jun自建「直播tv」","type":0,"url":"http://192.168.1.15:3000","playerType":1},
-//{"name": "🍞️┃YanG-1989「直播tv」","type": 0,"url": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Migu.m3u","playerType":1},
+{"name": "🍞️┃tangstudio「直播tv」","type": 0,"url": "https://tangstudio.dpdns.org/m3u/juntv.m3u","playerType":1},
+{"name": "🍞️┃tangstudio「直播judygotv」","type": 0,"url": "https://tangstudio.dpdns.org/m3u/jjtv.m3u","playerType":1},
 	
 ##长青云盘直播
 {"name": "🛺┃大广东「长青」","type":0,"url":"https://cloud.7so.top/f/9QXOc2/jjtv.txt","ua": "","timeout": 10,"playerType": 1},
@@ -542,6 +543,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
