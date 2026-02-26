@@ -18,7 +18,8 @@
 {"key": "1荐片","name": "👮┃荐片┃影视","type": 3,"api": "./laozhang/荐片.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/zhang.jar"},
 {"key": "1apple","name": "👮┃苹果┃影视","type": 3,"api": "./laozhang/apple.js","style": {"type": "rect","ratio": 1.33},"changeable": 1,"jar":"./jar/zhang.jar"},
 
-	
+{"key":"韩国","name":"韩国","type":3,"api":"csp_XBPQ","jar":"./jar/xbpq.jar","ext":{"直接播放":"1","分类url":"https://sexkbj.com/category/{cateId}/page/{catePg}/","分类":"韩国$korean-bj#会员$premium#AffCA$afreecatv#韩国业余$korean-amateur","主页url":"https://sexkbj.com/","数组":"article&&</article>","标题":"a&&title","图片":"img&&src","链接":"a&&href","链接前缀":"https://sexkbj.com","搜索url":"https://sexkbj.com/?s={wd}","搜索数组":"article&&</article>","搜索标题":"a&&title","搜索图片":"img&&src","搜索链接":"a&&href","搜索链接前缀":"https://sexkbj.com","嗅探词":".m3u8"}},	
+
 {"key":"Lib","name":"🏈┃Libvio┃秒播","type":3,"api":"csp_LibvioGuard","searchable":1,"quickSearch":1,"changeable":1,"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt","from":"4k|auto"}},	
 //{"key": "及时雨PHP","name": "🌦️┃及时雨┃PHP","type": 4,"api": "https://diwu.de5.net/XPG/及时雨.php","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key":"爱看","name":"🤖┃机器人┃爱看","type":3,"api":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/dr_py/main/libs/drpy2.min.js","searchable":2,"quickSearch":1,"filterable":0,"ext":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/py/爱看机器人[虫].js"},
@@ -543,6 +544,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
