@@ -9,7 +9,7 @@ source_urls = [
     "https://raw.githubusercontent.com/alantang1977/jtv/refs/heads/main/网络收集.txt",
     "https://gitee.com/jin-xueling/lingl/raw/master/hu.txt",
     "https://raw.githubusercontent.com/develop202/migu_video/main/interface.txt",
-    "https://raw.githubusercontent.com/mursor1985/LIVE/refs/heads/main/iptv.m3u",
+    "http://pan.wdrjk.top/down.php/aad56aa7a7610097bc103077064f0bcb.txt",
     "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容",
     "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u",
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
