@@ -94,7 +94,7 @@
 //{"key": "黑木耳","name": "🌶️┃黑木耳┃秒播","type": 4,"api": "http://zhangqun66.com/225.php","style": {"type": "rect","ratio": 1.33},"changeable": 1}, 
 {"key":"原创","name":"🧧┃修罗┃影视","type":3,"api":"csp_YCyzGuard","timeout":15,"playerType":1,"searchable":1,"quickSearch":1,"changeable":1},
 //{"key":"白白","name":"🛋️┃素白┃秒播","type":3,"api":"csp_SbaibaiGuard","playerType":2,"searchable":1,"quickSearch":1,"changeable":1},
-{"key":"Bili","name":"🅱┃哔哔合集┃弹幕","type":3,"api":"csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://d.kstore.dev/download/15114/bilibili.txt"}},	
+//{"key":"Bili","name":"🅱┃哔哔合集┃弹幕","type":3,"api":"csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://d.kstore.dev/download/15114/bilibili.txt"}},	
 //{"key": "B站高清","name": "🎳┃B站高清┃影视","type": 3,"api": "./js/B站高清.js","style": {"type": "rect","ratio": 1.33},"changeable": 1},
 {"key": "兄弟影视","name": "🏄‍♂️┃兄弟影视┃TV","type": 3,"api": "./py/兄弟影视.py","searchable": 1,"quickSearch": 1,"changeable": 1,"filterable": 1,"timeout": 60},
 	
@@ -124,7 +124,7 @@
 {"key": "小苹果","name": "🗝️️️┃小苹果┃PY","type": 3,"api": "./py/小苹果.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "苹果","name": "🏍️️┃小小苹果┃PY","type": 3,"api": "https://cloud.7so.top/f/W76KID/小小苹果.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "4KVM","name": "🍿┃4K影视┃TV","type": 3,"api": "./py/4KVM.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
-{"key": "bili","name": "🏸┃bili┃TV","type": 3,"api": "./py/bili.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+//{"key": "bili","name": "🏸┃bili┃TV","type": 3,"api": "./py/bili.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "两个BT","name": "🥓┃两个BT┃TV","type": 3,"api": "./py/两个BT.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "4K影视","name": "📻┃4K影视┃TV","type": 3,"api": "./py/4K影视.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "LSYS","name": "🛠️┃电影猎手┃TV","type": 3,"api": "./py/LSYS.py","style": {"type": "rect","ratio": 1.33},"changeable": 1},
@@ -202,7 +202,8 @@
 {"key":"咕咕","name":"🦉咕咕┃动漫","type":3,"api":"csp_AppSxGuard","timeout":10,"searchable":1,"quickSearch":1,"changeable":1,"ext":"rfOX1voDIQhH8epBwpmIsuS/sSCZxc/l0mxkeoroQVYOelMAvX1kuYptSLB36YxEjVawS9p37Cgo"},
 {"key":"Dm84","name":"🚌巴士┃动漫","type":3,"api":"csp_Dm84Guard","timeout":10,"searchable":1,"quickSearch":1,"changeable":1},
 {"key":"Anime1","name":"🐾日本┃动漫","type": 3,"api": "csp_Anime1Guard","timeout":10,"searchable": 1,"quickSearch": 1,"changeable":1},
-
+{"key":"Bili","name":"🅱哔哔合集┃弹幕","type": 3,"api": "csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":1,"quickSearch":0,"changeable":0,"ext":{"json":"https://nos.netease.com/ysf/0075389dca9afadd4614e9713765ff17.txt"}},
+{"key":"Biliych","name":"🅱哔哔演唱会┃弹幕","type": 3,"api": "csp_BiliGuard","style":{"type":"rect","ratio":1.597},"searchable":0,"quickSearch":0,"changeable":0,"ext":{"json":"https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"}},
 {"key":"88","name":"⚽88┃看球","type":3,"api":"csp_Sir88Guard","timeout":10,"searchable":0,"changeable":0,"style":{"type":"list"}},
 {"key":"超全","name":"⚽超全┃看球","type":3,"api":"csp_ZbzGuard","searchable":0,"quickSearch":0,"changeable":0,"style":{"type":"list"},"ext":"uqGL1fpJNAUf8fdTwZCE5qSp+Q=="},
 {"key":"看球","name":"⚽手机┃看球","type":3,"api":"csp_KanqiuGuard","timeout":10,"searchable":0,"changeable":0,"style":{"type":"list"}},
@@ -542,6 +543,7 @@
     "ijk":[
         {"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
         {"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}]}
+
 
 
 
