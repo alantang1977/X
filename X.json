@@ -9,8 +9,8 @@
 {"key":"玩偶","name":"🥷‍玩偶┃4K🥷‍","type":3,"api":"csp_NewWoggGuard","searchable":1,"changeable":1},
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
-{"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "./jar/CatVodSpider.jar"},
-{"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
+{"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/jar/CatVodSpider.jar"},
+{"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/CatVodSpider.jar"},
 
 {"key": "袋鼠影视(JS)","name": "🛸┃袋鼠┃影视","type": 3,"api": "./js/袋鼠影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
