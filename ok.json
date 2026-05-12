@@ -12,12 +12,12 @@
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "247看(JS)","name": "🛸┃247看┃影视","type": 3,"api": "./js/247看.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "达达龟","name": "🛸┃达达龟┃影视","type": 3,"api": "./py/达达龟影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},      
-//{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
+{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
 {"key": "华视影院","name": "🛸┃华视┃影院","type": 4,"api": "http://zhangqun1818.serv00.net:5052/?sp=华视影院","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "枫叶","name": "🛸┃枫叶┃影视","type": 3,"api": "./py/枫叶影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 
 {"key":"豆","name":"🎁┃豆瓣预告┃影视","type": 3, "api": "csp_DouDouGuard","indexs":1,"searchable": 0,"quickSearch": 0,"filterable": 0},
-{"key": "guazi","name": "🥔┃瓜子影视┃秒播","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar":"./jar/dongli-spider.jar","ext": {}},	
+//{"key": "guazi","name": "🥔┃瓜子影视┃秒播","type": 3,"api": "csp_Guazi","searchable": 1,"changeable": 1,"jar":"./jar/dongli-spider.jar","ext": {}},	
 //{"key": "哔哩影视","name": "🌈┃哔哩哔哩┃影视","type": 3,"api": "csp_BiliPGC","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0,"jar":"https://gh-proxy.org/https://raw.githubusercontent.com/chitue/dongliTV/refs/heads/main/jar/dongli-spider.jar","style": {"type": "rect","ratio": 1.597},"ext": {"json": "./json/blys.bmp","cookie": ""}},
 //{"key": "Music24bit","name": "☕┃流行音乐┃无损","type": 3,"api": "csp_Music24bit","searchable": 1,"changeable": 1,"jar":"./jar/摸鱼.php","ext": {"categories": ["Cyberlume","周杰伦","汪苏泷","陈奕迅","张学友","薛之谦","林俊杰","李荣浩","王菲","邓紫棋","孙燕姿","刘德华","莫文蔚","陶喆","SHE","林忆莲","孙露","Taylor Swift","那英","i-dle","汪峰"]}},
 
