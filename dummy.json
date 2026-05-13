@@ -1,6 +1,6 @@
 {
 "spider":"https://oss4liview.moji.com/thd_file/2026/05/08/b216ded4a854a190ce9f6bd280aff779.jpg;md5;448a9f26f33109f6aa148971c3adab46","notice": "Welcome🎉", 
-"wallpaper":"https://imgs.catvod.com/","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
+"wallpaper":"https://imgs.catvod.com","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
 
   "sites": [
     {"key":"玩偶","name":"👽玩偶┃4K","type":3,"api":"csp_AweSomeGuard","searchable":1,"filterable":1,"changeable":1,"ext": {"sp": "Wogg"}, "timeout":30},
