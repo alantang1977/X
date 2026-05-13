@@ -14,11 +14,11 @@
 
 {"key": "袋鼠影视(JS)","name": "🛸┃袋鼠┃影视","type": 3,"api": "./js/袋鼠影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
-{"key": "247看(JS)","name": "🛸┃247看┃影视","type": 3,"api": "./js/247看.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
-{"key": "达达龟","name": "🛸┃达达龟┃影视","type": 3,"api": "./py/达达龟影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},      
-{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
 {"key": "华视影院","name": "🛸┃华视┃影院","type": 4,"api": "http://zhangqun1818.serv00.net:5052/?sp=华视影院","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "枫叶","name": "🛸┃枫叶┃影视","type": 3,"api": "./py/枫叶影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
+{"key": "达达龟","name": "🛸┃达达龟┃影视","type": 3,"api": "./py/达达龟影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},      
+{"key": "247看(JS)","name": "🛸┃247看┃影视","type": 3,"api": "./js/247看.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
+{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
 
 
 {"key":"Wexconfig","name":"🐮配置┃中心🐮","type":3,"api":"csp_WexConfigGuard","searchable":0,"changeable":0,"indexs":0},
