@@ -6,7 +6,7 @@
 //{"key":"NewDouBan","name":"🐮【公众号：王二小放牛娃】🐮","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
 //{"key":"Doubana","name":"🐮【更新日期:20260426】🐮","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
 //{"key":"Doubana","name":"⬇️【网盘类先扫码】⬇️","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
-{"key":"玩偶","name":"🥷‍玩偶┃4K🥷‍","type":3,"api":"csp_NewWoggGuard","searchable":1,"changeable":1},
+{"key":"玩偶","name":"🥷┃玩偶剧┃饭硬","type":3,"api":"csp_NewWoggGuard","searchable":1,"changeable":1},
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "https://cnb.cool/junchao.tang/jtv/-/git/raw/main/jar/CatVodSpider.jar"},
@@ -159,7 +159,7 @@
 ##来源TG收集
 {"name": "🐻┃Gather「IPTV」","type": 3,"url": "https://iptv.yang-1989.eu.org/m3u/Gather.m3u","epg":"https://epg.yang-1989.eu.org/epg.xml.gz","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
 {"name": "🌹┃AnboxTV 「直播」","type": 0,"url": "https://tv.anbox.ip-ddns.com/live","playerType":1},
-//{"name": "🐻┃Live「直播」","type": 3,"url": "https://live.yang-1989.eu.org/Live.m3u","ua": "okhttp/3.8.1","timeout": 10,"playerType": 2},
+{"name": "🐻┃Live「直播」","type": 3,"url": "https://gh-proxy.org/https://raw.githubusercontent.com/jn950/live/main/tv/pllive.txt","ua": "","timeout": 10,"playerType": 2},
 //{"name": "🐻┃myTV「香港」","type": 3,"url": "https://iptv.yang-1989.eu.org/m3u/myTV.m3u","epg":"https://epg.yang-1989.eu.org/epg.xml.gz","ua": "okhttp/3.8.1","playerType": 2},
 //{"name": "🐍┃港🇭🇰澳「直播」","type": 0,"ua": "okhttp","url": "http://ke.html-5.me//i/85261.txt"},
 //{"name": "🐍┃hs2026「直播」","type": 0,"ua": "okhttp","url": "https://gitee.com/hs2026/tv/raw/master/2026.txt"},
