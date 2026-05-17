@@ -19,7 +19,17 @@
 {"key": "达达龟","name": "🛸┃达达龟┃影视","type": 3,"api": "./py/达达龟影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},      
 {"key": "247看(JS)","name": "🛸┃247看┃影视","type": 3,"api": "./js/247看.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
-
+{
+"key": "wv_天天影院",
+"name": "天天影院[WV]",
+"api": "csp_WvSpider",
+"jar": "./jar/WvSpider.jar",
+"type": "3",
+"ext": "./js/天天影院.js",
+"searchable": 1,
+"filterable": 0,
+"switchable": 0
+},
 {"key":"Wexconfig","name":"🐮配置┃中心🐮","type":3,"api":"csp_WexConfigGuard","searchable":0,"changeable":0,"indexs":0},
 {"key":"二小","name":"🧸二小┃4K🧸","type":3,"api":"csp_NewErXiaoGuard","searchable":1,"changeable":1},
 {"key":"NewZhiZhen","name":"🥷至臻┃4K🥷","type":3,"api":"csp_NewZhiZhenGuard","searchable":1,"changeable":1},
