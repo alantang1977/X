@@ -3,28 +3,26 @@
 "wallpaper":"https://imgs.catvod.com","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/yellow.gif",
 
 "sites":[
-{"key":"玩偶","name":"🧸┃玩偶社┃饭硬","type":3,"api":"csp_NewWoggGuard","searchable":1,"changeable":1},
+{"key":"玩偶","name":"🧸┃玩偶社┃饭硬","type":3,"api":"csp_Wogg","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"site":["https://wogg.xxooo.cf","https://woggpan.888484.xyz","https://wogg.333232.xyz","http://woggpan.xxooo.cf","https://www.wogg.one"]},"timeout":60},
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 
-
+{"key":"Nostr","name":"🍅┃Nostr┃推荐","type":3,"api":"csp_Nostr","homePage":"https://www.252035.xyz/xs/tvbox/nostr.html"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"七味","name": "🐼️┃七味┃影视","type": 3,"api": "./py/七味.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"农民","name": "🎠┃农民┃影视","type": 3,"api": "./py/农民.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 
-{"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "./jar/CatVodSpider.jar"},
+//{"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "./jar/CatVodSpider.jar"},
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 
 {"key": "袋鼠影视(JS)","name": "🛸┃袋鼠┃影视","type": 3,"api": "./js/袋鼠影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
-{"key": "华视影院","name": "🛸┃华视┃影院","type": 4,"api": "http://zhangqun1818.serv00.net:5052/?sp=华视影院","searchable": 1,"quickSearch": 1,"filterable": 1},
+//{"key": "华视影院","name": "🛸┃华视┃影院","type": 4,"api": "http://zhangqun1818.serv00.net:5052/?sp=华视影院","searchable": 1,"quickSearch": 1,"filterable": 1},
 {"key": "枫叶","name": "🛸┃枫叶┃影视","type": 3,"api": "./py/枫叶影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "达达龟","name": "🛸┃达达龟┃影视","type": 3,"api": "./py/达达龟影院.py","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},      
 {"key": "247看(JS)","name": "🛸┃247看┃影视","type": 3,"api": "./js/247看.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
-{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
-	
-{"key":"玩偶","name":"玩偶｜4K","type":3,"api":"csp_Wogg","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"site":["https://wogg.xxooo.cf","https://woggpan.888484.xyz","https://wogg.333232.xyz","http://woggpan.xxooo.cf","https://www.wogg.one"]},"timeout":60},
-{"key":"Nostr","name":"Nostr推荐","type":3,"api":"csp_Nostr","homePage":"https://www.252035.xyz/xs/tvbox/nostr.html"},
+//{"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
+
 {"key":"Nostr测试","name":"测试","type":3,"api":"csp_Nostr","homePage":"https://www.252035.xyz/xs/tvbox/test.html"},
 {"key":"豆瓣","name":"豆瓣｜首页","type":3,"api":"csp_Douban","searchable":0},
 {"key":"配置中心","name":"配置｜中心","type":3,"api":"csp_Config","searchable":0,"changeable":0,"indexs":0,"style":{"type":"rect","ratio":1.597}},
