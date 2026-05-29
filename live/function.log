@@ -1,2 +1,2 @@
-2026-05-25 13:12:22,658 - ERROR - url: https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/%E6%B8%AF%E5%8F%B0%E5%A4%A7%E9%99%86%E6%97%A018%E5%86%85%E5%AE%B9'
-2026-05-25 13:12:24,163 - ERROR - url: https://gitee.com/jin-xueling/lingl/raw/master/hu.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/jin-xueling/lingl/raw/master/hu.txt'
+2026-05-29 13:02:30,702 - ERROR - url: https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/%E6%B8%AF%E5%8F%B0%E5%A4%A7%E9%99%86%E6%97%A018%E5%86%85%E5%AE%B9'
+2026-05-29 13:02:32,575 - ERROR - url: https://gitee.com/jin-xueling/lingl/raw/master/hu.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/jin-xueling/lingl/raw/master/hu.txt'
