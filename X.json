@@ -22,13 +22,25 @@
 {"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
 //{"key": "天天影院","name": "🛸┃天天┃影视","type": 3,"api": "./js/天天影院.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"jar": "./jar/WvSpider.jar"},
 
-{"key":"Nostr","name": "🍅┃Nostr┃推荐","type":3,"api":"csp_Nostr","homePage":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/main/html/nostr.html"},
-
 {"key":"Wexconfig","name":"🐮配置┃中心🐮","type":3,"api":"csp_WexConfigGuard","searchable":0,"changeable":0,"indexs":0},
 {"key":"二小","name":"🧸二小┃4K🧸","type":3,"api":"csp_NewErXiaoGuard","searchable":1,"changeable":1},
 {"key":"NewZhiZhen","name":"🥷至臻┃4K🥷","type":3,"api":"csp_NewZhiZhenGuard","searchable":1,"changeable":1},
 {"key":"NewGuanYing","name":"🥷观影┃4K🥷","type":3,"api":"csp_NewGuanYingGuard","searchable":1,"changeable":1,"timeout":120},
 
+##只适合https://t.me/webhtv的APP
+{"key":"Nostr","name": "🍅┃Nostr┃推荐","type":3,"api":"csp_Nostr","homePage":"https://d.kstore.dev/download/15114/html/nostr.html"},
+{"key":"FY","name":"🏄‍♂️┃枫叶┃影视","type":3,"api":"csp_fwngye","homePage":"https://d.kstore.dev/download/15114/html/枫叶影院.html"},
+{"key":"CZ","name":"👨‍🏭┃厂长┃资源","type":3,"api":"csp_cz","homePage":"https://d.kstore.dev/download/15114/html/厂长.html"},
+{"key":"WB","name":"🪶┃歪比┃巴卜","type":3,"api":"csp_wb","homePage":"https://d.kstore.dev/download/15114/html/歪比.html"},
+{"key":"TV52","name":"📺┃52TV┃体育","type":3,"api":"csp_52tv","homePage":"https://d.kstore.dev/download/15114/html/52tv.html"},
+{"key":"Emby","name":"🎬┃Emby┃推荐","type":3,"api":"csp_Emby","homePage":"https://d.kstore.dev/download/15114/html/emby.html"},
+{"key":"Fish","name":"🐟┃FISH┃TMDB","type":3,"api":"csp_Fish","homePage":"https://d.kstore.dev/download/15114/html/fish.html"},
+{"key":"Libvio","name":"📚┃LIBVIO┃影视","type":3,"api":"csp_Libvio","homePage":"https://d.kstore.dev/download/15114/html/libvio.html"},
+{"key":"MissAV","name":"🔞┃MissAV┃番号","type":3,"api":"csp_MissAV","homePage":"https://d.kstore.dev/download/15114/html/missav.html"},
+{"key":"Meizi","name":"🍓┃妹子┃发电站","type":3,"api":"csp_Meizi","homePage":"https://d.kstore.dev/download/15114/html/妹子.html"}
+{"key":"TQ","name":"🍩┃甜圈┃短剧","type":3,"api":"csp_TQ","homePage":"https://d.kstore.dev/download/15114/html/WEb.html"},
+{"key":"WhosTV","name":"🔍┃WhosTV┃番号","type":3,"api":"csp_WhosTV","homePage":"https://d.kstore.dev/download/15114/html/whostv.html"},
+	
 //{"key":"NewJuTou","name":"🥷剧透┃4K🥷","type":3,"api":"csp_NewJuTouGuard","searchable":1,"changeable":1},
 {"key":"NewHuBan","name":"🥷虎斑┃4K🥷","type":3,"api":"csp_NewHuBanGuard","searchable":1,"changeable":1},
 {"key":"NewShaYang","name":"🥷傻样┃4K🥷","type":3,"api":"csp_NewShaYangGuard","searchable":1,"changeable":1},
