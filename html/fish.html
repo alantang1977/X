@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FISH.TMDB</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans SC',sans-serif;line-height:1.5}
+html:not(.fm-native),html:not(.fm-native) body{background:#0a0a0a;color:#fff}
+:root{--bg:#0a0a0a;--card:#000;--accent:#d08700;--accent-hover:#e09900;--text:#fff;--text2:#919EAB;--text3:#555;--line:rgba(255,255,255,.08);--radius:6px}
+body{padding-bottom:40px}
+
+/* HDHive-style header - minimal */
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 10px;border-bottom:1px solid var(--line)}
+.hdr .lgo{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.hdr .lgo .a{color:var(--accent)}
+
+/* search bar */
+.sr{padding:12px 18px;border-bottom:1px solid var(--line)}
+.sr .sb{display:flex;gap:8px;max-width:480px;margin:0 auto}
+.sr input{flex:1;height:38px;padding:0 14px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);font-size:14px;outline:none;transition:border .2s}
+.sr input:focus{border-color:var(--accent)}
+.sr input::placeholder{color:var(--text3)}
+.sr button{height:38px;padding:0 18px;border-radius:var(--radius);border:none;background:var(--accent);color:#000;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .15s}
+.sr button:active{transform:scale(.96)}
+
+/* category pills */
+.cat{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px;border-bottom:1px solid var(--line)}
+.cat-i{padding:4px 12px;border-radius:4px;background:rgba(255,255,255,.04);color:var(--text2);font-size:13px;cursor:pointer;transition:all .15s;border:1px solid transparent}
+.cat-i:hover{background:rgba(255,255,255,.08);color:var(--text)}
+.cat-i.a{background:var(--accent);color:#000;font-weight:600}
+.cat-i.a:hover{background:var(--accent-hover)}
+
+/* movie grid */
+#ct{max-width:1080px;margin:0 auto;padding:16px}
+.sc-t{font-size:14px;color:var(--text2);margin-bottom:12px;padding-left:2px}
+.gd{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+@media(min-width:600px){.gd{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}}
+@media(min-width:900px){.gd{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}}
+
+/* card - HDHive style: clean, dark, with rating badge */
+.gc{background:var(--card);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative}
+.gc:hover{transform:scale(1.03);box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:2}
+
+/* poster */
+.gc .th{position:relative;aspect-ratio:2/3;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center}
+.gc .th img{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;transition:transform .3s}
+.gc:hover .th img{transform:scale(1.05)}
+.gc .th .no{color:var(--text3);font-size:14px;z-index:1;text-align:center;padding:10px;word-break:break-all;line-height:1.3}
+
+/* HDHive-style rating badge */
+.gc .rt{position:absolute;top:6px;right:6px;background:rgba(0,0,0,.75);color:var(--accent);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;line-height:1.4;z-index:3;backdrop-filter:blur(4px)}
+.gc .rt svg{vertical-align:middle;margin-right:2px}
+
+/* resolution badge - HDHive: shows on image */
+.gc .res{position:absolute;bottom:6px;left:6px;display:flex;gap:3px;z-index:3;flex-wrap:wrap}
+.gc .res span{font-size:10px;padding:1px 5px;border-radius:2px;font-weight:600;line-height:1.4;background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
+
+/* info section */
+.gc .if{padding:8px 10px}
+.gc .tt{font-size:13px;font-weight:500;color:var(--text);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;line-height:1.4;margin-bottom:2px}
+.gc .mt{font-size:11px;color:var(--text3);display:flex;gap:6px;align-items:center}
+.gc .mt .yr{color:var(--text3)}
+.gc .mt .gn{padding:0 4px;border-radius:2px;background:rgba(255,255,255,.06);font-size:10px;color:var(--text2);white-space:nowrap}
+
+/* pagination - HDHive: minimal */
+.pg{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:20px;padding:10px 0}
+.pg button{height:34px;padding:0 14px;border-radius:4px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text2);font-size:13px;cursor:pointer;transition:all .15s;font-weight:500}
+.pg button:hover:not(:disabled){background:rgba(255,255,255,.08);color:var(--text);border-color:var(--accent)}
+.pg button:disabled{opacity:.3;cursor:default}
+.pg .pi{font-size:13px;color:var(--text2);font-weight:500}
+
+/* detail overlay - HDHive: clean modal */
+.dov{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.8);overflow-y:auto;padding:20px}
+.dov.o{display:block}
+.dp{max-width:640px;margin:40px auto;background:var(--card);border-radius:8px;border:1px solid var(--line);overflow:hidden;position:relative}
+
+/* HDHive-style backdrop header */
+.dp-bg{position:relative;width:100%;height:200px;overflow:hidden;background:#111}
+.dp-bg img{width:100%;height:100%;object-fit:cover}
+.dp-bg .msk{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,var(--card))}
+
+/* info section below backdrop */
+.dp-bd{padding:16px 18px}
+.dp-h{display:flex;gap:16px}
+.dp-h .dcov{width:100px;height:150px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-top:-80px;position:relative;z-index:2;border:2px solid var(--card);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+.dp-info{flex:1;min-width:0}
+.dct{font-size:17px;font-weight:700;margin-bottom:2px}
+.dc-en{font-size:12px;color:var(--text2);margin-bottom:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dcm{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.dcm .t{padding:1px 8px;border-radius:3px;font-size:11px;background:rgba(255,255,255,.06);color:var(--text2)}
+.dcl,.dd{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px;max-height:100px;overflow-y:auto}
+
+/* Cast avatars - HDHive style */
+.cast{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;margin-bottom:8px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.cast::-webkit-scrollbar{height:4px}
+.cast::-webkit-scrollbar-thumb{background:var(--line);border-radius:2px}
+.cast-it{flex-shrink:0;text-align:center;width:56px}
+.cast-av{width:48px;height:48px;border-radius:50%;object-fit:cover;margin:0 auto 4px;background:#222;display:block;border:2px solid var(--line);transition:border-color .2s}
+.cast:hover .cast-av{border-color:var(--accent)}
+.cast-nm{font-size:11px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.2}
+.cast-rl{font-size:10px;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cast-iv{width:48px;height:48px;border-radius:50%;margin:0 auto 4px;background:linear-gradient(135deg,#222,#333);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--text3);line-height:1.2;text-align:center;padding:4px;word-break:break-all}
+.eps{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;max-height:240px;overflow-y:auto;padding:2px}
+.eps .sl{width:100%;font-size:12px;color:var(--accent);margin:4px 0 2px;font-weight:600;letter-spacing:.3px}
+.ep{padding:4px 12px;border-radius:4px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.ep:hover,.ep:focus-visible{border-color:var(--accent);background:rgba(208,135,0,.1);color:var(--accent)}
+.dcl{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(0,0,0,.6);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;z-index:5}
+.dcl:hover{background:rgba(0,0,0,.8)}
+
+.lg,.er{text-align:center;padding:60px 20px;font-size:14px}
+.lg{color:var(--text3)}.er{color:var(--text2)}
+
+@media(max-width:480px){
+  .gd{grid-template-columns:repeat(3,1fr);gap:8px}
+  .gc .if{padding:6px 8px}
+  .gc .tt{font-size:12px}
+  .dp-bg{height:160px}
+  .dp-h .dcov{width:80px;height:120px}
+}
+</style>
+</head>
+<body>
+
+<!-- HDHive-style header -->
+<div class="hdr">
+  <div class="lgo"><span class="a">FISH</span>·TMDB</div>
+</div>
+
+<!-- search -->
+<div class="sr">
+  <div class="sb">
+    <input id="q" type="text" placeholder="搜索影片..." maxlength="50" />
+    <button id="sbtn">搜索</button>
+  </div>
+</div>
+
+<div id="catBar" class="cat"></div>
+<div id="ct"><div class="lg">加载中...</div></div>
+
+<!-- detail overlay -->
+<div class="dov" id="dov">
+  <div class="dp">
+    <button class="dcl" id="dcl">✕</button>
+    <div class="dp-bg" id="dp-bg">
+      <img id="bg-img" src="" alt="" />
+      <div class="msk"></div>
+    </div>
+    <div class="dp-bd">
+      <div class="dp-h">
+        <img class="dcov" id="dcov" src="" alt="" />
+        <div class="dp-info">
+          <div class="dct" id="dct"></div>
+          <div class="dc-en" id="dc-en"></div>
+          <div class="dcm" id="dcm"></div>
+        </div>
+      </div>
+      <div class="dd" id="dd"></div>
+      <div class="cast" id="cast"></div>
+      <div class="eps" id="eps"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var PROXY = '/shoufa_api';
+var state = { catId: '0', page: 1, cats: [] };
+
+function esc(s){if(typeof s==='number') return String(s); return typeof s!=='string'?'':s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function $id(i){return document.getElementById(i);}
+function _fm(){return new Promise(function(r){if(window.fm) return r(window.fm);var t=0;(function c(){if(window.fm) return r(window.fm);if(++t>50) return r(null);setTimeout(c,100);})();});}
+
+function apig(p){return fetch(PROXY+'/'+p).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text();}).then(function(t){try{return JSON.parse(t);}catch(e){return {_error:'JSON解析失败: '+t.substring(0,100)};}});}
+function apip(p,d){var fd=new URLSearchParams();for(var k in d)fd.append(k,d[k]);return fetch(PROXY+'/'+p,{method:'POST',body:fd}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text();}).then(function(t){try{return JSON.parse(t);}catch(e){return {_error:'JSON解析失败: '+t.substring(0,100)};}});}
+
+/* TMDB proxy for poster covers */
+function getCover(name){
+  return fetch(PROXY+'/douban_cover?name='+encodeURIComponent(name)).then(function(r){return r.json();}).then(function(d){return d.img||null;})['catch'](function(){return null;});
+}
+
+/* resolution color */
+function resColor(r){
+  r=(r||'').toUpperCase();
+  if(r==='4K') return '#f44';
+  if(r==='2K') return '#ce93d8';
+  return '#4fc3f7';
+}
+
+/* render a card HTML */
+function cardHTML(v){
+  var im=v.vod_pic||'',nm=v.vod_name||'',id=v.vod_id||'';
+  var rating=v.vod_score||v.tmdb_rating||'';
+  var res=v.video_resolution||'';
+  var year=v.vod_year||'';
+  var cls=v.vod_class||'';
+  var h='<div class="gc" tabindex="0" data-id="'+esc(id)+'" data-name="'+esc(nm)+'" data-pic="'+esc(im)+'">';
+  h+='<div class="th">';
+  /* if no poster, immediately try TMDB via a named data attribute + onload */
+  var src = im || 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+  h+='<img src="'+esc(src)+'" alt="" loading="lazy" onerror="this.style.display=\'none\';var n=this.parentNode.querySelector(\'.no\');if(n)n.style.display=\'block\';var c=this.closest(\'.gc\');if(c&&c.getAttribute(\'data-name\')){var p=this.parentNode;fetch(\'/shoufa_api/douban_cover?name=\'+encodeURIComponent(c.getAttribute(\'data-name\'))).then(function(r){return r.json();}).then(function(d){if(d.img){var ti=new Image();ti.onload=function(){p.querySelector(\'img\').src=d.img;p.querySelector(\'img\').style.display=\'\';var n=p.querySelector(\'.no\');if(n)n.style.display=\'none\';};ti.src=d.img;}})}" />';
+  h+='<div class="no" style="display:'+(im?'none':'block')+'">'+esc(nm)+'</div>';
+  /* HDHive-style rating badge */
+  if(rating) h+='<div class="rt">'+esc(rating)+'</div>';
+  /* resolution badges on poster */
+  if(res){
+    var parts=res.split(',').filter(Boolean).slice(0,3);
+    if(parts.length){
+      h+='<div class="res">';
+      for(var ri=0;ri<parts.length;ri++){
+        var r=parts[ri].trim();
+        h+='<span style="color:'+resColor(r)+'">'+esc(r)+'</span>';
+      }
+      h+='</div>';
+    }
+  }
+  /* remarks badge */
+  var rm = v.vod_remarks||'';
+  if(rm && !res) h+='<div class="res"><span style="color:#919EAB;font-size:10px;background:rgba(0,0,0,.7)">'+esc(rm)+'</span></div>';
+  h+='</div>';
+  h+='<div class="if"><div class="tt">'+esc(nm)+'</div><div class="mt">';
+  if(year) h+='<span class="yr">'+esc(year)+'</span>';
+  if(cls) h+='<span class="gn">'+esc(cls.split(',')[0])+'</span>';
+  h+='</div></div></div>';
+  return h;
+}
+
+function loadHome(){
+  var el=$id('ct'); el.innerHTML='<div class="lg">加载中...</div>';
+  apig('init').then(function(d){
+    if(d._error){el.innerHTML='<div class="er">'+esc(d._error)+'</div>';return;}
+    var cats=d.type_list||[]; state.cats=cats;
+    var ch='<div class="cat-i a" data-tid="0">推荐</div>';
+    for(var i=0;i<cats.length;i++){if(cats[i].type_id>0&&cats[i].type_name)ch+='<div class="cat-i" data-tid="'+cats[i].type_id+'">'+esc(cats[i].type_name)+'</div>';}
+    $id('catBar').innerHTML=ch;
+    document.querySelectorAll('.cat-i').forEach(function(c){c.onclick=function(){document.querySelectorAll('.cat-i').forEach(function(x){x.classList.remove('a');});this.classList.add('a');var tid=this.getAttribute('data-tid');state.catId=tid;state.page=1;if(tid==='0')loadHome();else loadCategory(tid,1);};});
+    var allVds=[];
+    for(var i=0;i<cats.length;i++){var cr=cats[i].recommend_list||[];for(var j=0;j<cr.length;j++)allVds.push(cr[j]);}
+    if(!allVds.length)allVds=d.recommend_list||[];
+    renderVods(allVds,9999,'推荐');
+  })['catch'](function(e){el.innerHTML='<div class="er">请求失败: '+esc(e.message||e)+'</div>';});
+}
+
+function loadCategory(tid,pg){
+  var el=$id('ct');el.innerHTML='<div class="lg">加载中...</div>';
+  apip('category',{type_id:tid,page:pg,area:'全部',sort:'最新','class':'全部',year:'全部',lang:'全部'}).then(function(d){
+    if(d._error){el.innerHTML='<div class="er">加载失败</div>';return;}
+    renderVods(d.recommend_list||[],9999,'');
+  })['catch'](function(){el.innerHTML='<div class="er">加载失败</div>';});
+}
+
+function renderVods(vods,total,title){
+  var el=$id('ct');
+  if(!vods||!vods.length){el.innerHTML='<div class="er">暂无数据</div>';return;}
+  var h=title?'<div class="sc-t">'+esc(title)+'</div>':'';
+  h+='<div class="gd">';
+  for(var i=0;i<vods.length;i++) h+=cardHTML(vods[i]);
+  h+='</div>';
+  h+='<div class="pg"><button id="pp"'+(state.page<=1?'disabled':'')+'>‹ 上一页</button><span class="pi">'+state.page+'</span><button id="pn"'+(vods.length<20?'disabled':'')+'>下一页 ›</button></div>';
+  el.innerHTML=h;
+  el.querySelectorAll('.gc').forEach(function(c){c.onclick=function(){openDetail(c.getAttribute('data-id'),c.getAttribute('data-name'),c.getAttribute('data-pic'));};c.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();c.onclick();}};});
+  var pp=$id('pp'),pn=$id('pn');
+  if(pp)pp.onclick=function(){state.page--;navPage();};
+  if(pn)pn.onclick=function(){state.page++;navPage();};
+  /* Load TMDB covers for cards without poster */
+  el.querySelectorAll('.gc').forEach(function(c){
+    var nm=c.getAttribute('data-name'),ie=c.querySelector('.th img'),op=c.getAttribute('data-pic');
+    if(nm&&ie&&!op) getCover(nm).then(function(img){if(img){ie.src=img;ie.style.display='';var n=c.querySelector('.no');if(n)n.style.display='none';}});
+  });
+}
+
+function navPage(){if(state.catId==='0')loadHome();else loadCategory(state.catId,state.page);}
+
+function openDetail(vodId,name,pic){
+  $id('dct').textContent=name||'加载中...';
+  $id('dc-en').textContent='';
+  $id('dcov').src=pic||'';
+  $id('bg-img').src=pic||'';
+  $id('dcm').innerHTML='';
+  $id('dd').textContent='加载中...';
+  $id('cast').innerHTML='';
+  $id('eps').innerHTML='';
+  $id('dov').classList.add('o');
+  $id('dov').scrollTop=0;
+  apip('detail',{vod_id:vodId}).then(function(d){
+    if(d._error||!d.vod){$id('dd').textContent='获取详情失败';return;}
+    var info=d.vod;
+    $id('dct').textContent=info.vod_name||name;
+    // Hide pinyin-like English names (all lowercase, possibly with digits)
+    var en = info.vod_en||'';
+    if(en && !/^[A-Z]/.test(en) && !/[A-Z]{2,}/.test(en) && !/\s/.test(en)){
+      en = ''; // treat as pinyin, hide it
+    }
+    $id('dc-en').textContent=en;
+    if(info.vod_pic){
+      $id('dcov').src=info.vod_pic;
+      $id('bg-img').src=info.vod_pic;
+    }
+    var desc = info.vod_content||'暂无简介';
+    $id('dd').textContent=desc.replace(/&nbsp;/g,'').replace(/^\s+/,'');
+    var yr=info.vod_year||'',ar=info.vod_area||'',cl=info.vod_class||'';
+    var mh='';
+    if(yr) mh+='<span class="t">'+esc(yr)+'</span>';
+    if(ar) mh+='<span class="t">'+esc(ar)+'</span>';
+    if(cl) mh+='<span class="t">'+esc(cl)+'</span>';
+    if(info.vod_director) mh+='<span class="t">导演: '+esc(info.vod_director.substring(0,30))+'</span>';
+    if(info.vod_actor) mh+='<span class="t">'+esc(info.vod_actor.substring(0,40))+'</span>';
+    if(!mh) mh='<span class="t">暂无信息</span>';
+    $id('dcm').innerHTML=mh;
+    /* Load TMDB cast headshots */
+    var actorStr = info.vod_actor||'';
+    if(actorStr){
+      fetch(PROXY+'/cast?name='+encodeURIComponent(info.vod_name||name)+'&actors='+encodeURIComponent(actorStr))
+        .then(function(r){return r.json();}).then(function(d){
+          var cast = d.cast||[];
+          if(cast.length){
+            var ch='';
+            for(var ci=0;ci<cast.length;ci++){
+              var cp=cast[ci];
+              ch+='<div class="cast-it">';
+              if(cp.photo){
+                ch+='<img class="cast-av" src="'+esc(cp.photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\';this.parentNode.innerHTML=\'<div class=\\\'cast-iv\\\'>'+esc(cp.name.charAt(0))+'</div>\'" />';
+              } else {
+                ch+='<div class="cast-iv">'+esc(cp.name.charAt(0)||'?')+'</div>';
+              }
+              ch+='<div class="cast-nm">'+esc(cp.name)+'</div>';
+              ch+='<div class="cast-rl">'+esc(cp.role||'')+'</div></div>';
+            }
+            $id('cast').innerHTML=ch;
+          }
+        })['catch'](function(){});
+    }
+    var pl=d.vod_play_list||[];
+    pl.sort(function(a,b){var aS=(a.player_info&&a.player_info.show||'').toLowerCase(),bS=(b.player_info&&b.player_info.show||'').toLowerCase();function pr(s){if(s.indexOf('4k')>=0)return 1;if(s.indexOf('k')>=0)return 2;if(s.indexOf('独家')>=0)return 3;if(s.indexOf('秒播')>=0)return 4;if(s.indexOf('自建')>=0)return 5;if(s.indexOf('蓝光')>=0)return 6;if(s.indexOf('专线')>=0)return 7;return 8;}return pr(aS)-pr(bS);});
+    if(pl.length>0){
+      var eh='';
+      for(var si=0;si<pl.length;si++){
+        var pli=pl[si],show=(pli.player_info&&pli.player_info.show)||'线路'+(si+1),pk=(pli.player_info&&pli.player_info.parse)||'';
+        eh+='<div class="sl">'+esc(show)+'</div>';
+        var ur=pli.urls||[];
+        for(var ui=0;ui<ur.length;ui++){
+          var u=ur[ui],epName=u.name||'第'+(ui+1)+'集',ru=u.url||'',tk=u.token||'';
+          eh+='<div class="ep" tabindex="0" data-u="'+esc(ru)+'" data-pk="'+esc(pk)+'" data-tk="'+esc(tk)+'">'+esc(epName)+'</div>';
+        }
+      }
+      $id('eps').innerHTML=eh;
+      document.querySelectorAll('.ep').forEach(function(ep){ep.onclick=function(){doPlay(this.getAttribute('data-u'),this.textContent,this.getAttribute('data-pk'));};});
+    }
+  })['catch'](function(){$id('dd').textContent='请求失败';});
+}
+
+function doPlay(url,title,pk){
+  if(!url)return;
+  if(url.indexOf('.m3u8')>0||url.indexOf('.mp4')>0||url.indexOf('.mkv')>0){_fm().then(function(f){if(f&&f.play)f.play(url,title||'',{});else window.open(url);});return;}
+  if(pk){
+    if(pk.indexOf('http')===0){
+      var fd=new URLSearchParams();fd.append('parse_api',pk);fd.append('url',url);
+      fetch(PROXY+'/parse_ext',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(d){if(d.url){_fm().then(function(f){if(f&&f.play)f.play(d.url,title||'',{});});}});
+    } else {
+      var fd=new URLSearchParams();fd.append('parse_api',pk);fd.append('url',url);
+      fetch(PROXY+'/parse',{method:'POST',body:fd}).then(function(r){return r.json();}).then(function(d){if(d.url){_fm().then(function(f){if(f&&f.play)f.play(d.url,title||'',{});});}});
+    }
+    return;
+  }
+  _fm().then(function(f){if(f&&f.play)f.play(url,title||'',{});else window.open(url);});
+}
+
+function doSearch(){
+  var q=$id('q').value.trim();if(!q)return;
+  var el=$id('ct');el.innerHTML='<div class="lg">搜索中...</div>';
+  apip('search',{keywords:q,page:'1',type_id:'0'}).then(function(d){
+    if(d._error){el.innerHTML='<div class="er">搜索失败</div>';return;}
+    var vods=d.search_list||d.recommend_list||[];
+    if(!vods.length){el.innerHTML='<div class="er">未找到 "'+esc(q)+'" 的结果</div><div style="text-align:center;margin-top:16px"><button onclick="loadHome()" style="padding:8px 20px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text2);border-radius:4px;cursor:pointer;font-size:13px">← 返回首页</button></div>';return;}
+    state.catId='search';
+    var h='<div class="sc-t">"'+esc(q)+'" 的搜索结果</div><div class="gd">';
+    for(var i=0;i<vods.length;i++) h+=cardHTML(vods[i]);
+    h+='</div>';
+    el.innerHTML=h;
+    el.querySelectorAll('.gc').forEach(function(c){c.onclick=function(){openDetail(c.getAttribute('data-id'),c.getAttribute('data-name'),c.getAttribute('data-pic'));};});
+    el.querySelectorAll('.gc').forEach(function(c){
+      var nm=c.getAttribute('data-name'),ie=c.querySelector('.th img'),op=c.getAttribute('data-pic');
+      if(nm&&ie&&!op) getCover(nm).then(function(img){if(img){ie.src=img;ie.style.display='';var n=c.querySelector('.no');if(n)n.style.display='none';}});
+    });
+  })['catch'](function(){el.innerHTML='<div class="er">搜索请求失败</div>';});
+}
+
+$id('sbtn').onclick=doSearch;
+$id('q').onkeydown=function(e){if(e.key==='Enter')doSearch();};
+$id('dcl').onclick=function(){$id('dov').classList.remove('o');};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')$id('dov').classList.remove('o');});
+$id('dov').onclick=function(e){if(e.target===this)this.classList.remove('o');};
+loadHome();
+})();
+</script>
+</body>
+</html>

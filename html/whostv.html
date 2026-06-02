@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>WhosTV - 番号搜索</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;min-height:100%;background:transparent;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;color:#eaeef2;line-height:1.5}
+html:not(.fm-native),html:not(.fm-native) body{background:#0a0a0f}
+:root{--panel:rgba(20,22,30,.75);--panel-soft:rgba(20,22,30,.55);--panel-strong:rgba(12,14,20,.88);--accent:#ff6b4a;--accent2:#f5a623;--text:#eaeef2;--text2:#8892a4;--text3:#5a6478;--line:rgba(255,255,255,.07);--radius:10px;--radius-sm:6px;--shadow:0 4px 24px rgba(0,0,0,.5)}
+body{padding-bottom:40px}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:100;background:var(--panel-strong);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:10px 14px;display:flex;align-items:center;gap:10px}
+.header .logo{font-size:18px;font-weight:700;white-space:nowrap}
+.header .logo span:first-child{color:var(--accent)}
+
+/* SEARCH ROW */
+.search-row{padding:10px 14px;background:var(--panel-soft);border-bottom:1px solid var(--line)}
+.search-row .search-box{display:flex;gap:8px;max-width:600px;margin:0 auto}
+.search-row input{flex:1;padding:10px 14px;border-radius:var(--radius-sm);border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font-size:14px;outline:none}
+.search-row input:focus{border-color:var(--accent)}
+.search-row input::placeholder{color:var(--text3)}
+.search-row button{padding:10px 18px;border-radius:var(--radius-sm);border:none;background:var(--accent);color:#fff;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+.search-row button:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.search-row button:active{transform:scale(.96)}
+
+/* NAV */
+.nav{display:flex;padding:0 14px;background:var(--panel-soft);border-bottom:1px solid var(--line);overflow-x:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav-item{padding:10px 16px;font-size:13px;color:var(--text2);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;flex-shrink:0;user-select:none}
+.nav-item:focus-visible{outline:2px solid var(--accent2);outline-offset:-2px;border-radius:2px}
+.nav-item.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+
+/* CONTENT */
+#content{max-width:1200px;margin:0 auto;padding:14px}
+
+/* SKELETON */
+.skel{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:16px}
+.skel-c{aspect-ratio:16/10;border-radius:var(--radius);background:var(--panel);position:relative;overflow:hidden}
+.skel-c::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:s 1.5s infinite}
+@keyframes s{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.gcard{background:var(--panel);border-radius:var(--radius);overflow:hidden;cursor:pointer;border:1px solid var(--line);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .2s}
+.gcard:hover,.gcard:focus-visible{transform:translateY(-3px) scale(1.02);box-shadow:0 6px 24px rgba(0,0,0,.5);border-color:rgba(255,107,74,.3);outline:none}
+.gcard:active{transform:scale(.97)}
+.gcard .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d0d12;display:flex;align-items:center;justify-content:center;font-size:32px;color:var(--text3)}
+.gcard .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gcard:hover .thumb img{transform:scale(1.05)}
+.gcard .dur{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.7);padding:2px 7px;border-radius:4px;font-size:11px;color:#ccc}
+.gcard .info{padding:8px 10px 10px}
+.gcard .code{font-size:11px;color:var(--accent);font-weight:600;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gcard .tt{font-size:13px;color:var(--text);font-weight:500;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:2.4em;margin-bottom:4px}
+.gcard .meta{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--text3)}
+.gcard .meta .act{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:65%}
+.gcard .meta .rt{color:var(--accent2)}
+
+/* PAGINATION */
+.pg{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:20px;padding:10px 0}
+.pg button{padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:13px;cursor:pointer;transition:all .2s}
+.pg button:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.pg button:hover{background:var(--panel-strong);border-color:var(--accent)}
+.pg button:disabled{opacity:.3;cursor:default}
+.pg .pi{font-size:12px;color:var(--text3)}
+
+/* DETAIL OVERLAY */
+.dov{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);overflow-y:auto}
+.dov.open{display:block}
+.dp{max-width:600px;margin:40px auto;padding:16px;background:var(--panel-strong);border-radius:var(--radius);border:1px solid var(--line);position:relative}
+.dcl{position:absolute;top:10px;right:12px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,.1);color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.dcl:hover,.dcl:focus-visible{background:rgba(255,255,255,.2);outline:none}
+.dcov{width:100%;aspect-ratio:16/10;border-radius:var(--radius-sm);object-fit:cover;background:#0d0d12;margin-bottom:12px}
+.dcd{font-size:13px;color:var(--accent);font-weight:700;margin-bottom:4px}
+.dct{font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.4}
+.dm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.dm .t{font-size:11px;padding:3px 10px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text2)}
+.dd{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:14px}
+.pb,.sb{width:100%;padding:12px;border-radius:var(--radius-sm);border:none;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;margin-bottom:8px}
+.pb{background:var(--accent);color:#fff}
+.pb:hover{opacity:.9}
+.sb{background:var(--panel);color:var(--text);border:1px solid var(--line)}
+.sb:hover{background:var(--panel-strong);border-color:var(--accent)}
+
+/* STATUS */
+.loading,.error,.noresult{text-align:center;padding:40px;font-size:14px}
+.loading{color:var(--text3)}
+.error{color:#e74c3c}
+.noresult{color:var(--text2)}
+
+/* RESPONSIVE */
+@media(min-width:768px){.grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}.dp{margin:60px auto;padding:24px}}
+@media(min-width:1024px){.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}}
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.ac{background:var(--panel);border-radius:var(--radius);overflow:hidden;cursor:pointer;border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.ac:hover,.ac:focus-visible{transform:translateY(-3px);border-color:var(--accent);outline:none}
+.ac .ap{position:relative;aspect-ratio:1;overflow:hidden;background:#0d0d12}
+.ac .ap img{width:100%;height:100%;object-fit:cover;display:block}
+.ac .acnt{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.65);color:#ff6b4a;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;line-height:1.4;display:flex;align-items:center;gap:3px}
+.ac .acnt::before{content:'🎬';font-size:10px}
+.ac .an{padding:8px 10px 10px;font-size:13px;color:var(--text);font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo"><span>Whos</span><span>.tv</span></div>
+</div>
+
+<div class="nav">
+  <div class="nav-item active" data-view="popular" tabindex="0">热搜</div>
+  <div class="nav-item" data-view="list" tabindex="0">有码</div>
+  <div class="nav-item" data-view="uncensored" tabindex="0">无码</div>
+  <div class="nav-item" data-view="actresses" tabindex="0">演员库</div>
+</div>
+
+<div class="search-row">
+  <div class="search-box">
+    <input id="q" type="text" placeholder="输入番号或演员名搜索..." maxlength="50" />
+    <button id="sbtn" tabindex="0">搜索</button>
+  </div>
+</div>
+
+<div id="content"><div class="loading">加载中...</div></div>
+
+<div class="dov" id="dov">
+  <div class="dp">
+    <button class="dcl" id="dcl">✕</button>
+    <img class="dcov" id="dcov" src="" alt="" />
+    <div class="dcd" id="dcd"></div>
+    <div class="dct" id="dct"></div>
+    <div class="dm" id="dm"></div>
+    <div class="dd" id="dd"></div>
+    <button class="pb" id="pb">▶ 立即播放</button>
+    <button class="sb" id="sb">🔍 在影视站搜索该番号</button>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var BASE = 'https://whos.tv';
+var UA = 'Mozilla/5.0 (Linux; Android 13; SM-S9080) AppleWebKit/537.36';
+
+var state = { page: 1, total: 1, view: 'list' };
+var detail = null;
+
+function _fm() {
+  return new Promise(function(r){
+    if(window.fm) return r(window.fm);
+    var t=0;(function c(){
+      if(window.fm) return r(window.fm);
+      if(++t>50) return r(null);
+      setTimeout(c,100);
+    })();
+  });
+}
+
+function _req(url,o){
+  o=o||{};
+  return _fm().then(function(f){
+    if(f&&f.req) return f.req(url,{
+      method: o.method||'GET',
+      headers: o.headers||{'User-Agent':UA},
+      body: o.body||null,
+      responseType: 'text',
+      timeout: o.timeout||25
+    });
+    // browser fallback
+    return fetch(url,{
+      headers: o.headers||{'User-Agent':UA}
+    }).then(function(r2){return r2.ok?r2.text():'';})
+    .then(function(t){return {ok:true,body:t};})
+    ['catch'](function(){return {ok:false,body:''};});
+  });
+}
+
+function safe(r){
+  if(!r||!r.body) return '';
+  var b=r.body;
+  return typeof b==='string'?b:(typeof b==='object'?JSON.stringify(b):String(b));
+}
+
+// XOR decrypt from whos.tv lazy-cover.js
+function _xor(h){
+  if(!h||typeof h!=='string') return '';
+  try{
+    var k=parseInt(h.slice(-2),16),d=h.slice(0,-2),r='';
+    for(var i=0;i<d.length;i+=2) r+=String.fromCharCode(parseInt(d.substr(i,2),16)^k);
+    return r;
+  }catch(e){return '';}
+}
+
+function esc(s){
+  if(typeof s!=='string') return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ========== PARSE CARDS FROM HTML ==========
+function parseCards(html){
+  var items=[];
+  // Match card elements: <a href="/videos/SLUG" ... class="...group...card-hover...block">
+  var re=/<a\s+href="\/videos\/([^"]+)"[^>]*class="[^"]*group[^"]*card-hover[^"]*block"[^>]*>([\s\S]*?)<\/a>/g;
+  var m;
+  while((m=re.exec(html))!==null){
+    var slug=m[1],inner=m[2];
+    if(slug.indexOf('/')>=0) continue;
+
+    // code (番号)
+    var cm=inner.match(/class="badge[^"]*"[^>]*>\s*([^<]+)</);
+    var code=cm?cm[1].trim():'';
+
+    // title from h3 (has brand badge span inside, strip tags)
+    var tm=inner.match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+    var title=tm?tm[1].replace(/<[^>]+>/g,'').trim():'';
+
+    // cover (XOR encrypted data-cover-src)
+    var cvm=inner.match(/data-cover-src="([^"]+)"/);
+    var cover=cvm?_xor(cvm[1]):'';
+
+    // actress (class="icon-[lucide--user] ...")
+    var am=inner.match(/icon-\[lucide--user\][^<]*<\/span>\s*([^<]+)</);
+    if(!am) am=inner.match(/icon-lucide--user[^<]*<\/span>\s*([^<]+)</);
+    if(!am) am=inner.match(/lucide--user[^<]*<\/span>\s*([^<]+)</);
+    var actress=am?am[1].trim():'';
+
+    // rating — value comes after star icon </span>
+    var rm=inner.match(/material-symbols--star[^<]*<\/span>\s*([\d.]+)/);
+    if(!rm) rm=inner.match(/lucide--star[^<]*<\/span>\s*([\d.]+)/);
+    if(!rm) rm=inner.match(/text-amber-400[^>]*>[\s\S]*?<\/span>\s*([\d.]+)/);
+    var rating=rm?rm[1]:'0';
+
+    // duration
+    var dm=inner.match(/>(\d+分钟)</);
+    var dur=dm?dm[1]:'';
+
+    items.push({slug:slug,code:code,title:title,cover:cover,actress:actress,rating:rating,duration:dur});
+  }
+  return items;
+}
+
+// ========== FETCH VIDEO LIST ==========
+function loadList(page){
+  var el=document.getElementById('content');
+  el.innerHTML='<div class="loading">加载中...</div>';
+
+  var url=page===1?BASE+'/videos':BASE+'/videos/page-'+page;
+
+  _req(url,{timeout:25}).then(function(res){
+    var html=safe(res);
+    if(!html){el.innerHTML='<div class="error">加载失败，请检查网络</div>';return;}
+
+    var items=parseCards(html);
+    if(items.length===0){
+      el.innerHTML='<div class="error">未找到影片数据</div>';
+      return;
+    }
+
+    // Parse pagination — look for "> N/TOTAL <" pattern (not CSS classes like "left-1/2")
+    var pgm=html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur=page, total=27576;
+    if(pgm){cur=parseInt(pgm[1])||page;total=parseInt(pgm[2])||27576;}
+
+    state.page=cur;state.total=total;
+    renderGrid(items);
+  })['catch'](function(e){
+    el.innerHTML='<div class="error">加载失败: '+(e.message||'未知错误')+'</div>';
+  });
+}
+
+// ========== RENDER ==========
+function renderGrid(items){
+  var el=document.getElementById('content');
+  var h='<div class="grid">';
+  for(var i=0;i<items.length;i++){
+    var it=items[i];
+    h+='<div class="gcard" tabindex="0" data-s="'+esc(it.slug)+'" data-c="'+esc(it.code)+'" data-t="'+esc(it.title)+'" data-cv="'+esc(it.cover)+'" data-a="'+esc(it.actress)+'" data-r="'+esc(it.rating)+'">';
+    h+='<div class="thumb">';
+    if(it.cover){
+      h+='<img src="'+esc(it.cover)+'" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'🎬\'" />';
+    }else{
+      h+='🎬';
+    }
+    if(it.duration) h+='<span class="dur">'+esc(it.duration)+'</span>';
+    h+='</div><div class="info">';
+    h+='<div class="code">'+esc(it.code||'─')+'</div>';
+    h+='<div class="tt">'+esc(it.title)+'</div>';
+    h+='<div class="meta"><span class="act">'+esc(it.actress||'─')+'</span>';
+    if(it.rating&&it.rating!=='0') h+='<span class="rt">★ '+it.rating+'</span>';
+    h+='</div></div></div>';
+  }
+  h+='</div>';
+
+  h+='<div class="pg">';
+  h+='<button id="pp" '+(state.page<=1?'disabled':'')+'>‹ 上一页</button>';
+  h+='<span class="pi">'+state.page+' / '+state.total+'</span>';
+  h+='<button id="pn" '+(state.page>=state.total?'disabled':'')+'>下一页 ›</button>';
+  h+='</div>';
+
+  el.innerHTML=h;
+
+  // Bind cards
+  el.querySelectorAll('.gcard').forEach(function(c){
+    c.onclick=function(){openDetail(c);};
+    c.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetail(c);}};
+  });
+
+  var pp=document.getElementById('pp');
+  var pn=document.getElementById('pn');
+  if(pp) pp.onclick=function(){if(state.page>1) loadList(state.page-1);};
+  if(pn) pn.onclick=function(){if(state.page<state.total) loadList(state.page+1);};
+}
+
+// ========== OPEN DETAIL ==========
+function openDetail(card){
+  var slug=card.getAttribute('data-s');
+  var code=card.getAttribute('data-c');
+  var title=card.getAttribute('data-t');
+  var cover=card.getAttribute('data-cv');
+  var actress=card.getAttribute('data-a');
+
+  document.getElementById('dcov').src=cover||'';
+  document.getElementById('dcov').style.display=cover?'':'none';
+  document.getElementById('dcd').textContent=code||slug.toUpperCase();
+  document.getElementById('dct').textContent=title||slug;
+  document.getElementById('dd').textContent='正在获取详情...';
+  document.getElementById('dm').innerHTML='<span class="t">女优: '+esc(actress||'未知')+'</span>';
+  document.getElementById('dov').classList.add('open');
+  document.getElementById('dov').scrollTop=0;
+
+  detail={slug:slug,title:title||slug,code:code||slug.toUpperCase(),m3u8:null};
+
+  // Fetch detail
+  _req(BASE+'/videos/'+slug,{timeout:25}).then(function(r){
+    var html=safe(r);
+    if(!html){document.getElementById('dd').textContent='无法加载详情';return;}
+
+    // m3u8
+    var mm=html.match(/<source[\s\S]*?src="([^"]*\.m3u8[^"]*)"/);
+    if(!mm) mm=html.match(/src="(https?:\/\/[^"]*\.m3u8[^"]*)"/);
+    if(mm) detail.m3u8=mm[1].replace(/&amp;/g,'&');
+
+    // Full title
+    var ogt=html.match(/property="og:title"[^>]*content="([^"]+)"/);
+    if(ogt){
+      var ft=ogt[1].replace(/\s*[–-]\s*whos\..*$/,'').trim();
+      document.getElementById('dct').textContent=ft;
+      detail.title=ft;
+    }
+
+    // Cover from og:image
+    var ogi=html.match(/property="og:image"[^>]*content="([^"]+)"/);
+    if(ogi&&ogi[1]&&!ogi[1].includes('cover-zh-cn')){
+      document.getElementById('dcov').src=ogi[1];
+      document.getElementById('dcov').style.display='';
+    }
+
+    // Description
+    var dm=html.match(/name="description"[^>]*content="([^"]+)"/);
+    if(!dm) dm=html.match(/property="og:description"[^>]*content="([^"]+)"/);
+    document.getElementById('dd').textContent=dm?dm[1]:'暂无简介';
+
+    // Tags
+    var meta='<span class="t">女优: '+esc(actress||'未知')+'</span>';
+    var tr=/href="\/tags\/([^"]+)"[^>]*>([^<]+)</g;
+    var tm;var tc=0;
+    while((tm=tr.exec(html))!==null&&tc<8){
+      var tn=tm[2].trim();
+      if(tn&&tn!=='--'&&tn.length<20){meta+='<span class="t">'+esc(tn)+'</span>';tc++;}
+    }
+    document.getElementById('dm').innerHTML=meta;
+
+    document.getElementById('pb').textContent=detail.m3u8?'▶ 播放 '+detail.code:'▶ 用影视站搜索该番号';
+  })['catch'](function(){
+    document.getElementById('dd').textContent='详情获取失败（网络问题）';
+    document.getElementById('pb').textContent='▶ 用影视站搜索该番号';
+  });
+}
+
+// ========== PLAY / SEARCH OTHER ==========
+function doPlay(){
+  if(!detail) return;
+  if(detail.m3u8){
+    _fm().then(function(f){
+      if(f&&f.play) f.play(detail.m3u8,detail.title||detail.code,{});
+      else window.open(detail.m3u8);
+    });
+  }else{
+    searchOther(detail.code||detail.title);
+  }
+}
+
+function searchOther(kw){
+  var cm=kw.match(/[A-Z]+-?\d+/i);
+  if(cm) kw=cm[0];
+  _fm().then(function(f){
+    if(f&&f.search) f.search(kw,{direct:true});
+  });
+}
+
+// ========== SEARCH ==========
+function doSearch(){
+  var q=document.getElementById('q').value.trim();
+  if(!q) return;
+  // If it looks like a pure 番号 (e.g. SSNI-999), try direct slug first
+  var slug=q.replace(/[^a-zA-Z0-9\u4e00-\u9fff-]/g,'').toLowerCase();
+  if(/^[a-z]+-?\d+$/i.test(slug)){
+    _req(BASE+'/videos/'+slug,{timeout:15}).then(function(r){
+      var html=safe(r);
+      if(html&&html.indexOf('video-player')>=0){
+        // Exact match — open detail
+        detail={slug:slug,title:slug,code:slug.toUpperCase(),m3u8:null};
+        document.getElementById('dcov').style.display='none';
+        document.getElementById('dcd').textContent=slug.toUpperCase();
+        document.getElementById('dct').textContent='正在加载...';
+        document.getElementById('dd').textContent='正在获取详情...';
+        document.getElementById('dov').classList.add('open');
+        _req(BASE+'/videos/'+slug,{timeout:25}).then(function(r2){
+          var h2=safe(r2); if(!h2) return;
+          var mm=h2.match(/<source[\s\S]*?src="([^"]*\.m3u8[^"]*)"/);
+          if(!mm) mm=h2.match(/src="(https?:\/\/[^"]*\.m3u8[^"]*)"/);
+          if(mm) detail.m3u8=mm[1].replace(/&amp;/g,'&');
+          var ogt=h2.match(/property="og:title"[^>]*content="([^"]+)"/);
+          if(ogt){var ft=ogt[1].replace(/\s*[–-]\s*whos\..*$/,'').trim();document.getElementById('dct').textContent=ft;detail.title=ft;}
+          var ogi=h2.match(/property="og:image"[^>]*content="([^"]+)"/);
+          if(ogi&&ogi[1]&&!ogi[1].includes('cover-zh-cn')){document.getElementById('dcov').src=ogi[1];document.getElementById('dcov').style.display='';}
+          var dm2=h2.match(/name="description"[^>]*content="([^"]+)"/);
+          if(!dm2) dm2=h2.match(/property="og:description"[^>]*content="([^"]+)"/);
+          if(dm2) document.getElementById('dd').textContent=dm2[1];
+          document.getElementById('pb').textContent=detail.m3u8?'▶ 播放 '+detail.code:'▶ 用影视站搜索该番号';
+        });
+        return;
+      }
+      // Not exact slug — fall through to search
+      loadSearchResults(q, 1);
+    })['catch'](function(){loadSearchResults(q,1);});
+  } else {
+    loadSearchResults(q, 1);
+  }
+}
+
+// ========== LOAD SEARCH RESULTS ==========
+function loadSearchResults(keyword, page){
+  state.query = keyword;
+  var el = document.getElementById('content');
+  el.innerHTML = '<div class="loading">搜索中...</div>';
+
+  var url = page === 1
+    ? (BASE + '/result?serach=' + encodeURIComponent(keyword))
+    : (BASE + '/result/page-' + page + '?serach=' + encodeURIComponent(keyword));
+
+  _req(url, {timeout: 25}).then(function(res){
+    var html = safe(res);
+    if (!html) { el.innerHTML = '<div class="error">搜索失败</div>'; return; }
+
+    var items = parseCards(html);
+
+    // Parse pagination
+    var pgm = html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur = page, total = 1;
+    if (pgm) { cur = parseInt(pgm[1]) || page; total = parseInt(pgm[2]) || 1; }
+
+    // Count from result text like "(1582)"
+    var cm = html.match(/\((\d+)\)/);
+    var resultCount = cm ? cm[1] : '';
+
+    if (items.length === 0) {
+      el.innerHTML = '<div class="noresult">未找到 "'
+        + esc(keyword) + '" 的相关结果'
+        + (resultCount ? '（共' + resultCount + '条，但不在第一页）' : '')
+        + '</div><div style="text-align:center;margin-top:12px"><button class="sb" onclick="switchView(\'list\')" style="max-width:200px;margin:0 auto">← 返回影片库</button></div>';
+      return;
+    }
+
+    // Render search results
+    state.page = cur;
+    state.total = total;
+    state.view = 'search';
+    state.query = keyword;
+
+    var h = '<div style="margin-bottom:12px;font-size:13px;color:var(--text2);display:flex;justify-content:space-between;align-items:center">';
+    h += '<span>🔍 "' + esc(keyword) + '" 的搜索结果</span>';
+    h += resultCount ? '<span style="font-size:12px;color:var(--text3)">共 ' + resultCount + ' 条</span>' : '';
+    h += '</div>';
+
+    h += '<div class="grid">';
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i];
+      h += '<div class="gcard" tabindex="0" data-s="' + esc(it.slug) + '" data-c="' + esc(it.code) + '" data-t="' + esc(it.title) + '" data-cv="' + esc(it.cover) + '" data-a="' + esc(it.actress) + '" data-r="' + esc(it.rating) + '">';
+      h += '<div class="thumb">';
+      if (it.cover) h += '<img src="' + esc(it.cover) + '" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'🎬\'" />';
+      else h += '🎬';
+      if (it.duration) h += '<span class="dur">' + esc(it.duration) + '</span>';
+      h += '</div><div class="info">';
+      h += '<div class="code">' + esc(it.code || '─') + '</div>';
+      h += '<div class="tt">' + esc(it.title) + '</div>';
+      h += '<div class="meta"><span class="act">' + esc(it.actress || '─') + '</span>';
+      if (it.rating && it.rating !== '0') h += '<span class="rt">★ ' + it.rating + '</span>';
+      h += '</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="pg">';
+    h += '<button id="pp" ' + (cur <= 1 ? 'disabled' : '') + '>‹ 上一页</button>';
+    h += '<span class="pi">' + cur + ' / ' + total + '</span>';
+    h += '<button id="pn" ' + (cur >= total ? 'disabled' : '') + '>下一页 ›</button>';
+    h += '</div>';
+
+    h += '<div style="text-align:center;margin-top:8px"><button id="backToListBtn" style="padding:8px 20px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:13px;cursor:pointer">← 返回影片库</button></div>';
+
+    el.innerHTML = h;
+
+    // Bind pagination
+    var pp = document.getElementById('pp');
+    var pn = document.getElementById('pn');
+    if(pp) pp.onclick = function(){ loadSearchResults(state.query, state.page - 1); };
+    if(pn) pn.onclick = function(){ loadSearchResults(state.query, state.page + 1); };
+    var bk = document.getElementById('backToListBtn');
+    if(bk) bk.onclick = function(){ switchView('list'); };
+
+    // Bind cards
+    el.querySelectorAll('.gcard').forEach(function(c){
+      c.onclick = function(){ openDetail(c); };
+      c.onkeydown = function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(c); }};
+    });
+  })['catch'](function(e){
+    el.innerHTML = '<div class="error">搜索失败: ' + (e.message || '网络错误') + '</div>';
+  });
+}
+
+// ========== LOAD POPULAR (热搜) ==========
+function loadPopular(){
+  // Show all videos as 热搜 in card grid format
+  loadList(1);
+}
+
+// ========== LOAD UNCENSORED (无码) ==========
+function loadUncensored(page){
+  var el=document.getElementById('content');
+  el.innerHTML='<div class="loading">加载中...</div>';
+
+  var url=page===1?BASE+'/tags/无码流出':BASE+'/tags/无码流出/page-'+page;
+
+  _req(url,{timeout:25}).then(function(res){
+    var html=safe(res);
+    if(!html){el.innerHTML='<div class="error">加载失败</div>';return;}
+
+    var items=parseCards(html);
+    if(items.length===0){el.innerHTML='<div class="error">未找到数据</div>';return;}
+
+    var pgm=html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur=page, total=1;
+    if(pgm){cur=parseInt(pgm[1])||page;total=parseInt(pgm[2])||1;}
+
+    state.page=cur;state.total=total;
+
+    var h='<div style="margin-bottom:12px;font-size:13px;color:var(--text2)">🔞 无码流出</div>';
+    h+='<div class="grid">';
+    for(var i=0;i<items.length;i++){
+      var it=items[i];
+      h+='<div class="gcard" tabindex="0" data-s="'+esc(it.slug)+'" data-c="'+esc(it.code)+'" data-t="'+esc(it.title)+'" data-cv="'+esc(it.cover)+'" data-a="'+esc(it.actress)+'" data-r="'+esc(it.rating)+'">';
+      h+='<div class="thumb">';
+      if(it.cover) h+='<img src="'+esc(it.cover)+'" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'🎬\'" />';
+      else h+='🎬';
+      if(it.duration) h+='<span class="dur">'+esc(it.duration)+'</span>';
+      h+='</div><div class="info">';
+      h+='<div class="code">'+esc(it.code||'─')+'</div>';
+      h+='<div class="tt">'+esc(it.title)+'</div>';
+      h+='<div class="meta"><span class="act">'+esc(it.actress||'─')+'</span>';
+      if(it.rating&&it.rating!=='0') h+='<span class="rt">★ '+it.rating+'</span>';
+      h+='</div></div></div>';
+    }
+    h+='</div>';
+
+    h+='<div class="pg">';
+    h+='<button id="pp" '+(cur<=1?'disabled':'')+'>‹ 上一页</button>';
+    h+='<span class="pi">'+cur+' / '+total+'</span>';
+    h+='<button id="pn" '+(cur>=total?'disabled':'')+'>下一页 ›</button>';
+    h+='</div>';
+
+    el.innerHTML=h;
+
+    el.querySelectorAll('.gcard').forEach(function(c){
+      c.onclick=function(){openDetail(c);};
+      c.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetail(c);}};
+    });
+
+    var pp=document.getElementById('pp');
+    var pn=document.getElementById('pn');
+    if(pp) pp.onclick=function(){loadUncensored(state.page-1);};
+    if(pn) pn.onclick=function(){loadUncensored(state.page+1);};
+  })['catch'](function(e){
+    el.innerHTML='<div class="error">加载失败: '+(e.message||'')+'</div>';
+  });
+}
+
+// ========== LOAD ACTRESSES ==========
+function loadActresses(page){
+  var el=document.getElementById('content');
+  el.innerHTML='<div class="loading">加载演员库...</div>';
+
+  var url=page===1?BASE+'/actresses':BASE+'/actresses/page-'+page;
+
+  _req(url,{timeout:25}).then(function(res){
+    var html=safe(res);
+    if(!html){el.innerHTML='<div class="error">加载失败</div>';return;}
+
+    // Parse pagination
+    var pgm=html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur=page, total=1;
+    if(pgm){cur=parseInt(pgm[1])||page;total=parseInt(pgm[2])||1;}
+
+    // Extract actress cards
+    var re=/<a\s+href="\/actresses\/([^"]+)"[^>]*class="block group"[^>]*>([\s\S]*?)<\/a>/g;
+    var m,items=[];
+    while((m=re.exec(html))!==null){
+      var name=m[1],inner=m[2];
+
+      // Avatar
+      var im=inner.match(/<img[^>]+src="([^"]+)"/);
+      var avatar=im?im[1]:'';
+
+      // Display name (from h3 tag)
+      var nm=inner.match(/<h3[^>]*>([^<]+)<\/h3>/);
+      var displayName=nm?nm[1].trim():decodeURIComponent(name);
+
+      // Video count (after film icon)
+      var cm=inner.match(/lucide--film[^<]*<\/span>\s*(\d+)/);
+      if(!cm) cm=inner.match(/>\s*(\d+)\s*<[^>]*lucide--heart/);
+      var count=cm?cm[1]:'';
+
+      items.push({slug:name,avatar:avatar,name:displayName,count:count});
+    }
+
+    if(items.length===0){
+      el.innerHTML='<div class="error">未找到演员数据</div>';
+      return;
+    }
+
+    state.page=cur;state.total=total;
+
+    var h='<div class="ag">';
+    for(var i=0;i<items.length;i++){
+      var it=items[i];
+      h+='<div class="ac" tabindex="0" data-actress="'+esc(it.slug)+'" data-name="'+esc(it.name)+'" data-avatar="'+esc(it.avatar)+'">';
+      h+='<div class="ap">';
+      if(it.avatar) h+='<img src="'+esc(it.avatar)+'" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'<div style=display:flex;align-items:center;justify-content:center;height:100%;font-size:28px;color:var(--text3)>👤</div>\'" />';
+      else h+='<div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:28px;color:var(--text3)">👤</div>';
+      if(it.count) h+='<span class="acnt">'+it.count+'</span>';
+      h+='</div>';
+      h+='<div class="an">'+esc(it.name)+'</div>';
+      h+='</div>';
+    }
+    h+='</div>';
+
+    h+='<div class="pg">';
+    h+='<button id="pp" '+(cur<=1?'disabled':'')+'>‹ 上一页</button>';
+    h+='<span class="pi">'+cur+' / '+total+'</span>';
+    h+='<button id="pn" '+(cur>=total?'disabled':'')+'>下一页 ›</button>';
+    h+='</div>';
+
+    el.innerHTML=h;
+
+    // Bind actress clicks → show actress works in card grid
+    el.querySelectorAll('.ac').forEach(function(c){
+      c.onclick=function(){
+        var actress=c.getAttribute('data-actress');
+        var name=c.getAttribute('data-name');
+        // Show videos of this actress via search
+        loadActressWorks(name, actress);
+      };
+      c.onkeydown=function(e){
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();c.onclick();}
+      };
+    });
+
+    // Bind pagination
+    var pp=document.getElementById('pp');
+    var pn=document.getElementById('pn');
+    if(pp) pp.onclick=function(){loadActresses(state.page-1);};
+    if(pn) pn.onclick=function(){loadActresses(state.page+1);};
+  })['catch'](function(e){
+    el.innerHTML='<div class="error">加载失败: '+(e.message||'')+'</div>';
+  });
+}
+
+// ========== LOAD ACTRESS WORKS ==========
+function loadActressWorks(name, slug){
+  state.query = name;
+  var el = document.getElementById('content');
+  el.innerHTML = '<div class="loading">加载 ' + esc(name) + ' 的作品...</div>';
+
+  var url = BASE + '/result?serach=' + encodeURIComponent(name);
+
+  _req(url, {timeout: 25}).then(function(res){
+    var html = safe(res);
+    if (!html) { el.innerHTML = '<div class="error">加载失败</div>'; return; }
+
+    var items = parseCards(html);
+    if (items.length === 0) {
+      el.innerHTML = '<div class="noresult">未找到 ' + esc(name) + ' 的作品</div>'
+        + '<div style="text-align:center;margin-top:12px"><button class="sb" onclick="loadActresses(1)" style="max-width:200px;margin:0 auto">← 返回演员库</button></div>';
+      return;
+    }
+
+    var pgm = html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur = 1, total = 1;
+    if (pgm) { cur = parseInt(pgm[1]) || 1; total = parseInt(pgm[2]) || 1; }
+
+    state.page = cur; state.total = total;
+
+    // Header with actress info
+    var h = '<div style="margin-bottom:14px;display:flex;align-items:center;gap:12px;background:var(--panel);border-radius:var(--radius);padding:12px;border:1px solid var(--line)">';
+    // Avatar fallback
+    h += '<div style="width:48px;height:48px;border-radius:50%;overflow:hidden;background:#0d0d12;flex-shrink:0">';
+    h += '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px;background:linear-gradient(135deg,#ff6b4a,#f5a623)">👤</div>';
+    h += '</div>';
+    h += '<div style="flex:1"><div style="font-size:15px;font-weight:600">' + esc(name) + '</div>';
+    h += '<div style="font-size:12px;color:var(--text3)">共 ' + total + ' 页</div></div>';
+    h += '<button id="backToActresses" style="padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:transparent;color:var(--text2);font-size:12px;cursor:pointer;white-space:nowrap">← 返回</button>';
+    h += '</div>';
+
+    h += '<div class="grid">';
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i];
+      h += '<div class="gcard" tabindex="0" data-s="' + esc(it.slug) + '" data-c="' + esc(it.code) + '" data-t="' + esc(it.title) + '" data-cv="' + esc(it.cover) + '" data-a="' + esc(it.actress) + '" data-r="' + esc(it.rating) + '">';
+      h += '<div class="thumb">';
+      if (it.cover) h += '<img src="' + esc(it.cover) + '" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'🎬\'" />';
+      else h += '🎬';
+      if (it.duration) h += '<span class="dur">' + esc(it.duration) + '</span>';
+      h += '</div><div class="info">';
+      h += '<div class="code">' + esc(it.code || '─') + '</div>';
+      h += '<div class="tt">' + esc(it.title) + '</div>';
+      h += '<div class="meta"><span class="act">' + esc(it.actress || '─') + '</span>';
+      if (it.rating && it.rating !== '0') h += '<span class="rt">★ ' + it.rating + '</span>';
+      h += '</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="pg">';
+    h += '<button id="pp" ' + (cur <= 1 ? 'disabled' : '') + '>‹ 上一页</button>';
+    h += '<span class="pi">' + cur + ' / ' + total + '</span>';
+    h += '<button id="pn" ' + (cur >= total ? 'disabled' : '') + '>下一页 ›</button>';
+    h += '</div>';
+
+    el.innerHTML = h;
+
+    // Bind back button
+    var backBtn = document.getElementById('backToActresses');
+    if (backBtn) backBtn.onclick = function(){ loadActresses(1); };
+
+    // Bind pagination for actress works
+    var pp = document.getElementById('pp');
+    var pn = document.getElementById('pn');
+    if (pp) pp.onclick = function(){ loadActressWorksPage(name, cur - 1); };
+    if (pn) pn.onclick = function(){ loadActressWorksPage(name, cur + 1); };
+
+    // Bind cards
+    el.querySelectorAll('.gcard').forEach(function(c){
+      c.onclick = function(){ openDetail(c); };
+      c.onkeydown = function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(c); }};
+    });
+  })['catch'](function(e){
+    el.innerHTML = '<div class="error">加载失败: ' + (e.message || '') + '</div>';
+  });
+}
+
+function loadActressWorksPage(name, page){
+  state.query = name;
+  var el = document.getElementById('content');
+  el.innerHTML = '<div class="loading">加载中...</div>';
+
+  var url = page === 1
+    ? (BASE + '/result?serach=' + encodeURIComponent(name))
+    : (BASE + '/result/page-' + page + '?serach=' + encodeURIComponent(name));
+
+  _req(url, {timeout: 25}).then(function(res){
+    var html = safe(res);
+    if (!html) { el.innerHTML = '<div class="error">加载失败</div>'; return; }
+
+    var items = parseCards(html);
+    if (items.length === 0) { el.innerHTML = '<div class="error">未找到数据</div>'; return; }
+
+    var pgm = html.match(/>\s*(\d+)\s*\/\s*(\d+)\s*</);
+    var cur = page, total = 1;
+    if (pgm) { cur = parseInt(pgm[1]) || page; total = parseInt(pgm[2]) || 1; }
+
+    state.page = cur; state.total = total;
+
+    var h = '<div style="margin-bottom:14px;display:flex;align-items:center;gap:12px;background:var(--panel);border-radius:var(--radius);padding:12px;border:1px solid var(--line)">';
+    h += '<div style="width:48px;height:48px;border-radius:50%;overflow:hidden;background:#0d0d12;flex-shrink:0">';
+    h += '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px;background:linear-gradient(135deg,#ff6b4a,#f5a623)">👤</div>';
+    h += '</div>';
+    h += '<div style="flex:1"><div style="font-size:15px;font-weight:600">' + esc(name) + '</div>';
+    h += '<div style="font-size:12px;color:var(--text3)">第 ' + cur + ' / ' + total + ' 页</div></div>';
+    h += '<button id="backToActresses" style="padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:transparent;color:var(--text2);font-size:12px;cursor:pointer;white-space:nowrap">← 返回</button>';
+    h += '</div>';
+
+    h += '<div class="grid">';
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i];
+      h += '<div class="gcard" tabindex="0" data-s="' + esc(it.slug) + '" data-c="' + esc(it.code) + '" data-t="' + esc(it.title) + '" data-cv="' + esc(it.cover) + '" data-a="' + esc(it.actress) + '" data-r="' + esc(it.rating) + '">';
+      h += '<div class="thumb">';
+      if (it.cover) h += '<img src="' + esc(it.cover) + '" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'🎬\'" />';
+      else h += '🎬';
+      if (it.duration) h += '<span class="dur">' + esc(it.duration) + '</span>';
+      h += '</div><div class="info">';
+      h += '<div class="code">' + esc(it.code || '─') + '</div>';
+      h += '<div class="tt">' + esc(it.title) + '</div>';
+      h += '<div class="meta"><span class="act">' + esc(it.actress || '─') + '</span>';
+      if (it.rating && it.rating !== '0') h += '<span class="rt">★ ' + it.rating + '</span>';
+      h += '</div></div></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="pg">';
+    h += '<button id="pp" ' + (cur <= 1 ? 'disabled' : '') + '>‹ 上一页</button>';
+    h += '<span class="pi">' + cur + ' / ' + total + '</span>';
+    h += '<button id="pn" ' + (cur >= total ? 'disabled' : '') + '>下一页 ›</button>';
+    h += '</div>';
+
+    el.innerHTML = h;
+
+    // Bind back button
+    var backBtn = document.getElementById('backToActresses');
+    if (backBtn) backBtn.onclick = function(){ loadActresses(1); };
+
+    var pp = document.getElementById('pp');
+    var pn = document.getElementById('pn');
+    if (pp) pp.onclick = function(){ loadActressWorksPage(name, cur - 1); };
+    if (pn) pn.onclick = function(){ loadActressWorksPage(name, cur + 1); };
+
+    el.querySelectorAll('.gcard').forEach(function(c){
+      c.onclick = function(){ openDetail(c); };
+      c.onkeydown = function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(c); }};
+    });
+  })['catch'](function(e){
+    el.innerHTML = '<div class="error">加载失败: ' + (e.message || '') + '</div>';
+  });
+}
+
+// ========== NAVIGATION ==========
+function switchView(v){
+  state.view=v;
+  document.querySelectorAll('.nav-item').forEach(function(n){
+    n.classList.toggle('active',n.getAttribute('data-view')===v);
+  });
+  if(v==='popular') loadPopular();
+  else if(v==='uncensored') loadUncensored(1);
+  else if(v==='actresses') loadActresses(1);
+  else loadList(1);
+}
+
+// ========== INIT ==========
+document.querySelectorAll('.nav-item').forEach(function(n){
+  n.onclick=function(){switchView(n.getAttribute('data-view'));};
+  n.onkeydown=function(e){if(e.key==='Enter')switchView(n.getAttribute('data-view'));};
+});
+
+document.getElementById('sbtn').onclick=doSearch;
+document.getElementById('q').onkeydown=function(e){if(e.key==='Enter')doSearch();};
+
+document.getElementById('dcl').onclick=function(){document.getElementById('dov').classList.remove('open');};
+document.getElementById('pb').onclick=doPlay;
+document.getElementById('sb').onclick=function(){
+  if(detail) searchOther(detail.code||detail.title);
+};
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape') document.getElementById('dov').classList.remove('open');
+});
+document.getElementById('dov').onclick=function(e){if(e.target===this)this.classList.remove('open');};
+
+// Start
+loadList(1);
+})();
+</script>
+</body>
+</html>

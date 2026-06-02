@@ -1,0 +1,131 @@
+<!doctype html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101419">
+<title>MISSAV</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+body{background:#1a1e22;color:#f4f7fb;min-height:100dvh;padding:12px 10px;font-size:14px;line-height:1.5}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.header h1{font-size:16px;font-weight:800}
+.icon-btn{width:40px;height:40px;display:grid;place-items:center;border-radius:8px;background:rgba(34,43,51,.42);border:1px solid rgba(255,255,255,.2);color:#f4f7fb}
+.search{display:grid;grid-template-columns:1fr auto;gap:10px;margin:12px 0 8px}
+.search.hidden{display:none}
+.search input{width:100%;padding:10px 13px;border-radius:8px;background:rgba(34,43,51,.42);border:1px solid rgba(255,255,255,.2);color:#f4f7fb;font-size:14px;outline:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:3px 0;scrollbar-width:none}
+.chip{padding:7px 14px;border-radius:20px;background:rgba(34,43,51,.42);border:1px solid rgba(255,255,255,.2);color:rgba(226,234,242,.72);font-size:13px;white-space:nowrap;cursor:pointer}
+.chip.active{background:rgba(76,88,98,.58);color:#f4f7fb}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.card{border-radius:8px;overflow:hidden;background:rgba(34,43,51,.42);border:1px solid rgba(255,255,255,.2);cursor:pointer}
+.card-thumb{width:100%;height:110px;background:#2a2a2a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-thumb span{font-size:22px;font-weight:900;color:rgba(255,255,255,.2);letter-spacing:1px}
+.card-body{padding:6px 7px}
+.card-body .t{font-size:11px;font-weight:700;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.empty{min-height:92px;display:grid;place-items:center;padding:14px;border:1px dashed rgba(255,255,255,.18);color:rgba(226,234,242,.72);text-align:center;margin-top:14px}
+.load-more{min-height:40px;display:grid;place-items:center;margin-top:14px;padding:10px;border-radius:8px;background:rgba(34,43,51,.42);border:1px solid rgba(255,255,255,.2);color:var(--muted);font-size:13px;cursor:pointer}
+.play-btn{display:block;width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(255,100,0,.65);color:#fff;font-weight:700;font-size:15px;cursor:pointer;margin-top:10px;text-decoration:none}
+.loading{padding:20px;text-align:center;color:rgba(226,234,242,.72)}
+</style>
+</head><body>
+
+<div class="header"><h1>MISSAV</h1>
+<button class="icon-btn" onclick="toggleSearch()">🔍</button></div>
+<div class="search hidden" id="searchBar">
+<input id="searchInput" placeholder="搜番号..." onkeydown="if(event.key==='Enter')doSearch()">
+<button class="icon-btn" onclick="doSearch()">➤</button></div>
+<div class="chips" id="chips"></div>
+<div id="content" class="grid"></div>
+<div class="loading" id="loading" style="display:none">加载中...</div>
+<div class="load-more" id="moreBtn" style="display:none" onclick="loadMore()">更多</div>
+
+<script>
+var HOST='https://missav.app',PAGE=1,CAT='new',KEY='',BUSY=false;
+var CATS=[['new','最新'],['20','国产'],['21','有码'],['22','无码'],['28','字幕'],['23','欧美'],['24','动漫'],['25','伦理']];
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')};
+
+function onSDK(cb){
+  if(window.fm&&fm.req)return cb();
+  var t=setInterval(function(){if(window.fm&&fm.req){clearInterval(t);cb()}},50);
+  setTimeout(function(){clearInterval(t);cb()},5000);
+}
+
+onSDK(function(){
+  var h='';
+  for(var i=0;i<CATS.length;i++)h+='<span class="chip'+(i===0?' active':'')+'" onclick="switchCat(\''+CATS[i][0]+'\',this)">'+CATS[i][1]+'</span>';
+  $('chips').innerHTML=h;
+  loadList(true);
+});
+
+function loadList(reset){
+  if(reset)PAGE=1;
+  BUSY=true;$('loading').style.display='block';$('moreBtn').style.display='none';
+  var url=KEY?HOST+'/vodsearch/'+encodeURIComponent(KEY)+'-------------/page/'+PAGE+'/':CAT==='new'?HOST+'/label/new/page/'+PAGE+'/':HOST+'/vodtype/'+CAT+'-'+PAGE+'/';
+  fm.req(url,{}).then(function(resp){
+    BUSY=false;$('loading').style.display='none';
+    if(!resp.ok||!resp.body||resp.body.length<200){if(reset)$('content').innerHTML='<div class="empty">加载失败</div>';return;}
+    var items=[];
+    var ps=resp.body.split('<div class="thumbnail group">');
+    for(var i=1;i<ps.length;i++){
+      var p=ps[i];
+      var m=p.match(/href="\/vodplay\/(\d+)-1-1\/"/);
+      if(!m)continue;
+      var title=(p.match(/class="text-nord4 group-hover:text-nord8"[^>]*>([^<]*)<\/a>/)||[])[1]||'';
+      var sn=title.match(/[A-Z]+-?\d+/);sn=sn?sn[0]:'#'+m[1];
+      items.push({id:m[1],title:title,sn:sn});
+    }
+    if(reset)$('content').innerHTML='';
+    if(!items.length){if(reset)$('content').innerHTML='<div class="empty">无结果</div>';return;}
+    var h='';
+    for(var i=0;i<items.length;i++){
+      var it=items[i];
+      var hue=(parseInt(it.id)%360);
+      h+='<div class="card" onclick="openDetail('+it.id+')">';
+      h+='<div class="card-thumb" style="background:linear-gradient(135deg,hsl('+hue+',40%,18%),hsl('+((hue+60)%360)+',35%,12%))"><span>'+esc(it.sn)+'</span></div>';
+      h+='<div class="card-body"><div class="t">'+esc(it.title||'')+'</div></div></div>';
+    }
+    $('content').innerHTML+=h;
+    $('moreBtn').style.display=items.length>=12?'':'none';
+  });
+}
+
+function loadMore(){if(!BUSY){PAGE++;loadList(false)}}
+
+function openDetail(id){
+  $('content').innerHTML='<div class="loading">加载详情...</div>';
+  $('moreBtn').style.display='none';
+  fm.req(HOST+'/vodplay/'+id+'-1-1/',{}).then(function(resp){
+    if(!resp.ok||!resp.body||resp.body.length<200){$('content').innerHTML='<div class="empty">详情加载失败</div>';return;}
+    var pi=resp.body.indexOf('var player_aaaa');
+    if(pi<0){$('content').innerHTML='<div class="empty">未找到播放信息</div>';return;}
+    var bs=resp.body.indexOf('{',pi),d=0,cfg=null;
+    for(var bi=bs;bi<resp.body.length&&bi<bs+2000;bi++){
+      if(resp.body[bi]=='{')d++;else if(resp.body[bi]=='}')d--;
+      if(d===0){try{cfg=JSON.parse(resp.body.substring(bs,bi+1))}catch(e){}break;}
+    }
+    if(!cfg){$('content').innerHTML='<div class="empty">解析失败</div>';return;}
+    var url=cfg.url||'',title=cfg.vod_data&&cfg.vod_data.vod_name?cfg.vod_data.vod_name:'',cls=cfg.vod_data&&cfg.vod_data.vod_class?cfg.vod_data.vod_class:'';
+    var h='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><button class="icon-btn" onclick="goList()">←</button><span style="font-weight:700">MISSAV</span></div>';
+    if(title)h+='<div style="font-size:15px;font-weight:700;margin-bottom:4px">'+esc(title)+'</div>';
+    if(cls)h+='<div style="font-size:12px;color:rgba(226,234,242,.72);margin-bottom:10px">'+esc(cls)+'</div>';
+    if(url)h+='<a class="play-btn" href="'+url+'">▶ 播放</a>';
+    else h+='<div class="empty">无播放地址</div>';
+    $('content').innerHTML=h;
+  });
+}
+
+function goList(){$('content').innerHTML='';$('moreBtn').style.display='none';loadList(true)}
+
+function toggleSearch(){$('searchBar').classList.toggle('hidden');if(!$('searchBar').classList.contains('hidden'))$('searchInput').focus()}
+function doSearch(){var kw=$('searchInput').value.trim();if(!kw)return;KEY=kw;CAT='new';
+  document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+  document.querySelector('.chip').classList.add('active');
+  $('content').innerHTML='';$('moreBtn').style.display='none';loadList(true)}
+function switchCat(id,el){CAT=id;KEY='';PAGE=1;
+  document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');$('content').innerHTML='';$('moreBtn').style.display='none';loadList(true)}
+
+if(!window.fongmiBridge)document.body.innerHTML='<div style="padding:40px;text-align:center"><h2>MISSAV</h2><p style="color:rgba(226,234,242,.72);margin-top:16px">需 TVBox / CatVod 内使用</p></div>';
+</script>
+</body></html>

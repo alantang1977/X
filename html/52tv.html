@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>无插件体育</title>
+<style>
+  :root{--panel-rgb:42,50,58;--panel:rgba(var(--panel-rgb),.62);--panel-soft:rgba(var(--panel-rgb),.44);--panel-strong:rgba(var(--panel-rgb),.86);--line:rgba(255,255,255,.16);--text:#f7fbff;--muted:rgba(247,251,255,.68);--accent:#ff6b35;--accent2:#ffb86b;--bad:#ff5c7a;--ok:#68e39a;--radius:18px;--shadow:0 18px 50px rgba(0,0,0,.28)}
+  *{box-sizing:border-box} html,body{margin:0;min-height:100%;background:transparent;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif} html:not(.fm-native),html:not(.fm-native) body{background:#222a32}.app{min-height:100vh;background:transparent;padding:10px 10px 28px}.top{position:relative;z-index:1;background:transparent;padding:8px 0 10px;border-bottom:0}.bar{display:flex;align-items:center;gap:8px}.brand{flex:0 0 auto;font-size:21px;font-weight:900;letter-spacing:.5px;text-shadow:0 2px 14px rgba(0,0,0,.35)}.brand b{color:var(--accent2)}.search{flex:1;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 7px 6px 13px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--text);font-size:15px}.search input::placeholder{color:var(--muted)}button,.btn{border:1px solid var(--line);background:var(--panel-soft);color:var(--text);border-radius:999px;padding:8px 12px;font-size:14px;cursor:pointer}.btn.primary,button.primary{border-color:rgba(255,107,53,.45);background:linear-gradient(135deg,rgba(255,107,53,.90),rgba(255,184,107,.72));color:#17110d;font-weight:800}.status{margin:10px 2px;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.card{position:relative;min-width:0;border-radius:15px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 28px rgba(0,0,0,.22);cursor:pointer}.poster{aspect-ratio:3/4;background:rgba(255,255,255,.08);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:var(--accent2);flex-direction:column;text-align:center;line-height:1.3;padding:10px}.poster .live-badge{position:absolute;top:8px;right:8px;background:var(--bad);color:#fff;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:700}.meta{padding:8px 8px 10px;background:linear-gradient(180deg,rgba(18,24,30,.15),rgba(18,24,30,.44))}.name{font-weight:800;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.remark{margin-top:4px;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sheet{position:fixed;inset:0;z-index:40;display:none;background:transparent;overflow:hidden}.sheet.active{display:block}.sheet-inner{height:100vh;min-height:100vh;padding:12px;background:transparent;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;touch-action:pan-y}.detail-panel{background:linear-gradient(135deg,rgba(64,35,30,.68),rgba(30,24,24,.54));border:1px solid rgba(255,255,255,.10);border-radius:22px;box-shadow:var(--shadow);padding:18px 14px 22px;margin-bottom:42px;touch-action:pan-y}.detail-head{display:flex;gap:14px;align-items:center}.detail-title{font-size:22px;font-weight:650;margin:0 0 12px;line-height:1.3;color:rgba(255,255,255,.94)}.detail-info{color:rgba(255,255,255,.76);font-size:15px;line-height:1.55}.play-title{margin:22px 2px 10px;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)}.link-list{display:flex;flex-direction:column;gap:10px}.link-item{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);color:var(--text);text-decoration:none;font-weight:500;display:block;cursor:pointer}.link-item:active{background:rgba(255,107,53,.25)}.empty{padding:30px 18px;text-align:center;color:var(--muted);background:var(--panel-soft);border:1px dashed var(--line);border-radius:var(--radius)}.focusable:focus,.card:focus,.link-item:focus,button:focus,input:focus{outline:2px solid rgba(255,184,107,.76);outline-offset:2px;transform:translateY(-1px)}
+  body.detail-active .app{visibility:hidden;pointer-events:none}@media(min-width:720px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}.app{padding:18px 28px 44px}}@media(min-width:1100px){.grid{grid-template-columns:repeat(7,minmax(0,1fr))}.app{max-width:1380px;margin:0 auto}.sheet-inner{max-width:1180px;margin:0 auto}}
+  .league-badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="top">
+    <div class="bar">
+      <div class="brand">无插件<b>直播</b></div>
+      <form class="search" id="searchForm">
+        <input id="kw" class="focusable" type="text" placeholder="搜索联赛、球队…" autocomplete="off" />
+        <button class="primary focusable" type="submit">搜索</button>
+      </form>
+      <button id="refreshBtn" class="btn focusable" title="重新获取最新赛程">↻</button>
+    </div>
+  </div>
+  <div class="status" id="status">正在从 5cj.tv 获取最新赛程…</div>
+  <main id="content"></main>
+</div>
+<div class="sheet" id="detailSheet"><div class="sheet-inner"><div class="detail-panel" id="detailPanel"></div></div></div>
+<script>
+(function(){
+'use strict';
+const BASE_URL = 'http://www.5cj.tv';
+const LIST_PATH = '/m.html';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s||'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+let allMatches = [];
+let lastFocus = null;
+
+// ========== 等待 FongMi SDK ==========
+function waitForFM(timeout = 2000) {
+  return new Promise((resolve) => {
+    if (window.fm && window.fm.req) { resolve(true); return; }
+    let handled = false;
+    const handler = () => { if (handled) return; handled = true; resolve(true); };
+    window.addEventListener('fmsdk', handler, { once: true });
+    setTimeout(() => { if (!handled) { window.removeEventListener('fmsdk', handler); resolve(false); } }, timeout);
+  });
+}
+
+// ========== 数据抓取（自动降级代理） ==========
+async function fetchHTML(url) {
+  const fmAvailable = window.fm && typeof window.fm.req === 'function';
+  if (fmAvailable) {
+    try {
+      const res = await window.fm.req(url, {
+        method: 'GET',
+        headers: { 'User-Agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36', 'Referer': BASE_URL + '/' },
+        responseType: 'text',
+        timeout: 15
+      });
+      if (res && res.ok && res.body) return res.body;
+    } catch (e) {}
+  }
+
+  try {
+    const res = await fetch(url, { headers: { 'Referer': BASE_URL + '/' } });
+    if (res.ok) return await res.text();
+  } catch (e) {}
+
+  const proxies = [
+    'https://corsproxy.io/?' + encodeURIComponent(url),
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
+  ];
+  for (const proxyUrl of proxies) {
+    try {
+      const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) });
+      if (res.ok) return await res.text();
+    } catch (e) {}
+  }
+  throw new Error('无法获取数据');
+}
+
+// ========== 播放推送（直接推送二级链接，依靠蜂蜜影视嗅探） ==========
+function playWithFM(linkUrl, matchTitle) {
+  if (!window.fm || !window.fm.play) return false;
+  try {
+    // 直接推送线路页面的URL，蜂蜜影视会自动嗅探页面中的媒体流
+    fm.play(linkUrl, matchTitle);
+    console.log('✅ 推送二级链接，蜂蜜影视将自动嗅探:', linkUrl);
+    return true;
+  } catch (e) {
+    console.warn('fm.play 调用失败:', e);
+    return false;
+  }
+}
+
+// ========== 解析比赛列表 ==========
+function parseMatchesFromHTML(html) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  const matches = [];
+  const selectors = [
+    'ul[data-role="listview"] li a[href^="#page_"]',
+    'a[href*="/zhibo/"]', 'a[href*="/live/"]', 'a[href*="/play/"]',
+    '.match-list a', '.live-list a'
+  ];
+  let listLinks = null;
+  for (const sel of selectors) {
+    listLinks = doc.querySelectorAll(sel);
+    if (listLinks.length) break;
+  }
+  if (!listLinks || !listLinks.length) return [];
+
+  for (const a of listLinks) {
+    const href = a.getAttribute('href') || '';
+    const id = href || (a.textContent.trim().slice(0,30) + Math.random());
+    const htmlContent = a.innerHTML;
+    let league = '', color = '#444';
+    const leagueSpan = a.querySelector('span.league, span[class*="league"], span[class*="type"], span[class*="cat"]');
+    if (leagueSpan) {
+      const style = leagueSpan.getAttribute('style') || '';
+      const colorMatch = style.match(/background(?:-color)?\s*:\s*([^;]+)/i);
+      if (colorMatch) color = colorMatch[1].trim();
+      league = (leagueSpan.textContent || '').trim();
+    }
+    let time = '';
+    const timeSpan = a.querySelector('span.live, span[class*="time"], span[class*="date"]');
+    if (timeSpan) {
+      time = (timeSpan.textContent || '').trim();
+    } else {
+      const timeMatch = a.textContent.match(/(\d{1,2}:\d{2})/);
+      if (timeMatch) time = timeMatch[1];
+    }
+    const fullText = a.textContent.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    let vsPart = fullText;
+    if (league) vsPart = vsPart.replace(league, '').trim();
+    if (time) vsPart = vsPart.replace(time, '').trim();
+    const vsMatch = vsPart.match(/(.+?)\s*VS\s*(.+)/i);
+    const home = vsMatch ? vsMatch[1].trim() : '';
+    const away = vsMatch ? vsMatch[2].trim() : '';
+
+    let links = [];
+    if (href.startsWith('#page_')) {
+      const pageDiv = doc.querySelector(`div[data-role="page"][id="${href.substring(1)}"]`);
+      if (pageDiv) {
+        pageDiv.querySelectorAll('a[href^="http"]').forEach(l => {
+          const url = l.getAttribute('href');
+          const name = (l.textContent || '').trim();
+          if (url && name && !name.includes('刷新') && !name.includes('返回') && !name.includes('电脑版')) {
+            links.push({ name, url });
+          }
+        });
+      }
+    } else if (href.startsWith('http')) {
+      links.push({ name: (a.textContent || '').trim(), url: href });
+    }
+    if (!links.length) {
+      const parent = a.closest('li') || a.parentElement;
+      if (parent) {
+        parent.querySelectorAll('a[href^="http"]').forEach(l => {
+          const url = l.getAttribute('href');
+          const name = (l.textContent || '').trim();
+          if (url && name && !name.includes('刷新') && !name.includes('返回')) {
+            links.push({ name, url });
+          }
+        });
+      }
+    }
+    const isLive = a.querySelector('.live, .living') !== null;
+    matches.push({ id: encodeURIComponent(String(id)), league, color, time, home, away, live: isLive, links: links.slice(0,10) });
+  }
+  return matches;
+}
+
+function renderMatches(matches) {
+  const content = $('#content');
+  if (!matches.length) { content.innerHTML = '<div class="empty">暂无比赛数据</div>'; return; }
+  const groups = {};
+  matches.forEach(m => {
+    const key = m.league || '其他';
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(m);
+  });
+  let html = '';
+  for (const [league, items] of Object.entries(groups)) {
+    html += `<section class="section"><div class="section-title"><h2>${esc(league)}</h2></div><div class="grid">`;
+    items.forEach(m => {
+      html += `<article class="card focusable" tabindex="0" data-id="${esc(m.id)}">
+        <div class="poster"><span>${esc(m.home)}<br>VS<br>${esc(m.away)}</span>${m.live ? '<span class="live-badge">直播中</span>' : ''}</div>
+        <div class="meta"><div class="name"><span class="league-badge" style="background:${esc(m.color)}">${esc(m.league)}</span> ${esc(m.time)}</div><div class="remark">${esc(m.home)} VS ${esc(m.away)}</div></div>
+      </article>`;
+    });
+    html += '</div></section>';
+  }
+  content.innerHTML = html;
+  content.querySelectorAll('.card').forEach(card => {
+    card.onclick = () => openDetail(card.dataset.id);
+    card.onkeydown = e => { if (e.key === 'Enter') card.click(); };
+  });
+}
+
+function search(keyword) {
+  const kw = keyword.trim().toLowerCase();
+  const filtered = kw ? allMatches.filter(m => m.league.toLowerCase().includes(kw) || m.home.toLowerCase().includes(kw) || m.away.toLowerCase().includes(kw) || m.time.includes(kw)) : allMatches;
+  renderMatches(filtered);
+  $('#status').textContent = kw ? `搜索"${keyword}"，找到 ${filtered.length} 场` : `共 ${allMatches.length} 场比赛`;
+}
+
+function openDetail(id) {
+  const match = allMatches.find(m => m.id === id);
+  if (!match) return;
+  lastFocus = document.activeElement;
+  document.body.classList.add('detail-active');
+  $('#detailSheet').classList.add('active');
+  const title = `${match.home} VS ${match.away}`;
+  let linksHtml = match.links.length
+    ? match.links.map((l, i) => `<button class="link-item focusable" data-url="${esc(l.url)}" data-title="${esc(title)}">${i+1}. ${esc(l.name)}</button>`).join('')
+    : '<div class="empty">暂无直播链接</div>';
+  $('#detailPanel').innerHTML = `
+    <button class="focusable" id="closeDetail" style="margin:0 0 18px 0;padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,184,107,.55)">← 返回</button>
+    <div class="detail-head"><div style="flex:1"><div class="detail-title">${esc(title)}</div><div class="detail-info"><span class="league-badge" style="background:${esc(match.color)}">${esc(match.league)}</span><span style="margin-left:8px; font-size:18px;">${esc(match.time)}</span>${match.live ? '<span style="color:#ff5c7a; margin-left:8px;">● 直播中</span>' : ''}</div></div></div>
+    <div class="play-title">直播线路（点击推送至蜂蜜影视）</div>
+    <div class="link-list">${linksHtml}</div>
+    <p style="margin-top:18px;color:var(--muted);font-size:14px;">推送链接后，蜂蜜影视会自动嗅探真实播放地址</p>
+  `;
+  $('#closeDetail').onclick = closeDetail;
+  $('#detailPanel').querySelectorAll('.link-item').forEach(btn => {
+    btn.onclick = () => {
+      const url = btn.dataset.url;
+      const t = btn.dataset.title;
+      if (playWithFM(url, t)) {
+        btn.textContent = '✅ 已推送';
+      } else {
+        window.open(url, '_blank');
+        btn.textContent = '已在新窗口打开';
+      }
+      setTimeout(() => { btn.disabled = false; }, 2000);
+    };
+  });
+  setTimeout(() => {
+    const firstBtn = $('#detailPanel .link-item');
+    if (firstBtn) firstBtn.focus({ preventScroll: true });
+  }, 100);
+}
+
+function closeDetail() {
+  document.body.classList.remove('detail-active');
+  $('#detailSheet').classList.remove('active');
+  if (lastFocus && lastFocus.focus) setTimeout(() => lastFocus.focus({ preventScroll: true }), 50);
+}
+
+async function loadData() {
+  $('#status').textContent = '正在从 5cj.tv 获取最新赛程…';
+  $('#content').innerHTML = '<div class="empty loading">⏳ 加载中…</div>';
+  try {
+    const html = await fetchHTML(BASE_URL + LIST_PATH);
+    allMatches = parseMatchesFromHTML(html);
+    if (!allMatches.length) {
+      $('#status').textContent = '❌ 未找到比赛数据';
+      return;
+    }
+    renderMatches(allMatches);
+    $('#status').textContent = `✅ 已更新 ${allMatches.length} 场比赛`;
+  } catch (e) {
+    $('#status').textContent = '❌ 加载失败';
+    $('#content').innerHTML = `<div class="empty"><p>网络错误或跨域限制</p><p>${esc(e.message)}</p></div>`;
+  }
+}
+
+function boot() {
+  waitForFM(3000).then(() => loadData());
+  $('#searchForm').onsubmit = e => { e.preventDefault(); search($('#kw').value); };
+  $('#refreshBtn').onclick = () => loadData();
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#detailSheet').classList.contains('active')) { e.preventDefault(); closeDetail(); } });
+}
+
+boot();
+})();
+</script>
+</body>
+</html>

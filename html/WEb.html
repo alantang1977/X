@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>甜圈短剧</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+          margin: 0;
+          min-height: 100%;
+          background: transparent;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          color: #fff;
+          overflow-x: hidden;
+        }
+        html:not(.fm-native), html:not(.fm-native) body { background: #1a1a2e; }
+        
+        :root {
+          --panel-rgb: 30, 30, 46;
+          --panel: rgba(var(--panel-rgb), .72);
+          --panel-soft: rgba(var(--panel-rgb), .48);
+          --panel-strong: rgba(var(--panel-rgb), .88);
+          --line: rgba(255, 255, 255, .12);
+          --accent: #ff6b9d;
+          --accent-hover: #ff8fab;
+          --text-primary: #ffffff;
+          --text-secondary: rgba(255,255,255,.7);
+          --text-muted: rgba(255,255,255,.5);
+          --card-radius: 10px;
+          --focus-color: #ff6b9d;
+        }
+        
+        .app { min-height: 100vh; background: transparent; position: relative; }
+        
+        .header {
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          background: var(--panel-strong);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid var(--line);
+          padding: 12px 16px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .logo {
+          font-size: 20px;
+          font-weight: 700;
+          color: var(--accent);
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .search-box {
+          flex: 1;
+          position: relative;
+          max-width: 400px;
+        }
+        .search-box input {
+          width: 100%;
+          padding: 10px 40px 10px 16px;
+          border-radius: 24px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-primary);
+          font-size: 14px;
+          outline: none;
+        }
+        .search-btn {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: var(--accent);
+          border: none;
+          color: #fff;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+        }
+        .header-actions {
+          display: flex;
+          gap: 8px;
+          flex-shrink: 0;
+        }
+        .header-btn {
+          padding: 8px 16px;
+          border-radius: 20px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-secondary);
+          font-size: 13px;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        
+        .category-bar {
+          display: flex;
+          gap: 8px;
+          padding: 12px 16px;
+          overflow-x: auto;
+          scrollbar-width: none;
+          background: transparent;
+        }
+        .category-bar::-webkit-scrollbar { display: none; }
+        .category-tab {
+          padding: 8px 20px;
+          border-radius: 20px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-secondary);
+          font-size: 14px;
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .category-tab.active {
+          background: var(--accent);
+          color: #fff;
+          border-color: var(--accent);
+        }
+        
+        .content { padding: 0 16px 24px; }
+        .section-title {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 20px 0 12px;
+          color: var(--text-primary);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .section-title::before {
+          content: "";
+          width: 4px;
+          height: 18px;
+          background: var(--accent);
+          border-radius: 2px;
+        }
+        
+        .video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+          gap: 12px;
+        }
+        @media (min-width: 768px) {
+          .video-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+        }
+        @media (min-width: 1200px) {
+          .video-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+        }
+        
+        .video-card {
+          background: var(--panel);
+          border-radius: var(--card-radius);
+          overflow: hidden;
+          border: 1px solid var(--line);
+          cursor: pointer;
+          position: relative;
+        }
+        .video-poster {
+          width: 100%;
+          aspect-ratio: 9/16;
+          object-fit: cover;
+          display: block;
+          background: #333;
+        }
+        .video-info {
+          padding: 10px;
+        }
+        .video-title {
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--text-primary);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          line-height: 1.4;
+          min-height: 36px;
+        }
+        .video-meta {
+          font-size: 11px;
+          color: var(--text-muted);
+          margin-top: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .video-remarks {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background: var(--accent);
+          color: #fff;
+          font-size: 10px;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+        
+        .loading, .empty, .error {
+          text-align: center;
+          padding: 40px 20px;
+          color: var(--text-muted);
+          font-size: 14px;
+        }
+        .spinner {
+          width: 40px;
+          height: 40px;
+          border: 3px solid var(--line);
+          border-top-color: var(--accent);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          margin: 0 auto 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        .pagination {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          padding: 24px 0;
+        }
+        .page-btn {
+          padding: 8px 16px;
+          border-radius: 8px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-secondary);
+          font-size: 14px;
+          cursor: pointer;
+        }
+        .page-btn:disabled {
+          opacity: .4;
+          cursor: not-allowed;
+        }
+        .page-info {
+          font-size: 14px;
+          color: var(--text-secondary);
+          padding: 0 12px;
+        }
+        
+        .detail-sheet {
+          position: fixed;
+          inset: 0;
+          z-index: 200;
+          background: transparent;
+          display: none;
+          overflow-y: auto;
+        }
+        .detail-sheet.active { display: block; }
+        .detail-backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,.6);
+          backdrop-filter: blur(8px);
+        }
+        .detail-content {
+          position: relative;
+          z-index: 1;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .detail-header {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 24px;
+          background: var(--panel);
+          border-radius: var(--card-radius);
+          padding: 20px;
+          border: 1px solid var(--line);
+        }
+        .detail-poster {
+          width: 140px;
+          border-radius: var(--card-radius);
+          flex-shrink: 0;
+          aspect-ratio: 9/16;
+          object-fit: cover;
+        }
+        .detail-info { flex: 1; min-width: 0; }
+        .detail-title {
+          font-size: 22px;
+          font-weight: 700;
+          margin-bottom: 12px;
+          color: var(--text-primary);
+        }
+        .detail-meta-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 12px;
+          font-size: 14px;
+          color: var(--text-secondary);
+        }
+        .detail-meta-row span {
+          background: var(--panel-soft);
+          padding: 4px 12px;
+          border-radius: 4px;
+          border: 1px solid var(--line);
+        }
+        .detail-desc {
+          font-size: 14px;
+          line-height: 1.8;
+          color: var(--text-secondary);
+          max-height: 120px;
+          overflow: hidden;
+        }
+        .detail-desc.expanded { max-height: none; }
+        .detail-desc-toggle {
+          color: var(--accent);
+          cursor: pointer;
+          font-size: 13px;
+          margin-top: 4px;
+          display: inline-block;
+        }
+        .detail-actions {
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+        }
+        .detail-play-btn {
+          padding: 12px 32px;
+          border-radius: 8px;
+          border: none;
+          background: var(--accent);
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .detail-close {
+          position: fixed;
+          top: 16px;
+          right: 16px;
+          z-index: 201;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid var(--line);
+          background: var(--panel-strong);
+          color: var(--text-primary);
+          font-size: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .episode-section {
+          background: var(--panel);
+          border-radius: var(--card-radius);
+          padding: 16px;
+          border: 1px solid var(--line);
+          margin-bottom: 16px;
+        }
+        .episode-section-title {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          color: var(--text-primary);
+        }
+        .episode-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+          gap: 8px;
+        }
+        .episode-btn {
+          padding: 10px;
+          border-radius: 6px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-secondary);
+          font-size: 13px;
+          cursor: pointer;
+          text-align: center;
+        }
+        
+        .settings-panel {
+          position: fixed;
+          top: 60px;
+          right: 16px;
+          z-index: 150;
+          background: var(--panel-strong);
+          border: 1px solid var(--line);
+          border-radius: var(--card-radius);
+          padding: 16px;
+          min-width: 280px;
+          display: none;
+          box-shadow: 0 8px 32px rgba(0,0,0,.4);
+        }
+        .settings-panel.active { display: block; }
+        .settings-row {
+          margin-bottom: 12px;
+        }
+        .settings-row label {
+          display: block;
+          font-size: 13px;
+          color: var(--text-secondary);
+          margin-bottom: 6px;
+        }
+        .settings-row input {
+          width: 100%;
+          padding: 8px 12px;
+          border-radius: 6px;
+          border: 1px solid var(--line);
+          background: var(--panel-soft);
+          color: var(--text-primary);
+          font-size: 14px;
+          outline: none;
+        }
+        .settings-save {
+          width: 100%;
+          padding: 10px;
+          border-radius: 6px;
+          border: none;
+          background: var(--accent);
+          color: #fff;
+          font-size: 14px;
+          cursor: pointer;
+          margin-top: 8px;
+        }
+        
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+    </style>
+</head>
+
+<body>
+    <div class="app" id="app">
+        <header class="header">
+            <div class="logo">🍩 甜圈短剧</div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索短剧...">
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" id="historyBtn">📜 历史</button>
+                <button class="header-btn" id="settingsBtn">⚙️ 设置</button>
+            </div>
+        </header>
+
+        <div class="category-bar" id="categoryBar"></div>
+        <main class="content" id="content">
+            <div class="loading">
+                <div class="spinner"></div>正在加载...
+            </div>
+        </main>
+        <div class="pagination" id="pagination" style="display:none;"></div>
+    </div>
+
+    <div class="detail-sheet" id="detailSheet">
+        <div class="detail-backdrop" id="detailBackdrop"></div>
+        <button class="detail-close" id="detailClose">✕</button>
+        <div class="detail-content" id="detailContent"></div>
+    </div>
+
+    <div class="settings-panel" id="settingsPanel">
+        <div class="settings-row">
+            <label>API 基础地址</label>
+            <input type="text" id="apiBaseInput" value="https://api.apibdzy.com" placeholder="https://api.apibdzy.com">
+        </div>
+        <div class="settings-row">
+            <label>每页数量</label>
+            <input type="number" id="pageSizeInput" value="24" min="6" max="50">
+        </div>
+        <button class="settings-save" id="settingsSave">保存设置</button>
+    </div>
+
+    <script>
+        var CONFIG = {
+          apiBase: 'https://api.apibdzy.com',
+          pageSize: 24,
+          cacheKey: 'tianquan_config_v3'
+        };
+        
+        var state = {
+          currentCategory: '',
+          currentPage: 1,
+          totalPages: 1,
+          categories: [],
+          videos: [],
+          isSearch: false,
+          searchKeyword: ''
+        };
+        
+        var $ = function(sel) { return document.querySelector(sel); };
+        
+        function loadConfig() {
+          try {
+            var saved = localStorage.getItem(CONFIG.cacheKey);
+            if (saved) {
+              var parsed = JSON.parse(saved);
+              if (parsed.apiBase) CONFIG.apiBase = parsed.apiBase;
+              if (parsed.pageSize) CONFIG.pageSize = parsed.pageSize;
+            }
+          } catch (e) { console.log('配置加载失败', e); }
+        }
+        
+        function saveConfig() {
+          var apiBase = $('#apiBaseInput').value.trim() || 'https://api.apibdzy.com';
+          var pageSize = parseInt($('#pageSizeInput').value) || 24;
+          CONFIG.apiBase = apiBase;
+          CONFIG.pageSize = pageSize;
+          localStorage.setItem(CONFIG.cacheKey, JSON.stringify({ apiBase: apiBase, pageSize: pageSize }));
+          $('#settingsPanel').classList.remove('active');
+          showToast('设置已保存');
+          loadHome();
+        }
+        
+        function showToast(msg) {
+          var div = document.createElement('div');
+          div.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:rgba(30,30,46,0.95);color:#fff;padding:10px 20px;border-radius:20px;font-size:14px;z-index:999;border:1px solid rgba(255,255,255,0.12);';
+          div.textContent = msg;
+          document.body.appendChild(div);
+          setTimeout(function() { div.remove(); }, 2000);
+        }
+        
+        function buildUrl(path, params) {
+          var base = CONFIG.apiBase;
+          if (base.charAt(base.length - 1) === '/') {
+            base = base.substring(0, base.length - 1);
+          }
+          var url = base + path;
+          var qs = [];
+          for (var key in params) {
+            if (params[key] !== '' && params[key] !== undefined && params[key] !== null) {
+              qs.push(key + '=' + encodeURIComponent(params[key]));
+            }
+          }
+          if (qs.length > 0) {
+            url = url + '?' + qs.join('&');
+          }
+          return url;
+        }
+        
+        function apiRequest(url, callback) {
+          console.log('请求URL:', url);
+        
+          if (typeof req !== 'undefined') {
+            try {
+              var res = req(url, { method: 'GET', timeout: 15000 });
+              console.log('req 返回类型:', typeof res);
+              if (res) {
+                var text = '';
+                if (typeof res === 'string') {
+                  text = res;
+                } else if (res.content && typeof res.content === 'string') {
+                  text = res.content;
+                } else if (res.content) {
+                  text = JSON.stringify(res.content);
+                } else {
+                  text = JSON.stringify(res);
+                }
+                console.log('req 返回内容前100字:', text.substring(0, 100));
+                try {
+                  var data = JSON.parse(text);
+                  callback(null, data);
+                  return;
+                } catch(e) {
+                  callback(new Error('JSON解析失败: ' + e.message + ', 内容:' + text.substring(0, 50)), null);
+                  return;
+                }
+              }
+            } catch (e) {
+              console.log('req 失败:', e.message || e);
+            }
+          } else {
+            console.log('req 未定义');
+          }
+        
+          if (typeof http !== 'undefined') {
+            try {
+              http(url, { method: 'GET', timeout: 15000 }).then(function(res) {
+                if (res) {
+                  var text = '';
+                  if (typeof res === 'string') {
+                    text = res;
+                  } else if (res.content && typeof res.content === 'string') {
+                    text = res.content;
+                  } else if (res.content) {
+                    text = JSON.stringify(res.content);
+                  } else {
+                    text = JSON.stringify(res);
+                  }
+                  try {
+                    var data = JSON.parse(text);
+                    callback(null, data);
+                  } catch(e) {
+                    callback(new Error('JSON解析失败: ' + e.message), null);
+                  }
+                } else {
+                  callback(new Error('http 返回空'), null);
+                }
+              }).catch(function(e) {
+                callback(e, null);
+              });
+              return;
+            } catch (e) {
+              console.log('http 调用失败:', e.message || e);
+            }
+          } else {
+            console.log('http 未定义');
+          }
+        
+          if (typeof fetch !== 'undefined') {
+            try {
+              fetch(url).then(function(res) {
+                return res.json();
+              }).then(function(data) {
+                callback(null, data);
+              }).catch(function(e) {
+                callback(e, null);
+              });
+              return;
+            } catch (e) {
+              console.log('fetch 失败:', e.message || e);
+            }
+          } else {
+            console.log('fetch 未定义');
+          }
+        
+          callback(new Error('无可用的请求方式(req/http/fetch都未定义)'), null);
+        }
+        
+        function getPosterUrl(url) {
+          if (!url) return '';
+          if (typeof fm !== 'undefined' && fm.res) {
+            return fm.res(url, { headers: { Referer: CONFIG.apiBase + '/' } });
+          }
+          return url;
+        }
+        
+        function loadCategories() {
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'list', pg: '1' });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              console.error('分类加载失败:', err.message || err);
+              state.categories = [
+                { type_id: '1', type_name: '电影' },
+                { type_id: '2', type_name: '电视剧' },
+                { type_id: '3', type_name: '综艺' },
+                { type_id: '4', type_name: '动漫' },
+                { type_id: '54', type_name: '爽文短剧' }
+              ];
+            } else if (data && data.class && data.class.length > 0) {
+              state.categories = data.class;
+            } else {
+              console.log('分类数据异常:', data);
+              state.categories = [
+                { type_id: '1', type_name: '电影' },
+                { type_id: '2', type_name: '电视剧' },
+                { type_id: '3', type_name: '综艺' },
+                { type_id: '4', type_name: '动漫' }
+              ];
+            }
+            renderCategories();
+          });
+        }
+        
+        function loadHome() {
+          state.isSearch = false;
+          state.searchKeyword = '';
+          state.currentPage = 1;
+          $('#searchInput').value = '';
+        
+          $('#content').innerHTML = '<div class="loading"><div class="spinner"></div>正在加载...</div>';
+        
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'list', pg: '1' });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              console.error('首页加载失败:', err.message || err);
+              $('#content').innerHTML = '<div class="error">加载失败: ' + (err.message || err) + '<br><small>当前API: ' + CONFIG.apiBase + '</small><br><small>请检查网络或更换API地址</small></div>';
+              return;
+            }
+            console.log('首页数据:', data ? 'code=' + data.code + ', list长度=' + (data.list ? data.list.length : 0) : '空');
+            state.videos = data.list || [];
+            state.totalPages = parseInt(data.pagecount) || 1;
+            state.currentPage = parseInt(data.page) || 1;
+            renderVideos(state.videos, '🔥 热门推荐');
+            renderPagination();
+          });
+        }
+        
+        function loadCategory(typeId, page) {
+          page = page || 1;
+          state.isSearch = false;
+          state.searchKeyword = '';
+          state.currentCategory = typeId;
+          state.currentPage = page;
+          $('#searchInput').value = '';
+        
+          $('#content').innerHTML = '<div class="loading"><div class="spinner"></div>正在加载...</div>';
+        
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'list', t: typeId, pg: String(page) });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              $('#content').innerHTML = '<div class="error">加载失败: ' + (err.message || err) + '</div>';
+              return;
+            }
+            state.videos = data.list || [];
+            state.totalPages = parseInt(data.pagecount) || 1;
+            state.currentPage = parseInt(data.page) || 1;
+            var catName = '';
+            for (var i = 0; i < state.categories.length; i++) {
+              if (state.categories[i].type_id == typeId) {
+                catName = state.categories[i].type_name;
+                break;
+              }
+            }
+            renderVideos(state.videos, catName || '影片列表');
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
+        }
+        
+        function searchVideos(keyword, page) {
+          page = page || 1;
+          if (!keyword.trim()) return;
+          state.isSearch = true;
+          state.searchKeyword = keyword;
+          state.currentPage = page;
+        
+          $('#content').innerHTML = '<div class="loading"><div class="spinner"></div>搜索中...</div>';
+        
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'list', wd: keyword, pg: String(page) });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              $('#content').innerHTML = '<div class="error">搜索失败: ' + (err.message || err) + '</div>';
+              return;
+            }
+            state.videos = data.list || [];
+            state.totalPages = parseInt(data.pagecount) || 1;
+            state.currentPage = parseInt(data.page) || 1;
+            renderVideos(state.videos, '「' + keyword + '」搜索结果');
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
+        }
+        
+        function loadDetail(vodId) {
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'detail', ids: vodId });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              showToast('加载详情失败: ' + (err.message || err));
+              return;
+            }
+            if (data.list && data.list.length > 0) {
+              renderDetail(data.list[0]);
+            } else {
+              showToast('未找到详情数据');
+            }
+          });
+        }
+        
+        function renderCategories() {
+          var bar = $('#categoryBar');
+          var html = '<div class="category-tab active" data-type="">全部</div>';
+          for (var i = 0; i < state.categories.length; i++) {
+            var c = state.categories[i];
+            html += '<div class="category-tab" data-type="' + c.type_id + '">' + c.type_name + '</div>';
+          }
+          bar.innerHTML = html;
+        
+          var tabs = bar.querySelectorAll('.category-tab');
+          for (var j = 0; j < tabs.length; j++) {
+            tabs[j].addEventListener('click', function() {
+              var typeId = this.dataset.type;
+              if (typeId === '') {
+                loadHome();
+              } else {
+                loadCategory(typeId);
+              }
+              for (var k = 0; k < tabs.length; k++) {
+                tabs[k].classList.remove('active');
+              }
+              this.classList.add('active');
+            });
+          }
+        }
+        
+        function renderVideos(videos, title) {
+          var content = $('#content');
+          if (!videos || videos.length === 0) {
+            content.innerHTML = '<div class="empty">暂无内容</div>';
+            return;
+          }
+        
+          var html = '<div class="section-title">' + title + '</div><div class="video-grid" id="videoGrid">';
+          for (var i = 0; i < videos.length; i++) {
+            var v = videos[i];
+            var remarks = v.vod_remarks ? '<span class="video-remarks">' + v.vod_remarks + '</span>' : '';
+            var year = v.vod_year ? '· ' + v.vod_year : '';
+            html += '<div class="video-card" data-id="' + v.vod_id + '">' +
+              '<img class="video-poster" src="' + getPosterUrl(v.vod_pic) + '" alt="' + v.vod_name + '" loading="lazy" onerror="this.style.display='none'">' +
+              remarks +
+              '<div class="video-info">' +
+              '<div class="video-title">' + v.vod_name + '</div>' +
+              '<div class="video-meta">' + (v.type_name || '') + year + '</div>' +
+              '</div></div>';
+          }
+          html += '</div>';
+          content.innerHTML = html;
+        
+          var cards = $('#videoGrid').querySelectorAll('.video-card');
+          for (var j = 0; j < cards.length; j++) {
+            cards[j].addEventListener('click', function() {
+              var id = this.dataset.id;
+              var name = this.querySelector('.video-title').textContent;
+              var pic = this.querySelector('.video-poster').src;
+              if (typeof fm !== 'undefined' && fm.vod) {
+                fm.vod('tianquan', id, name, pic);
+              } else {
+                openDetail(id);
+              }
+            });
+          }
+        }
+        
+        function renderPagination() {
+          var pag = $('#pagination');
+          if (state.totalPages <= 1) {
+            pag.style.display = 'none';
+            return;
+          }
+          pag.style.display = 'flex';
+          var prevDisabled = state.currentPage <= 1 ? 'disabled' : '';
+          var nextDisabled = state.currentPage >= state.totalPages ? 'disabled' : '';
+          pag.innerHTML = 
+            '<button class="page-btn" id="prevBtn" ' + prevDisabled + '>上一页</button>' +
+            '<span class="page-info">' + state.currentPage + ' / ' + state.totalPages + '</span>' +
+            '<button class="page-btn" id="nextBtn" ' + nextDisabled + '>下一页</button>';
+        
+          $('#prevBtn').addEventListener('click', function() {
+            if (state.currentPage > 1) {
+              if (state.isSearch) {
+                searchVideos(state.searchKeyword, state.currentPage - 1);
+              } else if (state.currentCategory) {
+                loadCategory(state.currentCategory, state.currentPage - 1);
+              } else {
+                loadHomePage(state.currentPage - 1);
+              }
+            }
+          });
+        
+          $('#nextBtn').addEventListener('click', function() {
+            if (state.currentPage < state.totalPages) {
+              if (state.isSearch) {
+                searchVideos(state.searchKeyword, state.currentPage + 1);
+              } else if (state.currentCategory) {
+                loadCategory(state.currentCategory, state.currentPage + 1);
+              } else {
+                loadHomePage(state.currentPage + 1);
+              }
+            }
+          });
+        }
+        
+        function loadHomePage(page) {
+          $('#content').innerHTML = '<div class="loading"><div class="spinner"></div>正在加载...</div>';
+          var url = buildUrl('/api.php/provide/vod/', { ac: 'list', pg: String(page) });
+          apiRequest(url, function(err, data) {
+            if (err) {
+              $('#content').innerHTML = '<div class="error">加载失败: ' + (err.message || err) + '</div>';
+              return;
+            }
+            state.videos = data.list || [];
+            state.totalPages = parseInt(data.pagecount) || 1;
+            state.currentPage = parseInt(data.page) || 1;
+            renderVideos(state.videos, '🔥 热门推荐');
+            renderPagination();
+            window.scrollTo(0, 0);
+          });
+        }
+        
+        function renderDetail(vod) {
+          var sheet = $('#detailSheet');
+          var content = $('#detailContent');
+        
+          var playFrom = vod.vod_play_from ? vod.vod_play_from.split('$$$') : [];
+          var playUrl = vod.vod_play_url ? vod.vod_play_url.split('$$$') : [];
+        
+          var episodesHtml = '';
+          for (var idx = 0; idx < playFrom.length; idx++) {
+            var from = playFrom[idx];
+            var urls = playUrl[idx] ? playUrl[idx].split('#') : [];
+            if (urls.length > 0) {
+              episodesHtml += '<div class="episode-section"><div class="episode-section-title">' + from + '</div><div class="episode-grid">';
+              for (var i = 0; i < urls.length; i++) {
+                var parts = urls[i].split('$');
+                var name = parts[0] || ('第' + (i+1) + '集');
+                var url = parts[1] || urls[i];
+                episodesHtml += '<button class="episode-btn" data-url="' + url + '" data-name="' + name + '">' + name + '</button>';
+              }
+              episodesHtml += '</div></div>';
+            }
+          }
+        
+          var metaHtml = '';
+          if (vod.vod_year) metaHtml += '<span>' + vod.vod_year + '</span>';
+          if (vod.type_name) metaHtml += '<span>' + vod.type_name + '</span>';
+          if (vod.vod_area) metaHtml += '<span>' + vod.vod_area + '</span>';
+          if (vod.vod_remarks) metaHtml += '<span>' + vod.vod_remarks + '</span>';
+        
+          var directorHtml = vod.vod_director ? '<div class="detail-meta-row"><span>导演: ' + vod.vod_director + '</span></div>' : '';
+          var actorHtml = vod.vod_actor ? '<div class="detail-meta-row"><span>主演: ' + vod.vod_actor + '</span></div>' : '';
+          var descToggle = (vod.vod_content && vod.vod_content.length > 100) ? '<span class="detail-desc-toggle" id="descToggle">展开更多</span>' : '';
+        
+          content.innerHTML = 
+            '<div class="detail-header">' +
+            '<img class="detail-poster" src="' + getPosterUrl(vod.vod_pic) + '" alt="' + vod.vod_name + '" onerror="this.style.display='none'">' +
+            '<div class="detail-info">' +
+            '<div class="detail-title">' + vod.vod_name + '</div>' +
+            '<div class="detail-meta-row">' + metaHtml + '</div>' +
+            directorHtml + actorHtml +
+            '<div class="detail-desc" id="detailDesc">' + (vod.vod_content || '暂无简介') + '</div>' +
+            descToggle +
+            '<div class="detail-actions"><button class="detail-play-btn" id="detailPlayBtn">▶ 立即播放</button></div>' +
+            '</div></div>' + episodesHtml;
+        
+          sheet.classList.add('active');
+        
+          $('#detailClose').addEventListener('click', closeDetail);
+          $('#detailBackdrop').addEventListener('click', closeDetail);
+        
+          var desc = $('#detailDesc');
+          var toggle = $('#descToggle');
+          if (toggle) {
+            toggle.addEventListener('click', function() {
+              desc.classList.toggle('expanded');
+              toggle.textContent = desc.classList.contains('expanded') ? '收起' : '展开更多';
+            });
+          }
+        
+          $('#detailPlayBtn').addEventListener('click', function() {
+            if (playUrl.length > 0 && playUrl[0]) {
+              var firstEp = playUrl[0].split('#')[0];
+              var parts = firstEp.split('$');
+              var name = parts[0] || '第1集';
+              var url = parts[1] || firstEp;
+              playVideo(url, vod.vod_name + ' - ' + name);
+            }
+          });
+        
+          var epBtns = content.querySelectorAll('.episode-btn');
+          for (var j = 0; j < epBtns.length; j++) {
+            epBtns[j].addEventListener('click', function() {
+              playVideo(this.dataset.url, vod.vod_name + ' - ' + this.dataset.name);
+            });
+          }
+        }
+        
+        function closeDetail() {
+          $('#detailSheet').classList.remove('active');
+        }
+        
+        function playVideo(url, title) {
+          if (!url) { showToast('播放地址无效'); return; }
+          if (url.charAt(0) === '/') {
+            var base = CONFIG.apiBase;
+            if (base.charAt(base.length - 1) === '/') {
+              base = base.substring(0, base.length - 1);
+            }
+            url = base + url;
+          }
+          if (typeof fm !== 'undefined' && fm.play) {
+            try {
+              fm.play(url, title, { headers: { Referer: CONFIG.apiBase + '/' } });
+            } catch (e) {
+              showToast('播放失败: ' + (e.message || e));
+            }
+          } else {
+            showToast('App环境才可播放');
+            console.log('播放地址:', url);
+          }
+        }
+        
+        function openDetail(vodId) {
+          loadDetail(vodId);
+        }
+        
+        function handleSearch() {
+          var keyword = $('#searchInput').value.trim();
+          if (keyword) {
+            searchVideos(keyword);
+          }
+        }
+        
+        function showHistory() {
+          if (typeof fm !== 'undefined' && fm.history) {
+            try {
+              fm.history().then(function(history) {
+                if (history && history.length > 0) {
+                  state.videos = [];
+                  for (var i = 0; i < history.length; i++) {
+                    var h = history[i];
+                    state.videos.push({
+                      vod_id: h.key,
+                      vod_name: h.vodName,
+                      vod_pic: h.vodPic,
+                      vod_remarks: h.vodRemarks,
+                      type_name: h.vodFlag
+                    });
+                  }
+                  renderVideos(state.videos, '📜 最近观看');
+                  $('#pagination').style.display = 'none';
+                } else {
+                  $('#content').innerHTML = '<div class="empty">暂无观看记录</div>';
+                }
+              }).catch(function(e) {
+                showToast('获取历史记录失败');
+              });
+            } catch (e) {
+              showToast('获取历史记录失败');
+            }
+          } else {
+            showToast('请在App内查看历史记录');
+          }
+        }
+        
+        function bindEvents() {
+          $('#searchBtn').addEventListener('click', handleSearch);
+          $('#searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') handleSearch();
+          });
+        
+          $('#historyBtn').addEventListener('click', showHistory);
+        
+          $('#settingsBtn').addEventListener('click', function() {
+            $('#settingsPanel').classList.toggle('active');
+          });
+        
+          $('#settingsSave').addEventListener('click', saveConfig);
+        
+          document.addEventListener('click', function(e) {
+            if (!e.target.closest('#settingsPanel') && !e.target.closest('#settingsBtn')) {
+              $('#settingsPanel').classList.remove('active');
+            }
+          });
+        }
+        
+        function init() {
+          console.log('=== 甜圈短剧初始化 ===');
+          console.log('环境检查:');
+          console.log('- req 定义:', typeof req !== 'undefined');
+          console.log('- http 定义:', typeof http !== 'undefined');
+          console.log('- fetch 定义:', typeof fetch !== 'undefined');
+          console.log('- fm 定义:', typeof fm !== 'undefined');
+          console.log('- localStorage 定义:', typeof localStorage !== 'undefined');
+        
+          loadConfig();
+          $('#apiBaseInput').value = CONFIG.apiBase;
+          $('#pageSizeInput').value = CONFIG.pageSize;
+        
+          bindEvents();
+          loadCategories();
+          loadHome();
+        
+          if (typeof fongmiBridge !== 'undefined' || typeof fm !== 'undefined' || typeof fongmi !== 'undefined') {
+            document.documentElement.classList.add('fm-native');
+          }
+        
+          window.addEventListener('fmsdk', function() {
+            console.log('FongMi SDK 已就绪');
+            document.documentElement.classList.add('fm-native');
+          });
+        }
+        
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+    </script>
+</body>
+
+</html>

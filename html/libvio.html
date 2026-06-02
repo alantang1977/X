@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>LIBVIO</title>
+<style>
+*,::before,::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;
+  --bg2:#111118;
+  --surface:rgba(20,22,30,.75);
+  --surface-hover:rgba(30,33,45,.85);
+  --accent:#e74c3c;
+  --accent2:#f5a623;
+  --grad:linear-gradient(135deg,#e74c3c,#f5a623);
+  --text:#eaeef2;
+  --text2:#8892a4;
+  --text3:#5a6478;
+  --line:rgba(255,255,255,.06);
+  --radius:10px;
+  --radius-sm:6px;
+  --shadow:0 4px 24px rgba(0,0,0,.4);
+}
+html,body{
+  margin:0;min-height:100%;
+  background:transparent;color:var(--text);
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+html:not(.fm-native),html:not(.fm-native) body{background:var(--bg)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--text3);border-radius:2px}
+::selection{background:var(--accent);color:#fff}
+
+/* ── Header ── */
+.header{
+  position:sticky;top:0;z-index:100;
+  padding:12px 16px;
+  background:rgba(10,10,15,.88);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--line);
+  flex-wrap:wrap;
+}
+.header-logo{
+  font-size:20px;font-weight:800;flex-shrink:0;
+  background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:-.5px;
+}
+.nav-wrap{display:flex;gap:3px;flex-shrink:0;overflow-x:auto;scrollbar-width:none;}
+.nav-wrap::-webkit-scrollbar{display:none}
+.nav-tab{
+  padding:6px 14px;border-radius:20px;font-size:13px;font-weight:500;
+  cursor:pointer;background:transparent;color:var(--text2);
+  transition:all .25s;white-space:nowrap;border:1px solid transparent;
+}
+.nav-tab:hover{color:var(--text);background:var(--surface)}
+.nav-tab.on{background:var(--grad);color:#fff;border-color:transparent}
+.nav-tab:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.search-box{display:flex;gap:6px;width:100%}
+.search-row{
+  padding:8px 16px 10px;
+  background:rgba(10,10,15,.75);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.search-box input{
+  flex:1;padding:8px 14px;border-radius:20px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text);font-size:13px;
+  outline:none;min-width:80px;transition:border-color .2s;
+}
+.search-box input:focus{border-color:var(--accent2)}
+.search-box input::placeholder{color:var(--text3)}
+.search-box button{
+  padding:8px 16px;border:none;border-radius:20px;
+  background:var(--grad);color:#fff;font-size:13px;font-weight:600;
+  cursor:pointer;white-space:nowrap;transition:opacity .2s;
+}
+.search-box button:hover{opacity:.9}
+.search-box button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* ── Content ── */
+.scroll-area{padding:4px 16px 24px}
+.section{margin:18px 0}
+.section-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:10px;
+}
+.section-head h2{
+  font-size:17px;font-weight:700;position:relative;
+}
+.section-head h2::after{
+  content:'';position:absolute;bottom:-2px;left:0;width:28px;height:3px;
+  background:var(--grad);border-radius:2px;
+}
+.section-head .more{
+  margin-left:auto;font-size:12px;color:var(--text2);
+  cursor:pointer;padding:4px 12px;border-radius:14px;
+  border:1px solid var(--line);transition:all .2s;
+}
+.section-head .more:hover{color:var(--accent2);border-color:var(--accent2)}
+
+/* ── Card Grid ── */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+  gap:10px;
+}
+.card{
+  border-radius:var(--radius);overflow:hidden;cursor:pointer;
+  background:var(--surface);border:1px solid var(--line);
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,background .2s;
+  position:relative;
+}
+.card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 8px 32px rgba(0,0,0,.5);background:var(--surface-hover)}
+.card:active{transform:scale(.97)}
+.card:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.card-img-wrap{position:relative;overflow:hidden;background:var(--bg2)}
+.card-img{
+  width:100%;aspect-ratio:2/3;object-fit:cover;display:block;
+  transition:transform .4s;
+}
+.card:hover .card-img{transform:scale(1.05)}
+.card-rating{
+  position:absolute;top:6px;right:6px;
+  background:rgba(0,0,0,.75);color:var(--accent2);font-size:10px;font-weight:700;
+  padding:2px 7px;border-radius:4px;z-index:2;backdrop-filter:blur(4px);
+  border:1px solid rgba(245,166,35,.2);
+}
+.card-badge{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent 20%,rgba(0,0,0,.9));
+  padding:22px 7px 5px;text-align:right;font-size:11px;color:#fff;
+  font-weight:500;letter-spacing:.3px;
+}
+.card-body{padding:8px 8px 9px}
+.card-title{
+  font-size:13px;font-weight:500;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap;color:var(--text);
+}
+
+/* ── Detail Overlay ── */
+.detail-view{
+  position:fixed;inset:0;z-index:200;
+  background:transparent;overflow-y:auto;
+  display:none;-webkit-overflow-scrolling:touch;
+}
+.detail-view.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+body.detail-active .app{visibility:hidden;pointer-events:none}
+.detail-bg{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+}
+.detail-content{
+  position:relative;z-index:2;max-width:800px;margin:0 auto;padding:16px;
+}
+.detail-back{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 16px 8px 8px;margin-bottom:12px;border-radius:20px;
+  cursor:pointer;font-size:14px;font-weight:600;color:var(--text2);
+  background:var(--surface);border:1px solid var(--line);
+  transition:all .2s;backdrop-filter:blur(8px);
+}
+.detail-back:hover{color:var(--text);border-color:var(--text3)}
+.detail-back:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.detail-hero{
+  display:flex;gap:16px;flex-wrap:wrap;
+  background:var(--surface);border-radius:var(--radius);
+  padding:16px;border:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.detail-poster{
+  width:120px;border-radius:var(--radius-sm);flex-shrink:0;
+  aspect-ratio:2/3;object-fit:cover;box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+.detail-info{flex:1;min-width:180px}
+.detail-title{font-size:20px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.detail-meta{
+  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;
+}
+.detail-meta span{
+  font-size:12px;color:var(--text2);background:var(--bg2);
+  padding:2px 10px;border-radius:12px;border:1px solid var(--line);
+}
+.detail-field{font-size:12px;margin-bottom:3px;line-height:1.6}
+.detail-field-label{color:var(--accent2);font-weight:500}
+.detail-field-value{color:var(--text2)}
+.detail-desc{
+  font-size:13px;color:var(--text2);line-height:1.7;
+  margin:12px 0;padding:12px;background:var(--bg2);
+  border-radius:var(--radius-sm);border-left:3px solid var(--accent);
+}
+.play-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 28px;border:none;border-radius:24px;
+  background:var(--grad);color:#fff;font-size:14px;font-weight:700;
+  cursor:pointer;transition:all .25s;margin:4px 0;
+  box-shadow:0 4px 16px rgba(231,76,60,.3);
+}
+.play-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(231,76,60,.4)}
+.play-btn:active{transform:translateY(0)}
+.play-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* ── Episode Grid ── */
+.episode-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.episode-section{margin-top:14px}
+.episode-section .label{
+  font-size:13px;font-weight:600;margin-bottom:8px;color:var(--text2);
+}
+.episode-btn{
+  padding:7px 16px;border-radius:18px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text);font-size:12px;font-weight:500;
+  cursor:pointer;transition:all .2s;
+}
+.episode-btn:hover{background:var(--surface-hover);border-color:var(--text3)}
+.episode-btn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.episode-btn:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* ── Loading ── */
+.loading{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:60px 20px;color:var(--text2);font-size:14px;gap:12px;
+}
+.loading-spinner{
+  width:36px;height:36px;border:3px solid var(--line);
+  border-top-color:var(--accent);border-radius:50%;
+  animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── Pagination ── */
+.pagination-bar{
+  display:flex;gap:5px;justify-content:center;padding:14px 0;flex-wrap:wrap;
+}
+.page-btn{
+  padding:6px 14px;border-radius:16px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text2);font-size:12px;
+  cursor:pointer;transition:all .2s;font-weight:500;
+}
+.page-btn:hover{background:var(--surface-hover);color:var(--text)}
+.page-btn.on{background:var(--grad);color:#fff;border-color:transparent}
+.page-btn:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* ── Error ── */
+.error-msg{text-align:center;padding:40px 20px;color:var(--accent2);font-size:14px;}
+
+/* ── Rank List ── */
+.rank-list{list-style:none}
+.rank-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;
+  border-radius:var(--radius-sm);transition:background .2s;
+}
+.rank-item:hover{background:var(--surface)}
+.rank-item:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.rank-item:last-child{border-bottom:none}
+.rank-num{
+  width:24px;text-align:center;font-weight:800;font-size:14px;
+  color:var(--text3);flex-shrink:0;
+}
+.rank-num.r1{color:#f5a623}
+.rank-num.r2{color:#c0c0c0}
+.rank-num.r3{color:#cd7f32}
+.rank-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+.rank-date{font-size:11px;color:var(--text3);flex-shrink:0}
+
+/* ── Skeleton ── */
+.skeleton-row{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+  gap:10px;margin-bottom:16px;
+}
+.skeleton-card{
+  aspect-ratio:2/3;border-radius:var(--radius);
+  background:var(--surface);position:relative;overflow:hidden;
+}
+.skeleton-card::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);
+  animation:shimmer 1.5s infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* ── PanSou / 网盘搜索 ── */
+.pansou-head{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.pansou-head input{flex:1;padding:8px 14px;border-radius:20px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:13px;outline:none;min-width:120px}
+.pansou-head input:focus{border-color:var(--accent2)}
+.pansou-head button{padding:8px 20px;border:none;border-radius:20px;background:var(--grad);color:#fff;font-size:13px;font-weight:600;cursor:pointer}
+.disk-types{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.disk-type{padding:4px 12px;border-radius:14px;border:1px solid var(--line);background:transparent;color:var(--text2);font-size:11px;cursor:pointer;transition:all .2s}
+.disk-type.on{background:var(--accent2);color:#fff;border-color:var(--accent2)}
+.disk-type:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.pansou-result{display:flex;flex-direction:column;gap:6px}
+.pansou-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);background:var(--surface);border:1px solid var(--line);cursor:pointer;transition:all .15s}
+.pansou-item:hover{background:var(--surface-hover)}
+.pansou-item:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.pansou-item .pi-title{flex:1;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pansou-item .pi-type{font-size:10px;color:var(--accent2);background:rgba(245,166,35,.12);padding:1px 7px;border-radius:8px;flex-shrink:0}
+.pansou-item .pi-status{width:16px;height:16px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px}
+.pi-ok{background:#27ae60;color:#fff}
+.pi-bad{background:#c0392b;color:#fff}
+.pi-uncertain{background:#7f8c8d;color:#fff}
+.pi-pending{background:var(--text3);color:var(--bg)}
+.pi-none{display:none}
+.pansou-info{text-align:center;padding:24px;color:var(--text3);font-size:13px}
+
+/* ── Responsive ── */
+@media(min-width:600px){.card-grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}}
+@media(min-width:900px){.card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}}
+@media(min-width:1200px){.card-grid{grid-template-columns:repeat(auto-fill,minmax(175px,1fr))}}
+@media(max-width:480px){
+  .header{padding:10px 10px;gap:6px}
+  .header-logo{font-size:17px}
+  .nav-tab{padding:4px 10px;font-size:12px}
+  .search-box{max-width:140px}
+  .scroll-area{padding:4px 10px 20px}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:7px}
+  .detail-hero{flex-direction:column;align-items:center}
+  .detail-poster{width:100px}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="header">
+    <span class="header-logo">LIBVIO</span>
+    <div class="nav-wrap">
+      <div class="nav-tab on" data-tab="home" tabindex="0">首页</div>
+      <div class="nav-tab" data-tab="1" tabindex="0">电影</div>
+      <div class="nav-tab" data-tab="2" tabindex="0">剧集</div>
+      <div class="nav-tab" data-tab="4" tabindex="0">番剧</div>
+      <div class="nav-tab" data-tab="3" tabindex="0">综艺</div>
+      <div class="nav-tab" data-tab="pansou" tabindex="0">网盘</div>
+      <div class="nav-tab" data-tab="trending" tabindex="0">推荐</div>
+    </div>
+  </div>
+  <div class="search-row">
+    <div class="search-box">
+      <input id="searchInput" placeholder="搜索电影、剧集..." maxlength="30">
+      <button id="searchBtn">搜索</button>
+    </div>
+  </div>
+  <div class="scroll-area" id="mainContent">
+    <div class="loading"><div class="loading-spinner"></div>加载中...</div>
+  </div>
+</div>
+<div class="detail-view" id="detailView">
+  <div class="detail-bg" id="detailBg"></div>
+  <div class="detail-content" id="detailContent"></div>
+</div>
+<script>
+var BASE = 'https://www.libvio.run';
+var TYPE_NAMES = { '1':'电影','2':'剧集','3':'综艺','4':'番剧','15':'日韩','16':'欧美' };
+
+function _fm() {
+  return new Promise(function (r) {
+    if (window.fm) return r(window.fm);
+    var t = 0;
+    (function c() { if (window.fm) return r(window.fm); if (++t > 30) return r(null); setTimeout(c,100); })();
+  });
+}
+if (window.fongmiBridge || window.fm || window.fongmi)
+  document.documentElement.classList.add('fm-native');
+
+function _req(url) {
+  return _fm().then(function (f) {
+    if (f && f.req) return f.req(url, { timeout:20 });
+    return fetch(url, { headers:{ 'User-Agent':'Mozilla/5.0' } }).then(function(r){return r.text();}).then(function(t){return{body:t};});
+  }).then(function(res){
+    return (res && res.body != null) ? (typeof res.body === 'string' ? res.body : JSON.stringify(res.body)) : '';
+  });
+}
+function _img(url) {
+  if (!url) return '';
+  try { if (window.fm && fm.res) return fm.res(url, { credentials:'include' }); } catch(e) {}
+  return url;
+}
+function _play(url, title) {
+  var fullUrl = url.indexOf('://') > 0 ? url : BASE + url;
+  if (fullUrl.indexOf('/w/') > 0) {
+    _playDecrypt(fullUrl, title);
+    return;
+  }
+  _fm().then(function (f) {
+    if (f && f.play) return f.play(fullUrl, title || '', {});
+    window.open(fullUrl);
+  });
+}
+function _playDecrypt(playUrl, title) {
+  _fm().then(function (f) {
+    if (!f || !f.req) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+    f.req(playUrl, {timeout:20}).then(function(r1){
+      var h1 = r1 && r1.body;
+      if (typeof h1 !== 'string') h1 = h1 ? JSON.stringify(h1) : '';
+      // Check if this is a netdisk-only resource
+      if (h1.indexOf('netdisk') >= 0 && h1.indexOf('player_aaaa') < 0) {
+        _showNetdiskNotice(playUrl, title);
+        return;
+      }
+      var pi = h1.indexOf('player_aaaa');
+      if (pi < 0) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+      var ch = h1.substring(pi, pi+5000);
+      var br = ch.indexOf('{');
+      var en = ch.indexOf('</scr' + 'ipt>');
+      if (br < 0 || en <= br) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+      var player;
+      try { player = JSON.parse(ch.substring(br, en)); } catch(e) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+      var encUrl = player.url;
+      if (!encUrl) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+      var vid = player.id || '';
+      var nid = player.nid || '1';
+      var ty4 = BASE + '/vid/ty4.php?url=' + encodeURIComponent(encUrl) + '&next=&id=' + vid + '&nid=' + nid;
+      f.req(ty4, {timeout:20}).then(function(r2){
+        var h2 = r2 && r2.body;
+        if (typeof h2 !== 'string') h2 = h2 ? JSON.stringify(h2) : '';
+        var pm = h2.match(/"parseUrl"\s*:\s*"([^"]+)"/);
+        if (!pm) { _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); return; }
+        var pp = pm[1].replace(/\\u0026/g, '&');
+        var body = JSON.stringify({url: encUrl});
+        f.req(BASE + pp, {method:'POST', headers:{'Content-Type':'application/json'}, body:body, timeout:20})
+          .then(function(r3){
+            var data = r3 && r3.body;
+            if (data && typeof data === 'object' && data.url) {
+              if (f && f.play) f.play(data.url, title||'', {});
+              else window.open(data.url);
+            } else {
+              _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});});
+            }
+          })['catch'](function(){ _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); });
+      })['catch'](function(){ _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); });
+    })['catch'](function(){ _fm().then(function(g){if(g&&g.play)g.play(playUrl,title||'',{});}); });
+  });
+}
+function _showNetdiskNotice(playUrl, title) {
+  // Extract netdisk links from play page
+  _fm().then(function(f){
+    if (!f || !f.req) return;
+    f.req(playUrl, {timeout:20}).then(function(r){
+      var html = r && r.body;
+      if (typeof html !== 'string') html = html ? JSON.stringify(html) : '';
+      // Parse netdisk panels
+      var nds = [];
+      var ndRe = /<div class="netdisk-list">([\s\S]*?)<\/div>/g;
+      var nm;
+      while ((nm = ndRe.exec(html)) !== null) {
+        var links = nm[1].match(/<a[^>]+href="([^"]+)"[^>]*>[\s\S]*?<span class="netdisk-name">([^<]+)<\/span>/);
+        if (links) nds.push({url: links[1], name: links[2].trim()});
+      }
+      // Also check for "panel-head netdisk-head" titles
+      var sections = [];
+      var shRe = /<div class="panel-head netdisk-head">([\s\S]*?)<\/div>/g;
+      while ((nm = shRe.exec(html)) !== null) {
+        var tm = nm[1].match(/<h3>([^<]+)<\/h3>/);
+        if (tm) sections.push(tm[1].trim());
+      }
+      var msg = '⚠️ 该资源仅提供网盘下载\n';
+      for (var i = 0; i < sections.length; i++) {
+        msg += '\n' + sections[i];
+        if (nds[i]) msg += ': ' + nds[i].url;
+      }
+      // Show in overlay (native alert doesn't work on TVBox, use custom overlay)
+      _showOverlay(msg);
+    });
+  });
+}
+function _showOverlay(msg) {
+  var old = document.getElementById('msg-overlay');
+  if (old) old.remove();
+  var ov = document.createElement('div');
+  ov.id = 'msg-overlay';
+  ov.style.cssText = 'position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;padding:30px;';
+  var box = document.createElement('div');
+  box.style.cssText = 'background:var(--surface,#1a1e26);border-radius:12px;padding:24px;max-width:400px;width:100%;color:#eaeef2;font-size:13px;line-height:1.7;white-space:pre-wrap;word-break:break-all;border:1px solid rgba(255,255,255,.1);';
+  box.textContent = msg;
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = '关闭';
+  closeBtn.style.cssText = 'margin-top:12px;padding:8px 24px;border:none;border-radius:20px;background:var(--accent,#e74c3c);color:#fff;font-size:13px;font-weight:600;cursor:pointer;display:block;width:100%;';
+  closeBtn.onclick = function(){ ov.remove(); };
+  box.appendChild(closeBtn);
+  ov.appendChild(box);
+  document.body.appendChild(ov);
+  ov.onclick = function(e){ if (e.target === ov) ov.remove(); };
+}
+function _esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function parseCardsFromList(listHtml) {
+  var cards = [];
+  var re = /<li[^>]*>([\s\S]*?)<\/li>/g;
+  var m;
+  while ((m = re.exec(listHtml)) !== null) {
+    var block = m[1];
+    if (block.indexOf('stui-vodlist__box') < 0) continue;
+    var hm = block.match(/href="(\/detail\/\d+\.html)"/);
+    if (!hm) continue;
+    var href = hm[1];
+    var idm = href.match(/(\d+)\.html/);
+    if (!idm) continue;
+    var im = block.match(/data-original="([^"]+)"/);
+    var img = im ? im[1] : '';
+    if (!img) { var im2 = block.match(/src="([^"]+)"/); if (im2) img = im2[1]; }
+    var tm = block.match(/title="([^"]+)"/);
+    var title = tm ? tm[1] : '';
+    var rm = block.match(/pic-tag pic-tag-top">([^<]+)/);
+    var rate = rm ? rm[1] : '';
+    var bm = block.match(/pic-text[^"]*"[^>]*>([^<]+)/);
+    var badge = bm ? bm[1].trim() : '';
+    cards.push({ id:idm[1], title:title, img:img, rate:rate, badge:badge, href:href });
+  }
+  return cards;
+}
+
+function renderCard(c) {
+  var imgUrl = _img(c.img);
+  var h = '<div class="card" data-href="' + _esc(c.href) + '" tabindex="0">';
+  h += '<div class="card-img-wrap">';
+  h += '<img class="card-img" src="' + _esc(imgUrl) + '" alt="' + _esc(c.title) + '" loading="lazy" onerror="this.style.display=\'none\'">';
+  if (c.badge) h += '<div class="card-badge">' + _esc(c.badge) + '</div>';
+  if (c.rate && c.rate !== '0.0') h += '<div class="card-rating">' + _esc(c.rate) + '</div>';
+  h += '</div><div class="card-body"><div class="card-title">' + _esc(c.title) + '</div></div></div>';
+  return h;
+}
+
+function showSkeleton() {
+  var el = document.getElementById('mainContent');
+  var h = '';
+  for (var s = 0; s < 3; s++) {
+    h += '<div class="skeleton-row">';
+    for (var i = 0; i < 8; i++) h += '<div class="skeleton-card"></div>';
+    h += '</div>';
+  }
+  el.innerHTML = h;
+}
+
+function loadHome() {
+  showSkeleton();
+  _req(BASE + '/').then(function(html){
+    if (!html) { document.getElementById('mainContent').innerHTML = '<div class="error-msg">加载失败</div>'; return; }
+    renderHome(html);
+  });
+}
+
+function renderHome(html) {
+  var el = document.getElementById('mainContent');
+  var h = '';
+  var headRe = /<div class="stui-vodlist__head">([\s\S]*?)<\/div>\s*<ul class="stui-vodlist[^"]*"[^>]*>([\s\S]*?)<\/ul>/g;
+  var hm;
+  while ((hm = headRe.exec(html)) !== null) {
+    var headHtml = hm[1];
+    var listHtml = hm[2];
+    var lm = headHtml.match(/<h3[^>]*>[\s\S]*?>\s*([^<]+?)\s*</);
+    var label = lm ? lm[1].trim() : '';
+    if (!label) continue;
+    var tm = headHtml.match(/\/show\/(\d+)-/);
+    var typeId = tm ? tm[1] : '';
+    var cards = parseCardsFromList(listHtml);
+    if (cards.length === 0) continue;
+    h += '<div class="section">';
+    h += '<div class="section-head"><h2>' + _esc(label) + '</h2>';
+    if (typeId) h += '<span class="more" data-type="' + typeId + '" tabindex="0">更多 ›</span>';
+    h += '</div><div class="card-grid">';
+    for (var i = 0; i < cards.length; i++) h += renderCard(cards[i]);
+    h += '</div></div>';
+  }
+  el.innerHTML = h || '<div class="error-msg">首页加载失败</div>';
+  bindEvents(el);
+}
+
+function loadCategory(typeId, page) {
+  page = page || 1;
+  showSkeleton();
+  var url = page <= 1 ? (BASE + '/show/' + typeId + '-----------.html') : (BASE + '/show/' + typeId + '--------' + page + '---.html');
+  _req(url).then(function(html){
+    if (!html) { document.getElementById('mainContent').innerHTML = '<div class="error-msg">加载失败</div>'; return; }
+    renderCategory(html, typeId, page);
+  });
+}
+
+function renderCategory(html, typeId, page) {
+  var el = document.getElementById('mainContent');
+  var ulm = html.match(/<ul class="stui-vodlist[^"]*"[^>]*>([\s\S]*?)<\/ul>/);
+  if (!ulm) { el.innerHTML = '<div class="error-msg">没有内容</div>'; return; }
+  var cards = parseCardsFromList(ulm[1]);
+  var name = TYPE_NAMES[typeId] || ('分类' + typeId);
+  var h = '<div class="section"><div class="section-head"><h2>' + name + '</h2></div>';
+  h += '<div class="card-grid">';
+  for (var i = 0; i < cards.length; i++) h += renderCard(cards[i]);
+  h += '</div>';
+  var maxPage = 1;
+  var pgRe = new RegExp('/show/' + typeId + '--------(\\d+)---\\.html', 'g');
+  var pm;
+  while ((pm = pgRe.exec(html)) !== null) { var pn = parseInt(pm[1]); if (pn > maxPage) maxPage = pn; }
+  var totalm = html.match(/>\d+\/(\d+)</);
+  if (totalm) { var tm2 = parseInt(totalm[1]); if (tm2 > maxPage) maxPage = tm2; }
+  if (maxPage > 1) {
+    h += '<div class="pagination-bar">';
+    if (page > 1) h += '<button class="page-btn pg-btn" data-type="' + typeId + '" data-page="' + (page-1) + '" tabindex="0">‹ 上一页</button>';
+    var start = Math.max(1, page - 3);
+    var end = Math.min(maxPage, page + 3);
+    for (var pp = start; pp <= end; pp++) h += '<button class="page-btn pg-btn' + (pp === page ? ' on' : '') + '" data-type="' + typeId + '" data-page="' + pp + '" tabindex="0">' + pp + '</button>';
+    if (page < maxPage) h += '<button class="page-btn pg-btn" data-type="' + typeId + '" data-page="' + (page+1) + '" tabindex="0">下一页 ›</button>';
+    h += '</div>';
+  }
+  h += '</div>';
+  el.innerHTML = h;
+  bindEvents(el);
+}
+
+function doSearch(keyword) {
+  if (!keyword.trim()) return;
+  showSkeleton();
+  _req(BASE + '/search/-------------.html?wd=' + encodeURIComponent(keyword)).then(function(html){
+    var el = document.getElementById('mainContent');
+    if (!html) { el.innerHTML = '<div class="error-msg">搜索失败</div>'; return; }
+    var ulm = html.match(/<ul class="stui-vodlist[^"]*"[^>]*>([\s\S]*?)<\/ul>/);
+    if (!ulm) { el.innerHTML = '<div class="section"><div class="section-head"><h2>"' + _esc(keyword) + '" 无结果</h2></div></div>'; return; }
+    var cards = parseCardsFromList(ulm[1]);
+    var h = '<div class="section"><div class="section-head"><h2>"' + _esc(keyword) + '" 搜索结果 (' + cards.length + ')</h2></div><div class="card-grid">';
+    for (var i = 0; i < cards.length; i++) h += renderCard(cards[i]);
+    h += '</div></div>';
+    el.innerHTML = h;
+    bindEvents(el);
+  });
+}
+
+function loadDetail(href) {
+  var el = document.getElementById('detailContent');
+  var view = document.getElementById('detailView');
+  view.classList.add('active');
+  document.body.classList.add('detail-active');
+  el.innerHTML = '<div class="loading"><div class="loading-spinner"></div>加载中...</div>';
+  _req(BASE + href).then(function(html){
+    if (!html) { el.innerHTML = '<div class="error-msg">加载失败</div>'; return; }
+    renderDetail(html, el, href);
+  });
+}
+
+function renderDetail(html, el, href) {
+  var poster = '', title = '', year = '', rate = '', desc = '';
+  var director = '', cast = '', genre = '', country = '';
+  var pm = html.match(/<div class="vod-poster__wrap">[\s\S]*?data-original="([^"]+)"/);
+  if (pm) poster = pm[1];
+  if (!poster) { var pm2 = html.match(/id="js-poster-img"[^>]+data-original="([^"]+)"/); if (pm2) poster = pm2[1]; }
+  var tm = html.match(/<h1[^>]*class="title">([^<]+)<\/h1>/);
+  if (tm) title = tm[1];
+  var metaItems = [];
+  var miRe = /<span class="meta-item">([^<]+)<\/span>/g;
+  var mi;
+  while ((mi = miRe.exec(html)) !== null) metaItems.push(mi[1].trim());
+  var genreSet = ['剧情','喜剧','动作','爱情','科幻','恐怖','悬疑','奇幻','冒险','犯罪','战争','动画','纪录片','惊悚','历史','传记','家庭','音乐','同性','歌舞','古装','运动','灾难','武侠','西部','儿童','短片','黑色电影','戏曲'];
+  for (var mi2 = 0; mi2 < metaItems.length; mi2++) {
+    var val = metaItems[mi2];
+    if (/^\d{4}$/.test(val)) { year = val; continue; }
+    if (/^\d{4}-\d{2}-\d{2}/.test(val)) continue;
+    var parts = val.split(',');
+    var isGenre = false;
+    for (var p = 0; p < parts.length; p++) { if (genreSet.indexOf(parts[p].trim()) >= 0) { isGenre = true; break; } }
+    if (isGenre) { genre = val; continue; }
+    var countryHints = ['国','美国','英国','法国','德国','韩国','日本','台湾','香港','意大利','西班牙','加拿大','澳大利亚','印度','泰国','俄罗斯'];
+    for (var ch = 0; ch < countryHints.length; ch++) { if (val.indexOf(countryHints[ch]) >= 0 && val.length < 20) { country = val; break; } }
+  }
+  var dm = html.match(/导演：<span>([\s\S]*?)<\/span>/);
+  if (dm) director = dm[1].replace(/<[^>]+>/g,'').trim();
+  var cm = html.match(/主演：<span>([\s\S]*?)<\/span>/);
+  if (cm) cast = cm[1].replace(/<[^>]+>/g,'').trim();
+  var rm = html.match(/class="score">([^<]+)/);
+  if (rm) rate = rm[1].replace('分','');
+  var dsm = html.match(/<span class="detail-content"[\s\S]*?>([\s\S]*?)<\/span>/);
+  if (dsm) desc = dsm[1].replace(/<[^>]+>/g,'').trim();
+  if (!desc) { var dsm2 = html.match(/<p class="vod-desc">([\s\S]*?)<\/p>/); if (dsm2) desc = dsm2[1].replace(/<[^>]+>/g,'').trim(); }
+  // Extract episodes - try detail page playlist first
+  var episodes = [];
+  var plm = html.match(/<ul class="stui-content__playlist[^"]*"[^>]*>([\s\S]*?)<\/ul>/);
+  if (plm) {
+    var epRe = /<a href="(\/w\/\d+-\d+-\d+\.html)">([^<]+)<\/a>/g;
+    var epm;
+    while ((epm = epRe.exec(plm[1])) !== null) episodes.push({ url: epm[1], label: epm[2].trim() });
+  }
+  // If no episodes from detail page, fetch play page to get episodes
+  if (episodes.length === 0 && title) {
+    // Extract vod_id from href
+    var vid = href.match(/(\d+)\.html/);
+    if (vid) {
+      // We'll fetch the play page asynchronously to get episodes
+      // For now, add a placeholder that will use fm.play with the play URL
+      // The actual episode fetch happens in a follow-up
+    }
+  }
+  if (episodes.length === 0) {
+    var fpm = html.match(/<a href="(\/w\/\d+-\d+-\d+\.html)">立即播放<\/a>/);
+    if (fpm) episodes.push({ url: fpm[1], label: '播放' });
+  }
+  // Last resort: construct play URL from vod_id
+  if (episodes.length === 0) {
+    var idMatch = href.match(/(\d+)\.html/);
+    if (idMatch) {
+      // Try fetching play page for episodes (async)
+      episodes.push({ url: '/w/' + idMatch[1] + '-1-1.html', label: '正在加载...' });
+      // Fetch play page in background to get actual episodes
+      (function(vid, title) {
+        _req(BASE + '/w/' + vid + '-1-1.html').then(function(ph) {
+          if (!ph) return;
+          var pm = ph.match(/<ul class="stui-play__list[^"]*"[^>]*>([\s\S]*?)<\/ul>/g);
+          if (!pm) return;
+          // Find the first BD/play section (not netdisk)
+          var newEps = [];
+          for (var pi = 0; pi < pm.length; pi++) {
+            var epRe2 = /<a href="(\/w\/\d+-\d+-\d+\.html)">([^<]+)<\/a>/g;
+            var em2;
+            while ((em2 = epRe2.exec(pm[pi])) !== null) {
+              newEps.push({ url: em2[1], label: em2[2].trim() });
+            }
+            if (newEps.length > 0) break; // Use first playlist section (BD)
+          }
+          if (newEps.length > 0) {
+            // Re-render the episode section
+            var epContainer = document.getElementById('ep-section-' + vid);
+            if (epContainer) {
+              var hh = '<div class="episode-section"><div class="label">选集 (' + newEps.length + ')</div><div class="episode-grid">';
+              for (var ei = 0; ei < newEps.length; ei++) {
+                hh += '<button class="episode-btn play-action" data-url="' + newEps[ei].url + '" data-title="' + _esc(title) + ' ' + newEps[ei].label + '" tabindex="0">' + _esc(newEps[ei].label) + '</button>';
+              }
+              hh += '</div></div>';
+              epContainer.innerHTML = hh;
+              // Rebind play actions
+              var pbs2 = epContainer.querySelectorAll('.play-action');
+              for (var xi = 0; xi < pbs2.length; xi++) {
+                pbs2[xi].onclick = function() { _play(this.getAttribute('data-url'), this.getAttribute('data-title')); };
+              }
+            }
+          }
+        });
+      })(idMatch[1], el);
+    }
+  }
+
+  var h = '';
+  h += '<div class="detail-back" id="detailBack" tabindex="0"><span>‹ 返回</span></div>';
+  h += '<div class="detail-hero">';
+  h += '<img class="detail-poster" src="' + _img(poster) + '" alt="' + _esc(title) + '" onerror="this.style.display=\'none\'">';
+  h += '<div class="detail-info">';
+  h += '<div class="detail-title">' + _esc(title) + '</div>';
+  h += '<div class="detail-meta">';
+  if (year) h += '<span>' + _esc(year) + '</span>';
+  if (rate) h += '<span>' + _esc(rate) + '</span>';
+  if (country) h += '<span>' + _esc(country) + '</span>';
+  h += '</div>';
+  if (genre) h += '<div class="detail-field"><span class="detail-field-label">类型：</span><span class="detail-field-value">' + _esc(genre) + '</span></div>';
+  if (director) h += '<div class="detail-field"><span class="detail-field-label">导演：</span><span class="detail-field-value">' + _esc(director) + '</span></div>';
+  if (cast) h += '<div class="detail-field"><span class="detail-field-label">主演：</span><span class="detail-field-value">' + _esc(cast) + '</span></div>';
+  h += '</div></div>';
+  if (desc) h += '<div class="detail-desc">' + _esc(desc) + '</div>';
+
+  if (episodes.length === 1) {
+    var vidSingle = href.match(/(\d+)\.html/);
+    var secIdSingle = vidSingle ? ' id="ep-section-' + vidSingle[1] + '"' : '';
+    h += '<div' + secIdSingle + '><button class="play-btn play-action" data-url="' + episodes[0].url + '" data-title="' + _esc(title) + '" tabindex="0">▶ ' + (episodes[0].label === '正在加载...' ? '加载中...' : '播放') + '</button></div>';
+  }
+  if (episodes.length > 1) {
+    var vidForSection = href.match(/(\d+)\.html/);
+    var secId = vidForSection ? ' id="ep-section-' + vidForSection[1] + '"' : '';
+    h += '<div' + secId + ' class="episode-section"><div class="label">选集 (' + episodes.length + ')</div><div class="episode-grid">';
+    for (var eii = 0; eii < episodes.length; eii++) {
+      h += '<button class="episode-btn play-action" data-url="' + episodes[eii].url + '" data-title="' + _esc(title) + ' ' + episodes[eii].label + '" tabindex="0">' + _esc(episodes[eii].label) + '</button>';
+    }
+    h += '</div></div>';
+  }
+
+  el.innerHTML = h;
+  document.getElementById('detailBack').onclick = closeDetail;
+  document.getElementById('detailBg').onclick = closeDetail;
+  var pbs = el.querySelectorAll('.play-action');
+  for (var i = 0; i < pbs.length; i++) {
+    pbs[i].onclick = function() { _play(this.getAttribute('data-url'), this.getAttribute('data-title')); };
+  }
+}
+
+function closeDetail() {
+  document.getElementById('detailView').classList.remove('active');
+  document.body.classList.remove('detail-active');
+}
+
+function bindEvents(el) {
+  var cards = el.querySelectorAll('.card');
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].onclick = function() { var h = this.getAttribute('data-href'); if (h) loadDetail(h); };
+    cards[i].onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); var h = this.getAttribute('data-href'); if (h) loadDetail(h); } };
+  }
+  var mores = el.querySelectorAll('.more[data-type]');
+  for (var i = 0; i < mores.length; i++) {
+    mores[i].onclick = function() { setTab(this.getAttribute('data-type')); };
+    mores[i].onkeydown = function(e) { if (e.key === 'Enter') { e.preventDefault(); setTab(this.getAttribute('data-type')); } };
+  }
+  var pbs = el.querySelectorAll('.pg-btn');
+  for (var i = 0; i < pbs.length; i++) {
+    pbs[i].onclick = function() { loadCategory(this.getAttribute('data-type'), parseInt(this.getAttribute('data-page'))); };
+    pbs[i].onkeydown = function(e) { if (e.key === 'Enter') { e.preventDefault(); loadCategory(this.getAttribute('data-type'), parseInt(this.getAttribute('data-page'))); } };
+  }
+}
+
+/* ── PanSou / 网盘搜索 ── */
+var PAN_API = 'https://so.252035.xyz';
+var ALL_DISKS = ['quark','aliyun','baidu','uc','tianyi','xunlei','123','115','mobile'];
+var DISK_LABELS = {quark:'夸克',aliyun:'阿里',baidu:'百度',uc:'UC',tianyi:'天翼',xunlei:'迅雷','123':'123盘',mobile:'移动',mag:'磁力'};
+
+function loadPanSou() {
+  var el = document.getElementById('mainContent');
+  var h = '<div class="section"><div class="section-head"><h2>网盘搜索</h2></div>';
+  h += '<div class="pansou-head">';
+  h += '<input id="panKeyword" placeholder="搜索资源名称..." maxlength="50">';
+  h += '<button id="panSearchBtn">搜索</button></div>';
+  h += '<div class="disk-types" id="diskTypes">';
+  for (var k in DISK_LABELS) {
+    if (k === 'mag') continue;
+    h += '<span class="disk-type on" data-disk="' + k + '" tabindex="0">' + DISK_LABELS[k] + '</span>';
+  }
+  h += '</div>';
+  h += '<div id="panResult" class="pansou-info">输入关键词搜索网盘资源</div>';
+  h += '</div>';
+  el.innerHTML = h;
+  
+  document.getElementById('panSearchBtn').onclick = function(){ panSearch(); };
+  document.getElementById('panKeyword').addEventListener('keydown', function(e){ if (e.key === 'Enter') panSearch(); });
+  
+  var dts = el.querySelectorAll('.disk-type');
+  for (var i = 0; i < dts.length; i++) {
+    dts[i].onclick = function(){ this.classList.toggle('on'); };
+  }
+}
+
+function panSearch() {
+  var kw = document.getElementById('panKeyword').value.trim();
+  if (!kw) return;
+  var selected = [];
+  var dts = document.querySelectorAll('.disk-type.on');
+  for (var i = 0; i < dts.length; i++) selected.push(dts[i].getAttribute('data-disk'));
+  if (selected.length === 0) { document.getElementById('panResult').innerHTML = '<div class="pansou-info">请至少选择一个网盘类型</div>'; return; }
+  
+  var el = document.getElementById('panResult');
+  el.innerHTML = '<div class="pansou-info"><div class="loading-spinner" style="margin:0 auto 8px"></div>搜索中...</div>';
+  
+  _fm().then(function(f){
+    if (!f || !f.req) { el.innerHTML = '<div class="pansou-info">SDK不可用</div>'; return; }
+    f.req(PAN_API + '/api/search', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({kw:kw, res:'merge', src:'all', cloud_types:selected, channels:[]}),
+      responseType:'json',
+      timeout:20
+    }).then(function(res){
+      var data = res && res.body;
+      if (!data && typeof res === 'string') { try{ data = JSON.parse(res); }catch(e){} }
+      if (!data || !data.data) { el.innerHTML = '<div class="pansou-info">没有找到结果</div>'; return; }
+      renderPanResults(data.data, el, kw);
+    })['catch'](function(){ el.innerHTML = '<div class="pansou-info">搜索请求失败</div>'; });
+  });
+}
+
+function renderPanResults(data, el, kw) {
+  var merged = data.merged_by_type || data.list || data;
+  var allItems = [];
+  // Collect items by type
+  for (var type in merged) {
+    var list = merged[type];
+    if (!Array.isArray(list)) continue;
+    for (var i = 0; i < list.length; i++) {
+      var item = list[i];
+      var url = item.url || item.link || '';
+      var title = item.title || item.name || item.file_name || '';
+      allItems.push({type:type, url:url, title:title, pwd:item.password || item.pwd || ''});
+    }
+  }
+  
+  if (allItems.length === 0) { el.innerHTML = '<div class="pansou-info">没有找到结果</div>'; return; }
+  
+  // Dedup by type+url
+  var seen = {};
+  var unique = [];
+  for (var i = 0; i < allItems.length; i++) {
+    var key = allItems[i].type + ':' + allItems[i].url;
+    if (!seen[key]) { seen[key] = true; unique.push(allItems[i]); }
+  }
+  
+  var h = '<div style="font-size:12px;color:var(--text2);margin-bottom:8px">找到 ' + unique.length + ' 条结果';
+  if (unique.length > 16) h += '（仅显示前16条）';
+  h += '</div><div class="pansou-result">';
+  
+  var showItems = unique.slice(0, 16);
+  for (var i = 0; i < showItems.length; i++) {
+    var item = showItems[i];
+    var label = DISK_LABELS[item.type] || item.type;
+    var extra = '';
+    if (item.size) extra += ' ' + item.size;
+    if (item.date) extra += ' ' + item.date;
+    h += '<div class="pansou-item" data-type="' + item.type + '" data-url="' + _esc(item.url) + '" data-pwd="' + _esc(item.pwd) + '" data-title="' + _esc(item.title) + '" tabindex="0">';
+    h += '<span class="pi-status pi-pending" id="ps-' + i + '">?</span>';
+    h += '<span class="pi-title">' + _esc(item.title) + '</span>';
+    h += '<span class="pi-type">' + _esc(label) + '</span>';
+    if (item.pwd) h += '<span style="font-size:10px;color:var(--text3);flex-shrink:0">pwd:' + _esc(item.pwd) + '</span>';
+    h += '</div>';
+  }
+  h += '</div>';
+  el.innerHTML = h;
+  
+  // Bind click -> play via fm.pan.play
+  var items = el.querySelectorAll('.pansou-item');
+  for (var i = 0; i < items.length; i++) {
+    items[i].onclick = function(){
+      var type = this.getAttribute('data-type');
+      var url = this.getAttribute('data-url');
+      var pwd = this.getAttribute('data-pwd');
+      var title = this.getAttribute('data-title');
+      _fm().then(function(f){
+        if (f && f.pan && f.pan.play) f.pan.play({type:type, url:url, password:pwd, title:title});
+        else window.open(url);
+      });
+    };
+  }
+  
+  // Check validity via fm.pan.check (max 10 at a time)
+  var checkItems = showItems.filter(function(it){ return ['quark','aliyun','baidu','uc','tianyi','xunlei','123','115','mobile'].indexOf(it.type) >= 0; }).slice(0, 10);
+  if (checkItems.length > 0) {
+    _fm().then(function(f){
+      if (!f || !f.config) return;
+      f.config().then(function(cfg){
+        if (!cfg || cfg.driveCheck === false) return;
+        var payload = [];
+        for (var i = 0; i < checkItems.length; i++) {
+          var ci = checkItems[i];
+          var idx = showItems.indexOf(ci);
+          payload.push({type:ci.type, url:ci.url, password:ci.pwd});
+        }
+        if (payload.length > 0 && f.pan && f.pan.check) {
+          f.pan.check(payload).then(function(res){
+            if (!res || !res.results) return;
+            for (var ri = 0; ri < res.results.length; ri++) {
+              var r = res.results[ri];
+              var st = r.state || '';
+              var foundIdx = -1;
+              for (var si = 0; si < showItems.length; si++) {
+                if (showItems[si].url === r.url) { foundIdx = si; break; }
+              }
+              if (foundIdx >= 0) {
+                var badge = document.getElementById('ps-' + foundIdx);
+                if (badge) {
+                  if (st === 'ok') { badge.className = 'pi-status pi-ok'; badge.textContent = '✓'; }
+                  else if (st === 'bad') { badge.className = 'pi-status pi-bad'; badge.textContent = '✗'; }
+                  else if (st === 'locked') { badge.className = 'pi-status pi-uncertain'; badge.textContent = '🔒'; }
+                  else { badge.className = 'pi-status pi-none'; badge.textContent = ''; }
+                }
+              }
+            }
+          })['catch'](function(){});
+        }
+      })['catch'](function(){});
+    });
+  }
+}
+
+/* ── TMDB 推荐 ── */ // handled by nostr.html, accessed via window.location.href = '/nostr.html'
+
+function setTab(tab) {
+  var tabs = document.querySelectorAll('.nav-tab');
+  for (var i = 0; i < tabs.length; i++) tabs[i].classList.toggle('on', tabs[i].getAttribute('data-tab') === tab);
+  if (tab === 'home') loadHome();
+  else if (tab === 'pansou') loadPanSou();
+  else if (tab === 'trending') { window.location.href = '/nostr.html'; }
+  else loadCategory(tab, 1);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var tabs = document.querySelectorAll('.nav-tab');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].onclick = function() { setTab(this.getAttribute('data-tab')); };
+    tabs[i].onkeydown = function(e) { if (e.key === 'Enter') { e.preventDefault(); setTab(this.getAttribute('data-tab')); } };
+  }
+  document.getElementById('searchBtn').onclick = function() { doSearch(document.getElementById('searchInput').value); };
+  document.getElementById('searchInput').addEventListener('keydown', function(e) { if (e.key === 'Enter') doSearch(this.value); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDetail(); });
+  window.addEventListener('popstate', function() { if (document.getElementById('detailView').classList.contains('active')) closeDetail(); });
+  loadHome();
+});
+</script>
+</body>
+</html>
