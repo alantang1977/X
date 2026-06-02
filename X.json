@@ -22,6 +22,8 @@
 {"key": "a123tv","name": "🛸┃a123tv┃影视","type": 3,"api": "csp_WvSpider","jar": "./jar/WvSpider.jar","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"ext": "./js/a123tv.js"},
 //{"key": "天天影院","name": "🛸┃天天┃影视","type": 3,"api": "./js/天天影院.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1,"jar": "./jar/WvSpider.jar"},
 
+{"key":"Nostr","name": "🍅┃Nostr┃推荐","type":3,"api":"csp_Nostr","homePage":"https://gh-proxy.org/https://raw.githubusercontent.com/alantang1977/X/main/html/妹子.html"},
+
 {"key":"Wexconfig","name":"🐮配置┃中心🐮","type":3,"api":"csp_WexConfigGuard","searchable":0,"changeable":0,"indexs":0},
 {"key":"二小","name":"🧸二小┃4K🧸","type":3,"api":"csp_NewErXiaoGuard","searchable":1,"changeable":1},
 {"key":"NewZhiZhen","name":"🥷至臻┃4K🥷","type":3,"api":"csp_NewZhiZhenGuard","searchable":1,"changeable":1},
