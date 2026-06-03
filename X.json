@@ -33,13 +33,16 @@
 {"key":"CZ","name":"👨‍🏭┃厂长┃资源","type":3,"api":"csp_cz","homePage":"https://d.kstore.dev/download/15114/html/厂长.html"},
 {"key":"WB","name":"🪶┃歪比┃巴卜","type":3,"api":"csp_wb","homePage":"https://d.kstore.dev/download/15114/html/歪比.html"},
 {"key":"TV52","name":"📺┃52TV┃体育","type":3,"api":"csp_52tv","homePage":"https://d.kstore.dev/download/15114/html/52tv.html"},
-{"key":"Emby","name":"🎬┃Emby┃推荐","type":3,"api":"csp_Emby","homePage":"https://d.kstore.dev/download/15114/html/emby.html"},
+{"key":"Emby","name":"🛬┃Emby┃推荐","type":3,"api":"csp_Emby","homePage":"https://d.kstore.dev/download/15114/html/emby.html"},
 {"key":"Fish","name":"🐟┃FISH┃TMDB","type":3,"api":"csp_Fish","homePage":"https://d.kstore.dev/download/15114/html/fish.html"},
 {"key":"Libvio","name":"📚┃LIBVIO┃影视","type":3,"api":"csp_Libvio","homePage":"https://d.kstore.dev/download/15114/html/libvio.html"},
 {"key":"MissAV","name":"🔞┃MissAV┃番号","type":3,"api":"csp_MissAV","homePage":"https://d.kstore.dev/download/15114/html/missav.html"},
-{"key":"Meizi","name":"🍓┃妹子┃发电站","type":3,"api":"csp_Meizi","homePage":"https://d.kstore.dev/download/15114/html/妹子.html"},
+{"key":"Meizi","name":"🍓┃布布追剧┃追剧","type":3,"api":"csp_Meizi","homePage":"https://d.kstore.dev/download/15114/html/布布追剧.html"},
 {"key":"TQ","name":"🍩┃甜圈┃短剧","type":3,"api":"csp_TQ","homePage":"https://d.kstore.dev/download/15114/html/WEb.html"},
 {"key":"WhosTV","name":"🔍┃WhosTV┃番号","type":3,"api":"csp_WhosTV","homePage":"https://d.kstore.dev/download/15114/html/whostv.html"},
+{"key":"PPnix","name":"🤡┃PPnix┃影视","type":3,"api":"csp_PPnix","homePage":"https://d.kstore.dev/download/15114/html/ppnix.html"},
+{"key":"PTT","name":"🎬┃PTT┃追剧","type":3,"api":"csp_PTT","homePage":"https://d.kstore.dev/download/15114/html/ptt.html"},
+
 	
 //{"key":"NewJuTou","name":"🥷剧透┃4K🥷","type":3,"api":"csp_NewJuTouGuard","searchable":1,"changeable":1},
 {"key":"NewHuBan","name":"🥷虎斑┃4K🥷","type":3,"api":"csp_NewHuBanGuard","searchable":1,"changeable":1},
