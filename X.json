@@ -3,6 +3,17 @@
 "wallpaper":"https://imgs.catvod.com","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
 
 "sites": [
+{
+"key":"alantang",
+"name":"✈️┃TG频道@junjun",
+"type":3,
+"api":"csp_Douban",
+"jar":"./jar/跑马灯.jar",
+"searchable": 1,
+"quickSearch":0,
+"filterable": 1,
+"ext":"https://down.nigx.cn/upld.zone.id/uploads/q9iq9e5iq/3.txt"
+},
 //{"key":"NewDouBan","name":"🐮【公众号：王二小放牛娃】🐮","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
 //{"key":"Doubana","name":"🐮【更新日期:20260426】🐮","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
 //{"key":"Doubana","name":"⬇️【网盘类先扫码】⬇️","type":3,"api":"csp_NewDouBanGuard","searchable":0,"quickSearch":0,"filterable":0,"ext":"https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"},
