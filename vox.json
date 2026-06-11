@@ -3,6 +3,17 @@
 "wallpaper":"https://imgs.catvod.com","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
 
 "sites": [
+{
+"key":"alantang",
+"name":"✈️┃TG频道@junjun",
+"type":3,
+"api":"csp_Douban",
+"jar":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/jar/跑马灯.jar",
+"searchable": 1,
+"quickSearch":0,
+"filterable": 1,
+"ext":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/jar/1.txt"
+},
 {"key":"csp_Wogg","name":"🧸┃玩偶社┃影视","type":3,"api":"csp_Wogg","timeout":60,"searchable":1,"filterable":1,"changeable":1,"ext":{"sites":"https://wogg.xxooo.cf","filters":"./json/wogg.json","proxy":"noproxy"}},
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
