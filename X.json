@@ -4,7 +4,7 @@
 
 "sites": [
 {"key":"裤佬豆瓣片单","name":"🐮┃豆瓣┃跑马灯","type":3,"api":"csp_Douban","jar":"./jar/跑马灯.jar","searchable": 1,"quickSearch":0,"filterable": 1,"ext":"./jar/跑马灯.txt"},
-{"key":"玩偶","name":"👽┃玩偶社┃饭太硬","type":3,"api":"csp_WoGGGuard","timeout":30,"searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt"}},
+{"key":"玩偶","name":"👽┃玩偶社┃网盘","type":3,"api":"csp_WoGGGuard","timeout":30,"searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt"}},
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "3QQQ","name": "🍅┃大鹅厂┃3Q","type": 3,"timeout": 15,"api": "csp_App3Q","jar": "./jar/CatVodSpider.jar"},
