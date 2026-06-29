@@ -54,6 +54,8 @@ https://tools.v1.mk
 
 http://www.饭太硬.cc/tv
 
+https://9280.kstore.vip/newwex.json 王二小放牛娃
+
 https://肥猫.com
 
 http://miqk.cc/小米/DEMO.json
