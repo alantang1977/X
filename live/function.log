@@ -1,4 +1,4 @@
-2026-07-21 12:00:51,404 - ERROR - url: https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/%E6%B8%AF%E5%8F%B0%E5%A4%A7%E9%99%86%E6%97%A018%E5%86%85%E5%AE%B9'
-2026-07-21 12:00:51,500 - ERROR - url: http://pan.wdrjk.top/down.php/aad56aa7a7610097bc103077064f0bcb.txt 失败❌, Error: Cannot connect to host pan.wdrjk.top:80 ssl:default [Name or service not known]
-2026-07-21 12:00:52,547 - ERROR - url: https://gitee.com/alexkw/app/raw/master/kgk.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/alexkw/app/raw/master/kgk.txt'
-2026-07-21 12:00:52,656 - ERROR - url: https://gitee.com/jin-xueling/lingl/raw/master/hu.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/jin-xueling/lingl/raw/master/hu.txt'
+2026-07-25 11:55:18,418 - ERROR - url: https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容 失败❌, Error: 404, message='Not Found', url='https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/%E6%B8%AF%E5%8F%B0%E5%A4%A7%E9%99%86%E6%97%A018%E5%86%85%E5%AE%B9'
+2026-07-25 11:55:18,428 - ERROR - url: http://pan.wdrjk.top/down.php/aad56aa7a7610097bc103077064f0bcb.txt 失败❌, Error: Cannot connect to host pan.wdrjk.top:80 ssl:default [Name or service not known]
+2026-07-25 11:55:20,003 - ERROR - url: https://gitee.com/alexkw/app/raw/master/kgk.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/alexkw/app/raw/master/kgk.txt'
+2026-07-25 11:55:20,047 - ERROR - url: https://gitee.com/jin-xueling/lingl/raw/master/hu.txt 失败❌, Error: 423, message='Locked', url='https://gitee.com/jin-xueling/lingl/raw/master/hu.txt'

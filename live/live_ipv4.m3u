@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml","http://epg.51zmt.top:8000/e.xml","https://epg.pw/xmltv/epg_CN.xml","https://epg.pw/xmltv/epg_HK.xml","https://epg.pw/xmltv/epg_TW.xml"
-#EXTINF:-1 group-title="更新日期",2026-07-21
+#EXTINF:-1 group-title="更新日期",2026-07-25
 https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/Robot.mp4
 #EXTINF:-1 group-title="🍎┃广东频道",广州综合
 http://r.jdshipin.com/iR6Gq$IPV4•线路1
@@ -78,13 +78,15 @@ http://61.136.172.236:9901/tsfile/live/0001_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV1
 http://59.39.89.130:60901/tsfile/live/0001_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV1
-http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8$IPV4•线路7
+http://123.130.84.106:8154/tsfile/live/0001_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV1
-http://175.8.28.207:9999/tsfile/live/0001_1.m3u8$IPV4•线路8
+http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV1
-http://112.27.235.94:8000/hls/1/index.m3u8$IPV4•线路9
+http://175.8.28.207:9999/tsfile/live/0001_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV1
-https://zby.130519.xyz/PLTV/11/224/3221225673/index.m3u8$IPV4•线路10
+http://112.27.235.94:8000/hls/1/index.m3u8$IPV4•线路10
+#EXTINF:-1 group-title="🥝┃央视频道",CCTV1
+https://zby.130519.xyz/PLTV/11/224/3221225673/index.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
 http://218.13.170.98:9901/tsfile/live/0002_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
@@ -94,15 +96,15 @@ http://61.136.172.236:9901/tsfile/live/0002_1.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
 http://182.114.48.224:9901/tsfile/live/0002_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
-http://183.11.239.36:808/hls/20/index.m3u8$IPV4•线路5
+http://123.130.84.106:8154/tsfile/live/0002_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
-http://112.27.235.94:8000/hls/2/index.m3u8$IPV4•线路6
+http://118.193.115.2:9901/tsfile/live/0002_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
-http://118.193.115.2:9901/tsfile/live/0002_1.m3u8$IPV4•线路7
+http://iptv.huuc.edu.cn/hls/cctv2hd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
-http://iptv.huuc.edu.cn/hls/cctv2hd.m3u8$IPV4•线路8
+http://175.8.28.207:9999/tsfile/live/0002_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
-http://175.8.28.207:9999/tsfile/live/0002_1.m3u8$IPV4•线路9
+http://112.27.235.94:8000/hls/2/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV2
 https://zby.130519.xyz/PLTV/11/224/3221226122/index.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV3
@@ -116,7 +118,7 @@ http://61.136.172.236:9901/tsfile/live/0003_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV3
 http://59.39.89.130:60901/tsfile/live/0003_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV3
-http://182.150.23.74:808/hls/3/index.m3u8$IPV4•线路6
+http://123.130.84.106:8154/tsfile/live/0003_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV3
 http://iptv.huuc.edu.cn/hls/cctv3hd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV3
@@ -136,9 +138,9 @@ http://112.27.235.94:8000/hls/4/index.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4
 http://182.114.48.224:9901/tsfile/live/0004_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4
-http://183.11.239.36:808/hls/22/index.m3u8$IPV4•线路6
+http://112.46.85.60:8009/hls/4/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4
-http://183.11.239.36:808/hls/67/index.m3u8$IPV4•线路7
+http://183.11.239.36:808/hls/77/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4
 http://iptv.huuc.edu.cn/hls/cctv4hd.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4
@@ -156,13 +158,13 @@ http://222.169.85.8:9901/tsfile/live/0005_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
 http://182.114.48.224:9901/tsfile/live/0005_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
-http://183.11.239.36:808/hls/93/index.m3u8$IPV4•线路6
+http://drive.mxmy.net:8888/udp/239.3.1.173:8001$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
-http://iptv.huuc.edu.cn/hls/cctv5hd.m3u8$IPV4•线路7
+http://112.27.235.94:8000/hls/5/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
-http://175.8.28.207:9999/tsfile/live/0005_1.m3u8$IPV4•线路8
+http://iptv.huuc.edu.cn/hls/cctv5hd.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
-http://112.27.235.94:8000/hls/5/index.m3u8$IPV4•线路9
+http://175.8.28.207:9999/tsfile/live/0005_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5
 https://zby.130519.xyz/PLTV/11/224/3221225734/index.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5+
@@ -176,7 +178,9 @@ http://61.136.172.236:9901/tsfile/live/0016_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5+
 http://153.0.171.163:85/tsfile/live/1015_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV5+
-http://112.27.235.94:8000/hls/6/index.m3u8$IPV4•线路6
+http://drive.mxmy.net:8888/udp/239.3.1.130:8004$IPV4•线路6
+#EXTINF:-1 group-title="🥝┃央视频道",CCTV5+
+http://112.27.235.94:8000/hls/6/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
 http://123.130.84.106:8154/tsfile/live/0006_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
@@ -188,11 +192,11 @@ http://101.66.194.150:9901/tsfile/live/0006_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
 http://drive.mxmy.net:8888/udp/239.3.1.174:8001$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
-http://iptv.huuc.edu.cn/hls/cctv6hd.m3u8$IPV4•线路6
+http://112.27.235.94:8000/hls/7/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
-http://175.8.28.207:9999/tsfile/live/0006_1.m3u8$IPV4•线路7
+http://iptv.huuc.edu.cn/hls/cctv6hd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
-http://112.27.235.94:8000/hls/7/index.m3u8$IPV4•线路8
+http://175.8.28.207:9999/tsfile/live/0006_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV6
 https://zby.130519.xyz/PLTV/11/224/3221225741/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV7
@@ -204,13 +208,11 @@ http://112.27.235.94:8000/hls/8/index.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV7
 http://drive.mxmy.net:8888/udp/239.3.1.61:8104$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV7
-http://182.150.23.74:808/hls/7/index.m3u8$IPV4•线路5
+http://iptv.huuc.edu.cn/hls/cctv7hd.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV7
-http://iptv.huuc.edu.cn/hls/cctv7hd.m3u8$IPV4•线路6
+http://175.8.28.207:9999/tsfile/live/0007_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV7
-http://175.8.28.207:9999/tsfile/live/0007_1.m3u8$IPV4•线路7
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV7
-https://zby.130519.xyz/PLTV/11/224/3221225701/index.m3u8$IPV4•线路8
+https://zby.130519.xyz/PLTV/11/224/3221225701/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
 http://112.46.85.60:8009/hls/8/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
@@ -220,13 +222,15 @@ http://123.130.84.106:8154/tsfile/live/0008_1.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
 http://124.165.251.82:85/tsfile/live/0008_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
-http://112.27.235.94:8000/hls/9/index.m3u8$IPV4•线路5
+http://182.150.23.74:808/hls/8/index.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
 http://iptv.huuc.edu.cn/hls/cctv8hd.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
 http://175.8.28.207:9999/tsfile/live/0008_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV8
-https://zby.130519.xyz/PLTV/11/224/3221225736/index.m3u8$IPV4•线路8
+http://112.27.235.94:8000/hls/9/index.m3u8$IPV4•线路8
+#EXTINF:-1 group-title="🥝┃央视频道",CCTV8
+https://zby.130519.xyz/PLTV/11/224/3221225736/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
 http://74.91.26.218:82/live/cctv9hd.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
@@ -242,15 +246,13 @@ http://112.46.85.60:8009/hls/509/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
 http://183.11.239.36:808/hls/27/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
-http://123.130.84.106:8154/tsfile/live/0009_1.m3u8$IPV4•线路8
+http://iptv.huuc.edu.cn/hls/cctv9hd.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
-http://iptv.huuc.edu.cn/hls/cctv9hd.m3u8$IPV4•线路9
+http://175.8.28.207:9999/tsfile/live/0009_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
-http://175.8.28.207:9999/tsfile/live/0009_1.m3u8$IPV4•线路10
+http://112.27.235.94:8000/hls/10/index.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV9
-http://112.27.235.94:8000/hls/10/index.m3u8$IPV4•线路11
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV9
-http://p.ytelc.com/169l/0/cctv.php$IPV4•线路12
+http://p.ytelc.com/169l/0/cctv.php$IPV4•线路11
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV10
 http://61.136.172.236:9901/tsfile/live/0010_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV10
@@ -278,15 +280,13 @@ http://120.202.94.181:9446/tsfile/live/0011_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV11
 http://182.114.48.224:9901/tsfile/live/0011_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV11
-http://182.150.23.74:808/hls/11/index.m3u8$IPV4•线路6
+http://183.11.239.36:808/hls/29/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV11
-http://183.11.239.36:808/hls/29/index.m3u8$IPV4•线路7
+http://iptv.huuc.edu.cn/hls/cctv11hd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV11
-http://iptv.huuc.edu.cn/hls/cctv11hd.m3u8$IPV4•线路8
+http://175.8.28.207:9999/tsfile/live/0011_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV11
-http://175.8.28.207:9999/tsfile/live/0011_1.m3u8$IPV4•线路9
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV11
-https://zby.130519.xyz/PLTV/11/224/3221226101/index.m3u8$IPV4•线路10
+https://zby.130519.xyz/PLTV/11/224/3221226101/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
 http://222.223.41.27:8888/hls/12/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
@@ -298,7 +298,7 @@ http://123.130.84.106:8154/tsfile/live/0012_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
 http://74.91.26.218:82/live/cctv12hd.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
-http://182.150.23.74:808/hls/12/index.m3u8$IPV4•线路6
+http://124.165.251.82:85/tsfile/live/0012_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
 http://iptv.huuc.edu.cn/hls/cctv12hd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV12
@@ -318,11 +318,11 @@ http://59.39.89.130:60901/tsfile/live/0013_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
 http://123.130.84.106:8154/tsfile/live/0013_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
-http://112.27.235.94:8000/hls/14/index.m3u8$IPV4•线路6
+http://iptv.huuc.edu.cn/hls/cctv13hd.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
-http://iptv.huuc.edu.cn/hls/cctv13hd.m3u8$IPV4•线路7
+http://175.8.28.207:9999/tsfile/live/0013_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
-http://175.8.28.207:9999/tsfile/live/0013_1.m3u8$IPV4•线路8
+http://112.27.235.94:8000/hls/14/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
 https://zby.130519.xyz/PLTV/11/224/3221226128/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV13
@@ -336,17 +336,13 @@ http://182.114.48.224:9901/tsfile/live/0014_1.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV14
 http://drive.mxmy.net:8888/udp/239.3.1.65:8132$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-http://182.150.23.74:808/hls/14/index.m3u8$IPV4•线路5
+http://112.27.235.94:8000/hls/15/index.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-http://222.169.85.8:9901/tsfile/live/0014_1.m3u8$IPV4•线路6
+http://iptv.huuc.edu.cn/hls/cctv14hd.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-http://iptv.huuc.edu.cn/hls/cctv14hd.m3u8$IPV4•线路7
+http://175.8.28.207:9999/tsfile/live/0014_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-http://175.8.28.207:9999/tsfile/live/0014_1.m3u8$IPV4•线路8
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-http://112.27.235.94:8000/hls/15/index.m3u8$IPV4•线路9
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV14
-https://zby.130519.xyz/PLTV/11/224/3221225738/index.m3u8$IPV4•线路10
+https://zby.130519.xyz/PLTV/11/224/3221225738/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
 http://222.134.245.16:9901/tsfile/live/0015_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
@@ -358,13 +354,11 @@ http://61.136.172.236:9901/tsfile/live/0015_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
 http://drive.mxmy.net:8888/udp/239.3.1.153:8136$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
-http://222.169.85.8:9901/tsfile/live/0015_1.m3u8$IPV4•线路6
+http://183.11.239.36:808/hls/102/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
-http://183.11.239.36:808/hls/102/index.m3u8$IPV4•线路7
+http://112.27.235.94:8000/hls/16/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV15
-http://112.27.235.94:8000/hls/16/index.m3u8$IPV4•线路8
-#EXTINF:-1 group-title="🥝┃央视频道",CCTV15
-https://zby.130519.xyz/PLTV/11/224/3221226147/index.m3u8$IPV4•线路9
+https://zby.130519.xyz/PLTV/11/224/3221226147/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV16
 http://drive.mxmy.net:8888/udp/239.3.1.184:8001$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV16
@@ -381,6 +375,8 @@ http://123.130.84.106:8154/tsfile/live/0019_1.m3u8$IPV4•线路2
 http://drive.mxmy.net:8888/udp/239.3.1.151:8144$IPV4•线路3
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV17
 http://183.11.239.36:808/hls/35/index.m3u8$IPV4•线路4
+#EXTINF:-1 group-title="🥝┃央视频道",CCTV17
+https://live.264788.xyz/channel/cctv17$IPV4•线路5
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4K
 http://vip1.xinketongxun.fun:8082/tsfile/live/1026_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥝┃央视频道",CCTV4K
@@ -442,13 +438,11 @@ http://218.13.170.98:9901/tsfile/live/1001_1.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",湖南卫视
 http://123.130.84.106:8154/tsfile/live/0128_1.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",湖南卫视
-http://183.11.239.36:808/hls/36/index.m3u8$IPV4•线路12
+http://iptv.huuc.edu.cn/hls/hunanhd.m3u8$IPV4•线路12
 #EXTINF:-1 group-title="🥭┃卫视频道",湖南卫视
-http://iptv.huuc.edu.cn/hls/hunanhd.m3u8$IPV4•线路13
+http://112.27.235.94:8000/hls/31/index.m3u8$IPV4•线路13
 #EXTINF:-1 group-title="🥭┃卫视频道",湖南卫视
-http://112.27.235.94:8000/hls/31/index.m3u8$IPV4•线路14
-#EXTINF:-1 group-title="🥭┃卫视频道",湖南卫视
-https://zby.130519.xyz/PLTV/11/224/3221225726/index.m3u8$IPV4•线路15
+https://zby.130519.xyz/PLTV/11/224/3221225726/index.m3u8$IPV4•线路14
 #EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
 http://bp-resource-dfl.bestv.cn/155/3/video.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
@@ -464,13 +458,9 @@ http://218.13.170.98:9901/tsfile/live/1010_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
 http://112.46.85.60:8009/hls/31/index.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
-http://183.11.239.36:808/hls/114/index.m3u8$IPV4•线路8
+http://iptv.huuc.edu.cn/hls/dfhd.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
-http://123.130.84.106:8154/tsfile/live/0107_1.m3u8$IPV4•线路9
-#EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
-http://iptv.huuc.edu.cn/hls/dfhd.m3u8$IPV4•线路10
-#EXTINF:-1 group-title="🥭┃卫视频道",东方卫视
-https://zby.130519.xyz/PLTV/11/224/3221225725/index.m3u8$IPV4•线路11
+https://zby.130519.xyz/PLTV/11/224/3221225725/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",江苏卫视
 http://tvpull.careryun.com/tv/jsws.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",江苏卫视
@@ -512,11 +502,13 @@ http://101.66.194.150:9901/tsfile/live/0131_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",山东卫视
 http://123.130.84.106:8154/tsfile/live/0131_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",山东卫视
-http://iptv.huuc.edu.cn/hls/sdhd.m3u8$IPV4•线路10
+http://drive.mxmy.net:8888/udp/239.3.1.209:8052$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",山东卫视
-http://112.27.235.94:8000/hls/34/index.m3u8$IPV4•线路11
+http://iptv.huuc.edu.cn/hls/sdhd.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",山东卫视
-https://zby.130519.xyz/PLTV/11/224/3221225733/index.m3u8$IPV4•线路12
+http://112.27.235.94:8000/hls/34/index.m3u8$IPV4•线路12
+#EXTINF:-1 group-title="🥭┃卫视频道",山东卫视
+https://zby.130519.xyz/PLTV/11/224/3221225733/index.m3u8$IPV4•线路13
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
 http://112.27.235.94:8000/hls/27/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
@@ -534,13 +526,11 @@ http://61.136.172.236:9901/tsfile/live/0122_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
 http://182.114.48.224:9901/tsfile/live/0122_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
-http://222.134.245.16:9901/tsfile/live/0122_1.m3u8$IPV4•线路9
+http://123.130.84.106:8154/tsfile/live/0122_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
-http://123.130.84.106:8154/tsfile/live/0122_1.m3u8$IPV4•线路10
+http://iptv.huuc.edu.cn/hls/btv1hd.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
-http://iptv.huuc.edu.cn/hls/btv1hd.m3u8$IPV4•线路11
-#EXTINF:-1 group-title="🥭┃卫视频道",北京卫视
-https://zby.130519.xyz/PLTV/11/224/3221225724/index.m3u8$IPV4•线路12
+https://zby.130519.xyz/PLTV/11/224/3221225724/index.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
 http://tvpull.careryun.com/tv/ahws.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
@@ -556,11 +546,13 @@ http://drive.mxmy.net:8888/udp/239.3.1.211:8064$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
 http://123.130.84.106:8154/tsfile/live/0130_1.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
-http://iptv.huuc.edu.cn/hls/ahhd.m3u8$IPV4•线路8
+http://183.11.239.36:808/hls/40/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
-http://112.27.235.94:8000/hls/26/index.m3u8$IPV4•线路9
+http://iptv.huuc.edu.cn/hls/ahhd.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
-https://zby.130519.xyz/PLTV/11/224/3221225739/index.m3u8$IPV4•线路10
+http://112.27.235.94:8000/hls/26/index.m3u8$IPV4•线路10
+#EXTINF:-1 group-title="🥭┃卫视频道",安徽卫视
+https://zby.130519.xyz/PLTV/11/224/3221225739/index.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",重庆卫视
 http://tvpull.careryun.com/tv/cn_cqws.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",重庆卫视
@@ -596,15 +588,13 @@ http://59.39.89.130:60901/tsfile/live/0125_16.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
 http://101.66.194.150:9901/tsfile/live/0123_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
-http://222.169.85.8:9901/tsfile/live/0123_1.m3u8$IPV4•线路6
+http://123.130.84.106:8154/tsfile/live/0123_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
-http://123.130.84.106:8154/tsfile/live/0123_1.m3u8$IPV4•线路7
+http://iptv.huuc.edu.cn/hls/schd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
 http://112.27.235.94:8000/hls/35/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
-http://iptv.huuc.edu.cn/hls/schd.m3u8$IPV4•线路9
-#EXTINF:-1 group-title="🥭┃卫视频道",四川卫视
-https://zby.130519.xyz/PLTV/11/224/3221226152/index.m3u8$IPV4•线路10
+https://zby.130519.xyz/PLTV/11/224/3221226152/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",东南卫视
 http://live.zohi.tv/video/s10001-fztv-3/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",东南卫视
@@ -646,11 +636,13 @@ http://61.136.172.236:9901/tsfile/live/0126_1.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",深圳卫视
 http://59.39.89.130:60901/tsfile/live/0125_11.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",深圳卫视
-http://drive.mxmy.net:8888/udp/239.3.1.134:8020$IPV4•线路8
+http://gmxw.7766.org:808/hls/45/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",深圳卫视
-http://iptv.huuc.edu.cn/hls/szhd.m3u8$IPV4•线路9
+http://183.11.239.36:808/hls/45/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",深圳卫视
-https://zby.130519.xyz/PLTV/11/224/3221225728/index.m3u8$IPV4•线路10
+http://iptv.huuc.edu.cn/hls/szhd.m3u8$IPV4•线路10
+#EXTINF:-1 group-title="🥭┃卫视频道",深圳卫视
+https://zby.130519.xyz/PLTV/11/224/3221225728/index.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
 http://183.215.134.239:19901/tsfile/live/0125_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
@@ -670,9 +662,9 @@ http://61.136.172.236:9901/tsfile/live/0125_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
 http://59.39.89.130:60901/tsfile/live/0125_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
-http://iptv.huuc.edu.cn/hls/gdhd.m3u8$IPV4•线路10
+http://112.27.235.94:8000/hls/30/index.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
-http://112.27.235.94:8000/hls/30/index.m3u8$IPV4•线路11
+http://iptv.huuc.edu.cn/hls/gdhd.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",广东卫视
 https://zby.130519.xyz/PLTV/11/224/3221225731/index.m3u8$IPV4•线路12
 #EXTINF:-1 group-title="🥭┃卫视频道",广西卫视
@@ -686,9 +678,11 @@ http://123.130.84.106:8154/tsfile/live/0113_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥭┃卫视频道",广西卫视
 http://61.136.172.236:9901/tsfile/live/0113_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",广西卫视
-http://222.134.245.16:9901/tsfile/live/0113_1.m3u8$IPV4•线路6
+http://183.11.239.36:808/hls/56/index.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",广西卫视
-https://zby.130519.xyz/PLTV/11/224/3221226084/index.m3u8$IPV4•线路7
+http://182.150.23.74:808/hls/31/index.m3u8$IPV4•线路7
+#EXTINF:-1 group-title="🥭┃卫视频道",广西卫视
+https://zby.130519.xyz/PLTV/11/224/3221226084/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",厦门卫视
 http://e2.woc.iiiya.cn:28888/rtp/239.61.2.11:8060$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",厦门卫视
@@ -734,17 +728,15 @@ http://61.136.172.236:9901/tsfile/live/0117_1.m3u8$IPV4•线路4
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
 http://101.66.194.177:9901/tsfile/live/0117_1.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-http://drive.mxmy.net:8888/udp/239.3.1.148:8072$IPV4•线路6
+http://event.pull.hebtv.com/jishi/weishi_tingyun.m3u8$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-http://event.pull.hebtv.com/jishi/weishi_tingyun.m3u8$IPV4•线路7
+http://iptv.huuc.edu.cn/hls/hebhd.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-http://iptv.huuc.edu.cn/hls/hebhd.m3u8$IPV4•线路8
+http://112.27.235.94:8000/hls/39/index.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-http://112.27.235.94:8000/hls/39/index.m3u8$IPV4•线路9
+https://zby.130519.xyz/PLTV/11/224/3221226107/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-https://zby.130519.xyz/PLTV/11/224/3221226107/index.m3u8$IPV4•线路10
-#EXTINF:-1 group-title="🥭┃卫视频道",河北卫视
-http://tv.pull.hebtv.com/jishi/weishipindao.m3u8$IPV4•线路11
+http://tv.pull.hebtv.com/jishi/weishipindao.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
 http://tvpull.dxhmt.cn:9081/tv/11425-1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
@@ -768,9 +760,11 @@ http://101.66.194.150:9901/tsfile/live/0139_1.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
 http://123.130.84.106:8154/tsfile/live/0139_1.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
-http://112.27.235.94:8000/hls/37/index.m3u8$IPV4•线路12
+http://183.11.239.36:808/hls/51/index.m3u8$IPV4•线路12
 #EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
-https://zby.130519.xyz/PLTV/11/224/3221226132/index.m3u8$IPV4•线路13
+http://112.27.235.94:8000/hls/37/index.m3u8$IPV4•线路13
+#EXTINF:-1 group-title="🥭┃卫视频道",河南卫视
+https://zby.130519.xyz/PLTV/11/224/3221226132/index.m3u8$IPV4•线路14
 #EXTINF:-1 group-title="🥭┃卫视频道",黑龙江卫视
 http://120.76.248.139/live/bfgd/4200000095.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",黑龙江卫视
@@ -790,9 +784,7 @@ http://123.130.84.106:8154/tsfile/live/0143_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",黑龙江卫视
 http://61.136.172.236:9901/tsfile/live/0143_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",黑龙江卫视
-http://183.11.239.36:808/hls/48/index.m3u8$IPV4•线路10
-#EXTINF:-1 group-title="🥭┃卫视频道",黑龙江卫视
-http://iptv.huuc.edu.cn/hls/hljhd.m3u8$IPV4•线路11
+http://iptv.huuc.edu.cn/hls/hljhd.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",湖北卫视
 http://124.116.183.146:9901/tsfile/live/0132_1.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",湖北卫视
@@ -828,15 +820,13 @@ http://59.39.89.130:60901/tsfile/live/0125_10.m3u8$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
 http://101.66.194.150:9901/tsfile/live/0138_1.m3u8$IPV4•线路8
 #EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
-http://222.169.85.8:9901/tsfile/live/0138_1.m3u8$IPV4•线路9
+http://123.130.84.106:8154/tsfile/live/0138_1.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
-http://123.130.84.106:8154/tsfile/live/0138_1.m3u8$IPV4•线路10
+http://iptv.huuc.edu.cn/hls/jxhd.m3u8$IPV4•线路10
 #EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
-http://iptv.huuc.edu.cn/hls/jxhd.m3u8$IPV4•线路11
+http://112.27.235.94:8000/hls/44/index.m3u8$IPV4•线路11
 #EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
-http://112.27.235.94:8000/hls/44/index.m3u8$IPV4•线路12
-#EXTINF:-1 group-title="🥭┃卫视频道",江西卫视
-https://zby.130519.xyz/PLTV/11/224/3221225740/index.m3u8$IPV4•线路13
+https://zby.130519.xyz/PLTV/11/224/3221225740/index.m3u8$IPV4•线路12
 #EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
 http://tvpull.careryun.com/tv/jlws.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
@@ -850,7 +840,11 @@ http://59.39.89.130:60901/tsfile/live/0125_19.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
 http://drive.mxmy.net:8888/udp/239.3.1.240:8172$IPV4•线路6
 #EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
-https://zby.130519.xyz/PLTV/11/224/3221226149/index.m3u8$IPV4•线路7
+http://183.11.239.36:808/hls/10/index.m3u8$IPV4•线路7
+#EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
+http://123.130.84.106:8154/tsfile/live/0116_1.m3u8$IPV4•线路8
+#EXTINF:-1 group-title="🥭┃卫视频道",吉林卫视
+https://zby.130519.xyz/PLTV/11/224/3221226149/index.m3u8$IPV4•线路9
 #EXTINF:-1 group-title="🥭┃卫视频道",内蒙古卫视
 https://ali-m-l.cztv.com/channels/lantian/channel007/1080p.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",内蒙古卫视
@@ -899,6 +893,8 @@ http://cssbyd.imwork.net:8082/hls/45/index.m3u8$IPV4•线路4
 http://183.11.239.36:808/hls/106/index.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",宁夏卫视
 http://222.169.85.8:9901/tsfile/live/0112_1.m3u8$IPV4•线路6
+#EXTINF:-1 group-title="🥭┃卫视频道",宁夏卫视
+https://live.264788.xyz/channel/ningxiaweishi$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",青海卫视
 http://43.251.226.89:8080/play/48.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",青海卫视
@@ -955,6 +951,8 @@ http://222.169.85.8:9901/tsfile/live/0110_1.m3u8$IPV4•线路4
 http://183.11.239.36:808/hls/65/index.m3u8$IPV4•线路5
 #EXTINF:-1 group-title="🥭┃卫视频道",新疆卫视
 http://123.130.84.106:8154/tsfile/live/0110_1.m3u8$IPV4•线路6
+#EXTINF:-1 group-title="🥭┃卫视频道",新疆卫视
+https://live.264788.xyz/channel/xinjiangweishi$IPV4•线路7
 #EXTINF:-1 group-title="🥭┃卫视频道",云南卫视
 http://nn.7x9d.cn/xzc2.php$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",云南卫视
@@ -977,6 +975,8 @@ https://zby.130519.xyz/PLTV/11/224/3221226109/index.m3u8$IPV4•线路9
 http://cssbyd.imwork.net:8082/hls/46/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",西藏卫视
 http://183.11.239.36:808/hls/64/index.m3u8$IPV4•线路2
+#EXTINF:-1 group-title="🥭┃卫视频道",西藏卫视
+https://live.264788.xyz/channel/xizangweishi$IPV4•线路3
 #EXTINF:-1 group-title="🥭┃卫视频道",海峡卫视
 http://hlsbkmgsplive.miguvideo.com/migu/kailu/haixiaws/57/20230724/01.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🥭┃卫视频道",海峡卫视
@@ -1157,6 +1157,12 @@ http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8$IPV4
 http://aktv.top/AKTV/live/aktv/tvbs/AKTV.m3u8$IPV4
 #EXTINF:-1 group-title="🍓┃湾区频道",无线新闻
 http://r.jdshipin.com/CkuBd$IPV4
+#EXTINF:-1 group-title="🍓┃湾区频道",纬来体育
+https://epg.pw/stream/ab6df63b64d0cc44a1f4f029ed847a26fa54a7aebd455578fb05a63f02c22f4b.m3u8$IPV4•线路1
+#EXTINF:-1 group-title="🍓┃湾区频道",纬来体育
+https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8$IPV4•线路2
+#EXTINF:-1 group-title="🍓┃湾区频道",纬来体育
+https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT西语咪咕
 https://0472.org/hls/cgtnx.m3u8$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",CGT阿语咪咕
@@ -1170,7 +1176,7 @@ http://61.162.52.6:8088/newlive/live/hls/60/live.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🍉┃咪咕频道",家庭影院咪咕
 http://58.19.38.162:9901/tsfile/live/1006_1.m3u8$IPV4•线路2
 #EXTINF:-1 group-title="🍉┃咪咕频道",动作电影咪咕
-http://58.19.38.162:9901/tsfile/live/1005_1.m3u8$IPV4
+http://live.metshop.top/huya/11602077$IPV4
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
 http://hlsbkmgsplive.miguvideo.com/migu/kailu/shan3xiws/57/20220809/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
@@ -1179,6 +1185,8 @@ http://tvpull.careryun.com/tv/sxws.m3u8$IPV4•线路2
 http://stream.snrtv.com/sxbc-star-dfiKO3.m3u8$IPV4•线路3
 #EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
 http://112.27.235.94:8000/hls/43/index.m3u8$IPV4•线路4
+#EXTINF:-1 group-title="🍉┃咪咕频道",陕西卫视咪咕
+https://live.264788.xyz/channel/shaanxiweishi$IPV4•线路5
 #EXTINF:-1 group-title="🐟┃少儿频道",卡酷少儿
 https://zby.130519.xyz/PLTV/11/224/3221226019/index.m3u8$IPV4•线路1
 #EXTINF:-1 group-title="🐟┃少儿频道",卡酷少儿
@@ -1211,6 +1219,8 @@ http://101.66.194.177:9901/tsfile/live/1000_1.m3u8$IPV4•线路7
 http://119.32.12.17:2901/udp/224.1.100.9:11111$IPV4•线路1
 #EXTINF:-1 group-title="🐟┃少儿频道",广东少儿
 http://gmxw.7766.org:808/hls/175/index.m3u8$IPV4•线路2
+#EXTINF:-1 group-title="🐶┃影视频道",CHC动作电影
+http://58.19.38.162:9901/tsfile/live/1005_1.m3u8$IPV4
 #EXTINF:-1 group-title="🐶┃影视频道",CHC高清电影
 http://183.237.95.108:9901/tsfile/live/1008_1.m3u8$IPV4
 #EXTINF:-1 group-title="🐶┃影视频道",NewTV动作电影
