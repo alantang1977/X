@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# by @嗷呜
+# by @888
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
