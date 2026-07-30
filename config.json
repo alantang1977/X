@@ -114,8 +114,18 @@
             "changeable": 0
         },
         {
+            "key": "808影院",
+            "name": "🐮┃808影院",
+            "type": 3,
+            "api": "./py/808影院.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "911",
-            "name": "🐮┃911",
+            "name": "🐷┃911",
             "type": 3,
             "api": "./py/911.py",
             "searchable": 1,
@@ -125,7 +135,7 @@
         },
         {
             "key": "91rb",
-            "name": "🐷┃91rb",
+            "name": "🐸┃91rb",
             "type": 3,
             "api": "./py/91rb.py",
             "searchable": 1,
@@ -135,7 +145,7 @@
         },
         {
             "key": "91吃瓜",
-            "name": "🐸┃91吃瓜",
+            "name": "🐵┃91吃瓜",
             "type": 3,
             "api": "./py/91吃瓜.py",
             "searchable": 1,
@@ -145,7 +155,7 @@
         },
         {
             "key": "91网爆黑料",
-            "name": "🐵┃91网爆黑料",
+            "name": "🦄┃91网爆黑料",
             "type": 3,
             "api": "./py/91网爆黑料.py",
             "searchable": 1,
@@ -155,7 +165,7 @@
         },
         {
             "key": "Chaturbate",
-            "name": "🦄┃Chaturbate",
+            "name": "🐔┃Chaturbate",
             "type": 3,
             "api": "./py/Chaturbate.py",
             "searchable": 1,
@@ -165,7 +175,7 @@
         },
         {
             "key": "DSYS",
-            "name": "🐔┃DSYS",
+            "name": "🐧┃DSYS",
             "type": 3,
             "api": "./py/DSYS.py",
             "searchable": 1,
@@ -175,7 +185,7 @@
         },
         {
             "key": "HMDJ",
-            "name": "🐧┃HMDJ",
+            "name": "🐦┃HMDJ",
             "type": 3,
             "api": "./py/HMDJ.py",
             "searchable": 1,
@@ -185,7 +195,7 @@
         },
         {
             "key": "LIBVIO",
-            "name": "🐦┃LIBVIO",
+            "name": "🐤┃LIBVIO",
             "type": 3,
             "api": "./py/LIBVIO.py",
             "searchable": 1,
@@ -195,7 +205,7 @@
         },
         {
             "key": "LIBVIO[盘]",
-            "name": "🐤┃LIBVIO[盘]",
+            "name": "🐝┃LIBVIO[盘]",
             "type": 3,
             "api": "./py/LIBVIO[盘].py",
             "searchable": 1,
@@ -205,7 +215,7 @@
         },
         {
             "key": "LREEOK",
-            "name": "🐝┃LREEOK",
+            "name": "🐞┃LREEOK",
             "type": 3,
             "api": "./py/LREEOK.py",
             "searchable": 1,
@@ -215,7 +225,7 @@
         },
         {
             "key": "LSYS",
-            "name": "🐞┃LSYS",
+            "name": "🦋┃LSYS",
             "type": 3,
             "api": "./py/LSYS.py",
             "searchable": 1,
@@ -225,7 +235,7 @@
         },
         {
             "key": "Mang",
-            "name": "🦋┃Mang",
+            "name": "🐢┃Mang",
             "type": 3,
             "api": "./py/Mang.py",
             "searchable": 1,
@@ -235,7 +245,7 @@
         },
         {
             "key": "Miss",
-            "name": "🐢┃Miss",
+            "name": "🐍┃Miss",
             "type": 3,
             "api": "./py/Miss.py",
             "searchable": 1,
@@ -245,7 +255,7 @@
         },
         {
             "key": "Miss3",
-            "name": "🐍┃Miss3",
+            "name": "🐠┃Miss3",
             "type": 3,
             "api": "./py/Miss3.py",
             "searchable": 1,
@@ -255,7 +265,7 @@
         },
         {
             "key": "Phb",
-            "name": "🐠┃Phb",
+            "name": "🐬┃Phb",
             "type": 3,
             "api": "./py/Phb.py",
             "searchable": 1,
@@ -265,7 +275,7 @@
         },
         {
             "key": "Pornhub (1)",
-            "name": "🐬┃Pornhub (1)",
+            "name": "🐳┃Pornhub (1)",
             "type": 3,
             "api": "./py/Pornhub (1).py",
             "searchable": 1,
@@ -275,7 +285,7 @@
         },
         {
             "key": "Pornhub",
-            "name": "🐳┃Pornhub",
+            "name": "🦑┃Pornhub",
             "type": 3,
             "api": "./py/Pornhub.py",
             "searchable": 1,
@@ -285,7 +295,7 @@
         },
         {
             "key": "SMT",
-            "name": "🦑┃SMT",
+            "name": "🦀┃SMT",
             "type": 3,
             "api": "./py/SMT.py",
             "searchable": 1,
@@ -295,7 +305,7 @@
         },
         {
             "key": "TLDJ",
-            "name": "🦀┃TLDJ",
+            "name": "🌸┃TLDJ",
             "type": 3,
             "api": "./py/TLDJ.py",
             "searchable": 1,
@@ -305,7 +315,7 @@
         },
         {
             "key": "ThePorn",
-            "name": "🌸┃ThePorn",
+            "name": "🌻┃ThePorn",
             "type": 3,
             "api": "./py/ThePorn.py",
             "searchable": 1,
@@ -315,7 +325,7 @@
         },
         {
             "key": "UVod",
-            "name": "🌻┃UVod",
+            "name": "🌹┃UVod",
             "type": 3,
             "api": "./py/UVod.py",
             "searchable": 1,
@@ -325,7 +335,7 @@
         },
         {
             "key": "Xhamster",
-            "name": "🌹┃Xhamster",
+            "name": "🌺┃Xhamster",
             "type": 3,
             "api": "./py/Xhamster.py",
             "searchable": 1,
@@ -335,7 +345,7 @@
         },
         {
             "key": "Xvd",
-            "name": "🌺┃Xvd",
+            "name": "🌼┃Xvd",
             "type": 3,
             "api": "./py/Xvd.py",
             "searchable": 1,
@@ -345,7 +355,7 @@
         },
         {
             "key": "Xvideos",
-            "name": "🌼┃Xvideos",
+            "name": "🌷┃Xvideos",
             "type": 3,
             "api": "./py/Xvideos.py",
             "searchable": 1,
@@ -355,7 +365,7 @@
         },
         {
             "key": "YYMP3音乐网",
-            "name": "🌷┃YYMP3音乐网",
+            "name": "🌱┃YYMP3音乐网",
             "type": 3,
             "api": "./py/YYMP3音乐网.py",
             "searchable": 1,
@@ -365,7 +375,7 @@
         },
         {
             "key": "actor",
-            "name": "🌱┃actor",
+            "name": "🌲┃actor",
             "type": 3,
             "api": "./py/actor.py",
             "searchable": 1,
@@ -375,7 +385,7 @@
         },
         {
             "key": "apple",
-            "name": "🌲┃apple",
+            "name": "🌳┃apple",
             "type": 3,
             "api": "./py/apple.py",
             "searchable": 1,
@@ -385,7 +395,7 @@
         },
         {
             "key": "ayf",
-            "name": "🌳┃ayf",
+            "name": "🌴┃ayf",
             "type": 3,
             "api": "./py/ayf.py",
             "searchable": 1,
@@ -395,7 +405,7 @@
         },
         {
             "key": "bili",
-            "name": "🌴┃bili",
+            "name": "🍏┃bili",
             "type": 3,
             "api": "./py/bili.py",
             "searchable": 1,
@@ -405,7 +415,7 @@
         },
         {
             "key": "boyfriend.show",
-            "name": "🍏┃boyfriend.show",
+            "name": "🍎┃boyfriend.show",
             "type": 3,
             "api": "./py/boyfriend.show.py",
             "searchable": 1,
@@ -415,7 +425,7 @@
         },
         {
             "key": "cam4",
-            "name": "🍎┃cam4",
+            "name": "🍐┃cam4",
             "type": 3,
             "api": "./py/cam4.py",
             "searchable": 1,
@@ -425,7 +435,7 @@
         },
         {
             "key": "cnotv",
-            "name": "🍐┃cnotv",
+            "name": "🍊┃cnotv",
             "type": 3,
             "api": "./py/cnotv.py",
             "searchable": 1,
@@ -435,7 +445,7 @@
         },
         {
             "key": "emby",
-            "name": "🍊┃emby",
+            "name": "🍋┃emby",
             "type": 3,
             "api": "./py/emby.py",
             "searchable": 1,
@@ -445,7 +455,7 @@
         },
         {
             "key": "epo",
-            "name": "🍋┃epo",
+            "name": "🍌┃epo",
             "type": 3,
             "api": "./py/epo.py",
             "searchable": 1,
@@ -455,7 +465,7 @@
         },
         {
             "key": "fullhd",
-            "name": "🍌┃fullhd",
+            "name": "🍉┃fullhd",
             "type": 3,
             "api": "./py/fullhd.py",
             "searchable": 1,
@@ -465,7 +475,7 @@
         },
         {
             "key": "gay",
-            "name": "🍉┃gay",
+            "name": "🍇┃gay",
             "type": 3,
             "api": "./py/gay.py",
             "searchable": 1,
@@ -475,7 +485,7 @@
         },
         {
             "key": "hanju7",
-            "name": "🍇┃hanju7",
+            "name": "🍓┃hanju7",
             "type": 3,
             "api": "./py/hanju7.py",
             "searchable": 1,
@@ -485,7 +495,7 @@
         },
         {
             "key": "hsck",
-            "name": "🍓┃hsck",
+            "name": "🫐┃hsck",
             "type": 3,
             "api": "./py/hsck.py",
             "searchable": 1,
@@ -495,7 +505,7 @@
         },
         {
             "key": "iptv345",
-            "name": "🫐┃iptv345",
+            "name": "🍈┃iptv345",
             "type": 3,
             "api": "./py/iptv345.py",
             "searchable": 1,
@@ -505,7 +515,7 @@
         },
         {
             "key": "javxx",
-            "name": "🍈┃javxx",
+            "name": "🍒┃javxx",
             "type": 3,
             "api": "./py/javxx.py",
             "searchable": 1,
@@ -515,7 +525,7 @@
         },
         {
             "key": "kzb",
-            "name": "🍒┃kzb",
+            "name": "🍑┃kzb",
             "type": 3,
             "api": "./py/kzb.py",
             "searchable": 1,
@@ -525,7 +535,7 @@
         },
         {
             "key": "lav",
-            "name": "🍑┃lav",
+            "name": "🥭┃lav",
             "type": 3,
             "api": "./py/lav.py",
             "searchable": 1,
@@ -535,7 +545,7 @@
         },
         {
             "key": "lingdu",
-            "name": "🥭┃lingdu",
+            "name": "🍍┃lingdu",
             "type": 3,
             "api": "./py/lingdu.py",
             "searchable": 1,
@@ -545,7 +555,7 @@
         },
         {
             "key": "live",
-            "name": "🍍┃live",
+            "name": "🥥┃live",
             "type": 3,
             "api": "./py/live.py",
             "searchable": 1,
@@ -555,7 +565,7 @@
         },
         {
             "key": "live_kzb",
-            "name": "🥥┃live_kzb",
+            "name": "🥝┃live_kzb",
             "type": 3,
             "api": "./py/live_kzb.py",
             "searchable": 1,
@@ -565,7 +575,7 @@
         },
         {
             "key": "live_smt",
-            "name": "🥝┃live_smt",
+            "name": "🍅┃live_smt",
             "type": 3,
             "api": "./py/live_smt.py",
             "searchable": 1,
@@ -575,7 +585,7 @@
         },
         {
             "key": "live_zxbv",
-            "name": "🍅┃live_zxbv",
+            "name": "🍆┃live_zxbv",
             "type": 3,
             "api": "./py/live_zxbv.py",
             "searchable": 1,
@@ -585,7 +595,7 @@
         },
         {
             "key": "lives-SMT",
-            "name": "🍆┃lives-SMT",
+            "name": "🥑┃lives-SMT",
             "type": 3,
             "api": "./py/lives-SMT.py",
             "searchable": 1,
@@ -595,7 +605,7 @@
         },
         {
             "key": "lives-iptv345",
-            "name": "🥑┃lives-iptv345",
+            "name": "🥦┃lives-iptv345",
             "type": 3,
             "api": "./py/lives-iptv345.py",
             "searchable": 1,
@@ -605,7 +615,7 @@
         },
         {
             "key": "lives-kzb",
-            "name": "🥦┃lives-kzb",
+            "name": "🥬┃lives-kzb",
             "type": 3,
             "api": "./py/lives-kzb.py",
             "searchable": 1,
@@ -615,7 +625,7 @@
         },
         {
             "key": "lives",
-            "name": "🥬┃lives",
+            "name": "🥕┃lives",
             "type": 3,
             "api": "./py/lives.py",
             "searchable": 1,
@@ -625,7 +635,7 @@
         },
         {
             "key": "lreeok",
-            "name": "🥕┃lreeok",
+            "name": "🌽┃lreeok",
             "type": 3,
             "api": "./py/lreeok.py",
             "searchable": 1,
@@ -635,7 +645,7 @@
         },
         {
             "key": "lsp传媒",
-            "name": "🌽┃lsp传媒",
+            "name": "🌶️┃lsp传媒",
             "type": 3,
             "api": "./py/lsp传媒.py",
             "searchable": 1,
@@ -645,7 +655,7 @@
         },
         {
             "key": "miss",
-            "name": "🌶️┃miss",
+            "name": "🧄┃miss",
             "type": 3,
             "api": "./py/miss.py",
             "searchable": 1,
@@ -655,7 +665,7 @@
         },
         {
             "key": "onlyfans gv",
-            "name": "🧄┃onlyfans gv",
+            "name": "🧅┃onlyfans gv",
             "type": 3,
             "api": "./py/onlyfans gv.py",
             "searchable": 1,
@@ -665,7 +675,7 @@
         },
         {
             "key": "py_Phub",
-            "name": "🧅┃py_Phub",
+            "name": "🥔┃py_Phub",
             "type": 3,
             "api": "./py/py_Phub.py",
             "searchable": 1,
@@ -675,7 +685,7 @@
         },
         {
             "key": "py_Xhm",
-            "name": "🥔┃py_Xhm",
+            "name": "🥚┃py_Xhm",
             "type": 3,
             "api": "./py/py_Xhm.py",
             "searchable": 1,
@@ -685,7 +695,7 @@
         },
         {
             "key": "py_cntv央视",
-            "name": "🥚┃py_cntv央视",
+            "name": "🍞┃py_cntv央视",
             "type": 3,
             "api": "./py/py_cntv央视.py",
             "searchable": 1,
@@ -695,7 +705,7 @@
         },
         {
             "key": "py_emby_proxy",
-            "name": "🍞┃py_emby_proxy",
+            "name": "🥐┃py_emby_proxy",
             "type": 3,
             "api": "./py/py_emby_proxy.py",
             "searchable": 1,
@@ -705,7 +715,7 @@
         },
         {
             "key": "py_fk",
-            "name": "🥐┃py_fk",
+            "name": "🥯┃py_fk",
             "type": 3,
             "api": "./py/py_fk.py",
             "searchable": 1,
@@ -715,7 +725,7 @@
         },
         {
             "key": "py_gay",
-            "name": "🥯┃py_gay",
+            "name": "🥨┃py_gay",
             "type": 3,
             "api": "./py/py_gay.py",
             "searchable": 1,
@@ -725,7 +735,7 @@
         },
         {
             "key": "py_hitv",
-            "name": "🥨┃py_hitv",
+            "name": "🧀┃py_hitv",
             "type": 3,
             "api": "./py/py_hitv.py",
             "searchable": 1,
@@ -735,7 +745,7 @@
         },
         {
             "key": "py_jianpian",
-            "name": "🧀┃py_jianpian",
+            "name": "🥓┃py_jianpian",
             "type": 3,
             "api": "./py/py_jianpian.py",
             "searchable": 1,
@@ -745,7 +755,7 @@
         },
         {
             "key": "py_lav",
-            "name": "🥓┃py_lav",
+            "name": "🍗┃py_lav",
             "type": 3,
             "api": "./py/py_lav.py",
             "searchable": 1,
@@ -755,7 +765,7 @@
         },
         {
             "key": "py_lreeok",
-            "name": "🍗┃py_lreeok",
+            "name": "🍖┃py_lreeok",
             "type": 3,
             "api": "./py/py_lreeok.py",
             "searchable": 1,
@@ -765,7 +775,7 @@
         },
         {
             "key": "py_mp",
-            "name": "🍖┃py_mp",
+            "name": "🌭┃py_mp",
             "type": 3,
             "api": "./py/py_mp.py",
             "searchable": 1,
@@ -775,7 +785,7 @@
         },
         {
             "key": "py_mrav",
-            "name": "🌭┃py_mrav",
+            "name": "🍔┃py_mrav",
             "type": 3,
             "api": "./py/py_mrav.py",
             "searchable": 1,
@@ -785,7 +795,7 @@
         },
         {
             "key": "py_nivod_cc",
-            "name": "🍔┃py_nivod_cc",
+            "name": "🍟┃py_nivod_cc",
             "type": 3,
             "api": "./py/py_nivod_cc.py",
             "searchable": 1,
@@ -795,7 +805,7 @@
         },
         {
             "key": "py_phu",
-            "name": "🍟┃py_phu",
+            "name": "⚽┃py_phu",
             "type": 3,
             "api": "./py/py_phu.py",
             "searchable": 1,
@@ -805,7 +815,7 @@
         },
         {
             "key": "py_stripchat",
-            "name": "⚽┃py_stripchat",
+            "name": "🏀┃py_stripchat",
             "type": 3,
             "api": "./py/py_stripchat.py",
             "searchable": 1,
@@ -814,8 +824,18 @@
             "changeable": 0
         },
         {
+            "key": "py_wai76[画]",
+            "name": "🏈┃py_wai76[画]",
+            "type": 3,
+            "api": "./py/py_wai76[画].py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "py_xpg",
-            "name": "🏀┃py_xpg",
+            "name": "⚾┃py_xpg",
             "type": 3,
             "api": "./py/py_xpg.py",
             "searchable": 1,
@@ -825,7 +845,7 @@
         },
         {
             "key": "py_光速",
-            "name": "🏈┃py_光速",
+            "name": "🎾┃py_光速",
             "type": 3,
             "api": "./py/py_光速.py",
             "searchable": 1,
@@ -835,7 +855,7 @@
         },
         {
             "key": "py_剧多短剧",
-            "name": "⚾┃py_剧多短剧",
+            "name": "🏐┃py_剧多短剧",
             "type": 3,
             "api": "./py/py_剧多短剧.py",
             "searchable": 1,
@@ -845,7 +865,7 @@
         },
         {
             "key": "py_小红书",
-            "name": "🎾┃py_小红书",
+            "name": "🏉┃py_小红书",
             "type": 3,
             "api": "./py/py_小红书.py",
             "searchable": 1,
@@ -855,7 +875,7 @@
         },
         {
             "key": "py_小红薯",
-            "name": "🏐┃py_小红薯",
+            "name": "🎱┃py_小红薯",
             "type": 3,
             "api": "./py/py_小红薯.py",
             "searchable": 1,
@@ -865,7 +885,7 @@
         },
         {
             "key": "py_推特",
-            "name": "🏉┃py_推特",
+            "name": "🏓┃py_推特",
             "type": 3,
             "api": "./py/py_推特.py",
             "searchable": 1,
@@ -875,7 +895,7 @@
         },
         {
             "key": "py_浴火社",
-            "name": "🎱┃py_浴火社",
+            "name": "🏸┃py_浴火社",
             "type": 3,
             "api": "./py/py_浴火社.py",
             "searchable": 1,
@@ -885,7 +905,7 @@
         },
         {
             "key": "py_爱",
-            "name": "🏓┃py_爱",
+            "name": "🥅┃py_爱",
             "type": 3,
             "api": "./py/py_爱.py",
             "searchable": 1,
@@ -895,7 +915,7 @@
         },
         {
             "key": "py_电影猎手",
-            "name": "🏸┃py_电影猎手",
+            "name": "🏒┃py_电影猎手",
             "type": 3,
             "api": "./py/py_电影猎手.py",
             "searchable": 1,
@@ -905,7 +925,7 @@
         },
         {
             "key": "py_胖虎",
-            "name": "🥅┃py_胖虎",
+            "name": "🏑┃py_胖虎",
             "type": 3,
             "api": "./py/py_胖虎.py",
             "searchable": 1,
@@ -915,7 +935,7 @@
         },
         {
             "key": "py_腾",
-            "name": "🏒┃py_腾",
+            "name": "🏏┃py_腾",
             "type": 3,
             "api": "./py/py_腾.py",
             "searchable": 1,
@@ -925,7 +945,7 @@
         },
         {
             "key": "py_色播聚合",
-            "name": "🏑┃py_色播聚合",
+            "name": "⛳┃py_色播聚合",
             "type": 3,
             "api": "./py/py_色播聚合.py",
             "searchable": 1,
@@ -935,7 +955,7 @@
         },
         {
             "key": "py_芒",
-            "name": "🏏┃py_芒",
+            "name": "🏹┃py_芒",
             "type": 3,
             "api": "./py/py_芒.py",
             "searchable": 1,
@@ -945,7 +965,7 @@
         },
         {
             "key": "py_视觉",
-            "name": "⛳┃py_视觉",
+            "name": "🎣┃py_视觉",
             "type": 3,
             "api": "./py/py_视觉.py",
             "searchable": 1,
@@ -955,7 +975,7 @@
         },
         {
             "key": "py_金牌",
-            "name": "🏹┃py_金牌",
+            "name": "🤿┃py_金牌",
             "type": 3,
             "api": "./py/py_金牌.py",
             "searchable": 1,
@@ -965,7 +985,7 @@
         },
         {
             "key": "py_黑料",
-            "name": "🎣┃py_黑料",
+            "name": "🥊┃py_黑料",
             "type": 3,
             "api": "./py/py_黑料.py",
             "searchable": 1,
@@ -975,7 +995,7 @@
         },
         {
             "key": "redflix",
-            "name": "🤿┃redflix",
+            "name": "🥋┃redflix",
             "type": 3,
             "api": "./py/redflix.py",
             "searchable": 1,
@@ -985,7 +1005,7 @@
         },
         {
             "key": "rou",
-            "name": "🥊┃rou",
+            "name": "🎯┃rou",
             "type": 3,
             "api": "./py/rou.py",
             "searchable": 1,
@@ -995,7 +1015,7 @@
         },
         {
             "key": "rsp",
-            "name": "🥋┃rsp",
+            "name": "🎳┃rsp",
             "type": 3,
             "api": "./py/rsp.py",
             "searchable": 1,
@@ -1005,7 +1025,7 @@
         },
         {
             "key": "sexTV",
-            "name": "🎯┃sexTV",
+            "name": "🪁┃sexTV",
             "type": 3,
             "api": "./py/sexTV.py",
             "searchable": 1,
@@ -1015,7 +1035,7 @@
         },
         {
             "key": "st",
-            "name": "🎳┃st",
+            "name": "🛹┃st",
             "type": 3,
             "api": "./py/st.py",
             "searchable": 1,
@@ -1025,7 +1045,7 @@
         },
         {
             "key": "stgay",
-            "name": "🪁┃stgay",
+            "name": "🥌┃stgay",
             "type": 3,
             "api": "./py/stgay.py",
             "searchable": 1,
@@ -1035,7 +1055,7 @@
         },
         {
             "key": "stripchat",
-            "name": "🛹┃stripchat",
+            "name": "🛷┃stripchat",
             "type": 3,
             "api": "./py/stripchat.py",
             "searchable": 1,
@@ -1045,7 +1065,7 @@
         },
         {
             "key": "uaa有声",
-            "name": "🥌┃uaa有声",
+            "name": "⛷️┃uaa有声",
             "type": 3,
             "api": "./py/uaa有声.py",
             "searchable": 1,
@@ -1055,7 +1075,7 @@
         },
         {
             "key": "update_py_config",
-            "name": "🛷┃update_py_config",
+            "name": "🏂┃update_py_config",
             "type": 3,
             "api": "./py/update_py_config.py",
             "searchable": 1,
@@ -1065,7 +1085,7 @@
         },
         {
             "key": "upurl",
-            "name": "⛷️┃upurl",
+            "name": "🏄‍♂️┃upurl",
             "type": 3,
             "api": "./py/upurl.py",
             "searchable": 1,
@@ -1075,7 +1095,7 @@
         },
         {
             "key": "verify_config",
-            "name": "🏂┃verify_config",
+            "name": "🏊‍♀️┃verify_config",
             "type": 3,
             "api": "./py/verify_config.py",
             "searchable": 1,
@@ -1085,7 +1105,7 @@
         },
         {
             "key": "xhamster",
-            "name": "🏄‍♂️┃xhamster",
+            "name": "🎮┃xhamster",
             "type": 3,
             "api": "./py/xhamster.py",
             "searchable": 1,
@@ -1095,7 +1115,7 @@
         },
         {
             "key": "xhm",
-            "name": "🏊‍♀️┃xhm",
+            "name": "🎲┃xhm",
             "type": 3,
             "api": "./py/xhm.py",
             "searchable": 1,
@@ -1105,7 +1125,7 @@
         },
         {
             "key": "xpg",
-            "name": "🎮┃xpg",
+            "name": "🧩┃xpg",
             "type": 3,
             "api": "./py/xpg.py",
             "searchable": 1,
@@ -1115,7 +1135,7 @@
         },
         {
             "key": "y_139fm多分类",
-            "name": "🎲┃y_139fm多分类",
+            "name": "🀄┃y_139fm多分类",
             "type": 3,
             "api": "./py/y_139fm多分类.py",
             "searchable": 1,
@@ -1125,7 +1145,7 @@
         },
         {
             "key": "youtubelive",
-            "name": "🧩┃youtubelive",
+            "name": "♟️┃youtubelive",
             "type": 3,
             "api": "./py/youtubelive.py",
             "searchable": 1,
@@ -1135,7 +1155,7 @@
         },
         {
             "key": "ysxs",
-            "name": "🀄┃ysxs",
+            "name": "🃏┃ysxs",
             "type": 3,
             "api": "./py/ysxs.py",
             "searchable": 1,
@@ -1144,8 +1164,18 @@
             "changeable": 0
         },
         {
+            "key": "zbhb",
+            "name": "🧗┃zbhb",
+            "type": 3,
+            "api": "./py/zbhb.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "一个区",
-            "name": "♟️┃一个区",
+            "name": "🏆┃一个区",
             "type": 3,
             "api": "./py/一个区.py",
             "searchable": 1,
@@ -1155,7 +1185,7 @@
         },
         {
             "key": "七区",
-            "name": "🃏┃七区",
+            "name": "🥇┃七区",
             "type": 3,
             "api": "./py/七区.py",
             "searchable": 1,
@@ -1165,7 +1195,7 @@
         },
         {
             "key": "七味",
-            "name": "🧗┃七味",
+            "name": "🥈┃七味",
             "type": 3,
             "api": "./py/七味.py",
             "searchable": 1,
@@ -1175,7 +1205,7 @@
         },
         {
             "key": "七味[集]",
-            "name": "🏆┃七味[集]",
+            "name": "🥉┃七味[集]",
             "type": 3,
             "api": "./py/七味[集].py",
             "searchable": 1,
@@ -1185,7 +1215,7 @@
         },
         {
             "key": "七猫小说[书]",
-            "name": "🥇┃七猫小说[书]",
+            "name": "⌚┃七猫小说[书]",
             "type": 3,
             "api": "./py/七猫小说[书].py",
             "searchable": 1,
@@ -1195,7 +1225,7 @@
         },
         {
             "key": "两个BT",
-            "name": "🥈┃两个BT",
+            "name": "📱┃两个BT",
             "type": 3,
             "api": "./py/两个BT.py",
             "searchable": 1,
@@ -1205,7 +1235,7 @@
         },
         {
             "key": "中文X直播",
-            "name": "🥉┃中文X直播",
+            "name": "💻┃中文X直播",
             "type": 3,
             "api": "./py/中文X直播.py",
             "searchable": 1,
@@ -1215,7 +1245,7 @@
         },
         {
             "key": "九个区",
-            "name": "⌚┃九个区",
+            "name": "🖨️┃九个区",
             "type": 3,
             "api": "./py/九个区.py",
             "searchable": 1,
@@ -1225,7 +1255,7 @@
         },
         {
             "key": "云端APP",
-            "name": "📱┃云端APP",
+            "name": "🕹️┃云端APP",
             "type": 3,
             "api": "./py/云端APP.py",
             "searchable": 1,
@@ -1235,7 +1265,7 @@
         },
         {
             "key": "云端影视",
-            "name": "💻┃云端影视",
+            "name": "📷┃云端影视",
             "type": 3,
             "api": "./py/云端影视.py",
             "searchable": 1,
@@ -1245,7 +1275,7 @@
         },
         {
             "key": "云速影视",
-            "name": "🖨️┃云速影视",
+            "name": "📸┃云速影视",
             "type": 3,
             "api": "./py/云速影视.py",
             "searchable": 1,
@@ -1255,7 +1285,7 @@
         },
         {
             "key": "云速影视APP",
-            "name": "🕹️┃云速影视APP",
+            "name": "📹┃云速影视APP",
             "type": 3,
             "api": "./py/云速影视APP.py",
             "searchable": 1,
@@ -1265,7 +1295,7 @@
         },
         {
             "key": "五月天",
-            "name": "📷┃五月天",
+            "name": "🎥┃五月天",
             "type": 3,
             "api": "./py/五月天.py",
             "searchable": 1,
@@ -1275,7 +1305,7 @@
         },
         {
             "key": "今日看料",
-            "name": "📸┃今日看料",
+            "name": "📺┃今日看料",
             "type": 3,
             "api": "./py/今日看料.py",
             "searchable": 1,
@@ -1285,7 +1315,7 @@
         },
         {
             "key": "优",
-            "name": "📹┃优",
+            "name": "📻┃优",
             "type": 3,
             "api": "./py/优.py",
             "searchable": 1,
@@ -1295,7 +1325,7 @@
         },
         {
             "key": "优酷视频",
-            "name": "🎥┃优酷视频",
+            "name": "🎙️┃优酷视频",
             "type": 3,
             "api": "./py/优酷视频.py",
             "searchable": 1,
@@ -1305,7 +1335,7 @@
         },
         {
             "key": "兄弟影视.min",
-            "name": "📺┃兄弟影视.min",
+            "name": "🎚️┃兄弟影视.min",
             "type": 3,
             "api": "./py/兄弟影视.min.py",
             "searchable": 1,
@@ -1315,7 +1345,7 @@
         },
         {
             "key": "兄弟影视",
-            "name": "📻┃兄弟影视",
+            "name": "🎛️┃兄弟影视",
             "type": 3,
             "api": "./py/兄弟影视.py",
             "searchable": 1,
@@ -1325,7 +1355,7 @@
         },
         {
             "key": "光速影视",
-            "name": "🎙️┃光速影视",
+            "name": "☎️┃光速影视",
             "type": 3,
             "api": "./py/光速影视.py",
             "searchable": 1,
@@ -1334,8 +1364,28 @@
             "changeable": 0
         },
         {
+            "key": "全球更新",
+            "name": "📞┃全球更新",
+            "type": 3,
+            "api": "./py/全球更新.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "共青春影院",
+            "name": "📟┃共青春影院",
+            "type": 3,
+            "api": "./py/共青春影院.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "农民",
-            "name": "🎚️┃农民",
+            "name": "📠┃农民",
             "type": 3,
             "api": "./py/农民.py",
             "searchable": 1,
@@ -1345,7 +1395,7 @@
         },
         {
             "key": "剧王短剧",
-            "name": "🎛️┃剧王短剧",
+            "name": "🔋┃剧王短剧",
             "type": 3,
             "api": "./py/剧王短剧.py",
             "searchable": 1,
@@ -1355,7 +1405,7 @@
         },
         {
             "key": "动漫巴士",
-            "name": "☎️┃动漫巴士",
+            "name": "🔌┃动漫巴士",
             "type": 3,
             "api": "./py/动漫巴士.py",
             "searchable": 1,
@@ -1365,7 +1415,7 @@
         },
         {
             "key": "努努影院",
-            "name": "📞┃努努影院",
+            "name": "💡┃努努影院",
             "type": 3,
             "api": "./py/努努影院.py",
             "searchable": 1,
@@ -1375,7 +1425,7 @@
         },
         {
             "key": "厂长资源",
-            "name": "📟┃厂长资源",
+            "name": "🔦┃厂长资源",
             "type": 3,
             "api": "./py/厂长资源.py",
             "searchable": 1,
@@ -1385,7 +1435,7 @@
         },
         {
             "key": "吃瓜",
-            "name": "📠┃吃瓜",
+            "name": "🕯️┃吃瓜",
             "type": 3,
             "api": "./py/吃瓜.py",
             "searchable": 1,
@@ -1395,7 +1445,7 @@
         },
         {
             "key": "吸瓜",
-            "name": "🔋┃吸瓜",
+            "name": "🛢️┃吸瓜",
             "type": 3,
             "api": "./py/吸瓜.py",
             "searchable": 1,
@@ -1405,7 +1455,7 @@
         },
         {
             "key": "吸瓜弹幕",
-            "name": "🔌┃吸瓜弹幕",
+            "name": "💰┃吸瓜弹幕",
             "type": 3,
             "api": "./py/吸瓜弹幕.py",
             "searchable": 1,
@@ -1415,7 +1465,7 @@
         },
         {
             "key": "哔哩视频",
-            "name": "💡┃哔哩视频",
+            "name": "💳┃哔哩视频",
             "type": 3,
             "api": "./py/哔哩视频.py",
             "searchable": 1,
@@ -1424,8 +1474,18 @@
             "changeable": 0
         },
         {
+            "key": "嘀嗒影视",
+            "name": "🗝️┃嘀嗒影视",
+            "type": 3,
+            "api": "./py/嘀嗒影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "四虎视频",
-            "name": "🔦┃四虎视频",
+            "name": "🔑┃四虎视频",
             "type": 3,
             "api": "./py/四虎视频.py",
             "searchable": 1,
@@ -1434,8 +1494,38 @@
             "changeable": 0
         },
         {
+            "key": "多瑙影院",
+            "name": "🚪┃多瑙影院",
+            "type": 3,
+            "api": "./py/多瑙影院.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "太乙影视",
+            "name": "🔒┃太乙影视",
+            "type": 3,
+            "api": "./py/太乙影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "太二影视",
+            "name": "🔓┃太二影视",
+            "type": 3,
+            "api": "./py/太二影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "奇优动漫",
-            "name": "🕯️┃奇优动漫",
+            "name": "🔐┃奇优动漫",
             "type": 3,
             "api": "./py/奇优动漫.py",
             "searchable": 1,
@@ -1444,8 +1534,18 @@
             "changeable": 0
         },
         {
+            "key": "奇点影视",
+            "name": "🛡️┃奇点影视",
+            "type": 3,
+            "api": "./py/奇点影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "奇迹APP",
-            "name": "🛢️┃奇迹APP",
+            "name": "🧲┃奇迹APP",
             "type": 3,
             "api": "./py/奇迹APP.py",
             "searchable": 1,
@@ -1455,7 +1555,7 @@
         },
         {
             "key": "好色TV",
-            "name": "💰┃好色TV",
+            "name": "⚖️┃好色TV",
             "type": 3,
             "api": "./py/好色TV.py",
             "searchable": 1,
@@ -1465,7 +1565,7 @@
         },
         {
             "key": "好色™ Tv",
-            "name": "💳┃好色™ Tv",
+            "name": "🔗┃好色™ Tv",
             "type": 3,
             "api": "./py/好色™ Tv.py",
             "searchable": 1,
@@ -1475,7 +1575,7 @@
         },
         {
             "key": "好莱坞",
-            "name": "🗝️┃好莱坞",
+            "name": "🧰┃好莱坞",
             "type": 3,
             "api": "./py/好莱坞.py",
             "searchable": 1,
@@ -1485,7 +1585,7 @@
         },
         {
             "key": "小小苹果",
-            "name": "🔑┃小小苹果",
+            "name": "🔧┃小小苹果",
             "type": 3,
             "api": "./py/小小苹果.py",
             "searchable": 1,
@@ -1495,7 +1595,7 @@
         },
         {
             "key": "小红影视",
-            "name": "🚪┃小红影视",
+            "name": "🔨┃小红影视",
             "type": 3,
             "api": "./py/小红影视.py",
             "searchable": 1,
@@ -1505,7 +1605,7 @@
         },
         {
             "key": "小红薯",
-            "name": "🔒┃小红薯",
+            "name": "🪓┃小红薯",
             "type": 3,
             "api": "./py/小红薯.py",
             "searchable": 1,
@@ -1515,7 +1615,7 @@
         },
         {
             "key": "小红薯APP",
-            "name": "🔓┃小红薯APP",
+            "name": "⛏️┃小红薯APP",
             "type": 3,
             "api": "./py/小红薯APP.py",
             "searchable": 1,
@@ -1525,7 +1625,7 @@
         },
         {
             "key": "小苹果",
-            "name": "🔐┃小苹果",
+            "name": "🛠️┃小苹果",
             "type": 3,
             "api": "./py/小苹果.py",
             "searchable": 1,
@@ -1535,7 +1635,7 @@
         },
         {
             "key": "小苹果影视",
-            "name": "🛡️┃小苹果影视",
+            "name": "🗡️┃小苹果影视",
             "type": 3,
             "api": "./py/小苹果影视.py",
             "searchable": 1,
@@ -1545,7 +1645,7 @@
         },
         {
             "key": "小鸡暴走",
-            "name": "🧲┃小鸡暴走",
+            "name": "⚔️┃小鸡暴走",
             "type": 3,
             "api": "./py/小鸡暴走.py",
             "searchable": 1,
@@ -1555,7 +1655,7 @@
         },
         {
             "key": "小鸭子看看",
-            "name": "⚖️┃小鸭子看看",
+            "name": "🔫┃小鸭子看看",
             "type": 3,
             "api": "./py/小鸭子看看.py",
             "searchable": 1,
@@ -1565,7 +1665,7 @@
         },
         {
             "key": "山有木兮",
-            "name": "🔗┃山有木兮",
+            "name": "🛏️┃山有木兮",
             "type": 3,
             "api": "./py/山有木兮.py",
             "searchable": 1,
@@ -1575,7 +1675,7 @@
         },
         {
             "key": "影视工厂",
-            "name": "🧰┃影视工厂",
+            "name": "🛋️┃影视工厂",
             "type": 3,
             "api": "./py/影视工厂.py",
             "searchable": 1,
@@ -1585,7 +1685,7 @@
         },
         {
             "key": "心跳",
-            "name": "🔧┃心跳",
+            "name": "🚗┃心跳",
             "type": 3,
             "api": "./py/心跳.py",
             "searchable": 1,
@@ -1595,7 +1695,7 @@
         },
         {
             "key": "恋鱼影视APP",
-            "name": "🔨┃恋鱼影视APP",
+            "name": "🚕┃恋鱼影视APP",
             "type": 3,
             "api": "./py/恋鱼影视APP.py",
             "searchable": 1,
@@ -1605,7 +1705,7 @@
         },
         {
             "key": "恰逢小说",
-            "name": "🪓┃恰逢小说",
+            "name": "🚙┃恰逢小说",
             "type": 3,
             "api": "./py/恰逢小说.py",
             "searchable": 1,
@@ -1615,7 +1715,7 @@
         },
         {
             "key": "恰逢有声小说",
-            "name": "⛏️┃恰逢有声小说",
+            "name": "🚌┃恰逢有声小说",
             "type": 3,
             "api": "./py/恰逢有声小说.py",
             "searchable": 1,
@@ -1625,7 +1725,7 @@
         },
         {
             "key": "悠悠APP",
-            "name": "🛠️┃悠悠APP",
+            "name": "🚎┃悠悠APP",
             "type": 3,
             "api": "./py/悠悠APP.py",
             "searchable": 1,
@@ -1635,7 +1735,7 @@
         },
         {
             "key": "推特",
-            "name": "🗡️┃推特",
+            "name": "🏎️┃推特",
             "type": 3,
             "api": "./py/推特.py",
             "searchable": 1,
@@ -1645,7 +1745,7 @@
         },
         {
             "key": "推特APP",
-            "name": "⚔️┃推特APP",
+            "name": "🚓┃推特APP",
             "type": 3,
             "api": "./py/推特APP.py",
             "searchable": 1,
@@ -1654,8 +1754,18 @@
             "changeable": 0
         },
         {
+            "key": "摄影作品",
+            "name": "🚑┃摄影作品",
+            "type": 3,
+            "api": "./py/摄影作品.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "新荐片",
-            "name": "🔫┃新荐片",
+            "name": "🚒┃新荐片",
             "type": 3,
             "api": "./py/新荐片.py",
             "searchable": 1,
@@ -1665,7 +1775,7 @@
         },
         {
             "key": "新韩剧网.min",
-            "name": "🛏️┃新韩剧网.min",
+            "name": "🚐┃新韩剧网.min",
             "type": 3,
             "api": "./py/新韩剧网.min.py",
             "searchable": 1,
@@ -1675,7 +1785,7 @@
         },
         {
             "key": "星芽短剧",
-            "name": "🛋️┃星芽短剧",
+            "name": "🛻┃星芽短剧",
             "type": 3,
             "api": "./py/星芽短剧.py",
             "searchable": 1,
@@ -1684,8 +1794,18 @@
             "changeable": 0
         },
         {
+            "key": "映像星球",
+            "name": "🚚┃映像星球",
+            "type": 3,
+            "api": "./py/映像星球.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "月佬免翻版好色TV",
-            "name": "🚗┃月佬免翻版好色TV",
+            "name": "🚛┃月佬免翻版好色TV",
             "type": 3,
             "api": "./py/月佬免翻版好色TV.py",
             "searchable": 1,
@@ -1695,7 +1815,7 @@
         },
         {
             "key": "有声小说",
-            "name": "🚕┃有声小说",
+            "name": "🚜┃有声小说",
             "type": 3,
             "api": "./py/有声小说.py",
             "searchable": 1,
@@ -1704,8 +1824,18 @@
             "changeable": 0
         },
         {
+            "key": "枝枝影视",
+            "name": "🏍️┃枝枝影视",
+            "type": 3,
+            "api": "./py/枝枝影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "枫叶影院",
-            "name": "🚙┃枫叶影院",
+            "name": "🛵┃枫叶影院",
             "type": 3,
             "api": "./py/枫叶影院.py",
             "searchable": 1,
@@ -1715,7 +1845,7 @@
         },
         {
             "key": "枫叶音乐",
-            "name": "🚌┃枫叶音乐",
+            "name": "🚲┃枫叶音乐",
             "type": 3,
             "api": "./py/枫叶音乐.py",
             "searchable": 1,
@@ -1725,7 +1855,7 @@
         },
         {
             "key": "柯南影视",
-            "name": "🚎┃柯南影视",
+            "name": "🛴┃柯南影视",
             "type": 3,
             "api": "./py/柯南影视.py",
             "searchable": 1,
@@ -1735,7 +1865,7 @@
         },
         {
             "key": "毒舌电影",
-            "name": "🏎️┃毒舌电影",
+            "name": "🚨┃毒舌电影",
             "type": 3,
             "api": "./py/毒舌电影.py",
             "searchable": 1,
@@ -1745,7 +1875,7 @@
         },
         {
             "key": "永乐",
-            "name": "🚓┃永乐",
+            "name": "🚔┃永乐",
             "type": 3,
             "api": "./py/永乐.py",
             "searchable": 1,
@@ -1755,7 +1885,7 @@
         },
         {
             "key": "永乐视频",
-            "name": "🚑┃永乐视频",
+            "name": "🚦┃永乐视频",
             "type": 3,
             "api": "./py/永乐视频.py",
             "searchable": 1,
@@ -1765,7 +1895,7 @@
         },
         {
             "key": "河马剧场",
-            "name": "🚒┃河马剧场",
+            "name": "🚧┃河马剧场",
             "type": 3,
             "api": "./py/河马剧场.py",
             "searchable": 1,
@@ -1775,7 +1905,7 @@
         },
         {
             "key": "泥视频",
-            "name": "🚐┃泥视频",
+            "name": "🛣️┃泥视频",
             "type": 3,
             "api": "./py/泥视频.py",
             "searchable": 1,
@@ -1785,7 +1915,7 @@
         },
         {
             "key": "浴火社APP",
-            "name": "🛻┃浴火社APP",
+            "name": "🛤️┃浴火社APP",
             "type": 3,
             "api": "./py/浴火社APP.py",
             "searchable": 1,
@@ -1795,7 +1925,7 @@
         },
         {
             "key": "海马影视APP",
-            "name": "🚚┃海马影视APP",
+            "name": "✈️┃海马影视APP",
             "type": 3,
             "api": "./py/海马影视APP.py",
             "searchable": 1,
@@ -1805,7 +1935,7 @@
         },
         {
             "key": "涩琪",
-            "name": "🚛┃涩琪",
+            "name": "🛩️┃涩琪",
             "type": 3,
             "api": "./py/涩琪.py",
             "searchable": 1,
@@ -1815,7 +1945,7 @@
         },
         {
             "key": "火车太顺APP",
-            "name": "🚜┃火车太顺APP",
+            "name": "🚁┃火车太顺APP",
             "type": 3,
             "api": "./py/火车太顺APP.py",
             "searchable": 1,
@@ -1825,7 +1955,7 @@
         },
         {
             "key": "热播APP",
-            "name": "🏍️┃热播APP",
+            "name": "🚀┃热播APP",
             "type": 3,
             "api": "./py/热播APP.py",
             "searchable": 1,
@@ -1835,7 +1965,7 @@
         },
         {
             "key": "熊猫",
-            "name": "🛵┃熊猫",
+            "name": "🛸┃熊猫",
             "type": 3,
             "api": "./py/熊猫.py",
             "searchable": 1,
@@ -1845,7 +1975,7 @@
         },
         {
             "key": "熊猫直播",
-            "name": "🚲┃熊猫直播",
+            "name": "⛵┃熊猫直播",
             "type": 3,
             "api": "./py/熊猫直播.py",
             "searchable": 1,
@@ -1855,7 +1985,7 @@
         },
         {
             "key": "爱听音乐",
-            "name": "🛴┃爱听音乐",
+            "name": "🚢┃爱听音乐",
             "type": 3,
             "api": "./py/爱听音乐.py",
             "searchable": 1,
@@ -1865,7 +1995,7 @@
         },
         {
             "key": "爱壹帆",
-            "name": "🚨┃爱壹帆",
+            "name": "🛳️┃爱壹帆",
             "type": 3,
             "api": "./py/爱壹帆.py",
             "searchable": 1,
@@ -1875,7 +2005,7 @@
         },
         {
             "key": "爱瓜",
-            "name": "🚔┃爱瓜",
+            "name": "⛴️┃爱瓜",
             "type": 3,
             "api": "./py/爱瓜.py",
             "searchable": 1,
@@ -1885,7 +2015,7 @@
         },
         {
             "key": "爱瓜TV",
-            "name": "🚦┃爱瓜TV",
+            "name": "🚤┃爱瓜TV",
             "type": 3,
             "api": "./py/爱瓜TV.py",
             "searchable": 1,
@@ -1895,7 +2025,7 @@
         },
         {
             "key": "爱瓜影视",
-            "name": "🚧┃爱瓜影视",
+            "name": "🛥️┃爱瓜影视",
             "type": 3,
             "api": "./py/爱瓜影视.py",
             "searchable": 1,
@@ -1905,7 +2035,7 @@
         },
         {
             "key": "爱看短剧",
-            "name": "🛣️┃爱看短剧",
+            "name": "🗽┃爱看短剧",
             "type": 3,
             "api": "./py/爱看短剧.py",
             "searchable": 1,
@@ -1915,7 +2045,7 @@
         },
         {
             "key": "猎手影视",
-            "name": "🛤️┃猎手影视",
+            "name": "🗼┃猎手影视",
             "type": 3,
             "api": "./py/猎手影视.py",
             "searchable": 1,
@@ -1925,7 +2055,7 @@
         },
         {
             "key": "瓜子",
-            "name": "✈️┃瓜子",
+            "name": "🏰┃瓜子",
             "type": 3,
             "api": "./py/瓜子.py",
             "searchable": 1,
@@ -1935,7 +2065,7 @@
         },
         {
             "key": "甜圈短剧",
-            "name": "🛩️┃甜圈短剧",
+            "name": "🏯┃甜圈短剧",
             "type": 3,
             "api": "./py/甜圈短剧.py",
             "searchable": 1,
@@ -1945,7 +2075,7 @@
         },
         {
             "key": "电影云集",
-            "name": "🚁┃电影云集",
+            "name": "🌋┃电影云集",
             "type": 3,
             "api": "./py/电影云集.py",
             "searchable": 1,
@@ -1955,7 +2085,7 @@
         },
         {
             "key": "电影云集[盘]",
-            "name": "🚀┃电影云集[盘]",
+            "name": "🗻┃电影云集[盘]",
             "type": 3,
             "api": "./py/电影云集[盘].py",
             "searchable": 1,
@@ -1965,7 +2095,7 @@
         },
         {
             "key": "电影猎手",
-            "name": "🛸┃电影猎手",
+            "name": "🏕️┃电影猎手",
             "type": 3,
             "api": "./py/电影猎手.py",
             "searchable": 1,
@@ -1975,7 +2105,7 @@
         },
         {
             "key": "界影视",
-            "name": "⛵┃界影视",
+            "name": "🏞️┃界影视",
             "type": 3,
             "api": "./py/界影视.py",
             "searchable": 1,
@@ -1985,7 +2115,7 @@
         },
         {
             "key": "皮皮虾",
-            "name": "🚢┃皮皮虾",
+            "name": "🏜️┃皮皮虾",
             "type": 3,
             "api": "./py/皮皮虾.py",
             "searchable": 1,
@@ -1995,7 +2125,7 @@
         },
         {
             "key": "盘友圈",
-            "name": "🛳️┃盘友圈",
+            "name": "🏝️┃盘友圈",
             "type": 3,
             "api": "./py/盘友圈.py",
             "searchable": 1,
@@ -2005,7 +2135,7 @@
         },
         {
             "key": "禁片天堂",
-            "name": "⛴️┃禁片天堂",
+            "name": "🏖️┃禁片天堂",
             "type": 3,
             "api": "./py/禁片天堂.py",
             "searchable": 1,
@@ -2015,7 +2145,7 @@
         },
         {
             "key": "端木",
-            "name": "🚤┃端木",
+            "name": "🏟️┃端木",
             "type": 3,
             "api": "./py/端木.py",
             "searchable": 1,
@@ -2025,7 +2155,7 @@
         },
         {
             "key": "粤漫",
-            "name": "🛥️┃粤漫",
+            "name": "🏛️┃粤漫",
             "type": 3,
             "api": "./py/粤漫.py",
             "searchable": 1,
@@ -2035,7 +2165,7 @@
         },
         {
             "key": "绝对影视",
-            "name": "🗽┃绝对影视",
+            "name": "🏗️┃绝对影视",
             "type": 3,
             "api": "./py/绝对影视.py",
             "searchable": 1,
@@ -2045,7 +2175,7 @@
         },
         {
             "key": "网易云音乐",
-            "name": "🗼┃网易云音乐",
+            "name": "😡┃网易云音乐",
             "type": 3,
             "api": "./py/网易云音乐.py",
             "searchable": 1,
@@ -2055,7 +2185,7 @@
         },
         {
             "key": "美帕APP",
-            "name": "🏰┃美帕APP",
+            "name": "😈┃美帕APP",
             "type": 3,
             "api": "./py/美帕APP.py",
             "searchable": 1,
@@ -2064,8 +2194,18 @@
             "changeable": 0
         },
         {
+            "key": "聚影网盘",
+            "name": "👿┃聚影网盘",
+            "type": 3,
+            "api": "./py/聚影网盘.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "肉视频",
-            "name": "🏯┃肉视频",
+            "name": "👹┃肉视频",
             "type": 3,
             "api": "./py/肉视频.py",
             "searchable": 1,
@@ -2075,7 +2215,7 @@
         },
         {
             "key": "色播聚合",
-            "name": "🌋┃色播聚合",
+            "name": "👺┃色播聚合",
             "type": 3,
             "api": "./py/色播聚合.py",
             "searchable": 1,
@@ -2085,7 +2225,7 @@
         },
         {
             "key": "芒果TV",
-            "name": "🗻┃芒果TV",
+            "name": "💀┃芒果TV",
             "type": 3,
             "api": "./py/芒果TV.py",
             "searchable": 1,
@@ -2095,7 +2235,7 @@
         },
         {
             "key": "若惜追剧APP",
-            "name": "🏕️┃若惜追剧APP",
+            "name": "☠️┃若惜追剧APP",
             "type": 3,
             "api": "./py/若惜追剧APP.py",
             "searchable": 1,
@@ -2105,7 +2245,7 @@
         },
         {
             "key": "茶杯狐影视",
-            "name": "🏞️┃茶杯狐影视",
+            "name": "👻┃茶杯狐影视",
             "type": 3,
             "api": "./py/茶杯狐影视.py",
             "searchable": 1,
@@ -2115,7 +2255,7 @@
         },
         {
             "key": "荐片",
-            "name": "🏜️┃荐片",
+            "name": "👽┃荐片",
             "type": 3,
             "api": "./py/荐片.py",
             "searchable": 1,
@@ -2124,8 +2264,18 @@
             "changeable": 0
         },
         {
+            "key": "莫小影",
+            "name": "👾┃莫小影",
+            "type": 3,
+            "api": "./py/莫小影.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "葡萄5区",
-            "name": "🏝️┃葡萄5区",
+            "name": "🤖┃葡萄5区",
             "type": 3,
             "api": "./py/葡萄5区.py",
             "searchable": 1,
@@ -2134,8 +2284,18 @@
             "changeable": 0
         },
         {
+            "key": "观影",
+            "name": "👀┃观影",
+            "type": 3,
+            "api": "./py/观影.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "视觉",
-            "name": "🏖️┃视觉",
+            "name": "👁️┃视觉",
             "type": 3,
             "api": "./py/视觉.py",
             "searchable": 1,
@@ -2145,7 +2305,7 @@
         },
         {
             "key": "賤",
-            "name": "🏟️┃賤",
+            "name": "👅┃賤",
             "type": 3,
             "api": "./py/賤.py",
             "searchable": 1,
@@ -2155,7 +2315,7 @@
         },
         {
             "key": "边缘影视",
-            "name": "🏛️┃边缘影视",
+            "name": "👄┃边缘影视",
             "type": 3,
             "api": "./py/边缘影视.py",
             "searchable": 1,
@@ -2165,7 +2325,7 @@
         },
         {
             "key": "达达龟影院",
-            "name": "🏗️┃达达龟影院",
+            "name": "🧑┃达达龟影院",
             "type": 3,
             "api": "./py/达达龟影院.py",
             "searchable": 1,
@@ -2175,7 +2335,7 @@
         },
         {
             "key": "采集合集",
-            "name": "😡┃采集合集",
+            "name": "👦┃采集合集",
             "type": 3,
             "api": "./py/采集合集.py",
             "searchable": 1,
@@ -2184,8 +2344,18 @@
             "changeable": 0
         },
         {
+            "key": "采集聚合成人",
+            "name": "👧┃采集聚合成人",
+            "type": 3,
+            "api": "./py/采集聚合成人.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "金牌",
-            "name": "😈┃金牌",
+            "name": "👨┃金牌",
             "type": 3,
             "api": "./py/金牌.py",
             "searchable": 1,
@@ -2195,7 +2365,7 @@
         },
         {
             "key": "金牌域名",
-            "name": "👿┃金牌域名",
+            "name": "👩┃金牌域名",
             "type": 3,
             "api": "./py/金牌域名.py",
             "searchable": 1,
@@ -2205,7 +2375,7 @@
         },
         {
             "key": "锦鲤短剧",
-            "name": "👹┃锦鲤短剧",
+            "name": "🧓┃锦鲤短剧",
             "type": 3,
             "api": "./py/锦鲤短剧.py",
             "searchable": 1,
@@ -2215,7 +2385,7 @@
         },
         {
             "key": "随机小姐姐",
-            "name": "👺┃随机小姐姐",
+            "name": "👴┃随机小姐姐",
             "type": 3,
             "api": "./py/随机小姐姐.py",
             "searchable": 1,
@@ -2225,7 +2395,7 @@
         },
         {
             "key": "零度影视",
-            "name": "💀┃零度影视",
+            "name": "👵┃零度影视",
             "type": 3,
             "api": "./py/零度影视.py",
             "searchable": 1,
@@ -2235,7 +2405,7 @@
         },
         {
             "key": "非凡资源.min",
-            "name": "☠️┃非凡资源.min",
+            "name": "🧔┃非凡资源.min",
             "type": 3,
             "api": "./py/非凡资源.min.py",
             "searchable": 1,
@@ -2245,7 +2415,7 @@
         },
         {
             "key": "韩剧看看",
-            "name": "👻┃韩剧看看",
+            "name": "👱‍♂️┃韩剧看看",
             "type": 3,
             "api": "./py/韩剧看看.py",
             "searchable": 1,
@@ -2255,7 +2425,7 @@
         },
         {
             "key": "韩国色情电影",
-            "name": "👽┃韩国色情电影",
+            "name": "👱‍♀️┃韩国色情电影",
             "type": 3,
             "api": "./py/韩国色情电影.py",
             "searchable": 1,
@@ -2264,8 +2434,18 @@
             "changeable": 0
         },
         {
+            "key": "韩小圈",
+            "name": "👨‍🦰┃韩小圈",
+            "type": 3,
+            "api": "./py/韩小圈.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "飞快",
-            "name": "👾┃飞快",
+            "name": "👩‍🦰┃飞快",
             "type": 3,
             "api": "./py/飞快.py",
             "searchable": 1,
@@ -2275,7 +2455,7 @@
         },
         {
             "key": "飞快TV",
-            "name": "🤖┃飞快TV",
+            "name": "👨‍🦱┃飞快TV",
             "type": 3,
             "api": "./py/飞快TV.py",
             "searchable": 1,
@@ -2285,7 +2465,7 @@
         },
         {
             "key": "飞快TV[推]",
-            "name": "👀┃飞快TV[推]",
+            "name": "👩‍🦱┃飞快TV[推]",
             "type": 3,
             "api": "./py/飞快TV[推].py",
             "searchable": 1,
@@ -2295,7 +2475,7 @@
         },
         {
             "key": "飞快_pan",
-            "name": "👁️┃飞快_pan",
+            "name": "🤬┃飞快_pan",
             "type": 3,
             "api": "./py/飞快_pan.py",
             "searchable": 1,
@@ -2305,7 +2485,7 @@
         },
         {
             "key": "饭团影视",
-            "name": "👅┃饭团影视",
+            "name": "❤️┃饭团影视",
             "type": 3,
             "api": "./py/饭团影视.py",
             "searchable": 1,
@@ -2315,7 +2495,7 @@
         },
         {
             "key": "香蕉",
-            "name": "👄┃香蕉",
+            "name": "🧡┃香蕉",
             "type": 3,
             "api": "./py/香蕉.py",
             "searchable": 1,
@@ -2325,7 +2505,7 @@
         },
         {
             "key": "香蕉视频",
-            "name": "🧑┃香蕉视频",
+            "name": "💛┃香蕉视频",
             "type": 3,
             "api": "./py/香蕉视频.py",
             "searchable": 1,
@@ -2335,7 +2515,7 @@
         },
         {
             "key": "骚火影视",
-            "name": "👦┃骚火影视",
+            "name": "💚┃骚火影视",
             "type": 3,
             "api": "./py/骚火影视.py",
             "searchable": 1,
@@ -2345,7 +2525,7 @@
         },
         {
             "key": "骚火电影",
-            "name": "👧┃骚火电影",
+            "name": "💙┃骚火电影",
             "type": 3,
             "api": "./py/骚火电影.py",
             "searchable": 1,
@@ -2355,7 +2535,7 @@
         },
         {
             "key": "高清电影",
-            "name": "👨┃高清电影",
+            "name": "💜┃高清电影",
             "type": 3,
             "api": "./py/高清电影.py",
             "searchable": 1,
@@ -2364,8 +2544,18 @@
             "changeable": 0
         },
         {
+            "key": "麒麟影视",
+            "name": "🤎┃麒麟影视",
+            "type": 3,
+            "api": "./py/麒麟影视.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
             "key": "麦田",
-            "name": "👩┃麦田",
+            "name": "🖤┃麦田",
             "type": 3,
             "api": "./py/麦田.py",
             "searchable": 1,
@@ -2375,7 +2565,7 @@
         },
         {
             "key": "麦田影院",
-            "name": "🧓┃麦田影院",
+            "name": "🤍┃麦田影院",
             "type": 3,
             "api": "./py/麦田影院.py",
             "searchable": 1,
@@ -2385,7 +2575,7 @@
         },
         {
             "key": "黄色仓库",
-            "name": "👴┃黄色仓库",
+            "name": "💔┃黄色仓库",
             "type": 3,
             "api": "./py/黄色仓库.py",
             "searchable": 1,
@@ -2395,7 +2585,7 @@
         },
         {
             "key": "黑料",
-            "name": "👵┃黑料",
+            "name": "❣️┃黑料",
             "type": 3,
             "api": "./py/黑料.py",
             "searchable": 1,
@@ -2405,7 +2595,7 @@
         },
         {
             "key": "黑料不打样",
-            "name": "🧔┃黑料不打样",
+            "name": "💕┃黑料不打样",
             "type": 3,
             "api": "./py/黑料不打样.py",
             "searchable": 1,
@@ -2415,9 +2605,19 @@
         },
         {
             "key": "黑料弹幕版",
-            "name": "👱‍♂️┃黑料弹幕版",
+            "name": "💞┃黑料弹幕版",
             "type": 3,
             "api": "./py/黑料弹幕版.py",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "changeable": 0
+        },
+        {
+            "key": "🌿榴😍区",
+            "name": "💓┃🌿榴😍区",
+            "type": 3,
+            "api": "./py/🌿榴😍区.py",
             "searchable": 1,
             "quickSearch": 0,
             "filterable": 0,
