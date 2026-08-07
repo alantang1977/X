@@ -58,6 +58,7 @@ http://摸鱼儿.cc
 
 https://9280.kstore.vip/newwex.json 王二小放牛娃
 
+https://cnb.cool/fish2035/xs/-/git/raw/main/api.json  潇洒接口
 
 # 🏂影視TV🏄🏻 
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
