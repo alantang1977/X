@@ -23,7 +23,7 @@
             "key": "直播转点播V9",
             "name": "📡┃直播┃电视V9",
             "type": 3,
-            "api": "./live/live2vod@v9.py",
+            "api": "./live/live2vod@v4.py",
             "searchable": 1,
             "quickSearch": 1,
             "filterable": 1,
