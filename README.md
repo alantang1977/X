@@ -60,6 +60,8 @@ https://9280.kstore.vip/newwex.json 王二小放牛娃
 
 https://cnb.cool/fish2035/xs/-/git/raw/main/api.json  潇洒接口
 
+http://www.英格里希嗷呜.top/tv 嗷呜
+
 # 🏂影視TV🏄🏻 
 ![tang](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Welcome.png)
 
