@@ -46,7 +46,7 @@
 "config_file": "./live/live_user_v15.json",
 "分类显示": {"置顶": ["裤佬[M]","央视频[P]"],"静态": ["央视","港台","卫视"],"后置": ["Jack[M]","油管[P]"]
 },
-"分类别名": {"油管[P]": "YTB[P]","Jack[M]": "杰克[M]"},
+"分类别名": {"油管[P]": "YTB[P]","Jack[M]": "杰克[M]"}},
 
 {"key":"MDrive","name":"🗂我的云盘┃我配置","type":3,"api":"csp_MyDriveGuard","changeable":0,"indexs":0,"searchable":1,"style":{"type":"oval"},"ext":{"Cloud-drive":"tvfan/Cloud-drive.txt"}},
 {"key":"YGP","name":"🚀叨观荐影┃预告片","type":3,"api":"csp_YGPGuard","searchable":0,"quickSearch":0,"changeable":0},
