@@ -13,13 +13,13 @@
     "key": "直播转点播[全功能]",
     "name": "📡┃直播┃电视[全功能]",
     "type": 3,
-    "api": "./live2vod@v18.py",
+    "api": "./live/live2vod@v18.py",
     "searchable": 1,
     "quickSearch": 1,
     "filterable": 1,
     "style": { "type": "list", "ratio": 1.88 },
     "ext": {
-      "config_file": "./live_user_v18.json",
+      "config_file": "./live/live_user_v18.json",
       "过滤规则|开启": {
         "忽略": [
           { "接口": "Jack[M]", "分类": "" },
@@ -37,19 +37,10 @@
         "静态": ["央视特频|卫视特频|港台特频"],
         "后置": ["易发[T]<别名>易发直播|油管[P]<别名>油管直播"]
       },
-      "lives": ["./feimaolive.json"]
-    }
-  },
-  {
-    "key": "直播转点播[极简]",
-    "name": "📡┃直播┃电视[极简]",
-    "type": 3,
-    "api": "./live/live2vod@v18.py",
-    "ext": {
-      "config_file": "./live/live_user_v18.json",
       "lives": ["./live/feimaolive.json"]
     }
   },
+  
 	
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
