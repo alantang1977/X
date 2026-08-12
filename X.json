@@ -8,6 +8,16 @@
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"直播转点播","name":"📡┆直播┆电视","type":3,"api":"./live/live2vod@v15.py","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"list","ratio":1.88},"ext":{"jar":"./lib/pg.jar","config_file":"./live/live_user_v15.json","分类显示":{"置顶":["裤佬[M]","央视频[P]"],"静态":["央视","港台","卫视"],"后置":["Jack[M]","油管[P]"]},"分类别名":{"油管[P]":"YTB[P]","Jack[M]":"杰克[M]"},"lives":[{"name":"裤佬[M]","type":0,"url":"https://live.445569.xyz/live.m3u"},{"name":"Jack[M]","url":"https://php.946985.filegear-sg.me/jackTV.m3u","header":{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}},{"name":"易发[T]","type":1,"url":"https://gh-proxy.org/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt"},{"name":"央视频[P]","type":3,"api":"https://000.hfr1107.top/lz/py/live_ysp.py"},{"name":"油管[P]","type":3,"api":"https://000.hfr1107.top/lz/py/ytbzb.py","ext":{"代理":"http://127.0.0.1:2080"}}]}},
+
+{
+"key": "直播转点播[极简]",
+"name": "📡┃直播┃电视[极简]",
+"type": 3,
+"api": "./live/live2vod@v18.py",
+"ext": {
+"config_file": "./live/live_user_v18.json",
+"lives": ["./live/feimaolive.json"]}},
+	
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"七味","name": "🐼️┃七味┃影视","type": 3,"api": "./py/七味.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
