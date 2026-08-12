@@ -54,7 +54,7 @@
 "api": "./live/live2vod@v18.py",
 "ext": {
 "config_file": "./live/live_user_v18.json",
-"lives": ["./live/feimaolive.json"]}},
+"lives": ["./live/feimaolive.json"]},
 	
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
