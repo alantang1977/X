@@ -1,26 +1,32 @@
 [
-{"name": "🥨┃小云TV直播","url":"https://7337.kstore.space/twkj/tvzb.txt"},
-{"name": "🧧┃Aktv港·澳·台直播","url":"https://d.h6room.com/frjzb.txt"},
-{"name": "🐷┃tang直播","url":"http://47.120.41.246:8899/zb.txt"},
-{"name": "🍜┃iptv-org直播","url": "https://tv.xn--yhqu5zs87a.top/lives/IPv6.php"},
-{"name": "🍌┃yang-1989直播","url": "https://tv.iill.top/m3u/Gather"},
-{"name": "🐼┃kstore直播","url":"https://7337.kstore.space/twkj/tvzb.txt"},
-{"name": "🦸┃NEWTV直播","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/SCXSVIP/TV/main/live.txt"},
-{"name": "🌞┃日后港·澳·台直播","url":"http://rihou.cc:567/gggg.nzk"},  
-{"name": "🐤┃Guovin直播","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt"},
-{"name": "🐌┃chao直播","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/pg/refs/heads/main/live.txt"},
-//{"name": "🎂┃台湾全频道(VPN)","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/judy.txt"},
-{"name": "🐶┃秒播-港·澳·台","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/hkTVb.txt"},
-//{"name": "🎂┃港·澳·台·韩","url":"https://aktv.top/live.txt"},	
-{"name": "🥭┃kstore直播","url":"https://7337.kstore.space/twkj/tvzb.txt"},
-{"name": "🥎┃ibert-iptv直播","url":"http://api.v6x.wht.dgwht.top/text/863de13705ddfdc2/9aa228a41ac22ae6"},
-{"name": "⚕️┃粤Live","url":"http://box.1890222.xyz:8081/iptv/live.m3u"},
-{"name": "🎁┃恩山iptv直播","url":"http://vip.html-5.me/iptv.txt"},
-{"name": "🐰┃粤港澳","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"},
-{"name": "🐏┃肥羊","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/NAS肥羊.m3u"},
-{"name": "🍃┃清风","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/清风.m3u8"},
-{"name": "🔢┃Pixman","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/mytvsuper.m3u"},
-{"name": "🎏┃Pixman","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/tv.m3u"},
-{"name": "🍚┃suxuang","url":"https://daili.korice.eu.org/https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv6.m3u"}
-
+{
+"name": "裤佬[M]",
+"type": 0,
+"url": "https://live.445569.xyz/live.m3u"
+},
+{
+"name": "Jack[M]",
+"url": "https://php.946985.filegear-sg.me/jackTV.m3u",
+"header": {
+"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+},
+{
+"name": "易发[T]",
+"type": 1,
+"url": "https://gh-proxy.org/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt"
+},
+{
+"name": "央视频[P]",
+"type": 3,
+"api": "https://000.hfr1107.top/lz/py/live_ysp.py"
+},
+{
+"name": "油管[P]",
+"type": 3,
+"api": "https://000.hfr1107.top/lz/py/ytbzb.py",
+"ext": {
+"代理": "http://127.0.0.1:2080"
+}
+}
 ]
