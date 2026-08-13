@@ -1,28 +1,12 @@
 {
-    "启用日志": true,
+    "启用日志": false,
     "日志级别": "debug",
     "播放列表": false,
-    "下载目录": "/storage/emulated/0/123云盘/v2l/logs/",
-    
-"过滤规则|关闭": {
-"忽略": [
-{"接口": "","分类": ""},
-{"接口": [],"分类": []}
-],
-"保留": [
-{"接口": "","分类": []},
-{"接口": [],"分类": ""}
-],
-"全局_过滤词": ["地址|广告|购物|人间|人間|大愛|大爱|好消息|購|购|唯心|聚鲨"],
-"全局_保留词": []
-},
-"分类显示|关闭": {
-"置顶": ["裤佬[M]<别名>裤佬直播|央视频[P]<别名>央卫直播"],
-"静态": ["央视特频|卫视特频|港台特频"],
-"后置": ["易发[T]<别名>易发直播|油管[P]<别名>油管直播"]
-},
-    "epg_logo_url": "https://cdn.jsdmirror.com/gh/fanmingming/live@master/tv/{name}.png",
-    "epg_api_url": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+    "下载目录": "/storage/emulated/0/download/logs/",
+    "epg_logo_url1": "https://gb.hfr1107.top/https://raw.githubusercontent.com/sparkssssssssss/epg/main/logo/{name}.png",
+    "epg_logo_url": "https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/{name}.png",
+    "epg_api_url1": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
+    "epg_api_url": "https://epg.112114.eu.org/?ch={name}&date={date}",
     "vod_pic": "https://000.hfr1107.top/lives.jpg",
     "max_workers": 4,
     "connect_timeout": 5,
@@ -41,28 +25,28 @@
         "enable_traditional_convert": true
     },
     "epg_name_map": {
-        "CCTV1综合": "CCTV1",
-        "CCTV2财经": "CCTV2",
-        "CCTV3综艺": "CCTV3",
-        "CCTV4中文国际": "CCTV4",
-        "CCTV5体育": "CCTV5",
-        "CCTV5+体育赛事": "CCTV5+",
-        "CCTV6电影": "CCTV6",
-        "CCTV7国防军事": "CCTV7",
-        "CCTV8电视剧": "CCTV8",
-        "CCTV9纪录": "CCTV9",
-        "CCTV10科教": "CCTV10",
-        "CCTV11戏曲": "CCTV11",
-        "CCTV12社会与法": "CCTV12",
-        "CCTV13新闻": "CCTV13",
-        "CCTV14少儿": "CCTV14",
-        "CCTV15音乐": "CCTV15",
-        "CCTV16奥林匹克": "CCTV16",
-        "CCTV17农业农村": "CCTV17",
-        "CCTV4K超高清": "CCTV4K",
-        "CCTV8K超高清": "CCTV8K",
-        "CCTV4欧洲": "CCTV4",
-        "CCTV4美洲": "CCTV4",
+        "CCTV-1综合": "CCTV1",
+        "CCTV-2财经": "CCTV2",
+        "CCTV-3综艺": "CCTV3",
+        "CCTV-4中文国际": "CCTV4",
+        "CCTV-5体育": "CCTV5",
+        "CCTV-5+体育赛事": "CCTV5+",
+        "CCTV-6电影": "CCTV6",
+        "CCTV-7国防军事": "CCTV7",
+        "CCTV-8电视剧": "CCTV8",
+        "CCTV-9纪录": "CCTV9",
+        "CCTV-10科教": "CCTV10",
+        "CCTV-11戏曲": "CCTV11",
+        "CCTV-12社会与法": "CCTV12",
+        "CCTV-13新闻": "CCTV13",
+        "CCTV-14少儿": "CCTV14",
+        "CCTV-15音乐": "CCTV15",
+        "CCTV-16奥林匹克": "CCTV16",
+        "CCTV-17农业农村": "CCTV17",
+        "CCTV-4K超高清": "CCTV4K",
+        "CCTV-8K超高清": "CCTV8K",
+        "CCTV-4欧洲": "CCTV4",
+        "CCTV-4美洲": "CCTV4",
         "湖南卫视": "湖南卫视",
         "浙江卫视": "浙江卫视",
         "东方卫视": "东方卫视",
@@ -103,56 +87,111 @@
         "凤凰卫视电影台": "凤凰卫视电影台",
         "TVB翡翠台": "翡翠台",
         "TVB明珠台": "明珠台",
-        "无线新闻台": "无线新闻",
-        "东森新闻台": "东森新闻",
-        "中天新闻台": "中天新闻",
+        "无线新闻台": "无线新闻台",
+        "东森新闻台": "EBCNews",
+        "中天新闻台": "中天新闻台",
         "三立新闻台": "三立新闻",
         "TVBS新闻台": "TVBS新闻",
-        "民视新闻台": "民视新闻",
+        "民视新闻台": "民视新闻台",
         "台视新闻台": "台视新闻",
         "中视新闻台": "中视新闻",
         "华视新闻台": "华视新闻",
-        "公视新闻台": "公视新闻",
-        "年代新闻台": "年代新闻",
+        "公视新闻台": "公视",
+        "年代新闻台": "年代ERANewsHD",
         "纬来新闻台": "纬来新闻",
-        "非凡新闻台": "非凡新闻",
+        "非凡新闻台": "UniqueNews",
         "镜电视新闻台": "镜电视新闻",
         "寰宇新闻台": "寰宇新闻",
-        "Now TV": "Now新闻",
+        "Now TV": "NOW新闻台",
         "亚洲新闻台": "亚洲新闻",
-        "半岛新闻台": "半岛新闻"
+        "半岛新闻台": "半岛新闻",
+        "CCTV-世界地理": "世界地理",
+        "CCTV-央视台球": "央视台球",
+        "CCTV-女性时尚": "女性时尚",
+        "CCTV-怀旧剧场": "怀旧剧场",
+        "CCTV-第一剧场": "第一剧场",
+        "CCTV-风云足球": "风云足球",
+        "CCTV-风云剧场": "风云剧场",
+        "CCTV-风云音乐": "风云音乐",
+        "CCTV-高尔夫网球": "高尔夫网球",
+        "CCTV-电视指南": "电视指南",
+        "CCTV-中国交通": "中国交通",
+        "CCTV-兵器科技": "兵器科技",
+        "TVB J2": "J2",
+        "TVB Plus": "TVBPlus",
+        "ViuTV": "viutv",
+        "RTHK": "RTHK31",
+        "东森电影台": "EBCMovies",
+        "东森财经新闻台": "EBCFinancialNews",
+        "民视无线台": "民视",
+        "山东教育卫视": "山东教育",
+        "CGTN英语": "CGTN",
+        "NewTV惊悚悬疑": "NEWTV惊悚悬疑",
+        "NewTV动作电影": "NEWTV动作电影",
+        "NewTV家庭剧场": "NEWTV家庭剧场",
+        "NewTV精品纪录": "NEWTV精品纪录",
+        "NewTV精品体育": "NEWTV精品体育",
+        "NewTV精品大剧": "NEWTV精品大剧",
+        "NewTV军事评论": "NEWTV军事评论",
+        "NewTV中国功夫": "NEWTV中国功夫",
+        "NewTV金牌综艺": "NEWTV金牌综艺",
+        "NewTV炫舞未来": "NEWTV炫舞未来",
+        "NewTV明星大片": "NEWTV明星大片",
+        "NewTV欢乐剧场": "NEWTV欢乐剧场",
+        "NewTV潮妈辣婆": "NEWTV潮妈辣婆",
+        "NewTV爱情喜剧": "NEWTV爱情喜剧",
+        "NewTV农业致富": "NEWTV农业致富",
+        "NewTV超级体育": "NEWTV超级体育",
+        "NewTV超级电影": "NEWTV超级电影",
+        "NewTV超级电视剧": "NEWTV超级电视剧",
+        "NewTV东北热剧": "NEWTV东北热剧",
+        "NewTV古装剧场": "NEWTV古装剧场",
+        "NewTV海外剧场": "NEWTV海外剧场",
+        "NewTV军旅剧场": "NEWTV军旅剧场",
+        "NewTV武侠剧场": "NEWTV武侠剧场",
+        "NewTV戏曲": "NEWTV戏曲",
+        "SiTV新视觉": "新视觉",
+        "SiTV劲爆体育": "劲爆体育",
+        "SiTV魅力足球": "魅力足球",
+        "SiTV生活时尚": "生活时尚",
+        "SiTV全纪实": "全纪实",
+        "SiTV都市剧场": "都市剧场",
+        "SiTV东方财经": "东方财经",
+        "SiTV动漫秀场": "动漫秀场",
+        "SiTV游戏风云": "游戏风云"
     },
     "分类顺序": [
-        "央视特频",
-        "卫视特频",
-        "港台特频"
+        "央视节目",
+        "卫视节目",
+        "港台特辑",
+        "数字节目"
     ],
     "categories": [
         {
-            "name": "央视特频",
+            "name": "央视节目",
             "channels": [
-                "CCTV1综合",
-                "CCTV2财经",
-                "CCTV3综艺",
-                "CCTV4中文国际",
-                "CCTV5体育",
-                "CCTV5+体育赛事",
-                "CCTV6电影",
-                "CCTV7国防军事",
-                "CCTV8电视剧",
-                "CCTV9纪录",
-                "CCTV10科教",
-                "CCTV11戏曲",
-                "CCTV12社会与法",
-                "CCTV13新闻",
-                "CCTV14少儿",
-                "CCTV15音乐",
-                "CCTV16奥林匹克",
-                "CCTV17农业农村",
-                "CCTV4K超高清",
-                "CCTV8K超高清",
-                "CCTV4欧洲",
-                "CCTV4美洲",
+                "CCTV-1综合",
+                "CCTV-2财经",
+                "CCTV-3综艺",
+                "CCTV-4中文国际",
+                "CCTV-5体育",
+                "CCTV-5+体育赛事",
+                "CCTV-6电影",
+                "CCTV-7国防军事",
+                "CCTV-8电视剧",
+                "CCTV-9纪录",
+                "CCTV-10科教",
+                "CCTV-11戏曲",
+                "CCTV-12社会与法",
+                "CCTV-13新闻",
+                "CCTV-14少儿",
+                "CCTV-15音乐",
+                "CCTV-16奥林匹克",
+                "CCTV-17农业农村",
+                "CCTV-4K超高清",
+                "CCTV-8K超高清",
+                "CCTV-4欧洲",
+                "CCTV-4美洲",
                 "CCTV世界地理",
                 "CCTV央视台球",
                 "CCTV女性时尚",
@@ -169,7 +208,7 @@
             ]
         },
         {
-            "name": "卫视特频",
+            "name": "卫视节目",
             "channels": [
                 "湖南卫视",
                 "浙江卫视",
@@ -214,23 +253,23 @@
             ]
         },
         {
-            "name": "少儿",
+            "name": "少儿节目",
             "channels": [
                 "卡酷少儿",
                 "金鹰卡通",
                 "炫动卡通",
                 "优漫卡通",
-                "CCTV14少儿",
+                "CCTV-14少儿",
                 "嘉佳卡通",
                 "哈哈炫动",
                 "少儿动漫"
             ]
         },
         {
-            "name": "体育",
+            "name": "体育专辑",
             "channels": [
-                "CCTV5体育",
-                "CCTV5+体育赛事",
+                "CCTV-5体育",
+                "CCTV-5+体育赛事",
                 "CCTV风云足球",
                 "CCTV高尔夫网球",
                 "劲爆体育",
@@ -243,9 +282,9 @@
             ]
         },
         {
-            "name": "电影",
+            "name": "电影专辑",
             "channels": [
-                "CCTV6电影",
+                "CCTV-6电影",
                 "CHC家庭影院",
                 "CHC动作电影",
                 "CHC高清电影",
@@ -259,9 +298,9 @@
             ]
         },
         {
-            "name": "新闻",
+            "name": "新闻专辑",
             "channels": [
-                "CCTV13新闻",
+                "CCTV-13新闻",
                 "凤凰卫视资讯台",
                 "凤凰卫视中文台",
                 "TVBS新闻台",
@@ -287,7 +326,7 @@
             ]
         },
         {
-            "name": "港台特频",
+            "name": "港台特辑",
             "channels": [
                 "凤凰卫视中文台",
                 "凤凰卫视资讯台",
@@ -330,7 +369,7 @@
             ]
         },
         {
-            "name": "CGTN",
+            "name": "CGTN节目",
             "channels": [
                 "CGTN",
                 "CGTN英语",
@@ -342,7 +381,7 @@
             ]
         },
         {
-            "name": "数字",
+            "name": "数字节目",
             "channels": [
                 "NewTV惊悚悬疑",
                 "NewTV动作电影",
@@ -544,28 +583,28 @@
         "十七": 17
     },
     "builtin_map": {
-        "CCTV1": "CCTV1综合",
-        "CCTV2": "CCTV2财经",
-        "CCTV3": "CCTV3综艺",
-        "CCTV4": "CCTV4中文国际",
-        "CCTV5": "CCTV5体育",
-        "CCTV5+": "CCTV5+体育赛事",
-        "CCTV6": "CCTV6电影",
-        "CCTV7": "CCTV7国防军事",
-        "CCTV8": "CCTV8电视剧",
-        "CCTV9": "CCTV9纪录",
-        "CCTV10": "CCTV10科教",
-        "CCTV11": "CCTV11戏曲",
-        "CCTV12": "CCTV12社会与法",
-        "CCTV13": "CCTV13新闻",
-        "CCTV14": "CCTV14少儿",
-        "CCTV15": "CCTV15音乐",
-        "CCTV16": "CCTV16奥林匹克",
-        "CCTV17": "CCTV17农业农村",
-        "CCTV4K": "CCTV4K超高清",
-        "CCTV8K": "CCTV8K超高清",
-        "CCTV4欧洲": "CCTV4欧洲",
-        "CCTV4美洲": "CCTV4美洲",
+        "CCTV1": "CCTV-1综合",
+        "CCTV2": "CCTV-2财经",
+        "CCTV3": "CCTV-3综艺",
+        "CCTV4": "CCTV-4中文国际",
+        "CCTV5": "CCTV-5体育",
+        "CCTV5+": "CCTV-5+体育赛事",
+        "CCTV6": "CCTV-6电影",
+        "CCTV7": "CCTV-7国防军事",
+        "CCTV8": "CCTV-8电视剧",
+        "CCTV9": "CCTV-9纪录",
+        "CCTV10": "CCTV-10科教",
+        "CCTV11": "CCTV-11戏曲",
+        "CCTV12": "CCTV-12社会与法",
+        "CCTV13": "CCTV-13新闻",
+        "CCTV14": "CCTV-14少儿",
+        "CCTV15": "CCTV-15音乐",
+        "CCTV16": "CCTV-16奥林匹克",
+        "CCTV17": "CCTV-17农业农村",
+        "CCTV4K": "CCTV-4K超高清",
+        "CCTV8K": "CCTV-8K超高清",
+        "CCTV4欧洲": "CCTV-4欧洲",
+        "CCTV4美洲": "CCTV-4美洲",
         "CGTN": "CGTN",
         "CGTN英语": "CGTN英语",
         "CGTN纪录": "CGTN纪录",
@@ -722,7 +761,7 @@
         "TVBS新闻台": "TVBS新闻台"
     },
     "builtin_aliases": {
-        "CCTV1综合": [
+        "CCTV-1综合": [
             "CCTV-1",
             "CCTV1",
             "CCTV1HD",
@@ -766,7 +805,7 @@
             "央视1",
             "中央1"
         ],
-        "CCTV2财经": [
+        "CCTV-2财经": [
             "CCTV-2",
             "CCTV2",
             "CCTV2HD",
@@ -791,7 +830,7 @@
             "央视2",
             "中央2"
         ],
-        "CCTV3综艺": [
+        "CCTV-3综艺": [
             "CCTV-3",
             "CCTV3",
             "CCTV3HD",
@@ -809,7 +848,7 @@
             "央视3",
             "中央3"
         ],
-        "CCTV4中文国际": [
+        "CCTV-4中文国际": [
             "CCTV-4",
             "CCTV4",
             "CCTV4HD",
@@ -835,7 +874,7 @@
             "央视4",
             "中央4"
         ],
-        "CCTV4欧洲": [
+        "CCTV-4欧洲": [
             "CCTV-4欧洲",
             "CCTV4欧",
             "央视4欧洲",
@@ -844,7 +883,7 @@
             "CCTV4 欧洲",
             "CCTV-4 欧洲"
         ],
-        "CCTV4美洲": [
+        "CCTV-4美洲": [
             "CCTV-4美洲",
             "CCTV4美",
             "央视4美洲",
@@ -853,7 +892,7 @@
             "CCTV4 美洲",
             "CCTV-4 美洲"
         ],
-        "CCTV5体育": [
+        "CCTV-5体育": [
             "CCTV-5",
             "CCTV5",
             "CCTV5HD",
@@ -877,7 +916,7 @@
             "央视5",
             "中央5"
         ],
-        "CCTV5+体育赛事": [
+        "CCTV-5+体育赛事": [
             "CCTV-5+",
             "CCTV5+",
             "CCTV5+HD",
@@ -900,7 +939,7 @@
             "CCTV_5+",
             "CCTV 5+"
         ],
-        "CCTV6电影": [
+        "CCTV-6电影": [
             "CCTV-6",
             "CCTV6",
             "CCTV6HD",
@@ -921,7 +960,7 @@
             "央视6",
             "中央6"
         ],
-        "CCTV7国防军事": [
+        "CCTV-7国防军事": [
             "CCTV-7",
             "CCTV7",
             "CCTV7HD",
@@ -947,7 +986,7 @@
             "央视7",
             "中央7"
         ],
-        "CCTV8电视剧": [
+        "CCTV-8电视剧": [
             "CCTV-8",
             "CCTV8",
             "CCTV8HD",
@@ -967,7 +1006,7 @@
             "央视8",
             "中央8"
         ],
-        "CCTV9纪录": [
+        "CCTV-9纪录": [
             "CCTV-9",
             "CCTV9",
             "CCTV9HD",
@@ -987,7 +1026,7 @@
             "央视9",
             "中央9"
         ],
-        "CCTV10科教": [
+        "CCTV-10科教": [
             "CCTV-10",
             "CCTV10",
             "CCTV10HD",
@@ -1007,7 +1046,7 @@
             "央视10",
             "中央10"
         ],
-        "CCTV11戏曲": [
+        "CCTV-11戏曲": [
             "CCTV-11",
             "CCTV11",
             "CCTV11HD",
@@ -1027,7 +1066,7 @@
             "央视11",
             "中央11"
         ],
-        "CCTV12社会与法": [
+        "CCTV-12社会与法": [
             "CCTV-12",
             "CCTV12",
             "CCTV12HD",
@@ -1048,7 +1087,7 @@
             "央视12",
             "中央12"
         ],
-        "CCTV13新闻": [
+        "CCTV-13新闻": [
             "CCTV-13",
             "CCTV13",
             "CCTV13HD",
@@ -1073,7 +1112,7 @@
             "CCTV 13",
             "中央13"
         ],
-        "CCTV14少儿": [
+        "CCTV-14少儿": [
             "CCTV-14",
             "CCTV14",
             "CCTV14HD",
@@ -1098,7 +1137,7 @@
             "CCTV 14",
             "中央14"
         ],
-        "CCTV15音乐": [
+        "CCTV-15音乐": [
             "CCTV-15",
             "CCTV15",
             "CCTV15HD",
@@ -1119,7 +1158,7 @@
             "CCTV 15",
             "中央15"
         ],
-        "CCTV16奥林匹克": [
+        "CCTV-16奥林匹克": [
             "CCTV-16",
             "CCTV16",
             "CCTV16HD",
@@ -1146,7 +1185,7 @@
             "央视16",
             "中央16"
         ],
-        "CCTV17农业农村": [
+        "CCTV-17农业农村": [
             "CCTV-17",
             "CCTV17",
             "CCTV17HD",
@@ -1173,7 +1212,7 @@
             "CCTV 17",
             "中央17"
         ],
-        "CCTV4K超高清": [
+        "CCTV-4K超高清": [
             "CCTV-4K",
             "CCTV4K",
             "CCTV4K频道",
@@ -1189,7 +1228,7 @@
             "CCTV_4K",
             "CCTV 4K"
         ],
-        "CCTV8K超高清": [
+        "CCTV-8K超高清": [
             "CCTV-8K",
             "CCTV8K",
             "CCTV8K频道",
@@ -2069,7 +2108,12 @@
             "TVBS新闻（联通）",
             "TVBS新闻（移动）",
             "TVBS新闻 IPTV",
-            "TVBS選新闻"
+            "TVBS選新闻",
+            "TVBS NEWS",
+            "TVBS-NEWS",
+            "TVBS NEWS HD",
+            "TVBS新闻台 HD",
+            "TVBS News Channel"
         ],
         "壹新闻": [
             "壹电视新闻",
@@ -2081,7 +2125,10 @@
             "壹新闻（移动）",
             "壹新闻 IPTV",
             "NextTV",
-            "壹电视"
+            "壹电视",
+            "Next-TV-News",
+            "壹新闻 HD",
+            "Next TV"
         ],
         "镜电视新闻台": [
             "镜电视新闻",
@@ -2092,7 +2139,10 @@
             "镜电视新闻（电信）",
             "镜电视新闻（联通）",
             "镜电视新闻（移动）",
-            "镜电视新闻 IPTV"
+            "镜电视新闻 IPTV",
+            "Mirror-News",
+            "镜电视新闻台 HD",
+            "Mirror TV"
         ],
         "TaiwanPlus": [
             "Taiwan Plus",
@@ -2157,7 +2207,10 @@
             "J2（电信）",
             "J2 IPTV",
             "無線J2",
-            "無綫J2"
+            "無綫J2",
+            "J2台",
+            "J2 HD",
+            "TVBJ2"
         ],
         "TVB Plus": [
             "TVBPlus",
@@ -2165,7 +2218,10 @@
             "Plus高清",
             "PlusHD",
             "Plus（电信）",
-            "Plus IPTV"
+            "Plus IPTV",
+            "Plus HD",
+            "TVB+",
+            "TVB PLUS"
         ],
         "无线新闻台": [
             "无线新闻",
@@ -2181,14 +2237,18 @@
             "無綫新聞台",
             "無綫新聞",
             "TVB 新闻",
-            "无线新闻 HD"
+            "无线新闻 HD",
+            "TVB-News",
+            "TVB News Channel"
         ],
         "ViuTV": [
             "Viu",
             "ViuTV HD",
             "Viu高清",
             "Viu（电信）",
-            "Viu IPTV"
+            "Viu IPTV",
+            "viutv",
+            "ViuTV6"
         ],
         "中天综合台": [
             "中天综合",
@@ -2196,7 +2256,11 @@
             "中天综合HD",
             "中天综合高清",
             "中天综合（电信）",
-            "中天综合 IPTV"
+            "中天综合 IPTV",
+            "CTi-Variety",
+            "中天综合台 HD",
+            "CTi 综合",
+            "CTiVariety"
         ],
         "中天新闻台": [
             "中天新闻",
@@ -2209,7 +2273,10 @@
             "中天新闻（联通）",
             "中天新闻（移动）",
             "中天新闻 IPTV",
-            "CTi 新闻"
+            "CTi 新闻",
+            "CTi-News",
+            "CTi News HD",
+            "CTINews"
         ],
         "东森新闻台": [
             "东森新闻",
@@ -2222,7 +2289,11 @@
             "东森新闻（联通）",
             "东森新闻（移动）",
             "东森新闻 IPTV",
-            "EBC 新闻"
+            "EBC 新闻",
+            "EBC-News",
+            "EBC News HD",
+            "EBCNews",
+            "EBC NEWS"
         ],
         "东森电影台": [
             "东森电影",
@@ -2230,7 +2301,11 @@
             "东森电影HD",
             "东森电影高清",
             "东森电影（电信）",
-            "东森电影 IPTV"
+            "东森电影 IPTV",
+            "EBC-Movies",
+            "东森电影台 HD",
+            "EBC 电影",
+            "EBCMovies"
         ],
         "东森财经新闻台": [
             "东森财经",
@@ -2242,7 +2317,11 @@
             "东森财经（联通）",
             "东森财经（移动）",
             "东森财经 IPTV",
-            "东森财经台"
+            "东森财经台",
+            "EBC-Financial",
+            "东森财经新闻台 HD",
+            "EBC 财经",
+            "EBCFinancialNews"
         ],
         "三立台湾台": [
             "三立台湾",
@@ -2250,7 +2329,11 @@
             "三立台湾HD",
             "三立台湾高清",
             "三立台湾（电信）",
-            "三立台湾 IPTV"
+            "三立台湾 IPTV",
+            "SET-Taiwan",
+            "三立台湾台 HD",
+            "SET 台湾",
+            "SETTaiwan"
         ],
         "三立都会台": [
             "三立都会",
@@ -2258,7 +2341,11 @@
             "三立都会HD",
             "三立都会高清",
             "三立都会（电信）",
-            "三立都会 IPTV"
+            "三立都会 IPTV",
+            "SET-Metro",
+            "三立都会台 HD",
+            "SET 都会",
+            "SETMetro"
         ],
         "三立新闻台": [
             "三立新闻",
@@ -2272,7 +2359,11 @@
             "三立新闻（移动）",
             "三立新闻 IPTV",
             "SET 新闻",
-            "三立 iNEWS"
+            "三立 iNEWS",
+            "SET-News",
+            "SET News HD",
+            "iNEWS",
+            "SETNews"
         ],
         "民视无线台": [
             "民视",
@@ -2280,7 +2371,10 @@
             "民视HD",
             "民视高清",
             "民视（电信）",
-            "民视 IPTV"
+            "民视 IPTV",
+            "民视 HD",
+            "民视第一台",
+            "民视台湾台"
         ],
         "台视": [
             "台视HD",
@@ -2330,7 +2424,11 @@
             "年代新闻（联通）",
             "年代新闻（移动）",
             "年代新闻 IPTV",
-            "Neway News"
+            "Neway News",
+            "Era News",
+            "Era-News",
+            "年代ERANewsHD",
+            "年代 MUCH"
         ],
         "纬来新闻台": [
             "纬来新闻",
@@ -2343,7 +2441,9 @@
             "纬来新闻（联通）",
             "纬来新闻（移动）",
             "纬来新闻 IPTV",
-            "VideoLand"
+            "VideoLand",
+            "Videoland News",
+            "Videoland-News"
         ],
         "非凡新闻台": [
             "非凡新闻",
@@ -2356,7 +2456,10 @@
             "非凡新闻（移动）",
             "非凡新闻 IPTV",
             "Next TV",
-            "非凡电视"
+            "非凡电视",
+            "Unique News",
+            "Unique-News",
+            "UniqueNews"
         ],
         "寰宇新闻台": [
             "寰宇新闻",
@@ -2367,7 +2470,9 @@
             "寰宇新闻（电信）",
             "寰宇新闻（联通）",
             "寰宇新闻（移动）",
-            "寰宇新闻 IPTV"
+            "寰宇新闻 IPTV",
+            "Global News",
+            "Global-News"
         ],
         "寰宇新闻二台": [
             "寰宇新闻二",
@@ -2379,7 +2484,8 @@
             "寰宇新闻二（电信）",
             "寰宇新闻二（联通）",
             "寰宇新闻二（移动）",
-            "寰宇新闻二 IPTV"
+            "寰宇新闻二 IPTV",
+            "Global News 2"
         ],
         "寰宇财经台": [
             "寰宇财经",
@@ -2391,7 +2497,8 @@
             "寰宇财经（电信）",
             "寰宇财经（联通）",
             "寰宇财经（移动）",
-            "寰宇财经 IPTV"
+            "寰宇财经 IPTV",
+            "Global Financial"
         ],
         "三立财经台": [
             "三立财经",
@@ -2416,7 +2523,11 @@
             "香港电台（联通）",
             "香港电台（移动）",
             "香港电台 IPTV",
-            "RTHK 港台"
+            "RTHK 港台",
+            "RTHK31",
+            "RTHK32",
+            "RTHK 31",
+            "RTHK 32"
         ],
         "Now TV": [
             "Now新闻",
@@ -2428,7 +2539,11 @@
             "Now新闻（电信）",
             "Now新闻（联通）",
             "Now新闻（移动）",
-            "Now新闻 IPTV"
+            "Now新闻 IPTV",
+            "Now 新闻",
+            "Now News HD",
+            "NOW新闻台",
+            "Now TV News"
         ],
         "倪珍播新闻台": [
             "倪珍播新闻",
@@ -2683,6 +2798,62 @@
             "求索动物",
             "华数 求索动物",
             "求索动物HD"
+        ],
+        "民视新闻台": [
+            "FTV News",
+            "FTV-News",
+            "民视新闻台 HD",
+            "民视新闻高清",
+            "民视新闻（电信）",
+            "民视新闻（联通）",
+            "民视新闻（移动）",
+            "民视新闻 IPTV",
+            "FTV 新闻",
+            "FTVNews"
+        ],
+        "台视新闻台": [
+            "TTV News",
+            "TTV-News",
+            "台视新闻台 HD",
+            "台视新闻高清",
+            "台视新闻（电信）",
+            "台视新闻（联通）",
+            "台视新闻（移动）",
+            "台视新闻 IPTV",
+            "TTV 新闻"
+        ],
+        "中视新闻台": [
+            "CTV News",
+            "CTV-News",
+            "中视新闻台 HD",
+            "中视新闻高清",
+            "中视新闻（电信）",
+            "中视新闻（联通）",
+            "中视新闻（移动）",
+            "中视新闻 IPTV",
+            "CTV 新闻"
+        ],
+        "华视新闻台": [
+            "CTS News",
+            "CTS-News",
+            "华视新闻台 HD",
+            "华视新闻高清",
+            "华视新闻（电信）",
+            "华视新闻（联通）",
+            "华视新闻（移动）",
+            "华视新闻 IPTV",
+            "CTS 新闻"
+        ],
+        "公视新闻台": [
+            "PTS News",
+            "PTS-News",
+            "公视新闻台 HD",
+            "公视新闻高清",
+            "公视新闻（电信）",
+            "公视新闻（联通）",
+            "公视新闻（移动）",
+            "公视新闻 IPTV",
+            "PTS 新闻"
         ]
     }
 }

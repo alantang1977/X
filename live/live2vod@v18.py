@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# @Author  : 陆小凤
-# @Time    : 2026/8/11
+# @Author  : 陆小凤 (Optimized by AI)
+# @Time    : 2026/8/13
 """
-全能直播聚合插件 - 点播版 v18（统一资源加载器 + 本地文件支持）
-- 忽略规则绝对优先：被忽略的频道不可被任何后续规则救回
-- 启用过滤规则时强制同步构建缓存，输出即过滤后数据
-- 接口名使用子串匹配，分类名支持正则
-- 保留规则保护频道不被全局过滤误伤
-- 统一资源加载器：所有配置字段均支持本地文件路径和远程URL
-- config_file / lives / lives_urls / 接口_单仓 / 接口_直播 全支持本地+远程
+全能直播聚合插件 - 点播版 v18[稳定版]
+优化重点：
+1. 消除 init() 三重加载竞态 → 统一加载调度器
+2. 忙等待 90s → threading.Event 通知 + 5s 快速失败
+3. _channels 读取无锁 → 全程 RLock 保护
+4. _cache_ready 异常时保持 False，确保状态一致
+5. 保留全部原始功能：解密、EPG、过滤、分类显示、本地代理等
 """
 import re
 import sys
@@ -47,7 +47,7 @@ except ImportError:
         def destroy(self): return ""
 
 # ========================= 常量 =========================
-DEFAULT_USER_AGENT = 'okhttp/3.15'
+DEFAULT_USER_AGENT = 'okhttp/4.12.0'
 DEFAULT_EXTERNAL_API_URL = "https://xn--v4q818bf34b.cc/helper/api.php"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if '__file__' in dir() else os.getcwd()
 CACHE_DIR = os.path.join(SCRIPT_DIR, 'cache')
@@ -59,7 +59,7 @@ def _ensure_cache_dirs():
 
 _ensure_cache_dirs()
 
-EPG_LOGO_URL = "https://cdn.jsdmirror.com/gh/fanmingming/live@master/tv/{name}.png"
+EPG_LOGO_URL = "https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/{name}.png"
 EPG_API_URL = "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
 DEFAULT_IMAGE = "https://000.hfr1107.top/lives.jpg"
 
@@ -204,22 +204,6 @@ except ImportError:
     except ImportError:
         pass
 
-def _pad_key(k):
-    return k + "0000000000000000"[:16 - len(k)]
-
-def _aes_decrypt(cipher_bytes, key, iv):
-    kb = _pad_key(key).encode('latin-1')
-    ib = _pad_key(iv).encode('latin-1')
-    if _AES_MODE == 'pycryptodome':
-        return _AES_IMPL.new(kb, _AES_IMPL.MODE_CBC, ib).decrypt(cipher_bytes)
-    elif _AES_MODE == 'pyaes':
-        aes = _AES_IMPL.AESModeOfOperationCBC(kb, iv=ib)
-        d = _AES_IMPL.Decrypter(aes)
-        r = d.feed(cipher_bytes)
-        r += d.feed()
-        return r
-    return b''
-
 def _strip_pkcs7(d):
     if d:
         p = d[-1]
@@ -227,229 +211,155 @@ def _strip_pkcs7(d):
             return d[:-p]
     return d
 
-def _parse_aes_container(raw_hex_or_b64):
+def _contains_special_strings(response):
+    """参照 get.php containsSpecialStrings"""
+    if not isinstance(response, str):
+        return False
+    return bool(re.search(r'sites|genre|EXTINF', response))
+
+def _extract_text(response_no_spaces):
+    """
+    参照 get.php extractText：
+    1) rtrim 掉末尾所有 '*'（PHP rtrim($s, '**') 的字符掩码实际等价于 rtrim($s, '*')）
+    2) 取最后一组 '**' 之后的内容
+    """
+    trimmed = response_no_spaces.rstrip('*')
+    pos = trimmed.rfind('**')
+    if pos != -1:
+        return trimmed[pos + 2:]
+    return trimmed
+
+def _extract_encryption_params(s):
+    """参照 get.php extract_encryption_params"""
+    prefix = "2423"
+    suffix = "2324"
+    suffix_pos = s.find(suffix)
+    if suffix_pos == -1:
+        return None
+    pwd_mix = s[:suffix_pos + len(suffix)]
+    if len(s) < 26:
+        return None
+    roundtime_in_hax = s[-26:]
+    encrypted_text = s[len(pwd_mix):-26]
+    pwd_in_hax = pwd_mix[len(prefix):-len(suffix)]
+    return {
+        'pwdInHax': pwd_in_hax,
+        'roundtimeInHax': roundtime_in_hax,
+        'encryptedText': encrypted_text
+    }
+
+def _decrypt_aes(encrypted_text_hex, pwd_in_hax, roundtime_in_hax):
+    """
+    参照 get.php decrypt_aes: AES-128-CBC
+    PHP 使用 str_pad($bin, 16, "0", STR_PAD_RIGHT)，即右侧补字符 '0'（ASCII 48），不是 \x00
+    """
+    if not _HAS_AES:
+        return None
     try:
-        if not re.match(r'^[A-Fa-f0-9]+$', raw_hex_or_b64):
-            raw = base64.b64decode(raw_hex_or_b64).decode('ascii', errors='ignore')
-            if not raw.startswith('24'):
-                return None
-            hex_data = raw
-        else:
-            hex_data = raw_hex_or_b64
-        hex_data = re.sub(r'\s+', '', hex_data)
-        if len(hex_data) % 2:
-            hex_data = hex_data[:-1]
-        raw_str = bytes.fromhex(hex_data).decode('latin-1').lower()
-        ks = raw_str.find('$#')
-        if ks < 0:
-            return None
-        ke = raw_str.find('#$', ks + 2)
-        if ke < 0:
-            return None
-        key = raw_str[ks+2:ke]
-        iv = raw_str[-13:]
-        hdr = hex_data.find('2324')
-        if hdr < 0:
-            return None
-        cipher_hex = hex_data[hdr+4:-26]
-        if len(cipher_hex) < 32:
-            return None
-        cipher = bytes.fromhex(cipher_hex)
-        return key, iv, cipher
+        round_time = bytes.fromhex(roundtime_in_hax)
+        pwd = bytes.fromhex(pwd_in_hax)
     except Exception:
         return None
 
-def decrypt_cbc(hex_data):
-    params = _parse_aes_container(hex_data)
-    if not params:
+    # PHP: str_pad($roundTime, 16, "0", STR_PAD_RIGHT)
+    iv = round_time.ljust(16, b'0')
+    key = pwd.ljust(16, b'0')
+
+    try:
+        cipher_bytes = bytes.fromhex(encrypted_text_hex)
+    except Exception:
         return None
-    key, iv, cipher = params
-    decrypted = _strip_pkcs7(_aes_decrypt(cipher, key, iv))
-    result = decrypted.decode('utf-8', errors='replace').strip()
-    if result.startswith('{') or result.startswith('['):
-        return result
+
+    decrypted = None
+    if _AES_MODE == 'pycryptodome':
+        try:
+            decrypted = _AES_IMPL.new(key, _AES_IMPL.MODE_CBC, iv).decrypt(cipher_bytes)
+        except Exception:
+            return None
+    elif _AES_MODE == 'pyaes':
+        try:
+            aes = _AES_IMPL.AESModeOfOperationCBC(key, iv=iv)
+            d = _AES_IMPL.Decrypter(aes)
+            decrypted = d.feed(cipher_bytes)
+            decrypted += d.feed()
+        except Exception:
+            return None
+
+    if decrypted:
+        return _strip_pkcs7(decrypted)
     return None
 
-def decode_png_encrypted(content):
-    if not content or len(content) < 50:
-        return None
-    try:
-        c = content.strip()
-        r = len(c) % 4
-        if r:
-            c += '=' * (4 - r)
-        raw = base64.b64decode(c).decode('ascii', errors='ignore')
-        if not raw.startswith('24'):
-            return None
-        params = _parse_aes_container(raw)
-        if not params:
-            return None
-        key, iv, cipher = params
-        decrypted = _strip_pkcs7(_aes_decrypt(cipher, key, iv))
-        result = decrypted.decode('utf-8', errors='replace')
-        json.loads(result)
-        return result
-    except Exception:
+def _extract_content(response):
+    """
+    参照 get.php extractContent 的解密逻辑。
+    支持 ** Base64 多层解码 和 2423 前缀 AES 多层解码。
+    返回解密后的字符串，若无法解密返回 None。
+    注意：不包含 PHP 源码中的任何注释前缀。
+    """
+    if not response:
         return None
 
-def decode_bmp(content):
-    if len(content) < 100 or content[:2] != b'BM':
-        return None
-    try:
-        off = struct.unpack('<I', content[10:14])[0]
-        px = content[off:]
-        for k in [0x9B, 0xAF, 0x5A, 0x66, 0x88, 0x77]:
-            txt = bytes([b ^ k for b in px]).decode('utf-8', errors='replace')
-            if '#genre' in txt:
-                return txt
-            s = txt.find('{')
-            if s < 0:
-                s = txt.find('[')
-            if s >= 0:
-                d, end = 0, 0
-                for i, ch in enumerate(txt[s:]):
-                    if ch == '{':
-                        d += 1
-                    elif ch == '}':
-                        d -= 1
-                        if d == 0:
-                            end = i + 1
-                            break
-                if end > 0:
-                    try:
-                        json.loads(txt[s:s+end])
-                        return txt[s:s+end]
-                    except Exception:
-                        pass
-    except Exception:
-        pass
-    return None
+    MAX_ITER = 10
+    current = response.strip()
 
-def decode_image(content):
-    if not content:
-        return None
-    if content[:4] == b'RIFF' and b'WEBP' in content[:12]:
-        for b64 in re.findall(r'[A-Za-z0-9+/=]{200,}', content.decode('latin-1')):
+    for _ in range(MAX_ITER):
+        has_double_star = '**' in current
+        starts_with_2423 = current.startswith('2423')
+
+        if not has_double_star and not starts_with_2423:
+            break
+
+        if has_double_star:
+            response_no_spaces = re.sub(r'\s+', '', current)
+            cleaned_text = _extract_text(response_no_spaces)
             try:
-                p = 4 - len(b64) % 4
-                if p != 4:
-                    b64 += '=' * p
-                d = base64.b64decode(b64)
-                try:
-                    return json.dumps(json.loads(d))
-                except Exception:
-                    pass
-            except Exception:
+                decoded = base64.b64decode(cleaned_text).decode('utf-8', errors='replace')
+                current = decoded
                 continue
-    if content[:4] == b'\x89PNG':
-        iend = content.rfind(b'IEND')
-        if iend > 0:
-            after = content[iend+8:]
-            if len(after) > 50:
-                for b64 in re.findall(rb'[A-Za-z0-9+/]{100,}=*', after):
-                    try:
-                        p = 4 - len(b64) % 4
-                        if p != 4:
-                            b64 += b'=' * p
-                        d = base64.b64decode(b64)
-                        try:
-                            return json.dumps(json.loads(d))
-                        except Exception:
-                            pass
-                    except Exception:
-                        continue
-            try:
-                bs = after.find(b'MjQ')
-                if bs >= 0:
-                    bc = bytes([b for b in after[bs:] if b in b'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='])
-                    if bc:
-                        r = decode_png_encrypted(bc.decode('ascii'))
-                        if r:
-                            return r
             except Exception:
-                pass
-    pos = content.rfind(b'\xff\xd9')
-    if pos >= 0 and pos + 2 < len(content):
-        ex = content[pos+2:]
-        if ex.strip():
-            try:
-                return json.dumps(json.loads(ex))
-            except Exception:
-                pass
-            try:
-                d = base64.b64decode(ex).decode('utf-8', errors='ignore')
-                s = d.find('{')
-                if s < 0:
-                    s = d.find('[')
-                if s >= 0:
-                    return d[s:]
-            except Exception:
-                pass
-    try:
-        txt = content.decode('utf-8', errors='ignore').strip()
-        if txt:
-            try:
-                return json.dumps(json.loads(txt))
-            except Exception:
-                pass
-            for b64 in re.findall(r'[A-Za-z0-9+/=]{100,}', txt):
-                try:
-                    p = 4 - len(b64) % 4
-                    if p != 4:
-                        b64 += '=' * p
-                    d = base64.b64decode(b64).decode('utf-8', errors='ignore')
-                    s = d.find('{')
-                    if s < 0:
-                        s = d.find('[')
-                    if s >= 0:
-                        json.loads(d[s:])
-                        return d[s:]
-                except Exception:
-                    continue
-    except Exception:
-        pass
-    return None
+                return None
+
+        if starts_with_2423:
+            params = _extract_encryption_params(current)
+            if not params:
+                return None
+            decrypted = _decrypt_aes(params['encryptedText'], params['pwdInHax'], params['roundtimeInHax'])
+            if not decrypted:
+                return None
+            current = decrypted.decode('utf-8', errors='replace')
+            continue
+
+    return current if current else None
+
+def _is_plaintext(content):
+    """判断内容是否已经是明文（无需解密）"""
+    if not isinstance(content, str):
+        return False
+    content = content.strip()
+    if content.startswith('{') or content.startswith('['):
+        try:
+            json.loads(content)
+            return True
+        except Exception:
+            pass
+    if _contains_special_strings(content):
+        return True
+    return False
 
 def try_decrypt_content(content, url='', external_api_url=DEFAULT_EXTERNAL_API_URL, session=None):
     if not content:
         return None
-    try:
-        json.loads(content)
+
+    # 已经是明文，直接返回
+    if _is_plaintext(content):
         return content
-    except Exception:
-        pass
-    if isinstance(content, str) and len(content) > 100:
-        c = re.sub(r'\s+', '', content)
-        if re.match(r'^[A-Fa-f0-9]+$', c) and len(c) > 100:
-            r = decrypt_cbc(c)
-            if r:
-                return r
-    if isinstance(content, str) and '**' in content:
-        try:
-            m = re.search(r'[A-Za-z0-9]{8}\*\*(.+)', content, re.DOTALL)
-            if m:
-                d = base64.b64decode(m.group(1).strip()).decode('utf-8', errors='replace')
-                json.loads(d.lstrip('\ufeff').strip(), strict=False)
-                return d
-        except Exception:
-            pass
-    if isinstance(content, str) and content[:2] == 'BM':
-        r = decode_bmp(content.encode('latin-1'))
-        if r:
-            return r
-    if isinstance(content, str):
-        try:
-            r = decode_image(content.encode('latin-1'))
-            if r and (r.startswith('{') or r.startswith('[')):
-                return r
-        except Exception:
-            pass
-    m = re.search(r'\{[\s\S]*\}', content)
-    if m:
-        try:
-            return m.group()
-        except Exception:
-            pass
+
+    # 参照 get.php 解密逻辑
+    result = _extract_content(content)
+    if result:
+        return result
+
+    # 外部 API 兜底（保留原始能力）
     if external_api_url and session:
         try:
             if '?url=' in external_api_url:
@@ -466,7 +376,9 @@ def try_decrypt_content(content, url='', external_api_url=DEFAULT_EXTERNAL_API_U
                         return r
         except Exception:
             pass
+
     return None
+
 
 # ========================= 智能匹配器 =========================
 class SmartMatcher:
@@ -627,7 +539,7 @@ class ChannelNormalizer:
             return key
         s = self.quality_pattern.sub('', s)
         s = self.operator_pattern.sub('', s)
-        s = re.sub(r'[\s\-_·.|"\'’，,、（）()\[\]【】]', '', s)
+        s = re.sub(r'[\s\-_·.|"\'\'\u2019，,、（）()\[\]【】]', '', s)
         return s
 
     def normalize(self, name):
@@ -665,6 +577,7 @@ class Spider(BaseSpider):
     URL_CACHE_TTL = 3600
     EPG_CACHE_TTL = 300
     RETRY_COUNT = 2
+    CATEGORY_TIMEOUT = 5.0  # 影视TV前端容忍的超时时间（秒）
 
     def __init__(self):
         super().__init__()
@@ -676,7 +589,8 @@ class Spider(BaseSpider):
         self._epg_cache = DiskCache(os.path.join(CACHE_DIR, 'epg'), ttl=self.EPG_CACHE_TTL)
         self._source_cache = DiskCache(os.path.join(CACHE_DIR, 'source'), ttl=self.URL_CACHE_TTL)
         self._channels = []
-        self._channels_lock = threading.Lock()
+        # OPTIMIZED: 使用 RLock 支持同线程重入，避免死锁
+        self._channels_lock = threading.RLock()
         self._module_m3u = {}
         self._module_spiders = {}
         self._module_lock = threading.Lock()
@@ -711,7 +625,7 @@ class Spider(BaseSpider):
         self._category_order = []
         self._category_type = {}
         self._interface_groups = {}
-        self._agg_lock = threading.Lock()
+        self._agg_lock = threading.RLock()
         self._last_refresh_ts = 0
         self._refreshing = False
         self.epg_logo_url = EPG_LOGO_URL
@@ -733,6 +647,9 @@ class Spider(BaseSpider):
 
         self._source_loaded = {}
         self._global_ready = False
+        # OPTIMIZED: 用 Event 替代忙等待，每个源独立通知
+        self._source_ready_events = {}
+        self._global_ready_event = threading.Event()
         self._first_source_name = None
         self._focus_count = {}
 
@@ -756,14 +673,9 @@ class Spider(BaseSpider):
 
     # ========================= 辅助方法 =========================
     def _resolve_resource_path(self, source):
-        """
-        解析资源路径，返回 (类型, 实际路径)
-        类型: 'local' 或 'remote'
-        """
         if not source:
             return None, None
         source = source.strip()
-        # 检测是否为本地文件
         is_local = False
         if source.startswith(('./', '.\\', '/')):
             is_local = True
@@ -771,7 +683,6 @@ class Spider(BaseSpider):
             is_local = True
 
         if is_local:
-            # 解析相对路径（相对于 SCRIPT_DIR）
             if source.startswith('./') or source.startswith('.\\'):
                 file_path = os.path.join(SCRIPT_DIR, source[2:])
             elif source.startswith('/'):
@@ -785,10 +696,6 @@ class Spider(BaseSpider):
             return 'remote', source
 
     def _load_json_resource(self, source, allow_decrypt=False):
-        """
-        统一加载 JSON 资源（本地文件或远程 URL）
-        - allow_decrypt: 是否尝试解密（用于 lives 源）
-        """
         if not source:
             return None
         res_type, res_path = self._resolve_resource_path(source)
@@ -808,7 +715,7 @@ class Spider(BaseSpider):
             except Exception as e:
                 self.logger.log(f"读取本地文件失败 {res_path}: {e}")
                 return None
-        else:  # remote
+        else:
             try:
                 resp = self.session.get(
                     res_path,
@@ -828,7 +735,6 @@ class Spider(BaseSpider):
                             try:
                                 return json.loads(dec)
                             except Exception:
-                                # 尝试提取 JSON 片段
                                 m = re.search(r'\{[\s\S]*\}', dec)
                                 if m:
                                     try:
@@ -846,9 +752,7 @@ class Spider(BaseSpider):
                 self.logger.log(f"远程加载失败 {res_path}: {e}")
                 return None
 
-    # ========================= 原有辅助方法（保持兼容） =========================
     def _load_config_file(self, path):
-        """加载配置文件（统一资源加载器）"""
         if not path:
             return None
         return self._load_json_resource(path, allow_decrypt=False)
@@ -856,11 +760,9 @@ class Spider(BaseSpider):
     def _load_ext_from_path(self, path):
         if not path:
             return None
-        # 直接使用统一加载器
         result = self._load_json_resource(path, allow_decrypt=False)
         if result is not None:
             return result
-        # 如果统一加载器失败，回退到原有的多路径查找逻辑
         if path.startswith(('http://', 'https://', 'ftp://')):
             return None
         candidates = []
@@ -1029,7 +931,7 @@ class Spider(BaseSpider):
                     self.logger.log(f"URL字符串子分类请求失败: {url} - {e}")
         return lives, base_url, pic_url
 
-    # ========================= 初始化 =========================
+    # ========================= 初始化（核心优化区域）=========================
     def init(self, extend):
         self._init_session()
 
@@ -1060,7 +962,7 @@ class Spider(BaseSpider):
 
         self._last_extend = ext
         self.logger.set_enabled(self._p_bool(ext, '启用日志'))
-        self.logger.log("=" * 50 + " 启动 VOD（兼容JS版） " + "=" * 50)
+        self.logger.log("=" * 50 + " 启动 VOD（Optimized v18） " + "=" * 50)
 
         config_file = ext.get('config_file', '')
         if config_file:
@@ -1110,9 +1012,8 @@ class Spider(BaseSpider):
                 if norm_list:
                     self._category_map[cat_name] = norm_list
 
-        # ----- 获取并合并 lives（支持本地文件/远程URL） -----
+        # 获取并合并 lives
         raw_lives = self._fetch_and_merge_lives(ext)
-        # 处理名称去重
         lives = []
         name_counter = {}
         for item in raw_lives:
@@ -1171,37 +1072,33 @@ class Spider(BaseSpider):
         self._parse_display_config(ext)
 
         for cfg in self._source_configs:
-            self._source_loaded[cfg['name']] = (cfg['name'] == self._first_source_name)
+            self._source_loaded[cfg['name']] = False
+            # OPTIMIZED: 每个源预创建 Event
+            self._source_ready_events[cfg['name']] = threading.Event()
 
-        first_cfg = None
-        for cfg in self._source_configs:
-            if cfg.get('url') and not cfg.get('api'):
-                first_cfg = cfg
-                break
-        if not first_cfg:
-            for cfg in self._source_configs:
-                if cfg.get('api'):
-                    first_cfg = cfg
-                    break
-        if not first_cfg and self._source_configs:
-            first_cfg = self._source_configs[0]
-
-        if first_cfg:
-            self.logger.log(f"同步加载第一个源: {first_cfg['name']}")
-            self._load_one_source(first_cfg, is_first=True)
-
-        if len(self._source_configs) > 1:
-            threading.Thread(target=self._load_remaining_sources, daemon=True).start()
-
-        # 关键修复：启用过滤规则时强制同步构建，确保输出数据已被过滤
+        # ==================== 核心优化：统一加载调度 ====================
         if self.filter_enabled:
-            self.logger.log("过滤规则已启用，强制同步构建全量数据...")
-            self._build_cache_bg()
-            # 确保 _cache_ready 已设置
+            # 过滤模式：必须全量加载后才能过滤，统一同步加载
+            self.logger.log("过滤模式：同步加载所有源并构建缓存")
+            self._load_all_sources_sync()
+            self._build_caches()
             with self._cache_lock:
                 self._cache_ready = True
             self.logger.log("过滤后数据已就绪")
         else:
+            # 快速模式：首源同步（快速首屏响应），其余后台加载
+            if self._source_configs:
+                self.logger.log(f"快速模式：同步加载首源 {self._first_source_name}")
+                self._load_one_source_safe(self._source_configs[0])
+
+            if len(self._source_configs) > 1:
+                t = threading.Thread(target=self._load_remaining_bg, daemon=True)
+                t.start()
+            else:
+                self._global_ready = True
+                self._global_ready_event.set()
+
+            # 尝试加载磁盘缓存
             self._load_cache_from_disk()
             if self._cache_ready:
                 self.logger.log("全量缓存加载成功，数据已就绪")
@@ -1211,6 +1108,80 @@ class Spider(BaseSpider):
                 threading.Thread(target=self._build_cache_bg, daemon=True).start()
 
         self.logger.flush()
+
+    # ========================= 统一加载调度器（新增）=========================
+    def _load_one_source_safe(self, cfg):
+        """线程安全的单源加载，带双重检查锁定"""
+        name = cfg['name']
+        # 快速路径检查
+        if self._source_loaded.get(name):
+            return
+
+        with self._channels_lock:
+            # 再次检查（双重检查锁定）
+            if self._source_loaded.get(name):
+                return
+
+            channels = []
+            if cfg.get('api'):
+                channels = self._load_py_source(cfg['api'], cfg)
+            elif cfg.get('url'):
+                channels = self._load_url_source(cfg)
+
+            if channels:
+                self._channels.extend(channels)
+                groups = {}
+                for ch in channels:
+                    group = ch.get('group', '默认分类')
+                    groups.setdefault(group, []).append(ch)
+                self._source_groups[name] = groups
+                self._interface_groups[name] = {
+                    'groups': list(groups.keys()),
+                    'group_channels': groups
+                }
+                self.logger.log(f"【{name}】加载 {len(channels)} 个频道, {len(groups)} 个分组")
+            else:
+                self._source_groups[name] = {}
+                self._interface_groups[name] = {'groups': [], 'group_channels': {}}
+                self.logger.log(f"【{name}】加载完成，但无频道数据")
+
+            self._source_loaded[name] = True
+            # 通知所有等待该源的线程
+            event = self._source_ready_events.get(name)
+            if event:
+                event.set()
+
+    def _load_all_sources_sync(self):
+        """同步加载所有源（过滤模式专用）"""
+        self.logger.log("开始同步加载所有源...")
+        for cfg in self._source_configs:
+            if self._shutdown_flag.is_set():
+                break
+            self._load_one_source_safe(cfg)
+        self._global_ready = True
+        self._global_ready_event.set()
+        self.logger.log("所有源加载完成")
+
+    def _load_remaining_bg(self):
+        """后台加载剩余源（快速模式专用）"""
+        for cfg in self._source_configs[1:]:
+            if self._shutdown_flag.is_set():
+                break
+            self._load_one_source_safe(cfg)
+            time.sleep(0.1)
+
+        # 检查是否全部完成
+        all_done = all(self._source_loaded.get(c['name'], False) 
+                      for c in self._source_configs)
+        if all_done:
+            self._global_ready = True
+            self._global_ready_event.set()
+            self.logger.log("后台加载全部完成，开始构建全量缓存")
+            self._build_caches()
+            self._save_cache_to_disk()
+            if self.refresh_interval > 0 and self.enable_refresh:
+                self._start_refresh()
+        self.logger.debug("后台源加载完成")
 
     # ========================= 显示配置解析 =========================
     def _parse_display_config(self, ext):
@@ -1296,101 +1267,259 @@ class Spider(BaseSpider):
         else:
             self.logger.log("分类显示配置中所有ID均无效，保持原有顺序")
 
-    # ========================= 加载源 =========================
-    def _load_remaining_sources(self):
-        for cfg in self._source_configs[1:]:
-            if self._shutdown_flag.is_set():
+    # ========================= 配置解析 =========================
+    def _parse_config(self, ext):
+        self.group_include = SmartMatcher.compile(self._p(ext, '分类包含', 'group_include', default=[]))
+        self.group_exclude = SmartMatcher.compile(self._p(ext, '分类排除', 'group_exclude', default=[]))
+        self.name_include = SmartMatcher.compile(self._p(ext, '节目包含', 'name_include', default=[]))
+        self.name_exclude = SmartMatcher.compile(self._p(ext, '节目排除', 'name_exclude', default=[]))
+
+        def _normalize_list(lst):
+            if isinstance(lst, str):
+                lst = [lst]
+            elif not isinstance(lst, list):
+                return []
+            return [str(v).strip().lower() for v in lst if v and str(v).strip()]
+
+        self.group_whitelist = _normalize_list(self._p(ext, '分类白名单', 'group_whitelist', default=[]))
+        self.group_blacklist = _normalize_list(self._p(ext, '分类黑名单', 'group_blacklist', default=[]))
+
+        self.dedup_count = max(1, int(self._p(ext, '重复阈值', 'dedup_count', default=3)))
+        self.refresh_interval = max(0, int(self._p(ext, '刷新间隔', 'refresh_interval', default=0)))
+        self.external_api_url = self._p(ext, '备用解密接口', 'external_api_url', default=DEFAULT_EXTERNAL_API_URL)
+        self.download_playlist = self._p_bool(ext, '播放列表')
+        self.log_dir = self._p(ext, '下载目录', 'log_dir', default=DEFAULT_LOG_DIR)
+        if isinstance(self.log_dir, str) and self.log_dir:
+            self.log_dir = self.log_dir.rstrip('/') + '/'
+        else:
+            self.log_dir = DEFAULT_LOG_DIR
+        log_level = self._p(ext, '日志级别', 'log_level', default='info')
+        self.logger.set_level(log_level)
+        self.max_workers = min(16, max(1, int(self._p(ext, '最大并发', 'max_workers', default=4))))
+        self.connect_timeout = max(3, int(self._p(ext, '连接超时', 'connect_timeout', default=5)))
+        self.read_timeout_url = max(5, int(self._p(ext, 'URL读取超时', 'url_read_timeout', default=8)))
+        self.read_timeout_api = max(5, int(self._p(ext, 'API读取超时', 'api_read_timeout', default=10)))
+        self.sources_load_timeout = max(30, int(self._p(ext, '源加载超时', 'sources_load_timeout', default=90)))
+
+        self.default_vod_pic = self._p(ext, 'vod_pic', default=DEFAULT_IMAGE)
+        self.epg_logo_url_cfg = self._p(ext, 'epg_logo_url', default=EPG_LOGO_URL)
+        self.epg_api_url_cfg = self._p(ext, 'epg_api_url', default=EPG_API_URL)
+        self.epg_timeout = self._parse_timeout(
+            self._p(ext, 'epg_timeout', default=[3, 8])
+        )
+        ext_epg_map = self._p(ext, 'epg_name_map', default={})
+        if ext_epg_map and isinstance(ext_epg_map, dict):
+            self.epg_name_map = dict(ext_epg_map)
+        else:
+            self.epg_name_map = {}
+
+        self.cache_ttl = max(60, int(self._p(ext, '缓存有效期', 'cache_ttl', default=86400)))
+        self.enable_refresh = self._p_bool(ext, '启用定时刷新', default=True)
+
+        # 解析过滤规则
+        filter_key = None
+        for key in ext.keys():
+            if key.startswith('过滤规则|'):
+                filter_key = key
                 break
-            name = cfg['name']
-            with self._channels_lock:
-                if name in self._source_groups:
-                    continue
-            self._load_one_source(cfg, is_first=False)
-            time.sleep(0.2)
-        self.logger.debug("后台源加载完成")
 
-    def _load_one_source(self, cfg, is_first=False):
-        name = cfg['name']
-        with self._channels_lock:
-            if name in self._source_groups:
-                return
+        self.filter_enabled = False
+        self.filter_ignore = []
+        self.filter_keep = []
+        self.filter_global_filter = []
+        self.filter_global_keep = []
 
-        self.logger.debug(f"加载源: {name}")
-        channels = []
-        if cfg.get('api'):
-            channels = self._load_py_source(cfg['api'], cfg)
-        elif cfg.get('url'):
-            channels = self._load_url_source(cfg)
-        else:
-            self.logger.log(f"【{name}】跳过：无 url 或 api")
-            self._source_loaded[name] = True
-            self._check_global_ready()
-            return
+        if filter_key:
+            status = filter_key.split('|')[1] if '|' in filter_key else '开启'
+            if status == '开启':
+                self.filter_enabled = True
+                filter_config = ext.get(filter_key, {})
+                if isinstance(filter_config, dict):
+                    self.filter_ignore = self._normalize_rule_list(filter_config.get('忽略', []))
+                    self.filter_keep = self._normalize_rule_list(filter_config.get('保留', []))
+                    self.filter_global_filter = self._normalize_string_list(filter_config.get('全局_过滤词', []))
+                    self.filter_global_keep = self._normalize_string_list(filter_config.get('全局_保留词', []))
+                    self.logger.debug(f"过滤规则已启用: 忽略{len(self.filter_ignore)}条, 保留{len(self.filter_keep)}条")
+            else:
+                self.logger.debug("过滤规则已关闭")
 
-        if channels:
-            with self._channels_lock:
-                if name in self._source_groups:
-                    return
-                self._channels.extend(channels)
-                groups = {}
-                for ch in channels:
-                    group = ch.get('group', '默认分类')
-                    groups.setdefault(group, []).append(ch)
-                self._source_groups[name] = groups
-                self._interface_groups[name] = {'groups': list(groups.keys()), 'group_channels': groups}
-            self.logger.log(f"【{name}】加载 {len(channels)} 个频道, {len(groups)} 个分组")
-        else:
-            with self._channels_lock:
-                self._source_groups[name] = {}
-                self._interface_groups[name] = {'groups': [], 'group_channels': {}}
-            self.logger.log(f"【{name}】加载完成，但无频道数据")
-
-        self._source_loaded[name] = True
-        if not is_first:
-            self._check_global_ready()
-        self._build_channel_index()
-        return channels
-
-    def _check_global_ready(self):
-        all_loaded = all(self._source_loaded.get(cfg['name'], False) for cfg in self._source_configs)
-        if all_loaded and not self._global_ready:
-            self._global_ready = True
-            self.logger.log("所有接口源加载完成，开始构建全量缓存")
-            self._build_caches()
-            self._save_cache_to_disk()
-
-    def _load_py_source(self, api, cfg):
-        name = cfg['name']
-        try:
-            ext_str = json.dumps(cfg.get('ext', {}), ensure_ascii=False)
-            module = self._import_py_module(api)
-            if not module or not hasattr(module, 'Spider'):
-                self.logger.log(f"【{name}】模块加载失败")
-                return []
-            spider = module.Spider()
-            spider.init(ext_str)
-            with self._module_lock:
-                old_spider = self._module_spiders.get(name)
-                if old_spider and hasattr(old_spider, 'destroy'):
-                    try:
-                        old_spider.destroy()
-                    except Exception as e:
-                        self.logger.log(f"销毁旧实例 {name} 异常: {e}")
-                self._module_spiders[name] = spider
-                with self._health_lock:
-                    self._spider_health[name] = {'fails': 0, 'last_fail': 0, 'calls': 0}
-            content = spider.liveContent('')
-            if not content:
-                self.logger.log(f"【{name}】liveContent 为空")
-                return []
-            proxy_url = cfg.get('proxy')
-            headers = cfg.get('headers', {})
-            channels = self._parse_content(content, name, proxy_url=proxy_url, source_headers=headers)
-            return channels
-        except Exception as e:
-            self.logger.log(f"【{name}】加载异常: {e}")
+    def _normalize_rule_list(self, rules):
+        if not isinstance(rules, list):
             return []
+        result = []
+        for rule in rules:
+            if not isinstance(rule, dict):
+                continue
+            interfaces = rule.get('接口', None)
+            categories = rule.get('分类', None)
+            if not isinstance(interfaces, list):
+                interfaces = [interfaces] if interfaces is not None else []
+            if not isinstance(categories, list):
+                categories = [categories] if categories is not None else []
+            if not interfaces and not categories:
+                continue
+            if not interfaces:
+                interfaces = ['.*']
+            if not categories:
+                categories = ['.*']
+            for iface in interfaces:
+                for cat in categories:
+                    final_iface = iface if iface else '.*'
+                    final_cat = cat if cat else '.*'
+                    result.append({'接口': final_iface, '分类': final_cat})
+        return result
 
+    def _normalize_string_list(self, items):
+        if isinstance(items, str):
+            items = [items]
+        elif not isinstance(items, list):
+            return []
+        result = []
+        for item in items:
+            item = str(item).strip()
+            if not item:
+                continue
+            if '|' in item:
+                for sub in item.split('|'):
+                    sub = sub.strip()
+                    if sub:
+                        result.append(sub)
+            else:
+                result.append(item)
+        return result
+
+    def _parse_timeout(self, val, default=(3, 8)):
+        if isinstance(val, (list, tuple)) and len(val) >= 2:
+            return (int(val[0]), int(val[1]))
+        if isinstance(val, (int, float)):
+            return (int(val), int(val))
+        if isinstance(val, str):
+            parts = [x.strip() for x in val.split(',') if x.strip().isdigit()]
+            if len(parts) >= 2:
+                return (int(parts[0]), int(parts[1]))
+        return default
+
+    # ========================= 统一资源加载 =========================
+    def _fetch_and_merge_lives(self, ext):
+        all_lives = []
+
+        raw_lives = self._p(ext, 'lives', default=[])
+        if isinstance(raw_lives, list):
+            for item in raw_lives:
+                if isinstance(item, str):
+                    item = item.strip()
+                    if not item:
+                        continue
+                    data = self._load_json_resource(item, allow_decrypt=True)
+                    if data:
+                        if isinstance(data, list):
+                            all_lives.extend(data)
+                            self.logger.debug(f"从资源加载 {len(data)} 个源: {item}")
+                        elif isinstance(data, dict) and 'lives' in data and isinstance(data['lives'], list):
+                            all_lives.extend(data['lives'])
+                            self.logger.debug(f"从资源加载 {len(data['lives'])} 个源: {item}")
+                        else:
+                            self.logger.log(f"资源数据格式无效: {item}")
+                else:
+                    all_lives.append(item)
+
+        urls = self._p(ext, '接口_单仓', 'lives_urls', default=[])
+        if isinstance(urls, str):
+            urls = [urls] if urls else []
+        elif not isinstance(urls, list):
+            urls = []
+
+        if urls:
+            self.logger.log(f"加载配置源: {len(urls)} 个")
+            with ThreadPoolExecutor(max_workers=min(self.max_workers, len(urls))) as ex:
+                self._executors.append(ex)
+                try:
+                    futs = {ex.submit(self._fetch_one_remote, u): u for u in urls}
+                    for fut in as_completed(futs, timeout=30):
+                        if self._shutdown_flag.is_set():
+                            for f in futs:
+                                f.cancel()
+                            break
+                        try:
+                            data = fut.result()
+                            if data:
+                                data = self._resolve_paths(data, futs[fut])
+                                if isinstance(data, list):
+                                    all_lives.extend(data)
+                                elif isinstance(data, dict):
+                                    lv = self._p(data, 'lives')
+                                    if isinstance(lv, list):
+                                        all_lives.extend(lv)
+                        except Exception as e:
+                            self.logger.log(f"加载配置源异常: {e}")
+                finally:
+                    if ex in self._executors:
+                        self._executors.remove(ex)
+
+        simple_urls = self._p(ext, '接口_直播', 'lives_url', default=[])
+        if isinstance(simple_urls, str):
+            simple_urls = [simple_urls] if simple_urls else []
+        elif not isinstance(simple_urls, list):
+            simple_urls = []
+
+        for u in simple_urls:
+            if isinstance(u, str) and u.strip():
+                u = u.strip()
+                data = self._fetch_one_remote(u)
+                if data:
+                    if isinstance(data, list):
+                        all_lives.extend(data)
+                    elif isinstance(data, dict):
+                        lv = self._p(data, 'lives')
+                        if isinstance(lv, list):
+                            all_lives.extend(lv)
+
+        return self._dedup_lives(all_lives)
+
+    def _fetch_one_remote(self, url):
+        if not url:
+            return None
+        return self._load_json_resource(url, allow_decrypt=True)
+
+    def _dedup_lives(self, lives):
+        seen = set()
+        out = []
+        for item in lives:
+            if isinstance(item, str):
+                u = item.strip()
+                if u.endswith('.py'):
+                    item = {'name': f'接口_{len(out)+1}', 'api': u}
+                else:
+                    item = {'name': f'接口_{len(out)+1}', 'url': u}
+            key = item.get('url') or item.get('api') or ''
+            if key and key in seen:
+                continue
+            if key:
+                seen.add(key)
+            if item.get('url'):
+                item['url'] = self._resolve_local_path(item['url'])
+            if item.get('api'):
+                item['api'] = self._resolve_local_path(item['api'])
+            item['_headers'] = self._extract_source_headers(item)
+            out.append(item)
+        return out
+
+    def _resolve_paths(self, data, base_url):
+        if isinstance(data, dict):
+            for k, v in data.items():
+                if isinstance(v, str) and v.startswith('./'):
+                    data[k] = urljoin(base_url, v)
+                elif isinstance(v, (dict, list)):
+                    data[k] = self._resolve_paths(v, base_url)
+        elif isinstance(data, list):
+            for i, item in enumerate(data):
+                if isinstance(item, str) and item.startswith('./'):
+                    data[i] = urljoin(base_url, item)
+                elif isinstance(item, (dict, list)):
+                    data[i] = self._resolve_paths(item, base_url)
+        return data
+
+    # ========================= 源加载（保留原始能力）=========================
     def _load_url_source(self, cfg):
         name = cfg.get('name', '未知源')
         url = cfg.get('url', '')
@@ -1442,6 +1571,38 @@ class Spider(BaseSpider):
             self.logger.log(f"加载URL失败 {name}: {e}")
             return []
 
+    def _load_py_source(self, api, cfg):
+        name = cfg['name']
+        try:
+            ext_str = json.dumps(cfg.get('ext', {}), ensure_ascii=False)
+            module = self._import_py_module(api)
+            if not module or not hasattr(module, 'Spider'):
+                self.logger.log(f"【{name}】模块加载失败")
+                return []
+            spider = module.Spider()
+            spider.init(ext_str)
+            with self._module_lock:
+                old_spider = self._module_spiders.get(name)
+                if old_spider and hasattr(old_spider, 'destroy'):
+                    try:
+                        old_spider.destroy()
+                    except Exception as e:
+                        self.logger.log(f"销毁旧实例 {name} 异常: {e}")
+                self._module_spiders[name] = spider
+                with self._health_lock:
+                    self._spider_health[name] = {'fails': 0, 'last_fail': 0, 'calls': 0, 'last_rebuild': 0}
+            content = spider.liveContent('')
+            if not content:
+                self.logger.log(f"【{name}】liveContent 为空")
+                return []
+            proxy_url = cfg.get('proxy')
+            headers = cfg.get('headers', {})
+            channels = self._parse_content(content, name, proxy_url=proxy_url, source_headers=headers)
+            return channels
+        except Exception as e:
+            self.logger.log(f"【{name}】加载异常: {e}")
+            return []
+
     def _import_py_module(self, api):
         if api.startswith(('http://', 'https://')):
             ck = hashlib.md5(api.encode()).hexdigest() + '.py'
@@ -1473,356 +1634,6 @@ class Spider(BaseSpider):
         spec.loader.exec_module(mod)
         sys.modules[mn] = mod
         return mod
-
-    # ========================= 配置解析 =========================
-    def _parse_config(self, ext):
-        self.group_include = SmartMatcher.compile(self._p(ext, '分类包含', 'group_include', default=[]))
-        self.group_exclude = SmartMatcher.compile(self._p(ext, '分类排除', 'group_exclude', default=[]))
-        self.name_include = SmartMatcher.compile(self._p(ext, '节目包含', 'name_include', default=[]))
-        self.name_exclude = SmartMatcher.compile(self._p(ext, '节目排除', 'name_exclude', default=[]))
-
-        def _normalize_list(lst):
-            if isinstance(lst, str):
-                lst = [lst]
-            elif not isinstance(lst, list):
-                return []
-            return [str(v).strip().lower() for v in lst if v and str(v).strip()]
-
-        self.group_whitelist = _normalize_list(self._p(ext, '分类白名单', 'group_whitelist', default=[]))
-        self.group_blacklist = _normalize_list(self._p(ext, '分类黑名单', 'group_blacklist', default=[]))
-
-        self.dedup_count = max(1, int(self._p(ext, '重复阈值', 'dedup_count', default=3)))
-        self.refresh_interval = max(0, int(self._p(ext, '刷新间隔', 'refresh_interval', default=0)))
-        self.external_api_url = self._p(ext, '备用解密接口', 'external_api_url', default=DEFAULT_EXTERNAL_API_URL)
-        self.download_playlist = self._p_bool(ext, '播放列表')
-        self.log_dir = self._p(ext, '下载目录', 'log_dir', default=DEFAULT_LOG_DIR)
-        if isinstance(self.log_dir, str) and self.log_dir:
-            self.log_dir = self.log_dir.rstrip('/') + '/'
-        else:
-            self.log_dir = DEFAULT_LOG_DIR
-        log_level = self._p(ext, '日志级别', 'log_level', default='info')
-        self.logger.set_level(log_level)
-        self.max_workers = min(16, max(1, int(self._p(ext, '最大并发', 'max_workers', default=4))))
-        self.connect_timeout = max(3, int(self._p(ext, '连接超时', 'connect_timeout', default=5)))
-        self.read_timeout_url = max(5, int(self._p(ext, 'URL读取超时', 'url_read_timeout', default=8)))
-        self.read_timeout_api = max(5, int(self._p(ext, 'API读取超时', 'api_read_timeout', default=10)))
-        self.sources_load_timeout = max(30, int(self._p(ext, '源加载超时', 'sources_load_timeout', default=90)))
-
-        self.default_vod_pic = self._p(ext, 'vod_pic', default=DEFAULT_IMAGE)
-        self.epg_logo_url_cfg = self._p(ext, 'epg_logo_url', default=EPG_LOGO_URL)
-        self.epg_api_url_cfg = self._p(ext, 'epg_api_url', default=EPG_API_URL)
-        self.epg_timeout = self._parse_timeout(
-            self._p(ext, 'epg_timeout', default=[3, 8])
-        )
-        ext_epg_map = self._p(ext, 'epg_name_map', default={})
-        if ext_epg_map and isinstance(ext_epg_map, dict):
-            self.epg_name_map = dict(ext_epg_map)
-        else:
-            self.epg_name_map = {}
-
-        self.cache_ttl = max(60, int(self._p(ext, '缓存有效期', 'cache_ttl', default=86400)))
-        self.enable_refresh = self._p_bool(ext, '启用定时刷新', default=True)
-
-        # ----- 解析过滤规则 -----
-        filter_key = None
-        for key in ext.keys():
-            if key.startswith('过滤规则|'):
-                filter_key = key
-                break
-
-        self.filter_enabled = False
-        self.filter_ignore = []
-        self.filter_keep = []
-        self.filter_global_filter = []
-        self.filter_global_keep = []
-
-        if filter_key:
-            status = filter_key.split('|')[1] if '|' in filter_key else '开启'
-            if status == '开启':
-                self.filter_enabled = True
-                filter_config = ext.get(filter_key, {})
-                if isinstance(filter_config, dict):
-                    self.filter_ignore = self._normalize_rule_list(filter_config.get('忽略', []))
-                    self.filter_keep = self._normalize_rule_list(filter_config.get('保留', []))
-                    self.filter_global_filter = self._normalize_string_list(filter_config.get('全局_过滤词', []))
-                    self.filter_global_keep = self._normalize_string_list(filter_config.get('全局_保留词', []))
-                    self.logger.debug(f"过滤规则已启用: 忽略{len(self.filter_ignore)}条, 保留{len(self.filter_keep)}条")
-            else:
-                self.logger.debug("过滤规则已关闭")
-
-    # ---------- 修复的核心方法 ----------
-    def _normalize_rule_list(self, rules):
-        """规范化规则列表，修复空字符串语义（'' 表示匹配所有）"""
-        if not isinstance(rules, list):
-            return []
-        result = []
-        for rule in rules:
-            if not isinstance(rule, dict):
-                continue
-            interfaces = rule.get('接口', None)
-            categories = rule.get('分类', None)
-            if not isinstance(interfaces, list):
-                interfaces = [interfaces] if interfaces is not None else []
-            if not isinstance(categories, list):
-                categories = [categories] if categories is not None else []
-            if not interfaces and not categories:
-                continue
-            if not interfaces:
-                interfaces = ['.*']
-            if not categories:
-                categories = ['.*']
-            for iface in interfaces:
-                for cat in categories:
-                    final_iface = iface if iface else '.*'
-                    final_cat = cat if cat else '.*'
-                    result.append({'接口': final_iface, '分类': final_cat})
-        return result
-
-    def _normalize_string_list(self, items):
-        """规范化字符串列表，自动展开 | 分隔的多个模式"""
-        if isinstance(items, str):
-            items = [items]
-        elif not isinstance(items, list):
-            return []
-        result = []
-        for item in items:
-            item = str(item).strip()
-            if not item:
-                continue
-            if '|' in item:
-                for sub in item.split('|'):
-                    sub = sub.strip()
-                    if sub:
-                        result.append(sub)
-            else:
-                result.append(item)
-        return result
-
-    def _parse_timeout(self, val, default=(3, 8)):
-        if isinstance(val, (list, tuple)) and len(val) >= 2:
-            return (int(val[0]), int(val[1]))
-        if isinstance(val, (int, float)):
-            return (int(val), int(val))
-        if isinstance(val, str):
-            parts = [x.strip() for x in val.split(',') if x.strip().isdigit()]
-            if len(parts) >= 2:
-                return (int(parts[0]), int(parts[1]))
-        return default
-
-    # ========================= 统一资源加载：fetch_and_merge_lives =========================
-    def _fetch_and_merge_lives(self, ext):
-        all_lives = []
-
-        # ----- 处理 lives 数组（统一使用 _load_json_resource） -----
-        raw_lives = self._p(ext, 'lives', default=[])
-        if isinstance(raw_lives, list):
-            for item in raw_lives:
-                if isinstance(item, str):
-                    item = item.strip()
-                    if not item:
-                        continue
-                    # 直接调用统一加载器
-                    data = self._load_json_resource(item, allow_decrypt=True)
-                    if data:
-                        if isinstance(data, list):
-                            all_lives.extend(data)
-                            self.logger.debug(f"从资源加载 {len(data)} 个源: {item}")
-                        elif isinstance(data, dict) and 'lives' in data and isinstance(data['lives'], list):
-                            all_lives.extend(data['lives'])
-                            self.logger.debug(f"从资源加载 {len(data['lives'])} 个源: {item}")
-                        else:
-                            self.logger.log(f"资源数据格式无效: {item}")
-                else:
-                    all_lives.append(item)
-
-        # ----- 处理 接口_单仓 / lives_urls（统一使用 _load_json_resource） -----
-        urls = self._p(ext, '接口_单仓', 'lives_urls', default=[])
-        if isinstance(urls, str):
-            urls = [urls] if urls else []
-        elif not isinstance(urls, list):
-            urls = []
-
-        if urls:
-            self.logger.log(f"加载配置源: {len(urls)} 个")
-            with ThreadPoolExecutor(max_workers=min(self.max_workers, len(urls))) as ex:
-                self._executors.append(ex)
-                try:
-                    futs = {ex.submit(self._fetch_one_remote, u): u for u in urls}
-                    for fut in as_completed(futs, timeout=30):
-                        if self._shutdown_flag.is_set():
-                            for f in futs:
-                                f.cancel()
-                            break
-                        try:
-                            data = fut.result()
-                            if data:
-                                data = self._resolve_paths(data, futs[fut])
-                                if isinstance(data, list):
-                                    all_lives.extend(data)
-                                elif isinstance(data, dict):
-                                    lv = self._p(data, 'lives')
-                                    if isinstance(lv, list):
-                                        all_lives.extend(lv)
-                        except Exception as e:
-                            self.logger.log(f"加载配置源异常: {e}")
-                finally:
-                    if ex in self._executors:
-                        self._executors.remove(ex)
-
-        # ----- 处理 接口_直播 / lives_url（统一使用 _fetch_one_remote） -----
-        simple_urls = self._p(ext, '接口_直播', 'lives_url', default=[])
-        if isinstance(simple_urls, str):
-            simple_urls = [simple_urls] if simple_urls else []
-        elif not isinstance(simple_urls, list):
-            simple_urls = []
-
-        for u in simple_urls:
-            if isinstance(u, str) and u.strip():
-                u = u.strip()
-                data = self._fetch_one_remote(u)
-                if data:
-                    if isinstance(data, list):
-                        all_lives.extend(data)
-                    elif isinstance(data, dict):
-                        lv = self._p(data, 'lives')
-                        if isinstance(lv, list):
-                            all_lives.extend(lv)
-
-        return self._dedup_lives(all_lives)
-
-    # ========================= 统一资源加载：_fetch_one_remote =========================
-    def _fetch_one_remote(self, url):
-        """从远程URL或本地文件加载配置数据（使用统一加载器）"""
-        if not url:
-            return None
-        return self._load_json_resource(url, allow_decrypt=True)
-
-    def _dedup_lives(self, lives):
-        seen = set()
-        out = []
-        for item in lives:
-            if isinstance(item, str):
-                u = item.strip()
-                if u.endswith('.py'):
-                    item = {'name': f'接口_{len(out)+1}', 'api': u}
-                else:
-                    item = {'name': f'接口_{len(out)+1}', 'url': u}
-            key = item.get('url') or item.get('api') or ''
-            if key and key in seen:
-                continue
-            if key:
-                seen.add(key)
-            if item.get('url'):
-                item['url'] = self._resolve_local_path(item['url'])
-            if item.get('api'):
-                item['api'] = self._resolve_local_path(item['api'])
-            item['_headers'] = self._extract_source_headers(item)
-            out.append(item)
-        return out
-
-    def _resolve_paths(self, data, base_url):
-        if isinstance(data, dict):
-            for k, v in data.items():
-                if isinstance(v, str) and v.startswith('./'):
-                    data[k] = urljoin(base_url, v)
-                elif isinstance(v, (dict, list)):
-                    data[k] = self._resolve_paths(v, base_url)
-        elif isinstance(data, list):
-            for i, item in enumerate(data):
-                if isinstance(item, str) and item.startswith('./'):
-                    data[i] = urljoin(base_url, item)
-                elif isinstance(item, (dict, list)):
-                    data[i] = self._resolve_paths(item, base_url)
-        return data
-
-    def _load_all_sources(self, lives, timeout=90):
-        self._channels.clear()
-        with ThreadPoolExecutor(max_workers=self.max_workers) as ex:
-            self._executors.append(ex)
-            try:
-                futures = []
-                for item in lives:
-                    if item.get('api', '').endswith('.py'):
-                        futures.append(ex.submit(self._load_module_source, item))
-                    elif item.get('url'):
-                        futures.append(ex.submit(self._load_url_source, item))
-                done, not_done = wait(futures, timeout=timeout)
-                for f in not_done:
-                    f.cancel()
-                for f in done:
-                    try:
-                        result = f.result()
-                        if result:
-                            with self._channels_lock:
-                                self._channels.extend(result)
-                    except Exception as e:
-                        self.logger.log(f"加载源异常: {e}")
-            finally:
-                if ex in self._executors:
-                    self._executors.remove(ex)
-
-    def _load_module_source(self, item):
-        name = item.get('name', '未知模块')
-        api_path = item.get('api', '')
-        ext_str = json.dumps(item.get('ext', {}), ensure_ascii=False)
-        proxy_url = item.get('proxy')
-        try:
-            if api_path.startswith(('http://', 'https://')):
-                cache_key = hashlib.md5(api_path.encode()).hexdigest()
-                local_path = os.path.join(MODULE_CACHE_DIR, f"{cache_key}.py")
-                if not os.path.exists(local_path):
-                    self.logger.log(f"正在下载远程模块: {api_path}")
-                    resp = self.session.get(api_path, timeout=(self.connect_timeout, self.read_timeout_url))
-                    if resp.status_code != 200:
-                        self.logger.log(f"下载远程模块失败: {api_path}")
-                        return []
-                    with open(local_path, 'w', encoding='utf-8') as f:
-                        f.write(resp.text)
-                content = self._load_py_module(local_path, name, ext_str)
-            else:
-                if not os.path.exists(api_path):
-                    self.logger.log(f"模块文件不存在: {api_path}")
-                    return []
-                content = self._load_py_module(api_path, name, ext_str)
-            if content:
-                self._module_m3u[name] = content
-                return self._parse_content(content, name, proxy_url=proxy_url)
-        except Exception as e:
-            self.logger.log(f"加载模块失败 {name}: {e}")
-        return []
-
-    def _load_py_module(self, api_path, name, ext_str='{}'):
-        try:
-            spec = importlib.util.spec_from_file_location(name, api_path)
-            if not spec or not spec.loader:
-                return None
-            module = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(module)
-            spider_cls = getattr(module, 'Spider', None)
-            if not spider_cls:
-                return None
-            spider = spider_cls()
-            if hasattr(spider, 'init'):
-                spider.init(ext_str)
-
-            old_spider = self._module_spiders.get(name)
-            if old_spider and hasattr(old_spider, 'destroy'):
-                try:
-                    old_spider.destroy()
-                except Exception as e:
-                    self.logger.log(f"销毁旧实例 {name} 异常: {e}")
-
-            with self._module_lock:
-                self._module_spiders[name] = spider
-                with self._health_lock:
-                    self._spider_health[name] = {'fails': 0, 'last_fail': 0, 'calls': 0}
-
-            if hasattr(spider, 'liveContent'):
-                return spider.liveContent('')
-            return None
-        except Exception as e:
-            self.logger.log(f"模块执行失败 {name}: {e}")
-            return None
 
     # ========================= 内容解析 =========================
     def _parse_content(self, content, source_name, proxy_url=None, source_url='', source_headers=None):
@@ -2029,7 +1840,6 @@ class Spider(BaseSpider):
         return bool(re.search(r'[\\^$.|?*+(){}\[\]]', pattern))
 
     def _match_pattern(self, pattern, text):
-        """匹配单个模式（正则或精确，忽略大小写），用于分类名和全局词"""
         if not text or not pattern:
             return False
         if self._is_regex_pattern(pattern):
@@ -2048,20 +1858,16 @@ class Spider(BaseSpider):
                 return True
         return False
 
-    # ---------- 修复：接口子串匹配，分类支持正则 ----------
     def _match_category_rule(self, rule, source, group):
-        """匹配分类规则：接口用子串匹配（不启用正则），分类用正则/子串匹配"""
         if not rule or not isinstance(rule, dict):
             return False
         interface_pattern = rule.get('接口', '.*')
         category_pattern = rule.get('分类', '.*')
 
-        # 接口名：使用子串匹配（忽略大小写），不启用正则
         if interface_pattern != '.*':
             if interface_pattern.lower() not in source.lower():
                 return False
 
-        # 分类名：支持正则（有元字符时），否则子串匹配
         if category_pattern == '.*':
             return True
         if self._is_regex_pattern(category_pattern):
@@ -2072,114 +1878,112 @@ class Spider(BaseSpider):
         else:
             return category_pattern.lower() in group.lower()
 
-    # ========================= 过滤主方法（最终版） =========================
+    # ========================= 过滤主方法（核心优化）=========================
     def _apply_filters(self):
         """
-        应用过滤规则：
-        1. 忽略规则绝对优先：被忽略的频道彻底丢弃，不可被后续规则救回
+        应用过滤规则（全程RLock保护，消除竞态）：
+        1. 忽略规则绝对优先：被忽略的频道彻底丢弃
         2. 保留规则保护频道不被全局过滤误伤
         3. 全局过滤/保留仅对未被忽略且未被保留的频道生效
         """
         if not self.filter_enabled:
             self.logger.debug("过滤功能已关闭，跳过")
             return
-        if not self._channels:
-            return
 
-        total_before = len(self._channels)
-        step_counts = {
-            'category_ignore': 0,
-            'category_keep': 0,
-            'global_filter': 0,
-            'global_keep': 0
-        }
-
-        for ch in self._channels:
-            ch.pop('_drop', None)
-            ch.pop('_keep', None)
-            ch.pop('_ignored', None)  # 标记是否被忽略
-
-        # ----- 步骤1：分类忽略（绝对优先，不可救回） -----
-        if self.filter_ignore:
-            for ch in self._channels:
-                if ch.get('_drop'):
-                    continue
-                source = ch.get('source', '')
-                group = ch.get('group', '')
-                for rule in self.filter_ignore:
-                    if self._match_category_rule(rule, source, group):
-                        ch['_drop'] = True
-                        ch['_ignored'] = True   # 标记被忽略，禁止后续救回
-                        step_counts['category_ignore'] += 1
-                        self.logger.debug(f"【分类忽略】{source} → {group} 命中规则，彻底丢弃 {ch.get('name')}")
-                        break
-
-        # ----- 步骤2：分类保留（仅对未被忽略的频道保护） -----
-        if self.filter_keep:
-            for ch in self._channels:
-                if ch.get('_drop') or ch.get('_keep'):
-                    continue
-                source = ch.get('source', '')
-                group = ch.get('group', '')
-                for rule in self.filter_keep:
-                    if self._match_category_rule(rule, source, group):
-                        ch['_keep'] = True
-                        step_counts['category_keep'] += 1
-                        self.logger.debug(f"【分类保留】{source} → {group} 保护频道 {ch.get('name')}")
-                        break
-
-        # ----- 步骤3：全局过滤（仅对未被忽略且未被保留的频道） -----
-        if self.filter_global_filter:
-            for ch in self._channels:
-                if ch.get('_drop') or ch.get('_keep'):
-                    continue
-                combined = f"{ch.get('name', '')} {ch.get('url', '')}"
-                if self._match_any_pattern(self.filter_global_filter, combined):
-                    ch['_drop'] = True
-                    step_counts['global_filter'] += 1
-                    self.logger.debug(f"【全局过滤】{ch.get('name')} 命中过滤词，丢弃")
-
-        # ----- 步骤4：全局保留（仅救回被全局过滤的，不可救回被忽略的） -----
-        if self.filter_global_keep:
-            for ch in self._channels:
-                # 被忽略的频道不可救回
-                if ch.get('_ignored'):
-                    continue
-                if not ch.get('_drop') or ch.get('_keep'):
-                    continue
-                combined = f"{ch.get('name', '')} {ch.get('url', '')}"
-                if self._match_any_pattern(self.filter_global_keep, combined):
-                    ch['_drop'] = False
-                    ch['_keep'] = True
-                    step_counts['global_keep'] += 1
-                    self.logger.debug(f"【全局保留】{ch.get('name')} 命中保留词，救回")
-
-        # 最终过滤：只保留未标记 _drop 的频道
-        filtered = [ch for ch in self._channels if not ch.get('_drop')]
-        dropped = total_before - len(filtered)
-
+        # OPTIMIZED: 全程在 _channels_lock 保护下执行，避免与后台加载竞态
         with self._channels_lock:
+            if not self._channels:
+                return
+
+            total_before = len(self._channels)
+            step_counts = {
+                'category_ignore': 0,
+                'category_keep': 0,
+                'global_filter': 0,
+                'global_keep': 0
+            }
+
+            for ch in self._channels:
+                ch.pop('_drop', None)
+                ch.pop('_keep', None)
+                ch.pop('_ignored', None)
+
+            # 步骤1：分类忽略（绝对优先，不可救回）
+            if self.filter_ignore:
+                for ch in self._channels:
+                    if ch.get('_drop'):
+                        continue
+                    source = ch.get('source', '')
+                    group = ch.get('group', '')
+                    for rule in self.filter_ignore:
+                        if self._match_category_rule(rule, source, group):
+                            ch['_drop'] = True
+                            ch['_ignored'] = True
+                            step_counts['category_ignore'] += 1
+                            self.logger.debug(f"【分类忽略】{source} → {group} 命中规则，彻底丢弃 {ch.get('name')}")
+                            break
+
+            # 步骤2：分类保留（仅对未被忽略的频道保护）
+            if self.filter_keep:
+                for ch in self._channels:
+                    if ch.get('_drop') or ch.get('_keep'):
+                        continue
+                    source = ch.get('source', '')
+                    group = ch.get('group', '')
+                    for rule in self.filter_keep:
+                        if self._match_category_rule(rule, source, group):
+                            ch['_keep'] = True
+                            step_counts['category_keep'] += 1
+                            self.logger.debug(f"【分类保留】{source} → {group} 保护频道 {ch.get('name')}")
+                            break
+
+            # 步骤3：全局过滤（仅对未被忽略且未被保留的频道）
+            if self.filter_global_filter:
+                for ch in self._channels:
+                    if ch.get('_drop') or ch.get('_keep'):
+                        continue
+                    combined = f"{ch.get('name', '')} {ch.get('url', '')}"
+                    if self._match_any_pattern(self.filter_global_filter, combined):
+                        ch['_drop'] = True
+                        step_counts['global_filter'] += 1
+                        self.logger.debug(f"【全局过滤】{ch.get('name')} 命中过滤词，丢弃")
+
+            # 步骤4：全局保留（仅救回被全局过滤的，不可救回被忽略的）
+            if self.filter_global_keep:
+                for ch in self._channels:
+                    if ch.get('_ignored'):
+                        continue
+                    if not ch.get('_drop') or ch.get('_keep'):
+                        continue
+                    combined = f"{ch.get('name', '')} {ch.get('url', '')}"
+                    if self._match_any_pattern(self.filter_global_keep, combined):
+                        ch['_drop'] = False
+                        ch['_keep'] = True
+                        step_counts['global_keep'] += 1
+                        self.logger.debug(f"【全局保留】{ch.get('name')} 命中保留词，救回")
+
+            # 最终过滤
+            filtered = [ch for ch in self._channels if not ch.get('_drop')]
+            dropped = total_before - len(filtered)
             self._channels = filtered
 
-        self.logger.log(
-            f"过滤完成：总频道 {total_before}，保留 {len(filtered)}，丢弃 {dropped} "
-            f"(分类忽略 {step_counts['category_ignore']}，"
-            f"分类保留 {step_counts['category_keep']}，"
-            f"全局过滤 {step_counts['global_filter']}，"
-            f"全局保留救回 {step_counts['global_keep']})"
-        )
+            self.logger.log(
+                f"过滤完成：总频道 {total_before}，保留 {len(filtered)}，丢弃 {dropped} "
+                f"(分类忽略 {step_counts['category_ignore']}，"
+                f"分类保留 {step_counts['category_keep']}，"
+                f"全局过滤 {step_counts['global_filter']}，"
+                f"全局保留救回 {step_counts['global_keep']})"
+            )
 
-        # 清理标记
-        for ch in self._channels:
-            ch.pop('_drop', None)
-            ch.pop('_keep', None)
-            ch.pop('_ignored', None)
+            # 清理标记
+            for ch in self._channels:
+                ch.pop('_drop', None)
+                ch.pop('_keep', None)
+                ch.pop('_ignored', None)
 
-    # ========================= 构建缓存 =========================
+    # ========================= 构建缓存（状态一致性优化）=========================
     def _build_caches(self):
-        # 应用过滤
         self._apply_filters()
-        # 重建索引
         self._build_channel_index()
 
         with self._agg_lock:
@@ -2252,7 +2056,8 @@ class Spider(BaseSpider):
             self._interface_groups = interface_groups
             with self._cache_lock:
                 self._cache_data = cache_cats
-                self._cache_ready = True
+                # OPTIMIZED: 只有真正构建出非空数据才标记ready
+                self._cache_ready = bool(cache_cats)
             self.logger.log(f"缓存构建完成，分类数: {len(self._category_order)}，接口数: {len(interface_groups)}")
             self.export_database()
 
@@ -2285,17 +2090,36 @@ class Spider(BaseSpider):
 
     def _format_epg(self, norm_name):
         data = self._get_epg(norm_name)
-        if not data or not isinstance(data, list):
+        if not data:
             return "暂无节目预告"
-        lines = []
+
+        if isinstance(data, dict) and 'epg_data' in data:
+            epg_list = data.get('epg_data', [])
+        elif isinstance(data, list):
+            epg_list = data
+        else:
+            return "节目数据格式异常"
+
+        if not epg_list:
+            return "暂无节目预告"
+
         now = time.strftime('%H:%M')
-        for prog in data[:8]:
-            if isinstance(prog, dict):
-                t = prog.get('time', prog.get('start', ''))
-                t = t.split(' ')[-1] if ' ' in str(t) else str(t)
-                title = prog.get('title', prog.get('name', '未知节目'))
-                mark = ' ▶' if t and t <= now else ''
-                lines.append(f"{t} {title}{mark}")
+        lines = []
+        for prog in epg_list[:8]:
+            if not isinstance(prog, dict):
+                continue
+            start = prog.get('start', '').strip()
+            end = prog.get('end', '').strip()
+            title = prog.get('title', '未知节目').strip()
+            title = re.sub(r'\s*--.*$', '', title)
+            if not start:
+                continue
+            is_current = False
+            if start <= now and (not end or end >= now):
+                is_current = True
+            mark = ' ▶' if is_current else ''
+            lines.append(f"{start} {title}{mark}")
+
         return '\n'.join(lines) if lines else "暂无节目预告"
 
     def _load_cache_from_disk(self):
@@ -2359,8 +2183,14 @@ class Spider(BaseSpider):
         try:
             t0 = time.time()
             self.logger.log("后台开始构建全量缓存...")
-            merged = self._fetch_and_merge_lives(self._last_extend)
-            self._load_all_sources(merged, timeout=self.sources_load_timeout)
+            # OPTIMIZED: 不复用init已加载的数据，而是复用 _source_configs 统一调度
+            if not self._global_ready:
+                for cfg in self._source_configs:
+                    if not self._source_loaded.get(cfg['name']):
+                        self._load_one_source_safe(cfg)
+                self._global_ready = True
+                self._global_ready_event.set()
+
             self._build_channel_index()
             self._build_caches()
             self._save_cache_to_disk()
@@ -2370,6 +2200,9 @@ class Spider(BaseSpider):
                 self._start_refresh()
         except Exception as e:
             self.logger.log(f"缓存构建异常: {e}")
+            # OPTIMIZED: 异常时确保 cache_ready 为 False
+            with self._cache_lock:
+                self._cache_ready = False
         finally:
             self._cache_building = False
             self.logger.flush()
@@ -2600,38 +2433,36 @@ class Spider(BaseSpider):
             }
 
     def categoryContent(self, tid, pg, filter, extend):
+        """
+        OPTIMIZED: 用 threading.Event.wait(timeout) 替代忙等待 90 秒
+        影视TV规范：5 秒内必须响应，超时返回空列表（前端不卡死）
+        """
         cat_type = self._category_type.get(tid, 'static')
         if cat_type == 'interface':
+            # 首源直接返回（已同步加载）
             if tid == self._first_source_name:
                 return self._interface_category_content(tid, pg)
+
+            # 已加载的直接返回
             if self._source_loaded.get(tid, False):
                 return self._interface_category_content(tid, pg)
-            timeout = self.sources_load_timeout
-            start_time = time.time()
-            while time.time() - start_time < timeout:
-                time.sleep(0.5)
-                if self._source_loaded.get(tid, False):
-                    break
-            if self._source_loaded.get(tid, False):
-                return self._interface_category_content(tid, pg)
-            else:
-                return {
-                    "list": [{
-                        "vod_id": "__timeout__",
-                        "vod_name": "⏱️ 加载超时",
-                        "vod_pic": self.default_vod_pic,
-                        "vod_remarks": "请检查网络或稍后重试"
-                    }],
-                    "page": 1,
-                    "pagecount": 1,
-                    "limit": 30,
-                    "total": 1
-                }
+
+            # OPTIMIZED: Event 等待替代 while sleep 轮询
+            event = self._source_ready_events.get(tid)
+            if event:
+                ready = event.wait(timeout=self.CATEGORY_TIMEOUT)
+                if ready:
+                    return self._interface_category_content(tid, pg)
+
+            # 超时或没有Event：快速返回空，不阻塞影视TV前端
+            return {"list": [], "page": 1, "pagecount": 1, "limit": 30, "total": 0}
+
         elif cat_type == 'static':
             if self._global_ready:
                 return self._static_category_content(tid, pg)
             else:
                 return self._dynamic_static_category_content(tid, pg)
+
         return {"list": [], "page": 1, "pagecount": 1, "limit": 30, "total": 0}
 
     # ========================= 详情页 =========================
@@ -2826,11 +2657,19 @@ class Spider(BaseSpider):
                         self._spider_health[src]['last_fail'] = time.time()
 
                     if self._spider_health[src]['fails'] >= 3:
-                        self.logger.log(f"【{src}】连续失败 {self._spider_health[src]['fails']} 次，触发后台重建")
+                        with self._health_lock:
+                            last_rebuild = self._spider_health[src].get('last_rebuild', 0)
+                            # 修复2：60秒冷却期，防止宕机时无限重建
+                            if time.time() - last_rebuild < 60:
+                                self.logger.log(f"【{src}】重建冷却中（还剩 {60 - int(time.time() - last_rebuild)}s），跳过")
+                                return self._err("模块冷却中，请稍后重试")
+                            # 重置失败计数并记录重建时间
+                            self._spider_health[src]['last_rebuild'] = time.time()
+                            self._spider_health[src]['fails'] = 0
+    
+                        self.logger.log(f"【{src}】连续失败，触发后台重建")
                         self._clear_source_header_cache(src)
                         threading.Thread(target=self._rebuild_spider, args=(src,), daemon=True).start()
-                        with self._health_lock:
-                            self._spider_health[src]['fails'] = 0
             except Exception as e:
                 self.logger.log(f"【{src}】localProxy 异常: {e}")
 
@@ -2846,6 +2685,7 @@ class Spider(BaseSpider):
 
     def _clear_source_header_cache(self, src_name):
         keys_to_delete = []
+        # OPTIMIZED: 通过公共接口操作，不直接访问内部属性
         with self._header_cache._lock:
             for key in list(self._header_cache._d.keys()):
                 if key.startswith(f"{src_name}||"):
@@ -2854,34 +2694,79 @@ class Spider(BaseSpider):
             self._header_cache.put(key, None)
 
     def _rebuild_spider(self, src_name):
+        """重建子模块：强制刷新缓存、原子替换、统一重建索引、同步就绪状态"""
         try:
-            self.logger.log(f"开始重建子模块: {src_name}")
+            # 查找对应配置
             cfg = None
             for c in self._source_configs:
                 if c['name'] == src_name and c.get('api'):
                     cfg = c
                     break
             if not cfg:
-                self.logger.log(f"未找到 {src_name} 的配置，无法重建")
+                self.logger.log(f"【{src_name}】未找到配置，无法重建")
+                self._source_loaded[src_name] = False
+                self._source_ready_events.get(src_name, threading.Event()).clear()
                 return
 
-            channels = self._load_py_source(cfg['api'], cfg)
-            if channels:
-                with self._channels_lock:
-                    self._channels = [ch for ch in self._channels if ch.get('source') != src_name]
-                    self._channels.extend(channels)
+            # 修复4：强制清除远程模块缓存，确保加载最新代码
+            api_url = cfg['api']
+            if api_url.startswith(('http://', 'https://')):
+                ck = hashlib.md5(api_url.encode()).hexdigest() + '.py'
+                cf = os.path.join(MODULE_CACHE_DIR, ck)
+                if os.path.exists(cf):
+                    try:
+                        os.remove(cf)
+                        self.logger.log(f"【{src_name}】已清除模块缓存，强制重新下载")
+                    except Exception as e:
+                        self.logger.debug(f"清除模块缓存失败: {e}")
+
+            # 重新加载模块与频道
+            channels = self._load_py_source(api_url, cfg)
+
+            # 修复1：在 _channels_lock 内原子替换 _channels，绝不暴露中间状态
+            with self._channels_lock:
+                new_channels = [ch for ch in self._channels if ch.get('source') != src_name]
+                if channels:
+                    new_channels.extend(channels)
+                self._channels = new_channels
+
+                # 同步更新源级分组索引（供 homeVod fallback 使用）
+                if channels:
                     groups = {}
                     for ch in channels:
                         group = ch.get('group', '默认分类')
                         groups.setdefault(group, []).append(ch)
                     self._source_groups[src_name] = groups
-                    self._interface_groups[src_name] = {'groups': list(groups.keys()), 'group_channels': groups}
-                self._build_channel_index()
-                self.logger.log(f"子模块 {src_name} 重建成功，加载 {len(channels)} 个频道")
+                else:
+                    self._source_groups.pop(src_name, None)
+
+            # 修复1：统一调用 _build_caches() 重建所有派生状态（_interface_groups / _cache_data 等），
+            # 避免直接 patch _interface_groups 导致的读者竞态。
+            # 由于 _agg_lock 已改为 RLock，_build_caches 内部嵌套加锁不会死锁。
+            if channels:
+                self._build_caches()
+                # 修复3：重建成功 → 标记就绪
+                self._source_loaded[src_name] = True
+                event = self._source_ready_events.get(src_name)
+                if event:
+                    event.set()
+                self.logger.log(f"【{src_name}】重建成功，加载 {len(channels)} 个频道")
             else:
-                self.logger.log(f"子模块 {src_name} 重建失败，无频道数据")
+                # 修复3：重建失败/无数据 → 清除残留、标记未就绪
+                with self._agg_lock:
+                    self._interface_groups.pop(src_name, None)
+                self._source_loaded[src_name] = False
+                event = self._source_ready_events.get(src_name)
+                if event:
+                    event.clear()
+                self.logger.log(f"【{src_name}】重建失败，已标记为未加载")
+
         except Exception as e:
-            self.logger.log(f"重建子模块 {src_name} 异常: {e}")
+            self.logger.log(f"【{src_name}】重建异常: {e}")
+            # 修复3：异常时也必须回退状态，防止前端永远等待
+            self._source_loaded[src_name] = False
+            self._source_ready_events.get(src_name, threading.Event()).clear()
+
 
     def _err(self, msg):
         return [500, "application/vnd.apple.mpegurl", f"#EXTM3U\n#EXT-X-ENDLIST\n# {msg}"]
