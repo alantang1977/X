@@ -5,11 +5,14 @@
 "sites": [
 {"key":"裤佬豆瓣片单","name":"🐮┃豆瓣┃跑马灯","type":3,"api":"csp_Douban","jar":"./jar/跑马灯.jar","searchable": 1,"quickSearch":0,"filterable": 1,"ext":"./jar/跑马灯.txt"},
 {"key":"玩偶","name":"👽┃玩偶社┃网盘","type":3,"api":"csp_WoGGGuard","timeout":30,"searchable":1,"quickSearch":1,"changeable":0, "ext": {"Cloud-drive":"tvfan/Cloud-drive.txt"}},
+	
 {"key":"剧透","name": "🥷┃剧透社┃影视","type": 3,"api": "./py/剧透社.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"剧透ai","name": "🦸┃剧透社┃影视","type": 3,"api": "./py/剧透社ai.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"直播转点播[全功能]","name":"📡┆直播┆电视[全功能]","type":3,"api":"./live/live2vod@v18.py","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"list","ratio":1.88},"ext":{"config_file":"./live/live_user_v18.json","过滤规则|开启":{"忽略":[{"接口":"Jack[M]","分类":""},{"接口":["油管[P]","易发[T]"],"分类":["海外.直播","私密频道."]}],"保留":[{"接口":"","分类":["卫视直播","央视直播"]},{"接口":["央视频[P]","裤佬[M]"],"分类":""}],"全局_过滤词":["地址|广告|购物|人间|人間|大愛|大爱|好消息|購|购|唯心|聚鲨"],"全局_保留词":["CCTV|卫视"]},"分类显示|开启":{"置顶":["裤佬[M]<别名>裤佬直播|央视频[P]<别名>央卫直播"],"静态":["央视特频|卫视特频|港台特频"],"后置":["易发[T]<别名>易发直播|油管[P]<别名>油管直播"]},"lives":["./live/feimaolive.json"]}},
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+{"key":"瓜子子","name": "🥭┃瓜子┃影视","type": 3,"api": "./py/guazi新.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+	
 {"key":"七味","name": "🐼️┃七味┃影视","type": 3,"api": "./py/七味.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "袋鼠影视(JS)","name": "🛸┃袋鼠┃影视","type": 3,"api": "./js/袋鼠影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
