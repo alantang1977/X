@@ -1,5 +1,5 @@
 {
-"spider":"./jar/custom_spider.jar;md5;9d90c83bc7504392dd02c2236f08713a", 
+"spider":"./jar/custom_spider.jar;md5;5bba0eefe56b867eaadb31af132bea70", 
 "wallpaper":"https://imgs.catvod.com","logo":"https://cnb.cool/junchao.tang/jtv/-/git/raw/main/Pictures/junmeng.gif",
 
 "sites": [
@@ -12,7 +12,12 @@
 {"key": "麦田","name": "🌾┃麦田剧┃影视","type": 3,"api": "csp_AppV6","ext": "http://172.247.227.203:25321/mtys.php","jar": "./jar/CatVodSpider.jar"},
 {"key":"心跳","name": "🏄‍♂️┃心跳┃影视","type": 3,"api": "./py/心跳.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key":"瓜子子","name": "🥭┃瓜子┃影视","type": 3,"api": "./py/guazi新.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
-{"key":"云朵","name": "🥭┃云朵┃影视","type": 3,"api": "./py/云朵.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},	
+{"key":"云朵","name": "🌦️┃云朵┃影视","type": 3,"api": "./py/云朵.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+{"key":"ggjav","name": "🏄‍♂️┃密云┃影视","type": 3,"api": "./py/ggjav.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+{"key":"duoduo","name": "🎉┃多多┃影视","type": 3,"api": "./py/duoduo.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+{"key":"hongguo","name": "🍟┃红果┃影视","type": 3,"api": "./py/hongguo.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
+
+	
 {"key":"七味","name": "🐼️┃七味┃影视","type": 3,"api": "./py/七味.py","searchable": 1,"quickSearch": 0,"filterable": 0,"changeable": 0},
 {"key": "袋鼠影视(JS)","name": "🛸┃袋鼠┃影视","type": 3,"api": "./js/袋鼠影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
 {"key": "永乐影视(JS)","name": "🛸┃永乐┃影视","type": 3,"api": "./js/永乐影视.js","searchable": 1,"quickSearch": 1,"filterable": 1,"switchable": 1},
